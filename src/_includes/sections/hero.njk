@@ -1,23 +1,49 @@
 {# Hero Section Component - Updated with Background Image #}
 {# Default values - can be overridden when including #}
-{% set heroTitle = heroTitle or "Arizona's Premier Insulation Experts" %}
-{% set heroSubtitle = heroSubtitle or "Transform your home's comfort and efficiency with professional spray foam insulation" %}
-{% set ctaPrimary = ctaPrimary or "Get Free Quote" %}
+{% set heroTitle = heroTitle or "Phoenix's Trusted Insulation Experts" %}
+{% set heroSubtitle = heroSubtitle or "Professional Spray Foam & Attic Insulation Services" %}
+{% set ctaPrimary = ctaPrimary or "GET FREE ESTIMATE" %}
 {% set ctaPrimaryLink = ctaPrimaryLink or "/contact/" %}
 
 <section class="hero hero-image">
-    <div class="hero-bg" style="background-image: url('/Images/insulation_contractors_of_arizona_spray_foam_Arizona_Sunset.webp');"></div>
+    <div class="hero-bg" style="background-image: url('https://raw.githubusercontent.com/MCERQUA/ICA-Website/main/src/Images/insulation_contractors_of_arizona_spray_foam_Arizona_Sunset.webp');"></div>
     <div class="hero-overlay"></div>
     <div class="container">
         <div class="hero-content-wrapper">
-            <div class="hero-content-box">
-                <h1 class="hero-title">{{ heroTitle }}</h1>
-                <p class="hero-subtitle">{{ heroSubtitle }}</p>
-                <div class="hero-cta-group">
-                    <a href="{{ ctaPrimaryLink }}" class="btn-hero-primary">
-                        {{ ctaPrimary }} <span class="btn-arrow">→</span>
-                    </a>
+            <div class="service-area-badge">
+                <span class="badge-icon">📍</span> Serving Phoenix Metro Area
+            </div>
+            <h1 class="hero-title">{{ heroTitle }}</h1>
+            <p class="hero-subtitle">{{ heroSubtitle }}</p>
+            
+            <div class="hero-description">
+                <p>Serving the Valley Since 2004 • Licensed, Bonded & Insured</p>
+            </div>
+            
+            <div class="trust-badges">
+                <div class="badge-item">
+                    <img src="/Images/BBB.webp" alt="BBB A+ Rating" class="badge-img">
+                    <span>A+ Rating</span>
                 </div>
+                <div class="badge-item">
+                    <img src="/Images/SPFA.webp" alt="SPFA Certified" class="badge-img">
+                    <span>Certified</span>
+                </div>
+                <div class="badge-item">
+                    <span>✓ Licensed ROC# 340641</span>
+                </div>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">⭐ 4.8/5 Stars</span>
+                </div>
+            </div>
+            
+            <div class="hero-cta-group">
+                <a href="{{ ctaPrimaryLink }}" class="btn-hero-primary">
+                    {{ ctaPrimary }} <span class="btn-arrow">→</span>
+                </a>
             </div>
         </div>
     </div>
