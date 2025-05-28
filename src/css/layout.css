@@ -97,6 +97,7 @@ main {
     overflow: hidden;
 }
 
+/* Updated Hero Background for Arizona Sunset */
 .hero-bg {
     position: absolute;
     top: 0;
@@ -109,6 +110,11 @@ main {
     z-index: -2;
 }
 
+/* Specific styling for the Arizona sunset image */
+.hero-image .hero-bg {
+    background-position: center center; /* Center the image on desktop */
+}
+
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -117,9 +123,9 @@ main {
     height: 100%;
     background: linear-gradient(
         135deg,
-        rgba(0, 0, 0, 0.7) 0%,
-        rgba(0, 0, 0, 0.5) 50%,
-        rgba(0, 0, 0, 0.3) 100%
+        rgba(0, 0, 0, 0.75) 0%,
+        rgba(0, 0, 0, 0.6) 50%,
+        rgba(0, 0, 0, 0.4) 100%
     );
     z-index: -1;
 }
@@ -129,17 +135,18 @@ main {
     z-index: 1;
 }
 
+/* Simplified Hero Content Box */
 .hero-content-box {
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(15px);
     border: 2px solid rgba(0, 255, 255, 0.3);
     border-radius: 20px;
     padding: 3rem;
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
     text-align: center;
     box-shadow: 
-        0 20px 60px rgba(0, 0, 0, 0.5),
+        0 20px 60px rgba(0, 0, 0, 0.6),
         0 0 100px rgba(0, 255, 255, 0.2);
     animation: fadeInUp 1s ease-out;
 }
@@ -167,19 +174,24 @@ main {
 .hero-title {
     font-size: 3.5rem;
     font-weight: 900;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     background: linear-gradient(135deg, var(--white) 0%, var(--accent-primary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+    line-height: 1.2;
 }
 
 .hero-subtitle {
     font-size: 1.5rem;
-    color: var(--accent-secondary);
-    margin-bottom: 1rem;
+    color: var(--gray-200);
+    margin-bottom: 2.5rem;
     font-weight: 300;
+    line-height: 1.5;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-description {
@@ -217,16 +229,17 @@ main {
     display: flex;
     gap: 1rem;
     justify-content: center;
-    margin: 2rem 0;
+    margin: 0;
     flex-wrap: wrap;
 }
 
 .btn-hero-primary {
     background: var(--gradient-accent);
     color: var(--primary-dark);
-    padding: 1rem 2rem;
+    padding: 1.2rem 2.5rem;
     border-radius: 50px;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 1.1rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     display: inline-flex;
@@ -235,15 +248,18 @@ main {
     text-decoration: none;
     transition: all var(--transition-medium);
     box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
+    border: none;
 }
 
 .btn-hero-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 0 40px rgba(0, 255, 255, 0.6);
+    color: var(--primary-dark);
+    text-decoration: none;
 }
 
 .btn-arrow {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 .btn-hero-secondary {
@@ -684,10 +700,17 @@ main {
     
     .hero-subtitle {
         font-size: 1.2rem;
+        padding: 0 1rem;
     }
     
     .hero-content-box {
         padding: 2rem;
+        margin: 0 1rem;
+    }
+    
+    /* Center the background image on mobile focusing on the ICA truck */
+    .hero-image .hero-bg {
+        background-position: 75% center; /* Focus on the right side where the truck is */
     }
     
     .trust-badges {
@@ -746,10 +769,21 @@ main {
     
     .hero-title {
         font-size: 2rem;
+        line-height: 1.1;
     }
     
     .hero-subtitle {
         font-size: 1.1rem;
+        line-height: 1.4;
+    }
+    
+    .hero-content-box {
+        padding: 1.5rem;
+    }
+    
+    /* Even more focused on the truck for small mobile */
+    .hero-image .hero-bg {
+        background-position: 80% center;
     }
     
     .hero-cta-group {
@@ -760,6 +794,7 @@ main {
     .btn-hero-primary,
     .btn-hero-secondary {
         width: 100%;
+        justify-content: center;
     }
     
     .hero-benefits {
