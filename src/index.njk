@@ -5,27 +5,44 @@ title: Home
 
 <section class="hero">
     <div class="container">
-        <h1>{{ site.tagline }}</h1>
-        <p>From residential renovations to commercial construction, we deliver excellence in every project.</p>
-        <a href="/contact/" class="cta-button">Get Your Free Quote</a>
+        <h1>Beat Arizona's Extreme Heat with Professional Insulation</h1>
+        <p>{{ site.tagline }}</p>
+        <p>Transform your home's comfort and slash energy bills with expert insulation solutions designed for the desert climate.</p>
+        <a href="/contact/" class="cta-button">Get Your Free Insulation Assessment</a>
+        <a href="tel:{{ site.phone }}" class="cta-button secondary">Call {{ site.phone }}</a>
     </div>
 </section>
 
 <section class="services-preview">
     <div class="container">
-        <h2>Our Services</h2>
+        <h2>Professional Insulation Services</h2>
         <div class="services-grid">
             <div class="service-card">
-                <h3>Residential Construction</h3>
-                <p>Custom homes, renovations, and additions tailored to your lifestyle.</p>
+                <h3>Spray Foam Insulation</h3>
+                <p>Superior R-values and air sealing for maximum energy efficiency in Arizona's extreme temperatures.</p>
+                <ul>
+                    <li>Closed-cell & open-cell options</li>
+                    <li>R-6.5 to R-7 per inch performance</li>
+                    <li>25+ year lifespan</li>
+                </ul>
             </div>
             <div class="service-card">
-                <h3>Commercial Projects</h3>
-                <p>Office buildings, retail spaces, and industrial facilities.</p>
+                <h3>Attic Insulation</h3>
+                <p>Combat 160°F attic temperatures with professional attic insulation solutions.</p>
+                <ul>
+                    <li>Blown-in fiberglass & cellulose</li>
+                    <li>R-38 to R-49 coverage</li>
+                    <li>Radiant barrier installation</li>
+                </ul>
             </div>
             <div class="service-card">
-                <h3>Remodeling & Renovation</h3>
-                <p>Transform your existing space with our expert renovation services.</p>
+                <h3>Commercial Insulation</h3>
+                <p>Large-scale insulation projects for businesses, warehouses, and agricultural facilities.</p>
+                <ul>
+                    <li>421,700+ sq ft experience</li>
+                    <li>Agricultural tank insulation</li>
+                    <li>Metal building solutions</li>
+                </ul>
             </div>
         </div>
         <a href="/services/" class="cta-link">View All Services →</a>
@@ -34,23 +51,39 @@ title: Home
 
 <section class="why-choose-us">
     <div class="container">
-        <h2>Why Choose {{ site.name }}?</h2>
+        <h2>Why Arizona Homeowners Choose ICA</h2>
         <div class="features-grid">
             <div class="feature">
-                <h3>25+ Years Experience</h3>
-                <p>Decades of expertise in residential and commercial construction.</p>
+                <h3>{{ site.established }} Arizona Experience</h3>
+                <p>Christopher Kuhn brings decades of specialized expertise in desert climate insulation challenges.</p>
             </div>
             <div class="feature">
-                <h3>Licensed & Insured</h3>
-                <p>Fully licensed, bonded, and insured for your peace of mind.</p>
+                <h3>{{ site.license }}</h3>
+                <p>{{ site.bbb_rating }} BBB rating with full professional credentials and comprehensive insurance coverage.</p>
             </div>
             <div class="feature">
-                <h3>Quality Guarantee</h3>
-                <p>We stand behind our work with comprehensive warranties.</p>
+                <h3>Proven Energy Savings</h3>
+                <p>Customers report 30-50% reduction in cooling costs with our spray foam installations.</p>
             </div>
             <div class="feature">
-                <h3>On-Time Delivery</h3>
-                <p>Projects completed on schedule and within budget.</p>
+                <h3>Local Family Business</h3>
+                <p>Serving {{ site.service_areas | join(", ") | truncate(50) }}... and surrounding areas.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonial-section">
+    <div class="container">
+        <h2>Real Results from Arizona Homeowners</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial">
+                <p>"Best investment we've made! Our energy bills dropped by $185 per month after spray foam installation. The house stays comfortable even at 118°F."</p>
+                <cite>- Sarah M., Gilbert ⭐⭐⭐⭐⭐</cite>
+            </div>
+            <div class="testimonial">
+                <p>"The difference is night and day. Our upstairs bedrooms are finally comfortable all summer long. Professional service from start to finish."</p>
+                <cite>- Mike R., Chandler ⭐⭐⭐⭐⭐</cite>
             </div>
         </div>
     </div>
@@ -58,7 +91,7 @@ title: Home
 
 <section class="recent-posts">
     <div class="container">
-        <h2>Latest from Our Blog</h2>
+        <h2>Insulation Resources & Expert Advice</h2>
         <div class="blog-grid">
             {% for post in collections.blog | limit(3) %}
             <article class="blog-card">
@@ -69,6 +102,18 @@ title: Home
             </article>
             {% endfor %}
         </div>
-        <a href="/blog/" class="cta-link">View All Posts →</a>
+        <a href="/blog/" class="cta-link">View All Resources →</a>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <h2>Ready to Beat the Arizona Heat?</h2>
+        <p>Don't suffer through another scorching summer. Get your free insulation assessment today!</p>
+        <div class="cta-buttons">
+            <a href="/contact/" class="cta-button">Schedule Free Assessment</a>
+            <a href="tel:{{ site.phone }}" class="cta-button secondary">Call {{ site.phone }}</a>
+        </div>
+        <p class="service-areas">Serving: {{ site.service_areas | join(" • ") }}</p>
     </div>
 </section>
