@@ -1,6 +1,6 @@
 /* ============================================
    INSULATION CONTRACTORS OF ARIZONA
-   MODERN HIGH-TECH STYLESHEET - CORE
+   MODERN HIGH-TECH STYLESHEET - CORE - UPDATED
    ============================================ */
 
 /* Import Fonts */
@@ -12,19 +12,20 @@
 @import url('forms.css');
 @import url('layout.css');
 
-/* CSS Variables */
+/* CSS Variables - Updated Color Scheme */
 :root {
-    /* Primary Colors */
-    --primary-dark: #0a0a0a;
-    --primary-medium: #0f0f0f;
-    --primary-light: #1a1a1a;
+    /* Primary Colors - Darker Teal Sections */
+    --primary-dark: #0a1a1a;
+    --primary-medium: #0d2020;
+    --primary-light: #0f2424;
+    --section-separator: #1a3030;
     
-    /* Accent Colors - Aqua/Teal */
+    /* Accent Colors - Professional Aqua/Teal */
     --accent-primary: #00ffff;
     --accent-secondary: #00d4ff;
     --accent-tertiary: #00a8cc;
-    --accent-glow: rgba(0, 255, 255, 0.8);
-    --accent-dim: rgba(0, 212, 255, 0.3);
+    --accent-glow: rgba(0, 255, 255, 0.6);
+    --accent-dim: rgba(0, 212, 255, 0.2);
     
     /* Supporting Colors */
     --success: #00ff88;
@@ -48,15 +49,15 @@
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-light) 100%);
     --gradient-accent: linear-gradient(135deg, var(--accent-secondary) 0%, var(--accent-primary) 100%);
-    --gradient-hero: linear-gradient(180deg, rgba(10, 22, 40, 0.95) 0%, rgba(30, 60, 114, 0.85) 100%);
+    --gradient-hero: linear-gradient(180deg, rgba(10, 26, 26, 0.9) 0%, rgba(15, 36, 36, 0.8) 100%);
     
     /* Shadows */
     --shadow-sm: 0 2px 4px rgba(0, 255, 255, 0.1);
     --shadow-md: 0 4px 8px rgba(0, 255, 255, 0.15);
     --shadow-lg: 0 8px 16px rgba(0, 255, 255, 0.2);
     --shadow-xl: 0 16px 32px rgba(0, 255, 255, 0.25);
-    --shadow-glow: 0 0 30px rgba(0, 255, 255, 0.6);
-    --shadow-glow-intense: 0 0 50px rgba(0, 255, 255, 0.8);
+    --shadow-glow: 0 0 20px rgba(0, 255, 255, 0.4);
+    --shadow-glow-intense: 0 0 30px rgba(0, 255, 255, 0.6);
     
     /* Typography */
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -96,28 +97,48 @@ body {
     position: relative;
 }
 
-/* Typography */
+/* Typography - More Professional Sizing */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    font-weight: 900;
-    letter-spacing: 0.1em;
+    font-weight: 700;
+    letter-spacing: 0.05em;
     color: var(--accent-primary);
     text-transform: uppercase;
     margin-bottom: var(--spacing-md);
     position: relative;
     display: inline-block;
-    text-shadow: 0 0 2px rgba(0, 255, 255, 0.3);
+    text-shadow: 0 0 1px rgba(0, 255, 255, 0.2);
     width: 100%;
 }
 
-h1 { font-size: 3.5rem; }
-h2 { font-size: 2.5rem; }
-h3 { font-size: 2rem; }
-h4 { font-size: 1.5rem; }
-h5 { font-size: 1.25rem; }
-h6 { font-size: 1rem; }
+/* Professional Font Sizes */
+h1 { 
+    font-size: 2.5rem; 
+    font-weight: 900;
+    letter-spacing: 0.08em;
+}
+h2 { 
+    font-size: 2rem; 
+    font-weight: 700;
+}
+h3 { 
+    font-size: 1.5rem; 
+    font-weight: 700;
+}
+h4 { 
+    font-size: 1.25rem; 
+    font-weight: 600;
+}
+h5 { 
+    font-size: 1.125rem; 
+    font-weight: 600;
+}
+h6 { 
+    font-size: 1rem; 
+    font-weight: 600;
+}
 
-/* Animated gradient overlay for headings */
+/* Subtle animated gradient overlay for headings */
 h1[data-text]::before, h2[data-text]::before, h3[data-text]::before, 
 h4[data-text]::before, h5[data-text]::before, h6[data-text]::before {
     content: attr(data-text);
@@ -128,28 +149,52 @@ h4[data-text]::before, h5[data-text]::before, h6[data-text]::before {
     height: 100%;
     background: linear-gradient(90deg, 
         transparent 0%, 
-        transparent 20%,
-        #00d4ff 35%,
-        #00ffff 50%,
-        #00d4ff 65%,
-        transparent 80%,
+        transparent 30%,
+        rgba(0, 212, 255, 0.3) 40%,
+        rgba(0, 255, 255, 0.4) 50%,
+        rgba(0, 212, 255, 0.3) 60%,
+        transparent 70%,
         transparent 100%);
     background-size: 50% 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: glow-sweep 3s linear infinite;
+    animation: glow-sweep 4s linear infinite;
     mix-blend-mode: screen;
     pointer-events: none;
+    opacity: 0.8;
 }
 
-/* Glowing Text Effect */
+/* Reduced Glowing Text Effect */
 .glow-text {
     text-shadow: 
-        0 0 1px var(--accent-primary),
-        0 0 2px var(--accent-primary);
-    animation: pulse-glow 2s ease-in-out infinite;
+        0 0 1px var(--accent-primary);
+    animation: pulse-glow 3s ease-in-out infinite;
     color: var(--accent-primary) !important;
+}
+
+/* Page Titles - Even More Professional */
+.page-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+/* Demo Section Titles - Smaller and Professional */
+.demo-title {
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.03em !important;
+    text-transform: none !important;
+    color: var(--accent-secondary) !important;
+    margin-bottom: 1.5rem !important;
 }
 
 /* Links */
@@ -245,6 +290,16 @@ img {
     border-radius: 10px;
 }
 
+/* Professional Demo Section Styling */
+.demo-section {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: rgba(26, 48, 48, 0.3);
+    border-radius: 15px;
+    border: 1px solid rgba(0, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
 /* Utility Classes */
 .text-center { text-align: center; }
 .text-left { text-align: left; }
@@ -302,7 +357,7 @@ img {
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -311,7 +366,7 @@ img {
 
 ::-webkit-scrollbar-thumb {
     background: var(--accent-primary);
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -352,9 +407,12 @@ img {
 
 /* Responsive Base */
 @media (max-width: 768px) {
-    h1 { font-size: 2.5rem; }
-    h2 { font-size: 2rem; }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
     h3 { font-size: 1.5rem; }
+    
+    .page-title { font-size: 1.875rem; }
+    .section-title { font-size: 1.5rem; }
     
     .container {
         padding: 0 15px;
