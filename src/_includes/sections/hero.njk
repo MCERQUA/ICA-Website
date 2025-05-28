@@ -1,0 +1,44 @@
+{# Hero Section Component #}
+{# Default values - can be overridden when including #}
+{% set heroTitle = heroTitle or "Arizona's Premier Insulation Experts" %}
+{% set heroSubtitle = heroSubtitle or site.tagline %}
+{% set showBenefits = showBenefits if showBenefits is defined else true %}
+{% set ctaPrimary = ctaPrimary or "Get Free Assessment" %}
+{% set ctaSecondary = ctaSecondary or "Call " + site.phone %}
+{% set ctaPrimaryLink = ctaPrimaryLink or "/contact/" %}
+{% set ctaSecondaryLink = ctaSecondaryLink or "tel:" + site.phone %}
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="glow-text">{{ heroTitle }}</h1>
+            <p class="hero-subtitle">{{ heroSubtitle }}</p>
+            
+            {% if showBenefits %}
+            <div class="hero-benefits">
+                <div class="hero-benefit">
+                    <h3>✓ 20+ Years Experience</h3>
+                    <p>Arizona climate specialists</p>
+                </div>
+                <div class="hero-benefit">
+                    <h3>✓ Licensed & Insured</h3>
+                    <p>{{ site.license }} • {{ site.bbb_rating }}</p>
+                </div>
+                <div class="hero-benefit">
+                    <h3>✓ Free Estimates</h3>
+                    <p>Professional assessments</p>
+                </div>
+                <div class="hero-benefit">
+                    <h3>✓ Energy Savings</h3>
+                    <p>30-50% reduction in cooling costs</p>
+                </div>
+            </div>
+            {% endif %}
+            
+            <div class="cta-buttons">
+                <a href="{{ ctaPrimaryLink }}" class="btn btn-primary btn-large">{{ ctaPrimary }}</a>
+                <a href="{{ ctaSecondaryLink }}" class="btn btn-secondary btn-large">{{ ctaSecondary }}</a>
+            </div>
+        </div>
+    </div>
+</section>
