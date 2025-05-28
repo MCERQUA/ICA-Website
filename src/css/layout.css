@@ -98,6 +98,17 @@ main {
     margin-right: calc(-50vw + 50%);
     padding-top: 80px;
     overflow: hidden;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed;
+}
+
+/* Hero with inline background styles */
+.hero.hero-image[style*="background-image"] {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
 }
 
 /* Updated Hero Background for Arizona Sunset - Full Width */
@@ -710,6 +721,11 @@ main {
     }
     
     /* Center the background image on mobile focusing on the ICA truck */
+    .hero-image, .hero.hero-image[style*="background-image"] {
+        background-position: 75% center !important; /* Focus on the right side where the truck is */
+        background-attachment: scroll !important; /* Better performance on mobile */
+    }
+    
     .hero-image .hero-bg {
         background-position: 75% center; /* Focus on the right side where the truck is */
         background-attachment: scroll; /* Better performance on mobile */
@@ -789,6 +805,10 @@ main {
     }
     
     /* Even more focused on the truck for small mobile */
+    .hero-image, .hero.hero-image[style*="background-image"] {
+        background-position: 80% center !important;
+    }
+    
     .hero-image .hero-bg {
         background-position: 80% center;
     }
