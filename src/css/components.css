@@ -118,6 +118,29 @@
     letter-spacing: 0.05em;
 }
 
+/* CTA Button in Navigation - Special Styling */
+.main-nav .cta-button {
+    background: var(--accent-primary) !important;
+    color: var(--primary-dark) !important;
+    padding: 0.6rem 1.5rem !important;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+    transition: all var(--transition-medium);
+}
+
+.main-nav .cta-button:hover {
+    background: var(--accent-secondary) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
+}
+
+.main-nav .cta-button::after {
+    display: none;
+}
+
 .main-nav a::after {
     content: '';
     position: absolute;
@@ -207,6 +230,12 @@
     .nav-list {
         max-width: 100%;
         right: -100%;
+    }
+    
+    /* Smaller CTA button on very small screens */
+    .main-nav .cta-button {
+        padding: 0.5rem 1.2rem !important;
+        font-size: 0.85rem;
     }
 }
 
