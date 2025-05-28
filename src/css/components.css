@@ -335,19 +335,9 @@
         inset 0 0 20px rgba(0, 255, 255, 0.05);
 }
 
+/* Remove the animated gradient background from service cards */
 .card::before, .service-card::before, .blog-card::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(45deg, var(--accent-primary), var(--accent-secondary), var(--accent-primary));
-    border-radius: 20px;
-    opacity: 0;
-    z-index: -1;
-    transition: opacity var(--transition-medium);
-    animation: gradient-shift 3s ease infinite;
+    display: none;
 }
 
 .card:hover, .service-card:hover, .blog-card:hover {
@@ -359,29 +349,44 @@
     border-color: var(--accent-primary);
 }
 
-.card:hover::before, .service-card:hover::before, .blog-card:hover::before {
-    opacity: 0.5;
-}
-
 /* Service Cards with Images */
 .service-card .service-image {
-    width: 100%;
+    width: calc(100% + 4rem);
     height: 200px;
     margin: -2rem -2rem 1.5rem -2rem;
     overflow: hidden;
     border-radius: 20px 20px 0 0;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0a1a1a;
 }
 
 .service-card .service-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     transition: transform var(--transition-medium);
 }
 
 .service-card:hover .service-image img {
     transform: scale(1.1);
+}
+
+/* Make Learn More buttons more readable */
+.service-card .btn-primary {
+    background: #1e3c72;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.service-card .btn-primary:hover {
+    background: #2a5298;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 /* Service Grid Layouts */
