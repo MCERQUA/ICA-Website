@@ -1,43 +1,23 @@
-{# Hero Section Component #}
+{# Hero Section Component - Updated with Background Image #}
 {# Default values - can be overridden when including #}
 {% set heroTitle = heroTitle or "Arizona's Premier Insulation Experts" %}
-{% set heroSubtitle = heroSubtitle or site.tagline %}
-{% set showBenefits = showBenefits if showBenefits is defined else true %}
-{% set ctaPrimary = ctaPrimary or "Get Free Assessment" %}
-{% set ctaSecondary = ctaSecondary or "Call " + site.phone %}
+{% set heroSubtitle = heroSubtitle or "Transform your home's comfort and efficiency with professional spray foam insulation" %}
+{% set ctaPrimary = ctaPrimary or "Get Free Quote" %}
 {% set ctaPrimaryLink = ctaPrimaryLink or "/contact/" %}
-{% set ctaSecondaryLink = ctaSecondaryLink or "tel:" + site.phone %}
 
-<section class="hero">
+<section class="hero hero-image">
+    <div class="hero-bg" style="background-image: url('/images/insulation_contractors_of_arizona_spray_foam_Arizona_Sunset.webp');"></div>
+    <div class="hero-overlay"></div>
     <div class="container">
-        <div class="hero-content">
-            <h1 class="glow-text">{{ heroTitle }}</h1>
-            <p class="hero-subtitle">{{ heroSubtitle }}</p>
-            
-            {% if showBenefits %}
-            <div class="hero-benefits">
-                <div class="hero-benefit">
-                    <h3>✓ 20+ Years Experience</h3>
-                    <p>Arizona climate specialists</p>
+        <div class="hero-content-wrapper">
+            <div class="hero-content-box">
+                <h1 class="hero-title">{{ heroTitle }}</h1>
+                <p class="hero-subtitle">{{ heroSubtitle }}</p>
+                <div class="hero-cta-group">
+                    <a href="{{ ctaPrimaryLink }}" class="btn-hero-primary">
+                        {{ ctaPrimary }} <span class="btn-arrow">→</span>
+                    </a>
                 </div>
-                <div class="hero-benefit">
-                    <h3>✓ Licensed & Insured</h3>
-                    <p>{{ site.license }} • {{ site.bbb_rating }}</p>
-                </div>
-                <div class="hero-benefit">
-                    <h3>✓ Free Estimates</h3>
-                    <p>Professional assessments</p>
-                </div>
-                <div class="hero-benefit">
-                    <h3>✓ Energy Savings</h3>
-                    <p>30-50% reduction in cooling costs</p>
-                </div>
-            </div>
-            {% endif %}
-            
-            <div class="cta-buttons">
-                <a href="{{ ctaPrimaryLink }}" class="btn btn-primary btn-large">{{ ctaPrimary }}</a>
-                <a href="{{ ctaSecondaryLink }}" class="btn btn-secondary btn-large">{{ ctaSecondary }}</a>
             </div>
         </div>
     </div>
