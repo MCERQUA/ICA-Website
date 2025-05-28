@@ -1,0 +1,43 @@
+{# Testimonials Component #}
+{# Default values - can be overridden when including #}
+{% set sectionTitle = sectionTitle or "Real Results from Arizona Homeowners" %}
+{% set sectionIntro = sectionIntro or "See what our customers are saying about their experience" %}
+{% set testimonialCount = testimonialCount or 3 %}
+{% set showResults = showResults if showResults is defined else true %}
+
+<section class="testimonials-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>{{ sectionTitle }}</h2>
+            <p class="section-intro">{{ sectionIntro }}</p>
+        </div>
+        
+        <div class="testimonial-grid">
+            <div class="testimonial glass-panel">
+                <p class="testimonial-text">"Best investment we've made! Our energy bills dropped by $185 per month after spray foam installation. The house stays comfortable even at 118°F."</p>
+                <div class="testimonial-author">Sarah M., Gilbert ⭐⭐⭐⭐⭐</div>
+                {% if showResults %}
+                <div class="testimonial-result">Saved $185/month on energy bills</div>
+                {% endif %}
+            </div>
+            
+            <div class="testimonial glass-panel">
+                <p class="testimonial-text">"The difference is night and day. Our upstairs bedrooms are finally comfortable all summer long. Professional service from start to finish."</p>
+                <div class="testimonial-author">Mike R., Chandler ⭐⭐⭐⭐⭐</div>
+                {% if showResults %}
+                <div class="testimonial-result">40% improvement in comfort</div>
+                {% endif %}
+            </div>
+            
+            {% if testimonialCount >= 3 %}
+            <div class="testimonial glass-panel">
+                <p class="testimonial-text">"Quick, clean, and efficient. The crew protected everything and cleaned up perfectly. Six months later, we're still amazed at the difference."</p>
+                <div class="testimonial-author">Jennifer K., Glendale ⭐⭐⭐⭐⭐</div>
+                {% if showResults %}
+                <div class="testimonial-result">$120/month energy savings</div>
+                {% endif %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
