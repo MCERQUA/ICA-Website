@@ -1,8 +1,8 @@
 /* ============================================
-   ANIMATIONS & BACKGROUND EFFECTS
+   ANIMATIONS & BACKGROUND EFFECTS - UPDATED
    ============================================ */
 
-/* Animated Background */
+/* Main Animated Background - Now Primary */
 .animated-bg {
     position: fixed;
     top: 0;
@@ -10,7 +10,7 @@
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: var(--primary-dark);
+    background: linear-gradient(135deg, #0a1a1a 0%, #0f2424 50%, #1a3030 100%);
     overflow: hidden;
 }
 
@@ -21,9 +21,9 @@
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle at center, transparent 0%, var(--accent-glow) 20%, transparent 40%, var(--accent-glow) 60%, transparent 80%);
-    animation: rotate 20s linear infinite;
-    opacity: 0.3;
+    background: radial-gradient(circle at center, transparent 0%, rgba(0, 255, 255, 0.1) 20%, transparent 40%, rgba(0, 255, 255, 0.08) 60%, transparent 80%);
+    animation: rotate 30s linear infinite;
+    opacity: 0.6;
 }
 
 .animated-bg::after {
@@ -34,26 +34,27 @@
     width: 100%;
     height: 100%;
     background: 
-        radial-gradient(circle at 20% 80%, var(--accent-dim) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, var(--accent-dim) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, var(--accent-dim) 0%, transparent 50%);
-    animation: pulse 4s ease-in-out infinite;
+        radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(0, 212, 255, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(0, 255, 255, 0.06) 0%, transparent 50%);
+    animation: pulse 6s ease-in-out infinite;
 }
 
-/* Grid Lines Effect - CRITICAL FOR AQUA GRID PATTERN */
+/* Grid Lines Effect - More Subtle */
 .grid-lines {
     position: absolute;
     width: 100%;
     height: 100%;
     background-image: 
-        linear-gradient(rgba(0, 255, 255, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 255, 255, 0.05) 1px, transparent 1px);
-    background-size: 50px 50px;
-    animation: grid-move 10s linear infinite;
+        linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    animation: grid-move 15s linear infinite;
     pointer-events: none;
+    opacity: 0.7;
 }
 
-/* Particle Effect */
+/* Enhanced Particle Effect - More Random Movement */
 .particles {
     position: absolute;
     width: 100%;
@@ -64,43 +65,91 @@
 
 .particle {
     position: absolute;
-    width: 2px;
-    height: 2px;
+    width: 1.5px;
+    height: 1.5px;
     background: var(--accent-primary);
     border-radius: 50%;
-    box-shadow: 0 0 10px var(--accent-primary);
-    animation: float 20s infinite linear;
+    box-shadow: 0 0 6px rgba(0, 255, 255, 0.8);
+    animation: float-random 25s infinite linear;
     opacity: 0;
 }
 
-/* Keyframe Animations */
-@keyframes grid-move {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(50px, 50px); }
+/* Add more particles for better effect */
+.particle:nth-child(odd) {
+    animation: float-random-alt 30s infinite linear;
 }
 
-@keyframes float {
+.particle:nth-child(3n) {
+    width: 2px;
+    height: 2px;
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+}
+
+/* Keyframe Animations - Updated */
+@keyframes grid-move {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(60px, 60px); }
+}
+
+@keyframes float-random {
     0% {
         transform: translateY(100vh) translateX(0) scale(0);
         opacity: 0;
     }
-    10% {
+    5% {
         opacity: 1;
-        transform: translateY(90vh) translateX(10px) scale(1);
+        transform: translateY(95vh) translateX(20px) scale(1);
     }
-    90% {
+    25% {
+        transform: translateY(75vh) translateX(-30px) scale(1);
+    }
+    50% {
+        transform: translateY(50vh) translateX(40px) scale(1);
+    }
+    75% {
+        transform: translateY(25vh) translateX(-20px) scale(1);
+    }
+    95% {
         opacity: 1;
-        transform: translateY(10vh) translateX(-10px) scale(1);
+        transform: translateY(5vh) translateX(10px) scale(1);
     }
     100% {
-        transform: translateY(-10vh) translateX(0) scale(0);
+        transform: translateY(-5vh) translateX(0) scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes float-random-alt {
+    0% {
+        transform: translateY(100vh) translateX(0) scale(0);
+        opacity: 0;
+    }
+    8% {
+        opacity: 1;
+        transform: translateY(92vh) translateX(-25px) scale(1);
+    }
+    30% {
+        transform: translateY(70vh) translateX(35px) scale(1);
+    }
+    55% {
+        transform: translateY(45vh) translateX(-40px) scale(1);
+    }
+    80% {
+        transform: translateY(20vh) translateX(25px) scale(1);
+    }
+    92% {
+        opacity: 1;
+        transform: translateY(8vh) translateX(-15px) scale(1);
+    }
+    100% {
+        transform: translateY(-8vh) translateX(0) scale(0);
         opacity: 0;
     }
 }
 
 @keyframes pulse {
-    0%, 100% { opacity: 0.5; }
-    50% { opacity: 0.8; }
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.7; }
 }
 
 @keyframes rotate {
@@ -109,7 +158,7 @@
 
 @keyframes pulse-glow {
     0%, 100% { opacity: 1; }
-    50% { opacity: 0.8; }
+    50% { opacity: 0.7; }
 }
 
 @keyframes glow-sweep {
@@ -124,7 +173,7 @@
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
