@@ -44,10 +44,17 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <a href="/">{{ site.name }}</a>
+                    <a href="/" aria-label="{{ site.name }} Home">
+                        <img src="/Images/Insulation_Contractors_of_arizona_logo.webp" alt="{{ site.name }}" class="logo-img">
+                    </a>
                 </div>
-                <nav class="main-nav">
-                    <ul>
+                <nav class="main-nav" aria-label="Main navigation">
+                    <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                    </button>
+                    <ul class="nav-list">
                         <li><a href="/">Home</a></li>
                         <li><a href="/about/">About</a></li>
                         <li><a href="/services/">Services</a></li>
@@ -100,6 +107,54 @@
         } else {
             header.classList.remove('scrolled');
         }
+    });
+
+    // Mobile menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navList = document.querySelector('.nav-list');
+        const header = document.querySelector('.site-header');
+        
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', function() {
+                const isOpen = navList.classList.contains('mobile-active');
+                
+                if (isOpen) {
+                    navList.classList.remove('mobile-active');
+                    mobileMenuToggle.classList.remove('active');
+                    mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                    header.classList.remove('mobile-menu-open');
+                } else {
+                    navList.classList.add('mobile-active');
+                    mobileMenuToggle.classList.add('active');
+                    mobileMenuToggle.setAttribute('aria-expanded', 'true');
+                    header.classList.add('mobile-menu-open');
+                }
+            });
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.main-nav') && navList.classList.contains('mobile-active')) {
+                navList.classList.remove('mobile-active');
+                mobileMenuToggle.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                header.classList.remove('mobile-menu-open');
+            }
+        });
+        
+        // Close mobile menu when clicking on a link
+        const navLinks = document.querySelectorAll('.nav-list a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (navList.classList.contains('mobile-active')) {
+                    navList.classList.remove('mobile-active');
+                    mobileMenuToggle.classList.remove('active');
+                    mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                    header.classList.remove('mobile-menu-open');
+                }
+            });
+        });
     });
 
     // Add data-text attributes to headings for subtle glow effect
