@@ -1,5 +1,5 @@
 /* ============================================
-   LAYOUT & PAGE STRUCTURE
+   LAYOUT & PAGE STRUCTURE - UPDATED
    ============================================ */
 
 /* Main Layout Structure */
@@ -17,16 +17,14 @@ main {
     z-index: 1;
 }
 
-/* Hero Section */
+/* Hero Section - Transparent to show animated background */
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    background: 
-        linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 20, 40, 0.4) 100%),
-        var(--primary-dark);
+    background: transparent;
     overflow: hidden;
     margin-top: -80px;
     padding-top: 80px;
@@ -35,13 +33,12 @@ main {
 .hero::before {
     content: '';
     position: absolute;
-    width: 200%;
-    height: 200%;
-    top: -50%;
-    left: -50%;
-    background: radial-gradient(circle at center, var(--accent-dim) 0%, transparent 40%);
-    animation: rotate 30s linear infinite reverse;
-    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(10, 26, 26, 0.2);
+    z-index: -1;
 }
 
 .hero-content {
@@ -52,13 +49,13 @@ main {
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     margin-bottom: 1.5rem;
     filter: drop-shadow(0 0 2px var(--accent-glow));
 }
 
 .hero p, .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: var(--accent-secondary);
     text-shadow: 0 0 2px rgba(0, 255, 255, 0.3);
     margin-bottom: 2rem;
@@ -73,11 +70,11 @@ main {
 }
 
 .benefit-item, .hero-benefit {
-    background: rgba(0, 255, 255, 0.05);
-    backdrop-filter: blur(20px);
+    background: rgba(26, 48, 48, 0.4);
+    backdrop-filter: blur(15px);
     padding: 20px;
     border-radius: 10px;
-    border: 1px solid rgba(0, 255, 255, 0.3);
+    border: 1px solid rgba(0, 255, 255, 0.2);
     transition: all var(--transition-medium);
 }
 
@@ -85,17 +82,19 @@ main {
     transform: translateY(-5px);
     box-shadow: var(--shadow-glow);
     border-color: var(--accent-primary);
+    background: rgba(26, 48, 48, 0.6);
 }
 
-/* Content Sections */
+/* Content Sections - Darker Teal Separators */
 .content-section, .services-preview, .about-content {
     padding: 60px 0;
-    background: var(--primary-dark);
+    background: transparent;
     position: relative;
 }
 
 .content-section:nth-child(even) {
-    background: var(--primary-medium);
+    background: rgba(26, 48, 48, 0.3);
+    backdrop-filter: blur(10px);
 }
 
 .section-header {
@@ -104,15 +103,15 @@ main {
 }
 
 .section-header h2, .content-section h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: var(--accent-primary);
     margin-bottom: 20px;
     text-align: center;
 }
 
 .section-header p, .section-intro {
-    font-size: 1.2rem;
-    color: var(--gray-400);
+    font-size: 1.125rem;
+    color: var(--gray-300);
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
@@ -173,10 +172,11 @@ main {
 
 /* Testimonials Layout */
 .testimonials {
-    background: var(--primary-dark);
+    background: rgba(26, 48, 48, 0.4);
     color: var(--white);
     padding: 60px 0;
     position: relative;
+    backdrop-filter: blur(10px);
 }
 
 .testimonial-grid {
@@ -205,8 +205,9 @@ main {
 
 /* Service Areas Layout */
 .service-areas {
-    background: var(--primary-medium);
+    background: rgba(26, 48, 48, 0.3);
     padding: 60px 0;
+    backdrop-filter: blur(10px);
 }
 
 .contact-grid {
@@ -218,11 +219,12 @@ main {
 
 /* Footer */
 .site-footer {
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(10, 20, 20, 0.95);
     color: var(--gray-100);
     padding: 3rem 0 1rem;
-    border-top: 1px solid rgba(0, 255, 255, 0.3);
+    border-top: 1px solid rgba(0, 255, 255, 0.2);
     margin-top: auto;
+    backdrop-filter: blur(15px);
 }
 
 .footer-content {
@@ -262,11 +264,12 @@ main {
 
 /* Contact Section */
 .contact-section {
-    background: var(--gradient-primary);
+    background: rgba(26, 48, 48, 0.4);
     color: var(--white);
     padding: 60px 0;
     text-align: center;
     position: relative;
+    backdrop-filter: blur(10px);
 }
 
 .contact-section::before {
@@ -277,8 +280,8 @@ main {
     right: 0;
     bottom: 0;
     background: 
-        radial-gradient(circle at 20% 80%, var(--accent-dim) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, var(--accent-dim) 0%, transparent 50%);
+        radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(0, 255, 255, 0.08) 0%, transparent 50%);
     opacity: 0.3;
 }
 
@@ -302,7 +305,8 @@ main {
 /* Pricing Layout */
 .pricing-section {
     padding: 60px 0;
-    background: var(--primary-medium);
+    background: rgba(26, 48, 48, 0.3);
+    backdrop-filter: blur(10px);
 }
 
 .pricing-grid {
@@ -313,7 +317,7 @@ main {
 }
 
 .pricing-card {
-    background: linear-gradient(135deg, rgba(30, 60, 114, 0.3) 0%, rgba(42, 82, 152, 0.1) 100%);
+    background: rgba(26, 48, 48, 0.4);
     border: 2px solid rgba(0, 212, 255, 0.3);
     border-radius: 20px;
     padding: 3rem 2rem;
@@ -321,6 +325,7 @@ main {
     position: relative;
     overflow: hidden;
     transition: all var(--transition-medium);
+    backdrop-filter: blur(15px);
 }
 
 .pricing-card.featured {
@@ -406,8 +411,8 @@ main {
 }
 
 .timeline-content {
-    background: rgba(0, 255, 255, 0.03);
-    backdrop-filter: blur(20px);
+    background: rgba(26, 48, 48, 0.4);
+    backdrop-filter: blur(15px);
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: var(--shadow-md);
@@ -418,7 +423,7 @@ main {
 /* Mobile Responsive Layouts */
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.25rem;
     }
     
     .hero .subheadline, .hero p {
@@ -426,7 +431,7 @@ main {
     }
     
     .section-header h2 {
-        font-size: 1.8rem;
+        font-size: 1.75rem;
     }
     
     .two-column,
