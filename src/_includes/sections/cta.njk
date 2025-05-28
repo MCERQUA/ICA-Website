@@ -1,0 +1,38 @@
+{# CTA Section Component #}
+{# Default values - can be overridden when including #}
+{% set ctaTitle = ctaTitle or "Ready to Transform Your Home's Comfort?" %}
+{% set ctaText = ctaText or "Don't suffer through another scorching Arizona summer. Get your free insulation assessment today!" %}
+{% set highlightTitle = highlightTitle or "Limited Time Offer" %}
+{% set highlightText = highlightText or "Schedule your free assessment this month and receive priority scheduling for your installation!" %}
+{% set showHighlight = showHighlight if showHighlight is defined else true %}
+{% set ctaPrimary = ctaPrimary or "Schedule Free Assessment" %}
+{% set ctaSecondary = ctaSecondary or "Call " + site.phone + " Now" %}
+{% set ctaPrimaryLink = ctaPrimaryLink or "/contact/" %}
+{% set ctaSecondaryLink = ctaSecondaryLink or "tel:" + site.phone %}
+{% set showFooterInfo = showFooterInfo if showFooterInfo is defined else true %}
+
+<section class="cta-section">
+    <div class="container">
+        <h2>{{ ctaTitle }}</h2>
+        <p>{{ ctaText }}</p>
+        
+        {% if showHighlight %}
+        <div class="highlight-box">
+            <h3>{{ highlightTitle }}</h3>
+            <p>{{ highlightText }}</p>
+        </div>
+        {% endif %}
+        
+        <div class="cta-buttons">
+            <a href="{{ ctaPrimaryLink }}" class="btn btn-primary btn-large">{{ ctaPrimary }}</a>
+            <a href="{{ ctaSecondaryLink }}" class="btn btn-secondary btn-large">{{ ctaSecondary }}</a>
+        </div>
+        
+        {% if showFooterInfo %}
+        <div class="footer-info">
+            <p><strong>Service Areas:</strong> {{ site.service_areas | join(" • ") }}</p>
+            <p><em>Licensed • Bonded • Insured • BBB A+ Rating • 20+ Years Experience</em></p>
+        </div>
+        {% endif %}
+    </div>
+</section>
