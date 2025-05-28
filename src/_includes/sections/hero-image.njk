@@ -1,0 +1,87 @@
+{# Hero Image Component - Traditional Contractor Hero with Modern Style #}
+{# Default values - can be overridden when including #}
+{% set heroImage = heroImage or "/Images/insulation_contractors_of_arizona_spray_foam_Arizona_Sunset.webp" %}
+{% set heroTitle = heroTitle or "Phoenix's Trusted Insulation Experts" %}
+{% set heroSubtitle = heroSubtitle or "Professional Spray Foam & Attic Insulation Services" %}
+{% set heroDescription = heroDescription or "Serving the Valley Since 2004 • Licensed, Bonded & Insured" %}
+{% set showBadges = showBadges if showBadges is defined else true %}
+{% set ctaPrimary = ctaPrimary or "Get Free Estimate" %}
+{% set ctaSecondary = ctaSecondary or "Call Now" %}
+{% set ctaPrimaryLink = ctaPrimaryLink or "/contact/" %}
+{% set ctaSecondaryLink = ctaSecondaryLink or "tel:" + site.phone %}
+
+<section class="hero-image">
+    <div class="hero-overlay"></div>
+    <div class="hero-bg" style="background-image: url('{{ heroImage }}');"></div>
+    
+    <div class="container hero-content-wrapper">
+        <div class="hero-content-box">
+            {# Service Area Badge #}
+            <div class="service-area-badge">
+                <span class="badge-icon">📍</span>
+                <span>Serving Phoenix Metro Area</span>
+            </div>
+            
+            {# Main Content #}
+            <h1 class="hero-title">{{ heroTitle }}</h1>
+            <p class="hero-subtitle">{{ heroSubtitle }}</p>
+            <p class="hero-description">{{ heroDescription }}</p>
+            
+            {# Trust Badges #}
+            {% if showBadges %}
+            <div class="trust-badges">
+                <div class="badge-item">
+                    <img src="/Images/BBB.webp" alt="BBB A+ Rating" class="badge-img">
+                    <span>A+ Rating</span>
+                </div>
+                <div class="badge-item">
+                    <img src="/Images/SPFA.webp" alt="SPFA Member" class="badge-img">
+                    <span>Certified</span>
+                </div>
+                <div class="badge-item">
+                    <span class="badge-icon">✓</span>
+                    <span>Licensed ROC# 340641</span>
+                </div>
+                <div class="badge-item">
+                    <span class="badge-icon">⭐</span>
+                    <span>4.8/5 Stars</span>
+                </div>
+            </div>
+            {% endif %}
+            
+            {# CTA Buttons #}
+            <div class="hero-cta-group">
+                <a href="{{ ctaPrimaryLink }}" class="btn btn-hero-primary">
+                    <span>{{ ctaPrimary }}</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+                <a href="{{ ctaSecondaryLink }}" class="btn btn-hero-secondary">
+                    <span class="phone-icon">📞</span>
+                    <span>{{ ctaSecondary }}: {{ site.phone }}</span>
+                </a>
+            </div>
+            
+            {# Quick Stats #}
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">20+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">5,000+</span>
+                    <span class="stat-label">Homes Insulated</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">30-50%</span>
+                    <span class="stat-label">Energy Savings</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    {# Scroll Indicator #}
+    <div class="scroll-indicator">
+        <span class="scroll-text">Scroll to Learn More</span>
+        <div class="scroll-arrow">↓</div>
+    </div>
+</section>
