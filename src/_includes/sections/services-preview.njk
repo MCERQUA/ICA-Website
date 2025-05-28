@@ -1,0 +1,55 @@
+{# Services Preview Component #}
+{# Default values - can be overridden when including #}
+{% set sectionTitle = sectionTitle or "Professional Insulation Services" %}
+{% set sectionIntro = sectionIntro or "Expert solutions designed for Arizona's extreme climate challenges" %}
+{% set showServiceCards = showServiceCards if showServiceCards is defined else true %}
+{% set serviceCount = serviceCount or 3 %}
+
+<section class="services-preview content-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>{{ sectionTitle }}</h2>
+            <p class="section-intro">{{ sectionIntro }}</p>
+        </div>
+        
+        {% if showServiceCards %}
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="feature-icon">🔥</div>
+                <h3>Spray Foam Insulation</h3>
+                <p>Superior R-values and air sealing for maximum energy efficiency in extreme temperatures.</p>
+                <ul>
+                    <li>Closed-cell & open-cell options</li>
+                    <li>R-6.5 to R-7 per inch performance</li>
+                    <li>25+ year lifespan</li>
+                </ul>
+                <a href="/services/" class="btn btn-primary">Learn More</a>
+            </div>
+            
+            <div class="service-card featured">
+                <div class="feature-icon">🏠</div>
+                <h3>Attic Insulation</h3>
+                <p>Combat 160°F attic temperatures with professional attic insulation solutions.</p>
+                <ul>
+                    <li>Blown-in fiberglass & cellulose</li>
+                    <li>R-38 to R-49 coverage</li>
+                    <li>Radiant barrier installation</li>
+                </ul>
+                <a href="/services/" class="btn btn-primary">Learn More</a>
+            </div>
+            
+            <div class="service-card">
+                <div class="feature-icon">🏢</div>
+                <h3>Commercial Insulation</h3>
+                <p>Large-scale insulation projects for businesses, warehouses, and agricultural facilities.</p>
+                <ul>
+                    <li>421,700+ sq ft experience</li>
+                    <li>Agricultural tank insulation</li>
+                    <li>Metal building solutions</li>
+                </ul>
+                <a href="/services/" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</section>
