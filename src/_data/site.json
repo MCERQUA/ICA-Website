@@ -1,12 +1,30 @@
 {
-  "name": "Premier Construction Co.",
-  "tagline": "Quality Construction Services You Can Trust",
-  "email": "info@premierconstructionco.com",
-  "phone": "(555) 123-4567",
-  "address": "123 Main Street, Your City, State 12345",
+  "name": "Insulation Contractors of Arizona",
+  "tagline": "Arizona's Extreme Heat Specialists | Licensed, Bonded & Insured | 20+ Years Experience",
+  "email": "insulationcontractorsofaz@gmail.com",
+  "phone": "623-241-1939",
+  "address": "Glendale, Arizona",
   "social": {
     "facebook": "#",
     "twitter": "#",
-    "linkedin": "#"
-  }
+    "linkedin": "#",
+    "google": "https://g.co/kgs/G3mYhJk",
+    "yelp": "https://www.yelp.com/biz/insulation-contractors-of-arizona-glendale"
+  },
+  "owner": "Christopher Kuhn",
+  "established": "20+ years",
+  "license": "Licensed, Bonded & Insured",
+  "bbb_rating": "A+",
+  "service_areas": [
+    "Phoenix",
+    "Glendale", 
+    "Gilbert",
+    "Chandler",
+    "Scottsdale",
+    "Tempe",
+    "Mesa",
+    "Peoria",
+    "Sun Lakes",
+    "Ahwatukee"
+  ]
 }
