@@ -5,28 +5,59 @@ title: Home
 
 <section class="hero">
     <div class="container">
-        <h1>Beat Arizona's Extreme Heat with Professional Insulation</h1>
-        <p>{{ site.tagline }}</p>
-        <p>Transform your home's comfort and slash energy bills with expert insulation solutions designed for the desert climate.</p>
-        <a href="/contact/" class="cta-button">Get Your Free Insulation Assessment</a>
-        <a href="tel:{{ site.phone }}" class="cta-button secondary">Call {{ site.phone }}</a>
+        <div class="hero-content">
+            <h1 class="glow-text">Arizona's Premier Insulation Experts</h1>
+            <p class="hero-subtitle">{{ site.tagline }}</p>
+            
+            <div class="hero-benefits">
+                <div class="hero-benefit">
+                    <h3>✓ 20+ Years Experience</h3>
+                    <p>Arizona climate specialists</p>
+                </div>
+                <div class="hero-benefit">
+                    <h3>✓ Licensed & Insured</h3>
+                    <p>{{ site.license }} • {{ site.bbb_rating }}</p>
+                </div>
+                <div class="hero-benefit">
+                    <h3>✓ Free Estimates</h3>
+                    <p>Professional assessments</p>
+                </div>
+                <div class="hero-benefit">
+                    <h3>✓ Energy Savings</h3>
+                    <p>30-50% reduction in cooling costs</p>
+                </div>
+            </div>
+            
+            <div class="cta-buttons">
+                <a href="/contact/" class="btn btn-primary btn-large">Get Free Assessment</a>
+                <a href="tel:{{ site.phone }}" class="btn btn-secondary btn-large">Call {{ site.phone }}</a>
+            </div>
+        </div>
     </div>
 </section>
 
-<section class="services-preview">
+<section class="services-preview content-section">
     <div class="container">
-        <h2>Professional Insulation Services</h2>
+        <div class="section-header">
+            <h2>Professional Insulation Services</h2>
+            <p class="section-intro">Expert solutions designed for Arizona's extreme climate challenges</p>
+        </div>
+        
         <div class="services-grid">
             <div class="service-card">
+                <div class="feature-icon">🔥</div>
                 <h3>Spray Foam Insulation</h3>
-                <p>Superior R-values and air sealing for maximum energy efficiency in Arizona's extreme temperatures.</p>
+                <p>Superior R-values and air sealing for maximum energy efficiency in extreme temperatures.</p>
                 <ul>
                     <li>Closed-cell & open-cell options</li>
                     <li>R-6.5 to R-7 per inch performance</li>
                     <li>25+ year lifespan</li>
                 </ul>
+                <a href="/services/" class="btn btn-primary">Learn More</a>
             </div>
-            <div class="service-card">
+            
+            <div class="service-card featured">
+                <div class="feature-icon">🏠</div>
                 <h3>Attic Insulation</h3>
                 <p>Combat 160°F attic temperatures with professional attic insulation solutions.</p>
                 <ul>
@@ -34,8 +65,11 @@ title: Home
                     <li>R-38 to R-49 coverage</li>
                     <li>Radiant barrier installation</li>
                 </ul>
+                <a href="/services/" class="btn btn-primary">Learn More</a>
             </div>
+            
             <div class="service-card">
+                <div class="feature-icon">🏢</div>
                 <h3>Commercial Insulation</h3>
                 <p>Large-scale insulation projects for businesses, warehouses, and agricultural facilities.</p>
                 <ul>
@@ -43,77 +77,117 @@ title: Home
                     <li>Agricultural tank insulation</li>
                     <li>Metal building solutions</li>
                 </ul>
+                <a href="/services/" class="btn btn-primary">Learn More</a>
             </div>
         </div>
-        <a href="/services/" class="cta-link">View All Services →</a>
     </div>
 </section>
 
-<section class="why-choose-us">
+<section class="content-section">
     <div class="container">
-        <h2>Why Arizona Homeowners Choose ICA</h2>
+        <div class="section-header">
+            <h2>Why Arizona Homeowners Choose ICA</h2>
+            <p class="section-intro">Experience, expertise, and proven results since {{ site.established }}</p>
+        </div>
+        
         <div class="features-grid">
-            <div class="feature">
-                <h3>{{ site.established }} Arizona Experience</h3>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>{{ site.established }} Experience</h3>
                 <p>Christopher Kuhn brings decades of specialized expertise in desert climate insulation challenges.</p>
             </div>
-            <div class="feature">
+            
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
                 <h3>{{ site.license }}</h3>
                 <p>{{ site.bbb_rating }} BBB rating with full professional credentials and comprehensive insurance coverage.</p>
             </div>
-            <div class="feature">
+            
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
                 <h3>Proven Energy Savings</h3>
                 <p>Customers report 30-50% reduction in cooling costs with our spray foam installations.</p>
             </div>
-            <div class="feature">
+            
+            <div class="feature-card">
+                <div class="feature-icon">🏆</div>
                 <h3>Local Family Business</h3>
-                <p>Serving {{ site.service_areas | join(", ") | truncate(50) }}... and surrounding areas.</p>
+                <p>Proudly serving Phoenix metro area with integrity and professional excellence.</p>
             </div>
         </div>
     </div>
 </section>
 
-<section class="testimonial-section">
+<section class="testimonials-section">
     <div class="container">
-        <h2>Real Results from Arizona Homeowners</h2>
+        <div class="section-header">
+            <h2>Real Results from Arizona Homeowners</h2>
+            <p class="section-intro">See what our customers are saying about their experience</p>
+        </div>
+        
         <div class="testimonial-grid">
-            <div class="testimonial">
-                <p>"Best investment we've made! Our energy bills dropped by $185 per month after spray foam installation. The house stays comfortable even at 118°F."</p>
-                <cite>- Sarah M., Gilbert ⭐⭐⭐⭐⭐</cite>
+            <div class="testimonial glass-panel">
+                <p class="testimonial-text">"Best investment we've made! Our energy bills dropped by $185 per month after spray foam installation. The house stays comfortable even at 118°F."</p>
+                <div class="testimonial-author">Sarah M., Gilbert ⭐⭐⭐⭐⭐</div>
+                <div class="testimonial-result">Saved $185/month on energy bills</div>
             </div>
-            <div class="testimonial">
-                <p>"The difference is night and day. Our upstairs bedrooms are finally comfortable all summer long. Professional service from start to finish."</p>
-                <cite>- Mike R., Chandler ⭐⭐⭐⭐⭐</cite>
+            
+            <div class="testimonial glass-panel">
+                <p class="testimonial-text">"The difference is night and day. Our upstairs bedrooms are finally comfortable all summer long. Professional service from start to finish."</p>
+                <div class="testimonial-author">Mike R., Chandler ⭐⭐⭐⭐⭐</div>
+                <div class="testimonial-result">40% improvement in comfort</div>
+            </div>
+            
+            <div class="testimonial glass-panel">
+                <p class="testimonial-text">"Quick, clean, and efficient. The crew protected everything and cleaned up perfectly. Six months later, we're still amazed at the difference."</p>
+                <div class="testimonial-author">Jennifer K., Glendale ⭐⭐⭐⭐⭐</div>
+                <div class="testimonial-result">$120/month energy savings</div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="recent-posts">
+<section class="recent-posts content-section">
     <div class="container">
-        <h2>Insulation Resources & Expert Advice</h2>
+        <div class="section-header">
+            <h2>Insulation Resources & Expert Advice</h2>
+            <p class="section-intro">Stay informed with our latest insights and tips</p>
+        </div>
+        
         <div class="blog-grid">
             {% for post in collections.blog | limit(3) %}
             <article class="blog-card">
                 <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
                 <time datetime="{{ post.date | htmlDateString }}">{{ post.date | postDate }}</time>
                 <p>{{ post.data.excerpt }}</p>
-                <a href="{{ post.url }}" class="read-more">Read More →</a>
+                <a href="{{ post.url }}" class="btn btn-secondary">Read More →</a>
             </article>
             {% endfor %}
         </div>
-        <a href="/blog/" class="cta-link">View All Resources →</a>
+        <div class="text-center mt-4">
+            <a href="/blog/" class="btn btn-primary">View All Resources</a>
+        </div>
     </div>
 </section>
 
 <section class="cta-section">
     <div class="container">
-        <h2>Ready to Beat the Arizona Heat?</h2>
-        <p>Don't suffer through another scorching summer. Get your free insulation assessment today!</p>
-        <div class="cta-buttons">
-            <a href="/contact/" class="cta-button">Schedule Free Assessment</a>
-            <a href="tel:{{ site.phone }}" class="cta-button secondary">Call {{ site.phone }}</a>
+        <h2>Ready to Transform Your Home's Comfort?</h2>
+        <p>Don't suffer through another scorching Arizona summer. Get your free insulation assessment today!</p>
+        
+        <div class="highlight-box">
+            <h3>Limited Time Offer</h3>
+            <p>Schedule your free assessment this month and receive priority scheduling for your installation!</p>
         </div>
-        <p class="service-areas">Serving: {{ site.service_areas | join(" • ") }}</p>
+        
+        <div class="cta-buttons">
+            <a href="/contact/" class="btn btn-primary btn-large">Schedule Free Assessment</a>
+            <a href="tel:{{ site.phone }}" class="btn btn-secondary btn-large">Call {{ site.phone }} Now</a>
+        </div>
+        
+        <div class="footer-info">
+            <p><strong>Service Areas:</strong> {{ site.service_areas | join(" • ") }}</p>
+            <p><em>Licensed • Bonded • Insured • BBB A+ Rating • 20+ Years Experience</em></p>
+        </div>
     </div>
 </section>
