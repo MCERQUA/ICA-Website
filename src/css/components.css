@@ -363,6 +363,69 @@
     opacity: 0.5;
 }
 
+/* Service Cards with Images */
+.service-card .service-image {
+    width: 100%;
+    height: 200px;
+    margin: -2rem -2rem 1.5rem -2rem;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+}
+
+.service-card .service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-medium);
+}
+
+.service-card:hover .service-image img {
+    transform: scale(1.1);
+}
+
+/* Service Grid Layouts */
+.services-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* Three column layout (default) */
+.services-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Four column layout */
+.services-grid.four-column {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Responsive Service Grid */
+@media (max-width: 1200px) {
+    .services-grid.four-column {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid,
+    .services-grid.four-column {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .service-card .service-image {
+        height: 180px;
+    }
+}
+
 /* Glass Panel */
 .glass-panel, .testimonial, .contact-item {
     background: rgba(0, 255, 255, 0.03);
