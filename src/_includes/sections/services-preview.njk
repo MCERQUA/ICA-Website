@@ -3,7 +3,7 @@
 {% set sectionTitle = sectionTitle or "Professional Insulation Services" %}
 {% set sectionIntro = sectionIntro or "Expert solutions designed for Arizona's extreme climate challenges" %}
 {% set showServiceCards = showServiceCards if showServiceCards is defined else true %}
-{% set serviceCount = serviceCount or 3 %}
+{% set serviceCount = serviceCount or 4 %}
 
 <section class="services-preview content-section">
     <div class="container">
@@ -13,39 +13,59 @@
         </div>
         
         {% if showServiceCards %}
-        <div class="services-grid">
+        <div class="services-grid four-column">
             <div class="service-card">
-                <div class="feature-icon">🔥</div>
-                <h3>Spray Foam Insulation</h3>
-                <p>Superior R-values and air sealing for maximum energy efficiency in extreme temperatures.</p>
+                <div class="service-image">
+                    <img src="/Images/residential_spray_foam_insulation_arizona.webp" alt="Residential spray foam insulation services in Arizona">
+                </div>
+                <h3>Residential Insulation</h3>
+                <p>Complete home insulation solutions for Arizona homeowners seeking comfort and energy savings.</p>
                 <ul>
-                    <li>Closed-cell & open-cell options</li>
-                    <li>R-6.5 to R-7 per inch performance</li>
-                    <li>25+ year lifespan</li>
-                </ul>
-                <a href="/services/" class="btn btn-primary">Learn More</a>
-            </div>
-            
-            <div class="service-card featured">
-                <div class="feature-icon">🏠</div>
-                <h3>Attic Insulation</h3>
-                <p>Combat 160°F attic temperatures with professional attic insulation solutions.</p>
-                <ul>
-                    <li>Blown-in fiberglass & cellulose</li>
-                    <li>R-38 to R-49 coverage</li>
-                    <li>Radiant barrier installation</li>
+                    <li>Attic & wall insulation</li>
+                    <li>Energy efficiency upgrades</li>
+                    <li>Year-round comfort</li>
                 </ul>
                 <a href="/services/" class="btn btn-primary">Learn More</a>
             </div>
             
             <div class="service-card">
-                <div class="feature-icon">🏢</div>
+                <div class="service-image">
+                    <img src="/Images/Commercial_Spray_foam_insulation_arizona.webp" alt="Commercial spray foam insulation services in Arizona">
+                </div>
                 <h3>Commercial Insulation</h3>
-                <p>Large-scale insulation projects for businesses, warehouses, and agricultural facilities.</p>
+                <p>Large-scale insulation projects for businesses, offices, and retail spaces across Arizona.</p>
                 <ul>
                     <li>421,700+ sq ft experience</li>
-                    <li>Agricultural tank insulation</li>
-                    <li>Metal building solutions</li>
+                    <li>Rapid installation</li>
+                    <li>Code compliance</li>
+                </ul>
+                <a href="/services/" class="btn btn-primary">Learn More</a>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="/Images/industrial_spray_foam_insulation_arizona.webp" alt="Industrial spray foam insulation services in Arizona">
+                </div>
+                <h3>Industrial Insulation</h3>
+                <p>Heavy-duty insulation solutions for warehouses, manufacturing facilities, and metal buildings.</p>
+                <ul>
+                    <li>Metal building expertise</li>
+                    <li>Temperature control</li>
+                    <li>Moisture protection</li>
+                </ul>
+                <a href="/services/" class="btn btn-primary">Learn More</a>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="/Images/Agricultural_spray_foam_insulation_arizona.webp" alt="Agricultural spray foam insulation services in Arizona">
+                </div>
+                <h3>Agricultural Applications</h3>
+                <p>Specialized insulation for agricultural facilities, storage tanks, and farming operations.</p>
+                <ul>
+                    <li>Tank insulation experts</li>
+                    <li>Temperature stability</li>
+                    <li>Product protection</li>
                 </ul>
                 <a href="/services/" class="btn btn-primary">Learn More</a>
             </div>
