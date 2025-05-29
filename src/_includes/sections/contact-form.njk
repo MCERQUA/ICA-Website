@@ -75,7 +75,7 @@
     overflow: hidden;
 }
 
-/* Add grid and particles background effect */
+/* Add grid and particles background effect - FIXED: Added pointer-events: none */
 .contact-form-section::before {
     content: '';
     position: absolute;
@@ -88,9 +88,10 @@
         linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
     background-size: 50px 50px;
     z-index: 1;
+    pointer-events: none; /* CRITICAL FIX - Allows clicks to pass through */
 }
 
-/* Animated particles */
+/* Animated particles - FIXED: Added pointer-events: none */
 .contact-form-section::after {
     content: '';
     position: absolute;
@@ -105,6 +106,7 @@
     background-size: 200% 200%;
     animation: particleFloat 20s ease-in-out infinite;
     z-index: 1;
+    pointer-events: none; /* CRITICAL FIX - Allows clicks to pass through */
 }
 
 @keyframes particleFloat {
@@ -116,7 +118,7 @@
 
 .contact-form-content {
     position: relative;
-    z-index: 2;
+    z-index: 10; /* INCREASED z-index for better layering */
     background: rgba(20, 20, 20, 0.8);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(0, 255, 255, 0.2);
@@ -147,6 +149,8 @@
 
 .contact-form {
     margin-top: 2rem;
+    position: relative;
+    z-index: 11; /* Ensure form is above everything */
 }
 
 .form-grid {
@@ -159,6 +163,8 @@
 .form-group {
     display: flex;
     flex-direction: column;
+    position: relative;
+    z-index: 12; /* Ensure form elements are interactive */
 }
 
 .form-group.full-width {
@@ -188,6 +194,8 @@
     color: #ffffff;
     font-size: 1rem;
     transition: all 0.3s ease;
+    position: relative;
+    z-index: 13; /* Ensure inputs are clickable */
 }
 
 .form-group input:focus,
@@ -207,6 +215,8 @@
 .form-submit {
     text-align: center;
     margin-top: 2rem;
+    position: relative;
+    z-index: 12;
 }
 
 .form-submit .btn-primary {
@@ -225,11 +235,17 @@
     align-items: center;
     gap: 0.5rem;
     box-shadow: 0 5px 20px rgba(0, 255, 255, 0.3);
+    position: relative;
+    z-index: 13; /* Ensure button is clickable */
 }
 
 .form-submit .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 30px rgba(0, 255, 255, 0.5);
+}
+
+.form-submit .btn-primary:active {
+    transform: translateY(0);
 }
 
 .hidden {
