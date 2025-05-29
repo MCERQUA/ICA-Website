@@ -4,11 +4,8 @@ module.exports = function(eleventyConfig) {
   // Copy CSS files
   eleventyConfig.addPassthroughCopy("src/css");
   
-  // Copy Images folder - ensure case sensitivity
-  eleventyConfig.addPassthroughCopy("src/Images");
-  
-  // Also copy images with lowercase path for compatibility
-  eleventyConfig.addPassthroughCopy({ "src/Images": "images" });
+  // Copy images folder - use lowercase standard
+  eleventyConfig.addPassthroughCopy("src/images");
   
   // Add date filters
   eleventyConfig.addFilter("postDate", (dateObj) => {
