@@ -1,42 +1,41 @@
 ---
-layout: service-page.njk
+layout: base.njk
 title: "Dense Pack Insulation Services"
 subtitle: "Maximum Performance Retrofit Insulation for Arizona Homes"
 meta_description: "Professional dense pack insulation for walls and closed cavities in Phoenix & Arizona. Superior settling resistance. Expert installation. Call 623-241-1939"
-tags: 
-  - residential
-  - services
-benefits:
-  - title: "No Settling Issues"
-    description: "Compressed installation prevents future settling and gaps"
-    icon: "📦"
-  - title: "Superior R-Value"
-    description: "Higher density provides better thermal resistance"
-    icon: "🔥"
-  - title: "Air Infiltration Control"
-    description: "Reduces air leakage by up to 30% in existing walls"
-    icon: "💨"
-  - title: "Sound Dampening"
-    description: "Excellent noise reduction between rooms and from outside"
-    icon: "🔇"
-  - title: "Retrofit Friendly"
-    description: "Perfect for upgrading existing walls without demolition"
-    icon: "🏠"
-  - title: "Fire Resistance"
-    description: "Treated materials provide enhanced fire protection"
-    icon: "🛡️"
-process:
-  - title: "Wall Assessment"
-    description: "Thorough inspection using thermal imaging to identify gaps and voids"
-  - title: "Access Planning"
-    description: "Strategic hole placement for minimal visual impact"
-  - title: "Dense Pack Installation"
-    description: "High-pressure injection achieving 3.5 lbs/ft³ density"
-  - title: "Void Verification"
-    description: "Ensure complete cavity fill with no air pockets"
+heroImage: "/images/dense-pack-hero.jpg"
+heroStats:
+  - value: "3.5"
+    label: "lbs/ft³ Density"
+  - value: "30%"
+    label: "Air Leakage Reduction"
+  - value: "Zero"
+    label: "Settling Over Time"
+faqs:
+  - question: "Will dense pack work in my older home?"
+    answer: "Yes! Dense pack is ideal for older homes built before modern insulation standards. It's especially effective in balloon-frame and platform-frame construction common in pre-1980s Arizona homes."
+  - question: "How long does dense pack installation take?"
+    answer: "Most homes can be completed in 1-2 days. A typical 2,000 sq ft home takes about 8-10 hours for installation, plus additional time for patching and painting."
+  - question: "Is dense pack installation messy?"
+    answer: "Our professional installation process includes comprehensive dust control and cleanup. We use specialized equipment with HEPA filtration and protect your home throughout the process."
+  - question: "What's the difference between dense pack and regular blown-in?"
+    answer: "Dense pack is installed at 3.5 lbs/ft³ density versus 1.5 lbs/ft³ for standard blown-in. This higher density prevents settling, provides better R-value, and creates superior air sealing."
+  - question: "Can dense pack be installed without removing drywall?"
+    answer: "Yes! That's the main advantage. We drill small access holes that are professionally patched after installation. It's 60-70% less expensive than removing and replacing drywall."
+  - question: "Which material is better - cellulose or fiberglass?"
+    answer: "Both work well. Cellulose is eco-friendly with good sound absorption. Fiberglass has higher R-value per inch and better moisture resistance. We'll recommend based on your specific needs."
+processSteps:
+  - title: "Thermal Assessment"
+    description: "We use advanced thermal imaging cameras to map your walls and identify areas lacking insulation"
+  - title: "Strategic Access"
+    description: "Small 2-3 inch holes are drilled at calculated intervals for minimal visual impact"
+  - title: "High-Pressure Installation"
+    description: "Insulation is blown at high pressure to achieve 3.5 lbs/ft³ density"
+  - title: "Quality Verification"
+    description: "Post-installation thermal imaging confirms complete coverage"
   - title: "Professional Finishing"
-    description: "Expert patching and paint matching for invisible repairs"
-pricing:
+    description: "Expert patching, texturing, and painting for invisible repairs"
+pricingOptions:
   - type: "Cellulose Dense Pack"
     price: "$1.50-2.50/sq ft"
     features:
@@ -55,320 +54,38 @@ pricing:
 relatedServices:
   - title: "Wall Insulation"
     url: "/services/residential/wall/"
+    description: "Complete wall insulation solutions"
   - title: "Blown-In Insulation"
     url: "/services/residential/blown-in/"
+    description: "Traditional blown-in services"
   - title: "Attic Insulation"
     url: "/services/residential/attic/"
+    description: "Comprehensive attic solutions"
 ---
 
-<style>
-  .dense-pack-hero {
-    background: linear-gradient(135deg, rgba(30, 60, 114, 0.95), rgba(42, 82, 152, 0.95)), url('/images/dense-pack-installation.jpg') center/cover;
-    padding: 80px 0;
-    color: white;
-    text-align: center;
-  }
-  
-  .density-comparison {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin: 40px 0;
-  }
-  
-  .density-card {
-    background: rgba(255, 255, 255, 0.02);
-    border: 2px solid rgba(0, 255, 255, 0.3);
-    border-radius: 15px;
-    padding: 30px;
-    text-align: center;
-    transition: all 0.3s ease;
-  }
-  
-  .density-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--primary);
-    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
-  }
-  
-  .density-meter {
-    width: 100px;
-    height: 100px;
-    margin: 20px auto;
-    border-radius: 50%;
-    background: conic-gradient(
-      from 0deg,
-      var(--primary) 0deg,
-      var(--primary) var(--density),
-      var(--surface-dark) var(--density),
-      var(--surface-dark) 360deg
-    );
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-  
-  .density-meter::before {
-    content: '';
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    background: var(--surface);
-    border-radius: 50%;
-  }
-  
-  .density-value {
-    position: relative;
-    z-index: 1;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--primary);
-  }
-  
-  .retrofit-showcase {
-    background: linear-gradient(180deg, var(--surface) 0%, var(--surface-dark) 100%);
-    padding: 60px 0;
-  }
-  
-  .before-after {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin: 40px 0;
-  }
-  
-  .ba-image {
-    position: relative;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  }
-  
-  .ba-label {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background: var(--primary);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-  }
-</style>
+{% set title = "Dense Pack Insulation Services" %}
+{% set subtitle = "Maximum Performance Retrofit Insulation for Arizona Homes" %}
+{% include "sections/service-hero.njk" %}
 
-<section class="dense-pack-hero">
-  <div class="container">
-    <h1>{{ title }}</h1>
-    <p class="lead">{{ subtitle }}</p>
-    <div class="hero-stats">
-      <div class="stat">
-        <span class="stat-number">3.5</span>
-        <span class="stat-label">lbs/ft³ Density</span>
-      </div>
-      <div class="stat">
-        <span class="stat-number">30%</span>
-        <span class="stat-label">Air Leakage Reduction</span>
-      </div>
-      <div class="stat">
-        <span class="stat-number">Zero</span>
-        <span class="stat-label">Settling Over Time</span>
-      </div>
-    </div>
-  </div>
-</section>
+{% include "sections/dense-pack-comparison.njk" %}
 
-<section class="content-section">
-  <div class="container">
-    <h2>Why Dense Pack for Arizona Homes?</h2>
-    <p class="lead">Traditional blown-in insulation can settle over time, leaving gaps that let Arizona's extreme heat infiltrate your home. Dense pack insulation is installed at high pressure to prevent settling and maximize performance.</p>
-    
-    <div class="density-comparison">
-      <div class="density-card">
-        <h3>Standard Blown-In</h3>
-        <div class="density-meter" style="--density: 90deg;">
-          <span class="density-value">1.5</span>
-        </div>
-        <p><strong>1.5 lbs/ft³</strong></p>
-        <ul>
-          <li>Prone to settling</li>
-          <li>Air gaps develop</li>
-          <li>R-value degrades</li>
-          <li>20-30% settling rate</li>
-        </ul>
-      </div>
-      
-      <div class="density-card">
-        <h3>Dense Pack Method</h3>
-        <div class="density-meter" style="--density: 315deg;">
-          <span class="density-value">3.5</span>
-        </div>
-        <p><strong>3.5 lbs/ft³</strong></p>
-        <ul>
-          <li>No settling issues ✅</li>
-          <li>Complete cavity fill ✅</li>
-          <li>Maintains R-value ✅</li>
-          <li>0% settling rate ✅</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+{% include "sections/retrofit-benefits.njk" %}
 
-<section class="retrofit-showcase">
-  <div class="container">
-    <h2>Perfect for Retrofitting Existing Walls</h2>
-    <p class="lead">Upgrade your home's insulation without tearing down walls</p>
-    
-    <div class="retrofit-benefits">
-      <div class="benefit-card">
-        <h3>🏠 Minimal Disruption</h3>
-        <p>Small access holes are drilled strategically and professionally patched. Most installations completed in 1-2 days with minimal impact on your daily life.</p>
-      </div>
-      
-      <div class="benefit-card">
-        <h3>🎯 Targeted Installation</h3>
-        <p>Using thermal imaging, we identify exactly where insulation is needed, focusing on problem areas and ensuring complete coverage.</p>
-      </div>
-      
-      <div class="benefit-card">
-        <h3>💰 Cost-Effective Upgrade</h3>
-        <p>Dense pack retrofitting costs 60-70% less than removing and replacing drywall, while delivering superior insulation performance.</p>
-      </div>
-    </div>
-    
-    <div class="before-after">
-      <div class="ba-image">
-        <span class="ba-label">Before</span>
-        <img src="/images/thermal-before-dense-pack.jpg" alt="Thermal image showing heat infiltration">
-        <p>Thermal imaging reveals significant heat infiltration through uninsulated walls</p>
-      </div>
-      
-      <div class="ba-image">
-        <span class="ba-label">After</span>
-        <img src="/images/thermal-after-dense-pack.jpg" alt="Thermal image showing proper insulation">
-        <p>Dense pack installation creates uniform thermal barrier with no gaps</p>
-      </div>
-    </div>
-  </div>
-</section>
+{% set process = processSteps %}
+{% include "components/process-steps.njk" %}
 
-<section class="content-section">
-  <div class="container">
-    <h2>Dense Pack Installation Process</h2>
-    <div class="installation-steps">
-      <div class="step-detail">
-        <h3>Step 1: Thermal Assessment</h3>
-        <p>We use advanced thermal imaging cameras to map your walls and identify areas lacking insulation. This technology reveals hidden gaps, settling, and thermal bridges that waste energy.</p>
-      </div>
-      
-      <div class="step-detail">
-        <h3>Step 2: Strategic Access</h3>
-        <p>Small 2-3 inch holes are drilled at calculated intervals - typically one hole per stud bay. For a 2,000 sq ft home, this usually means 40-60 access points, strategically placed for minimal visual impact.</p>
-      </div>
-      
-      <div class="step-detail">
-        <h3>Step 3: High-Pressure Installation</h3>
-        <p>Using specialized equipment, insulation is blown at high pressure to achieve 3.5 lbs/ft³ density. This pressure ensures complete cavity fill and prevents any future settling.</p>
-      </div>
-      
-      <div class="step-detail">
-        <h3>Step 4: Quality Verification</h3>
-        <p>Post-installation thermal imaging confirms complete coverage. Any voids are immediately addressed to ensure uniform insulation throughout your walls.</p>
-      </div>
-      
-      <div class="step-detail">
-        <h3>Step 5: Professional Finishing</h3>
-        <p>Our skilled technicians patch all access holes, texture to match existing walls, and paint for a seamless finish. Most homeowners can't identify where work was performed.</p>
-      </div>
-    </div>
-  </div>
-</section>
+{% include "sections/material-options.njk" %}
 
-<section class="material-comparison">
-  <div class="container">
-    <h2>Dense Pack Material Options</h2>
-    <div class="material-grid">
-      <div class="material-card">
-        <h3>Cellulose Dense Pack</h3>
-        <div class="material-features">
-          <div class="feature">
-            <strong>Composition:</strong> Recycled paper treated with borates
-          </div>
-          <div class="feature">
-            <strong>R-Value:</strong> R-3.7 per inch
-          </div>
-          <div class="feature">
-            <strong>Benefits:</strong>
-            <ul>
-              <li>Eco-friendly (85% recycled content)</li>
-              <li>Natural pest deterrent</li>
-              <li>Class 1 fire rating</li>
-              <li>Superior sound absorption</li>
-            </ul>
-          </div>
-          <div class="feature">
-            <strong>Best For:</strong> Environmentally conscious homeowners seeking excellent all-around performance
-          </div>
-        </div>
-      </div>
-      
-      <div class="material-card featured">
-        <h3>Fiberglass Dense Pack</h3>
-        <div class="material-features">
-          <div class="feature">
-            <strong>Composition:</strong> Specially designed loose-fill fiberglass
-          </div>
-          <div class="feature">
-            <strong>R-Value:</strong> R-4.2 per inch
-          </div>
-          <div class="feature">
-            <strong>Benefits:</strong>
-            <ul>
-              <li>Higher R-value per inch</li>
-              <li>Completely non-combustible</li>
-              <li>Moisture resistant</li>
-              <li>No chemical treatments needed</li>
-            </ul>
-          </div>
-          <div class="feature">
-            <strong>Best For:</strong> Maximum thermal performance and moisture resistance in Arizona's climate
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+{% set pricing = pricingOptions %}
+{% include "components/pricing-table.njk" %}
 
-<section class="faq-preview">
-  <div class="container">
-    <h2>Dense Pack FAQs</h2>
-    <div class="faq-grid">
-      <div class="faq-item">
-        <h3>Will dense pack work in my older home?</h3>
-        <p>Yes! Dense pack is ideal for older homes built before modern insulation standards. It's especially effective in balloon-frame and platform-frame construction common in pre-1980s Arizona homes.</p>
-      </div>
-      
-      <div class="faq-item">
-        <h3>How long does installation take?</h3>
-        <p>Most homes can be completed in 1-2 days. A typical 2,000 sq ft home takes about 8-10 hours for installation, plus additional time for patching and painting.</p>
-      </div>
-      
-      <div class="faq-item">
-        <h3>Is it messy?</h3>
-        <p>Our professional installation process includes comprehensive dust control and cleanup. We use specialized equipment with HEPA filtration and protect your home throughout the process.</p>
-      </div>
-    </div>
-  </div>
-</section>
+{% include "sections/why-choose-ica.njk" %}
 
-<div class="service-cta-section">
-  <div class="container">
-    <h2>Upgrade Your Walls with Dense Pack</h2>
-    <p>Stop heat infiltration and reduce energy costs with professional dense pack installation.</p>
-    <div class="cta-buttons">
-      <a href="/contact/" class="btn btn-primary">Schedule Free Assessment</a>
-      <a href="tel:623-241-1939" class="btn btn-secondary">Call 623-241-1939</a>
-    </div>
-  </div>
-</div>
+{% include "sections/testimonials.njk" %}
+
+{% set sectionTitle = "Dense Pack FAQs" %}
+{% include "sections/service-faq.njk" %}
+
+{% include "sections/cta.njk" %}
+
+{% include "sections/related-services.njk" %}
