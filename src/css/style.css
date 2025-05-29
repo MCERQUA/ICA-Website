@@ -415,6 +415,129 @@ img {
     backdrop-filter: blur(10px);
 }
 
+/* Mega Menu Styles */
+.nav-item {
+    position: relative;
+}
+
+.nav-item.has-submenu:hover .submenu-wrapper,
+.nav-item.has-submenu.hover .submenu-wrapper {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.submenu-wrapper {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--primary-medium);
+    border: 1px solid var(--accent-dim);
+    border-radius: 8px;
+    min-width: 600px;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all var(--transition-medium);
+    z-index: 1000;
+    box-shadow: var(--shadow-xl);
+    backdrop-filter: blur(10px);
+}
+
+.submenu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.submenu-section {
+    list-style: none;
+}
+
+.submenu-title {
+    font-weight: bold;
+    color: var(--accent-primary);
+    margin-bottom: 10px;
+    display: block;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.submenu-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.submenu-items li {
+    margin-bottom: 8px;
+}
+
+.submenu-items a {
+    color: var(--gray-100);
+    transition: color var(--transition-fast);
+    font-size: 0.95rem;
+    display: block;
+    padding: 4px 0;
+}
+
+.submenu-items a:hover {
+    color: var(--accent-primary);
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.dropdown-arrow {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 0.8em;
+    transition: transform var(--transition-fast);
+}
+
+.nav-item.has-submenu:hover .dropdown-arrow,
+.nav-item.has-submenu.hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+/* Mobile Menu Adjustments */
+@media (max-width: 768px) {
+    .submenu-wrapper {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        width: 100%;
+        min-width: unset;
+        display: none;
+        margin-top: 10px;
+        background: rgba(13, 32, 32, 0.95);
+    }
+    
+    .nav-item.has-submenu.active .submenu-wrapper {
+        display: block;
+    }
+    
+    .submenu {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .dropdown-arrow {
+        float: right;
+        cursor: pointer;
+        padding: 10px;
+    }
+    
+    .nav-item.has-submenu.active .dropdown-arrow {
+        transform: rotate(180deg);
+    }
+}
+
 /* Utility Classes */
 .text-center { text-align: center; }
 .text-left { text-align: left; }
