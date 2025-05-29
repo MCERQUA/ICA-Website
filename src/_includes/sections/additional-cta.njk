@@ -56,7 +56,7 @@
     overflow: hidden;
 }
 
-/* Grid and particles background matching the homepage hero */
+/* Grid and particles background matching the homepage hero - FIXED: Added pointer-events: none */
 .additional-cta-section::before {
     content: '';
     position: absolute;
@@ -69,9 +69,10 @@
         linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
     background-size: 50px 50px;
     z-index: 1;
+    pointer-events: none; /* CRITICAL FIX - Allows clicks to pass through */
 }
 
-/* Animated particles effect */
+/* Animated particles effect - FIXED: Added pointer-events: none */
 .additional-cta-section::after {
     content: '';
     position: absolute;
@@ -86,6 +87,7 @@
     background-size: 200% 200%;
     animation: particleFloat 20s ease-in-out infinite;
     z-index: 1;
+    pointer-events: none; /* CRITICAL FIX - Allows clicks to pass through */
 }
 
 @keyframes particleFloat {
@@ -97,7 +99,7 @@
 
 .cta-content {
     position: relative;
-    z-index: 2;
+    z-index: 10; /* INCREASED z-index for better layering */
     text-align: center;
     max-width: 900px;
     margin: 0 auto;
@@ -112,12 +114,16 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+    position: relative;
+    z-index: 11;
 }
 
 .cta-subtitle {
     font-size: 1.2rem;
     color: rgba(255, 255, 255, 0.8);
     margin-bottom: 2.5rem;
+    position: relative;
+    z-index: 11;
 }
 
 .cta-features {
@@ -126,6 +132,8 @@
     gap: 2rem;
     margin-bottom: 2.5rem;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 11;
 }
 
 .cta-feature {
@@ -147,6 +155,8 @@
     gap: 1.5rem;
     justify-content: center;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 12; /* Ensure buttons are above everything */
 }
 
 .cta-buttons .btn {
@@ -160,6 +170,8 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    position: relative;
+    z-index: 13; /* Ensure individual buttons are clickable */
 }
 
 .cta-buttons .btn-primary {
@@ -173,6 +185,10 @@
     box-shadow: 0 8px 30px rgba(0, 255, 255, 0.5);
 }
 
+.cta-buttons .btn-primary:active {
+    transform: translateY(0);
+}
+
 .cta-buttons .btn-secondary {
     background: transparent;
     color: #ffffff;
@@ -184,6 +200,10 @@
     background: rgba(255, 255, 255, 0.1);
     border-color: rgba(255, 255, 255, 0.5);
     transform: translateY(-2px);
+}
+
+.cta-buttons .btn-secondary:active {
+    transform: translateY(0);
 }
 
 /* Mobile responsiveness */
