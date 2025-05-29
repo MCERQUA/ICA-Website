@@ -1,4 +1,4 @@
-{# Air Duct Cleaning Section - Updated with Reduced Glow & Lighter Overlay #}
+{# Air Duct Cleaning Section - Updated with Improved Title Legibility #}
 {% set sectionTitle = sectionTitle or "Now Offering Professional Air Duct Cleaning!" %}
 {% set sectionSubtitle = sectionSubtitle or "Keep your home's air fresh, reduce allergens, and boost HVAC efficiency. Schedule your duct cleaning today." %}
 {% set ctaText = ctaText or "Book Now!" %}
@@ -11,7 +11,7 @@
   <div class="container">
     <div class="duct-cleaning-content">
       <div class="duct-cleaning-text">
-        <h2 class="section-title glow-text">{{ sectionTitle }}</h2>
+        <h2 class="section-title">{{ sectionTitle }}</h2>
         <p class="section-subtitle">{{ sectionSubtitle }}</p>
         <a href="{{ ctaUrl }}" class="btn-hero-primary">
           {{ ctaText }} <span class="btn-arrow">→</span>
@@ -75,16 +75,58 @@
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   }
 
+  /* Enhanced title with dark teal gradient fill for maximum legibility */
   .duct-cleaning-text .section-title {
     font-size: 2.25rem;
-    color: var(--accent-primary);
     font-family: var(--font-heading);
     font-weight: 700;
     margin-bottom: 1.5rem;
     line-height: 1.2;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    text-shadow: 0 0 3px rgba(0, 255, 255, 0.2);
+    position: relative;
+    
+    /* Dark teal gradient background fill */
+    background: linear-gradient(135deg, 
+      #006666 0%,    /* Dark teal */
+      #008080 25%,   /* Teal */
+      #00a6a6 50%,   /* Medium teal */
+      #00cccc 75%,   /* Bright teal */
+      #00ffff 100%   /* Cyan */
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* Add a solid shadow for better definition */
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.8));
+  }
+
+  /* Add a subtle glow overlay without affecting text clarity */
+  .duct-cleaning-text .section-title::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(135deg, #006666 0%, #00ffff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: blur(8px);
+    opacity: 0.5;
+    animation: enhanced-glow-pulse 3s ease-in-out infinite;
+  }
+
+  /* Fallback for browsers that don't support background-clip */
+  @supports not (-webkit-background-clip: text) {
+    .duct-cleaning-text .section-title {
+      color: #00cccc;
+      text-shadow: 
+        0 0 10px rgba(0, 255, 255, 0.8),
+        0 0 20px rgba(0, 255, 255, 0.6),
+        0 2px 4px rgba(0, 0, 0, 0.8);
+    }
   }
 
   .duct-cleaning-text .section-subtitle {
@@ -210,24 +252,26 @@
     }
   }
 
-  /* Reduced glow effect for this section */
-  .air-duct-cleaning-hero .glow-text {
-    animation: subtle-pulse-glow 4s ease-in-out infinite;
-  }
-
-  @keyframes subtle-pulse-glow {
+  /* Enhanced glow animation for the pseudo-element only */
+  @keyframes enhanced-glow-pulse {
     0%, 100% {
-      text-shadow: 
-        0 0 2px var(--accent-primary),
-        0 0 4px var(--accent-primary),
-        0 0 6px rgba(0, 255, 255, 0.3);
+      opacity: 0.5;
+      transform: scale(1);
     }
     50% {
-      text-shadow: 
-        0 0 3px var(--accent-primary),
-        0 0 6px var(--accent-primary),
-        0 0 10px rgba(0, 255, 255, 0.4);
+      opacity: 0.7;
+      transform: scale(1.02);
     }
   }
 </style>
+
+<script>
+  // Add data-text attribute for the glow effect
+  document.addEventListener('DOMContentLoaded', function() {
+    const ductTitle = document.querySelector('.duct-cleaning-text .section-title');
+    if (ductTitle) {
+      ductTitle.setAttribute('data-text', ductTitle.textContent);
+    }
+  });
+</script>
 {% endif %}
