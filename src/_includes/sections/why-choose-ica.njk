@@ -12,17 +12,11 @@
         </div>
         
         {% if showFeatureCards %}
-        <div class="features-grid">
+        <div class="features-grid features-grid--three">
             <div class="feature-card">
                 <div class="feature-icon">⚡</div>
                 <h3>{{ site.established }} Experience</h3>
                 <p>Christopher Kuhn brings decades of specialized expertise in desert climate insulation challenges.</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">🛡️</div>
-                <h3>{{ site.license }}</h3>
-                <p>{{ site.bbb_rating }} BBB rating with full professional credentials and comprehensive insurance coverage.</p>
             </div>
             
             <div class="feature-card">
@@ -40,3 +34,26 @@
         {% endif %}
     </div>
 </section>
+
+<style>
+/* Three-column grid modifier */
+.features-grid--three {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@media (max-width: 968px) {
+    .features-grid--three {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .features-grid--three .feature-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+</style>
