@@ -154,20 +154,7 @@
                         <img src="/images/Insulation_Contractors_of_arizona_logo.webp" alt="{{ site.name }}" class="logo-img" width="200" height="80" loading="eager">
                     </a>
                 </div>
-                <nav class="main-nav" aria-label="Main navigation">
-                    <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
-                        <span class="hamburger"></span>
-                        <span class="hamburger"></span>
-                        <span class="hamburger"></span>
-                    </button>
-                    <ul class="nav-list">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about/">About</a></li>
-                        <li><a href="/services/">Services</a></li>
-                        <li><a href="/blog/">Blog</a></li>
-                        <li><a href="/contact/" class="cta-button">Quote</a></li>
-                    </ul>
-                </nav>
+                {% include "components/navigation.njk" %}
             </div>
         </div>
     </header>
@@ -217,7 +204,7 @@
         }
     });
 
-    // Mobile menu toggle
+    // Mobile menu toggle and mega menu functionality
     document.addEventListener('DOMContentLoaded', function() {
         const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
         const navList = document.querySelector('.nav-list');
@@ -240,6 +227,35 @@
                 }
             });
         }
+        
+        // Mega menu hover functionality for desktop
+        const navItemsWithSubmenu = document.querySelectorAll('.nav-item.has-submenu');
+        navItemsWithSubmenu.forEach(item => {
+            let hoverTimeout;
+            
+            item.addEventListener('mouseenter', function() {
+                clearTimeout(hoverTimeout);
+                this.classList.add('hover');
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                const thisItem = this;
+                hoverTimeout = setTimeout(() => {
+                    thisItem.classList.remove('hover');
+                }, 300);
+            });
+        });
+        
+        // Mobile submenu toggle
+        const dropdownArrows = document.querySelectorAll('.dropdown-arrow');
+        dropdownArrows.forEach(arrow => {
+            arrow.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const navItem = this.closest('.nav-item');
+                navItem.classList.toggle('active');
+            });
+        });
         
         // Close mobile menu when clicking outside
         document.addEventListener('click', function(event) {
