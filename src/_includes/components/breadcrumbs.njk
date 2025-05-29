@@ -1,0 +1,131 @@
+{# Breadcrumb Navigation Component #}
+{# Usage: {% include "components/breadcrumbs.njk" %} #}
+
+{# Generate breadcrumb based on current page URL #}
+{% set urlParts = page.url | replace("/", " ") | trim | split(" ") %}
+
+{# Only show breadcrumbs if we're not on the homepage #}
+{% if page.url != "/" %}
+<nav class="breadcrumb-navigation" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb-list">
+      {# Home link - always shown #}
+      <li class="breadcrumb-item">
+        <a href="/" class="breadcrumb-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="breadcrumb-icon">
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          <span>Home</span>
+        </a>
+      </li>
+      
+      {# Build breadcrumb trail #}
+      {% set currentPath = "/" %}
+      {% for part in urlParts %}
+        {% if part and part != "index" %}
+          {% set currentPath = currentPath + part + "/" %}
+          
+          {# Format the display name #}
+          {% set displayName = part | replace("-", " ") | title %}
+          
+          {# Special cases for better display names #}
+          {% if part == "blog" %}
+            {% set displayName = "Blog" %}
+          {% elif part == "services" %}
+            {% set displayName = "Services" %}
+          {% elif part == "ica" %}
+            {% set displayName = "ICA" %}
+          {% endif %}
+          
+          <li class="breadcrumb-item {% if loop.last %}active{% endif %}">
+            {% if loop.last %}
+              {# Current page - no link #}
+              <span class="breadcrumb-current">{{ title or displayName }}</span>
+            {% else %}
+              {# Parent page - with link #}
+              <a href="{{ currentPath }}" class="breadcrumb-link">{{ displayName }}</a>
+            {% endif %}
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ol>
+  </div>
+</nav>
+
+<style>
+  /* Breadcrumb Navigation Styles */
+  .breadcrumb-navigation {
+    background: rgba(13, 17, 23, 0.6);
+    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+    padding: 15px 0;
+    margin-bottom: 30px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .breadcrumb-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+  
+  .breadcrumb-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+  }
+  
+  .breadcrumb-item::after {
+    content: "/";
+    margin: 0 10px;
+    color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .breadcrumb-item:last-child::after {
+    display: none;
+  }
+  
+  .breadcrumb-link {
+    color: #00ffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .breadcrumb-link:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  }
+  
+  .breadcrumb-icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .breadcrumb-current {
+    color: #ffffff;
+    font-weight: 500;
+  }
+  
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    .breadcrumb-navigation {
+      padding: 10px 0;
+      margin-bottom: 20px;
+    }
+    
+    .breadcrumb-list {
+      font-size: 0.85rem;
+    }
+    
+    .breadcrumb-item::after {
+      margin: 0 5px;
+    }
+  }
+</style>
+{% endif %}
