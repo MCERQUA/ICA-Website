@@ -1,0 +1,98 @@
+{
+  "main": [
+    {
+      "title": "Home",
+      "url": "/"
+    },
+    {
+      "title": "Services",
+      "url": "/services/",
+      "submenu": [
+        {
+          "title": "Residential",
+          "url": "/services/residential/",
+          "items": [
+            {"title": "Spray Foam Insulation", "url": "/services/residential/spray-foam/"},
+            {"title": "Blown-In Insulation", "url": "/services/residential/blown-in/"},
+            {"title": "Dense Pack Insulation", "url": "/services/residential/dense-pack/"},
+            {"title": "Attic Insulation", "url": "/services/residential/attic/"},
+            {"title": "Wall Insulation", "url": "/services/residential/wall/"},
+            {"title": "Crawl Space Insulation", "url": "/services/residential/crawl-space/"},
+            {"title": "Insulation Removal", "url": "/services/residential/removal/"}
+          ]
+        },
+        {
+          "title": "Commercial",
+          "url": "/services/commercial/",
+          "items": [
+            {"title": "Office Buildings", "url": "/services/commercial/office/"},
+            {"title": "Retail Spaces", "url": "/services/commercial/retail/"},
+            {"title": "Warehouses", "url": "/services/commercial/warehouse/"},
+            {"title": "New Construction", "url": "/services/commercial/new-construction/"}
+          ]
+        },
+        {
+          "title": "Industrial",
+          "url": "/services/industrial/",
+          "items": [
+            {"title": "Manufacturing Facilities", "url": "/services/industrial/manufacturing/"},
+            {"title": "Cold Storage", "url": "/services/industrial/cold-storage/"},
+            {"title": "Equipment Insulation", "url": "/services/industrial/equipment/"}
+          ]
+        },
+        {
+          "title": "Agricultural",
+          "url": "/services/agricultural/",
+          "items": [
+            {"title": "Tank Insulation", "url": "/services/agricultural/tank/"},
+            {"title": "Barn Insulation", "url": "/services/agricultural/barn/"},
+            {"title": "Storage Facilities", "url": "/services/agricultural/storage/"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Products",
+      "url": "/products/",
+      "submenu": [
+        {
+          "title": "Spray Foam Types",
+          "items": [
+            {"title": "Open Cell Spray Foam", "url": "/products/open-cell-spray-foam/"},
+            {"title": "Closed Cell Spray Foam", "url": "/products/closed-cell-spray-foam/"}
+          ]
+        },
+        {
+          "title": "Traditional Insulation",
+          "items": [
+            {"title": "Fiberglass Batts", "url": "/products/fiberglass-batts/"},
+            {"title": "Cellulose", "url": "/products/cellulose/"},
+            {"title": "Mineral Wool", "url": "/products/mineral-wool/"}
+          ]
+        },
+        {
+          "title": "Air Sealing Products",
+          "url": "/products/air-sealing/"
+        }
+      ]
+    },
+    {
+      "title": "Blog",
+      "url": "/blog/"
+    },
+    {
+      "title": "About Us",
+      "url": "/about/",
+      "submenu": [
+        {"title": "Our Story", "url": "/about/"},
+        {"title": "Events", "url": "/about/events/"},
+        {"title": "Community", "url": "/about/community/"}
+      ]
+    },
+    {
+      "title": "Contact",
+      "url": "/contact/",
+      "class": "cta-button"
+    }
+  ]
+}
