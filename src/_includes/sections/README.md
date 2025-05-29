@@ -53,6 +53,16 @@ The ICA website uses a modular component-based architecture for improved maintai
   - `postCount` - Number of posts to display (default: 3)
   - `showViewAllButton` - Show/hide "View All" button (default: true)
 
+### Air Duct Cleaning
+- **File:** `air-duct-cleaning.njk`
+- **Usage:** `{% include "sections/air-duct-cleaning.njk" %}`
+- **Variables:**
+  - `sectionTitle` - Section heading (default: "Now Offering Professional Air Duct Cleaning!")
+  - `sectionSubtitle` - Section description text
+  - `ctaText` - Button text (default: "Book Now!")
+  - `ctaUrl` - Button link (default: "/contact")
+  - `showSection` - Show/hide entire section (default: true)
+
 ### CTA Section
 - **File:** `cta.njk`
 - **Usage:** `{% include "sections/cta.njk" %}`
@@ -82,6 +92,7 @@ title: Home
 {% include "sections/why-choose-ica.njk" %}
 {% include "sections/testimonials.njk" %}
 {% include "sections/recent-posts.njk" %}
+{% include "sections/air-duct-cleaning.njk" %}
 {% include "sections/cta.njk" %}
 ```
 
@@ -100,6 +111,14 @@ title: Home
 {% include "sections/testimonials.njk" %}
 ```
 
+### Custom Air Duct Cleaning Section
+```njk
+{% set sectionTitle = "Breathe Cleaner Air Today!" %}
+{% set sectionSubtitle = "Professional duct cleaning for healthier homes" %}
+{% set ctaText = "Schedule Cleaning" %}
+{% include "sections/air-duct-cleaning.njk" %}
+```
+
 ### Custom CTA Section
 ```njk
 {% set ctaTitle = "Ready for Superior Insulation?" %}
@@ -110,7 +129,7 @@ title: Home
 
 ## Component Architecture Benefits
 
-1. **File Size Reduction:** From 8,530 bytes monolithic file to 6 modular components (800-2,500 bytes each)
+1. **File Size Reduction:** From 8,530 bytes monolithic file to 7 modular components (800-3,600 bytes each)
 2. **Edit Speed:** 60-80% faster section updates
 3. **Reusability:** Components can be used across all pages
 4. **Maintainability:** Changes to one component update all instances
