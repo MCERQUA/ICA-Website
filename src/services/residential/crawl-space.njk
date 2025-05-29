@@ -1,0 +1,494 @@
+---
+layout: service-page.njk
+title: "Crawl Space Insulation Services"
+subtitle: "Complete Crawl Space Solutions for Arizona Homes"
+meta_description: "Professional crawl space insulation & encapsulation in Phoenix & Arizona. Moisture control, pest prevention, energy savings. Call 623-241-1939"
+tags: 
+  - residential
+  - services
+benefits:
+  - title: "Moisture Control"
+    description: "Prevent humidity and moisture damage in your crawl space"
+    icon: "💧"
+  - title: "Energy Efficiency"
+    description: "Reduce energy loss through your floor by up to 20%"
+    icon: "⚡"
+  - title: "Pest Prevention"
+    description: "Create an inhospitable environment for pests and rodents"
+    icon: "🛡️"
+  - title: "Air Quality"
+    description: "Stop musty odors and allergens from entering your home"
+    icon: "🌬️"
+  - title: "Foundation Protection"
+    description: "Preserve structural integrity by controlling moisture"
+    icon: "🏗️"
+  - title: "Floor Comfort"
+    description: "Eliminate cold floors and temperature variations"
+    icon: "🦶"
+process:
+  - title: "Crawl Space Inspection"
+    description: "Comprehensive assessment of moisture, ventilation, and current conditions"
+  - title: "Moisture Remediation"
+    description: "Address any existing moisture issues before insulation"
+  - title: "Vapor Barrier Installation"
+    description: "Heavy-duty moisture barrier to protect against ground moisture"
+  - title: "Insulation Application"
+    description: "Install appropriate insulation for your specific needs"
+  - title: "Air Sealing & Finishing"
+    description: "Complete encapsulation with proper ventilation management"
+pricing:
+  - type: "Basic Insulation"
+    price: "$2.00-3.50/sq ft"
+    features:
+      - "R-19 to R-30 insulation"
+      - "Basic vapor barrier"
+      - "Pest resistant materials"
+      - "10-year warranty"
+  - type: "Complete Encapsulation"
+    price: "$4.00-7.00/sq ft"
+    features:
+      - "Full encapsulation system"
+      - "20-mil vapor barrier"
+      - "Dehumidification options"
+      - "Lifetime warranty"
+    highlighted: true
+relatedServices:
+  - title: "Attic Insulation"
+    url: "/services/residential/attic/"
+  - title: "Insulation Removal"
+    url: "/services/residential/removal/"
+  - title: "Wall Insulation"
+    url: "/services/residential/wall/"
+---
+
+<style>
+  .crawl-hero {
+    background: linear-gradient(135deg, rgba(30, 60, 114, 0.95), rgba(42, 82, 152, 0.95)), url('/images/crawl-space.jpg') center/cover;
+    padding: 80px 0;
+    color: white;
+    text-align: center;
+  }
+  
+  .crawl-problems {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+  }
+  
+  .problem-card {
+    background: rgba(255, 60, 60, 0.1);
+    border: 2px solid rgba(255, 60, 60, 0.3);
+    border-radius: 15px;
+    padding: 25px;
+    transition: all 0.3s ease;
+  }
+  
+  .problem-card:hover {
+    transform: scale(1.05);
+    border-color: rgba(255, 60, 60, 0.6);
+    box-shadow: 0 10px 30px rgba(255, 60, 60, 0.2);
+  }
+  
+  .solution-card {
+    background: rgba(60, 255, 60, 0.1);
+    border: 2px solid rgba(60, 255, 60, 0.3);
+    border-radius: 15px;
+    padding: 25px;
+    transition: all 0.3s ease;
+  }
+  
+  .solution-card:hover {
+    transform: scale(1.05);
+    border-color: rgba(60, 255, 60, 0.6);
+    box-shadow: 0 10px 30px rgba(60, 255, 60, 0.2);
+  }
+  
+  .encapsulation-showcase {
+    background: linear-gradient(180deg, var(--surface) 0%, var(--surface-dark) 100%);
+    padding: 60px 0;
+  }
+  
+  .encap-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 40px 0;
+  }
+  
+  .encap-option {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 30px;
+    position: relative;
+  }
+  
+  .encap-option.recommended {
+    border-color: var(--primary);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+  }
+  
+  .encap-option.recommended::before {
+    content: 'RECOMMENDED';
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: var(--primary);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.8rem;
+  }
+  
+  .moisture-meter {
+    background: linear-gradient(90deg, 
+      #0066ff 0%, 
+      #00ccff 25%, 
+      #00ff66 50%, 
+      #ffcc00 75%, 
+      #ff0000 100%
+    );
+    height: 30px;
+    border-radius: 15px;
+    position: relative;
+    margin: 20px 0;
+  }
+  
+  .moisture-indicator {
+    position: absolute;
+    top: -40px;
+    transform: translateX(-50%);
+    background: var(--surface);
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid;
+    font-weight: bold;
+  }
+  
+  .crawl-diagram {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 40px;
+    margin: 40px 0;
+    text-align: center;
+  }
+  
+  .layer-visualization {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 30px 0;
+  }
+  
+  .layer {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    position: relative;
+  }
+  
+  .layer-label {
+    position: absolute;
+    left: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80px;
+    text-align: right;
+    font-weight: bold;
+    color: var(--primary);
+  }
+  
+  @media (max-width: 768px) {
+    .encap-comparison {
+      grid-template-columns: 1fr;
+    }
+    
+    .layer-label {
+      position: static;
+      transform: none;
+      text-align: left;
+      width: auto;
+      margin-bottom: 5px;
+    }
+  }
+</style>
+
+<section class="crawl-hero">
+  <div class="container">
+    <h1>{{ title }}</h1>
+    <p class="lead">{{ subtitle }}</p>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-number">40%</span>
+        <span class="stat-label">Air Infiltration Source</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">20%</span>
+        <span class="stat-label">Energy Loss</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">90%</span>
+        <span class="stat-label">Moisture Reduction</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <h2>Why Your Crawl Space Needs Attention</h2>
+    <p class="lead">In Arizona, crawl spaces face unique challenges from extreme temperature swings, monsoon moisture, and desert pests. An unprotected crawl space can account for up to 40% of the air you breathe inside your home.</p>
+    
+    <div class="crawl-problems">
+      <div class="problem-card">
+        <h3>❌ Common Problems</h3>
+        <ul>
+          <li>Moisture damage and mold growth</li>
+          <li>Pest infestations (scorpions, spiders, rodents)</li>
+          <li>Cold floors in winter</li>
+          <li>High humidity entering home</li>
+          <li>Musty odors and poor air quality</li>
+          <li>Energy loss through floor</li>
+        </ul>
+      </div>
+      
+      <div class="solution-card">
+        <h3>✅ Our Solutions</h3>
+        <ul>
+          <li>Complete moisture control systems</li>
+          <li>Pest-resistant encapsulation</li>
+          <li>Thermal floor insulation</li>
+          <li>Vapor barriers and dehumidification</li>
+          <li>Air sealing and ventilation management</li>
+          <li>Energy-efficient crawl space design</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="encapsulation-showcase">
+  <div class="container">
+    <h2>Crawl Space Solutions Comparison</h2>
+    <div class="encap-comparison">
+      <div class="encap-option">
+        <h3>Traditional Vented Crawl Space</h3>
+        <div class="features">
+          <h4>What You Get:</h4>
+          <ul>
+            <li>Basic fiberglass insulation</li>
+            <li>Standard 6-mil vapor barrier</li>
+            <li>Vented design (outdated approach)</li>
+            <li>Minimal moisture protection</li>
+          </ul>
+          
+          <h4>Problems:</h4>
+          <ul>
+            <li>❌ Allows humidity infiltration</li>
+            <li>❌ Pest entry points remain</li>
+            <li>❌ Insulation sags and falls</li>
+            <li>❌ Energy inefficient</li>
+          </ul>
+          
+          <div class="price-range">
+            <strong>Cost:</strong> $2.00-3.50/sq ft
+          </div>
+        </div>
+      </div>
+      
+      <div class="encap-option recommended">
+        <h3>Complete Encapsulation System</h3>
+        <div class="features">
+          <h4>What You Get:</h4>
+          <ul>
+            <li>Closed-cell spray foam insulation</li>
+            <li>20-mil reinforced vapor barrier</li>
+            <li>Sealed and conditioned space</li>
+            <li>Complete moisture management</li>
+          </ul>
+          
+          <h4>Benefits:</h4>
+          <ul>
+            <li>✅ 90% moisture reduction</li>
+            <li>✅ Complete pest exclusion</li>
+            <li>✅ Permanent insulation solution</li>
+            <li>✅ Maximum energy efficiency</li>
+          </ul>
+          
+          <div class="price-range">
+            <strong>Cost:</strong> $4.00-7.00/sq ft
+            <br><strong>ROI:</strong> 5-7 years through energy savings
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <h2>The Science of Crawl Space Encapsulation</h2>
+    <div class="crawl-diagram">
+      <h3>Complete Encapsulation System Layers</h3>
+      <div class="layer-visualization">
+        <div class="layer">
+          <span class="layer-label">Floor Above</span>
+          <strong>Living Space Floor</strong> - Warm and comfortable year-round
+        </div>
+        <div class="layer" style="background: rgba(0, 255, 255, 0.2);">
+          <span class="layer-label">Insulation</span>
+          <strong>Closed-Cell Spray Foam</strong> - R-30 thermal barrier and air seal
+        </div>
+        <div class="layer" style="background: rgba(255, 255, 0, 0.2);">
+          <span class="layer-label">Air Space</span>
+          <strong>Conditioned Crawl Space</strong> - Controlled environment, no moisture
+        </div>
+        <div class="layer" style="background: rgba(255, 0, 255, 0.2);">
+          <span class="layer-label">Barrier</span>
+          <strong>20-mil Vapor Barrier</strong> - Prevents ground moisture intrusion
+        </div>
+        <div class="layer">
+          <span class="layer-label">Ground</span>
+          <strong>Earth Floor</strong> - Moisture source completely blocked
+        </div>
+      </div>
+    </div>
+    
+    <div class="moisture-control">
+      <h3>Moisture Levels Before & After</h3>
+      <div class="moisture-comparison">
+        <div class="moisture-reading">
+          <h4>Before Encapsulation</h4>
+          <div class="moisture-meter">
+            <span class="moisture-indicator" style="left: 75%; border-color: #ff0000; color: #ff0000;">75-85%</span>
+          </div>
+          <p>Dangerous humidity levels promoting mold and pest activity</p>
+        </div>
+        
+        <div class="moisture-reading">
+          <h4>After Encapsulation</h4>
+          <div class="moisture-meter">
+            <span class="moisture-indicator" style="left: 30%; border-color: #00ff66; color: #00ff66;">30-40%</span>
+          </div>
+          <p>Ideal humidity levels for health and structural integrity</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="arizona-specific">
+  <div class="container">
+    <h2>Arizona Crawl Space Challenges</h2>
+    <div class="challenge-solutions">
+      <div class="az-challenge">
+        <h3>🦂 Desert Pest Control</h3>
+        <p>Arizona's crawl spaces attract scorpions, black widows, and other desert pests seeking cool, dark spaces. Our encapsulation creates a sealed environment that denies entry and removes the conditions pests need to thrive.</p>
+        <ul>
+          <li>Complete sealing of all entry points</li>
+          <li>Pest-resistant materials</li>
+          <li>Elimination of moisture that attracts bugs</li>
+          <li>Optional pest control integration</li>
+        </ul>
+      </div>
+      
+      <div class="az-challenge">
+        <h3>🌡️ Temperature Extremes</h3>
+        <p>With ground temperatures varying from 50°F to 90°F seasonally, uninsulated crawl spaces create uncomfortable floors and energy waste. Our insulation maintains consistent temperatures year-round.</p>
+        <ul>
+          <li>R-30+ insulation values</li>
+          <li>Eliminates cold winter floors</li>
+          <li>Reduces summer heat gain</li>
+          <li>Stabilizes indoor temperatures</li>
+        </ul>
+      </div>
+      
+      <div class="az-challenge">
+        <h3>💨 Monsoon Moisture</h3>
+        <p>Arizona's monsoon season can introduce significant moisture into crawl spaces, leading to mold, mildew, and structural damage. Our vapor barriers and drainage systems provide complete protection.</p>
+        <ul>
+          <li>20-mil reinforced vapor barriers</li>
+          <li>Proper drainage solutions</li>
+          <li>Dehumidification options</li>
+          <li>Mold prevention guarantee</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="installation-showcase">
+  <div class="container">
+    <h2>Our Installation Process</h2>
+    <div class="install-timeline">
+      <div class="timeline-item">
+        <div class="timeline-marker">Day 1</div>
+        <h3>Assessment & Preparation</h3>
+        <ul>
+          <li>Complete crawl space inspection</li>
+          <li>Moisture and pest evaluation</li>
+          <li>Remove old, damaged insulation</li>
+          <li>Clean and prepare space</li>
+        </ul>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-marker">Day 2</div>
+        <h3>Moisture Control Installation</h3>
+        <ul>
+          <li>Install drainage systems if needed</li>
+          <li>Apply antimicrobial treatments</li>
+          <li>Install vapor barrier system</li>
+          <li>Seal all penetrations and gaps</li>
+        </ul>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-marker">Day 3</div>
+        <h3>Insulation & Finishing</h3>
+        <ul>
+          <li>Install chosen insulation system</li>
+          <li>Complete air sealing</li>
+          <li>Install access door upgrades</li>
+          <li>Final inspection and testing</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-preview">
+  <div class="container">
+    <h2>Crawl Space FAQs</h2>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>Should I choose vented or sealed crawl space?</h3>
+        <p>In Arizona's climate, sealed (encapsulated) crawl spaces perform significantly better. They prevent moisture problems, save energy, and keep pests out more effectively than traditional vented designs.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h3>How long does crawl space encapsulation last?</h3>
+        <p>A properly installed encapsulation system can last 20-25 years or more. The vapor barrier and insulation are designed for long-term performance with minimal maintenance required.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h3>Will this really keep scorpions out?</h3>
+        <p>Yes! Complete encapsulation seals all entry points and removes the cool, moist environment that attracts scorpions and other pests. Many customers report complete elimination of crawl space pests.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="service-cta-section">
+  <div class="container">
+    <h2>Transform Your Crawl Space Today</h2>
+    <p>Protect your home from moisture, pests, and energy loss with professional encapsulation.</p>
+    <div class="cta-buttons">
+      <a href="/contact/" class="btn btn-primary">Schedule Free Inspection</a>
+      <a href="tel:623-241-1939" class="btn btn-secondary">Call 623-241-1939</a>
+    </div>
+  </div>
+</div>
