@@ -28,6 +28,13 @@
     --accent-glow: rgba(0, 255, 255, 0.6);
     --accent-dim: rgba(0, 212, 255, 0.2);
     
+    /* Enhanced Gradient Text Colors - Darker Teal Variants */
+    --text-gradient-dark: #006666;
+    --text-gradient-medium: #008888;
+    --text-gradient-light: #00aaaa;
+    --text-gradient-accent: #00cccc;
+    --glow-light: #40ffff;
+    
     /* Supporting Colors */
     --success: #00ff88;
     --warning: #ff6b35;
@@ -51,6 +58,16 @@
     --gradient-primary: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-light) 100%);
     --gradient-accent: linear-gradient(135deg, var(--accent-secondary) 0%, var(--accent-primary) 100%);
     --gradient-hero: linear-gradient(180deg, rgba(10, 26, 26, 0.9) 0%, rgba(15, 36, 36, 0.8) 100%);
+    
+    /* Enhanced Text Gradients - Darker, More Defined */
+    --gradient-text-primary: linear-gradient(135deg, var(--text-gradient-dark) 0%, var(--text-gradient-medium) 25%, var(--text-gradient-light) 50%, var(--text-gradient-accent) 75%, var(--accent-primary) 100%);
+    --gradient-text-animated: linear-gradient(90deg, 
+        var(--text-gradient-dark) 0%, 
+        var(--text-gradient-medium) 20%,
+        var(--text-gradient-light) 40%,
+        var(--text-gradient-accent) 60%,
+        var(--accent-primary) 80%,
+        var(--glow-light) 100%);
     
     /* Shadows */
     --shadow-sm: 0 2px 4px rgba(0, 255, 255, 0.1);
@@ -117,6 +134,11 @@ h1 {
     font-size: 2.5rem; 
     font-weight: 900;
     letter-spacing: 0.08em;
+    /* Enhanced gradient text for hero titles */
+    background: var(--gradient-text-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 h2 { 
     font-size: 2rem; 
@@ -139,7 +161,7 @@ h6 {
     font-weight: 600;
 }
 
-/* Subtle animated gradient overlay for headings */
+/* Enhanced animated gradient overlay for headings - Darker Gradient Colors */
 h1[data-text]::before, h2[data-text]::before, h3[data-text]::before, 
 h4[data-text]::before, h5[data-text]::before, h6[data-text]::before {
     content: attr(data-text);
@@ -150,28 +172,65 @@ h4[data-text]::before, h5[data-text]::before, h6[data-text]::before {
     height: 100%;
     background: linear-gradient(90deg, 
         transparent 0%, 
-        transparent 30%,
-        rgba(0, 212, 255, 0.3) 40%,
-        rgba(0, 255, 255, 0.4) 50%,
-        rgba(0, 212, 255, 0.3) 60%,
-        transparent 70%,
+        transparent 20%,
+        var(--text-gradient-medium) 30%,
+        var(--text-gradient-light) 40%,
+        var(--text-gradient-accent) 50%,
+        var(--accent-primary) 60%,
+        var(--glow-light) 70%,
+        transparent 80%,
         transparent 100%);
-    background-size: 50% 100%;
+    background-size: 200% 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: glow-sweep 4s linear infinite;
-    mix-blend-mode: screen;
+    animation: enhanced-glow-sweep 5s linear infinite;
+    mix-blend-mode: multiply;
     pointer-events: none;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
-/* Reduced Glowing Text Effect */
+/* Enhanced Glowing Text Effect - More Defined, Less Blurry */
 .glow-text {
+    background: var(--gradient-text-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     text-shadow: 
-        0 0 1px var(--accent-primary);
-    animation: pulse-glow 3s ease-in-out infinite;
-    color: var(--accent-primary) !important;
+        0 0 2px var(--glow-light),
+        0 0 4px var(--accent-primary),
+        0 0 6px rgba(64, 255, 255, 0.3);
+    animation: enhanced-pulse-glow 4s ease-in-out infinite;
+    position: relative;
+}
+
+/* Hero Title Specific Styling - Most Important Improvement */
+.hero-title {
+    background: var(--gradient-text-primary) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    background-size: 200% 100% !important;
+    animation: hero-gradient-flow 6s ease-in-out infinite !important;
+    text-shadow: none !important; /* Remove blur-causing shadow */
+    position: relative;
+    filter: contrast(1.2) brightness(1.1); /* Enhance definition */
+}
+
+/* Hero title glow overlay - Separate from text for better control */
+.hero-title::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, var(--glow-light) 0%, transparent 70%);
+    opacity: 0.2;
+    filter: blur(8px);
+    z-index: -1;
+    animation: hero-glow-pulse 3s ease-in-out infinite;
+    pointer-events: none;
 }
 
 /* Page Titles - Even More Professional */
