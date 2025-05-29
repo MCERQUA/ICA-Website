@@ -11,6 +11,7 @@
 @import url('components.css');
 @import url('forms.css');
 @import url('layout.css');
+@import url('performance.css');
 
 /* CSS Variables - Updated Color Scheme */
 :root {
