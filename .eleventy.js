@@ -16,6 +16,14 @@ module.exports = function(eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toFormat('yyyy-MM-dd');
   });
   
+  // Add ISO date filter for sitemap
+  eleventyConfig.addFilter("dateToISO", (dateObj) => {
+    if (!dateObj) {
+      dateObj = new Date();
+    }
+    return DateTime.fromJSDate(dateObj).toISO();
+  });
+  
   // Add limit filter
   eleventyConfig.addFilter("limit", (arr, limit) => {
     return arr.slice(0, limit);
