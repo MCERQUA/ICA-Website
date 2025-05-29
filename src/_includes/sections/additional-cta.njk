@@ -1,0 +1,220 @@
+{# Additional CTA Component #}
+{# Variables with defaults #}
+{% set showAdditionalCTA = showAdditionalCTA or true %}
+{% set ctaTitle = ctaTitle or "Ready to Transform Your Home's Comfort?" %}
+{% set ctaSubtitle = ctaSubtitle or "Join hundreds of satisfied Arizona homeowners who trust ICA" %}
+{% set ctaPrimaryText = ctaPrimaryText or "Get Your Free Assessment" %}
+{% set ctaPrimaryUrl = ctaPrimaryUrl or "#contact" %}
+{% set ctaSecondaryText = ctaSecondaryText or "View Our Work" %}
+{% set ctaSecondaryUrl = ctaSecondaryUrl or "/projects" %}
+
+{% if showAdditionalCTA %}
+<section class="additional-cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2 class="cta-title">{{ ctaTitle }}</h2>
+            <p class="cta-subtitle">{{ ctaSubtitle }}</p>
+            
+            <div class="cta-features">
+                <div class="cta-feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Free Energy Assessment</span>
+                </div>
+                <div class="cta-feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Financing Available</span>
+                </div>
+                <div class="cta-feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Licensed & Insured</span>
+                </div>
+                <div class="cta-feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>20+ Years Experience</span>
+                </div>
+            </div>
+            
+            <div class="cta-buttons">
+                <a href="{{ ctaPrimaryUrl }}" class="btn btn-primary">
+                    <span>{{ ctaPrimaryText }}</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="{{ ctaSecondaryUrl }}" class="btn btn-secondary">
+                    <span>{{ ctaSecondaryText }}</span>
+                    <i class="fas fa-images"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.additional-cta-section {
+    position: relative;
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    overflow: hidden;
+}
+
+/* Grid and particles background matching the homepage hero */
+.additional-cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: 1;
+}
+
+/* Animated particles effect */
+.additional-cta-section::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: 
+        radial-gradient(2px 2px at 20% 30%, rgba(0, 255, 255, 0.3), transparent),
+        radial-gradient(2px 2px at 60% 70%, rgba(255, 107, 107, 0.2), transparent),
+        radial-gradient(1px 1px at 90% 10%, rgba(0, 255, 255, 0.4), transparent);
+    background-size: 200% 200%;
+    animation: particleFloat 20s ease-in-out infinite;
+    z-index: 1;
+}
+
+@keyframes particleFloat {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(-5%, 5%); }
+    50% { transform: translate(5%, -5%); }
+    75% { transform: translate(-5%, -5%); }
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #00ffff 0%, #ff6b6b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+}
+
+.cta-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2.5rem;
+}
+
+.cta-features {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.cta-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #00ffff;
+    font-weight: 600;
+}
+
+.cta-feature i {
+    font-size: 1.2rem;
+    color: #00ffff;
+    filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.5));
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cta-buttons .btn-primary {
+    background: linear-gradient(135deg, #00ffff 0%, #0099cc 100%);
+    color: #000;
+    box-shadow: 0 5px 20px rgba(0, 255, 255, 0.3);
+}
+
+.cta-buttons .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 255, 255, 0.5);
+}
+
+.cta-buttons .btn-secondary {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.cta-buttons .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .cta-title {
+        font-size: 2rem;
+    }
+    
+    .cta-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .cta-features {
+        gap: 1rem;
+    }
+    
+    .cta-feature {
+        font-size: 0.9rem;
+        flex: 0 0 45%;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+}
+</style>
+{% endif %}
