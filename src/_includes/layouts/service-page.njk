@@ -1,0 +1,62 @@
+---
+layout: base.njk
+---
+
+{% set heroTitle = title %}
+{% set heroSubtitle = subtitle or "Professional " + title + " Services in Arizona" %}
+{% include "sections/hero.njk" %}
+
+<section class="service-details">
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="main-content">
+                {{ content | safe }}
+                
+                {% if benefits %}
+                {% include "components/benefits-grid.njk" %}
+                {% endif %}
+                
+                {% if process %}
+                {% include "components/process-steps.njk" %}
+                {% endif %}
+                
+                {% if pricing %}
+                {% include "components/pricing-table.njk" %}
+                {% endif %}
+                
+                {% if faqs %}
+                <div class="faq-section">
+                    <h2>Frequently Asked Questions</h2>
+                    {% for faq in faqs %}
+                    <div class="faq-item">
+                        <h3 class="faq-question">{{ faq.question }}</h3>
+                        <div class="faq-answer">{{ faq.answer | safe }}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+            <aside class="service-sidebar">
+                {% include "components/service-menu.njk" %}
+                {% include "components/quick-quote.njk" %}
+                {% include "components/credentials-mini.njk" %}
+            </aside>
+        </div>
+    </div>
+</section>
+
+{% if relatedServices %}
+<section class="related-services">
+    <div class="container">
+        <h2>Related Services</h2>
+        <div class="service-cards-grid">
+            {% for service in relatedServices %}
+            {% include "components/service-card.njk" %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+{% include "sections/testimonials.njk" %}
+{% include "sections/contact-form.njk" %}
