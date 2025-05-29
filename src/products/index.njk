@@ -1,0 +1,236 @@
+---
+layout: base.njk
+title: Insulation Products
+description: Professional insulation products and materials. Spray foam, fiberglass, cellulose, and air sealing solutions for Arizona homes and businesses.
+---
+
+<section class="hero">
+  <div class="container">
+    <h1>Professional Insulation Products</h1>
+    <p>Premium Materials for Arizona's Extreme Climate</p>
+  </div>
+</section>
+
+<section class="products-overview">
+  <div class="container">
+    <h2>Quality Products for Every Application</h2>
+    <p>We use only the highest quality insulation materials from trusted manufacturers. Each product is selected for its performance in Arizona's challenging climate conditions.</p>
+    
+    <div class="product-categories">
+      <div class="category-section">
+        <h3>Spray Foam Insulation</h3>
+        <div class="product-grid">
+          <div class="product-card">
+            <h4>Open Cell Spray Foam</h4>
+            <p>Cost-effective solution with excellent sound dampening properties. R-3.7 per inch.</p>
+            <a href="/products/open-cell-spray-foam/" class="btn-primary">Learn More</a>
+          </div>
+          <div class="product-card">
+            <h4>Closed Cell Spray Foam</h4>
+            <p>Maximum performance with superior R-value and moisture resistance. R-6.5 per inch.</p>
+            <a href="/products/closed-cell-spray-foam/" class="btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="category-section">
+        <h3>Traditional Insulation</h3>
+        <div class="product-grid">
+          <div class="product-card">
+            <h4>Fiberglass Batts</h4>
+            <p>Economical choice for new construction and accessible areas. Various R-values available.</p>
+            <a href="/products/fiberglass-batts/" class="btn-primary">Learn More</a>
+          </div>
+          <div class="product-card">
+            <h4>Cellulose</h4>
+            <p>Eco-friendly blown-in option made from recycled materials. R-3.7 per inch.</p>
+            <a href="/products/cellulose/" class="btn-primary">Learn More</a>
+          </div>
+          <div class="product-card">
+            <h4>Mineral Wool</h4>
+            <p>Fire-resistant option with excellent sound absorption. R-3.3 per inch.</p>
+            <a href="/products/mineral-wool/" class="btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="category-section">
+        <h3>Air Sealing Products</h3>
+        <div class="product-grid">
+          <div class="product-card">
+            <h4>Air Sealing Solutions</h4>
+            <p>Complete line of caulks, foams, and barriers to eliminate air infiltration.</p>
+            <a href="/products/air-sealing/" class="btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="product-selection">
+  <div class="container">
+    <h2>Choosing the Right Product</h2>
+    <p>Not sure which insulation product is right for your project? Our experts will assess your needs and recommend the optimal solution based on:</p>
+    <ul>
+      <li>Application area (attic, walls, crawl space)</li>
+      <li>Desired R-value and performance</li>
+      <li>Budget considerations</li>
+      <li>Moisture and air sealing requirements</li>
+      <li>Fire rating needs</li>
+      <li>Environmental preferences</li>
+    </ul>
+    <div class="cta-wrapper">
+      <a href="/contact/" class="btn-primary">Get Expert Recommendations</a>
+    </div>
+  </div>
+</section>
+
+<style>
+.hero {
+  background: var(--surface-dark);
+  padding: 4rem 0;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-flow 3s ease infinite;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  color: var(--text-light);
+}
+
+.products-overview {
+  padding: 4rem 0;
+}
+
+.products-overview h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.products-overview > .container > p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--text-light);
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.category-section {
+  margin-bottom: 4rem;
+}
+
+.category-section h3 {
+  font-size: 2rem;
+  color: var(--glow-primary);
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.product-card {
+  background: var(--surface-dark);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--glow-primary);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+}
+
+.product-card h4 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.product-card p {
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--glow-gradient);
+  color: var(--surface-dark);
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.5);
+}
+
+.product-selection {
+  padding: 4rem 0;
+  background: var(--surface-dark);
+  border-top: 1px solid var(--border-color);
+}
+
+.product-selection h2 {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.product-selection ul {
+  max-width: 800px;
+  margin: 2rem 0;
+  padding-left: 2rem;
+}
+
+.product-selection li {
+  color: var(--text-light);
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.cta-wrapper {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+  
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
