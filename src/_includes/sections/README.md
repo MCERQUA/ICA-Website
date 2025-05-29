@@ -27,6 +27,20 @@ The ICA website uses a modular component-based architecture for improved maintai
   - `showServiceCards` - Show/hide service cards (default: true)
   - `serviceCount` - Number of services to display (default: 3)
 
+### Insulation Applications ⭐ NEW
+- **File:** `insulation-applications.njk`
+- **Usage:** `{% include "sections/insulation-applications.njk" %}`
+- **Variables:**
+  - `sectionTitle` - Section heading (default: "Our Insulation Applications")
+  - `sectionSubtitle` - Section description text
+  - `showSection` - Show/hide entire section (default: true)
+- **Features:**
+  - 6 insulation application cards with hover effects
+  - Interactive image overlays with additional information
+  - Professional grey color scheme with gradients
+  - Mobile-responsive card grid layout
+  - Applications: Open Cell, Closed Cell, Fiberglass, Blown-In, Drill & Fill, Removal
+
 ### Why Choose ICA
 - **File:** `why-choose-ica.njk`
 - **Usage:** `{% include "sections/why-choose-ica.njk" %}`
@@ -89,11 +103,19 @@ title: Home
 
 {% include "sections/hero.njk" %}
 {% include "sections/services-preview.njk" %}
+{% include "sections/insulation-applications.njk" %}
 {% include "sections/why-choose-ica.njk" %}
 {% include "sections/testimonials.njk" %}
 {% include "sections/recent-posts.njk" %}
 {% include "sections/air-duct-cleaning.njk" %}
 {% include "sections/cta.njk" %}
+```
+
+### Custom Insulation Applications Section
+```njk
+{% set sectionTitle = "Professional Insulation Solutions" %}
+{% set sectionSubtitle = "Choose from our comprehensive range of insulation applications designed for Arizona's unique climate needs." %}
+{% include "sections/insulation-applications.njk" %}
 ```
 
 ### Custom Hero for Service Pages
@@ -129,7 +151,7 @@ title: Home
 
 ## Component Architecture Benefits
 
-1. **File Size Reduction:** From 8,530 bytes monolithic file to 7 modular components (800-3,600 bytes each)
+1. **File Size Reduction:** From 8,530 bytes monolithic file to 8 modular components (800-13,300 bytes each)
 2. **Edit Speed:** 60-80% faster section updates
 3. **Reusability:** Components can be used across all pages
 4. **Maintainability:** Changes to one component update all instances
