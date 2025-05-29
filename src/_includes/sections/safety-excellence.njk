@@ -1,0 +1,388 @@
+{# Safety Excellence Component #}
+{# Usage: {% include "sections/safety-excellence.njk" %} #}
+{# Variables: sectionTitle, showSafetyPoints, ctaText, ctaUrl #}
+
+{% set sectionTitle = sectionTitle or "Safety Excellence at Every Installation" %}
+{% set showSafetyPoints = showSafetyPoints if showSafetyPoints is defined else true %}
+{% set ctaText = ctaText or "Schedule Your Safe Installation Today" %}
+{% set ctaUrl = ctaUrl or "/contact" %}
+
+<section class="safety-excellence">
+  <div class="safety-header">
+    <div class="safety-badge">
+      <span class="badge-text">SAFETY FIRST</span>
+    </div>
+    <div class="safety-icon-main">
+      <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 2L2 7v7c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+        <path d="M12 11.99h0m0-2h0"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="safety-content">
+      <h2 class="safety-title glow-text">{{ sectionTitle }}</h2>
+      <p class="safety-intro">
+        At Insulation Contractors of Arizona, safety isn't just a policy—it's our commitment to you and our team. With over 20 years of experience, we've perfected safety protocols that ensure high-quality installations while protecting your home and our workers.
+      </p>
+
+      {% if showSafetyPoints %}
+      <div class="safety-features">
+        <div class="safety-feature">
+          <div class="feature-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="10" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0110 0v4"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Property Protection</h3>
+          <p class="feature-description">
+            We carefully prepare and protect your property, including laying down protective coverings and securing the work area before installation begins.
+          </p>
+        </div>
+
+        <div class="safety-feature">
+          <div class="feature-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+              <circle cx="8.5" cy="7" r="4"/>
+              <polyline points="17 11 19 13 23 9"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Certified Technicians</h3>
+          <p class="feature-description">
+            Our installation teams are fully trained in the latest safety procedures and equipped with proper protective equipment for every job.
+          </p>
+        </div>
+
+        <div class="safety-feature">
+          <div class="feature-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="16 12 12 8 8 12"/>
+              <line x1="12" y1="16" x2="12" y2="8"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Clean Installation</h3>
+          <p class="feature-description">
+            We accommodate special requests and ensure thorough cleanup after every project, leaving your home better than we found it.
+          </p>
+        </div>
+
+        <div class="safety-feature">
+          <div class="feature-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Safety Inspections</h3>
+          <p class="feature-description">
+            Regular equipment and procedure inspections ensure we maintain the highest safety standards throughout the installation process.
+          </p>
+        </div>
+      </div>
+      {% endif %}
+
+      <div class="safety-cta">
+        <a href="{{ ctaUrl }}" class="btn-safety-primary">
+          {{ ctaText }}
+          <span class="btn-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Safety Excellence Section */
+  .safety-excellence {
+    position: relative;
+    padding: 4rem 0;
+    background: linear-gradient(135deg, 
+      var(--primary-dark) 0%, 
+      rgba(10, 26, 26, 0.95) 50%, 
+      var(--primary-dark) 100%);
+    overflow: hidden;
+  }
+
+  /* Background pattern */
+  .safety-excellence::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(255, 193, 7, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(255, 193, 7, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  /* Safety Header */
+  .safety-header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 3rem;
+    z-index: 1;
+  }
+
+  .safety-badge {
+    display: inline-block;
+    background: var(--warning);
+    color: var(--primary-dark);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.875rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+    animation: badge-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes badge-pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+
+  .safety-icon-main {
+    display: inline-block;
+    color: var(--warning);
+    filter: drop-shadow(0 0 20px rgba(255, 193, 7, 0.5));
+    animation: icon-float 3s ease-in-out infinite;
+  }
+
+  @keyframes icon-float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Safety Content */
+  .safety-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .safety-title {
+    font-size: 2.5rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--gray-100);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .safety-intro {
+    font-size: 1.125rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    color: var(--gray-300);
+    line-height: 1.6;
+  }
+
+  /* Safety Features Grid */
+  .safety-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .safety-feature {
+    background: rgba(255, 193, 7, 0.05);
+    border: 1px solid rgba(255, 193, 7, 0.2);
+    border-radius: 15px;
+    padding: 2rem;
+    position: relative;
+    transition: all var(--transition-medium);
+    backdrop-filter: blur(10px);
+  }
+
+  .safety-feature::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--warning);
+    border-radius: 15px 0 0 15px;
+    opacity: 0;
+    transition: opacity var(--transition-medium);
+  }
+
+  .safety-feature:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 193, 7, 0.1);
+    box-shadow: 0 10px 30px rgba(255, 193, 7, 0.2);
+  }
+
+  .safety-feature:hover::before {
+    opacity: 1;
+  }
+
+  .feature-icon {
+    margin-bottom: 1.5rem;
+    color: var(--warning);
+  }
+
+  .feature-icon svg {
+    filter: drop-shadow(0 0 5px currentColor);
+  }
+
+  .feature-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--warning);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .feature-description {
+    font-size: 1rem;
+    color: var(--gray-300);
+    line-height: 1.5;
+  }
+
+  /* Safety CTA */
+  .safety-cta {
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .btn-safety-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2.5rem;
+    background: var(--warning);
+    color: var(--primary-dark);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all var(--transition-medium);
+    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-safety-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+      transparent, 
+      rgba(255, 255, 255, 0.3), 
+      transparent);
+    transition: left 0.6s ease;
+    pointer-events: none;
+  }
+
+  .btn-safety-primary:hover::before {
+    left: 100%;
+  }
+
+  .btn-safety-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 193, 7, 0.4);
+    background: var(--warning-light);
+  }
+
+  .btn-safety-primary:active {
+    transform: translateY(-1px);
+  }
+
+  .btn-arrow {
+    font-size: 1.2rem;
+    transition: transform var(--transition-medium);
+  }
+
+  .btn-safety-primary:hover .btn-arrow {
+    transform: translateX(4px);
+  }
+
+  /* Glow effect */
+  .safety-excellence .glow-text {
+    animation: safety-glow 3s ease-in-out infinite;
+  }
+
+  @keyframes safety-glow {
+    0%, 100% {
+      text-shadow: 
+        0 0 5px var(--warning),
+        0 0 10px var(--warning),
+        0 0 15px rgba(255, 193, 7, 0.5);
+    }
+    50% {
+      text-shadow: 
+        0 0 10px var(--warning),
+        0 0 20px var(--warning),
+        0 0 30px rgba(255, 193, 7, 0.7);
+    }
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .safety-excellence {
+      padding: 3rem 0;
+    }
+
+    .safety-title {
+      font-size: 2rem;
+    }
+
+    .safety-intro {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .safety-features {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .safety-feature {
+      padding: 1.5rem;
+    }
+
+    .btn-safety-primary {
+      padding: 0.875rem 2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .safety-title {
+      font-size: 1.75rem;
+    }
+
+    .safety-badge {
+      font-size: 0.75rem;
+      padding: 0.375rem 1rem;
+    }
+
+    .safety-icon-main svg {
+      width: 60px;
+      height: 60px;
+    }
+  }
+</style>
