@@ -6,7 +6,56 @@ The ICA website uses a modular component-based architecture for improved maintai
 
 ## Available Components
 
-### Contact Form ⭐ NEW
+### Licensing & Credentials ⭐ NEW
+- **File:** `licensing-credentials.njk`
+- **Usage:** `{% include "sections/licensing-credentials.njk" %}`
+- **Variables:**
+  - `sectionTitle` - Main heading (default: "Licensed, Bonded & Insured")
+  - `showVerifyLinks` - Show/hide verification links (default: true)
+  - `theme` - Color theme: "dark" or "light" (default: "dark")
+- **Features:**
+  - Spray Foam Insurance logo integration
+  - Three credential cards: Licensed (ROC #326891), Bonded, Insured
+  - Verification links to ROC and BBB
+  - Contact info for insurance certificates
+  - Futuristic glassmorphism design
+  - Mobile-responsive grid layout
+- **Important Links:**
+  - ROC License: https://roc.force.com/AZRoc/s/contractor-search?licenseId=a0o8y0000005GtuAAE
+  - BBB Profile: https://www.bbb.org/us/az/glendale/profile/insulation-contractors/insulation-contractors-of-arizona-1126-1000090032
+  - Spray Foam Insurance: https://sprayfoaminsurance.com/
+
+### Safety Excellence ⭐ NEW
+- **File:** `safety-excellence.njk`
+- **Usage:** `{% include "sections/safety-excellence.njk" %}`
+- **Variables:**
+  - `sectionTitle` - Main heading (default: "Safety Excellence at Every Installation")
+  - `showSafetyPoints` - Show/hide safety feature cards (default: true)
+  - `ctaText` - Button text (default: "Schedule Your Safe Installation Today")
+  - `ctaUrl` - Button link (default: "/contact")
+- **Features:**
+  - Yellow/warning color theme for safety emphasis
+  - Animated safety badge and shield icon
+  - Four safety feature cards: Property Protection, Certified Technicians, Clean Installation, Safety Inspections
+  - Floating animation effects
+  - Mobile-responsive grid layout
+
+### Credentials Banner ⭐ NEW
+- **File:** `credentials-banner.njk`
+- **Usage:** `{% include "sections/credentials-banner.njk" %}`
+- **Variables:**
+  - `position` - Banner position: "top" or "bottom" (default: "bottom")
+  - `theme` - Color theme: "dark" or "light" (default: "dark")
+  - `showPhone` - Show/hide phone number (default: true)
+- **Features:**
+  - Compact horizontal layout for headers/footers
+  - Spray Foam Insurance logo
+  - Licensed ROC #326891, Bonded & Insured, BBB A+ Rating
+  - Verify License button
+  - Animated background sweep effect
+  - Mobile-responsive with icon-only mode on small screens
+
+### Contact Form
 - **File:** `contact-form.njk`
 - **Usage:** `{% include "sections/contact-form.njk" %}`
 - **Variables:**
@@ -46,7 +95,7 @@ The ICA website uses a modular component-based architecture for improved maintai
   - Enhanced card styling for dark background
   - Four service categories: Residential, Commercial, Industrial, Agricultural
 
-### Additional CTA ⭐ NEW
+### Additional CTA
 - **File:** `additional-cta.njk`
 - **Usage:** `{% include "sections/additional-cta.njk" %}`
 - **Variables:**
@@ -166,6 +215,50 @@ title: Home
 {% include "sections/cta.njk" %}
 ```
 
+### Service Page with Credentials
+```njk
+---
+layout: base.njk
+title: Spray Foam Insulation
+---
+
+{% include "sections/hero.njk" %}
+{% include "sections/licensing-credentials.njk" %}
+{% include "sections/safety-excellence.njk" %}
+{% include "sections/testimonials.njk" %}
+{% include "sections/contact-form.njk" %}
+```
+
+### Header with Credentials Banner
+```njk
+{# In your header template #}
+{% set position = "top" %}
+{% include "sections/credentials-banner.njk" %}
+```
+
+### Footer with Credentials Banner
+```njk
+{# In your footer template #}
+{% set position = "bottom" %}
+{% set theme = "dark" %}
+{% include "sections/credentials-banner.njk" %}
+```
+
+### Custom Licensing Section
+```njk
+{% set sectionTitle = "Your Trusted Insulation Partner" %}
+{% set theme = "light" %}
+{% include "sections/licensing-credentials.njk" %}
+```
+
+### Custom Safety Section
+```njk
+{% set sectionTitle = "Our Commitment to Safe Installation" %}
+{% set ctaText = "Learn About Our Safety Protocols" %}
+{% set ctaUrl = "/safety" %}
+{% include "sections/safety-excellence.njk" %}
+```
+
 ### Custom Contact Form
 ```njk
 {% set formTitle = "Schedule Your Spray Foam Consultation" %}
@@ -214,7 +307,7 @@ title: Home
 
 ## Component Architecture Benefits
 
-1. **File Size Reduction:** From 8,530 bytes monolithic file to 11 modular components
+1. **File Size Reduction:** From 8,530 bytes monolithic file to 14 modular components
 2. **Edit Speed:** 60-80% faster section updates
 3. **Reusability:** Components can be used across all pages
 4. **Maintainability:** Changes to one component update all instances
@@ -227,6 +320,15 @@ title: Home
 3. **Keep components focused** - Each component should have a single responsibility
 4. **Document all variables** - List all available customization options
 5. **Test component variations** - Ensure components work with different variable combinations
+6. **Include important URLs** - Keep accreditation links documented for future content
+
+## Important Accreditation Links
+
+For future content development, here are the verified accreditation links:
+- **ROC License Verification:** https://roc.force.com/AZRoc/s/contractor-search?licenseId=a0o8y0000005GtuAAE
+- **BBB Business Profile:** https://www.bbb.org/us/az/glendale/profile/insulation-contractors/insulation-contractors-of-arizona-1126-1000090032
+- **Spray Foam Insurance:** https://sprayfoaminsurance.com/
+- **Spray Foam Insurance Logo:** /images/Spray_Foam_Insurance_logo.webp
 
 ## Future Enhancements
 
@@ -235,3 +337,4 @@ title: Home
 - Add animation options via variables
 - Implement component versioning system
 - Create visual component gallery
+- Add more credential display options (compact, expanded, etc.)
