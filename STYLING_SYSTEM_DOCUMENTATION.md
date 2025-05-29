@@ -245,6 +245,121 @@ src/css/
 - Test animation performance on mobile
 - Validate accessibility compliance
 
+## ⚠️ **CRITICAL: INTERACTION BLOCKING PREVENTION**
+
+### **The Problem We Fixed (May 29, 2025)**
+CSS pseudo-elements (`::before` and `::after`) used for decorative backgrounds were blocking mouse interactions, making forms and buttons non-functional.
+
+### **MANDATORY FIX for All New Components**
+**ALWAYS add `pointer-events: none` to decorative pseudo-elements:**
+
+```css
+/* ✅ CORRECT - Prevents interaction blocking */
+.section::before,
+.section::after {
+    content: '';
+    position: absolute;
+    /* ... decorative styling ... */
+    z-index: 1;
+    pointer-events: none; /* CRITICAL - Allows clicks to pass through */
+}
+
+/* ❌ WRONG - Will block interactions */
+.section::before {
+    content: '';
+    position: absolute;
+    /* Missing pointer-events: none */
+}
+```
+
+### **Interactive Element Z-Index Hierarchy**
+Use this z-index scale for all components:
+
+```css
+/* Background decorative elements */
+.section::before,
+.section::after {
+    z-index: 1;
+    pointer-events: none; /* MANDATORY */
+}
+
+/* Content containers */
+.content-wrapper {
+    z-index: 10;
+}
+
+/* Interactive elements */
+.buttons, .forms, .links {
+    z-index: 12;
+}
+
+/* Individual interactive elements */
+.btn, input, select, textarea {
+    z-index: 13;
+}
+```
+
+### **Testing Checklist for New Components**
+Before deploying ANY new component with background effects:
+
+- [ ] **Click Test**: All buttons and links are clickable
+- [ ] **Hover Test**: Hover effects work on interactive elements
+- [ ] **Form Test**: All form fields can be focused and edited
+- [ ] **Mobile Test**: Touch interactions work on mobile devices
+- [ ] **CSS Audit**: All `::before` and `::after` have `pointer-events: none`
+
+### **Component Templates with Fixes Applied**
+
+#### Safe Section Template
+```css
+.safe-section {
+    position: relative;
+    /* ... section styling ... */
+}
+
+.safe-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* ... decorative background ... */
+    z-index: 1;
+    pointer-events: none; /* CRITICAL FIX */
+}
+
+.safe-section .content {
+    position: relative;
+    z-index: 10;
+}
+
+.safe-section .interactive-elements {
+    position: relative;
+    z-index: 12;
+}
+```
+
+#### Safe CTA Template
+```css
+.cta-section {
+    position: relative;
+    /* ... CTA styling ... */
+}
+
+.cta-section::before,
+.cta-section::after {
+    /* Decorative background elements */
+    z-index: 1;
+    pointer-events: none; /* PREVENTS BLOCKING */
+}
+
+.cta-section .btn {
+    position: relative;
+    z-index: 13; /* ENSURES CLICKABILITY */
+}
+```
+
 ## 📋 Quality Checklist
 
 ### Before Deployment
@@ -254,6 +369,7 @@ src/css/
 - [ ] Accessibility guidelines met (WCAG 2.1)
 - [ ] Cross-browser compatibility verified
 - [ ] Page load times remain optimal
+- [ ] **🚨 INTERACTION TEST: All buttons/forms are clickable**
 
 ### Component Quality Standards
 - [ ] Consistent with design system colors
@@ -261,10 +377,12 @@ src/css/
 - [ ] Accessible keyboard navigation
 - [ ] Semantic HTML structure
 - [ ] Optimized for performance
+- [ ] **🚨 MANDATORY: `pointer-events: none` on decorative pseudo-elements**
 
 ---
 
 **Created**: May 28, 2025  
-**Version**: 1.0  
+**Updated**: May 29, 2025 - Added interaction blocking prevention  
+**Version**: 1.1  
 **Status**: Production Ready  
 **Next Update**: Add service page specific components
