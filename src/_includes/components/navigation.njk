@@ -1,0 +1,40 @@
+{% set navData = navigation.main %}
+<nav class="main-nav" aria-label="Main navigation">
+    <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+    </button>
+    <ul class="nav-list">
+        {% for item in navData %}
+        <li class="nav-item{% if item.submenu %} has-submenu{% endif %}">
+            <a href="{{ item.url }}" {% if item.class %}class="{{ item.class }}"{% endif %}>
+                {{ item.title }}
+                {% if item.submenu %}<span class="dropdown-arrow">▾</span>{% endif %}
+            </a>
+            {% if item.submenu %}
+            <div class="submenu-wrapper">
+                <ul class="submenu">
+                    {% for subitem in item.submenu %}
+                    <li class="submenu-section">
+                        {% if subitem.url %}
+                        <a href="{{ subitem.url }}" class="submenu-title">{{ subitem.title }}</a>
+                        {% else %}
+                        <span class="submenu-title">{{ subitem.title }}</span>
+                        {% endif %}
+                        {% if subitem.items %}
+                        <ul class="submenu-items">
+                            {% for subsubitem in subitem.items %}
+                            <li><a href="{{ subsubitem.url }}">{{ subsubitem.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</nav>
