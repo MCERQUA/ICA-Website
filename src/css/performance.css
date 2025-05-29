@@ -1,0 +1,213 @@
+/* ============================================
+   PERFORMANCE OPTIMIZATIONS CSS
+   ============================================ */
+
+/* Lazy Loading for Images */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+/* Native Lazy Loading Styles */
+.lazy-image {
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.1) 0%, rgba(0, 212, 255, 0.1) 100%);
+    background-size: 400% 400%;
+    animation: lazy-placeholder 2s ease infinite;
+}
+
+@keyframes lazy-placeholder {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Optimize Web Fonts Loading */
+.font-loading body {
+    opacity: 0;
+}
+
+.fonts-loaded body {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Critical CSS - Above the fold content */
+.critical-content {
+    /* Ensure critical content loads immediately */
+    contain: layout style;
+}
+
+/* Performance - Use GPU acceleration for animations */
+.animated-bg,
+.particles,
+.particle,
+.grid-lines,
+.hero-content,
+.service-card,
+.glow-border,
+.cta-button,
+.btn {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Reduce animation complexity on low-end devices */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Optimize hover effects for performance */
+.card:hover,
+.service-card:hover,
+.btn:hover,
+.cta-button:hover {
+    transform: translateY(-2px) translateZ(0);
+}
+
+/* Content Visibility for better scrolling performance */
+.content-section {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 500px;
+}
+
+/* Optimize background patterns */
+.animated-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 100px,
+            rgba(0, 255, 255, 0.03) 100px,
+            rgba(0, 255, 255, 0.03) 101px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 100px,
+            rgba(0, 255, 255, 0.03) 100px,
+            rgba(0, 255, 255, 0.03) 101px
+        );
+    pointer-events: none;
+}
+
+/* Optimize image rendering */
+img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+/* Optimize text rendering */
+body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Preload critical images */
+.hero-section,
+.hero-bg {
+    background-image: 
+        linear-gradient(180deg, rgba(10, 26, 26, 0.9) 0%, rgba(15, 36, 36, 0.8) 100%),
+        url('/Images/insulation_contractors_of_arizona_spray_foam_Arizona_Sunset.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    /* Disable fixed backgrounds on mobile for performance */
+    .hero-section,
+    .hero-bg {
+        background-attachment: scroll;
+    }
+    
+    /* Simplify animations on mobile */
+    .particle {
+        animation: float 20s infinite linear;
+    }
+    
+    /* Reduce particle count on mobile */
+    .particle:nth-child(n+13) {
+        display: none;
+    }
+}
+
+/* Loading states */
+.loading {
+    position: relative;
+    overflow: hidden;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(0, 255, 255, 0.1) 50%,
+        transparent 100%
+    );
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* Optimize scroll performance */
+.smooth-scroll {
+    scroll-behavior: smooth;
+}
+
+/* Hardware acceleration for transforms */
+.transform-gpu {
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+/* Optimize backdrop filters */
+@supports (backdrop-filter: blur(10px)) {
+    .glass-effect {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+}
+
+@supports not (backdrop-filter: blur(10px)) {
+    .glass-effect {
+        background: rgba(13, 17, 23, 0.95);
+    }
+}
