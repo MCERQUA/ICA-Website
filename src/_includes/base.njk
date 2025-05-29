@@ -5,7 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} | {{ site.name }}</title>
     <meta name="description" content="{{ description or site.tagline }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="/Images/Insulation_Contractors_of_arizona_logo.webp">
+    <link rel="apple-touch-icon" href="/Images/Insulation_Contractors_of_arizona_logo.webp">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ page.url | url | absoluteUrl(site.url) }}">
+    <meta property="og:title" content="{{ title }} | {{ site.name }}">
+    <meta property="og:description" content="{{ description or site.tagline }}">
+    <meta property="og:image" content="/Images/Insulation_Contractors_of_arizona_logo.webp">
+    <meta property="og:site_name" content="{{ site.name }}">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ page.url | url | absoluteUrl(site.url) }}">
+    <meta property="twitter:title" content="{{ title }} | {{ site.name }}">
+    <meta property="twitter:description" content="{{ description or site.tagline }}">
+    <meta property="twitter:image" content="/Images/Insulation_Contractors_of_arizona_logo.webp">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="author" content="{{ site.owner }}">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="{{ page.url | url | absoluteUrl(site.url) }}">
+    
+    <!-- Geo Tags for Local SEO -->
+    <meta name="geo.region" content="US-AZ">
+    <meta name="geo.placename" content="Glendale, Arizona">
+    <meta name="geo.position" content="33.5387;-112.1859">
+    <meta name="ICBM" content="33.5387, -112.1859">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "{{ site.name }}",
+      "image": "/Images/Insulation_Contractors_of_arizona_logo.webp",
+      "@id": "https://insulationcontractorsofarizona.com",
+      "url": "https://insulationcontractorsofarizona.com",
+      "telephone": "{{ site.phone }}",
+      "email": "{{ site.email }}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10616 N 50th Ave",
+        "addressLocality": "Glendale",
+        "addressRegion": "AZ",
+        "postalCode": "85304",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 33.5387,
+        "longitude": -112.1859
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "06:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "{{ site.social.google }}",
+        "{{ site.social.yelp }}",
+        "https://www.facebook.com/InsulationContractorsAZ",
+        "https://www.instagram.com/insulation_contractors_of_az/",
+        "https://www.tiktok.com/@insulationcontractorsaz"
+      ],
+      "priceRange": "$$",
+      "description": "{{ site.tagline }}",
+      "areaServed": [
+        {% for area in site.service_areas %}
+        {
+          "@type": "City",
+          "name": "{{ area }}",
+          "addressRegion": "AZ"
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "50",
+        "bestRating": "5"
+      }
+    }
+    </script>
+    
+    <!-- Preconnect to External Domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="/css/style.css">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="/Images/Insulation_Contractors_of_arizona_logo.webp" as="image">
+    <link rel="preload" href="/css/style.css" as="style">
 </head>
 <body>
     <!-- Enhanced Animated Background with Grid Lines and More Particles -->
@@ -45,7 +151,7 @@
             <div class="header-content">
                 <div class="logo">
                     <a href="/" aria-label="{{ site.name }} Home">
-                        <img src="/Images/Insulation_Contractors_of_arizona_logo.webp" alt="{{ site.name }}" class="logo-img">
+                        <img src="/Images/Insulation_Contractors_of_arizona_logo.webp" alt="{{ site.name }}" class="logo-img" width="200" height="80" loading="eager">
                     </a>
                 </div>
                 <nav class="main-nav" aria-label="Main navigation">
@@ -79,9 +185,9 @@
                 </div>
                 <div class="footer-section">
                     <h3>Contact Info</h3>
-                    <p>{{ site.phone }}<br>
-                    {{ site.email }}<br>
-                    {{ site.address }}</p>
+                    <p><a href="tel:{{ site.phone }}">{{ site.phone }}</a><br>
+                    <a href="mailto:{{ site.email }}">{{ site.email }}</a><br>
+                    <address>10616 N 50th Ave<br>Glendale, AZ 85304</address></p>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
@@ -93,7 +199,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; {{ site.name }} {% set year = 2025 %}{{ year }}. All rights reserved.</p>
+                <p>&copy; {{ site.name }} {% set year = 2025 %}{{ year }}. All rights reserved. | ROC# 340641</p>
             </div>
         </div>
     </footer>
