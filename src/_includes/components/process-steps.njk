@@ -1,0 +1,199 @@
+{# Process Steps Component #}
+{# 
+  Usage: {% include "components/process-steps.njk" %}
+  
+  Variables:
+  - process: Array of step objects with title and description
+  - processTitle: Optional title for the section (default: "Our Process")
+#}
+
+<div class="process-steps">
+  <h2 class="section-title">{{ processTitle or "Our Process" }}</h2>
+  <div class="steps-wrapper">
+    {% for step in process %}
+    <div class="process-step" data-step="{{ loop.index }}">
+      <div class="step-number">{{ loop.index }}</div>
+      <div class="step-content">
+        <h3>{{ step.title }}</h3>
+        <p>{{ step.description }}</p>
+      </div>
+      {% if not loop.last %}
+      <div class="step-connector"></div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+.process-steps {
+  padding: 3rem 0;
+}
+
+.process-steps .section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-flow 3s ease infinite;
+}
+
+.steps-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+.process-step {
+  position: relative;
+  text-align: center;
+  padding: 2rem 1rem;
+  background: var(--surface-dark);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.process-step:hover {
+  transform: translateY(-5px);
+  border-color: var(--glow-primary);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.5rem;
+  background: var(--glow-gradient);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--surface-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.step-number::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.5) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.step-number::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: var(--glow-gradient);
+  border-radius: 50%;
+  opacity: 0.5;
+  z-index: -1;
+  animation: rotate 3s linear infinite;
+}
+
+.step-content h3 {
+  font-size: 1.3rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.step-content p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* Step connector line for desktop */
+@media (min-width: 769px) {
+  .steps-wrapper {
+    position: relative;
+  }
+  
+  .steps-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    right: 50%;
+    height: 2px;
+    background: var(--glow-gradient);
+    transform: translateX(-50%);
+    width: 80%;
+    z-index: 0;
+    opacity: 0.3;
+  }
+  
+  .process-step {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+/* Vertical layout for mobile */
+@media (max-width: 768px) {
+  .steps-wrapper {
+    grid-template-columns: 1fr;
+    position: relative;
+    padding-left: 40px;
+  }
+  
+  .steps-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    bottom: 30px;
+    left: 30px;
+    width: 2px;
+    background: var(--glow-gradient);
+    opacity: 0.3;
+  }
+  
+  .process-step {
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  
+  .step-number {
+    position: absolute;
+    left: -40px;
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .process-steps .section-title {
+    font-size: 2rem;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+</style>
