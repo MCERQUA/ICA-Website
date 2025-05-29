@@ -1,0 +1,96 @@
+<section class="service-faq">
+  <style>
+    .service-faq {
+      padding: 80px 0;
+      background: var(--surface);
+    }
+    
+    .service-faq h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 60px;
+    }
+    
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+    }
+    
+    .faq-item {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(0, 255, 255, 0.3);
+      border-radius: 15px;
+      padding: 30px;
+      transition: all 0.3s ease;
+    }
+    
+    .faq-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 255, 255, 0.2);
+      border-color: var(--primary);
+    }
+    
+    .faq-item h3 {
+      color: var(--primary);
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: start;
+      gap: 10px;
+    }
+    
+    .faq-item h3::before {
+      content: 'Q:';
+      background: var(--primary);
+      color: white;
+      padding: 2px 8px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+    
+    .faq-item p {
+      color: var(--text-light);
+      line-height: 1.8;
+    }
+    
+    @media (max-width: 768px) {
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  
+  <div class="container">
+    <h2>{{ sectionTitle | default("Frequently Asked Questions") }}</h2>
+    
+    <div class="faq-grid">
+      {% if faqs %}
+        {% for faq in faqs %}
+        <div class="faq-item">
+          <h3>{{ faq.question }}</h3>
+          <p>{{ faq.answer }}</p>
+        </div>
+        {% endfor %}
+      {% else %}
+        <div class="faq-item">
+          <h3>Which spray foam type is best for Arizona's extreme heat?</h3>
+          <p>Closed-cell spray foam typically performs best in Arizona's extreme conditions. It maintains its R-6.5 per inch rating even at temperatures exceeding 160°F and provides superior moisture protection during monsoon season.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>How does spray foam handle monsoon moisture?</h3>
+          <p>Closed-cell spray foam acts as an excellent vapor barrier, preventing moisture intrusion during Arizona's monsoon season. This protection is crucial for maintaining indoor air quality and preventing mold or mildew issues.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>What's the ROI timeline for spray foam in Arizona?</h3>
+          <p>Most Arizona homeowners see a 3-5 year payback period on spray foam installation through energy savings alone. With summer cooling costs representing 60-70% of annual energy bills, the savings can be substantial—often $500-800+ annually.</p>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
