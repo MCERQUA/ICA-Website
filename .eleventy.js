@@ -39,6 +39,11 @@ module.exports = function(eleventyConfig) {
     }
   });
   
+  // Add split filter
+  eleventyConfig.addFilter("split", (str, separator) => {
+    return str ? str.split(separator) : [];
+  });
+  
   // Create blog collection
   eleventyConfig.addCollection("blog", function(collectionApi) {
     return collectionApi.getFilteredByGlob("src/blog/*.md").reverse();
