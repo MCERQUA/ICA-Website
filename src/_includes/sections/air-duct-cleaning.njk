@@ -1,0 +1,151 @@
+{# Air Duct Cleaning Section #}
+{% set sectionTitle = sectionTitle or "Now Offering Professional Air Duct Cleaning!" %}
+{% set sectionSubtitle = sectionSubtitle or "Keep your home's air fresh, reduce allergens, and boost HVAC efficiency. Schedule your duct cleaning today." %}
+{% set ctaText = ctaText or "Book Now!" %}
+{% set ctaUrl = ctaUrl or "/contact" %}
+{% set showSection = showSection if showSection is defined else true %}
+
+{% if showSection %}
+<section class="air-duct-cleaning">
+  <div class="container">
+    <div class="duct-cleaning-content">
+      <div class="duct-cleaning-image">
+        <img src="/Images/vent-cleaning_arizona.webp" 
+             alt="Professional air duct cleaning service in Arizona" 
+             loading="lazy"
+             width="600"
+             height="400">
+      </div>
+      <div class="duct-cleaning-text">
+        <h2 class="section-title">{{ sectionTitle }}</h2>
+        <p class="section-subtitle">{{ sectionSubtitle }}</p>
+        <a href="{{ ctaUrl }}" class="btn btn-primary">{{ ctaText }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .air-duct-cleaning {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #e8f4f8 0%, #d6e9f0 100%);
+    margin: 2rem 0;
+  }
+
+  .duct-cleaning-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .duct-cleaning-image {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .duct-cleaning-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .duct-cleaning-image:hover img {
+    transform: scale(1.05);
+  }
+
+  .duct-cleaning-text {
+    padding: 1rem;
+  }
+
+  .duct-cleaning-text .section-title {
+    font-size: 2.5rem;
+    color: var(--color-primary, #1e3c72);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  .duct-cleaning-text .section-subtitle {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  .duct-cleaning-text .btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--color-accent, #ff6b35);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+  }
+
+  .duct-cleaning-text .btn:hover {
+    background: #e55a2b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+  }
+
+  /* Mobile Responsive - Character stays on left */
+  @media (max-width: 768px) {
+    .air-duct-cleaning {
+      padding: 3rem 0;
+    }
+
+    .duct-cleaning-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .duct-cleaning-image {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    .duct-cleaning-image img {
+      object-position: left center; /* Keep character visible on left */
+    }
+
+    .duct-cleaning-text {
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .duct-cleaning-text .section-title {
+      font-size: 2rem;
+    }
+
+    .duct-cleaning-text .section-subtitle {
+      font-size: 1.1rem;
+    }
+
+    .duct-cleaning-text .btn {
+      padding: 0.875rem 2rem;
+      font-size: 1rem;
+    }
+  }
+
+  /* Small Mobile */
+  @media (max-width: 480px) {
+    .duct-cleaning-text .section-title {
+      font-size: 1.75rem;
+    }
+
+    .duct-cleaning-text .section-subtitle {
+      font-size: 1rem;
+    }
+  }
+</style>
+{% endif %}
