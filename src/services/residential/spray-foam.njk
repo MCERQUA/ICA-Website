@@ -1,298 +1,67 @@
 ---
-layout: service-page.njk
-title: "Spray Foam Insulation Services"
-subtitle: "Arizona's Premium Spray Foam Installation Experts"
+layout: base.njk
+title: "Expert Spray Foam Insulation in Phoenix & Arizona"
+subtitle: "Arizona's Extreme Heat Specialists | Free Estimates | Financing Available | Safety-First Approach"
 meta_description: "Professional spray foam insulation services in Phoenix & Arizona. Open-cell and closed-cell options. 20+ years experience. Free estimates. Call 623-241-1939"
-tags: 
-  - residential
-  - services
-benefits:
-  - title: "Superior Air Sealing"
-    description: "Eliminates up to 40% of energy loss from air infiltration"
-    icon: "🛡️"
-  - title: "Extreme Heat Protection"
-    description: "Maintains R-value even at 160°F+ attic temperatures"
-    icon: "🌡️"
-  - title: "Moisture Barrier"
-    description: "Protects against monsoon humidity and moisture intrusion"
-    icon: "💧"
-  - title: "25+ Year Lifespan"
-    description: "Durable solution that outlasts traditional insulation"
-    icon: "⏰"
-  - title: "Energy Savings"
-    description: "Reduce cooling costs by 30-50% during Arizona summers"
-    icon: "💰"
-  - title: "Structural Support"
-    description: "Closed-cell foam adds rigidity to building envelope"
-    icon: "🏗️"
-process:
-  - title: "Home Assessment"
-    description: "Complete evaluation of your insulation needs and energy efficiency opportunities"
-  - title: "Custom Solution Design"
-    description: "Tailored recommendations for open-cell or closed-cell foam based on your needs"
-  - title: "Professional Installation"
-    description: "Expert application by Icynene-certified technicians with safety protocols"
-  - title: "Quality Verification"
-    description: "Thermal imaging and performance testing to ensure complete coverage"
-  - title: "Warranty & Support"
-    description: "Comprehensive warranty coverage with ongoing maintenance guidance"
-pricing:
-  - type: "Open-Cell Spray Foam"
-    price: "$1.00-1.50/sq ft"
-    features:
-      - "R-3.7 per inch rating"
-      - "Excellent sound dampening"
-      - "Cost-effective solution"
-      - "Interior applications"
-  - type: "Closed-Cell Spray Foam"
-    price: "$1.50-2.50/sq ft"
-    features:
-      - "R-6.5 per inch rating"
-      - "Superior moisture barrier"
-      - "Structural enhancement"
-      - "Extreme temperature performance"
-    highlighted: true
+heroImage: "/images/spray-foam-hero.jpg"
+heroStats:
+  - value: "30-50%"
+    label: "Energy Savings"
+  - value: "R-6.5"
+    label: "Per Inch (Closed Cell)"
+  - value: "25+"
+    label: "Year Lifespan"
+showComparisonTable: true
+faqs:
+  - question: "Which spray foam type is best for Arizona's extreme heat?"
+    answer: "Closed-cell spray foam typically performs best in Arizona's extreme conditions. It maintains its R-6.5 per inch rating even at temperatures exceeding 160°F and provides superior moisture protection during monsoon season. Open-cell can be cost-effective for interior applications or budget-conscious projects."
+  - question: "How does spray foam handle monsoon moisture?"
+    answer: "Closed-cell spray foam acts as an excellent vapor barrier, preventing moisture intrusion during Arizona's monsoon season. This protection is crucial for maintaining indoor air quality and preventing mold or mildew issues that can develop with other insulation types."
+  - question: "What's the ROI timeline for spray foam in Arizona?"
+    answer: "Most Arizona homeowners see a 3-5 year payback period on spray foam installation through energy savings alone. With summer cooling costs representing 60-70% of annual energy bills, the savings can be substantial—often $500-800+ annually for average homes."
+  - question: "How long does spray foam last in Arizona conditions?"
+    answer: "Quality spray foam installation typically lasts 25+ years in Arizona conditions, significantly longer than traditional insulation which may need replacement every 15-20 years due to settling and performance degradation."
+  - question: "What rebates are available for spray foam in Arizona?"
+    answer: "APS, SRP, and TEP all offer energy efficiency rebates that may apply to spray foam installation. We help customers navigate available incentives and can provide documentation needed for rebate applications."
+  - question: "Is spray foam worth the investment in Arizona?"
+    answer: "Absolutely. With energy savings of 30-50% and a typical ROI of 3-5 years, spray foam pays for itself while providing superior comfort. The extreme heat performance alone makes it worthwhile for Arizona homeowners."
 relatedServices:
   - title: "Attic Insulation"
     url: "/services/residential/attic/"
+    description: "Complete attic insulation solutions"
   - title: "Wall Insulation"
     url: "/services/residential/wall/"
+    description: "Interior and exterior wall insulation"
   - title: "Insulation Removal"
     url: "/services/residential/removal/"
+    description: "Safe removal of old insulation"
 ---
 
-<style>
-  .spray-foam-hero {
-    background: linear-gradient(135deg, rgba(30, 60, 114, 0.95), rgba(42, 82, 152, 0.95)), url('/images/spray-foam-application.jpg') center/cover;
-    padding: 80px 0;
-    color: white;
-    text-align: center;
-  }
-  
-  .foam-types {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-    margin: 40px 0;
-  }
-  
-  .foam-card {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(0, 255, 255, 0.3);
-    border-radius: 15px;
-    padding: 30px;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .foam-card::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
-    animation: pulse 4s ease-in-out infinite;
-  }
-  
-  .foam-card h3 {
-    color: var(--primary);
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 1;
-  }
-  
-  .foam-comparison {
-    background: linear-gradient(180deg, var(--surface) 0%, var(--surface-dark) 100%);
-    padding: 60px 0;
-    margin: 40px 0;
-  }
-  
-  .comparison-table {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(0, 255, 255, 0.2);
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  }
-  
-  .comparison-table th {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-    color: white;
-    padding: 20px;
-    font-weight: bold;
-  }
-  
-  .comparison-table td {
-    padding: 15px;
-    border-bottom: 1px solid rgba(0, 255, 255, 0.1);
-  }
-  
-  .comparison-table tr:hover {
-    background: rgba(0, 255, 255, 0.05);
-  }
-  
-  @keyframes pulse {
-    0%, 100% { transform: rotate(0deg); }
-    50% { transform: rotate(180deg); }
-  }
-</style>
+{% set title = "Expert Spray Foam Insulation in Phoenix & Arizona" %}
+{% set subtitle = "Arizona's Extreme Heat Specialists | Free Estimates | Financing Available" %}
+{% include "sections/service-hero.njk" %}
 
-<section class="spray-foam-hero">
-  <div class="container">
-    <h1>{{ title }}</h1>
-    <p class="lead">{{ subtitle }}</p>
-    <div class="hero-stats">
-      <div class="stat">
-        <span class="stat-number">30-50%</span>
-        <span class="stat-label">Energy Savings</span>
-      </div>
-      <div class="stat">
-        <span class="stat-number">R-6.5</span>
-        <span class="stat-label">Per Inch (Closed Cell)</span>
-      </div>
-      <div class="stat">
-        <span class="stat-number">25+</span>
-        <span class="stat-label">Year Lifespan</span>
-      </div>
-    </div>
-  </div>
-</section>
+{% set sectionTitle = "Why Arizona Homes Need Superior Spray Foam Insulation" %}
+{% set sectionSubtitle = "Arizona's extreme climate creates unique challenges that require specialized insulation solutions" %}
+{% include "sections/arizona-climate-challenge.njk" %}
 
-<section class="content-section">
-  <div class="container">
-    <h2>Why Spray Foam is Arizona's Best Insulation Choice</h2>
-    <p class="lead">When your attic reaches 160°F and your energy bills soar, you need insulation that performs under extreme conditions. Spray foam insulation creates an airtight seal that traditional insulation simply can't match.</p>
-    
-    <div class="foam-types">
-      <div class="foam-card">
-        <h3>Open-Cell Spray Foam</h3>
-        <ul>
-          <li><strong>R-Value:</strong> R-3.7 per inch</li>
-          <li><strong>Density:</strong> 0.5 lb/ft³</li>
-          <li><strong>Best For:</strong> Interior walls, sound dampening</li>
-          <li><strong>Cost:</strong> Budget-friendly option</li>
-          <li><strong>Expansion:</strong> 100x its liquid volume</li>
-        </ul>
-        <p>Open-cell foam is perfect for interior applications where sound control and cost-effectiveness are priorities. Its lighter density makes it ideal for filling large cavities.</p>
-      </div>
-      
-      <div class="foam-card">
-        <h3>Closed-Cell Spray Foam</h3>
-        <ul>
-          <li><strong>R-Value:</strong> R-6.5 per inch</li>
-          <li><strong>Density:</strong> 2.0 lb/ft³</li>
-          <li><strong>Best For:</strong> Attics, exterior walls, moisture protection</li>
-          <li><strong>Cost:</strong> Premium performance</li>
-          <li><strong>Expansion:</strong> 35-50x its liquid volume</li>
-        </ul>
-        <p>Closed-cell foam provides superior insulation and moisture protection, making it ideal for Arizona's extreme heat and monsoon season. It also adds structural strength to your home.</p>
-      </div>
-    </div>
-  </div>
-</section>
+{% set sectionTitle = "Spray Foam Types: Open Cell vs Closed Cell" %}
+{% set sectionSubtitle = "Choose the right spray foam solution for your specific Arizona application" %}
+{% include "sections/foam-types-comparison.njk" %}
 
-<section class="foam-comparison">
-  <div class="container">
-    <h2>Spray Foam vs Traditional Insulation</h2>
-    <table class="comparison-table">
-      <thead>
-        <tr>
-          <th>Feature</th>
-          <th>Spray Foam</th>
-          <th>Fiberglass</th>
-          <th>Cellulose</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>R-Value Performance at 150°F+</strong></td>
-          <td>Maintains full R-value ✅</td>
-          <td>Loses 10-20% R-value ❌</td>
-          <td>Loses 15-25% R-value ❌</td>
-        </tr>
-        <tr>
-          <td><strong>Air Sealing</strong></td>
-          <td>Complete seal ✅</td>
-          <td>No air sealing ❌</td>
-          <td>Minimal air sealing ❌</td>
-        </tr>
-        <tr>
-          <td><strong>Moisture Protection</strong></td>
-          <td>Excellent (closed-cell) ✅</td>
-          <td>Poor ❌</td>
-          <td>Poor ❌</td>
-        </tr>
-        <tr>
-          <td><strong>Lifespan in Arizona</strong></td>
-          <td>25+ years ✅</td>
-          <td>15-20 years</td>
-          <td>10-15 years</td>
-        </tr>
-        <tr>
-          <td><strong>Installation Precision</strong></td>
-          <td>Fills all gaps ✅</td>
-          <td>Gaps common ❌</td>
-          <td>Settling issues ❌</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+{% include "components/process-steps.njk" %}
 
-<section class="content-section">
-  <div class="container">
-    <h2>Arizona-Specific Benefits</h2>
-    <div class="arizona-benefits">
-      <div class="benefit-highlight">
-        <h3>🌡️ Extreme Heat Performance</h3>
-        <p>While traditional insulation loses effectiveness as temperatures rise, spray foam maintains its R-value even when your attic exceeds 160°F. This consistent performance is crucial for Arizona's 100+ days of extreme heat annually.</p>
-      </div>
-      
-      <div class="benefit-highlight">
-        <h3>💨 Monsoon Protection</h3>
-        <p>Closed-cell spray foam acts as both insulation and a vapor barrier, protecting your home during Arizona's monsoon season. This dual protection prevents moisture intrusion that can lead to mold and structural damage.</p>
-      </div>
-      
-      <div class="benefit-highlight">
-        <h3>🏜️ Dust & Allergen Barrier</h3>
-        <p>The airtight seal created by spray foam keeps desert dust, pollen, and allergens out of your home, improving indoor air quality for your family's health and comfort.</p>
-      </div>
-    </div>
-  </div>
-</section>
+{% include "sections/why-choose-ica.njk" %}
 
-<section class="faq-preview">
-  <div class="container">
-    <h2>Common Questions About Spray Foam</h2>
-    <div class="faq-grid">
-      <div class="faq-item">
-        <h3>Is spray foam worth the investment in Arizona?</h3>
-        <p>Absolutely. With energy savings of 30-50% and a typical ROI of 3-5 years, spray foam pays for itself while providing superior comfort. The extreme heat performance alone makes it worthwhile.</p>
-      </div>
-      
-      <div class="faq-item">
-        <h3>How long does installation take?</h3>
-        <p>Most residential spray foam installations are completed in 1-2 days, depending on the size of your home. The foam cures quickly, and you can typically return to normal use within 24 hours.</p>
-      </div>
-      
-      <div class="faq-item">
-        <h3>Which type should I choose?</h3>
-        <p>Closed-cell is recommended for attics and exterior applications due to its superior R-value and moisture protection. Open-cell is great for interior walls and areas where sound dampening is important.</p>
-      </div>
-    </div>
-  </div>
-</section>
+{% include "components/pricing-table.njk" %}
 
-<div class="service-cta-section">
-  <div class="container">
-    <h2>Ready to Upgrade to Spray Foam?</h2>
-    <p>Join thousands of Arizona homeowners who've made the switch to superior insulation.</p>
-    <div class="cta-buttons">
-      <a href="/contact/" class="btn btn-primary">Get Free Estimate</a>
-      <a href="tel:623-241-1939" class="btn btn-secondary">Call 623-241-1939</a>
-    </div>
-  </div>
-</div>
+{% include "sections/testimonials.njk" %}
+
+{% include "sections/service-areas.njk" %}
+
+{% set sectionTitle = "Spray Foam Installation FAQs" %}
+{% include "sections/service-faq.njk" %}
+
+{% include "sections/cta.njk" %}
+
+{% include "sections/related-services.njk" %}
