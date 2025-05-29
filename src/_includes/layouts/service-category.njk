@@ -1,0 +1,33 @@
+---
+layout: base.njk
+---
+
+{% set heroTitle = title or "Our Services" %}
+{% set heroSubtitle = subtitle or "Professional insulation solutions for Arizona" %}
+{% include "sections/hero.njk" %}
+
+<section class="service-category-content">
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="main-content">
+                {{ content | safe }}
+                
+                {% if services %}
+                <div class="service-cards-grid">
+                    {% for service in services %}
+                    {% include "components/service-card.njk" %}
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+            <aside class="service-sidebar">
+                {% include "components/service-menu.njk" %}
+                {% include "components/quick-quote.njk" %}
+            </aside>
+        </div>
+    </div>
+</section>
+
+{% include "sections/why-choose-ica.njk" %}
+{% include "sections/testimonials.njk" %}
+{% include "sections/cta.njk" %}
