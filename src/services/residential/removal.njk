@@ -1,0 +1,526 @@
+---
+layout: service-page.njk
+title: "Insulation Removal Services"
+subtitle: "Safe, Professional Insulation Removal in Phoenix & Arizona"
+meta_description: "Expert insulation removal services in Phoenix. Old, damaged, or contaminated insulation removal. Safe disposal and preparation for new insulation. Call 623-241-1939"
+tags: 
+  - residential
+  - services
+benefits:
+  - title: "Health & Safety"
+    description: "Remove contaminated insulation that harbors allergens and toxins"
+    icon: "🏥"
+  - title: "Pest Decontamination"
+    description: "Eliminate rodent droppings, nests, and pest contamination"
+    icon: "🐭"
+  - title: "Mold Remediation"
+    description: "Remove mold-damaged insulation and prevent spread"
+    icon: "🦠"
+  - title: "Energy Efficiency"
+    description: "Clear the way for modern, high-performance insulation"
+    icon: "⚡"
+  - title: "Air Quality"
+    description: "Improve indoor air quality by removing dust and allergens"
+    icon: "🌬️"
+  - title: "Property Value"
+    description: "Address issues that could impact home inspections and sales"
+    icon: "🏡"
+process:
+  - title: "Initial Assessment"
+    description: "Thorough inspection to identify contamination and removal needs"
+  - title: "Safety Preparation"
+    description: "Containment setup and protective measures for your home"
+  - title: "Professional Removal"
+    description: "Specialized equipment safely removes all old insulation"
+  - title: "Decontamination"
+    description: "Sanitize and treat affected areas as needed"
+  - title: "Disposal & Cleanup"
+    description: "Proper disposal and preparation for new insulation"
+pricing:
+  - type: "Basic Removal"
+    price: "$1.50-2.50/sq ft"
+    features:
+      - "Standard insulation removal"
+      - "Basic cleanup"
+      - "Disposal included"
+      - "Ready for new install"
+  - type: "Contamination Removal"
+    price: "$2.50-4.00/sq ft"
+    features:
+      - "Hazardous material handling"
+      - "Complete decontamination"
+      - "Sanitization treatment"
+      - "Air quality testing"
+    highlighted: true
+relatedServices:
+  - title: "Attic Insulation"
+    url: "/services/residential/attic/"
+  - title: "Spray Foam Insulation"
+    url: "/services/residential/spray-foam/"
+  - title: "Crawl Space Insulation"
+    url: "/services/residential/crawl-space/"
+---
+
+<style>
+  .removal-hero {
+    background: linear-gradient(135deg, rgba(30, 60, 114, 0.95), rgba(42, 82, 152, 0.95)), url('/images/insulation-removal.jpg') center/cover;
+    padding: 80px 0;
+    color: white;
+    text-align: center;
+  }
+  
+  .removal-reasons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+  }
+  
+  .reason-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 2px solid;
+    border-radius: 15px;
+    padding: 25px;
+    transition: all 0.3s ease;
+  }
+  
+  .reason-card.urgent {
+    border-color: rgba(255, 60, 60, 0.5);
+    background: rgba(255, 60, 60, 0.05);
+  }
+  
+  .reason-card.urgent:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 60, 60, 0.3);
+    border-color: rgba(255, 60, 60, 0.8);
+  }
+  
+  .reason-card.recommended {
+    border-color: rgba(255, 200, 60, 0.5);
+    background: rgba(255, 200, 60, 0.05);
+  }
+  
+  .reason-card.recommended:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 200, 60, 0.3);
+    border-color: rgba(255, 200, 60, 0.8);
+  }
+  
+  .safety-protocols {
+    background: linear-gradient(180deg, var(--surface) 0%, var(--surface-dark) 100%);
+    padding: 60px 0;
+  }
+  
+  .protocol-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+  }
+  
+  .protocol-item {
+    text-align: center;
+    padding: 30px;
+    background: rgba(0, 255, 255, 0.05);
+    border-radius: 15px;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+  }
+  
+  .protocol-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: block;
+  }
+  
+  .contamination-types {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin: 40px 0;
+  }
+  
+  .contamination-card {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .contamination-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 255, 255, 0.3);
+  }
+  
+  .contamination-header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .contamination-content {
+    padding: 30px;
+  }
+  
+  .before-after-showcase {
+    background: var(--surface-dark);
+    padding: 60px 0;
+    margin: 40px 0;
+  }
+  
+  .ba-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 40px 0;
+  }
+  
+  .ba-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .ba-label {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: var(--primary);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    z-index: 1;
+  }
+  
+  .warning-signs {
+    background: rgba(255, 60, 60, 0.1);
+    border: 2px solid rgba(255, 60, 60, 0.3);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 40px 0;
+  }
+  
+  .warning-signs h3 {
+    color: #ff6666;
+    margin-bottom: 20px;
+  }
+  
+  .warning-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .warning-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .warning-icon {
+    color: #ff6666;
+    font-size: 1.5rem;
+  }
+</style>
+
+<section class="removal-hero">
+  <div class="container">
+    <h1>{{ title }}</h1>
+    <p class="lead">{{ subtitle }}</p>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-number">100%</span>
+        <span class="stat-label">Safe Removal</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">24hr</span>
+        <span class="stat-label">Typical Timeline</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">90%</span>
+        <span class="stat-label">Air Quality Improvement</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <h2>When to Remove Old Insulation</h2>
+    <p class="lead">Old or damaged insulation doesn't just lose effectiveness—it can become a health hazard. Professional removal is essential before installing new insulation for optimal performance and safety.</p>
+    
+    <div class="removal-reasons">
+      <div class="reason-card urgent">
+        <h3>🚨 Urgent Removal Needed</h3>
+        <ul>
+          <li><strong>Rodent Infestation:</strong> Droppings, urine, and nesting materials</li>
+          <li><strong>Water Damage:</strong> Mold growth and structural concerns</li>
+          <li><strong>Fire/Smoke Damage:</strong> Toxic residues and odors</li>
+          <li><strong>Asbestos Presence:</strong> Professional abatement required</li>
+          <li><strong>Severe Contamination:</strong> Health hazards present</li>
+        </ul>
+      </div>
+      
+      <div class="reason-card recommended">
+        <h3>⚠️ Removal Recommended</h3>
+        <ul>
+          <li><strong>Age 20+ Years:</strong> Degraded performance and settling</li>
+          <li><strong>Dust Accumulation:</strong> Allergens and air quality issues</li>
+          <li><strong>Pest Activity:</strong> Even without visible infestation</li>
+          <li><strong>Renovation Plans:</strong> Access needed for other work</li>
+          <li><strong>Energy Upgrade:</strong> Preparing for modern insulation</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="warning-signs">
+      <h3>⚠️ Warning Signs Your Insulation Needs Removal</h3>
+      <div class="warning-list">
+        <div class="warning-item">
+          <span class="warning-icon">🔴</span>
+          <span>Visible rodent droppings or tunneling</span>
+        </div>
+        <div class="warning-item">
+          <span class="warning-icon">🔴</span>
+          <span>Strong, persistent odors from attic/crawl space</span>
+        </div>
+        <div class="warning-item">
+          <span class="warning-icon">🔴</span>
+          <span>Water stains or moisture damage</span>
+        </div>
+        <div class="warning-item">
+          <span class="warning-icon">🔴</span>
+          <span>Compressed or settled insulation</span>
+        </div>
+        <div class="warning-item">
+          <span class="warning-icon">🔴</span>
+          <span>Increased allergy symptoms at home</span>
+        </div>
+        <div class="warning-item">
+          <span class="warning-icon">🔴</span>
+          <span>Higher than normal energy bills</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="safety-protocols">
+  <div class="container">
+    <h2>Our Safety-First Removal Process</h2>
+    <p class="lead">Professional equipment and protocols ensure safe, thorough removal</p>
+    
+    <div class="protocol-grid">
+      <div class="protocol-item">
+        <span class="protocol-icon">🛡️</span>
+        <h3>Containment Setup</h3>
+        <p>Plastic barriers and negative air pressure prevent contamination spread throughout your home</p>
+      </div>
+      
+      <div class="protocol-item">
+        <span class="protocol-icon">😷</span>
+        <h3>PPE Equipment</h3>
+        <p>Full protective gear including respirators, suits, and gloves for technician safety</p>
+      </div>
+      
+      <div class="protocol-item">
+        <span class="protocol-icon">🌪️</span>
+        <h3>HEPA Vacuums</h3>
+        <p>Industrial-grade vacuum systems capture even microscopic particles and allergens</p>
+      </div>
+      
+      <div class="protocol-item">
+        <span class="protocol-icon">🧪</span>
+        <h3>Sanitization</h3>
+        <p>EPA-approved antimicrobial treatments eliminate bacteria, viruses, and odors</p>
+      </div>
+      
+      <div class="protocol-item">
+        <span class="protocol-icon">📦</span>
+        <h3>Proper Disposal</h3>
+        <p>Contaminated materials bagged, sealed, and disposed of according to regulations</p>
+      </div>
+      
+      <div class="protocol-item">
+        <span class="protocol-icon">✅</span>
+        <h3>Final Inspection</h3>
+        <p>Thorough verification ensures complete removal and readiness for new insulation</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contamination-showcase">
+  <div class="container">
+    <h2>Types of Contamination We Handle</h2>
+    <div class="contamination-types">
+      <div class="contamination-card">
+        <div class="contamination-header">
+          <h3>🐭 Rodent Contamination</h3>
+        </div>
+        <div class="contamination-content">
+          <p><strong>Health Risks:</strong> Hantavirus, salmonella, and other diseases</p>
+          <p><strong>Signs:</strong> Droppings, urine stains, nesting materials, tunneling</p>
+          <p><strong>Our Solution:</strong></p>
+          <ul>
+            <li>Complete removal of contaminated insulation</li>
+            <li>HEPA vacuum all surfaces</li>
+            <li>Disinfectant application</li>
+            <li>Seal entry points</li>
+            <li>Install rodent-proof barriers</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="contamination-card">
+        <div class="contamination-header">
+          <h3>💧 Water & Mold Damage</h3>
+        </div>
+        <div class="contamination-content">
+          <p><strong>Health Risks:</strong> Respiratory issues, allergies, structural damage</p>
+          <p><strong>Signs:</strong> Discoloration, musty odors, visible mold, sagging insulation</p>
+          <p><strong>Our Solution:</strong></p>
+          <ul>
+            <li>Remove all water-damaged materials</li>
+            <li>Identify and fix moisture source</li>
+            <li>Apply mold remediation treatments</li>
+            <li>Dry affected areas completely</li>
+            <li>Install moisture barriers</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="contamination-card">
+        <div class="contamination-header">
+          <h3>🏚️ Age & Deterioration</h3>
+        </div>
+        <div class="contamination-content">
+          <p><strong>Issues:</strong> Settled insulation, dust accumulation, reduced R-value</p>
+          <p><strong>Signs:</strong> Uneven coverage, high energy bills, dusty conditions</p>
+          <p><strong>Our Solution:</strong></p>
+          <ul>
+            <li>Complete removal of old material</li>
+            <li>Vacuum all dust and debris</li>
+            <li>Inspect for hidden damage</li>
+            <li>Air seal penetrations</li>
+            <li>Prepare for modern insulation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="before-after-showcase">
+  <div class="container">
+    <h2>Transformation Through Professional Removal</h2>
+    <div class="ba-grid">
+      <div class="ba-item">
+        <span class="ba-label">Before</span>
+        <img src="/images/insulation-contaminated-before.jpg" alt="Contaminated insulation before removal">
+        <div class="ba-description">
+          <h4>Typical Contaminated Attic</h4>
+          <ul>
+            <li>Rodent droppings throughout</li>
+            <li>Compressed, ineffective insulation</li>
+            <li>Visible pest damage</li>
+            <li>Health hazards present</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="ba-item">
+        <span class="ba-label">After</span>
+        <img src="/images/insulation-clean-after.jpg" alt="Clean attic after insulation removal">
+        <div class="ba-description">
+          <h4>Clean, Sanitized Space</h4>
+          <ul>
+            <li>All contamination removed</li>
+            <li>Surfaces sanitized and sealed</li>
+            <li>Ready for new insulation</li>
+            <li>Safe, healthy environment</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="removal-equipment">
+  <div class="container">
+    <h2>Professional Equipment Makes the Difference</h2>
+    <div class="equipment-showcase">
+      <h3>Why DIY Removal is Dangerous</h3>
+      <div class="comparison-grid">
+        <div class="diy-risks">
+          <h4>❌ DIY Risks</h4>
+          <ul>
+            <li>Exposure to harmful contaminants</li>
+            <li>Spreading contamination throughout home</li>
+            <li>Incomplete removal leaving problems</li>
+            <li>No proper disposal methods</li>
+            <li>Risk of structural damage</li>
+            <li>No sanitization capability</li>
+          </ul>
+        </div>
+        
+        <div class="pro-advantages">
+          <h4>✅ Professional Advantages</h4>
+          <ul>
+            <li>Industrial HEPA vacuum systems</li>
+            <li>Negative air pressure containment</li>
+            <li>Complete contamination removal</li>
+            <li>Licensed disposal and documentation</li>
+            <li>Structural inspection included</li>
+            <li>EPA-approved sanitization</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="equipment-list">
+        <h3>Our Specialized Equipment</h3>
+        <ul>
+          <li><strong>23HP Insulation Vacuum:</strong> Removes 500-700 bags per hour</li>
+          <li><strong>150ft Hose Systems:</strong> Reaches every corner without damage</li>
+          <li><strong>HEPA Air Scrubbers:</strong> Captures 99.97% of particles</li>
+          <li><strong>Fogger Systems:</strong> Applies sanitizing treatments evenly</li>
+          <li><strong>Moisture Meters:</strong> Identifies hidden water damage</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-preview">
+  <div class="container">
+    <h2>Removal Service FAQs</h2>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>How long does removal take?</h3>
+        <p>Most residential removal projects are completed in one day. Larger homes or severe contamination may require 2-3 days. We always provide a timeline during our initial assessment.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h3>Can I stay home during removal?</h3>
+        <p>Yes! Our containment procedures keep the work area completely separated from your living space. You can go about your normal routine while we work.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h3>Do you test for asbestos?</h3>
+        <p>We can coordinate asbestos testing if your home was built before 1980. If asbestos is found, we work with certified abatement specialists to ensure safe removal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="service-cta-section">
+  <div class="container">
+    <h2>Don't Let Old Insulation Compromise Your Health</h2>
+    <p>Professional removal is the first step to a healthier, more efficient home.</p>
+    <div class="cta-buttons">
+      <a href="/contact/" class="btn btn-primary">Schedule Removal Assessment</a>
+      <a href="tel:623-241-1939" class="btn btn-secondary">Call 623-241-1939</a>
+    </div>
+  </div>
+</div>
