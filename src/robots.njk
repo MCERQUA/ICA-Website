@@ -1,0 +1,25 @@
+---
+permalink: /robots.txt
+eleventyExcludeFromCollections: true
+---
+# Robots.txt for Insulation Contractors of Arizona
+# {{ site.url }}
+
+User-agent: *
+Allow: /
+
+# Directories
+Allow: /services/
+Allow: /blog/
+Allow: /about/
+Allow: /contact/
+
+# Sitemap location
+Sitemap: {{ site.url }}/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Disallow admin or private areas (if any exist)
+# Disallow: /admin/
+# Disallow: /private/
