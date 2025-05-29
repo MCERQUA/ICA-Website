@@ -1,0 +1,457 @@
+---
+layout: service-page.njk
+title: "Wall Insulation Services"
+subtitle: "Complete Wall Insulation Solutions for Arizona Homes"
+meta_description: "Professional wall insulation services in Phoenix & Arizona. Interior and exterior wall solutions. Stop heat transfer and reduce noise. Call 623-241-1939"
+tags: 
+  - residential
+  - services
+benefits:
+  - title: "Temperature Control"
+    description: "Stop heat transfer through walls for consistent indoor comfort"
+    icon: "🌡️"
+  - title: "Energy Efficiency"
+    description: "Reduce cooling costs by up to 25% with proper wall insulation"
+    icon: "⚡"
+  - title: "Sound Reduction"
+    description: "Create quieter living spaces by dampening outside noise"
+    icon: "🔇"
+  - title: "Moisture Protection"
+    description: "Prevent condensation and moisture damage in wall cavities"
+    icon: "💧"
+  - title: "Increased Home Value"
+    description: "Well-insulated homes command higher resale prices"
+    icon: "📈"
+  - title: "Year-Round Comfort"
+    description: "Maintain comfortable temperatures in every room"
+    icon: "🏠"
+process:
+  - title: "Wall Analysis"
+    description: "Comprehensive inspection to identify insulation needs and opportunities"
+  - title: "Solution Design"
+    description: "Custom recommendations based on wall type and construction"
+  - title: "Professional Prep"
+    description: "Protect your home and prepare walls for installation"
+  - title: "Expert Installation"
+    description: "Precise application using the best method for your walls"
+  - title: "Quality Assurance"
+    description: "Thermal verification and professional finishing touches"
+pricing:
+  - type: "Interior Wall Insulation"
+    price: "$1.50-3.00/sq ft"
+    features:
+      - "Sound dampening focus"
+      - "Climate control between rooms"
+      - "Multiple material options"
+      - "Minimal disruption"
+  - type: "Exterior Wall Insulation"
+    price: "$2.00-4.00/sq ft"
+    features:
+      - "Maximum thermal barrier"
+      - "Moisture protection"
+      - "Air sealing included"
+      - "Energy savings priority"
+    highlighted: true
+relatedServices:
+  - title: "Dense Pack Insulation"
+    url: "/services/residential/dense-pack/"
+  - title: "Spray Foam Insulation"
+    url: "/services/residential/spray-foam/"
+  - title: "Attic Insulation"
+    url: "/services/residential/attic/"
+---
+
+<style>
+  .wall-hero {
+    background: linear-gradient(135deg, rgba(30, 60, 114, 0.95), rgba(42, 82, 152, 0.95)), url('/images/wall-insulation.jpg') center/cover;
+    padding: 80px 0;
+    color: white;
+    text-align: center;
+  }
+  
+  .wall-types {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+  }
+  
+  .wall-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .wall-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 255, 255, 0.2);
+    border-color: var(--primary);
+  }
+  
+  .wall-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+  }
+  
+  .heat-transfer-demo {
+    background: var(--surface-dark);
+    padding: 60px 0;
+    margin: 40px 0;
+  }
+  
+  .heat-visual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin: 40px 0;
+  }
+  
+  .heat-diagram {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .temp-gradient {
+    height: 200px;
+    background: linear-gradient(90deg, 
+      #ff0000 0%, 
+      #ff6600 20%, 
+      #ffcc00 40%, 
+      #66ff00 60%, 
+      #00ffcc 80%, 
+      #0066ff 100%
+    );
+    border-radius: 10px;
+    position: relative;
+    margin: 20px 0;
+  }
+  
+  .temp-marker {
+    position: absolute;
+    top: -30px;
+    transform: translateX(-50%);
+    font-weight: bold;
+    color: var(--text-light);
+  }
+  
+  .method-comparison {
+    background: linear-gradient(180deg, var(--surface) 0%, var(--surface-dark) 100%);
+    padding: 60px 0;
+  }
+  
+  .method-table {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 30px 0;
+  }
+  
+  .method-table th {
+    background: var(--primary);
+    color: white;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .method-table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+  }
+  
+  .method-table tr:hover {
+    background: rgba(0, 255, 255, 0.05);
+  }
+  
+  .check-mark {
+    color: #00ff00;
+    font-weight: bold;
+  }
+  
+  .cross-mark {
+    color: #ff6666;
+  }
+</style>
+
+<section class="wall-hero">
+  <div class="container">
+    <h1>{{ title }}</h1>
+    <p class="lead">{{ subtitle }}</p>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-number">25%</span>
+        <span class="stat-label">Energy Savings</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">40%</span>
+        <span class="stat-label">Noise Reduction</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">15°F</span>
+        <span class="stat-label">Temperature Difference</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <h2>Wall Insulation for Arizona's Extreme Climate</h2>
+    <p class="lead">Your walls are the largest surface area in your home, and in Arizona's extreme heat, uninsulated or poorly insulated walls can account for 35% of your cooling loss. Professional wall insulation creates a thermal barrier that keeps the heat out and your conditioned air in.</p>
+    
+    <div class="wall-types">
+      <div class="wall-card">
+        <h3>Interior Wall Insulation</h3>
+        <ul>
+          <li><strong>Purpose:</strong> Climate control between rooms</li>
+          <li><strong>Benefits:</strong> Sound reduction, privacy, zoned comfort</li>
+          <li><strong>Best Materials:</strong> Open-cell foam, fiberglass batts</li>
+          <li><strong>Installation:</strong> During construction or renovation</li>
+        </ul>
+        <p>Interior wall insulation creates comfortable, quiet zones within your home, allowing for efficient room-by-room temperature control.</p>
+      </div>
+      
+      <div class="wall-card">
+        <h3>Exterior Wall Insulation</h3>
+        <ul>
+          <li><strong>Purpose:</strong> Primary thermal barrier</li>
+          <li><strong>Benefits:</strong> Energy savings, moisture control, comfort</li>
+          <li><strong>Best Materials:</strong> Closed-cell foam, dense pack, hybrid systems</li>
+          <li><strong>Installation:</strong> New construction or retrofit options</li>
+        </ul>
+        <p>Exterior wall insulation is your first line of defense against Arizona's heat, providing maximum energy efficiency and comfort.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="heat-transfer-demo">
+  <div class="container">
+    <h2>Understanding Heat Transfer Through Walls</h2>
+    <div class="heat-visual">
+      <div class="heat-explanation">
+        <h3>The Arizona Wall Challenge</h3>
+        <p>When exterior temperatures reach 115°F, your wall surfaces can exceed 140°F. Without proper insulation, this heat radiates directly into your living spaces, forcing your AC to work overtime.</p>
+        
+        <h4>Heat Transfer Methods:</h4>
+        <ul>
+          <li><strong>Conduction:</strong> Heat moves through wall materials</li>
+          <li><strong>Convection:</strong> Air movement carries heat through gaps</li>
+          <li><strong>Radiation:</strong> Heat radiates from hot surfaces</li>
+        </ul>
+        
+        <p>Professional wall insulation addresses all three methods, creating a comprehensive thermal barrier.</p>
+      </div>
+      
+      <div class="heat-diagram">
+        <h4>Temperature Gradient - Insulated vs Uninsulated</h4>
+        <div class="temp-comparison">
+          <div class="uninsulated">
+            <h5>Uninsulated Wall</h5>
+            <div class="temp-gradient">
+              <span class="temp-marker" style="left: 0%">115°F</span>
+              <span class="temp-marker" style="left: 50%">95°F</span>
+              <span class="temp-marker" style="left: 100%">85°F</span>
+            </div>
+            <p>Heat penetrates easily, raising indoor temperatures</p>
+          </div>
+          
+          <div class="insulated">
+            <h5>Insulated Wall</h5>
+            <div class="temp-gradient">
+              <span class="temp-marker" style="left: 0%">115°F</span>
+              <span class="temp-marker" style="left: 50%">80°F</span>
+              <span class="temp-marker" style="left: 100%">75°F</span>
+            </div>
+            <p>Insulation blocks heat, maintaining comfort</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="method-comparison">
+  <div class="container">
+    <h2>Wall Insulation Methods</h2>
+    <table class="method-table">
+      <thead>
+        <tr>
+          <th>Method</th>
+          <th>Best For</th>
+          <th>R-Value</th>
+          <th>Installation</th>
+          <th>Cost</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Spray Foam</strong></td>
+          <td>Maximum performance, air sealing</td>
+          <td>R-3.7 to R-6.5/inch</td>
+          <td>Professional only</td>
+          <td>$$$</td>
+        </tr>
+        <tr>
+          <td><strong>Dense Pack</strong></td>
+          <td>Retrofit existing walls</td>
+          <td>R-3.7 to R-4.2/inch</td>
+          <td>Minimal disruption</td>
+          <td>$$</td>
+        </tr>
+        <tr>
+          <td><strong>Batt Insulation</strong></td>
+          <td>New construction, open walls</td>
+          <td>R-3.2 to R-3.8/inch</td>
+          <td>DIY possible</td>
+          <td>$</td>
+        </tr>
+        <tr>
+          <td><strong>Injection Foam</strong></td>
+          <td>Closed cavities, minimal access</td>
+          <td>R-4.0 to R-5.0/inch</td>
+          <td>Professional only</td>
+          <td>$$$</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <div class="method-details">
+      <h3>Choosing the Right Method</h3>
+      <div class="decision-factors">
+        <div class="factor">
+          <h4>🏗️ Wall Construction</h4>
+          <p>Different methods work better for different wall types. Stud walls, masonry, and steel framing each have optimal insulation approaches.</p>
+        </div>
+        
+        <div class="factor">
+          <h4>🏠 Home Age</h4>
+          <p>Older homes often benefit from retrofit methods like dense pack, while new construction allows for comprehensive solutions.</p>
+        </div>
+        
+        <div class="factor">
+          <h4>💰 Budget</h4>
+          <p>We offer solutions for every budget, from cost-effective batts to premium spray foam systems.</p>
+        </div>
+        
+        <div class="factor">
+          <h4>🎯 Goals</h4>
+          <p>Whether prioritizing energy savings, comfort, or noise reduction, we'll recommend the best approach for your needs.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wall-solutions">
+  <div class="container">
+    <h2>Common Wall Insulation Challenges & Solutions</h2>
+    <div class="challenge-grid">
+      <div class="challenge-card">
+        <h3>🔥 West-Facing Walls</h3>
+        <p><strong>Challenge:</strong> Intense afternoon sun creates hot spots</p>
+        <p><strong>Solution:</strong> High-performance closed-cell foam with reflective barriers for maximum heat resistance</p>
+      </div>
+      
+      <div class="challenge-card">
+        <h3>🏠 Older Stucco Homes</h3>
+        <p><strong>Challenge:</strong> Limited cavity space and moisture concerns</p>
+        <p><strong>Solution:</strong> Injection foam or careful dense pack installation with moisture management</p>
+      </div>
+      
+      <div class="challenge-card">
+        <h3>🔌 Electrical & Plumbing</h3>
+        <p><strong>Challenge:</strong> Working around existing utilities</p>
+        <p><strong>Solution:</strong> Professional techniques ensure complete coverage without compromising systems</p>
+      </div>
+      
+      <div class="challenge-card">
+        <h3>💨 Air Leakage</h3>
+        <p><strong>Challenge:</strong> Gaps around outlets, windows, and penetrations</p>
+        <p><strong>Solution:</strong> Comprehensive air sealing as part of insulation process</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="roi-section">
+  <div class="container">
+    <h2>Wall Insulation ROI in Arizona</h2>
+    <div class="roi-calculator">
+      <h3>Typical 2,000 sq ft Home</h3>
+      <div class="roi-breakdown">
+        <div class="roi-item">
+          <span class="label">Average Installation Cost:</span>
+          <span class="value">$3,000 - $6,000</span>
+        </div>
+        <div class="roi-item">
+          <span class="label">Annual Energy Savings:</span>
+          <span class="value">$600 - $1,200</span>
+        </div>
+        <div class="roi-item">
+          <span class="label">Summer Peak Savings:</span>
+          <span class="value">$150 - $250/month</span>
+        </div>
+        <div class="roi-item highlight">
+          <span class="label">Payback Period:</span>
+          <span class="value">3-5 years</span>
+        </div>
+      </div>
+      
+      <div class="additional-benefits">
+        <h4>Additional Value:</h4>
+        <ul>
+          <li>Increased home value (3-5% typical)</li>
+          <li>Reduced HVAC wear and maintenance</li>
+          <li>Utility rebates available</li>
+          <li>Enhanced comfort (priceless!)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-preview">
+  <div class="container">
+    <h2>Wall Insulation FAQs</h2>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>Can you insulate walls without removing drywall?</h3>
+        <p>Yes! We specialize in retrofit techniques like dense pack and injection foam that require only small access holes, professionally patched after installation.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h3>Which walls should I insulate first?</h3>
+        <p>Prioritize exterior walls, especially west and south-facing walls that receive the most sun. Interior walls between conditioned and unconditioned spaces come next.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h3>How do I know if my walls need insulation?</h3>
+        <p>Signs include: hot/cold spots on walls, high energy bills, rooms that won't stay comfortable, and visible temperature differences using thermal imaging.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="service-cta-section">
+  <div class="container">
+    <h2>Stop Heat Transfer Through Your Walls</h2>
+    <p>Professional wall insulation for lasting comfort and energy savings.</p>
+    <div class="cta-buttons">
+      <a href="/contact/" class="btn btn-primary">Get Free Wall Assessment</a>
+      <a href="tel:623-241-1939" class="btn btn-secondary">Call 623-241-1939</a>
+    </div>
+  </div>
+</div>
