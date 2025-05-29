@@ -1,0 +1,217 @@
+{# Quick Quote Component - Sidebar quote form #}
+{# 
+  Usage: {% include "components/quick-quote.njk" %}
+#}
+
+<div class="quick-quote">
+  <h3>Get a Free Quote</h3>
+  <p>Fast, no-obligation estimate for your insulation project</p>
+  
+  <form class="quote-form" action="#" method="POST" data-netlify="true" netlify-honeypot="bot-field" name="quick-quote">
+    <input type="hidden" name="form-name" value="quick-quote">
+    <p class="hidden">
+      <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+    </p>
+    
+    <div class="form-group">
+      <input type="text" name="name" placeholder="Your Name" required>
+    </div>
+    
+    <div class="form-group">
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+    </div>
+    
+    <div class="form-group">
+      <input type="email" name="email" placeholder="Email Address" required>
+    </div>
+    
+    <div class="form-group">
+      <select name="service" required>
+        <option value="">Select Service</option>
+        <option value="spray-foam">Spray Foam Insulation</option>
+        <option value="blown-in">Blown-In Insulation</option>
+        <option value="attic">Attic Insulation</option>
+        <option value="wall">Wall Insulation</option>
+        <option value="commercial">Commercial Services</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <textarea name="message" placeholder="Brief description of your project" rows="3"></textarea>
+    </div>
+    
+    <button type="submit" class="submit-btn">Get Free Quote</button>
+  </form>
+  
+  <div class="quote-footer">
+    <p>Or call us directly:</p>
+    <a href="tel:623-241-1939" class="phone-link">623-241-1939</a>
+  </div>
+</div>
+
+<style>
+.quick-quote {
+  background: var(--surface-dark);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-top: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.quick-quote::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.05) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+  pointer-events: none;
+}
+
+.quick-quote h3 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.quick-quote > p {
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.quote-form {
+  position: relative;
+  z-index: 1;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 4px;
+  color: var(--text-light);
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--glow-primary);
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.form-group select option {
+  background: var(--surface-dark);
+  color: var(--text-light);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background: var(--glow-gradient);
+  color: var(--surface-dark);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.5);
+}
+
+.submit-btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+.quote-footer {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 255, 255, 0.2);
+  text-align: center;
+}
+
+.quote-footer p {
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.phone-link {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--glow-primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.phone-link:hover {
+  color: var(--primary);
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .quick-quote {
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+}
+</style>
