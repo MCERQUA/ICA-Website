@@ -1,0 +1,182 @@
+{# FAQ Component #}
+{# 
+  Usage: {% include "components/faq.njk" %}
+  
+  Variables:
+  - faqs: Array of FAQ objects with question and answer
+  - faqTitle: Optional title for the section (default: "Frequently Asked Questions")
+#}
+
+<div class="faq-section">
+  <h2 class="section-title">{{ faqTitle or "Frequently Asked Questions" }}</h2>
+  <div class="faq-container">
+    {% for faq in faqs %}
+    <div class="faq-item" data-faq-index="{{ loop.index }}">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-{{ loop.index }}">
+        <span>{{ faq.question }}</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer" id="faq-answer-{{ loop.index }}" aria-hidden="true">
+        <div class="faq-answer-content">
+          {{ faq.answer | safe }}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+.faq-section {
+  padding: 3rem 0;
+}
+
+.faq-section .section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-flow 3s ease infinite;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+  background: var(--surface-dark);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: var(--glow-primary);
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+}
+
+.faq-question {
+  width: 100%;
+  padding: 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--primary);
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+  background: rgba(0, 255, 255, 0.05);
+}
+
+.faq-question:focus {
+  outline: 2px solid var(--glow-primary);
+  outline-offset: -2px;
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  color: var(--glow-primary);
+  transition: transform 0.3s ease;
+  line-height: 1;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 1000px;
+  transition: max-height 0.5s ease-in;
+}
+
+.faq-answer-content {
+  padding: 0 1.5rem 1.5rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.faq-answer-content p {
+  margin-bottom: 1rem;
+}
+
+.faq-answer-content p:last-child {
+  margin-bottom: 0;
+}
+
+.faq-answer-content ul,
+.faq-answer-content ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.faq-answer-content li {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .faq-section .section-title {
+    font-size: 2rem;
+  }
+  
+  .faq-question {
+    font-size: 1rem;
+    padding: 1.25rem;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const faqItems = document.querySelectorAll('.faq-item');
+  
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+    
+    question.addEventListener('click', function() {
+      const isActive = item.classList.contains('active');
+      
+      // Close all other FAQs
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.classList.remove('active');
+          otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+          otherItem.querySelector('.faq-answer').setAttribute('aria-hidden', 'true');
+        }
+      });
+      
+      // Toggle current FAQ
+      if (isActive) {
+        item.classList.remove('active');
+        question.setAttribute('aria-expanded', 'false');
+        answer.setAttribute('aria-hidden', 'true');
+      } else {
+        item.classList.add('active');
+        question.setAttribute('aria-expanded', 'true');
+        answer.setAttribute('aria-hidden', 'false');
+      }
+    });
+  });
+});
+</script>
