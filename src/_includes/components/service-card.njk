@@ -1,0 +1,19 @@
+<div class="service-card">
+    {% if service.image %}
+    <div class="service-image">
+        <img src="{{ service.image }}" alt="{{ service.title }}" loading="lazy">
+    </div>
+    {% endif %}
+    <div class="service-content">
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.description }}</p>
+        {% if service.features %}
+        <ul class="service-features">
+            {% for feature in service.features %}
+            <li>{{ feature }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <a href="{{ service.url }}" class="btn btn-primary">Learn More</a>
+    </div>
+</div>
