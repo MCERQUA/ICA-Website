@@ -17,6 +17,13 @@
 - Track completion status after EVERY task
 - Update this checklist in GitHub after each session
 
+### 🚨 **CRITICAL: INTERACTION BLOCKING PREVENTION**
+**BEFORE creating ANY new component, READ:**
+- `/INTERACTION_BLOCKING_PREVENTION.md` - MANDATORY compliance guide
+- `/STYLING_SYSTEM_DOCUMENTATION.md` - Updated with critical CSS requirements
+
+**KEY RULE:** All decorative pseudo-elements (`::before`, `::after`) MUST have `pointer-events: none`
+
 ---
 
 ## 📁 RESOURCE LOCATIONS
@@ -102,10 +109,10 @@ https://github.com/MCERQUA/ICA-Website
 
 ### [ ] 2.3 Component Partials
 **Location:** `src/_includes/components/`
-- [ ] Hero section - `hero.njk`
+- [ ] Hero section - `hero.njk` ⚠️ **MUST include `pointer-events: none` on decorative elements**
 - [ ] Service cards - `service-card.njk`
 - [ ] Testimonials - `testimonials.njk`
-- [ ] CTA sections - `cta.njk`
+- [ ] CTA sections - `cta.njk` ⚠️ **CRITICAL: Test all button interactions**
 - [ ] Blog preview - `blog-preview.njk`
 
 ---
@@ -137,7 +144,7 @@ https://github.com/MCERQUA/ICA-Website
 **Files:**
 - Content: `ECHO2/.../website-recreation/page-content/contact.md`
 - Target: `src/contact.njk`
-- [ ] Contact form
+- [ ] Contact form ⚠️ **CRITICAL: Test form functionality before deployment**
 - [ ] Phone and email
 - [ ] Service area information
 - [ ] Business hours
@@ -151,6 +158,7 @@ https://github.com/MCERQUA/ICA-Website
 - [ ] **Spray Foam Insulation** 
   - Source: `ECHO2/.../additional-website-pages/spray-foam-page/`
   - Target: `src/services/spray-foam-insulation.njk`
+  - ⚠️ **CRITICAL: All CTA buttons must be tested for clickability**
 - [ ] **Attic Insulation**
   - Source: `ECHO2/.../website-recreation/page-content/services/attic-insulation.md`
   - Target: `src/services/attic-insulation.njk`
@@ -167,6 +175,14 @@ https://github.com/MCERQUA/ICA-Website
 - [ ] Agricultural Tank Insulation
 - [ ] Duct Cleaning
 - [ ] Air Sealing
+
+### 🚨 **MANDATORY for ALL Service Pages:**
+Before deploying any service page:
+- [ ] Test all buttons for clickability
+- [ ] Test all forms for functionality
+- [ ] Verify hover effects work on interactive elements
+- [ ] Check mobile touch interactions
+- [ ] Audit CSS for `pointer-events: none` on decorative elements
 
 ---
 
@@ -249,6 +265,13 @@ https://github.com/MCERQUA/ICA-Website
 - [ ] Smooth scrolling
 - [ ] Loading states
 
+### 🚨 **CRITICAL CSS REQUIREMENTS:**
+**Every component with background effects MUST:**
+- [ ] Include `pointer-events: none` on `::before` pseudo-elements
+- [ ] Include `pointer-events: none` on `::after` pseudo-elements
+- [ ] Use proper z-index hierarchy (background: 1, content: 10+, interactive: 12+)
+- [ ] Test all interactive elements before deployment
+
 ---
 
 ## 🚀 PHASE 8: DEPLOYMENT & TESTING
@@ -258,8 +281,9 @@ https://github.com/MCERQUA/ICA-Website
 - [ ] Build test locally
 - [ ] Check all links
 - [ ] Validate HTML
-- [ ] Test forms
+- [ ] Test forms ⚠️ **CRITICAL: Form functionality must be verified**
 - [ ] Mobile testing
+- [ ] **🚨 INTERACTION TEST: All buttons and forms clickable**
 
 ### [ ] 8.2 Netlify Configuration
 - [ ] Environment variables
@@ -277,6 +301,35 @@ https://github.com/MCERQUA/ICA-Website
 
 ---
 
+## 🚨 **MANDATORY TESTING CHECKLIST**
+
+**Copy and use for EVERY new component:**
+
+```
+Component: ________________
+Date: ________________
+
+CSS AUDIT:
+□ All ::before elements have pointer-events: none
+□ All ::after elements have pointer-events: none  
+□ Interactive elements have z-index: 12+
+□ Interactive elements have position: relative
+
+FUNCTIONALITY TESTS:
+□ All buttons are clickable
+□ All form fields work (if applicable)
+□ All links navigate properly
+□ Hover effects appear on interactive elements
+□ Mobile touch interactions work
+
+FINAL APPROVAL:
+□ Component fully interactive
+□ No dead zones detected
+□ Ready for deployment
+```
+
+---
+
 ## 📊 TRACKING & SESSION MANAGEMENT
 
 ### Session Log Template
@@ -285,6 +338,7 @@ https://github.com/MCERQUA/ICA-Website
 **Completed:**
 - [ ] Task description
 - [ ] Files created/modified
+- [ ] INTERACTION TESTING: ✅ All elements clickable
 
 **Next Priority:**
 - Task to start next session
@@ -303,20 +357,22 @@ When creating files > 1500 lines:
 
 ## 🔄 CURRENT STATUS SUMMARY
 
-**Last Updated:** May 27, 2025
+**Last Updated:** May 29, 2025 - CRITICAL SAFETY UPDATE
 **Overall Progress:** 0% - NOT STARTED
 **Current Phase:** Setup pending
 **Next Action:** Begin Phase 1.1 - Repository Setup
+**⚠️ CRITICAL:** Review interaction blocking prevention guide before ANY component development
 
 ### Priority Order:
-1. Setup & Global Configuration
-2. Base templates and layouts
-3. Home page implementation
-4. Core service pages
-5. Blog migration
-6. Additional pages
-7. SEO optimization
-8. Final testing and deployment
+1. **READ INTERACTION BLOCKING PREVENTION GUIDE** - MANDATORY
+2. Setup & Global Configuration
+3. Base templates and layouts
+4. Home page implementation
+5. Core service pages
+6. Blog migration
+7. Additional pages
+8. SEO optimization
+9. Final testing and deployment
 
 ---
 
@@ -341,4 +397,18 @@ git push origin main
 
 ---
 
-**Remember:** Update this checklist after EVERY work session. Check off completed items and add session notes to maintain continuity across conversations.
+## 📚 **MANDATORY DOCUMENTATION TO READ**
+
+1. **`/INTERACTION_BLOCKING_PREVENTION.md`** - CRITICAL safety guide
+2. **`/STYLING_SYSTEM_DOCUMENTATION.md`** - Updated component system
+3. **Fixed Components Examples:**
+   - `/src/_includes/sections/contact-form.njk` - Safe form implementation
+   - `/src/_includes/sections/additional-cta.njk` - Safe CTA implementation
+
+---
+
+**Remember:** 
+- Update this checklist after EVERY work session
+- Check off completed items and add session notes
+- **ALWAYS test interactions before deployment**
+- **MANDATORY: `pointer-events: none` on all decorative pseudo-elements**
