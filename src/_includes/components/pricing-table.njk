@@ -1,0 +1,242 @@
+{# Pricing Table Component #}
+{# 
+  Usage: {% include "components/pricing-table.njk" %}
+  
+  Variables:
+  - pricing: Array of pricing objects with name, price, features, and optional highlight
+  - pricingTitle: Optional title for the section (default: "Pricing Options")
+#}
+
+<div class="pricing-table">
+  <h2 class="section-title">{{ pricingTitle or "Pricing Options" }}</h2>
+  <div class="pricing-grid">
+    {% for plan in pricing %}
+    <div class="pricing-card{% if plan.highlight %} highlighted{% endif %}">
+      {% if plan.highlight %}
+      <div class="highlight-badge">{{ plan.highlight }}</div>
+      {% endif %}
+      <h3 class="plan-name">{{ plan.name }}</h3>
+      <div class="plan-price">
+        <span class="price">{{ plan.price }}</span>
+        {% if plan.unit %}<span class="unit">{{ plan.unit }}</span>{% endif %}
+      </div>
+      {% if plan.description %}
+      <p class="plan-description">{{ plan.description }}</p>
+      {% endif %}
+      <ul class="plan-features">
+        {% for feature in plan.features %}
+        <li>{{ feature }}</li>
+        {% endfor %}
+      </ul>
+      {% if plan.cta %}
+      <a href="{{ plan.cta.url }}" class="plan-cta">{{ plan.cta.text }}</a>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+.pricing-table {
+  padding: 3rem 0;
+}
+
+.pricing-table .section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-flow 3s ease infinite;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+.pricing-card {
+  background: var(--surface-dark);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.pricing-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--glow-gradient);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--glow-primary);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+}
+
+.pricing-card:hover::before {
+  opacity: 0.05;
+}
+
+.pricing-card.highlighted {
+  border-color: var(--glow-primary);
+  transform: scale(1.05);
+}
+
+.pricing-card.highlighted::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: var(--glow-gradient);
+  border-radius: 8px;
+  z-index: -1;
+  animation: glow-sweep 3s linear infinite;
+}
+
+.highlight-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--glow-gradient);
+  color: var(--surface-dark);
+  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  border-radius: 0 8px 0 20px;
+}
+
+.plan-name {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.plan-price {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.plan-price .price {
+  font-size: 3rem;
+  font-weight: bold;
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.plan-price .unit {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}
+
+.plan-description {
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.plan-features li {
+  color: var(--text-light);
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+  position: relative;
+  padding-left: 2rem;
+}
+
+.plan-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--glow-primary);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.plan-features li:last-child {
+  border-bottom: none;
+}
+
+.plan-cta {
+  display: block;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: var(--glow-gradient);
+  color: var(--surface-dark);
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.plan-cta::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
+}
+
+.plan-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.5);
+}
+
+.plan-cta:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+@media (max-width: 768px) {
+  .pricing-table .section-title {
+    font-size: 2rem;
+  }
+  
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .pricing-card.highlighted {
+    transform: scale(1);
+  }
+}
+</style>
