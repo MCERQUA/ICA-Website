@@ -1,0 +1,144 @@
+<section class="arizona-climate-challenge">
+  <style>
+    .arizona-climate-challenge {
+      padding: 80px 0;
+      background: linear-gradient(180deg, var(--surface-dark) 0%, var(--surface) 100%);
+    }
+    
+    .arizona-climate-challenge h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+    
+    .arizona-climate-challenge .lead {
+      text-align: center;
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 800px;
+      margin: 0 auto 60px;
+    }
+    
+    .climate-highlight-box {
+      background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+      color: white;
+      padding: 40px;
+      border-radius: 15px;
+      margin: 40px 0;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+    }
+    
+    .climate-highlight-box h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    
+    .climate-highlight-box p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    
+    .climate-challenges-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      margin: 60px 0;
+    }
+    
+    .challenge-item {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(0, 255, 255, 0.3);
+      border-radius: 15px;
+      padding: 30px;
+      transition: all 0.3s ease;
+    }
+    
+    .challenge-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 255, 255, 0.2);
+      border-color: var(--primary);
+    }
+    
+    .challenge-item h3 {
+      color: var(--primary);
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+    
+    .challenge-item ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .challenge-item li {
+      padding: 8px 0;
+      padding-left: 25px;
+      position: relative;
+    }
+    
+    .challenge-item li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: bold;
+    }
+    
+    .challenge-item li strong {
+      color: var(--primary);
+    }
+    
+    .solution-item h3 {
+      color: #00ff88;
+    }
+    
+    .solution-item li::before {
+      color: #00ff88;
+      content: '✓';
+    }
+    
+    @media (max-width: 768px) {
+      .climate-challenges-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  
+  <div class="container">
+    <h2>{{ sectionTitle | default("Why Arizona Homes Need Superior Spray Foam Insulation") }}</h2>
+    <p class="lead">{{ sectionSubtitle | default("Arizona's extreme climate creates unique challenges that require specialized insulation solutions") }}</p>
+    
+    <div class="climate-highlight-box">
+      <h3>The 160°F Attic Reality</h3>
+      <p>During Arizona summers, your attic becomes a furnace. When attic temperatures exceed 120°F, traditional insulation can lose 10-20% of its R-value. This isn't theoretical—it's affecting your comfort and energy bills every summer.</p>
+    </div>
+    
+    <div class="climate-challenges-grid">
+      <div class="challenge-item">
+        <h3>Arizona's Climate Challenges:</h3>
+        <ul>
+          <li><strong>Summer temperatures exceeding 115°F</strong> for weeks at a time</li>
+          <li><strong>Attic temperatures reaching 150-160°F</strong> during peak summer months</li>
+          <li><strong>Temperature differentials of 40°F+</strong> between exterior and interior air</li>
+          <li><strong>Rapid temperature cycling</strong> with 30°F+ drops overnight</li>
+          <li><strong>Intense UV exposure</strong> that degrades materials over time</li>
+          <li><strong>Monsoon humidity spikes</strong> creating unexpected moisture challenges</li>
+        </ul>
+      </div>
+      
+      <div class="challenge-item solution-item">
+        <h3>How Spray Foam Solves These Challenges:</h3>
+        <ul>
+          <li><strong>Superior Temperature Performance:</strong> Maintains R-value at extreme temperatures</li>
+          <li><strong>Complete Air Sealing:</strong> Eliminates 40% energy loss from air infiltration</li>
+          <li><strong>Moisture Protection:</strong> Acts as vapor barrier during monsoon season</li>
+          <li><strong>Long-Term Durability:</strong> 25+ year lifespan in Arizona conditions</li>
+          <li><strong>UV Resistance:</strong> Protected installation maintains performance</li>
+          <li><strong>Consistent Comfort:</strong> Eliminates hot spots and temperature variations</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
