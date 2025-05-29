@@ -5,7 +5,7 @@
 {% set formSubtitle = formSubtitle or "Fill out the form below and we'll contact you within 24 hours" %}
 
 {% if showContactForm %}
-<section class="contact-form-section">
+<section class="contact-form-section" id="contact-form">
     <div class="container">
         <div class="contact-form-content">
             <div class="section-header">
@@ -37,17 +37,24 @@
                     
                     <div class="form-group">
                         <label for="service">Service Needed</label>
-                        <select id="service" name="service">
-                            <option value="">Select a Service</option>
-                            <option value="spray-foam">Spray Foam Insulation</option>
-                            <option value="attic">Attic Insulation</option>
-                            <option value="fiberglass">Fiberglass Insulation</option>
-                            <option value="blown-in">Blown-In Insulation</option>
-                            <option value="removal">Insulation Removal</option>
-                            <option value="air-duct">Air Duct Cleaning</option>
-                            <option value="commercial">Commercial Insulation</option>
-                            <option value="other">Other</option>
-                        </select>
+                        <div class="select-wrapper">
+                            <select id="service" name="service">
+                                <option value="">Select a Service</option>
+                                <option value="spray-foam">Spray Foam Insulation</option>
+                                <option value="attic">Attic Insulation</option>
+                                <option value="fiberglass">Fiberglass Insulation</option>
+                                <option value="blown-in">Blown-In Insulation</option>
+                                <option value="removal">Insulation Removal</option>
+                                <option value="duct-cleaning">Duct Cleaning</option>
+                                <option value="commercial">Commercial Insulation</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="select-arrow">
+                                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 1L6 6L11 1"/>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
@@ -185,7 +192,6 @@
 }
 
 .form-group input,
-.form-group select,
 .form-group textarea {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(0, 255, 255, 0.3);
@@ -198,6 +204,58 @@
     z-index: 13; /* Ensure inputs are clickable */
 }
 
+/* Enhanced Select Styling */
+.select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.form-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 5px;
+    padding: 0.75rem 2.5rem 0.75rem 1rem;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 13;
+    width: 100%;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* Custom dropdown arrow */
+.select-arrow {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 14;
+    color: #00ffff;
+    transition: all 0.3s ease;
+}
+
+.select-wrapper:hover .select-arrow {
+    color: #40ffff;
+}
+
+/* Style the dropdown options */
+.form-group select option {
+    background: #1a1a1a;
+    color: #ffffff;
+    padding: 0.5rem;
+}
+
+.form-group select option:hover {
+    background: rgba(0, 255, 255, 0.1);
+}
+
+/* Enhanced focus states */
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
@@ -207,8 +265,19 @@
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
 }
 
+/* Rotate arrow when dropdown is open */
+.form-group select:focus ~ .select-arrow {
+    transform: translateY(-50%) rotate(180deg);
+    color: #40ffff;
+}
+
 .form-group input::placeholder,
 .form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Ensure consistent text color for placeholder option */
+.form-group select option[value=""] {
     color: rgba(255, 255, 255, 0.5);
 }
 
@@ -269,6 +338,21 @@
     .form-submit .btn-primary {
         width: 100%;
         justify-content: center;
+    }
+}
+
+/* Firefox specific fixes for select styling */
+@-moz-document url-prefix() {
+    .form-group select {
+        background-image: none;
+        padding-right: 2.5rem;
+    }
+}
+
+/* Edge/IE specific fixes */
+@supports (-ms-ime-align: auto) {
+    .form-group select {
+        background-image: none;
     }
 }
 </style>
