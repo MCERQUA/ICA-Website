@@ -35,6 +35,11 @@
     --text-gradient-accent: #00cccc;
     --glow-light: #40ffff;
     
+    /* New Glow Colors - Separate from text colors */
+    --glow-white: rgba(255, 255, 255, 0.6);
+    --glow-soft-blue: rgba(173, 216, 230, 0.5);
+    --glow-pale-cyan: rgba(224, 255, 255, 0.4);
+    
     /* Supporting Colors */
     --success: #00ff88;
     --warning: #ff6b35;
@@ -190,21 +195,21 @@ h4[data-text]::before, h5[data-text]::before, h6[data-text]::before {
     opacity: 0.9;
 }
 
-/* Enhanced Glowing Text Effect - More Defined, Less Blurry */
+/* Enhanced Glowing Text Effect - White/Light Blue Glow, Cyan Text */
 .glow-text {
     background: var(--gradient-text-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-shadow: 
-        0 0 2px var(--glow-light),
-        0 0 4px var(--accent-primary),
-        0 0 6px rgba(64, 255, 255, 0.3);
+        0 0 10px var(--glow-white),
+        0 0 20px var(--glow-soft-blue),
+        0 0 30px var(--glow-pale-cyan);
     animation: enhanced-pulse-glow 4s ease-in-out infinite;
     position: relative;
 }
 
-/* Hero Title Specific Styling - Most Important Improvement */
+/* Hero Title Specific Styling - Crisp Text with Separate Glow */
 .hero-title {
     background: var(--gradient-text-primary) !important;
     -webkit-background-clip: text !important;
@@ -212,25 +217,75 @@ h4[data-text]::before, h5[data-text]::before, h6[data-text]::before {
     background-clip: text !important;
     background-size: 200% 100% !important;
     animation: hero-gradient-flow 6s ease-in-out infinite !important;
-    text-shadow: none !important; /* Remove blur-causing shadow */
+    text-shadow: none !important; /* Remove all text shadow from the text itself */
     position: relative;
-    filter: contrast(1.2) brightness(1.1); /* Enhance definition */
+    filter: contrast(1.3) brightness(1.2); /* Enhanced definition */
+    z-index: 2;
 }
 
-/* Hero title glow overlay - Separate from text for better control */
-.hero-title::after {
-    content: '';
+/* Hero title white glow background - Behind the text */
+.hero-title::before {
+    content: attr(data-text);
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(ellipse at center, var(--glow-light) 0%, transparent 70%);
-    opacity: 0.2;
-    filter: blur(8px);
-    z-index: -1;
+    z-index: -2;
+    color: transparent;
+    text-shadow: 
+        0 0 20px var(--glow-white),
+        0 0 40px var(--glow-soft-blue),
+        0 0 60px var(--glow-pale-cyan),
+        0 0 80px rgba(255, 255, 255, 0.2);
+    filter: blur(2px);
+    opacity: 0.5;
     animation: hero-glow-pulse 3s ease-in-out infinite;
     pointer-events: none;
+}
+
+/* Hero title subtle ambient glow */
+.hero-title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(ellipse at center, 
+        var(--glow-white) 0%, 
+        var(--glow-soft-blue) 20%, 
+        transparent 60%);
+    opacity: 0.3;
+    filter: blur(20px);
+    z-index: -3;
+    animation: hero-ambient-pulse 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+/* New animation for ambient glow */
+@keyframes hero-ambient-pulse {
+    0%, 100% {
+        opacity: 0.3;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+/* Modified hero glow pulse for better effect */
+@keyframes hero-glow-pulse {
+    0%, 100% {
+        opacity: 0.5;
+        filter: blur(2px) brightness(1);
+    }
+    50% {
+        opacity: 0.7;
+        filter: blur(3px) brightness(1.2);
+    }
 }
 
 /* Page Titles - Even More Professional */
