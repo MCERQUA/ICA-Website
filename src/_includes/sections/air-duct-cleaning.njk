@@ -1,4 +1,4 @@
-{# Air Duct Cleaning Section - Updated with Background Image & Matching Styling #}
+{# Air Duct Cleaning Section - Updated with Reduced Glow & Lighter Overlay #}
 {% set sectionTitle = sectionTitle or "Now Offering Professional Air Duct Cleaning!" %}
 {% set sectionSubtitle = sectionSubtitle or "Keep your home's air fresh, reduce allergens, and boost HVAC efficiency. Schedule your duct cleaning today." %}
 {% set ctaText = ctaText or "Book Now!" %}
@@ -22,7 +22,7 @@
 </section>
 
 <style>
-  /* Air Duct Cleaning Section - Background Image Style Matching Website Theme */
+  /* Air Duct Cleaning Section - Background Image Style with Lighter Overlay */
   .air-duct-cleaning-hero {
     position: relative;
     min-height: 400px;
@@ -42,7 +42,7 @@
     background-position: center center;
   }
 
-  /* Dark overlay matching website theme */
+  /* Lighter overlay to show more of the background image */
   .duct-cleaning-overlay {
     position: absolute;
     top: 0;
@@ -50,9 +50,9 @@
     right: 0;
     bottom: 0;
     background: linear-gradient(135deg, 
-      rgba(10, 26, 26, 0.85) 0%, 
-      rgba(15, 36, 36, 0.75) 50%,
-      rgba(26, 48, 48, 0.8) 100%);
+      rgba(10, 26, 26, 0.4) 0%, 
+      rgba(15, 36, 36, 0.35) 50%,
+      rgba(26, 48, 48, 0.45) 100%);
     z-index: 1;
   }
 
@@ -67,12 +67,12 @@
 
   .duct-cleaning-text {
     max-width: 600px;
-    background: rgba(10, 26, 26, 0.6);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(0, 255, 255, 0.2);
+    background: rgba(10, 26, 26, 0.3);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(0, 255, 255, 0.15);
     border-radius: 15px;
     padding: 2.5rem;
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   }
 
   .duct-cleaning-text .section-title {
@@ -84,7 +84,7 @@
     line-height: 1.2;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    text-shadow: 0 0 3px rgba(0, 255, 255, 0.2);
   }
 
   .duct-cleaning-text .section-subtitle {
@@ -110,7 +110,7 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     transition: all var(--transition-medium);
-    box-shadow: var(--shadow-glow);
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.25);
     border: 2px solid transparent;
     position: relative;
     overflow: hidden;
@@ -136,7 +136,7 @@
 
   .duct-cleaning-text .btn-hero-primary:hover {
     transform: translateY(-3px);
-    box-shadow: var(--shadow-glow-intense);
+    box-shadow: 0 6px 20px rgba(0, 255, 255, 0.35);
     border-color: var(--accent-primary);
   }
 
@@ -149,21 +149,22 @@
     transform: translateX(4px);
   }
 
-  /* Mobile Responsive - Left aligned background to keep character visible */
+  /* Mobile Responsive - Left aligned background with more padding */
   @media (max-width: 768px) {
     .air-duct-cleaning-hero {
-      min-height: 350px;
+      min-height: 450px; /* Increased height for more padding */
       background-position: left center; /* Keep character visible on mobile */
       margin: 1.5rem 0;
     }
 
     .duct-cleaning-content {
-      padding: 2rem 1rem;
+      padding: 4rem 1rem; /* Increased top/bottom padding */
     }
 
     .duct-cleaning-text {
       max-width: 100%;
       padding: 2rem 1.5rem;
+      background: rgba(10, 26, 26, 0.25); /* Even more transparent on mobile */
     }
 
     .duct-cleaning-text .section-title {
@@ -180,10 +181,14 @@
     }
   }
 
-  /* Small Mobile */
+  /* Small Mobile - Even more padding */
   @media (max-width: 480px) {
     .air-duct-cleaning-hero {
-      min-height: 320px;
+      min-height: 420px; /* Adequate height for small screens */
+    }
+
+    .duct-cleaning-content {
+      padding: 3.5rem 1rem; /* Good padding for small screens */
     }
 
     .duct-cleaning-text {
@@ -205,23 +210,23 @@
     }
   }
 
-  /* Enhance glow effect for this section */
+  /* Reduced glow effect for this section */
   .air-duct-cleaning-hero .glow-text {
-    animation: pulse-glow 3s ease-in-out infinite;
+    animation: subtle-pulse-glow 4s ease-in-out infinite;
   }
 
-  @keyframes pulse-glow {
+  @keyframes subtle-pulse-glow {
     0%, 100% {
       text-shadow: 
-        0 0 5px var(--accent-primary),
-        0 0 10px var(--accent-primary),
-        0 0 15px rgba(0, 255, 255, 0.5);
+        0 0 2px var(--accent-primary),
+        0 0 4px var(--accent-primary),
+        0 0 6px rgba(0, 255, 255, 0.3);
     }
     50% {
       text-shadow: 
-        0 0 10px var(--accent-primary),
-        0 0 20px var(--accent-primary),
-        0 0 30px rgba(0, 255, 255, 0.7);
+        0 0 3px var(--accent-primary),
+        0 0 6px var(--accent-primary),
+        0 0 10px rgba(0, 255, 255, 0.4);
     }
   }
 </style>
