@@ -29,6 +29,16 @@ module.exports = function(eleventyConfig) {
     return arr.slice(0, limit);
   });
   
+  // Add absoluteUrl filter for SEO
+  eleventyConfig.addFilter("absoluteUrl", (url, base) => {
+    try {
+      return new URL(url, base).toString();
+    } catch(e) {
+      console.error("Error creating absolute URL:", e);
+      return url;
+    }
+  });
+  
   // Create blog collection
   eleventyConfig.addCollection("blog", function(collectionApi) {
     return collectionApi.getFilteredByGlob("src/blog/*.md").reverse();
