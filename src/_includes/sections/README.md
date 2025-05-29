@@ -27,7 +27,7 @@ The ICA website uses a modular component-based architecture for improved maintai
   - `showServiceCards` - Show/hide service cards (default: true)
   - `serviceCount` - Number of services to display (default: 3)
 
-### Insulation Applications ⭐ UPDATED
+### Insulation Applications
 - **File:** `insulation-applications.njk`
 - **Usage:** `{% include "sections/insulation-applications.njk" %}`
 - **Variables:**
@@ -77,6 +77,21 @@ The ICA website uses a modular component-based architecture for improved maintai
   - `ctaUrl` - Button link (default: "/contact")
   - `showSection` - Show/hide entire section (default: true)
 
+### Accreditations Banner ⭐ NEW
+- **File:** `accreditations-banner.njk`
+- **Usage:** `{% include "sections/accreditations-banner.njk" %}`
+- **Variables:**
+  - `sectionTitle` - Section heading (default: "Trusted by Industry Leaders")
+  - `showSection` - Show/hide entire section (default: true)
+  - `animationSpeed` - Logo scroll animation speed (default: "30s")
+- **Features:**
+  - Animated right-to-left infinite loop of accreditation logos
+  - Transparent background for versatility
+  - Gradient fade edges for smooth visual flow
+  - Hover effects: pauses animation and highlights individual logos
+  - Mobile-responsive with adjusted sizes
+  - Logos: SFWW Ambassador 2025, ICAA, SPFA, ROC Seal
+
 ### CTA Section
 - **File:** `cta.njk`
 - **Usage:** `{% include "sections/cta.njk" %}`
@@ -105,10 +120,20 @@ title: Home
 {% include "sections/services-preview.njk" %}
 {% include "sections/insulation-applications.njk" %}
 {% include "sections/why-choose-ica.njk" %}
+{% include "sections/accreditations-banner.njk" %}
 {% include "sections/testimonials.njk" %}
 {% include "sections/recent-posts.njk" %}
 {% include "sections/air-duct-cleaning.njk" %}
 {% include "sections/cta.njk" %}
+```
+
+### Custom Accreditations Banner
+```njk
+{% set accreditationsSection = {
+  sectionTitle: "Licensed & Certified Professionals",
+  animationSpeed: "40s"
+} %}
+{% include "sections/accreditations-banner.njk" %}
 ```
 
 ### Custom Insulation Applications Section
@@ -151,7 +176,7 @@ title: Home
 
 ## Component Architecture Benefits
 
-1. **File Size Reduction:** From 8,530 bytes monolithic file to 8 modular components
+1. **File Size Reduction:** From 8,530 bytes monolithic file to 9 modular components
 2. **Edit Speed:** 60-80% faster section updates
 3. **Reusability:** Components can be used across all pages
 4. **Maintainability:** Changes to one component update all instances
