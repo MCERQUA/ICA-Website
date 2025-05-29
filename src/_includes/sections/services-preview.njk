@@ -5,7 +5,7 @@
 {% set showServiceCards = showServiceCards if showServiceCards is defined else true %}
 {% set serviceCount = serviceCount or 4 %}
 
-<section class="services-preview content-section">
+<section class="services-preview content-section with-grid-particles">
     <div class="container">
         <div class="section-header">
             <h2>{{ sectionTitle }}</h2>
@@ -73,3 +73,72 @@
         {% endif %}
     </div>
 </section>
+
+<style>
+/* Add grid and particles background to services section */
+.services-preview.with-grid-particles {
+    position: relative;
+    background: linear-gradient(135deg, rgba(20, 20, 20, 0.98) 0%, rgba(30, 30, 30, 0.98) 100%);
+    overflow: hidden;
+}
+
+/* Grid background */
+.services-preview.with-grid-particles::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: 1;
+}
+
+/* Animated particles */
+.services-preview.with-grid-particles::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: 
+        radial-gradient(2px 2px at 20% 30%, rgba(0, 255, 255, 0.3), transparent),
+        radial-gradient(2px 2px at 60% 70%, rgba(255, 107, 107, 0.2), transparent),
+        radial-gradient(1px 1px at 90% 10%, rgba(0, 255, 255, 0.4), transparent);
+    background-size: 200% 200%;
+    animation: particleFloat 20s ease-in-out infinite;
+    z-index: 1;
+}
+
+/* Ensure content is above background effects */
+.services-preview.with-grid-particles .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Enhance section header for better contrast */
+.services-preview.with-grid-particles .section-header h2 {
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.services-preview.with-grid-particles .section-intro {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Enhance service cards for better visibility on dark background */
+.services-preview.with-grid-particles .service-card {
+    background: rgba(20, 20, 20, 0.9);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.services-preview.with-grid-particles .service-card:hover {
+    border-color: rgba(0, 255, 255, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 255, 255, 0.2);
+}
+</style>
