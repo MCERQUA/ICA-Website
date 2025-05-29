@@ -11,7 +11,7 @@
 {% set displaySection = showSection !== false %}
 
 {% if displaySection %}
-<section class="insulation-applications-section content-section">
+<section class="insulation-applications-section content-section with-grid-particles">
     <div class="container">
         <!-- Section Header -->
         <div class="section-header">
@@ -24,7 +24,7 @@
             <!-- Open Cell Spray Foam -->
             <div class="application-card service-card">
                 <div class="service-image">
-                    <img src="/images/Open_Cell_Spray_Foam_insulation_Arizona.webp" alt="Open Cell Spray Foam Insulation Installation" loading="lazy">
+                    <img src="/Images/Open_Cell_Spray_Foam_insulation_Arizona.webp" alt="Open Cell Spray Foam Insulation Installation" loading="lazy">
                 </div>
                 <h3>Open Cell Spray Foam</h3>
                 <p>This type of spray foam is perfect for homes in Arizona! We love installing open cell spray foam. We have installed open cell for over 20 years! Open cell spray foam is great for Phoenix.</p>
@@ -39,7 +39,7 @@
             <!-- Closed Cell Spray Foam -->
             <div class="application-card service-card">
                 <div class="service-image">
-                    <img src="/images/Closed_Cell_Spray_Foam_insulation_Arizona.webp" alt="Closed Cell Spray Foam Insulation" loading="lazy">
+                    <img src="/Images/Closed_Cell_Spray_Foam_insulation_Arizona.webp" alt="Closed Cell Spray Foam Insulation" loading="lazy">
                 </div>
                 <h3>Closed Cell Spray Foam</h3>
                 <p>This is a low expanding type of foam. There isn't really anything that compares to its value. In terms of R-value and per inch cost, it's worth every penny. In our humble opinion, this the king of insulation!</p>
@@ -54,7 +54,7 @@
             <!-- Fiberglass Insulation -->
             <div class="application-card service-card">
                 <div class="service-image">
-                    <img src="/images/Fibreglass_Home_insulation.webp" alt="Fiberglass Insulation Installation" loading="lazy">
+                    <img src="/Images/Fibreglass_Home_insulation.webp" alt="Fiberglass Insulation Installation" loading="lazy">
                 </div>
                 <h3>Fiberglass Insulation</h3>
                 <p>Fiberglass is quick and easy to install. This has been the "go-to" choice for many homeowners for decades. It is virtually moisture resistant. This is the best option for lower budgets.</p>
@@ -69,7 +69,7 @@
             <!-- Blown-In/Cellulose Insulation -->
             <div class="application-card service-card">
                 <div class="service-image">
-                    <img src="/images/Fibereglass_cellulose_Blown_in_Attic_insulation.webp" alt="Blown-In Cellulose Insulation" loading="lazy">
+                    <img src="/Images/Fibereglass_cellulose_Blown_in_Attic_insulation.webp" alt="Blown-In Cellulose Insulation" loading="lazy">
                 </div>
                 <h3>Blown-In/Cellulose</h3>
                 <p>This option is used for attics. It prevents air from leaking. It saves energy. It helps with noise reduction. It does a great job of keeping the heat out and keeping the air condition inside your home.</p>
@@ -84,7 +84,7 @@
             <!-- Drill & Fill Spray Foam -->
             <div class="application-card service-card">
                 <div class="service-image">
-                    <img src="/images/Drill_And_Fill_Blown_Dense_packed_wall_insulation.webp" alt="Drill and Fill Spray Foam Insulation" loading="lazy">
+                    <img src="/Images/Drill_And_Fill_Blown_Dense_packed_wall_insulation.webp" alt="Drill and Fill Spray Foam Insulation" loading="lazy">
                 </div>
                 <h3>Drill & Fill Spray Foam</h3>
                 <p>Drill and fill insulation is very common on existing "tract" homes. Brothers learned to install any insulation on the interior walls of most tract homes. We can drill some holes around your home to add insulation.</p>
@@ -99,7 +99,7 @@
             <!-- Insulation Removal -->
             <div class="application-card service-card">
                 <div class="service-image">
-                    <img src="/images/Attic_insulation_removal.webp" alt="Professional Insulation Removal Service" loading="lazy">
+                    <img src="/Images/Attic_insulation_removal.webp" alt="Professional Insulation Removal Service" loading="lazy">
                 </div>
                 <h3>Insulation Removal</h3>
                 <p>If you need insulation removal we can do it. We have industrial vacuums to suck out the insulation and dispose of it. Click here to learn more about our removal services.</p>
@@ -129,6 +129,71 @@
     overflow: hidden;
 }
 
+/* Add grid and particles background to insulation applications section */
+.insulation-applications-section.with-grid-particles {
+    position: relative;
+    background: linear-gradient(135deg, rgba(20, 20, 20, 0.98) 0%, rgba(30, 30, 30, 0.98) 100%);
+    overflow: hidden;
+}
+
+/* Grid background */
+.insulation-applications-section.with-grid-particles::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: 1;
+}
+
+/* Animated particles */
+.insulation-applications-section.with-grid-particles::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: 
+        radial-gradient(2px 2px at 20% 30%, rgba(0, 255, 255, 0.3), transparent),
+        radial-gradient(2px 2px at 60% 70%, rgba(255, 107, 107, 0.2), transparent),
+        radial-gradient(1px 1px at 90% 10%, rgba(0, 255, 255, 0.4), transparent);
+    background-size: 200% 200%;
+    animation: particleFloat 20s ease-in-out infinite;
+    z-index: 1;
+}
+
+/* Particle animation */
+@keyframes particleFloat {
+    0%, 100% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Ensure content is above background effects */
+.insulation-applications-section.with-grid-particles .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Enhance section header for better contrast on dark background */
+.insulation-applications-section.with-grid-particles .section-header h2 {
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.insulation-applications-section.with-grid-particles .section-intro {
+    color: rgba(255, 255, 255, 0.9);
+}
+
 /* Applications Grid */
 .applications-grid {
     display: grid;
@@ -136,6 +201,18 @@
     gap: 2rem;
     margin-top: 3rem;
     margin-bottom: 4rem;
+}
+
+/* Enhance application cards for better visibility on dark background */
+.insulation-applications-section.with-grid-particles .application-card {
+    background: rgba(20, 20, 20, 0.9);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.insulation-applications-section.with-grid-particles .application-card:hover {
+    border-color: rgba(0, 255, 255, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 255, 255, 0.2);
 }
 
 /* Application Cards - inherit service-card styling */
@@ -152,6 +229,7 @@
 .application-card p {
     margin-bottom: 1.5rem;
     line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .application-card ul {
@@ -164,6 +242,7 @@
     padding: 0.5rem 0;
     padding-left: 1.5rem;
     position: relative;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .application-card ul li::before {
