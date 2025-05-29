@@ -1,0 +1,225 @@
+<section class="foam-types-comparison">
+  <style>
+    .foam-types-comparison {
+      padding: 80px 0;
+      background: var(--surface);
+    }
+    
+    .foam-types-comparison h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+    
+    .foam-types-comparison .lead {
+      text-align: center;
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 800px;
+      margin: 0 auto 60px;
+    }
+    
+    .foam-types-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+    
+    .foam-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(0, 255, 255, 0.3);
+      border-radius: 15px;
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .foam-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 255, 255, 0.2);
+      border-color: var(--primary);
+    }
+    
+    .foam-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(0, 255, 255, 0.05) 0%, transparent 70%);
+      animation: pulse 4s ease-in-out infinite;
+    }
+    
+    .foam-card h3 {
+      color: var(--primary);
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .foam-specs {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .foam-specs li {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+    }
+    
+    .foam-specs li:last-child {
+      border-bottom: none;
+    }
+    
+    .foam-specs strong {
+      color: var(--primary);
+    }
+    
+    .foam-description {
+      color: var(--text-light);
+      line-height: 1.6;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .comparison-table-wrapper {
+      overflow-x: auto;
+      margin: 40px 0;
+    }
+    
+    .comparison-table {
+      width: 100%;
+      min-width: 600px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(0, 255, 255, 0.2);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+    
+    .comparison-table th {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      color: white;
+      padding: 20px;
+      font-weight: bold;
+      text-align: left;
+    }
+    
+    .comparison-table td {
+      padding: 15px 20px;
+      border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+    }
+    
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .comparison-table tr:hover {
+      background: rgba(0, 255, 255, 0.05);
+    }
+    
+    .check-mark {
+      color: #00ff00;
+      font-weight: bold;
+    }
+    
+    .cross-mark {
+      color: #ff6666;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(180deg); }
+    }
+    
+    @media (max-width: 768px) {
+      .foam-types-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  
+  <div class="container">
+    <h2>{{ sectionTitle | default("Spray Foam Types: Open Cell vs Closed Cell") }}</h2>
+    <p class="lead">{{ sectionSubtitle | default("Choose the right spray foam solution for your specific Arizona application") }}</p>
+    
+    <div class="foam-types-grid">
+      <div class="foam-card">
+        <h3>Open-Cell Spray Foam</h3>
+        <ul class="foam-specs">
+          <li><strong>R-Value:</strong> R-3.7 per inch</li>
+          <li><strong>Density:</strong> 0.5 lb/ft³</li>
+          <li><strong>Best For:</strong> Interior walls, sound dampening</li>
+          <li><strong>Cost:</strong> Budget-friendly option</li>
+          <li><strong>Expansion:</strong> 100x its liquid volume</li>
+        </ul>
+        <p class="foam-description">
+          Open-cell foam is perfect for interior applications where sound control and cost-effectiveness are priorities. Its lighter density makes it ideal for filling large cavities.
+        </p>
+      </div>
+      
+      <div class="foam-card">
+        <h3>Closed-Cell Spray Foam</h3>
+        <ul class="foam-specs">
+          <li><strong>R-Value:</strong> R-6.5 per inch</li>
+          <li><strong>Density:</strong> 2.0 lb/ft³</li>
+          <li><strong>Best For:</strong> Attics, exterior walls, moisture protection</li>
+          <li><strong>Cost:</strong> Premium performance</li>
+          <li><strong>Expansion:</strong> 35-50x its liquid volume</li>
+        </ul>
+        <p class="foam-description">
+          Closed-cell foam provides superior insulation and moisture protection, making it ideal for Arizona's extreme heat and monsoon season. It also adds structural strength to your home.
+        </p>
+      </div>
+    </div>
+    
+    {% if showComparisonTable %}
+    <div class="comparison-table-wrapper">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Spray Foam</th>
+            <th>Fiberglass</th>
+            <th>Cellulose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>R-Value Performance at 150°F+</strong></td>
+            <td>Maintains full R-value <span class="check-mark">✅</span></td>
+            <td>Loses 10-20% R-value <span class="cross-mark">❌</span></td>
+            <td>Loses 15-25% R-value <span class="cross-mark">❌</span></td>
+          </tr>
+          <tr>
+            <td><strong>Air Sealing</strong></td>
+            <td>Complete seal <span class="check-mark">✅</span></td>
+            <td>No air sealing <span class="cross-mark">❌</span></td>
+            <td>Minimal air sealing <span class="cross-mark">❌</span></td>
+          </tr>
+          <tr>
+            <td><strong>Moisture Protection</strong></td>
+            <td>Excellent (closed-cell) <span class="check-mark">✅</span></td>
+            <td>Poor <span class="cross-mark">❌</span></td>
+            <td>Poor <span class="cross-mark">❌</span></td>
+          </tr>
+          <tr>
+            <td><strong>Lifespan in Arizona</strong></td>
+            <td>25+ years <span class="check-mark">✅</span></td>
+            <td>15-20 years</td>
+            <td>10-15 years</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    {% endif %}
+  </div>
+</section>
