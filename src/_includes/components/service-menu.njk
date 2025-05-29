@@ -1,0 +1,149 @@
+{# Service Menu Component - Sidebar navigation for services #}
+{# 
+  Usage: {% include "components/service-menu.njk" %}
+  
+  Variables:
+  - currentService: The current service page URL for highlighting
+#}
+
+<div class="service-menu">
+  <h3>Our Services</h3>
+  
+  <div class="service-category">
+    <h4>Residential</h4>
+    <ul>
+      <li><a href="/services/residential/spray-foam/"{% if currentService == '/services/residential/spray-foam/' %} class="active"{% endif %}>Spray Foam Insulation</a></li>
+      <li><a href="/services/residential/blown-in/"{% if currentService == '/services/residential/blown-in/' %} class="active"{% endif %}>Blown-In Insulation</a></li>
+      <li><a href="/services/residential/dense-pack/"{% if currentService == '/services/residential/dense-pack/' %} class="active"{% endif %}>Dense Pack Insulation</a></li>
+      <li><a href="/services/residential/attic/"{% if currentService == '/services/residential/attic/' %} class="active"{% endif %}>Attic Insulation</a></li>
+      <li><a href="/services/residential/wall/"{% if currentService == '/services/residential/wall/' %} class="active"{% endif %}>Wall Insulation</a></li>
+      <li><a href="/services/residential/crawl-space/"{% if currentService == '/services/residential/crawl-space/' %} class="active"{% endif %}>Crawl Space Insulation</a></li>
+      <li><a href="/services/residential/removal/"{% if currentService == '/services/residential/removal/' %} class="active"{% endif %}>Insulation Removal</a></li>
+    </ul>
+  </div>
+  
+  <div class="service-category">
+    <h4>Commercial</h4>
+    <ul>
+      <li><a href="/services/commercial/office/"{% if currentService == '/services/commercial/office/' %} class="active"{% endif %}>Office Buildings</a></li>
+      <li><a href="/services/commercial/retail/"{% if currentService == '/services/commercial/retail/' %} class="active"{% endif %}>Retail Spaces</a></li>
+      <li><a href="/services/commercial/warehouse/"{% if currentService == '/services/commercial/warehouse/' %} class="active"{% endif %}>Warehouses</a></li>
+      <li><a href="/services/commercial/new-construction/"{% if currentService == '/services/commercial/new-construction/' %} class="active"{% endif %}>New Construction</a></li>
+    </ul>
+  </div>
+  
+  <div class="service-category">
+    <h4>Industrial</h4>
+    <ul>
+      <li><a href="/services/industrial/manufacturing/"{% if currentService == '/services/industrial/manufacturing/' %} class="active"{% endif %}>Manufacturing Facilities</a></li>
+      <li><a href="/services/industrial/cold-storage/"{% if currentService == '/services/industrial/cold-storage/' %} class="active"{% endif %}>Cold Storage</a></li>
+      <li><a href="/services/industrial/equipment/"{% if currentService == '/services/industrial/equipment/' %} class="active"{% endif %}>Equipment Insulation</a></li>
+    </ul>
+  </div>
+  
+  <div class="service-category">
+    <h4>Agricultural</h4>
+    <ul>
+      <li><a href="/services/agricultural/tank/"{% if currentService == '/services/agricultural/tank/' %} class="active"{% endif %}>Tank Insulation</a></li>
+      <li><a href="/services/agricultural/barn/"{% if currentService == '/services/agricultural/barn/' %} class="active"{% endif %}>Barn Insulation</a></li>
+      <li><a href="/services/agricultural/storage/"{% if currentService == '/services/agricultural/storage/' %} class="active"{% endif %}>Storage Facilities</a></li>
+    </ul>
+  </div>
+</div>
+
+<style>
+.service-menu {
+  background: var(--surface-dark);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2rem;
+  position: sticky;
+  top: 2rem;
+}
+
+.service-menu h3 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.service-category {
+  margin-bottom: 2rem;
+}
+
+.service-category:last-child {
+  margin-bottom: 0;
+}
+
+.service-category h4 {
+  font-size: 1.1rem;
+  color: var(--glow-primary);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.service-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-category li {
+  margin-bottom: 0.5rem;
+}
+
+.service-category a {
+  color: var(--text-light);
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-category a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--glow-gradient);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.service-category a:hover {
+  color: var(--primary);
+  background: rgba(0, 255, 255, 0.05);
+  padding-left: 1.5rem;
+}
+
+.service-category a:hover::before {
+  transform: translateX(0);
+}
+
+.service-category a.active {
+  color: var(--surface-dark);
+  background: var(--glow-gradient);
+  font-weight: bold;
+}
+
+.service-category a.active::before {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .service-menu {
+    position: static;
+    margin-bottom: 2rem;
+  }
+}
+</style>
