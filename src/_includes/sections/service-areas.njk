@@ -1,0 +1,175 @@
+<section class="service-areas">
+  <style>
+    .service-areas {
+      padding: 80px 0;
+      background: linear-gradient(180deg, var(--surface) 0%, var(--surface-dark) 100%);
+    }
+    
+    .service-areas h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+    
+    .service-areas .lead {
+      text-align: center;
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      margin-bottom: 60px;
+    }
+    
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+    
+    .area-column h3 {
+      color: var(--primary);
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--primary);
+    }
+    
+    .area-column ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .area-column li {
+      padding: 10px 0;
+      padding-left: 30px;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    
+    .area-column li:hover {
+      color: var(--primary);
+      transform: translateX(5px);
+    }
+    
+    .area-column li::before {
+      content: '📍';
+      position: absolute;
+      left: 0;
+    }
+    
+    .area-column li strong {
+      color: var(--primary);
+    }
+    
+    .response-times {
+      background: rgba(0, 255, 255, 0.05);
+      border: 1px solid rgba(0, 255, 255, 0.3);
+      border-radius: 15px;
+      padding: 30px;
+      margin-top: 40px;
+    }
+    
+    .response-times h3 {
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+    
+    .response-times ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .response-times li {
+      padding: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+    }
+    
+    .response-times li:last-child {
+      border-bottom: none;
+    }
+    
+    .response-times strong {
+      color: var(--primary);
+    }
+    
+    .response-badge {
+      background: var(--primary);
+      color: white;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+    
+    @media (max-width: 768px) {
+      .areas-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .response-times li {
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+      }
+    }
+  </style>
+  
+  <div class="container">
+    <h2>{{ sectionTitle | default("Service Areas Throughout Phoenix Metro") }}</h2>
+    <p class="lead">{{ sectionSubtitle | default("Professional spray foam installation across Arizona") }}</p>
+    
+    <div class="areas-grid">
+      <div class="area-column">
+        <h3>Primary Service Areas:</h3>
+        <ul>
+          <li><strong>Phoenix</strong> - All neighborhoods and districts</li>
+          <li><strong>Glendale</strong> - Our home base with fastest response</li>
+          <li><strong>Gilbert</strong> - Extensive experience in this growing community</li>
+          <li><strong>Chandler</strong> - Proven results in energy savings</li>
+          <li><strong>Scottsdale</strong> - Premium residential and commercial services</li>
+          <li><strong>Tempe</strong> - University area and surrounding neighborhoods</li>
+          <li><strong>Mesa</strong> - Large-scale residential and commercial projects</li>
+          <li><strong>Peoria</strong> - Expanding service area with excellent results</li>
+        </ul>
+      </div>
+      
+      <div class="area-column">
+        <h3>Extended Service Areas:</h3>
+        <ul>
+          <li><strong>Sun Lakes</strong> - Retiree community specialization</li>
+          <li><strong>Ahwatukee</strong> - High-end residential services</li>
+          <li><strong>Paradise Valley</strong> - Luxury home insulation solutions</li>
+          <li><strong>Surprise</strong> - Growing residential community</li>
+          <li><strong>Avondale</strong> - Industrial and residential applications</li>
+          <li><strong>Goodyear</strong> - New construction and retrofits</li>
+          <li><strong>Queen Creek</strong> - Expanding service coverage</li>
+          <li><strong>Cave Creek</strong> - Custom home solutions</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="response-times">
+      <h3>Response Time Commitments:</h3>
+      <ul>
+        <li>
+          <strong>Glendale/Phoenix:</strong>
+          <span class="response-badge">Same-day or next-day response</span>
+        </li>
+        <li>
+          <strong>Gilbert/Chandler/Scottsdale:</strong>
+          <span class="response-badge">1-2 day response</span>
+        </li>
+        <li>
+          <strong>Extended Areas:</strong>
+          <span class="response-badge">2-3 day response</span>
+        </li>
+        <li>
+          <strong>Emergency Service:</strong>
+          <span class="response-badge">Available for urgent needs</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
