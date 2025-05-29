@@ -1,4 +1,4 @@
-{# Air Duct Cleaning Section #}
+{# Air Duct Cleaning Section - Updated with Background Image & Matching Styling #}
 {% set sectionTitle = sectionTitle or "Now Offering Professional Air Duct Cleaning!" %}
 {% set sectionSubtitle = sectionSubtitle or "Keep your home's air fresh, reduce allergens, and boost HVAC efficiency. Schedule your duct cleaning today." %}
 {% set ctaText = ctaText or "Book Now!" %}
@@ -6,145 +6,222 @@
 {% set showSection = showSection if showSection is defined else true %}
 
 {% if showSection %}
-<section class="air-duct-cleaning">
+<section class="air-duct-cleaning-hero" style="background-image: url('/Images/vent-cleaning_arizona.webp');">
+  <div class="duct-cleaning-overlay"></div>
   <div class="container">
     <div class="duct-cleaning-content">
-      <div class="duct-cleaning-image">
-        <img src="/Images/vent-cleaning_arizona.webp" 
-             alt="Professional air duct cleaning service in Arizona" 
-             loading="lazy"
-             width="600"
-             height="400">
-      </div>
       <div class="duct-cleaning-text">
-        <h2 class="section-title">{{ sectionTitle }}</h2>
+        <h2 class="section-title glow-text">{{ sectionTitle }}</h2>
         <p class="section-subtitle">{{ sectionSubtitle }}</p>
-        <a href="{{ ctaUrl }}" class="btn btn-primary">{{ ctaText }}</a>
+        <a href="{{ ctaUrl }}" class="btn-hero-primary">
+          {{ ctaText }} <span class="btn-arrow">→</span>
+        </a>
       </div>
     </div>
   </div>
 </section>
 
 <style>
-  .air-duct-cleaning {
-    padding: 4rem 0;
-    background: linear-gradient(135deg, #e8f4f8 0%, #d6e9f0 100%);
+  /* Air Duct Cleaning Section - Background Image Style Matching Website Theme */
+  .air-duct-cleaning-hero {
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
     margin: 2rem 0;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 255, 255, 0.1);
+  }
+
+  /* Desktop background position - center to show full scene */
+  .air-duct-cleaning-hero {
+    background-position: center center;
+  }
+
+  /* Dark overlay matching website theme */
+  .duct-cleaning-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+      rgba(10, 26, 26, 0.85) 0%, 
+      rgba(15, 36, 36, 0.75) 50%,
+      rgba(26, 48, 48, 0.8) 100%);
+    z-index: 1;
   }
 
   .duct-cleaning-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .duct-cleaning-image {
     position: relative;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  }
-
-  .duct-cleaning-image img {
+    z-index: 2;
     width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-
-  .duct-cleaning-image:hover img {
-    transform: scale(1.05);
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 3rem 1rem;
   }
 
   .duct-cleaning-text {
-    padding: 1rem;
+    max-width: 600px;
+    background: rgba(10, 26, 26, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 2.5rem;
+    box-shadow: var(--shadow-lg);
   }
 
   .duct-cleaning-text .section-title {
-    font-size: 2.5rem;
-    color: var(--color-primary, #1e3c72);
-    margin-bottom: 1rem;
-    line-height: 1.2;
+    font-size: 2.25rem;
+    color: var(--accent-primary);
+    font-family: var(--font-heading);
     font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
   }
 
   .duct-cleaning-text .section-subtitle {
     font-size: 1.2rem;
-    color: #333;
+    color: var(--gray-100);
     margin-bottom: 2rem;
     line-height: 1.6;
+    font-weight: 400;
   }
 
-  .duct-cleaning-text .btn {
-    display: inline-block;
-    padding: 1rem 2.5rem;
-    background: var(--color-accent, #ff6b35);
-    color: white;
+  /* Button matching hero section style */
+  .duct-cleaning-text .btn-hero-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: var(--gradient-accent);
+    color: var(--primary-dark);
     text-decoration: none;
     border-radius: 50px;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all var(--transition-medium);
+    box-shadow: var(--shadow-glow);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
   }
 
-  .duct-cleaning-text .btn:hover {
-    background: #e55a2b;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+  .duct-cleaning-text .btn-hero-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+      transparent, 
+      rgba(255, 255, 255, 0.2), 
+      transparent);
+    transition: left 0.6s ease;
   }
 
-  /* Mobile Responsive - Character stays on left */
+  .duct-cleaning-text .btn-hero-primary:hover::before {
+    left: 100%;
+  }
+
+  .duct-cleaning-text .btn-hero-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-glow-intense);
+    border-color: var(--accent-primary);
+  }
+
+  .duct-cleaning-text .btn-arrow {
+    font-size: 1.2rem;
+    transition: transform var(--transition-medium);
+  }
+
+  .duct-cleaning-text .btn-hero-primary:hover .btn-arrow {
+    transform: translateX(4px);
+  }
+
+  /* Mobile Responsive - Left aligned background to keep character visible */
   @media (max-width: 768px) {
-    .air-duct-cleaning {
-      padding: 3rem 0;
+    .air-duct-cleaning-hero {
+      min-height: 350px;
+      background-position: left center; /* Keep character visible on mobile */
+      margin: 1.5rem 0;
     }
 
     .duct-cleaning-content {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-
-    .duct-cleaning-image {
-      max-width: 100%;
-      margin: 0 auto;
-    }
-
-    .duct-cleaning-image img {
-      object-position: left center; /* Keep character visible on left */
+      padding: 2rem 1rem;
     }
 
     .duct-cleaning-text {
-      text-align: center;
-      padding: 1rem;
+      max-width: 100%;
+      padding: 2rem 1.5rem;
     }
 
     .duct-cleaning-text .section-title {
-      font-size: 2rem;
+      font-size: 1.875rem;
     }
 
     .duct-cleaning-text .section-subtitle {
       font-size: 1.1rem;
     }
 
-    .duct-cleaning-text .btn {
-      padding: 0.875rem 2rem;
-      font-size: 1rem;
+    .duct-cleaning-text .btn-hero-primary {
+      padding: 0.875rem 1.75rem;
+      font-size: 0.95rem;
     }
   }
 
   /* Small Mobile */
   @media (max-width: 480px) {
+    .air-duct-cleaning-hero {
+      min-height: 320px;
+    }
+
+    .duct-cleaning-text {
+      padding: 1.5rem 1rem;
+    }
+
     .duct-cleaning-text .section-title {
-      font-size: 1.75rem;
+      font-size: 1.625rem;
     }
 
     .duct-cleaning-text .section-subtitle {
       font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .duct-cleaning-text .btn-hero-primary {
+      padding: 0.75rem 1.5rem;
+      font-size: 0.9rem;
+    }
+  }
+
+  /* Enhance glow effect for this section */
+  .air-duct-cleaning-hero .glow-text {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      text-shadow: 
+        0 0 5px var(--accent-primary),
+        0 0 10px var(--accent-primary),
+        0 0 15px rgba(0, 255, 255, 0.5);
+    }
+    50% {
+      text-shadow: 
+        0 0 10px var(--accent-primary),
+        0 0 20px var(--accent-primary),
+        0 0 30px rgba(0, 255, 255, 0.7);
     }
   }
 </style>
