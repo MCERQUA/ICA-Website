@@ -27,7 +27,7 @@ The ICA website uses a modular component-based architecture for improved maintai
   - `showServiceCards` - Show/hide service cards (default: true)
   - `serviceCount` - Number of services to display (default: 3)
 
-### Insulation Applications ⭐ NEW
+### Insulation Applications ⭐ UPDATED
 - **File:** `insulation-applications.njk`
 - **Usage:** `{% include "sections/insulation-applications.njk" %}`
 - **Variables:**
@@ -35,10 +35,10 @@ The ICA website uses a modular component-based architecture for improved maintai
   - `sectionSubtitle` - Section description text
   - `showSection` - Show/hide entire section (default: true)
 - **Features:**
-  - 6 insulation application cards with hover effects
-  - Interactive image overlays with additional information
-  - Professional grey color scheme with gradients
-  - Mobile-responsive card grid layout
+  - 6 insulation application cards matching service-card styling
+  - Correct image paths (/Images/ directory)
+  - Consistent with website's futuristic theme
+  - Mobile-responsive grid layout
   - Applications: Open Cell, Closed Cell, Fiberglass, Blown-In, Drill & Fill, Removal
 
 ### Why Choose ICA
@@ -151,7 +151,7 @@ title: Home
 
 ## Component Architecture Benefits
 
-1. **File Size Reduction:** From 8,530 bytes monolithic file to 8 modular components (800-13,300 bytes each)
+1. **File Size Reduction:** From 8,530 bytes monolithic file to 8 modular components
 2. **Edit Speed:** 60-80% faster section updates
 3. **Reusability:** Components can be used across all pages
 4. **Maintainability:** Changes to one component update all instances
