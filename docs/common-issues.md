@@ -40,6 +40,25 @@
 
 ---
 
+### Duplicate Permalink Conflicts
+
+**Issue:** Netlify deployment fails with error: "Output conflict: multiple input files are writing to `_site/[path]/index.html`"
+
+**Root Cause:** Multiple files are trying to generate the same output URL path, which Eleventy doesn't allow.
+
+**Example:** Both `src/services.njk` and `src/services/index.njk` were trying to output to `/services/index.html`
+
+**Solution:** Remove duplicate files or assign different permalink values to resolve conflicts.
+
+**Files Removed:**
+- `src/services.njk` - Redundant services page (kept `src/services/index.njk` as the primary services page)
+
+**Prevention:** Before creating new pages, check if similar pages already exist. Use unique permalinks for different content.
+
+**Status:** ✅ Resolved - Removed duplicate services.njk file on 2025-05-30
+
+---
+
 ## Future Issue Template
 
 **Issue:** [Brief description]
