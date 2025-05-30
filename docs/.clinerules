@@ -1,0 +1,80 @@
+# Cline Rules and Project Guidelines
+
+## Project Overview
+- **Project:** ICA Website (Insulation Contractors of Arizona)
+- **Framework:** Eleventy (11ty) static site generator
+- **Deployment:** Netlify
+- **Current Directory:** e:/1-WORKING-NEW/Mike/AZFOAM/ICA-Website
+
+## Critical Layout Rules
+
+### ⚠️ IMPORTANT: Layout References
+When creating or editing service pages, ALWAYS use the full layout path:
+- ✅ Correct: `layout: layouts/service-page.njk`
+- ❌ Incorrect: `layout: service-page.njk`
+
+**Why:** Eleventy requires the full path when layouts are in subdirectories within `_includes/`
+
+**Files Affected:** All files in `src/services/` subdirectories
+
+### Layout File Locations
+- Service pages: `src/_includes/layouts/service-page.njk`
+- Regular pages: `src/_includes/layouts/page.njk`
+- Service categories: `src/_includes/layouts/service-category.njk`
+
+## File Structure Guidelines
+
+### Service Files Organization
+```
+src/services/
+├── residential/
+├── commercial/
+├── industrial/
+└── agricultural/
+```
+
+### Layout Files Organization
+```
+src/_includes/
+├── layouts/
+│   ├── page.njk
+│   ├── service-page.njk
+│   └── service-category.njk
+├── components/
+└── sections/
+```
+
+## Common Issues Prevention
+
+### 1. Layout Reference Errors
+- **Issue:** Netlify deployment fails with layout not found errors
+- **Prevention:** Always use full layout paths
+- **Quick Fix:** Run `node fix-layouts.js`
+
+### 2. New Service Page Creation
+When creating new service pages:
+1. Use correct layout reference: `layout: layouts/service-page.njk`
+2. Follow existing frontmatter structure
+3. Include required fields: title, subtitle, meta_description, benefits, process
+
+## Deployment Guidelines
+
+### Before Pushing Changes
+1. Test locally with `npm run dev`
+2. Verify layout references are correct
+3. Check for any console errors
+4. Ensure all required frontmatter fields are present
+
+### Emergency Fixes
+- Layout issues: Run `node fix-layouts.js`
+- Check `docs/common-issues.md` for known solutions
+
+## Development Notes
+- Last layout fix: 2025-05-30 (Fixed 4 files)
+- Fixed files: crawl-space.njk, wall.njk, removal.njk, office.njk
+- Script location: `fix-layouts.js` (root directory)
+
+## Contact Information
+- Project: ICA Website
+- Phone: 623-241-1939
+- Focus: Arizona insulation services
