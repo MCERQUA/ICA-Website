@@ -60,3 +60,123 @@ layout: base.njk
 
 {% include "sections/testimonials.njk" %}
 {% include "sections/contact-form.njk" %}
+
+<style>
+/* Service page specific layout styles */
+.service-details {
+    padding: 80px 0;
+    background: var(--surface);
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 60px;
+    align-items: start;
+}
+
+.main-content {
+    max-width: 100%;
+}
+
+.service-sidebar {
+    position: sticky;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Ensure sidebar components don't overlap */
+.service-sidebar > * {
+    margin: 0;
+    width: 100%;
+}
+
+.service-sidebar .service-menu {
+    margin-top: 0;
+}
+
+.service-sidebar .quick-quote {
+    margin-top: 0;
+}
+
+/* FAQ Styling */
+.faq-section {
+    margin-top: 60px;
+}
+
+.faq-section h2 {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: var(--primary);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.1);
+}
+
+.faq-question {
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.faq-answer {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Related Services */
+.related-services {
+    padding: 60px 0;
+    background: var(--surface-dark);
+}
+
+.related-services h2 {
+    font-size: 2rem;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.service-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .service-sidebar {
+        position: static;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-details {
+        padding: 60px 0;
+    }
+    
+    .service-sidebar {
+        max-width: 100%;
+    }
+}
+</style>
