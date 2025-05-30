@@ -7,6 +7,9 @@ module.exports = function(eleventyConfig) {
   // Copy images folder - use lowercase standard
   eleventyConfig.addPassthroughCopy("src/images");
   
+  // Copy optimized images folder
+  eleventyConfig.addPassthroughCopy("src/images-optimized");
+  
   // Add date filters
   eleventyConfig.addFilter("postDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
