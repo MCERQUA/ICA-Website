@@ -1,11 +1,16 @@
 ---
-layout: layouts/service-page.njk
-title: "Office Building Insulation"
+layout: base.njk
+title: "Office Building Insulation Services Phoenix"
 subtitle: "Energy-Efficient Insulation Solutions for Phoenix Office Buildings"
 meta_description: "Commercial office building insulation in Phoenix & Arizona. Reduce energy costs, improve comfort, meet code requirements. Expert installation. Call 623-241-1939"
-tags: 
-  - commercial
-  - services
+heroImage: "/images/office-insulation-hero.jpg"
+heroStats:
+  - value: "30-40%"
+    label: "Energy Savings"
+  - value: "3-4 Years"
+    label: "Typical ROI"
+  - value: "LEED"
+    label: "Points Available"
 benefits:
   - title: "Energy Cost Reduction"
     description: "Cut HVAC costs by 30-40% with proper insulation"
@@ -52,423 +57,404 @@ pricing:
       - "Project timeline coordination"
       - "Warranty programs available"
     highlighted: true
+faq:
+  - question: "Can you work around our business hours?"
+    answer: "Absolutely. We specialize in after-hours and weekend installations to minimize disruption. Our crews are experienced in working in occupied buildings with strict scheduling requirements."
+  - question: "How much can we really save?"
+    answer: "Phoenix office buildings typically see 30-40% reduction in HVAC costs. With demand charges and time-of-use rates, savings can exceed $3 per square foot annually."
+  - question: "Do you handle permit requirements?"
+    answer: "Yes, we manage all permit applications and inspections for commercial projects. Our team is familiar with local building departments and code requirements."
 relatedServices:
   - title: "Warehouse Insulation"
     url: "/services/commercial/warehouse/"
+    description: "Large-scale warehouse solutions"
   - title: "Retail Space Insulation"
     url: "/services/commercial/retail/"
+    description: "Retail and shopping center insulation"
   - title: "Spray Foam Solutions"
     url: "/services/residential/spray-foam/"
+    description: "Premium spray foam applications"
 ---
 
-<section class="content-section">
-  <div class="container">
-    <h2>Office Building Insulation Challenges in Arizona</h2>
-    <p class="lead">Phoenix office buildings face unique challenges with extreme heat, high cooling costs, and the need to maintain comfortable working environments. Our commercial insulation solutions address these challenges while maximizing ROI.</p>
-    
-    <div class="office-challenges">
-      <div class="challenge-card">
-        <h3>🏢 Multi-Story Heat Gain</h3>
-        <p>Upper floors can be 10-15°F warmer than lower levels due to roof heat exposure. Our solutions create uniform comfort across all floors while reducing HVAC strain.</p>
-      </div>
-      
-      <div class="challenge-card">
-        <h3>💼 Tenant Comfort Zones</h3>
-        <p>Different tenants have varying temperature preferences and usage patterns. Proper insulation allows for efficient zone control without energy waste.</p>
-      </div>
-      
-      <div class="challenge-card">
-        <h3>🌞 Solar Heat Through Windows</h3>
-        <p>Large window areas create hot spots and glare. Combined with proper insulation, we help manage solar heat gain for consistent comfort.</p>
-      </div>
-      
-      <div class="challenge-card">
-        <h3>📊 Peak Demand Charges</h3>
-        <p>Commercial rates include expensive demand charges. Better insulation reduces peak cooling loads, significantly lowering utility costs.</p>
-      </div>
+{% set heroTitle = title %}
+{% set heroSubtitle = subtitle %}
+{% include "sections/service-hero.njk" %}
+
+<section class="service-content">
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="main-content">
+                <h2>Office Building Insulation Challenges in Arizona</h2>
+                <p class="lead">Phoenix office buildings face unique challenges with extreme heat, high cooling costs, and the need to maintain comfortable working environments. Our commercial insulation solutions address these challenges while maximizing ROI.</p>
+                
+                <div class="office-challenges">
+                    <div class="challenge-card">
+                        <h3>🏢 Multi-Story Heat Gain</h3>
+                        <p>Upper floors can be 10-15°F warmer than lower levels due to roof heat exposure. Our solutions create uniform comfort across all floors while reducing HVAC strain.</p>
+                    </div>
+                    
+                    <div class="challenge-card">
+                        <h3>💼 Tenant Comfort Zones</h3>
+                        <p>Different tenants have varying temperature preferences and usage patterns. Proper insulation allows for efficient zone control without energy waste.</p>
+                    </div>
+                    
+                    <div class="challenge-card">
+                        <h3>🌞 Solar Heat Through Windows</h3>
+                        <p>Large window areas create hot spots and glare. Combined with proper insulation, we help manage solar heat gain for consistent comfort.</p>
+                    </div>
+                    
+                    <div class="challenge-card">
+                        <h3>📊 Peak Demand Charges</h3>
+                        <p>Commercial rates include expensive demand charges. Better insulation reduces peak cooling loads, significantly lowering utility costs.</p>
+                    </div>
+                </div>
+
+                <h2>Commercial Insulation ROI Analysis</h2>
+                <p class="lead">Real numbers from Phoenix office building projects</p>
+                
+                <div class="roi-metrics">
+                    <div class="metric-card">
+                        <span class="metric-value">$2.50</span>
+                        <span class="metric-label">Per Sq Ft Annual Savings</span>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <span class="metric-value">35%</span>
+                        <span class="metric-label">Average Energy Reduction</span>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <span class="metric-value">3.2yr</span>
+                        <span class="metric-label">Typical Payback Period</span>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <span class="metric-value">15%</span>
+                        <span class="metric-label">Property Value Increase</span>
+                    </div>
+                </div>
+                
+                <div class="case-study">
+                    <h3>📍 Case Study: Downtown Phoenix Office Complex</h3>
+                    <div class="case-study-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Building Size</span>
+                            <span class="stat-value">75,000 sq ft</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Investment</span>
+                            <span class="stat-value">$165,000</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Annual Savings</span>
+                            <span class="stat-value">$52,000</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Payback Period</span>
+                            <span class="stat-value">3.2 years</span>
+                        </div>
+                    </div>
+                    <p><strong>Results:</strong> After spray foam installation in the roof deck and exterior walls, this 8-story office building reduced cooling costs by 38% and achieved more consistent temperatures throughout. Tenant satisfaction increased significantly.</p>
+                </div>
+
+                <h2>Office Building Types We Service</h2>
+                <div class="building-types">
+                    <div class="building-card">
+                        <div class="building-header">
+                            <h3>High-Rise Office Towers</h3>
+                        </div>
+                        <div class="building-content">
+                            <h4>Specialized Solutions:</h4>
+                            <ul>
+                                <li>Roof deck spray foam systems</li>
+                                <li>Curtain wall insulation</li>
+                                <li>Mechanical floor treatments</li>
+                                <li>Elevator shaft thermal breaks</li>
+                            </ul>
+                            <p><strong>Key Benefit:</strong> Dramatic reduction in stack effect and HVAC load balancing between floors.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="building-card">
+                        <div class="building-header">
+                            <h3>Mid-Rise Office Buildings</h3>
+                        </div>
+                        <div class="building-content">
+                            <h4>Specialized Solutions:</h4>
+                            <ul>
+                                <li>Exterior wall retrofits</li>
+                                <li>Roof insulation upgrades</li>
+                                <li>Window system integration</li>
+                                <li>Parking deck ceiling insulation</li>
+                            </ul>
+                            <p><strong>Key Benefit:</strong> Cost-effective whole-building approach with minimal tenant disruption.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="building-card">
+                        <div class="building-header">
+                            <h3>Office Parks & Campuses</h3>
+                        </div>
+                        <div class="building-content">
+                            <h4>Specialized Solutions:</h4>
+                            <ul>
+                                <li>Multi-building coordination</li>
+                                <li>Central plant optimization</li>
+                                <li>Covered walkway insulation</li>
+                                <li>Common area treatments</li>
+                            </ul>
+                            <p><strong>Key Benefit:</strong> Campus-wide energy management and consistent comfort across facilities.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Our Commercial Installation Approach</h2>
+                <div class="approach-features">
+                    <h3>🏗️ Minimal Business Disruption</h3>
+                    <p>We understand that your business can't stop for building improvements. Our commercial team specializes in:</p>
+                    <ul>
+                        <li><strong>After-Hours Installation:</strong> Evening and weekend work to avoid disrupting operations</li>
+                        <li><strong>Zone-by-Zone Approach:</strong> Complete sections while others remain operational</li>
+                        <li><strong>Clean, Professional Crews:</strong> Uniformed, background-checked technicians</li>
+                        <li><strong>Coordination with Property Management:</strong> Seamless communication throughout project</li>
+                    </ul>
+                    
+                    <h3>📋 Code Compliance & Documentation</h3>
+                    <p>Commercial projects require extensive documentation and compliance:</p>
+                    <ul>
+                        <li><strong>Building Code Compliance:</strong> Meet or exceed all local and state requirements</li>
+                        <li><strong>Fire Rating Certifications:</strong> Proper materials for commercial applications</li>
+                        <li><strong>LEED Documentation:</strong> Support for green building certifications</li>
+                        <li><strong>Warranty Programs:</strong> Commercial-grade warranties on materials and labor</li>
+                    </ul>
+                    
+                    <h3>🔧 Commercial-Grade Solutions</h3>
+                    <ul>
+                        <li><strong>Spray Foam Systems:</strong> High-performance closed-cell foam for maximum efficiency</li>
+                        <li><strong>Rigid Board Insulation:</strong> For specific commercial applications</li>
+                        <li><strong>Hybrid Systems:</strong> Combining multiple insulation types for optimal performance</li>
+                        <li><strong>Air Barrier Systems:</strong> Complete building envelope solutions</li>
+                    </ul>
+                </div>
+
+                <h2>Sustainability & LEED Benefits</h2>
+                <div class="green-benefits">
+                    <div class="benefit-highlight">
+                        <h3>🌱 Environmental Impact</h3>
+                        <p>Proper insulation can reduce a building's carbon footprint by 30-40%, contributing to corporate sustainability goals and environmental responsibility.</p>
+                    </div>
+                    
+                    <div class="benefit-highlight">
+                        <h3>🏅 LEED Points Available</h3>
+                        <ul>
+                            <li>Energy & Atmosphere: Up to 20 points</li>
+                            <li>Indoor Environmental Quality: Up to 5 points</li>
+                            <li>Innovation in Design: Up to 2 points</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="benefit-highlight">
+                        <h3>💚 Tenant Attraction</h3>
+                        <p>Energy-efficient buildings attract quality tenants who value sustainability and lower operating costs. Green buildings command 3-7% higher rents on average.</p>
+                    </div>
+                </div>
+
+                {% include "components/pricing-table.njk" %}
+            </div>
+            
+            <aside class="service-sidebar">
+                {% include "components/service-menu.njk" %}
+                {% include "components/quick-quote.njk" %}
+                {% include "components/credentials-mini.njk" %}
+            </aside>
+        </div>
     </div>
-  </div>
 </section>
 
-<section class="roi-calculator">
-  <div class="container">
-    <h2>Commercial Insulation ROI Analysis</h2>
-    <p class="lead">Real numbers from Phoenix office building projects</p>
-    
-    <div class="roi-metrics">
-      <div class="metric-card">
-        <span class="metric-value">$2.50</span>
-        <span class="metric-label">Per Sq Ft Annual Savings</span>
-      </div>
-      
-      <div class="metric-card">
-        <span class="metric-value">35%</span>
-        <span class="metric-label">Average Energy Reduction</span>
-      </div>
-      
-      <div class="metric-card">
-        <span class="metric-value">3.2yr</span>
-        <span class="metric-label">Typical Payback Period</span>
-      </div>
-      
-      <div class="metric-card">
-        <span class="metric-value">15%</span>
-        <span class="metric-label">Property Value Increase</span>
-      </div>
-    </div>
-    
-    <div class="case-study">
-      <h3>📍 Case Study: Downtown Phoenix Office Complex</h3>
-      <div class="case-study-stats">
-        <div class="stat-item">
-          <span class="stat-label">Building Size</span>
-          <span class="stat-value">75,000 sq ft</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-label">Investment</span>
-          <span class="stat-value">$165,000</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-label">Annual Savings</span>
-          <span class="stat-value">$52,000</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-label">Payback Period</span>
-          <span class="stat-value">3.2 years</span>
-        </div>
-      </div>
-      <p><strong>Results:</strong> After spray foam installation in the roof deck and exterior walls, this 8-story office building reduced cooling costs by 38% and achieved more consistent temperatures throughout. Tenant satisfaction increased significantly.</p>
-    </div>
-  </div>
-</section>
+{% set sectionTitle = "Office Building Insulation FAQs" %}
+{% include "sections/service-faq.njk" %}
 
-<section class="content-section">
-  <div class="container">
-    <h2>Office Building Types We Service</h2>
-    <div class="building-types">
-      <div class="building-card">
-        <div class="building-header">
-          <h3>High-Rise Office Towers</h3>
-        </div>
-        <div class="building-content">
-          <h4>Specialized Solutions:</h4>
-          <ul>
-            <li>Roof deck spray foam systems</li>
-            <li>Curtain wall insulation</li>
-            <li>Mechanical floor treatments</li>
-            <li>Elevator shaft thermal breaks</li>
-          </ul>
-          <p><strong>Key Benefit:</strong> Dramatic reduction in stack effect and HVAC load balancing between floors.</p>
-        </div>
-      </div>
-      
-      <div class="building-card">
-        <div class="building-header">
-          <h3>Mid-Rise Office Buildings</h3>
-        </div>
-        <div class="building-content">
-          <h4>Specialized Solutions:</h4>
-          <ul>
-            <li>Exterior wall retrofits</li>
-            <li>Roof insulation upgrades</li>
-            <li>Window system integration</li>
-            <li>Parking deck ceiling insulation</li>
-          </ul>
-          <p><strong>Key Benefit:</strong> Cost-effective whole-building approach with minimal tenant disruption.</p>
-        </div>
-      </div>
-      
-      <div class="building-card">
-        <div class="building-header">
-          <h3>Office Parks & Campuses</h3>
-        </div>
-        <div class="building-content">
-          <h4>Specialized Solutions:</h4>
-          <ul>
-            <li>Multi-building coordination</li>
-            <li>Central plant optimization</li>
-            <li>Covered walkway insulation</li>
-            <li>Common area treatments</li>
-          </ul>
-          <p><strong>Key Benefit:</strong> Campus-wide energy management and consistent comfort across facilities.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+{% include "sections/cta.njk" %}
 
-<section class="installation-approach">
-  <div class="container">
-    <h2>Our Commercial Installation Approach</h2>
-    <div class="approach-features">
-      <h3>🏗️ Minimal Business Disruption</h3>
-      <p>We understand that your business can't stop for building improvements. Our commercial team specializes in:</p>
-      <ul>
-        <li><strong>After-Hours Installation:</strong> Evening and weekend work to avoid disrupting operations</li>
-        <li><strong>Zone-by-Zone Approach:</strong> Complete sections while others remain operational</li>
-        <li><strong>Clean, Professional Crews:</strong> Uniformed, background-checked technicians</li>
-        <li><strong>Coordination with Property Management:</strong> Seamless communication throughout project</li>
-      </ul>
-      
-      <h3>📋 Code Compliance & Documentation</h3>
-      <p>Commercial projects require extensive documentation and compliance:</p>
-      <ul>
-        <li><strong>Building Code Compliance:</strong> Meet or exceed all local and state requirements</li>
-        <li><strong>Fire Rating Certifications:</strong> Proper materials for commercial applications</li>
-        <li><strong>LEED Documentation:</strong> Support for green building certifications</li>
-        <li><strong>Warranty Programs:</strong> Commercial-grade warranties on materials and labor</li>
-      </ul>
-      
-      <h3>🔧 Commercial-Grade Solutions</h3>
-      <ul>
-        <li><strong>Spray Foam Systems:</strong> High-performance closed-cell foam for maximum efficiency</li>
-        <li><strong>Rigid Board Insulation:</strong> For specific commercial applications</li>
-        <li><strong>Hybrid Systems:</strong> Combining multiple insulation types for optimal performance</li>
-        <li><strong>Air Barrier Systems:</strong> Complete building envelope solutions</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="sustainability-benefits">
-  <div class="container">
-    <h2>Sustainability & LEED Benefits</h2>
-    <div class="green-benefits">
-      <div class="benefit-highlight">
-        <h3>🌱 Environmental Impact</h3>
-        <p>Proper insulation can reduce a building's carbon footprint by 30-40%, contributing to corporate sustainability goals and environmental responsibility.</p>
-      </div>
-      
-      <div class="benefit-highlight">
-        <h3>🏅 LEED Points Available</h3>
-        <ul>
-          <li>Energy & Atmosphere: Up to 20 points</li>
-          <li>Indoor Environmental Quality: Up to 5 points</li>
-          <li>Innovation in Design: Up to 2 points</li>
-        </ul>
-      </div>
-      
-      <div class="benefit-highlight">
-        <h3>💚 Tenant Attraction</h3>
-        <p>Energy-efficient buildings attract quality tenants who value sustainability and lower operating costs. Green buildings command 3-7% higher rents on average.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="faq-preview">
-  <div class="container">
-    <h2>Office Building Insulation FAQs</h2>
-    <div class="faq-grid">
-      <div class="faq-item">
-        <h3>Can you work around our business hours?</h3>
-        <p>Absolutely. We specialize in after-hours and weekend installations to minimize disruption. Our crews are experienced in working in occupied buildings with strict scheduling requirements.</p>
-      </div>
-      
-      <div class="faq-item">
-        <h3>How much can we really save?</h3>
-        <p>Phoenix office buildings typically see 30-40% reduction in HVAC costs. With demand charges and time-of-use rates, savings can exceed $3 per square foot annually.</p>
-      </div>
-      
-      <div class="faq-item">
-        <h3>Do you handle permit requirements?</h3>
-        <p>Yes, we manage all permit applications and inspections for commercial projects. Our team is familiar with local building departments and code requirements.</p>
-      </div>
-    </div>
-  </div>
-</section>
+{% include "sections/related-services.njk" %}
 
 <style>
-  .office-challenges {
+/* Service content layout */
+.service-content {
+    padding: 80px 0;
+    background: var(--surface);
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 60px;
+    align-items: start;
+}
+
+.main-content {
+    max-width: 100%;
+}
+
+.service-sidebar {
+    position: sticky;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Office specific styles */
+.office-challenges {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin: 40px 0;
-  }
-  
-  .challenge-card {
+}
+
+.challenge-card {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(0, 255, 255, 0.3);
     border-radius: 15px;
     padding: 30px;
     transition: all 0.3s ease;
-  }
-  
-  .challenge-card:hover {
+}
+
+.challenge-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0, 255, 255, 0.2);
     border-color: var(--primary);
-  }
-  
-  .roi-calculator {
-    background: linear-gradient(180deg, var(--surface) 0%, var(--surface-dark) 100%);
-    padding: 60px 0;
-  }
-  
-  .roi-metrics {
+}
+
+.roi-metrics {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     margin: 40px 0;
-  }
-  
-  .metric-card {
+}
+
+.metric-card {
     background: rgba(0, 255, 255, 0.05);
     border: 2px solid rgba(0, 255, 255, 0.3);
     border-radius: 15px;
     padding: 30px;
     text-align: center;
-  }
-  
-  .metric-value {
+}
+
+.metric-value {
     font-size: 3rem;
     font-weight: bold;
     color: var(--primary);
     display: block;
     margin-bottom: 10px;
-  }
-  
-  .metric-label {
+}
+
+.metric-label {
     font-size: 0.9rem;
     color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 1px;
-  }
-  
-  .building-types {
+}
+
+.building-types {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 40px;
     margin: 40px 0;
-  }
-  
-  .building-card {
+}
+
+.building-card {
     background: rgba(255, 255, 255, 0.02);
     border-radius: 15px;
     overflow: hidden;
     transition: all 0.3s ease;
-  }
-  
-  .building-card:hover {
+}
+
+.building-card:hover {
     transform: scale(1.05);
     box-shadow: 0 20px 50px rgba(0, 255, 255, 0.3);
-  }
-  
-  .building-header {
+}
+
+.building-header {
     background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
     padding: 20px;
     text-align: center;
-  }
-  
-  .building-header h3 {
+}
+
+.building-header h3 {
     color: var(--surface-dark);
     margin: 0;
-  }
-  
-  .building-content {
+}
+
+.building-content {
     padding: 30px;
-  }
-  
-  .case-study {
+}
+
+.case-study {
     background: rgba(0, 255, 255, 0.1);
     border: 2px solid rgba(0, 255, 255, 0.3);
     border-radius: 15px;
     padding: 40px;
     margin: 40px 0;
-  }
-  
-  .case-study-stats {
+}
+
+.case-study-stats {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
     margin: 30px 0;
-  }
-  
-  .stat-item {
+}
+
+.stat-item {
     text-align: center;
-  }
-  
-  .stat-value {
+}
+
+.stat-value {
     font-size: 2rem;
     font-weight: bold;
     color: var(--primary);
     margin-top: 10px;
     display: block;
-  }
-  
-  .installation-approach {
-    background: var(--surface-dark);
-    padding: 60px 0;
-  }
-  
-  .approach-features {
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  
-  .approach-features h3 {
-    color: var(--primary);
-    margin: 30px 0 20px;
-  }
-  
-  .approach-features ul {
-    margin-bottom: 30px;
-  }
-  
-  .sustainability-benefits {
-    padding: 60px 0;
-  }
-  
-  .green-benefits {
+}
+
+.green-benefits {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
     margin: 40px 0;
-  }
-  
-  .benefit-highlight {
+}
+
+.benefit-highlight {
     background: rgba(0, 255, 255, 0.05);
     border: 1px solid rgba(0, 255, 255, 0.3);
     border-radius: 15px;
     padding: 30px;
-  }
-  
-  .benefit-highlight h3 {
+}
+
+.benefit-highlight h3 {
     color: var(--primary);
     margin-bottom: 20px;
-  }
-  
-  .faq-preview {
-    background: var(--surface-dark);
-    padding: 60px 0;
-    margin-bottom: 0;
-  }
-  
-  .faq-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-    margin: 40px 0;
-  }
-  
-  .faq-item {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(0, 255, 255, 0.3);
-    border-radius: 15px;
-    padding: 30px;
-  }
-  
-  .faq-item h3 {
-    color: var(--primary);
-    margin-bottom: 15px;
-  }
-  
-  @media (max-width: 768px) {
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .service-sidebar {
+        position: static;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
     .office-challenges,
     .building-types,
-    .green-benefits,
-    .faq-grid {
-      grid-template-columns: 1fr;
+    .green-benefits {
+        grid-template-columns: 1fr;
     }
-  }
+}
 </style>
