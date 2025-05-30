@@ -1,0 +1,184 @@
+<section class="retrofit-benefits">
+  <div class="container">
+    <h2>Why Choose Dense Pack for Your Retrofit?</h2>
+    <p class="lead">Dense pack insulation is the superior choice for retrofitting existing walls without the cost and disruption of removing drywall.</p>
+    
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">🏠</div>
+        <h3>No Drywall Removal</h3>
+        <p>Install through small access holes that are professionally patched. Save 60-70% compared to full wall renovation.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">🎯</div>
+        <h3>Zero Settling</h3>
+        <p>High-density installation at 3.5 lbs/ft³ prevents settling over time, maintaining R-value for decades.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">🌬️</div>
+        <h3>Superior Air Sealing</h3>
+        <p>Dense pack creates an effective air barrier, reducing infiltration by up to 30% compared to standard insulation.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">🔧</div>
+        <h3>Minimal Disruption</h3>
+        <p>Most homes completed in 1-2 days with minimal mess. Live comfortably during installation.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">💰</div>
+        <h3>Immediate Savings</h3>
+        <p>Start seeing energy savings immediately. Typical payback period of 3-5 years in Arizona's climate.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">🏆</div>
+        <h3>Professional Results</h3>
+        <p>Expert installation with thermal imaging verification ensures complete coverage and performance.</p>
+      </div>
+    </div>
+    
+    <div class="retrofit-comparison">
+      <h3>Dense Pack vs. Traditional Retrofit Methods</h3>
+      <div class="comparison-table">
+        <div class="comparison-row header">
+          <div class="method">Method</div>
+          <div class="cost">Cost</div>
+          <div class="time">Time</div>
+          <div class="disruption">Disruption</div>
+          <div class="performance">Performance</div>
+        </div>
+        
+        <div class="comparison-row">
+          <div class="method"><strong>Dense Pack</strong></div>
+          <div class="cost">$1.50-3.00/sq ft</div>
+          <div class="time">1-2 days</div>
+          <div class="disruption">Minimal</div>
+          <div class="performance">Excellent</div>
+        </div>
+        
+        <div class="comparison-row">
+          <div class="method">Drywall Removal</div>
+          <div class="cost">$5.00-8.00/sq ft</div>
+          <div class="time">1-2 weeks</div>
+          <div class="disruption">Major</div>
+          <div class="performance">Excellent</div>
+        </div>
+        
+        <div class="comparison-row">
+          <div class="method">Injection Foam</div>
+          <div class="cost">$3.00-5.00/sq ft</div>
+          <div class="time">2-3 days</div>
+          <div class="disruption">Moderate</div>
+          <div class="performance">Good</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .retrofit-benefits {
+    padding: 80px 0;
+    background: linear-gradient(180deg, var(--surface) 0%, var(--surface-dark) 100%);
+  }
+  
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 50px 0;
+  }
+  
+  .benefit-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 255, 255, 0.2);
+    border-color: var(--primary);
+  }
+  
+  .benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: block;
+  }
+  
+  .benefit-card h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+  }
+  
+  .retrofit-comparison {
+    margin-top: 60px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 40px;
+  }
+  
+  .comparison-table {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    margin-top: 30px;
+  }
+  
+  .comparison-row {
+    display: contents;
+  }
+  
+  .comparison-row.header > div {
+    font-weight: bold;
+    color: var(--primary);
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--primary);
+    margin-bottom: 15px;
+  }
+  
+  .comparison-row > div {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .comparison-row:not(.header) > div:first-child {
+    text-align: left;
+  }
+  
+  @media (max-width: 768px) {
+    .comparison-table {
+      grid-template-columns: 1fr;
+      gap: 5px;
+    }
+    
+    .comparison-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 20px;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+    }
+    
+    .comparison-row.header {
+      display: none;
+    }
+    
+    .comparison-row > div::before {
+      content: attr(class) ": ";
+      font-weight: bold;
+      color: var(--primary);
+      text-transform: capitalize;
+    }
+  }
+</style>

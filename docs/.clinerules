@@ -51,11 +51,17 @@ src/_includes/
 - **Prevention:** Always use full layout paths
 - **Quick Fix:** Run `node fix-layouts.js`
 
-### 2. New Service Page Creation
+### 2. Missing Template Files
+- **Issue:** Service files include sections that don't exist
+- **Prevention:** Verify all included sections exist before deployment
+- **Quick Fix:** Create missing section files or update includes
+
+### 3. New Service Page Creation
 When creating new service pages:
 1. Use correct layout reference: `layout: layouts/service-page.njk`
 2. Follow existing frontmatter structure
 3. Include required fields: title, subtitle, meta_description, benefits, process
+4. Verify all included sections exist in `src/_includes/sections/`
 
 ## Deployment Guidelines
 

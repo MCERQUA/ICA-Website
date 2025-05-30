@@ -22,6 +22,24 @@
 
 ---
 
+### Missing Template Files
+
+**Issue:** Netlify deployment fails with error: "template not found: sections/[filename].njk"
+
+**Root Cause:** Service files are trying to include section templates that don't exist in the `src/_includes/sections/` directory.
+
+**Solution:** Create the missing section files or update the service files to use existing sections.
+
+**Files Created:**
+- `src/_includes/sections/retrofit-benefits.njk` - Benefits of retrofit insulation
+- `src/_includes/sections/material-options.njk` - Material comparison sections
+
+**Prevention:** Before creating new service pages, verify all included sections exist or create them as needed.
+
+**Status:** ✅ Resolved - Created missing section files on 2025-05-30
+
+---
+
 ## Future Issue Template
 
 **Issue:** [Brief description]
