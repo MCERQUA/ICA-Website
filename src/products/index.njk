@@ -1,236 +1,366 @@
 ---
-layout: base.njk
+layout: layouts/base.njk
 title: Insulation Products
-description: Professional insulation products and materials. Spray foam, fiberglass, cellulose, and air sealing solutions for Arizona homes and businesses.
+subtitle: High-Performance Insulation Solutions for Arizona
+permalink: /products/
 ---
 
-<section class="hero">
+<section class="hero hero-products">
   <div class="container">
-    <h1>Professional Insulation Products</h1>
-    <p>Premium Materials for Arizona's Extreme Climate</p>
+    <h1 class="hero-title">{{ title }}</h1>
+    <p class="hero-subtitle">{{ subtitle }}</p>
   </div>
 </section>
 
 <section class="products-overview">
   <div class="container">
-    <h2>Quality Products for Every Application</h2>
-    <p>We use only the highest quality insulation materials from trusted manufacturers. Each product is selected for its performance in Arizona's challenging climate conditions.</p>
-    
+    <div class="intro-text">
+      <p class="lead">We offer a comprehensive range of insulation products specifically chosen for their performance in Arizona's extreme climate. From cutting-edge spray foam to traditional fiberglass, we have the right solution for every application and budget.</p>
+    </div>
+
     <div class="product-categories">
-      <div class="category-section">
-        <h3>Spray Foam Insulation</h3>
-        <div class="product-grid">
-          <div class="product-card">
-            <h4>Open Cell Spray Foam</h4>
-            <p>Cost-effective solution with excellent sound dampening properties. R-3.7 per inch.</p>
-            <a href="/products/open-cell-spray-foam/" class="btn-primary">Learn More</a>
-          </div>
-          <div class="product-card">
-            <h4>Closed Cell Spray Foam</h4>
-            <p>Maximum performance with superior R-value and moisture resistance. R-6.5 per inch.</p>
-            <a href="/products/closed-cell-spray-foam/" class="btn-primary">Learn More</a>
+      <h2>Our Product Categories</h2>
+      
+      <div class="category-grid">
+        <div class="category-card">
+          <h3>Spray Foam Insulation</h3>
+          <p>The premium choice for Arizona homes and businesses. Superior R-value, air sealing, and moisture protection.</p>
+          <div class="product-links">
+            <a href="/products/open-cell-spray-foam/" class="product-link">
+              <span class="product-name">Open-Cell Spray Foam</span>
+              <span class="product-desc">R-3.7 per inch • Cost-effective • Sound dampening</span>
+            </a>
+            <a href="/products/closed-cell-spray-foam/" class="product-link">
+              <span class="product-name">Closed-Cell Spray Foam</span>
+              <span class="product-desc">R-6.5 per inch • Premium performance • Moisture barrier</span>
+            </a>
           </div>
         </div>
-      </div>
-      
-      <div class="category-section">
-        <h3>Traditional Insulation</h3>
-        <div class="product-grid">
-          <div class="product-card">
-            <h4>Fiberglass Batts</h4>
-            <p>Economical choice for new construction and accessible areas. Various R-values available.</p>
-            <a href="/products/fiberglass-batts/" class="btn-primary">Learn More</a>
-          </div>
-          <div class="product-card">
-            <h4>Cellulose</h4>
-            <p>Eco-friendly blown-in option made from recycled materials. R-3.7 per inch.</p>
-            <a href="/products/cellulose/" class="btn-primary">Learn More</a>
-          </div>
-          <div class="product-card">
-            <h4>Mineral Wool</h4>
-            <p>Fire-resistant option with excellent sound absorption. R-3.3 per inch.</p>
-            <a href="/products/mineral-wool/" class="btn-primary">Learn More</a>
+
+        <div class="category-card">
+          <h3>Traditional Insulation</h3>
+          <p>Proven solutions for specific applications and budget-conscious projects.</p>
+          <div class="product-links">
+            <a href="/products/fiberglass-batts/" class="product-link">
+              <span class="product-name">Fiberglass Batts</span>
+              <span class="product-desc">R-3.2 per inch • Economical • DIY-friendly</span>
+            </a>
+            <a href="/products/cellulose/" class="product-link">
+              <span class="product-name">Cellulose</span>
+              <span class="product-desc">R-3.5 per inch • Eco-friendly • Good coverage</span>
+            </a>
+            <a href="/products/mineral-wool/" class="product-link">
+              <span class="product-name">Mineral Wool</span>
+              <span class="product-desc">R-3.3 per inch • Fire resistant • Sound control</span>
+            </a>
           </div>
         </div>
-      </div>
-      
-      <div class="category-section">
-        <h3>Air Sealing Products</h3>
-        <div class="product-grid">
-          <div class="product-card">
-            <h4>Air Sealing Solutions</h4>
-            <p>Complete line of caulks, foams, and barriers to eliminate air infiltration.</p>
-            <a href="/products/air-sealing/" class="btn-primary">Learn More</a>
+
+        <div class="category-card">
+          <h3>Specialty Products</h3>
+          <p>Advanced solutions for complete home efficiency.</p>
+          <div class="product-links">
+            <a href="/products/air-sealing/" class="product-link">
+              <span class="product-name">Air Sealing Products</span>
+              <span class="product-desc">Caulks • Weatherstripping • Foam sealants</span>
+            </a>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
 
-<section class="product-selection">
-  <div class="container">
-    <h2>Choosing the Right Product</h2>
-    <p>Not sure which insulation product is right for your project? Our experts will assess your needs and recommend the optimal solution based on:</p>
-    <ul>
-      <li>Application area (attic, walls, crawl space)</li>
-      <li>Desired R-value and performance</li>
-      <li>Budget considerations</li>
-      <li>Moisture and air sealing requirements</li>
-      <li>Fire rating needs</li>
-      <li>Environmental preferences</li>
-    </ul>
-    <div class="cta-wrapper">
-      <a href="/contact/" class="btn-primary">Get Expert Recommendations</a>
+    <div class="comparison-section">
+      <h2>Quick Product Comparison</h2>
+      <div class="comparison-table-wrapper">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>R-Value/Inch</th>
+              <th>Best For</th>
+              <th>Key Benefits</th>
+              <th>Price Range</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Closed-Cell Spray Foam</strong></td>
+              <td>R-6.5</td>
+              <td>Attics, walls, commercial</td>
+              <td>Maximum efficiency, moisture barrier</td>
+              <td>$$$</td>
+            </tr>
+            <tr>
+              <td><strong>Open-Cell Spray Foam</strong></td>
+              <td>R-3.7</td>
+              <td>Interior walls, sound control</td>
+              <td>Cost-effective, excellent coverage</td>
+              <td>$$</td>
+            </tr>
+            <tr>
+              <td><strong>Fiberglass Batts</strong></td>
+              <td>R-3.2</td>
+              <td>Standard walls, DIY projects</td>
+              <td>Economical, widely available</td>
+              <td>$</td>
+            </tr>
+            <tr>
+              <td><strong>Cellulose</strong></td>
+              <td>R-3.5</td>
+              <td>Attics, retrofits</td>
+              <td>Eco-friendly, good settling resistance</td>
+              <td>$$</td>
+            </tr>
+            <tr>
+              <td><strong>Mineral Wool</strong></td>
+              <td>R-3.3</td>
+              <td>Fire-rated assemblies</td>
+              <td>Fire resistant, moisture resistant</td>
+              <td>$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="selection-guide">
+      <h2>How to Choose the Right Insulation</h2>
+      <div class="guide-grid">
+        <div class="guide-item">
+          <h3>Consider Your Application</h3>
+          <ul>
+            <li><strong>Attics:</strong> Closed-cell spray foam for maximum heat protection</li>
+            <li><strong>Walls:</strong> Open-cell spray foam or fiberglass batts</li>
+            <li><strong>Basements:</strong> Closed-cell foam for moisture protection</li>
+            <li><strong>Metal Buildings:</strong> Closed-cell spray foam exclusively</li>
+          </ul>
+        </div>
+        
+        <div class="guide-item">
+          <h3>Think About Performance</h3>
+          <ul>
+            <li><strong>Energy Savings:</strong> Higher R-value = lower bills</li>
+            <li><strong>Air Sealing:</strong> Spray foam provides best air barrier</li>
+            <li><strong>Moisture Control:</strong> Critical in certain applications</li>
+            <li><strong>Longevity:</strong> Consider 25+ year performance</li>
+          </ul>
+        </div>
+        
+        <div class="guide-item">
+          <h3>Budget Considerations</h3>
+          <ul>
+            <li><strong>Initial Cost:</strong> Balance with long-term savings</li>
+            <li><strong>ROI Timeline:</strong> Most see payback in 3-5 years</li>
+            <li><strong>Financing:</strong> We offer flexible payment options</li>
+            <li><strong>Rebates:</strong> Check utility company incentives</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="expertise-section">
+      <h2>Expert Installation Makes the Difference</h2>
+      <p>The best insulation product poorly installed won't perform. That's why professional installation is critical:</p>
+      <ul class="expertise-list">
+        <li>✓ Proper thickness and coverage ensures rated R-value</li>
+        <li>✓ Correct air sealing maximizes energy savings</li>
+        <li>✓ Professional equipment ensures consistent application</li>
+        <li>✓ Safety protocols protect your home and family</li>
+        <li>✓ Warranty coverage requires professional installation</li>
+      </ul>
+    </div>
+
+    <div class="cta-section">
+      <h2>Need Help Choosing?</h2>
+      <p>Our insulation experts will assess your needs and recommend the perfect product for your project.</p>
+      <div class="cta-buttons">
+        <a href="/contact/" class="btn btn-primary">Get Expert Advice</a>
+        <a href="tel:623-241-1939" class="btn btn-secondary">Call 623-241-1939</a>
+      </div>
     </div>
   </div>
 </section>
 
 <style>
-.hero {
-  background: var(--surface-dark);
-  padding: 4rem 0;
-  text-align: center;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.hero h1 {
-  font-size: 3rem;
-  color: var(--primary);
-  margin-bottom: 1rem;
-  background: var(--text-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradient-flow 3s ease infinite;
-}
-
-.hero p {
-  font-size: 1.5rem;
-  color: var(--text-light);
+.hero-products {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  padding: 100px 0 60px;
 }
 
 .products-overview {
-  padding: 4rem 0;
+  padding: 60px 0;
 }
 
-.products-overview h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  color: var(--primary);
-  margin-bottom: 1rem;
-}
-
-.products-overview > .container > p {
-  text-align: center;
-  font-size: 1.2rem;
-  color: var(--text-light);
+.intro-text {
   max-width: 800px;
-  margin: 0 auto 3rem;
+  margin: 0 auto 60px;
+  text-align: center;
 }
 
-.category-section {
-  margin-bottom: 4rem;
+.lead {
+  font-size: 1.25rem;
+  line-height: 1.8;
 }
 
-.category-section h3 {
-  font-size: 2rem;
-  color: var(--glow-primary);
-  margin-bottom: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
 }
 
-.product-grid {
+.category-card {
+  background: var(--surface);
+  border: 1px solid var(--glow-primary);
+  border-radius: 8px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+}
+
+.category-card h3 {
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.product-links {
+  margin-top: 20px;
+}
+
+.product-link {
+  display: block;
+  padding: 15px;
+  margin: 10px 0;
+  background: var(--surface-dark);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.product-link:hover {
+  background: var(--primary);
+  transform: translateX(5px);
+}
+
+.product-link:hover .product-name,
+.product-link:hover .product-desc {
+  color: var(--surface-dark);
+}
+
+.product-name {
+  display: block;
+  font-weight: bold;
+  color: var(--text-light);
+  margin-bottom: 5px;
+}
+
+.product-desc {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.comparison-table-wrapper {
+  overflow-x: auto;
+  margin: 40px 0;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  border: 1px solid var(--glow-primary);
+}
+
+.comparison-table th {
+  background: var(--primary);
+  color: var(--surface-dark);
+  padding: 15px;
+  text-align: left;
+}
+
+.comparison-table td {
+  padding: 15px;
+  border-bottom: 1px solid var(--surface-light);
+}
+
+.comparison-table tr:hover {
+  background: var(--surface-dark);
+}
+
+.guide-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
+  gap: 30px;
+  margin: 40px 0;
 }
 
-.product-card {
+.guide-item {
   background: var(--surface-dark);
-  border: 1px solid var(--border-color);
+  padding: 25px;
   border-radius: 8px;
-  padding: 2rem;
-  transition: all 0.3s ease;
+  border-left: 4px solid var(--primary);
 }
 
-.product-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--glow-primary);
-  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
-}
-
-.product-card h4 {
-  font-size: 1.5rem;
+.guide-item h3 {
   color: var(--primary);
-  margin-bottom: 1rem;
+  margin-bottom: 15px;
 }
 
-.product-card p {
-  color: var(--text-light);
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
+.expertise-list {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+}
+
+.expertise-list li {
+  padding: 10px 0;
+  font-size: 1.1rem;
+}
+
+.cta-section {
+  text-align: center;
+  margin-top: 60px;
+  padding: 40px;
+  background: var(--surface-dark);
+  border-radius: 10px;
+}
+
+.cta-buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  margin: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .btn-primary {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background: var(--glow-gradient);
+  background: var(--primary);
   color: var(--surface-dark);
-  text-decoration: none;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  border-radius: 4px;
-  transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
+  background: var(--glow-primary);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.5);
 }
 
-.product-selection {
-  padding: 4rem 0;
-  background: var(--surface-dark);
-  border-top: 1px solid var(--border-color);
-}
-
-.product-selection h2 {
-  font-size: 2rem;
+.btn-secondary {
+  background: transparent;
   color: var(--primary);
-  margin-bottom: 1rem;
+  border: 2px solid var(--primary);
 }
 
-.product-selection ul {
-  max-width: 800px;
-  margin: 2rem 0;
-  padding-left: 2rem;
-}
-
-.product-selection li {
-  color: var(--text-light);
-  margin-bottom: 0.75rem;
-  line-height: 1.6;
-}
-
-.cta-wrapper {
-  text-align: center;
-  margin-top: 2rem;
-}
-
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-  
-  .hero p {
-    font-size: 1.2rem;
-  }
-  
-  .product-grid {
-    grid-template-columns: 1fr;
-  }
+.btn-secondary:hover {
+  background: var(--primary);
+  color: var(--surface-dark);
 }
 </style>
