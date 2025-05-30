@@ -1,0 +1,104 @@
+{# Hero Section Component - Updated with Responsive Background Image #}
+{# Default values - can be overridden when including #}
+{% set heroTitle = heroTitle or "Phoenix's Trusted Insulation Experts" %}
+{% set heroSubtitle = heroSubtitle or "Professional Spray Foam & Attic Insulation Services" %}
+{% set ctaPrimary = ctaPrimary or "FREE ESTIMATE" %}
+{% set ctaPrimaryLink = ctaPrimaryLink or "/contact/" %}
+
+<section class="hero hero-image">
+    {# Picture element for responsive background image #}
+    <picture class="hero-background">
+        <source media="(max-width: 640px)" 
+                srcset="/images-optimized/insulation_contractors_of_arizona_spray_foam_Arizona_Sunset-640w.webp">
+        <source media="(max-width: 768px)" 
+                srcset="/images-optimized/insulation_contractors_of_arizona_spray_foam_Arizona_Sunset-768w.webp">
+        <source media="(max-width: 1024px)" 
+                srcset="/images-optimized/insulation_contractors_of_arizona_spray_foam_Arizona_Sunset-1024w.webp">
+        <source media="(max-width: 1440px)" 
+                srcset="/images-optimized/insulation_contractors_of_arizona_spray_foam_Arizona_Sunset-1440w.webp">
+        <img src="/images-optimized/insulation_contractors_of_arizona_spray_foam_Arizona_Sunset-1920w.webp" 
+             alt="Arizona Sunset - Insulation Contractors of Arizona"
+             loading="eager"
+             fetchpriority="high"
+             class="hero-bg-img">
+    </picture>
+    
+    <div class="hero-overlay"></div>
+    <div class="container">
+        <div class="hero-content-wrapper">
+            <div class="service-area-badge">
+                <span class="badge-icon">📍</span> Serving Phoenix Metro Area
+            </div>
+            <h1 class="hero-title" data-text="{{ heroTitle }}">{{ heroTitle }}</h1>
+            <p class="hero-subtitle">{{ heroSubtitle }}</p>
+            
+            <div class="hero-description">
+                <p>Serving the Valley Since 2004 • Licensed, Bonded & Insured</p>
+            </div>
+            
+            <div class="trust-badges">
+                <div class="badge-item">
+                    <img src="/images-optimized/BBB-100w.webp" 
+                         srcset="/images-optimized/BBB-100w.webp 100w,
+                                 /images-optimized/BBB-150w.webp 150w,
+                                 /images-optimized/BBB-200w.webp 200w"
+                         sizes="(max-width: 768px) 80px, 100px"
+                         alt="BBB A+ Rating" 
+                         class="badge-img"
+                         loading="lazy">
+                    <span>A+ Rating</span>
+                </div>
+                <div class="badge-item">
+                    <img src="/images-optimized/SPFA-100w.webp"
+                         srcset="/images-optimized/SPFA-100w.webp 100w,
+                                 /images-optimized/SPFA-150w.webp 150w,
+                                 /images-optimized/SPFA-200w.webp 200w"
+                         sizes="(max-width: 768px) 80px, 100px" 
+                         alt="SPFA Certified" 
+                         class="badge-img"
+                         loading="lazy">
+                    <span>Certified</span>
+                </div>
+                <div class="badge-item">
+                    <span>✓ Licensed ROC# 340641</span>
+                </div>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">⭐ 4.8/5 Stars</span>
+                </div>
+            </div>
+            
+            <div class="hero-cta-group">
+                <a href="{{ ctaPrimaryLink }}" class="btn-hero-primary">
+                    {{ ctaPrimary }} <span class="btn-arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Additional styles for responsive background image */
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.hero-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Remove the old background-image style */
+.hero.hero-image {
+    background-image: none !important;
+}
+</style>
