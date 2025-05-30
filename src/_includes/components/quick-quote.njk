@@ -51,6 +51,31 @@
 </div>
 
 <style>
+/* Apply wider content layout globally */
+.service-content .container,
+.service-details .container {
+    max-width: 1400px !important; /* Increased from 1200px */
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 320px !important; /* Reduced sidebar from 350px */
+    gap: 60px;
+    align-items: start;
+}
+
+/* For ultra-wide screens, make content even wider */
+@media (min-width: 1600px) {
+    .service-content .container,
+    .service-details .container {
+        max-width: 1600px !important;
+    }
+    
+    .content-wrapper {
+        gap: 80px;
+    }
+}
+
 /* Apply sticky sidebar fixes globally */
 .service-sidebar {
     position: sticky;
@@ -94,7 +119,7 @@
   background: var(--surface-dark);
   border: 1px solid var(--border-color);
   border-radius: 8px;
-  padding: 2rem;
+  padding: 1.5rem; /* Reduced from 2rem */
   position: relative;
   overflow: hidden;
 }
@@ -112,7 +137,7 @@
 }
 
 .quick-quote h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem; /* Reduced from 1.5rem */
   color: var(--primary);
   margin-bottom: 0.5rem;
   text-transform: uppercase;
@@ -125,7 +150,7 @@
 .quick-quote > p {
   color: var(--text-light);
   margin-bottom: 1.5rem;
-  font-size: 0.9rem;
+  font-size: 0.85rem; /* Reduced from 0.9rem */
 }
 
 .quote-form {
@@ -134,19 +159,19 @@
 }
 
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 0.85rem; /* Reduced from 1rem */
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 0.65rem 0.85rem; /* Reduced padding */
   background: rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(0, 255, 255, 0.2);
   border-radius: 4px;
   color: var(--text-light);
-  font-size: 0.95rem;
+  font-size: 0.9rem; /* Reduced from 0.95rem */
   transition: all 0.3s ease;
 }
 
@@ -175,7 +200,7 @@
 
 .submit-btn {
   width: 100%;
-  padding: 1rem;
+  padding: 0.85rem; /* Reduced from 1rem */
   background: var(--glow-gradient);
   color: var(--surface-dark);
   font-weight: bold;
@@ -187,6 +212,7 @@
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  font-size: 0.95rem; /* Slightly smaller */
 }
 
 .submit-btn::before {
@@ -217,20 +243,20 @@
 }
 
 .quote-footer {
-  margin-top: 1.5rem;
-  padding-top: 1.5rem;
+  margin-top: 1.25rem; /* Reduced from 1.5rem */
+  padding-top: 1.25rem;
   border-top: 1px solid rgba(0, 255, 255, 0.2);
   text-align: center;
 }
 
 .quote-footer p {
   color: var(--text-light);
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.85rem; /* Reduced from 0.9rem */
 }
 
 .phone-link {
-  font-size: 1.5rem;
+  font-size: 1.3rem; /* Reduced from 1.5rem */
   font-weight: bold;
   color: var(--glow-primary);
   text-decoration: none;
@@ -244,6 +270,12 @@
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 992px) {
+  .content-wrapper {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 @media (max-width: 768px) {
