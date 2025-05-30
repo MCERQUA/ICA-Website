@@ -1,0 +1,70 @@
+/* Critical CSS - Load immediately to prevent flash of unstyled content */
+/* This should be inlined in the head of base.njk for best performance */
+
+/* Prevent FOUC (Flash of Unstyled Content) */
+body {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+body.loaded {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Critical layout styles to prevent layout shift */
+.site-header {
+    height: 80px;
+    background: rgba(10, 10, 10, 0.95);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo-img {
+    max-height: 60px;
+    width: auto;
+}
+
+/* Preload critical background */
+.animated-bg {
+    background: #0a0a0a;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* Basic container to prevent content shift */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero section placeholder to prevent jump */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgba(20, 20, 20, 0.9) 0%, rgba(10, 10, 10, 0.9) 100%);
+}
+
+/* Add this script to base.njk after the critical CSS */
+/*
+<script>
+    // Remove loading class when DOM is ready
+    document.addEventListener('DOMContentLoaded', function() {
+        document.body.classList.add('loaded');
+    });
+    
+    // Fallback for slow connections
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            document.body.classList.add('loaded');
+        }, 100);
+    });
+</script>
+*/
