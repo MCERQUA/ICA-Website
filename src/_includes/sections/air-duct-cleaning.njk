@@ -6,7 +6,19 @@
 {% set showSection = showSection if showSection is defined else true %}
 
 {% if showSection %}
-<section class="air-duct-cleaning-hero" style="background-image: url('/images/vent-cleaning_arizona.webp');">
+<section class="air-duct-cleaning-hero">
+  <picture class="duct-cleaning-background">
+    <source media="(max-width: 640px)" 
+            srcset="/images-optimized/vent-cleaning_arizona-600w.webp">
+    <source media="(max-width: 1024px)" 
+            srcset="/images-optimized/vent-cleaning_arizona-800w.webp">
+    <img src="/images-optimized/vent-cleaning_arizona-800w.webp" 
+         alt="Professional Air Duct Cleaning Service in Arizona"
+         loading="lazy"
+         width="800"
+         height="600"
+         class="duct-bg-img">
+  </picture>
   <div class="duct-cleaning-overlay"></div>
   <div class="container">
     <div class="duct-cleaning-content">
@@ -28,18 +40,27 @@
     min-height: 400px;
     display: flex;
     align-items: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
     margin: 2rem 0;
     border-radius: 15px;
     overflow: hidden;
     border: 1px solid rgba(0, 255, 255, 0.1);
   }
 
-  /* Desktop background position - center to show full scene */
-  .air-duct-cleaning-hero {
-    background-position: center center;
+  /* Picture element for background */
+  .duct-cleaning-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .duct-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
   }
 
   /* Lighter overlay to show more of the background image */
@@ -195,8 +216,11 @@
   @media (max-width: 768px) {
     .air-duct-cleaning-hero {
       min-height: 450px; /* Increased height for more padding */
-      background-position: left center; /* Keep character visible on mobile */
       margin: 1.5rem 0;
+    }
+
+    .duct-bg-img {
+      object-position: left center; /* Keep character visible on mobile */
     }
 
     .duct-cleaning-content {
