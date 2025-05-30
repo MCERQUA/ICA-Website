@@ -7,15 +7,15 @@
     <meta name="description" content="{{ description or site.tagline }}">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/webp" href="/images/optimized/logo-optimized.webp">
-    <link rel="apple-touch-icon" href="/images/optimized/logo-optimized.webp">
+    <link rel="icon" type="image/webp" href="/images-optimized/logo-optimized.webp">
+    <link rel="apple-touch-icon" href="/images-optimized/logo-optimized.webp">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ page.url | url | absoluteUrl(site.url) }}">
     <meta property="og:title" content="{{ title }} | {{ site.name }}">
     <meta property="og:description" content="{{ description or site.tagline }}">
-    <meta property="og:image" content="/images/optimized/logo-optimized.webp">
+    <meta property="og:image" content="/images-optimized/logo-optimized.webp">
     <meta property="og:site_name" content="{{ site.name }}">
     
     <!-- Twitter -->
@@ -23,7 +23,7 @@
     <meta property="twitter:url" content="{{ page.url | url | absoluteUrl(site.url) }}">
     <meta property="twitter:title" content="{{ title }} | {{ site.name }}">
     <meta property="twitter:description" content="{{ description or site.tagline }}">
-    <meta property="twitter:image" content="/images/optimized/logo-optimized.webp">
+    <meta property="twitter:image" content="/images-optimized/logo-optimized.webp">
     
     <!-- Additional SEO Meta Tags -->
     <meta name="author" content="{{ site.owner }}">
@@ -43,7 +43,7 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "{{ site.name }}",
-      "image": "/images/optimized/logo-optimized.webp",
+      "image": "/images-optimized/logo-optimized.webp",
       "@id": "https://insulationcontractorsofarizona.com",
       "url": "https://insulationcontractorsofarizona.com",
       "telephone": "{{ site.phone }}",
@@ -110,7 +110,7 @@
     <link rel="stylesheet" href="/css/style.css">
     
     <!-- Preload Critical Resources -->
-    <link rel="preload" href="/images/optimized/logo-optimized.webp" as="image">
+    <link rel="preload" href="/images-optimized/logo-optimized.webp" as="image">
     <link rel="preload" href="/css/style.css" as="style">
 </head>
 <body>
@@ -151,7 +151,7 @@
             <div class="header-content">
                 <div class="logo">
                     <a href="/" aria-label="{{ site.name }} Home">
-                        <img src="/images/optimized/logo-optimized.webp" alt="{{ site.name }}" class="logo-img" width="200" height="80" loading="eager">
+                        <img src="/images-optimized/logo-optimized.webp" alt="{{ site.name }}" class="logo-img" width="200" height="80" loading="eager">
                     </a>
                 </div>
                 {% include "components/navigation.njk" %}
