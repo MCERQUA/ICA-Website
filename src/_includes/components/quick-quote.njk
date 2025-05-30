@@ -51,12 +51,50 @@
 </div>
 
 <style>
+/* Apply sticky sidebar fixes globally */
+.service-sidebar {
+    position: sticky;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    padding-bottom: 20px;
+}
+
+/* Custom scrollbar for service sidebar */
+.service-sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.service-sidebar::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+}
+
+.service-sidebar::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 3px;
+    opacity: 0.5;
+}
+
+.service-sidebar::-webkit-scrollbar-thumb:hover {
+    opacity: 1;
+}
+
+/* Ensure components in sidebar don't have conflicting margins */
+.service-sidebar > * {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    flex-shrink: 0;
+}
+
 .quick-quote {
   background: var(--surface-dark);
   border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 2rem;
-  margin-top: 2rem;
   position: relative;
   overflow: hidden;
 }
@@ -212,6 +250,12 @@
   .quick-quote {
     margin-top: 0;
     margin-bottom: 2rem;
+  }
+  
+  .service-sidebar {
+    position: static !important;
+    max-height: none !important;
+    overflow-y: visible !important;
   }
 }
 </style>
