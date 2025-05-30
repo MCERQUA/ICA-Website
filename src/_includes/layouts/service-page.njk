@@ -37,9 +37,11 @@ layout: base.njk
                 {% endif %}
             </div>
             <aside class="service-sidebar">
-                {% include "components/service-menu.njk" %}
-                {% include "components/quick-quote.njk" %}
-                {% include "components/credentials-mini.njk" %}
+                <div class="sidebar-inner">
+                    {% include "components/service-menu.njk" %}
+                    {% include "components/quick-quote.njk" %}
+                    {% include "components/credentials-mini.njk" %}
+                </div>
             </aside>
         </div>
     </div>
@@ -80,19 +82,49 @@ layout: base.njk
 }
 
 .service-sidebar {
+    position: relative;
+    height: 100%;
+}
+
+.sidebar-inner {
     position: sticky;
-    top: 20px;
+    top: 80px; /* Increased top spacing to prevent header overlap */
     display: flex;
     flex-direction: column;
     gap: 30px;
+    max-height: calc(100vh - 100px); /* Adjusted to account for top spacing */
+    overflow-y: auto;
+    padding-bottom: 20px;
+}
+
+/* Custom scrollbar for sidebar */
+.sidebar-inner::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar-inner::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+}
+
+.sidebar-inner::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 3px;
+    opacity: 0.5;
+}
+
+.sidebar-inner::-webkit-scrollbar-thumb:hover {
+    opacity: 1;
 }
 
 /* Ensure sidebar components don't overlap */
-.service-sidebar > * {
+.service-sidebar > .sidebar-inner > * {
     margin: 0;
     width: 100%;
+    flex-shrink: 0;
 }
 
+/* Remove individual component margins */
 .service-sidebar .service-menu {
     margin-top: 0;
 }
@@ -165,8 +197,14 @@ layout: base.njk
     
     .service-sidebar {
         position: static;
+    }
+    
+    .sidebar-inner {
+        position: static;
         max-width: 600px;
         margin: 0 auto;
+        max-height: none;
+        overflow-y: visible;
     }
 }
 
@@ -175,7 +213,7 @@ layout: base.njk
         padding: 60px 0;
     }
     
-    .service-sidebar {
+    .sidebar-inner {
         max-width: 100%;
     }
 }
