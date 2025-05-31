@@ -1,7 +1,60 @@
 const { DateTime } = require("luxon");
 const imageDimensions = require("./src/_data/imageDimensions.js");
+const fs = require("fs");
+const path = require("path");
+const crypto = require("crypto");
 
 module.exports = function(eleventyConfig) {
+  // CSS Optimization - Combine CSS files for production
+  eleventyConfig.on('eleventy.before', async () => {
+    const cssFiles = [
+      'src/css/style.css',
+      'src/css/components.css',
+      'src/css/animations.css',
+      'src/css/performance.css',
+      'src/css/forms.css',
+      'src/css/layout.css'
+    ];
+    
+    let combinedCSS = '';
+    
+    // Read and combine CSS files
+    for (const file of cssFiles) {
+      if (fs.existsSync(file)) {
+        const content = fs.readFileSync(file, 'utf8');
+        // Remove @import statements as we're combining files
+        const cleanContent = content.replace(/@import\s+url\([^)]+\);/g, '');
+        combinedCSS += `\n/* === ${path.basename(file)} === */\n${cleanContent}\n`;
+      }
+    }
+    
+    // Minify CSS (basic minification)
+    const minifiedCSS = combinedCSS
+      .replace(/\/\*[^*]*\*+(?:[^/*][^*]*\*+)*\//g, '') // Remove comments
+      .replace(/\s+/g, ' ') // Collapse whitespace
+      .replace(/\s*{\s*/g, '{') // Remove spaces around {
+      .replace(/\s*}\s*/g, '}') // Remove spaces around }
+      .replace(/\s*:\s*/g, ':') // Remove spaces around :
+      .replace(/\s*;\s*/g, ';') // Remove spaces around ;
+      .replace(/;\}/g, '}') // Remove last semicolon
+      .trim();
+    
+    // Generate hash for cache busting
+    const hash = crypto.createHash('md5').update(minifiedCSS).digest('hex').substring(0, 8);
+    
+    // Write combined and minified CSS
+    const outputDir = 'src/css/build';
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
+    
+    const outputFile = path.join(outputDir, `combined.${hash}.css`);
+    fs.writeFileSync(outputFile, minifiedCSS);
+    
+    // Store hash for template use
+    eleventyConfig.addGlobalData('cssHash', hash);
+  });
+  
   // Copy CSS files
   eleventyConfig.addPassthroughCopy("src/css");
   
