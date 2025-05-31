@@ -90,98 +90,130 @@ relatedServices:
 {% set subtitle = "Cost-Effective Insulation for Arizona Homes" %}
 {% include "sections/service-hero.njk" %}
 
-<section class="blown-in-intro content-section">
+<section class="py-20 bg-surface-dark">
   <div class="container">
-    <div class="section-header">
-      <h2>Arizona's Smart Choice for Quick, Effective Insulation</h2>
-      <p class="section-subtitle">Professional blown-in insulation delivers maximum coverage in minimal time</p>
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-primary font-display mb-4">Arizona's Smart Choice for Quick, Effective Insulation</h2>
+      <p class="text-xl text-primary-light max-w-3xl mx-auto">Professional blown-in insulation delivers maximum coverage in minimal time</p>
     </div>
     
-    <div class="intro-grid">
-      <div class="intro-content">
-        <h3>Why Choose Blown-In Insulation?</h3>
-        <p>Blown-in insulation offers the perfect balance of performance, affordability, and installation speed for Arizona homeowners. Using specialized equipment, we fill your attic, walls, and hard-to-reach spaces with premium insulation material, creating a seamless thermal barrier against our extreme climate.</p>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-2xl font-bold text-primary mb-4">Why Choose Blown-In Insulation?</h3>
+        <p class="text-lg text-text-muted mb-6">Blown-in insulation offers the perfect balance of performance, affordability, and installation speed for Arizona homeowners. Using specialized equipment, we fill your attic, walls, and hard-to-reach spaces with premium insulation material, creating a seamless thermal barrier against our extreme climate.</p>
         
-        <div class="application-areas">
-          <h4>Perfect Applications:</h4>
-          <ul>
-            <li><strong>Attic Spaces:</strong> Quick coverage of large areas to achieve R-38 to R-60</li>
-            <li><strong>Wall Retrofits:</strong> Dense-pack method through small access holes</li>
-            <li><strong>Floor/Crawl Spaces:</strong> Insulate above unheated areas</li>
-            <li><strong>Hard-to-reach Areas:</strong> Fills gaps and irregular spaces</li>
+        <div>
+          <h4 class="text-xl font-bold text-primary mb-4">Perfect Applications:</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <span class="text-accent text-xl">✓</span>
+              <div>
+                <strong class="text-primary">Attic Spaces:</strong>
+                <span class="text-text-muted"> Quick coverage of large areas to achieve R-38 to R-60</span>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent text-xl">✓</span>
+              <div>
+                <strong class="text-primary">Wall Retrofits:</strong>
+                <span class="text-text-muted"> Dense-pack method through small access holes</span>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent text-xl">✓</span>
+              <div>
+                <strong class="text-primary">Floor/Crawl Spaces:</strong>
+                <span class="text-text-muted"> Insulate above unheated areas</span>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent text-xl">✓</span>
+              <div>
+                <strong class="text-primary">Hard-to-reach Areas:</strong>
+                <span class="text-text-muted"> Fills gaps and irregular spaces</span>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
       
-      <div class="material-comparison">
-        <h3>Material Options</h3>
+      <div>
+        <h3 class="text-2xl font-bold text-primary mb-6">Material Options</h3>
         
-        <div class="material-option">
-          <h4>🔵 Fiberglass Blown-In</h4>
-          <p><strong>Best for:</strong> Attics, moisture-prone areas</p>
-          <ul>
-            <li>R-2.5 per inch</li>
-            <li>Non-combustible</li>
-            <li>Won't support mold</li>
-            <li>20-30 year lifespan</li>
-          </ul>
-        </div>
-        
-        <div class="material-option featured">
-          <h4>🟢 Cellulose Blown-In</h4>
-          <p><strong>Best for:</strong> Dense-pack, sound control</p>
-          <ul>
-            <li>R-3.7 per inch</li>
-            <li>85% recycled content</li>
-            <li>Superior air sealing</li>
-            <li>Excellent sound reduction</li>
-          </ul>
-          <span class="popular-badge">Most Popular</span>
+        <div class="space-y-4">
+          {% set materialOptions = [
+            {
+              title: "🔵 Fiberglass Blown-In",
+              bestFor: "Attics, moisture-prone areas",
+              features: [
+                "R-2.5 per inch",
+                "Non-combustible",
+                "Won't support mold",
+                "20-30 year lifespan"
+              ]
+            },
+            {
+              title: "🟢 Cellulose Blown-In",
+              bestFor: "Dense-pack, sound control",
+              features: [
+                "R-3.7 per inch",
+                "85% recycled content",
+                "Superior air sealing",
+                "Excellent sound reduction"
+              ],
+              highlighted: true,
+              highlightText: "Most Popular"
+            }
+          ] %}
+          
+          {% for option in materialOptions %}
+          {% include "components/cards/service-card-glass.njk" %}
+          {% endfor %}
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="roi-section content-section">
+<section class="py-20 bg-surface">
   <div class="container">
-    <div class="section-header">
-      <h2>Energy Savings & Return on Investment</h2>
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-primary font-display">Energy Savings & Return on Investment</h2>
     </div>
     
-    <div class="roi-grid">
-      <div class="savings-chart">
-        <h3>Expected Performance</h3>
-        <div class="savings-items">
-          <div class="savings-item">
-            <span class="savings-number">20-30%</span>
-            <span class="savings-label">Summer Cooling Reduction</span>
+    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-8">
+        <h3 class="text-2xl font-bold text-primary mb-6">Expected Performance</h3>
+        <div class="space-y-6">
+          <div class="text-center">
+            <p class="text-5xl font-bold text-accent mb-2">20-30%</p>
+            <p class="text-primary-light">Summer Cooling Reduction</p>
           </div>
-          <div class="savings-item">
-            <span class="savings-number">10-15%</span>
-            <span class="savings-label">Winter Heating Reduction</span>
+          <div class="text-center">
+            <p class="text-5xl font-bold text-accent mb-2">10-15%</p>
+            <p class="text-primary-light">Winter Heating Reduction</p>
           </div>
-          <div class="savings-item">
-            <span class="savings-number">2-4 Years</span>
-            <span class="savings-label">Full Payback Period</span>
+          <div class="text-center">
+            <p class="text-5xl font-bold text-accent mb-2">2-4 Years</p>
+            <p class="text-primary-light">Full Payback Period</p>
           </div>
         </div>
       </div>
       
-      <div class="project-costs">
-        <h3>Typical Project Costs</h3>
-        <div class="cost-examples">
-          <div class="cost-item">
-            <span class="area">1,000 sq ft attic (R-38)</span>
-            <span class="price">$750-1,350</span>
+      <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-8">
+        <h3 class="text-2xl font-bold text-primary mb-6">Typical Project Costs</h3>
+        <div class="space-y-4">
+          <div class="flex justify-between items-center py-3 border-b border-primary/10">
+            <span class="text-primary-light">1,000 sq ft attic (R-38)</span>
+            <span class="text-accent font-bold">$750-1,350</span>
           </div>
-          <div class="cost-item">
-            <span class="area">1,500 sq ft attic (R-49)</span>
-            <span class="price">$1,275-2,025</span>
+          <div class="flex justify-between items-center py-3 border-b border-primary/10">
+            <span class="text-primary-light">1,500 sq ft attic (R-49)</span>
+            <span class="text-accent font-bold">$1,275-2,025</span>
           </div>
-          <div class="cost-item">
-            <span class="area">2,000 sq ft attic (R-60)</span>
-            <span class="price">$2,100-3,300</span>
+          <div class="flex justify-between items-center py-3">
+            <span class="text-primary-light">2,000 sq ft attic (R-60)</span>
+            <span class="text-accent font-bold">$2,100-3,300</span>
           </div>
         </div>
       </div>
@@ -194,11 +226,11 @@ relatedServices:
 
 {% set process = processSteps %}
 {% set processTitle = "Our Professional Installation Process" %}
-{% include "components/process-steps.njk" %}
+{% include "components/sections/process-steps-dark.njk" %}
 
 {% set pricing = pricingOptions %}
 {% set pricingTitle = "Blown-In Insulation Pricing" %}
-{% include "components/pricing-table.njk" %}
+{% include "components/cards/pricing-table-dark.njk" %}
 
 {% include "sections/why-choose-ica.njk" %}
 
@@ -206,206 +238,8 @@ relatedServices:
 
 {% set faqs = faqs %}
 {% set faqTitle = "Blown-In Insulation FAQs" %}
-{% include "components/faq.njk" %}
+{% include "components/sections/faq-section-glass.njk" %}
 
-{% include "sections/cta.njk" %}
+{% include "components/sections/cta-section-dark.njk" %}
 
 {% include "sections/related-services.njk" %}
-
-<style>
-.blown-in-intro {
-  padding: 4rem 0;
-  background: var(--surface-light);
-}
-
-.blown-in-intro .section-header {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.blown-in-intro h2 {
-  font-size: 2.5rem;
-  color: var(--primary);
-  margin-bottom: 1rem;
-}
-
-.section-subtitle {
-  font-size: 1.3rem;
-  color: var(--text-muted);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.intro-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.intro-content h3,
-.material-comparison h3 {
-  font-size: 1.8rem;
-  color: var(--primary);
-  margin-bottom: 1.5rem;
-}
-
-.intro-content p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: var(--text-dark);
-  margin-bottom: 2rem;
-}
-
-.application-areas h4 {
-  font-size: 1.3rem;
-  color: var(--primary);
-  margin-bottom: 1rem;
-}
-
-.application-areas ul {
-  list-style: none;
-  padding: 0;
-}
-
-.application-areas li {
-  padding: 0.5rem 0;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
-}
-
-.material-option {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 10px;
-  border-left: 4px solid var(--border-color);
-  margin-bottom: 1.5rem;
-  position: relative;
-}
-
-.material-option.featured {
-  border-left-color: var(--primary);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.material-option h4 {
-  color: var(--primary);
-  margin-bottom: 0.5rem;
-}
-
-.material-option ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 1rem;
-}
-
-.material-option li {
-  padding: 0.25rem 0;
-  color: var(--text-muted);
-}
-
-.popular-badge {
-  position: absolute;
-  top: -10px;
-  right: 10px;
-  background: var(--primary);
-  color: white;
-  padding: 0.25rem 0.75rem;
-  border-radius: 15px;
-  font-size: 0.8rem;
-  font-weight: bold;
-}
-
-.roi-section {
-  padding: 4rem 0;
-  background: white;
-}
-
-.roi-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.savings-items {
-  display: grid;
-  gap: 1.5rem;
-}
-
-.savings-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background: var(--surface-light);
-  padding: 1.5rem;
-  border-radius: 10px;
-}
-
-.savings-number {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: var(--primary);
-  margin-bottom: 0.5rem;
-}
-
-.savings-label {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-}
-
-.cost-examples {
-  display: grid;
-  gap: 1rem;
-}
-
-.cost-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background: var(--surface-light);
-  border-radius: 8px;
-}
-
-.cost-item .area {
-  font-weight: 600;
-  color: var(--text-dark);
-}
-
-.cost-item .price {
-  font-weight: bold;
-  color: var(--primary);
-}
-
-@media (max-width: 768px) {
-  .intro-grid,
-  .roi-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
-  .blown-in-intro h2 {
-    font-size: 2rem;
-  }
-  
-  .section-subtitle {
-    font-size: 1.1rem;
-  }
-  
-  .intro-content h3,
-  .material-comparison h3 {
-    font-size: 1.5rem;
-  }
-  
-  .intro-content p {
-    font-size: 1rem;
-  }
-  
-  .savings-number {
-    font-size: 2rem;
-  }
-}
-</style>
