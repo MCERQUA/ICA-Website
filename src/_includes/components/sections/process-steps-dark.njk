@@ -1,0 +1,202 @@
+{# Dark Themed Process Steps Component #}
+{# 
+  Usage: {% include "components/sections/process-steps-dark.njk" %}
+  
+  Variables:
+  - processTitle: Section title (default: "Our Process")
+  - processSteps: Array of steps
+    - title: Step title
+    - description: Step description
+    - icon: Optional icon/emoji
+#}
+
+{% set processTitle = processTitle or "Our Process" %}
+
+<section class="process-section">
+  <div class="container">
+    <h2 class="section-title text-center">{{ processTitle }}</h2>
+    
+    <div class="process-timeline">
+      {% for step in processSteps %}
+      <div class="process-step {% if loop.last %}last{% endif %}">
+        <div class="step-number-wrapper">
+          <div class="step-number">{{ loop.index }}</div>
+          {% if not loop.last %}
+          <div class="step-connector"></div>
+          {% endif %}
+        </div>
+        
+        <div class="step-content glass-panel">
+          {% if step.icon %}
+          <div class="step-icon">{{ step.icon }}</div>
+          {% endif %}
+          <h3 class="step-title">{{ step.title }}</h3>
+          <p class="step-description">{{ step.description }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<style>
+  .process-section {
+    padding: 60px 0;
+    background: var(--primary-dark);
+  }
+  
+  .process-timeline {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .process-step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  
+  .process-step.last {
+    margin-bottom: 0;
+  }
+  
+  .step-number-wrapper {
+    position: relative;
+    flex-shrink: 0;
+    margin-right: 30px;
+  }
+  
+  .step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--accent-secondary) 0%, var(--accent-primary) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    position: relative;
+    z-index: 2;
+    box-shadow: 
+      0 0 20px rgba(0, 255, 255, 0.5),
+      inset 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  
+  .step-connector {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: calc(100% + 30px);
+    background: linear-gradient(180deg, var(--accent-primary) 0%, transparent 100%);
+  }
+  
+  .step-content {
+    flex: 1;
+    background: rgba(0, 255, 255, 0.03);
+    backdrop-filter: blur(30px) saturate(200%);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .step-content::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 15px solid rgba(0, 255, 255, 0.2);
+  }
+  
+  .step-content:hover {
+    transform: translateX(10px);
+    border-color: var(--accent-primary);
+    box-shadow: 
+      0 10px 30px rgba(0, 0, 0, 0.5),
+      0 0 30px rgba(0, 255, 255, 0.3);
+  }
+  
+  .step-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .step-title {
+    color: var(--accent-primary);
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .step-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .process-step {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .step-number-wrapper {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+    
+    .step-connector {
+      display: none;
+    }
+    
+    .step-content::before {
+      display: none;
+    }
+    
+    .step-content {
+      width: 100%;
+    }
+    
+    .step-content:hover {
+      transform: translateY(-5px);
+    }
+  }
+  
+  /* Animation */
+  @keyframes slideInFromLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .process-step {
+    animation: slideInFromLeft 0.6s ease-out;
+    animation-fill-mode: both;
+  }
+  
+  .process-step:nth-child(1) { animation-delay: 0.1s; }
+  .process-step:nth-child(2) { animation-delay: 0.2s; }
+  .process-step:nth-child(3) { animation-delay: 0.3s; }
+  .process-step:nth-child(4) { animation-delay: 0.4s; }
+  .process-step:nth-child(5) { animation-delay: 0.5s; }
+</style>
