@@ -63,6 +63,9 @@ module.exports = function(eleventyConfig) {
   // Copy CSS files (for development)
   eleventyConfig.addPassthroughCopy("src/css");
   
+  // Copy JavaScript files
+  eleventyConfig.addPassthroughCopy("src/js");
+  
   // Copy images folder - use lowercase standard
   eleventyConfig.addPassthroughCopy("src/images");
   
