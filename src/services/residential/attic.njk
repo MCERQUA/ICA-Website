@@ -78,7 +78,7 @@ relatedServices:
     url: "/services/residential/removal/"
 ---
 
-<section class="content-section">
+<section class="content-section" style="background: var(--primary-medium);">
   <div class="container">
     <h2 class="section-title">The 160°F Challenge Your Attic Faces</h2>
     <p class="lead text-center">Your attic is ground zero in the battle against Arizona heat</p>
@@ -94,25 +94,75 @@ relatedServices:
             <div class="temp-stage">
               <span class="temp-time">6 AM</span>
               <span class="temp-value">90°F</span>
-              <div class="temp-bar" style="height: 40%;"></div>
+              <div class="temp-bar" style="height: 40%; background: var(--primary);"></div>
             </div>
             <div class="temp-stage">
               <span class="temp-time">12 PM</span>
               <span class="temp-value">120°F</span>
-              <div class="temp-bar" style="height: 60%;"></div>
+              <div class="temp-bar" style="height: 60%; background: var(--primary);"></div>
             </div>
             <div class="temp-stage">
               <span class="temp-time">2 PM</span>
               <span class="temp-value">145°F</span>
-              <div class="temp-bar" style="height: 80%;"></div>
+              <div class="temp-bar" style="height: 80%; background: var(--primary);"></div>
             </div>
             <div class="temp-stage peak">
               <span class="temp-time">4 PM</span>
               <span class="temp-value">160°F</span>
-              <div class="temp-bar" style="height: 100%;"></div>
+              <div class="temp-bar" style="height: 100%; background: var(--accent);"></div>
             </div>
           </div>
         </div>
+
+        <style>
+          .temperature-visual {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+          }
+          
+          .temp-chart {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            height: 200px;
+            margin-top: 1rem;
+          }
+          
+          .temp-stage {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            position: relative;
+          }
+          
+          .temp-time {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            order: 3;
+          }
+          
+          .temp-value {
+            font-weight: bold;
+            font-size: 1.1rem;
+            order: 1;
+          }
+          
+          .temp-stage.peak .temp-value {
+            color: var(--accent);
+          }
+          
+          .temp-bar {
+            width: 40px;
+            background: var(--primary);
+            border-radius: 4px 4px 0 0;
+            order: 2;
+            transition: height 0.3s ease;
+          }
+        </style>
       </div>
       
       <div class="glass-panel">
@@ -147,12 +197,36 @@ relatedServices:
             </div>
           </div>
         </div>
+
+        <style>
+          .impact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+          }
+          
+          .impact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+          }
+          
+          .impact-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+          }
+          
+          .impact-item h4 {
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+          }
+        </style>
       </div>
     </div>
   </div>
 </section>
 
-<section class="content-section" style="background: var(--primary-medium);">
+<section class="content-section">
   <div class="container">
     <h2 class="section-title">Our Attic Insulation Solutions</h2>
     <p class="lead text-center">Multiple options to fit your needs and budget</p>
@@ -179,7 +253,7 @@ relatedServices:
   </div>
 </section>
 
-<section class="content-section">
+<section class="content-section" style="background: var(--primary-medium);">
   <div class="container">
     <h2 class="section-title">Arizona-Specific Considerations</h2>
     <p class="lead text-center">Unique challenges we address for desert conditions</p>
@@ -216,14 +290,7 @@ relatedServices:
   </div>
 </section>
 
-{% set benefits = benefits %}
-{% include "components/benefits-grid.njk" %}
-
-{% set process = processSteps %}
-{% set processTitle = "Our Professional Attic Insulation Process" %}
-{% include "components/sections/process-steps-dark.njk" %}
-
-<section class="content-section" style="background: var(--primary-medium);">
+<section class="content-section">
   <div class="container">
     <h2 class="section-title">Investment and Returns</h2>
     <p class="lead text-center">Attic insulation pays for itself through energy savings</p>
@@ -272,13 +339,61 @@ relatedServices:
         <p><strong>Utility Rebates Available:</strong> APS, SRP, and TEP offer energy efficiency rebates that may apply to attic insulation projects</p>
       </div>
     </div>
+
+    <style>
+      .roi-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 1rem 0;
+      }
+      
+      .roi-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 4px;
+      }
+      
+      .roi-item.highlight {
+        background: var(--primary);
+        color: white;
+      }
+      
+      .roi-label {
+        font-weight: 500;
+      }
+      
+      .roi-value {
+        font-weight: bold;
+        color: var(--accent);
+      }
+      
+      .roi-item.highlight .roi-value {
+        color: white;
+      }
+      
+      .utility-note {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 2rem;
+        padding: 1rem;
+        background: rgba(255, 193, 7, 0.1);
+        border-radius: 8px;
+        border-left: 4px solid var(--accent);
+      }
+      
+      .note-icon {
+        font-size: 1.5rem;
+      }
+    </style>
   </div>
 </section>
 
-{% set pricing = pricingOptions %}
-{% include "components/cards/pricing-table-dark.njk" %}
-
-<section class="content-section">
+<section class="content-section" style="background: var(--primary-medium);">
   <div class="container">
     <h2 class="section-title">The Professional Difference</h2>
     
@@ -305,11 +420,32 @@ relatedServices:
         </ul>
       </div>
     </div>
+
+    <style>
+      .risk-panel {
+        border-left: 4px solid #dc3545;
+      }
+      
+      .success-panel {
+        border-left: 4px solid #28a745;
+      }
+      
+      .comparison-list {
+        list-style: none;
+        padding: 0;
+      }
+      
+      .comparison-list li {
+        padding: 0.75rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      
+      .comparison-list li:last-child {
+        border-bottom: none;
+      }
+    </style>
   </div>
 </section>
-
-{% set faqTitle = "Attic Insulation FAQs" %}
-{% include "components/sections/faq-section-glass.njk" %}
 
 {% set ctaTitle = "Ready to Cool Down Your Attic?" %}
 {% set ctaSubtitle = "Stop letting your attic turn into a 160°F furnace. Get professional attic insulation today." %}
