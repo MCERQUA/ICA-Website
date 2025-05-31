@@ -1,98 +1,135 @@
-<section class="service-hero">
-  <style>
-    .service-hero {
-      background: linear-gradient(135deg, rgba(30, 60, 114, 0.95), rgba(42, 82, 152, 0.95)), 
-                  url('{{ heroImage | default("/images-optimized/insulation_contractors_of_arizona_spray_foam_Arizona_Sunset-1920w.webp") }}') center/cover;
-      padding: 80px 0;
-      color: white;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .service-hero::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
-      animation: pulse 4s ease-in-out infinite;
-    }
-    
-    .service-hero .container {
-      position: relative;
-      z-index: 1;
-    }
-    
-    .service-hero h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    }
-    
-    .service-hero .lead {
-      font-size: 1.3rem;
-      margin-bottom: 40px;
-      opacity: 0.9;
-    }
-    
-    .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 30px;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    
-    .hero-stat {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      padding: 20px;
-      border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    
-    .stat-number {
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: var(--primary);
-      display: block;
-      margin-bottom: 5px;
-    }
-    
-    .stat-label {
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      opacity: 0.8;
-    }
-    
-    @media (max-width: 768px) {
-      .service-hero h1 {
-        font-size: 2rem;
-      }
-      
-      .service-hero .lead {
-        font-size: 1.1rem;
-      }
-    }
-  </style>
-  
-  <div class="container">
-    <h1>{{ title | default("Professional Insulation Services") }}</h1>
-    <p class="lead">{{ subtitle | default("Expert Installation by Arizona's Trusted Contractors") }}</p>
-    
-    {% if heroStats %}
-    <div class="hero-stats">
-      {% for stat in heroStats %}
-      <div class="hero-stat">
-        <span class="stat-number">{{ stat.value }}</span>
-        <span class="stat-label">{{ stat.label }}</span>
-      </div>
-      {% endfor %}
+{# Service Hero Section - Standardized to Match Homepage #}
+{# Default values - can be overridden when including #}
+{% set heroTitle = title or "Professional Insulation Services" %}
+{% set heroSubtitle = subtitle or "Expert Installation by Arizona's Trusted Contractors" %}
+{% set ctaPrimary = ctaPrimary or "FREE ESTIMATE" %}
+{% set ctaPrimaryLink = ctaPrimaryLink or "/contact/" %}
+
+<section class="hero hero-image" style="background-image: url('/images-optimized/insulation_contractors_of_arizona_spray_foam_Arizona_Sunset-1920w.webp');">
+    {# NO OVERLAY - Clean hero just like homepage #}
+    <div class="container">
+        <div class="hero-content-wrapper">
+            <div class="service-area-badge">
+                <span class="badge-icon">📍</span> Serving Phoenix Metro Area
+            </div>
+            <h1 class="hero-title" data-text="{{ heroTitle }}">{{ heroTitle }}</h1>
+            <p class="hero-subtitle">{{ heroSubtitle }}</p>
+            
+            <div class="hero-description">
+                <p>Serving the Valley Since 2004 • Licensed, Bonded & Insured</p>
+            </div>
+            
+            <div class="trust-badges">
+                <div class="badge-item">
+                    <img src="/images-optimized/BBB-100w.webp" 
+                         srcset="/images-optimized/BBB-100w.webp 100w,
+                                 /images-optimized/BBB-150w.webp 150w,
+                                 /images-optimized/BBB-200w.webp 200w"
+                         sizes="(max-width: 768px) 60px, 80px"
+                         alt="BBB A+ Rating" 
+                         class="badge-img"
+                         width="80"
+                         height="31"
+                         loading="eager">
+                    <span>A+ Rating</span>
+                </div>
+                <div class="badge-item">
+                    <img src="/images-optimized/SPFA-100w.webp"
+                         srcset="/images-optimized/SPFA-100w.webp 100w,
+                                 /images-optimized/SPFA-150w.webp 150w,
+                                 /images-optimized/SPFA-200w.webp 200w"
+                         sizes="(max-width: 768px) 60px, 80px"
+                         alt="SPFA Certified" 
+                         class="badge-img"
+                         width="80"
+                         height="80"
+                         loading="eager">
+                    <span>Certified</span>
+                </div>
+                <div class="badge-item">
+                    <span>✓ Licensed ROC# 340641</span>
+                </div>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">⭐ 4.8/5 Stars</span>
+                </div>
+            </div>
+            
+            <div class="hero-cta-group">
+                <a href="{{ ctaPrimaryLink }}" class="btn-hero-primary">
+                    {{ ctaPrimary }} <span class="btn-arrow">→</span>
+                </a>
+            </div>
+
+            {# Optional service-specific stats if provided #}
+            {% if heroStats %}
+            <div class="service-stats">
+                {% for stat in heroStats %}
+                <div class="service-stat">
+                    <span class="stat-value">{{ stat.value }}</span>
+                    <span class="stat-desc">{{ stat.label }}</span>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
     </div>
-    {% endif %}
-  </div>
 </section>
+
+<style>
+/* Additional styles for service-specific stats if needed */
+.service-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.service-stat {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    min-width: 120px;
+}
+
+.service-stat .stat-value {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--glow-primary);
+    margin-bottom: 0.25rem;
+}
+
+.service-stat .stat-desc {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .service-stats {
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+    
+    .service-stat {
+        padding: 0.75rem 1rem;
+        min-width: 100px;
+    }
+    
+    .service-stat .stat-value {
+        font-size: 1.5rem;
+    }
+    
+    .service-stat .stat-desc {
+        font-size: 0.75rem;
+    }
+}
+</style>
