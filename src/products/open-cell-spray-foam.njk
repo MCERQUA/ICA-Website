@@ -3,28 +3,18 @@ layout: base.njk
 title: Open-Cell Spray Foam Insulation
 subtitle: Cost-Effective Comfort and Sound Control for Arizona Homes
 permalink: /products/open-cell-spray-foam/
+heroStats:
+  - value: "R-3.7"
+    label: "Per Inch"
+  - value: "50%"
+    label: "Sound Reduction"
+  - value: "$1.00-1.50"
+    label: "Per Sq Ft"
 ---
 
-<section class="hero hero-product">
-  <div class="container">
-    <h1 class="hero-title">{{ title }}</h1>
-    <p class="hero-subtitle">{{ subtitle }}</p>
-    <div class="hero-stats">
-      <div class="stat">
-        <span class="stat-value">R-3.7</span>
-        <span class="stat-label">Per Inch</span>
-      </div>
-      <div class="stat">
-        <span class="stat-value">50%</span>
-        <span class="stat-label">Sound Reduction</span>
-      </div>
-      <div class="stat">
-        <span class="stat-value">$1.00-1.50</span>
-        <span class="stat-label">Per Sq Ft</span>
-      </div>
-    </div>
-  </div>
-</section>
+{% set title = "Open-Cell Spray Foam Insulation" %}
+{% set subtitle = "Cost-Effective Comfort and Sound Control for Arizona Homes" %}
+{% include "sections/service-hero.njk" %}
 
 <section class="product-content">
   <div class="container">
@@ -325,36 +315,6 @@ permalink: /products/open-cell-spray-foam/
 </section>
 
 <style>
-.hero-product {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-  padding: 100px 0 60px;
-}
-
-.hero-stats {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 40px;
-}
-
-.stat {
-  text-align: center;
-}
-
-.stat-value {
-  display: block;
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: var(--glow-primary);
-}
-
-.stat-label {
-  display: block;
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.8);
-  margin-top: 5px;
-}
-
 .product-content {
   padding: 60px 0;
 }
