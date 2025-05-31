@@ -1,0 +1,284 @@
+{
+  "project": "ICA Website Cleanup & Optimization",
+  "created": "2025-05-31",
+  "status": "Ready for Implementation",
+  "total_tasks": 16,
+  "estimated_hours": 18.5,
+  "tasks": {
+    "T001": {
+      "id": "T001",
+      "title": "Spray Foam Service Page",
+      "url": "/services/residential/spray-foam/",
+      "priority": "HIGH",
+      "category": "Styling Fix",
+      "estimated_minutes": 30,
+      "issues": [
+        "FAQ article title overlaying animated green titles",
+        "Call to action not centered on desktop"
+      ],
+      "status": "pending"
+    },
+    "T002": {
+      "id": "T002", 
+      "title": "Blown-In Insulation Page",
+      "url": "/services/residential/blown-in/",
+      "priority": "HIGH",
+      "category": "Layout & Content",
+      "estimated_minutes": 45,
+      "issues": [
+        "Big block of unformatted text at top of page",
+        "Pricing containers - price not visible (transparent)",
+        "Our process section poor formatting on desktop"
+      ],
+      "status": "pending"
+    },
+    "T003": {
+      "id": "T003",
+      "title": "Dense Pack Insulation Page", 
+      "url": "/services/residential/dense-pack/",
+      "priority": "HIGH",
+      "category": "Layout & Content",
+      "estimated_minutes": 60,
+      "issues": [
+        "Hero not formatted well",
+        "Our process section poor formatting",
+        "Second pricing section poor formatting with transparent price",
+        "Dense pack FAQs have overlaying article over animated text title",
+        "Call to action formatting to center on desktop"
+      ],
+      "status": "pending"
+    },
+    "T004": {
+      "id": "T004",
+      "title": "Attic Insulation Page",
+      "url": "/services/residential/attic/",
+      "priority": "MEDIUM",
+      "category": "Layout & Content",
+      "estimated_minutes": 45,
+      "issues": [
+        "Top section has no styling and formatting",
+        "FAQ style inconsistency",
+        "Our process bad formatting",
+        "Double FAQ sections causing confusion"
+      ],
+      "notes": "Good FAQ style should be standardized across all pages",
+      "status": "pending"
+    },
+    "T005": {
+      "id": "T005",
+      "title": "Wall Insulation Page",
+      "url": "/services/residential/wall/",
+      "priority": "MEDIUM", 
+      "category": "Layout & Content",
+      "estimated_minutes": 40,
+      "issues": [
+        "Content below heat transfer component needs better formatting",
+        "Our process section same problems", 
+        "Pricing sections have transparent price"
+      ],
+      "notes": "Heat transfer component is excellent - replicate this style elsewhere",
+      "status": "pending"
+    },
+    "T006": {
+      "id": "T006",
+      "title": "Crawl Space Page",
+      "url": "/services/residential/crawl-space/",
+      "priority": "LOW",
+      "category": "Styling Fix",
+      "estimated_minutes": 30,
+      "issues": [
+        "Our installation process section bad formatting",
+        "Our processes same problems",
+        "Pricing has transparent text issues"
+      ],
+      "notes": "First 3/4 components are EXCELLENT - best examples on site",
+      "status": "pending"
+    },
+    "T007": {
+      "id": "T007",
+      "title": "Insulation Removal Page",
+      "url": "/services/residential/removal/",
+      "priority": "MEDIUM",
+      "category": "Layout & Content", 
+      "estimated_minutes": 45,
+      "issues": [
+        "Transformation Through Professional Removal has overlapping text/title",
+        "Professional Equipment section needs better styling/layout",
+        "Why DIY Removal is Dangerous needs better layout",
+        "Our process same problem",
+        "Pricing same problem"
+      ],
+      "status": "pending"
+    },
+    "T008": {
+      "id": "T008",
+      "title": "Manufacturing Page",
+      "url": "/services/industrial/manufacturing/",
+      "priority": "HIGH",
+      "category": "Full Page Rebuild",
+      "estimated_minutes": 90,
+      "issues": [
+        "Full page review needed",
+        "Only key benefits, related services, and reviews work well",
+        "Most other components need complete overhaul"
+      ],
+      "status": "pending"
+    },
+    "T009": {
+      "id": "T009",
+      "title": "Cold Storage Page",
+      "url": "/services/industrial/cold-storage/",
+      "priority": "HIGH",
+      "category": "Full Page Rebuild",
+      "estimated_minutes": 90,
+      "issues": [
+        "Full page review needed",
+        "Only key benefits, related services, reviews working well",
+        "All other sections need styling/layout improvements"
+      ],
+      "status": "pending"
+    },
+    "T010": {
+      "id": "T010",
+      "title": "Equipment Insulation Page",
+      "url": "/services/industrial/equipment/",
+      "priority": "HIGH",
+      "category": "Full Page Rebuild",
+      "estimated_minutes": 90,
+      "issues": [
+        "Full page review needed",
+        "Only site-wide working sections are acceptable",
+        "All other sections need complete rebuild"
+      ],
+      "status": "pending"
+    },
+    "T011": {
+      "id": "T011",
+      "title": "Commercial Office Page",
+      "url": "/services/commercial/office/",
+      "priority": "MEDIUM",
+      "category": "Layout & Content",
+      "estimated_minutes": 60,
+      "issues": [
+        "Hero formatting needed - use sunset image from homepage",
+        "Our Commercial Installation Approach could be improved",
+        "Pricing options have transparency problems",
+        "FAQ has overlapping problems",
+        "CTA alignment and styling ugly compared to other CTAs"
+      ],
+      "status": "pending"
+    },
+    "T012": {
+      "id": "T012",
+      "title": "Commercial Retail Page",
+      "url": "/services/commercial/retail/",
+      "priority": "HIGH",
+      "category": "Full Page Rebuild",
+      "estimated_minutes": 90,
+      "issues": [
+        "Hero layout needed",
+        "Full page review - nothing looks good for format/style/layout"
+      ],
+      "status": "pending"
+    },
+    "T013": {
+      "id": "T013",
+      "title": "Commercial Warehouse Page",
+      "url": "/services/commercial/warehouse/",
+      "priority": "HIGH",
+      "category": "Full Page Rebuild",
+      "estimated_minutes": 90,
+      "issues": [
+        "Full page review needed like retail"
+      ],
+      "status": "pending"
+    },
+    "T014": {
+      "id": "T014",
+      "title": "Commercial New Construction Page",
+      "url": "/services/commercial/new-construction/",
+      "priority": "HIGH", 
+      "category": "Full Page Rebuild",
+      "estimated_minutes": 90,
+      "issues": [
+        "Full page review needed like retail and warehouse"
+      ],
+      "status": "pending"
+    },
+    "T015_ABC": {
+      "id": "T015_ABC",
+      "title": "All Agricultural Pages",
+      "urls": [
+        "/services/agricultural/tank/",
+        "/services/agricultural/barn/",
+        "/services/agricultural/storage/"
+      ],
+      "priority": "HIGH",
+      "category": "Full Page Rebuild",
+      "estimated_minutes": 120,
+      "issues": [
+        "All three pages need full review - no layout or styling"
+      ],
+      "status": "pending"
+    },
+    "T016": {
+      "id": "T016",
+      "title": "Open Cell Product Page",
+      "url": "/products/open-cell-spray-foam/",
+      "priority": "LOW",
+      "category": "Quick Fix",
+      "estimated_minutes": 15,
+      "issues": [
+        "Only hero background image needed",
+        "Reduce height of hero area - too large and empty"
+      ],
+      "status": "pending"
+    }
+  },
+  "common_issues": {
+    "our_process_formatting": {
+      "affects": ["T001", "T002", "T003", "T004", "T005", "T006", "T007"],
+      "priority": "CRITICAL",
+      "description": "Our Process section formatting problems across 7 pages",
+      "solution": "Create/fix shared component file"
+    },
+    "pricing_transparency": {
+      "affects": ["T002", "T003", "T005", "T006", "T007"],
+      "priority": "HIGH", 
+      "description": "Price text transparent unless highlighted with cursor",
+      "solution": "Fix CSS opacity/color values in pricing components"
+    },
+    "faq_overlapping": {
+      "affects": ["T001", "T003", "T007"],
+      "priority": "HIGH",
+      "description": "Article titles overlaying animated text",
+      "solution": "Fix z-index and positioning in FAQ components"
+    },
+    "hero_standardization": {
+      "affects": ["T003", "T011", "T012", "T013", "T014", "T015_ABC"],
+      "priority": "MEDIUM",
+      "description": "Inconsistent hero sections",
+      "solution": "Standardize hero component with sunset background image"
+    },
+    "cta_alignment": {
+      "affects": ["T001", "T003", "T011"],
+      "priority": "LOW",
+      "description": "Call-to-action buttons not centered on desktop",
+      "solution": "Fix CSS centering classes"
+    }
+  },
+  "success_examples": {
+    "excellent_components": [
+      "Crawl Space Page: Science of Crawl Space Encapsulation",
+      "Crawl Space Page: Crawl Space Solutions Comparison", 
+      "Crawl Space Page: Why Your Crawl Space Needs Attention",
+      "Wall Page: Understanding Heat Transfer component",
+      "Attic Page: Good FAQ style (not overlapping version)"
+    ],
+    "working_site_wide": [
+      "Key Benefits sections",
+      "Related Services sections", 
+      "Customer Reviews/Testimonials sections"
+    ]
+  }
+}
