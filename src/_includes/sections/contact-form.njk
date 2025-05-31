@@ -13,7 +13,7 @@
                 <p>{{ formSubtitle }}</p>
             </div>
             
-            <form name="homepage-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
+            <form name="homepage-contact" method="POST" action="/confirmation/" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
                 <input type="hidden" name="form-name" value="homepage-contact">
                 <p class="hidden">
                     <label>Don't fill this out if you're human: <input name="bot-field" /></label>
@@ -47,6 +47,7 @@
                                 <option value="removal">Insulation Removal</option>
                                 <option value="duct-cleaning">Duct Cleaning</option>
                                 <option value="commercial">Commercial Insulation</option>
+                                <option value="agricultural">Agricultural/Tank Insulation</option>
                                 <option value="other">Other</option>
                             </select>
                             <div class="select-arrow">
