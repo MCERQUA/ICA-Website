@@ -30,7 +30,7 @@
     align-items: center;
 }
 
-/* Logo */
+/* Logo - Fixed aspect ratio */
 .logo {
     display: flex;
     align-items: center;
@@ -44,13 +44,15 @@
 
 .logo-img {
     height: 50px;
-    width: auto;
+    width: 50px; /* Make it square */
+    object-fit: contain; /* Maintain aspect ratio within the square container */
     filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.5));
     transition: all var(--transition-medium);
 }
 
 .site-header.scrolled .logo-img {
     height: 40px;
+    width: 40px; /* Keep it square when scrolled */
 }
 
 .logo-img:hover {
@@ -221,10 +223,12 @@
 @media (max-width: 480px) {
     .logo-img {
         height: 40px;
+        width: 40px; /* Keep it square on mobile */
     }
     
     .site-header.scrolled .logo-img {
         height: 35px;
+        width: 35px; /* Keep it square when scrolled on mobile */
     }
     
     .nav-list {
