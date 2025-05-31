@@ -5,6 +5,9 @@ const path = require("path");
 const crypto = require("crypto");
 
 module.exports = function(eleventyConfig) {
+  // Store CSS hash globally for use in templates
+  let cssHash = 'default';
+  
   // CSS Optimization - Combine CSS files for production
   eleventyConfig.on('eleventy.before', async () => {
     const cssFiles = [
@@ -40,22 +43,24 @@ module.exports = function(eleventyConfig) {
       .trim();
     
     // Generate hash for cache busting
-    const hash = crypto.createHash('md5').update(minifiedCSS).digest('hex').substring(0, 8);
+    cssHash = crypto.createHash('md5').update(minifiedCSS).digest('hex').substring(0, 8);
     
     // Write combined and minified CSS
-    const outputDir = 'src/css/build';
+    const outputDir = '_site/css';
     if (!fs.existsSync(outputDir)) {
       fs.mkdirSync(outputDir, { recursive: true });
     }
     
-    const outputFile = path.join(outputDir, `combined.${hash}.css`);
+    const outputFile = path.join(outputDir, `combined.${cssHash}.css`);
     fs.writeFileSync(outputFile, minifiedCSS);
     
-    // Store hash for template use
-    eleventyConfig.addGlobalData('cssHash', hash);
+    console.log(`Combined CSS created: combined.${cssHash}.css`);
   });
   
-  // Copy CSS files
+  // Make CSS hash available to templates
+  eleventyConfig.addGlobalData('cssHash', () => cssHash);
+  
+  // Copy CSS files (for development)
   eleventyConfig.addPassthroughCopy("src/css");
   
   // Copy images folder - use lowercase standard
