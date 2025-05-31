@@ -19,7 +19,7 @@
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         html { font-size: 16px; scroll-behavior: smooth; }
         
-        /* FOUC Prevention - Start with invisible body */
+        /* IMPROVED FOUC Prevention - More aggressive visibility */
         body { 
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; 
             line-height: 1.6; 
@@ -28,10 +28,19 @@
             opacity: 0;
             overflow-x: hidden; 
             transition: opacity 0.3s ease-in-out;
+            /* Force show content after 2 seconds via CSS animation */
+            animation: forceShow 2.5s ease-in-out forwards;
+        }
+        
+        @keyframes forceShow {
+            0% { opacity: 0; }
+            80% { opacity: 0; }
+            100% { opacity: 1; }
         }
         
         body.loaded { 
             opacity: 1;
+            animation: none; /* Override CSS animation when JS loads */
         }
         
         /* Critical font loading */
@@ -299,7 +308,7 @@
         /* Performance */
         img { max-width: 100%; height: auto; }
         
-        /* Hide content sections initially */
+        /* IMPROVED: Less aggressive content hiding with faster show */
         .content-section,
         .testimonials, 
         .service-areas, 
@@ -307,7 +316,15 @@
         .additional-services,
         .site-footer { 
             opacity: 0; 
-            transition: opacity 0.3s ease-in-out; 
+            transition: opacity 0.3s ease-in-out;
+            /* Force show via CSS animation as backup */
+            animation: showContent 3s ease-in-out forwards;
+        }
+        
+        @keyframes showContent {
+            0% { opacity: 0; }
+            70% { opacity: 0; }
+            100% { opacity: 1; }
         }
         
         body.loaded .content-section,
@@ -316,7 +333,14 @@
         body.loaded .blog-preview, 
         body.loaded .additional-services,
         body.loaded .site-footer { 
-            opacity: 1; 
+            opacity: 1;
+            animation: none; /* Override CSS animation when JS loads */
+        }
+        
+        /* Ensure images are always visible - CRITICAL FIX */
+        img {
+            opacity: 1 !important;
+            visibility: visible !important;
         }
     </style>
     
@@ -516,42 +540,72 @@
         <link rel="stylesheet" href="/css/performance.css">
         <link rel="stylesheet" href="/css/forms.css">
         <link rel="stylesheet" href="/css/layout.css">
-        <style>body { opacity: 1 !important; }</style>
+        <style>
+            body { opacity: 1 !important; animation: none !important; }
+            .content-section, .testimonials, .service-areas, .blog-preview, .additional-services, .site-footer { 
+                opacity: 1 !important; 
+                animation: none !important; 
+            }
+        </style>
     </noscript>
     
-    <!-- Improved FOUC prevention script -->
+    <!-- IMPROVED FOUC prevention script with multiple fallbacks -->
     <script>
-    // Reveal body after fonts and critical resources are loaded
+    // Immediate execution to minimize delay
     (function() {
-        // Check if fonts are loaded
-        function checkFontsLoaded() {
-            if (document.fonts && document.fonts.ready) {
-                document.fonts.ready.then(function() {
-                    document.body.classList.add('loaded');
-                });
-            } else {
-                // Fallback for browsers without font loading API
-                if (document.readyState === 'complete') {
-                    document.body.classList.add('loaded');
-                } else {
-                    window.addEventListener('load', function() {
-                        document.body.classList.add('loaded');
-                    });
-                }
+        let loaded = false;
+        
+        function setLoaded() {
+            if (!loaded) {
+                loaded = true;
+                document.body.classList.add('loaded');
+                console.log('Content loaded and visible');
             }
         }
         
-        // Start checking
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', checkFontsLoaded);
-        } else {
-            checkFontsLoaded();
+        // Method 1: Check document ready state first
+        if (document.readyState === 'complete') {
+            setLoaded();
+        } else if (document.readyState === 'interactive') {
+            // DOM is ready, set a short timer
+            setTimeout(setLoaded, 200);
         }
         
-        // Fallback to ensure body shows after 1 second max
+        // Method 2: Font loading detection
+        if (document.fonts && document.fonts.ready) {
+            document.fonts.ready.then(setLoaded);
+        }
+        
+        // Method 3: Window load event
+        if (!loaded) {
+            window.addEventListener('load', setLoaded);
+        }
+        
+        // Method 4: DOMContentLoaded
+        if (!loaded) {
+            document.addEventListener('DOMContentLoaded', function() {
+                setTimeout(setLoaded, 100);
+            });
+        }
+        
+        // Method 5: AGGRESSIVE fallback - force show after 800ms max
+        setTimeout(function() {
+            if (!loaded) {
+                console.log('Forcing content visibility after timeout');
+                setLoaded();
+            }
+        }, 800);
+        
+        // Method 6: EMERGENCY fallback - ensure content shows after 1.5s
         setTimeout(function() {
             document.body.classList.add('loaded');
-        }, 1000);
+            document.body.style.opacity = '1';
+            const sections = document.querySelectorAll('.content-section, .testimonials, .service-areas, .blog-preview, .additional-services, .site-footer');
+            sections.forEach(section => {
+                section.style.opacity = '1';
+                section.style.animation = 'none';
+            });
+        }, 1500);
     })();
     </script>
     
