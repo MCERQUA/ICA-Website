@@ -66,41 +66,45 @@ relatedServices:
 {% set subtitle = "Maximum Performance Retrofit Insulation for Arizona Homes" %}
 {% include "sections/service-hero.njk" %}
 
-<section class="dense-pack-intro content-section">
+<section class="py-20 bg-surface-dark">
   <div class="container">
-    <div class="section-header">
-      <h2>Arizona's Premier Dense Pack Insulation Specialists</h2>
-      <p class="section-subtitle">Transform your home's energy efficiency without the disruption of full renovation</p>
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-primary font-display">Arizona's Premier Dense Pack Insulation Specialists</h2>
+      <p class="text-xl text-primary-light max-w-3xl mx-auto">Transform your home's energy efficiency without the disruption of full renovation</p>
     </div>
     
-    <div class="intro-content">
-      <div class="intro-text">
-        <h3>What Makes Dense Pack Different?</h3>
-        <p>Dense pack insulation is a specialized retrofit technique that fills wall cavities to maximum capacity—3.5 lbs/ft³ compared to standard blown-in at just 1.5 lbs/ft³. This creates a solid thermal barrier that eliminates settling and dramatically improves your home's performance.</p>
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <h3 class="text-2xl font-bold text-primary mb-6">What Makes Dense Pack Different?</h3>
+        <p class="text-lg text-text-muted max-w-4xl mx-auto">Dense pack insulation is a specialized retrofit technique that fills wall cavities to maximum capacity—3.5 lbs/ft³ compared to standard blown-in at just 1.5 lbs/ft³. This creates a solid thermal barrier that eliminates settling and dramatically improves your home's performance.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-6">
+        {% set keyBenefits = [
+          {
+            icon: "🎯",
+            title: "Zero Settling",
+            description: "Unlike loose-fill insulation, dense pack won't settle over time"
+          },
+          {
+            icon: "💨",
+            title: "Superior Air Sealing",
+            description: "High-density installation reduces air infiltration by up to 30%"
+          },
+          {
+            icon: "🏠",
+            title: "Minimal Disruption",
+            description: "No drywall removal - just small access holes that we patch professionally"
+          }
+        ] %}
         
-        <div class="key-benefits">
-          <div class="benefit-item">
-            <span class="benefit-icon">🎯</span>
-            <div>
-              <h4>Zero Settling</h4>
-              <p>Unlike loose-fill insulation, dense pack won't settle over time</p>
-            </div>
-          </div>
-          <div class="benefit-item">
-            <span class="benefit-icon">💨</span>
-            <div>
-              <h4>Superior Air Sealing</h4>
-              <p>High-density installation reduces air infiltration by up to 30%</p>
-            </div>
-          </div>
-          <div class="benefit-item">
-            <span class="benefit-icon">🏠</span>
-            <div>
-              <h4>Minimal Disruption</h4>
-              <p>No drywall removal - just small access holes that we patch professionally</p>
-            </div>
-          </div>
+        {% for benefit in keyBenefits %}
+        <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-6 hover:shadow-glow-sm transition-all duration-300">
+          <div class="text-4xl mb-4">{{ benefit.icon }}</div>
+          <h4 class="text-xl font-bold text-primary mb-2">{{ benefit.title }}</h4>
+          <p class="text-text-muted">{{ benefit.description }}</p>
         </div>
+        {% endfor %}
       </div>
     </div>
   </div>
@@ -112,133 +116,22 @@ relatedServices:
 
 {% set process = processSteps %}
 {% set processTitle = "Our Professional Dense Pack Process" %}
-{% include "components/process-steps.njk" %}
+{% include "components/sections/process-steps-dark.njk" %}
 
 {% include "sections/material-options.njk" %}
 
 {% set pricing = pricingOptions %}
 {% set pricingTitle = "Dense Pack Insulation Pricing" %}
-{% include "components/pricing-table.njk" %}
+{% include "components/cards/pricing-table-dark.njk" %}
 
 {% include "sections/why-choose-ica.njk" %}
 
 {% include "sections/testimonials.njk" %}
 
-{% set sectionTitle = "Dense Pack FAQs" %}
-{% include "sections/service-faq.njk" %}
+{% set faqs = faqs %}
+{% set faqTitle = "Dense Pack FAQs" %}
+{% include "components/sections/faq-section-glass.njk" %}
 
-{% include "sections/cta.njk" %}
+{% include "components/sections/cta-section-dark.njk" %}
 
 {% include "sections/related-services.njk" %}
-
-<style>
-.dense-pack-intro {
-  padding: 4rem 0;
-  background: var(--surface-light);
-}
-
-.dense-pack-intro .section-header {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.dense-pack-intro h2 {
-  font-size: 2.5rem;
-  color: var(--primary);
-  margin-bottom: 1rem;
-}
-
-.section-subtitle {
-  font-size: 1.3rem;
-  color: var(--text-muted);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.intro-content {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.intro-text h3 {
-  font-size: 1.8rem;
-  color: var(--primary);
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.intro-text p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: var(--text-dark);
-  margin-bottom: 2rem;
-  text-align: center;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.key-benefits {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.benefit-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  border-left: 4px solid var(--primary);
-}
-
-.benefit-icon {
-  font-size: 2rem;
-  flex-shrink: 0;
-}
-
-.benefit-item h4 {
-  font-size: 1.2rem;
-  color: var(--primary);
-  margin-bottom: 0.5rem;
-}
-
-.benefit-item p {
-  color: var(--text-muted);
-  margin: 0;
-  text-align: left;
-  font-size: 1rem;
-  line-height: 1.4;
-}
-
-@media (max-width: 768px) {
-  .dense-pack-intro h2 {
-    font-size: 2rem;
-  }
-  
-  .section-subtitle {
-    font-size: 1.1rem;
-  }
-  
-  .intro-text h3 {
-    font-size: 1.5rem;
-  }
-  
-  .intro-text p {
-    font-size: 1rem;
-  }
-  
-  .key-benefits {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .benefit-item {
-    padding: 1.5rem;
-  }
-}
-</style>
