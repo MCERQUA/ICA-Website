@@ -32,160 +32,213 @@ relatedServices:
   - title: "Cold Storage"
     url: "/services/industrial/cold-storage/"
     description: "Temperature-controlled spaces"
+processSteps:
+  - title: "Facility Assessment"
+    description: "Comprehensive evaluation of your warehouse including thermal imaging and energy analysis"
+  - title: "Custom Engineering"
+    description: "Develop insulation plan specific to your building type, usage, and operational needs"
+  - title: "Phased Installation"
+    description: "Coordinate installation to minimize operational disruption with flexible scheduling"
+  - title: "Safety First"
+    description: "OSHA-compliant installation with certified crews experienced in industrial environments"
+  - title: "Performance Verification"
+    description: "Post-installation testing and thermal imaging to ensure complete coverage"
+pricingOptions:
+  - type: "Standard Warehouses"
+    price: "Custom Quote"
+    features:
+      - "10,000+ sq ft projects"
+      - "Standard ceiling heights"
+      - "Basic thermal protection"
+      - "5-year warranty"
+  - type: "Metal Buildings"
+    price: "Premium Solution"
+    features:
+      - "Complete vapor barrier"
+      - "Condensation elimination"
+      - "Structural enhancement"
+      - "10-year warranty"
+    highlighted: true
 ---
 
 {% set heroTitle = title %}
 {% set heroSubtitle = subtitle %}
 {% include "sections/service-hero.njk" %}
 
-<section class="service-content">
-    <div class="container">
-        <div class="content-wrapper">
-            <div class="main-content">
-                <h2>Industrial-Scale Warehouse Insulation Expertise</h2>
-                <p class="lead">With over 421,700 square feet of completed warehouse projects, Insulation Contractors of Arizona brings unmatched expertise to large-scale industrial insulation. We understand the unique challenges of Arizona warehouses.</p>
-                
-                <div class="highlight-box">
-                    <h3>🏭 Why Warehouses Need Superior Insulation</h3>
-                    <ul>
-                        <li><strong>Extreme Temperature Control:</strong> Combat 160°F+ roof temperatures</li>
-                        <li><strong>Energy Cost Reduction:</strong> 30-50% savings on HVAC expenses</li>
-                        <li><strong>Condensation Prevention:</strong> Critical for metal buildings</li>
-                        <li><strong>Worker Comfort:</strong> Improve productivity and safety</li>
-                        <li><strong>Inventory Protection:</strong> Maintain stable temperatures</li>
-                    </ul>
-                </div>
-
-                <h2>Specialized Warehouse Applications</h2>
-                
-                <div class="service-grid">
-                    <div class="service-item">
-                        <h3>Metal Building Insulation</h3>
-                        <ul>
-                            <li>Eliminate condensation issues</li>
-                            <li>Stop thermal bridging</li>
-                            <li>Add structural integrity</li>
-                            <li>Create complete vapor barrier</li>
-                            <li>Reduce sound transmission</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="service-item">
-                        <h3>Distribution Centers</h3>
-                        <ul>
-                            <li>Loading dock insulation</li>
-                            <li>Temperature zone control</li>
-                            <li>Office area separation</li>
-                            <li>Equipment protection</li>
-                            <li>Energy efficiency optimization</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="service-item">
-                        <h3>Manufacturing Facilities</h3>
-                        <ul>
-                            <li>Process area climate control</li>
-                            <li>Equipment heat management</li>
-                            <li>Worker comfort zones</li>
-                            <li>Dust and moisture control</li>
-                            <li>Sound dampening</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <h2>Our Proven Warehouse Process</h2>
-                
-                {% set process = [
-                    {
-                        "title": "Facility Assessment",
-                        "description": "Comprehensive evaluation of your warehouse including thermal imaging and energy analysis"
-                    },
-                    {
-                        "title": "Custom Engineering",
-                        "description": "Develop insulation plan specific to your building type, usage, and operational needs"
-                    },
-                    {
-                        "title": "Phased Installation",
-                        "description": "Coordinate installation to minimize operational disruption with flexible scheduling"
-                    },
-                    {
-                        "title": "Safety First",
-                        "description": "OSHA-compliant installation with certified crews experienced in industrial environments"
-                    },
-                    {
-                        "title": "Performance Verification",
-                        "description": "Post-installation testing and thermal imaging to ensure complete coverage"
-                    }
-                ] %}
-                {% include "components/process-steps.njk" %}
-
-                <h2>Metal Building Expertise</h2>
-                <p>Metal warehouses present unique insulation challenges that we've mastered over 20+ years:</p>
-                
-                <div class="metal-building-section">
-                    <h3>Common Metal Building Issues We Solve:</h3>
-                    <ul>
-                        <li><strong>Condensation & Rust:</strong> Spray foam eliminates moisture issues</li>
-                        <li><strong>Extreme Heat Transfer:</strong> Metal conducts heat 1000x more than wood</li>
-                        <li><strong>Air Leakage:</strong> Seal gaps at panels, fasteners, and transitions</li>
-                        <li><strong>Thermal Bridging:</strong> Insulate around purlins and girts</li>
-                        <li><strong>Sound Transmission:</strong> Reduce rain and equipment noise</li>
-                    </ul>
-                </div>
-
-                <div class="case-study-highlight">
-                    <h3>Recent Project: 421,700 Sq Ft Distribution Center</h3>
-                    <p>Our largest completed project showcases our capability:</p>
-                    <ul>
-                        <li>Closed-cell spray foam throughout</li>
-                        <li>Completed in 3 weeks with zero downtime</li>
-                        <li>42% reduction in cooling costs</li>
-                        <li>Eliminated all condensation issues</li>
-                        <li>10-year warranty provided</li>
-                    </ul>
-                </div>
-
-                <h2>Industry-Specific Solutions</h2>
-                
-                <div class="industry-grid">
-                    <div class="industry-card">
-                        <h3>Food & Beverage</h3>
-                        <p>FDA-compliant insulation for food storage and processing facilities</p>
-                    </div>
-                    
-                    <div class="industry-card">
-                        <h3>Automotive</h3>
-                        <p>Temperature control for parts storage and assembly areas</p>
-                    </div>
-                    
-                    <div class="industry-card">
-                        <h3>E-Commerce</h3>
-                        <p>Climate optimization for fulfillment centers and sorting facilities</p>
-                    </div>
-                    
-                    <div class="industry-card">
-                        <h3>Cold Storage</h3>
-                        <p>Specialized insulation for refrigerated warehouses</p>
-                    </div>
-                </div>
-
-                {% include "components/pricing-table.njk" %}
-            </div>
-            
-            <aside class="service-sidebar">
-                {% include "components/service-menu.njk" %}
-                {% include "components/quick-quote.njk" %}
-                {% include "components/credentials-mini.njk" %}
-            </aside>
-        </div>
+<section class="py-20 bg-surface-dark">
+  <div class="container">
+    <h2 class="text-4xl font-bold text-primary font-display text-center mb-6">Industrial-Scale Warehouse Insulation Expertise</h2>
+    <p class="text-xl text-primary-light text-center max-w-4xl mx-auto mb-12">With over 421,700 square feet of completed warehouse projects, Insulation Contractors of Arizona brings unmatched expertise to large-scale industrial insulation. We understand the unique challenges of Arizona warehouses.</p>
+    
+    <div class="bg-gradient-to-r from-primary/20 to-accent/20 backdrop-blur border border-primary/30 rounded-lg p-8">
+      <h3 class="text-2xl font-bold text-primary mb-6 flex items-center gap-3">
+        <span>🏭</span> Why Warehouses Need Superior Insulation
+      </h3>
+      <ul class="space-y-3">
+        {% set reasons = [
+          { label: "Extreme Temperature Control", desc: "Combat 160°F+ roof temperatures" },
+          { label: "Energy Cost Reduction", desc: "30-50% savings on HVAC expenses" },
+          { label: "Condensation Prevention", desc: "Critical for metal buildings" },
+          { label: "Worker Comfort", desc: "Improve productivity and safety" },
+          { label: "Inventory Protection", desc: "Maintain stable temperatures" }
+        ] %}
+        
+        {% for reason in reasons %}
+        <li class="flex items-start gap-3">
+          <span class="text-accent text-xl">✓</span>
+          <div>
+            <strong class="text-primary">{{ reason.label }}:</strong>
+            <span class="text-text-muted"> {{ reason.desc }}</span>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
     </div>
+  </div>
 </section>
 
-{% set sectionTitle = "Warehouse Insulation FAQs" %}
-{% include "sections/service-faq.njk" %}
+<section class="py-20 bg-surface">
+  <div class="container">
+    <h2 class="text-4xl font-bold text-primary font-display text-center mb-12">Specialized Warehouse Applications</h2>
+    
+    <div class="grid lg:grid-cols-3 gap-8">
+      {% set applications = [
+        {
+          title: "Metal Building Insulation",
+          items: [
+            "Eliminate condensation issues",
+            "Stop thermal bridging",
+            "Add structural integrity",
+            "Create complete vapor barrier",
+            "Reduce sound transmission"
+          ]
+        },
+        {
+          title: "Distribution Centers",
+          items: [
+            "Loading dock insulation",
+            "Temperature zone control",
+            "Office area separation",
+            "Equipment protection",
+            "Energy efficiency optimization"
+          ]
+        },
+        {
+          title: "Manufacturing Facilities",
+          items: [
+            "Process area climate control",
+            "Equipment heat management",
+            "Worker comfort zones",
+            "Dust and moisture control",
+            "Sound dampening"
+          ]
+        }
+      ] %}
+      
+      {% for app in applications %}
+      <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-6 hover:shadow-glow-sm transition-all duration-300">
+        <h3 class="text-xl font-bold text-primary mb-4">{{ app.title }}</h3>
+        <ul class="space-y-2">
+          {% for item in app.items %}
+          <li class="flex items-start gap-2">
+            <span class="text-accent">•</span>
+            <span class="text-text-muted">{{ item }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% set process = processSteps %}
+{% set processTitle = "Our Proven Warehouse Process" %}
+{% include "components/sections/process-steps-dark.njk" %}
+
+<section class="py-20 bg-surface">
+  <div class="container">
+    <h2 class="text-4xl font-bold text-primary font-display text-center mb-6">Metal Building Expertise</h2>
+    <p class="text-lg text-primary-light text-center max-w-3xl mx-auto mb-12">Metal warehouses present unique insulation challenges that we've mastered over 20+ years:</p>
+    
+    <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-8 mb-12">
+      <h3 class="text-2xl font-bold text-primary mb-6">Common Metal Building Issues We Solve:</h3>
+      <ul class="space-y-4">
+        {% set issues = [
+          { problem: "Condensation & Rust", solution: "Spray foam eliminates moisture issues" },
+          { problem: "Extreme Heat Transfer", solution: "Metal conducts heat 1000x more than wood" },
+          { problem: "Air Leakage", solution: "Seal gaps at panels, fasteners, and transitions" },
+          { problem: "Thermal Bridging", solution: "Insulate around purlins and girts" },
+          { problem: "Sound Transmission", solution: "Reduce rain and equipment noise" }
+        ] %}
+        
+        {% for issue in issues %}
+        <li class="flex items-start gap-3">
+          <span class="text-accent">•</span>
+          <div>
+            <strong class="text-primary">{{ issue.problem }}:</strong>
+            <span class="text-text-muted"> {{ issue.solution }}</span>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    
+    <div class="bg-gradient-to-r from-primary/10 to-accent/10 backdrop-blur border border-primary/30 rounded-lg p-8">
+      <h3 class="text-2xl font-bold text-primary mb-6">Recent Project: 421,700 Sq Ft Distribution Center</h3>
+      <p class="text-lg text-primary-light mb-6">Our largest completed project showcases our capability:</p>
+      <div class="grid md:grid-cols-2 gap-6">
+        {% set achievements = [
+          "Closed-cell spray foam throughout",
+          "Completed in 3 weeks with zero downtime",
+          "42% reduction in cooling costs",
+          "Eliminated all condensation issues",
+          "10-year warranty provided"
+        ] %}
+        
+        {% for achievement in achievements %}
+        <div class="flex items-start gap-3">
+          <span class="text-accent text-xl">✓</span>
+          <span class="text-text-muted">{{ achievement }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-surface-dark">
+  <div class="container">
+    <h2 class="text-4xl font-bold text-primary font-display text-center mb-12">Industry-Specific Solutions</h2>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {% set industries = [
+        { title: "Food & Beverage", desc: "FDA-compliant insulation for food storage and processing facilities" },
+        { title: "Automotive", desc: "Temperature control for parts storage and assembly areas" },
+        { title: "E-Commerce", desc: "Climate optimization for fulfillment centers and sorting facilities" },
+        { title: "Cold Storage", desc: "Specialized insulation for refrigerated warehouses" }
+      ] %}
+      
+      {% for industry in industries %}
+      <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-6 text-center hover:shadow-glow-sm transition-all duration-300">
+        <h3 class="text-lg font-bold text-primary mb-3">{{ industry.title }}</h3>
+        <p class="text-text-muted text-sm">{{ industry.desc }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% set pricing = pricingOptions %}
+{% set pricingTitle = "Warehouse Insulation Solutions" %}
+{% include "components/cards/pricing-table-dark.njk" %}
+
+{% set faqs = faqs %}
+{% set faqTitle = "Warehouse Insulation FAQs" %}
+{% include "components/sections/faq-section-glass.njk" %}
 
 {% include "sections/why-choose-ica.njk" %}
 
-{% include "sections/cta.njk" %}
+{% include "components/sections/cta-section-dark.njk" %}
 
 {% include "sections/related-services.njk" %}
