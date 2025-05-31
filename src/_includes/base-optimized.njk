@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} | {{ site.name }}</title>
+    <meta name="description" content="{{ description or site.tagline }}">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/images-optimized/Insulation_Contractors_of_arizona_logo-200w.webp" as="image">
+    <link rel="preload" href="/images-optimized/insulation_contractors_of_arizona_spray_foam_Arizona_Sunset-1920w.webp" as="image" media="(min-width: 1200px)">
+    <link rel="preload" href="/css/combined.{{ cssHash() }}.css" as="style">
+    
+    <!-- Critical CSS - Inline to prevent render blocking -->
+    <style>
+        /* Critical CSS for Above-the-Fold Content */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 16px; scroll-behavior: smooth; }
+        
+        /* FOUC Prevention - Start with invisible body */
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #e0e0e0; 
+            background: #0a0a0a; 
+            opacity: 0;
+            overflow-x: hidden; 
+            transition: opacity 0.3s ease-in-out;
+        }
+        
+        body.loaded { 
+            opacity: 1;
+        }
+        
+        /* Typography */
+        h1, h2, h3 { line-height: 1.2; font-weight: 700; margin-bottom: 1rem; }
+        h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+        
+        /* Container */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Header - Critical styles to prevent layout shift */
+        .site-header { 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            right: 0; 
+            height: 80px; 
+            background: rgba(10, 10, 10, 0.95); 
+            backdrop-filter: blur(10px); 
+            border-bottom: 1px solid rgba(0, 255, 255, 0.1); 
+            z-index: 1000; 
+            transition: all 0.3s ease; 
+        }
+        
+        .site-header.scrolled { 
+            background: rgba(10, 10, 10, 0.98); 
+            box-shadow: 0 2px 20px rgba(0, 255, 255, 0.1); 
+        }
+        
+        .header-content { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            height: 100%; 
+        }
+        
+        .logo { flex-shrink: 0; }
+        .logo-img { max-height: 60px; width: auto; display: block; aspect-ratio: 2.5 / 1; }
+        
+        /* Navigation - Critical styles to prevent FOUC */
+        .main-nav { display: flex; align-items: center; }
+        .nav-list { 
+            display: flex; 
+            list-style: none; 
+            gap: 2rem; 
+            align-items: center; 
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-item { position: relative; }
+        .nav-item a { 
+            color: #e0e0e0; 
+            text-decoration: none; 
+            font-weight: 500; 
+            transition: color 0.3s ease; 
+            padding: 0.5rem 0; 
+            display: block;
+        }
+        
+        .nav-item a:hover { color: #00ffff; }
+        
+        .nav-item.cta-button a { 
+            background: #ff6b35; 
+            color: white; 
+            padding: 0.75rem 1.5rem; 
+            border-radius: 50px; 
+            font-weight: 600; 
+        }
+        
+        /* Mobile Menu - Fixed sliding animation approach */
+        .mobile-menu-toggle { 
+            display: none; 
+            background: none; 
+            border: none; 
+            cursor: pointer; 
+            padding: 0.5rem; 
+            flex-direction: column; 
+            gap: 4px;
+        }
+        
+        .hamburger { 
+            width: 25px; 
+            height: 3px; 
+            background: #e0e0e0; 
+            transition: all 0.3s ease; 
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-toggle { display: flex; }
+            .nav-list { 
+                position: fixed;
+                top: 90px;
+                right: -100%;
+                width: 100%;
+                max-width: 300px;
+                height: calc(100vh - 90px);
+                background: rgba(10, 10, 10, 0.95);
+                backdrop-filter: blur(30px);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 2rem;
+                gap: 1rem;
+                border-left: 1px solid rgba(0, 255, 255, 0.3);
+                box-shadow: -10px 0 30px rgba(0, 0, 0, 0.8);
+                transition: right 0.3s ease;
+                overflow-y: auto;
+            }
+            .nav-list.mobile-active { 
+                right: 0; 
+            }
+        }
+        
+        /* Hero */
+        .hero { 
+            min-height: 100vh; 
+            position: relative; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            overflow: hidden; 
+            background: #0a0a0a; 
+            contain: layout style paint; 
+        }
+        
+        .hero-content-wrapper { 
+            position: relative; 
+            z-index: 2; 
+            text-align: center; 
+            padding: 2rem; 
+        }
+        
+        .hero-title { 
+            font-size: clamp(2.5rem, 5vw, 4rem); 
+            font-weight: 700; 
+            margin-bottom: 1.5rem; 
+            background: linear-gradient(135deg, #006666 0%, #008888 20%, #00aaaa 40%, #00cccc 60%, #00ffff 80%, #40ffff 100%); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            background-clip: text; 
+            color: transparent; 
+        }
+        
+        .hero-subtitle { 
+            font-size: clamp(1.25rem, 2vw, 1.75rem); 
+            color: rgba(224, 224, 224, 0.9); 
+            margin-bottom: 2rem; 
+        }
+        
+        /* Buttons */
+        .btn { 
+            display: inline-block; 
+            padding: 1rem 2rem; 
+            border-radius: 50px; 
+            font-weight: 600; 
+            text-decoration: none; 
+            transition: all 0.3s ease; 
+            cursor: pointer; 
+            border: none; 
+        }
+        
+        .btn-primary { background: #ff6b35; color: white; }
+        .btn-primary:hover { 
+            background: #e55a2b; 
+            transform: translateY(-2px); 
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3); 
+        }
+        
+        /* Hide content sections initially */
+        .content-section,
+        .testimonials, 
+        .service-areas, 
+        .blog-preview, 
+        .additional-services,
+        .site-footer { 
+            opacity: 0; 
+            transition: opacity 0.3s ease-in-out; 
+        }
+        
+        body.loaded .content-section,
+        body.loaded .testimonials, 
+        body.loaded .service-areas, 
+        body.loaded .blog-preview, 
+        body.loaded .additional-services,
+        body.loaded .site-footer { 
+            opacity: 1; 
+        }
+    </style>
+    
+    <!-- Load Google Fonts immediately after critical CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Load combined CSS file asynchronously -->
+    <link rel="preload" href="/css/combined.{{ cssHash() }}.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/combined.{{ cssHash() }}.css"></noscript>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="/images-optimized/Insulation_Contractors_of_arizona_logo-100w.webp">
+    <link rel="apple-touch-icon" href="/images-optimized/Insulation_Contractors_of_arizona_logo-200w.webp">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ page.url | url | absoluteUrl(site.url) }}">
+    <meta property="og:title" content="{{ title }} | {{ site.name }}">
+    <meta property="og:description" content="{{ description or site.tagline }}">
+    <meta property="og:image" content="/images-optimized/Insulation_Contractors_of_arizona_logo-original.webp">
+    <meta property="og:site_name" content="{{ site.name }}">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ page.url | url | absoluteUrl(site.url) }}">
+    <meta property="twitter:title" content="{{ title }} | {{ site.name }}">
+    <meta property="twitter:description" content="{{ description or site.tagline }}">
+    <meta property="twitter:image" content="/images-optimized/Insulation_Contractors_of_arizona_logo-original.webp">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="author" content="{{ site.owner }}">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="{{ page.url | url | absoluteUrl(site.url) }}">
+    
+    <!-- Geo Tags for Local SEO -->
+    <meta name="geo.region" content="US-AZ">
+    <meta name="geo.placename" content="Glendale, Arizona">
+    <meta name="geo.position" content="33.5387;-112.1859">
+    <meta name="ICBM" content="33.5387, -112.1859">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "{{ site.name }}",
+      "image": "/images-optimized/Insulation_Contractors_of_arizona_logo-original.webp",
+      "@id": "https://insulationcontractorsofarizona.com",
+      "url": "https://insulationcontractorsofarizona.com",
+      "telephone": "{{ site.phone }}",
+      "email": "{{ site.email }}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10616 N 50th Ave",
+        "addressLocality": "Glendale",
+        "addressRegion": "AZ",
+        "postalCode": "85304",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 33.5387,
+        "longitude": -112.1859
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "06:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "{{ site.social.google }}",
+        "{{ site.social.yelp }}",
+        "https://www.facebook.com/InsulationContractorsAZ",
+        "https://www.instagram.com/insulation_contractors_of_az/",
+        "https://www.tiktok.com/@insulationcontractorsaz"
+      ],
+      "priceRange": "$$",
+      "description": "{{ site.tagline }}",
+      "areaServed": [
+        {% for area in site.service_areas %}
+        {
+          "@type": "City",
+          "name": "{{ area }}",
+          "addressRegion": "AZ"
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "50",
+        "bestRating": "5"
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Enhanced Animated Background with Grid Lines and More Particles -->
+    <div class="animated-bg">
+        <div class="grid-lines"></div>
+        <div class="particles">
+            <!-- Reduced particles for mobile performance -->
+            <div class="particle" style="left: 5%; animation-delay: 0s;"></div>
+            <div class="particle" style="left: 15%; animation-delay: 2s;"></div>
+            <div class="particle" style="left: 25%; animation-delay: 4s;"></div>
+            <div class="particle" style="left: 35%; animation-delay: 6s;"></div>
+            <div class="particle" style="left: 45%; animation-delay: 8s;"></div>
+            <div class="particle" style="left: 55%; animation-delay: 10s;"></div>
+            <div class="particle" style="left: 65%; animation-delay: 12s;"></div>
+            <div class="particle" style="left: 75%; animation-delay: 14s;"></div>
+            <div class="particle" style="left: 85%; animation-delay: 16s;"></div>
+            <div class="particle" style="left: 95%; animation-delay: 18s;"></div>
+        </div>
+    </div>
+    
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="/" aria-label="{{ site.name }} Home">
+                        <img src="/images-optimized/Insulation_Contractors_of_arizona_logo-200w.webp" 
+                             srcset="/images-optimized/Insulation_Contractors_of_arizona_logo-100w.webp 100w,
+                                     /images-optimized/Insulation_Contractors_of_arizona_logo-150w.webp 150w,
+                                     /images-optimized/Insulation_Contractors_of_arizona_logo-200w.webp 200w,
+                                     /images-optimized/Insulation_Contractors_of_arizona_logo-400w.webp 400w"
+                             sizes="(max-width: 768px) 150px, 200px"
+                             alt="{{ site.name }}" 
+                             class="logo-img" 
+                             width="200" 
+                             height="80" 
+                             loading="eager">
+                    </a>
+                </div>
+                {% include "components/navigation.njk" %}
+            </div>
+        </div>
+    </header>
+
+    {% include "components/breadcrumbs.njk" %}
+
+    <main>
+        {{ content | safe }}
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>{{ site.name }}</h3>
+                    <p>{{ site.tagline }}</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><a href="tel:{{ site.phone }}">{{ site.phone }}</a><br>
+                    <a href="mailto:{{ site.email }}">{{ site.email }}</a><br>
+                    <address>10616 N 50th Ave<br>Glendale, AZ 85304</address></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/services/">Our Services</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/contact/">Get a Quote</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; {{ site.name }} {% set year = 2025 %}{{ year }}. All rights reserved. | ROC# 340641</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Improved FOUC prevention script -->
+    <script>
+    // Reveal body after fonts and critical resources are loaded
+    (function() {
+        // Check if fonts are loaded
+        function checkFontsLoaded() {
+            if (document.fonts && document.fonts.ready) {
+                document.fonts.ready.then(function() {
+                    document.body.classList.add('loaded');
+                });
+            } else {
+                // Fallback for browsers without font loading API
+                if (document.readyState === 'complete') {
+                    document.body.classList.add('loaded');
+                } else {
+                    window.addEventListener('load', function() {
+                        document.body.classList.add('loaded');
+                    });
+                }
+            }
+        }
+        
+        // Start checking
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', checkFontsLoaded);
+        } else {
+            checkFontsLoaded();
+        }
+        
+        // Fallback to ensure body shows after 1 second max
+        setTimeout(function() {
+            document.body.classList.add('loaded');
+        }, 1000);
+    })();
+    </script>
+    
+    <!-- Deferred JavaScript -->
+    <script defer src="/js/main.js"></script>
+</body>
+</html>
