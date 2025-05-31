@@ -13,7 +13,7 @@
     <!-- Preload critical resources -->
     <link rel="preload" href="/images-optimized/Insulation_Contractors_of_arizona_logo-200w.webp" as="image">
     <link rel="preload" href="/images-optimized/insulation_contractors_of_arizona_spray_foam_Arizona_Sunset-1920w.webp" as="image" media="(min-width: 1200px)">
-    <link rel="preload" href="/css/combined.{{ cssHash() }}.css" as="style">
+    <link rel="preload" href="/css/combined.{{ cssHash }}.css" as="style">
     
     <!-- Critical CSS - Inline to prevent render blocking -->
     <style>
@@ -228,8 +228,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
     
     <!-- Load combined CSS file asynchronously -->
-    <link rel="preload" href="/css/combined.{{ cssHash() }}.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/css/combined.{{ cssHash() }}.css"></noscript>
+    <link rel="preload" href="/css/combined.{{ cssHash }}.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/combined.{{ cssHash }}.css"></noscript>
     
     <!-- Favicon -->
     <link rel="icon" type="image/webp" href="/images-optimized/Insulation_Contractors_of_arizona_logo-100w.webp">
