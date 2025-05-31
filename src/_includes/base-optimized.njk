@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- Preload critical resources -->
-    <link rel="preload" href="/images-optimized/Insulation_Contractors_of_arizona_logo-200w.webp" as="image">
-    <link rel="preload" href="/images-optimized/insulation_contractors_of_arizona_spray_foam_Arizona_Sunset-1920w.webp" as="image" media="(min-width: 1200px)">
+    <link rel="preload" href="/images/Insulation_Contractors_of_arizona_logo-200w.webp" as="image">
+    <link rel="preload" href="/images/insulation_contractors_of_arizona_spray_foam_Arizona_Sunset-1920w.webp" as="image" media="(min-width: 1200px)">
     <link rel="preload" href="/css/combined.{{ cssHash }}.css" as="style">
     
     <!-- Critical CSS - Inline to prevent render blocking -->
@@ -21,63 +21,26 @@
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         html { font-size: 16px; scroll-behavior: smooth; }
         
-        /* FOUC Prevention - Start with invisible body but ALWAYS show images */
+        /* SIMPLE APPROACH: Show everything immediately */
         body { 
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; 
             line-height: 1.6; 
             color: #e0e0e0; 
             background: #0a0a0a; 
-            opacity: 0;
-            overflow-x: hidden; 
-            transition: opacity 0.3s ease-in-out;
-            /* Force show body after max 2 seconds */
-            animation: forceShow 2s ease-in-out forwards;
-        }
-        
-        body.loaded { 
             opacity: 1;
+            overflow-x: hidden; 
         }
         
-        /* CRITICAL: Always show images regardless of loading state */
-        img { 
-            opacity: 1 !important; 
-            visibility: visible !important; 
-            display: block !important;
-        }
-        
-        /* Force show content sections after 2.5 seconds maximum */
+        /* ALWAYS show all content and images */
+        img,
         .content-section,
         .testimonials, 
         .service-areas, 
         .blog-preview, 
         .additional-services,
         .site-footer { 
-            opacity: 0; 
-            transition: opacity 0.3s ease-in-out;
-            /* Emergency fallback animation */
-            animation: showContent 2.5s ease-in-out forwards;
-        }
-        
-        body.loaded .content-section,
-        body.loaded .testimonials, 
-        body.loaded .service-areas, 
-        body.loaded .blog-preview, 
-        body.loaded .additional-services,
-        body.loaded .site-footer { 
-            opacity: 1; 
-        }
-        
-        /* Fallback animations */
-        @keyframes forceShow {
-            0% { opacity: 0; }
-            80% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-        
-        @keyframes showContent {
-            0% { opacity: 0; }
-            85% { opacity: 0; }
-            100% { opacity: 1; }
+            opacity: 1 !important; 
+            visibility: visible !important; 
         }
         
         /* Typography */
@@ -256,15 +219,15 @@
     <noscript><link rel="stylesheet" href="/css/combined.{{ cssHash }}.css"></noscript>
     
     <!-- Favicon -->
-    <link rel="icon" type="image/webp" href="/images-optimized/Insulation_Contractors_of_arizona_logo-100w.webp">
-    <link rel="apple-touch-icon" href="/images-optimized/Insulation_Contractors_of_arizona_logo-200w.webp">
+    <link rel="icon" type="image/webp" href="/images/Insulation_Contractors_of_arizona_logo-100w.webp">
+    <link rel="apple-touch-icon" href="/images/Insulation_Contractors_of_arizona_logo-200w.webp">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ page.url | url | absoluteUrl(site.url) }}">
     <meta property="og:title" content="{{ title }} | {{ site.name }}">
     <meta property="og:description" content="{{ description or site.tagline }}">
-    <meta property="og:image" content="/images-optimized/Insulation_Contractors_of_arizona_logo-original.webp">
+    <meta property="og:image" content="/images/Insulation_Contractors_of_arizona_logo-original.webp">
     <meta property="og:site_name" content="{{ site.name }}">
     
     <!-- Twitter -->
@@ -272,7 +235,7 @@
     <meta property="twitter:url" content="{{ page.url | url | absoluteUrl(site.url) }}">
     <meta property="twitter:title" content="{{ title }} | {{ site.name }}">
     <meta property="twitter:description" content="{{ description or site.tagline }}">
-    <meta property="twitter:image" content="/images-optimized/Insulation_Contractors_of_arizona_logo-original.webp">
+    <meta property="twitter:image" content="/images/Insulation_Contractors_of_arizona_logo-original.webp">
     
     <!-- Additional SEO Meta Tags -->
     <meta name="author" content="{{ site.owner }}">
@@ -292,7 +255,7 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "{{ site.name }}",
-      "image": "/images-optimized/Insulation_Contractors_of_arizona_logo-original.webp",
+      "image": "/images/Insulation_Contractors_of_arizona_logo-original.webp",
       "@id": "https://insulationcontractorsofarizona.com",
       "url": "https://insulationcontractorsofarizona.com",
       "telephone": "{{ site.phone }}",
@@ -375,11 +338,11 @@
             <div class="header-content">
                 <div class="logo">
                     <a href="/" aria-label="{{ site.name }} Home">
-                        <img src="/images-optimized/Insulation_Contractors_of_arizona_logo-200w.webp" 
-                             srcset="/images-optimized/Insulation_Contractors_of_arizona_logo-100w.webp 100w,
-                                     /images-optimized/Insulation_Contractors_of_arizona_logo-150w.webp 150w,
-                                     /images-optimized/Insulation_Contractors_of_arizona_logo-200w.webp 200w,
-                                     /images-optimized/Insulation_Contractors_of_arizona_logo-400w.webp 400w"
+                        <img src="/images/Insulation_Contractors_of_arizona_logo-200w.webp" 
+                             srcset="/images/Insulation_Contractors_of_arizona_logo-100w.webp 100w,
+                                     /images/Insulation_Contractors_of_arizona_logo-150w.webp 150w,
+                                     /images/Insulation_Contractors_of_arizona_logo-200w.webp 200w,
+                                     /images/Insulation_Contractors_of_arizona_logo-400w.webp 400w"
                              sizes="(max-width: 768px) 150px, 200px"
                              alt="{{ site.name }}" 
                              class="logo-img" 
@@ -427,73 +390,7 @@
         </div>
     </footer>
     
-    <!-- Ultra-aggressive FOUC prevention with multiple fallbacks -->
-    <script>
-    // Multiple loading detection methods
-    (function() {
-        let loaded = false;
-        
-        function markLoaded() {
-            if (!loaded) {
-                loaded = true;
-                document.body.classList.add('loaded');
-                console.log('Page marked as loaded');
-            }
-        }
-        
-        // Method 1: Font loading API
-        if (document.fonts && document.fonts.ready) {
-            document.fonts.ready.then(markLoaded);
-        }
-        
-        // Method 2: DOM ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', markLoaded);
-        } else {
-            markLoaded();
-        }
-        
-        // Method 3: Window load
-        window.addEventListener('load', markLoaded);
-        
-        // Method 4: Images loaded check
-        const images = document.getElementsByTagName('img');
-        let imageLoadCount = 0;
-        
-        function checkAllImagesLoaded() {
-            imageLoadCount++;
-            if (imageLoadCount >= Math.min(images.length, 5)) { // Check first 5 images
-                markLoaded();
-            }
-        }
-        
-        for (let i = 0; i < Math.min(images.length, 5); i++) {
-            if (images[i].complete) {
-                checkAllImagesLoaded();
-            } else {
-                images[i].addEventListener('load', checkAllImagesLoaded);
-                images[i].addEventListener('error', checkAllImagesLoaded);
-            }
-        }
-        
-        // Method 5: Quick fallback timer - reduced to 500ms
-        setTimeout(markLoaded, 500);
-        
-        // Method 6: Emergency override - force show after 1.5 seconds no matter what
-        setTimeout(function() {
-            markLoaded();
-            // Force show everything manually
-            document.body.style.opacity = '1';
-            const sections = document.querySelectorAll('.content-section, .testimonials, .service-areas, .blog-preview, .additional-services, .site-footer');
-            sections.forEach(section => {
-                section.style.opacity = '1';
-            });
-            console.log('Emergency override activated');
-        }, 1500);
-    })();
-    </script>
-    
-    <!-- Deferred JavaScript -->
+    <!-- Simple JavaScript - no FOUC prevention -->
     <script defer src="/js/main.js"></script>
 </body>
 </html>
