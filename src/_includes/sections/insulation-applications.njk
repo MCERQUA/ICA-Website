@@ -8,7 +8,8 @@
 
 {% set defaultTitle = sectionTitle or "Our Insulation Applications" %}
 {% set defaultSubtitle = sectionSubtitle or "From residential homes to commercial buildings and agricultural facilities, we provide comprehensive insulation solutions for every application. Choose the right insulation type for your specific needs." %}
-{% set displaySection = showSection !== false %}
+{# Fixed: Proper undefined check instead of !== false which was causing section to not render #}
+{% set displaySection = showSection if showSection is defined else true %}
 
 {% if displaySection %}
 <section class="insulation-applications-section content-section with-grid-particles">
