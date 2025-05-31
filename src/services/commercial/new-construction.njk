@@ -32,187 +32,241 @@ relatedServices:
   - title: "Spray Foam"
     url: "/services/residential/spray-foam/"
     description: "Premium insulation option"
+processSteps:
+  - title: "Pre-Construction Planning"
+    description: "Review plans, provide value engineering, and coordinate with design team"
+  - title: "Submittal & Approval"
+    description: "Provide detailed submittals, product data, and compliance documentation"
+  - title: "Schedule Integration"
+    description: "Coordinate with GC and other trades for optimal installation timing"
+  - title: "Professional Installation"
+    description: "Efficient installation by experienced crews meeting all safety requirements"
+  - title: "Inspection & Documentation"
+    description: "Third-party inspection coordination and comprehensive close-out documents"
 ---
 
 {% set heroTitle = title %}
 {% set heroSubtitle = subtitle %}
 {% include "sections/service-hero.njk" %}
 
-<section class="service-content">
-    <div class="container">
-        <div class="content-wrapper">
-            <div class="main-content">
-                <h2>Your Trusted Partner for New Construction Insulation</h2>
-                <p class="lead">Building in Arizona? Partner with insulation experts who understand our unique climate challenges. We work seamlessly with general contractors, builders, and developers to deliver code-compliant, energy-efficient insulation solutions.</p>
-                
-                <div class="highlight-box">
-                    <h3>🏗️ New Construction Advantages</h3>
-                    <ul>
-                        <li><strong>Design Integration:</strong> Optimize insulation from the planning stage</li>
-                        <li><strong>Code Compliance:</strong> Meet all current building requirements</li>
-                        <li><strong>Energy Modeling:</strong> Achieve target efficiency ratings</li>
-                        <li><strong>Schedule Coordination:</strong> Seamless integration with other trades</li>
-                        <li><strong>Warranty Protection:</strong> Comprehensive coverage for builders</li>
-                    </ul>
-                </div>
-
-                <h2>Construction Types We Serve</h2>
-                
-                <div class="service-grid">
-                    <div class="service-item">
-                        <h3>Commercial Buildings</h3>
-                        <ul>
-                            <li>Office complexes</li>
-                            <li>Retail centers</li>
-                            <li>Medical facilities</li>
-                            <li>Educational buildings</li>
-                            <li>Hospitality projects</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="service-item">
-                        <h3>Industrial Facilities</h3>
-                        <ul>
-                            <li>Warehouses</li>
-                            <li>Manufacturing plants</li>
-                            <li>Distribution centers</li>
-                            <li>Cold storage</li>
-                            <li>Flex spaces</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="service-item">
-                        <h3>Residential Projects</h3>
-                        <ul>
-                            <li>Custom homes</li>
-                            <li>Production homes</li>
-                            <li>Multi-family units</li>
-                            <li>Townhomes</li>
-                            <li>Senior living</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <h2>Our New Construction Process</h2>
-                
-                {% set process = [
-                    {
-                        "title": "Pre-Construction Planning",
-                        "description": "Review plans, provide value engineering, and coordinate with design team"
-                    },
-                    {
-                        "title": "Submittal & Approval",
-                        "description": "Provide detailed submittals, product data, and compliance documentation"
-                    },
-                    {
-                        "title": "Schedule Integration",
-                        "description": "Coordinate with GC and other trades for optimal installation timing"
-                    },
-                    {
-                        "title": "Professional Installation",
-                        "description": "Efficient installation by experienced crews meeting all safety requirements"
-                    },
-                    {
-                        "title": "Inspection & Documentation",
-                        "description": "Third-party inspection coordination and comprehensive close-out documents"
-                    }
-                ] %}
-                {% include "components/process-steps.njk" %}
-
-                <h2>Code Compliance & Energy Standards</h2>
-                
-                <div class="compliance-section">
-                    <h3>We Ensure Compliance With:</h3>
-                    <div class="compliance-grid">
-                        <div class="compliance-item">
-                            <h4>Building Codes</h4>
-                            <ul>
-                                <li>International Energy Conservation Code (IECC)</li>
-                                <li>Arizona Energy Code</li>
-                                <li>Local jurisdiction requirements</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="compliance-item">
-                            <h4>Energy Programs</h4>
-                            <ul>
-                                <li>ENERGY STAR certification</li>
-                                <li>LEED points contribution</li>
-                                <li>Utility rebate programs</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="compliance-item">
-                            <h4>Performance Standards</h4>
-                            <ul>
-                                <li>HERS rating optimization</li>
-                                <li>Air sealing requirements</li>
-                                <li>Thermal bridging mitigation</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <h2>Value Engineering Services</h2>
-                <p>Our experienced team can help optimize your insulation investment:</p>
-                
-                <div class="value-engineering">
-                    <ul>
-                        <li><strong>Performance Analysis:</strong> Compare insulation options for best ROI</li>
-                        <li><strong>Cost Optimization:</strong> Balance upfront costs with long-term savings</li>
-                        <li><strong>Alternative Solutions:</strong> Suggest innovative approaches for challenging areas</li>
-                        <li><strong>Energy Modeling:</strong> Predict performance and utility costs</li>
-                        <li><strong>Specification Writing:</strong> Provide detailed specs for accurate bidding</li>
-                    </ul>
-                </div>
-
-                <div class="builder-benefits">
-                    <h3>Benefits for Builders & Contractors</h3>
-                    <div class="benefit-grid">
-                        <div class="benefit">
-                            <h4>Reliable Scheduling</h4>
-                            <p>We understand construction timelines and never cause delays</p>
-                        </div>
-                        <div class="benefit">
-                            <h4>Clean Installation</h4>
-                            <p>Professional crews that respect the job site</p>
-                        </div>
-                        <div class="benefit">
-                            <h4>Documentation</h4>
-                            <p>Complete paperwork for inspections and close-out</p>
-                        </div>
-                        <div class="benefit">
-                            <h4>Competitive Pricing</h4>
-                            <p>Volume discounts for multiple projects</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="case-study-highlight">
-                    <h3>Recent Project: Mesa Office Complex</h3>
-                    <p>45,000 sq ft commercial office building:</p>
-                    <ul>
-                        <li>Closed-cell spray foam throughout</li>
-                        <li>Achieved 40% better than code efficiency</li>
-                        <li>Completed on schedule with zero delays</li>
-                        <li>Helped secure ENERGY STAR certification</li>
-                        <li>Resulted in $50k+ utility rebates for owner</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <aside class="service-sidebar">
-                {% include "components/service-menu.njk" %}
-                {% include "components/quick-quote.njk" %}
-                {% include "components/credentials-mini.njk" %}
-            </aside>
-        </div>
+<section class="py-20 bg-surface-dark">
+  <div class="container">
+    <h2 class="text-4xl font-bold text-primary font-display text-center mb-6">Your Trusted Partner for New Construction Insulation</h2>
+    <p class="text-xl text-primary-light text-center max-w-4xl mx-auto mb-12">Building in Arizona? Partner with insulation experts who understand our unique climate challenges. We work seamlessly with general contractors, builders, and developers to deliver code-compliant, energy-efficient insulation solutions.</p>
+    
+    <div class="bg-gradient-to-r from-primary/20 to-accent/20 backdrop-blur border border-primary/30 rounded-lg p-8">
+      <h3 class="text-2xl font-bold text-primary mb-6 flex items-center gap-3">
+        <span>🏗️</span> New Construction Advantages
+      </h3>
+      <ul class="space-y-3">
+        {% set advantages = [
+          { label: "Design Integration", desc: "Optimize insulation from the planning stage" },
+          { label: "Code Compliance", desc: "Meet all current building requirements" },
+          { label: "Energy Modeling", desc: "Achieve target efficiency ratings" },
+          { label: "Schedule Coordination", desc: "Seamless integration with other trades" },
+          { label: "Warranty Protection", desc: "Comprehensive coverage for builders" }
+        ] %}
+        
+        {% for advantage in advantages %}
+        <li class="flex items-start gap-3">
+          <span class="text-accent text-xl">✓</span>
+          <div>
+            <strong class="text-primary">{{ advantage.label }}:</strong>
+            <span class="text-text-muted"> {{ advantage.desc }}</span>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
     </div>
+  </div>
 </section>
 
-{% set sectionTitle = "New Construction FAQs" %}
-{% include "sections/service-faq.njk" %}
+<section class="py-20 bg-surface">
+  <div class="container">
+    <h2 class="text-4xl font-bold text-primary font-display text-center mb-12">Construction Types We Serve</h2>
+    
+    <div class="grid lg:grid-cols-3 gap-8">
+      {% set constructionTypes = [
+        {
+          title: "Commercial Buildings",
+          items: [
+            "Office complexes",
+            "Retail centers",
+            "Medical facilities",
+            "Educational buildings",
+            "Hospitality projects"
+          ]
+        },
+        {
+          title: "Industrial Facilities",
+          items: [
+            "Warehouses",
+            "Manufacturing plants",
+            "Distribution centers",
+            "Cold storage",
+            "Flex spaces"
+          ]
+        },
+        {
+          title: "Residential Projects",
+          items: [
+            "Custom homes",
+            "Production homes",
+            "Multi-family units",
+            "Townhomes",
+            "Senior living"
+          ]
+        }
+      ] %}
+      
+      {% for type in constructionTypes %}
+      <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-6 hover:shadow-glow-sm transition-all duration-300">
+        <h3 class="text-xl font-bold text-primary mb-4">{{ type.title }}</h3>
+        <ul class="space-y-2">
+          {% for item in type.items %}
+          <li class="flex items-start gap-2">
+            <span class="text-accent">•</span>
+            <span class="text-text-muted">{{ item }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 
-{% include "sections/cta.njk" %}
+{% set process = processSteps %}
+{% set processTitle = "Our New Construction Process" %}
+{% include "components/sections/process-steps-dark.njk" %}
+
+<section class="py-20 bg-surface">
+  <div class="container">
+    <h2 class="text-4xl font-bold text-primary font-display text-center mb-12">Code Compliance & Energy Standards</h2>
+    
+    <h3 class="text-2xl font-bold text-primary text-center mb-8">We Ensure Compliance With:</h3>
+    
+    <div class="grid lg:grid-cols-3 gap-8">
+      {% set compliance = [
+        {
+          title: "Building Codes",
+          items: [
+            "International Energy Conservation Code (IECC)",
+            "Arizona Energy Code",
+            "Local jurisdiction requirements"
+          ]
+        },
+        {
+          title: "Energy Programs",
+          items: [
+            "ENERGY STAR certification",
+            "LEED points contribution",
+            "Utility rebate programs"
+          ]
+        },
+        {
+          title: "Performance Standards",
+          items: [
+            "HERS rating optimization",
+            "Air sealing requirements",
+            "Thermal bridging mitigation"
+          ]
+        }
+      ] %}
+      
+      {% for standard in compliance %}
+      <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-6">
+        <h4 class="text-xl font-bold text-primary mb-4">{{ standard.title }}</h4>
+        <ul class="space-y-2">
+          {% for item in standard.items %}
+          <li class="flex items-start gap-2">
+            <span class="text-accent">✓</span>
+            <span class="text-text-muted">{{ item }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-surface-dark">
+  <div class="container">
+    <h2 class="text-4xl font-bold text-primary font-display text-center mb-6">Value Engineering Services</h2>
+    <p class="text-lg text-primary-light text-center max-w-3xl mx-auto mb-12">Our experienced team can help optimize your insulation investment:</p>
+    
+    <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-8 max-w-4xl mx-auto">
+      <ul class="space-y-4">
+        {% set services = [
+          { label: "Performance Analysis", desc: "Compare insulation options for best ROI" },
+          { label: "Cost Optimization", desc: "Balance upfront costs with long-term savings" },
+          { label: "Alternative Solutions", desc: "Suggest innovative approaches for challenging areas" },
+          { label: "Energy Modeling", desc: "Predict performance and utility costs" },
+          { label: "Specification Writing", desc: "Provide detailed specs for accurate bidding" }
+        ] %}
+        
+        {% for service in services %}
+        <li class="flex items-start gap-3">
+          <span class="text-accent text-xl">•</span>
+          <div>
+            <strong class="text-primary">{{ service.label }}:</strong>
+            <span class="text-text-muted"> {{ service.desc }}</span>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-surface">
+  <div class="container">
+    <h3 class="text-3xl font-bold text-primary text-center mb-12">Benefits for Builders & Contractors</h3>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {% set benefits = [
+        { title: "Reliable Scheduling", desc: "We understand construction timelines and never cause delays" },
+        { title: "Clean Installation", desc: "Professional crews that respect the job site" },
+        { title: "Documentation", desc: "Complete paperwork for inspections and close-out" },
+        { title: "Competitive Pricing", desc: "Volume discounts for multiple projects" }
+      ] %}
+      
+      {% for benefit in benefits %}
+      <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-6 text-center hover:shadow-glow-sm transition-all duration-300">
+        <h4 class="text-lg font-bold text-primary mb-3">{{ benefit.title }}</h4>
+        <p class="text-text-muted text-sm">{{ benefit.desc }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    
+    <div class="bg-gradient-to-r from-primary/10 to-accent/10 backdrop-blur border border-primary/30 rounded-lg p-8 mt-12 max-w-4xl mx-auto">
+      <h3 class="text-2xl font-bold text-primary mb-6">Recent Project: Mesa Office Complex</h3>
+      <p class="text-lg text-primary-light mb-6">45,000 sq ft commercial office building:</p>
+      <ul class="space-y-3">
+        {% set achievements = [
+          "Closed-cell spray foam throughout",
+          "Achieved 40% better than code efficiency",
+          "Completed on schedule with zero delays",
+          "Helped secure ENERGY STAR certification",
+          "Resulted in $50k+ utility rebates for owner"
+        ] %}
+        
+        {% for achievement in achievements %}
+        <li class="flex items-start gap-3">
+          <span class="text-accent text-xl">✓</span>
+          <span class="text-text-muted">{{ achievement }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{% set faqs = faqs %}
+{% set faqTitle = "New Construction FAQs" %}
+{% include "components/sections/faq-section-glass.njk" %}
+
+{% include "components/sections/cta-section-dark.njk" %}
 
 {% include "sections/related-services.njk" %}
