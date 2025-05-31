@@ -43,16 +43,16 @@
 }
 
 .logo-img {
-    height: 50px;
-    width: 50px; /* Make it square */
+    height: 70px;
+    width: 70px; /* Make it square */
     object-fit: contain; /* Maintain aspect ratio within the square container */
     filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.5));
     transition: all var(--transition-medium);
 }
 
 .site-header.scrolled .logo-img {
-    height: 40px;
-    width: 40px; /* Keep it square when scrolled */
+    height: 55px;
+    width: 55px; /* Keep it square when scrolled */
 }
 
 .logo-img:hover {
@@ -171,11 +171,11 @@
     
     .nav-list {
         position: fixed;
-        top: 70px;
+        top: 90px;
         right: -100%;
         width: 100%;
         max-width: 300px;
-        height: calc(100vh - 70px);
+        height: calc(100vh - 90px);
         background: rgba(10, 10, 10, 0.95);
         backdrop-filter: blur(30px);
         flex-direction: column;
@@ -222,18 +222,20 @@
 /* Extra small devices */
 @media (max-width: 480px) {
     .logo-img {
-        height: 40px;
-        width: 40px; /* Keep it square on mobile */
+        height: 50px;
+        width: 50px; /* Keep it square on mobile */
     }
     
     .site-header.scrolled .logo-img {
-        height: 35px;
-        width: 35px; /* Keep it square when scrolled on mobile */
+        height: 45px;
+        width: 45px; /* Keep it square when scrolled on mobile */
     }
     
     .nav-list {
         max-width: 100%;
         right: -100%;
+        top: 70px;
+        height: calc(100vh - 70px);
     }
     
     /* Smaller CTA button on very small screens */
