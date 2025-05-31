@@ -30,138 +30,173 @@ relatedServices:
   - title: "New Construction"
     url: "/services/commercial/new-construction/"
     description: "Insulation for new builds"
+processSteps:
+  - title: "Business Assessment"
+    description: "Evaluate your specific retail needs, operating hours, and energy usage patterns"
+  - title: "Custom Planning"
+    description: "Design solution that minimizes business disruption and maximizes efficiency"
+  - title: "Flexible Installation"
+    description: "Work around your business hours with night and weekend options available"
+  - title: "Quality Assurance"
+    description: "Thorough inspection and testing to ensure optimal performance"
+  - title: "Ongoing Support"
+    description: "Energy monitoring assistance and maintenance recommendations"
 ---
 
 {% set heroTitle = title %}
 {% set heroSubtitle = subtitle %}
 {% include "sections/service-hero.njk" %}
 
-<section class="service-content">
-    <div class="container">
-        <div class="content-wrapper">
-            <div class="main-content">
-                <h2>Transform Your Retail Space with Professional Insulation</h2>
-                <p class="lead">In Arizona's competitive retail market, creating a comfortable shopping environment while managing operating costs is crucial. Our specialized retail insulation services help businesses achieve both goals.</p>
-                
-                <div class="highlight-box">
-                    <h3>🏪 Retail Insulation Benefits</h3>
-                    <ul>
-                        <li><strong>Enhanced Customer Comfort:</strong> Consistent temperatures throughout your store</li>
-                        <li><strong>Reduced Energy Costs:</strong> 25-40% savings on HVAC expenses</li>
-                        <li><strong>Noise Reduction:</strong> Create a quieter shopping environment</li>
-                        <li><strong>Improved Air Quality:</strong> Reduce dust and allergens</li>
-                        <li><strong>Extended HVAC Life:</strong> Less strain on your systems</li>
-                    </ul>
-                </div>
-
-                <h2>Specialized Retail Applications</h2>
-                
-                <div class="service-grid">
-                    <div class="service-item">
-                        <h3>Storefront Insulation</h3>
-                        <ul>
-                            <li>Eliminate hot spots near windows</li>
-                            <li>Reduce solar heat gain</li>
-                            <li>Maintain window display areas</li>
-                            <li>Improve entrance comfort</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="service-item">
-                        <h3>Ceiling & Roof Insulation</h3>
-                        <ul>
-                            <li>Combat Arizona's extreme roof heat</li>
-                            <li>Reduce cooling costs significantly</li>
-                            <li>Prevent temperature stratification</li>
-                            <li>Protect inventory from heat damage</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="service-item">
-                        <h3>Wall Insulation</h3>
-                        <ul>
-                            <li>Shared wall sound control</li>
-                            <li>Exterior wall thermal protection</li>
-                            <li>Loading dock insulation</li>
-                            <li>Back office comfort</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <h2>Industry-Specific Solutions</h2>
-                
-                <div class="industry-solutions">
-                    <div class="solution-card">
-                        <h3>Clothing & Apparel Stores</h3>
-                        <p>Maintain consistent temperatures to protect fabric inventory and create comfortable fitting room environments.</p>
-                    </div>
-                    
-                    <div class="solution-card">
-                        <h3>Electronics Retailers</h3>
-                        <p>Control temperature and humidity to protect sensitive electronics while reducing display area cooling costs.</p>
-                    </div>
-                    
-                    <div class="solution-card">
-                        <h3>Grocery & Convenience Stores</h3>
-                        <p>Reduce refrigeration costs and maintain consistent temperatures throughout the store.</p>
-                    </div>
-                    
-                    <div class="solution-card">
-                        <h3>Restaurant & Food Service</h3>
-                        <p>Balance kitchen heat with dining area comfort while reducing overall energy consumption.</p>
-                    </div>
-                </div>
-
-                <h2>The Retail Insulation Process</h2>
-                
-                {% set process = [
-                    {
-                        "title": "Business Assessment",
-                        "description": "Evaluate your specific retail needs, operating hours, and energy usage patterns"
-                    },
-                    {
-                        "title": "Custom Planning",
-                        "description": "Design solution that minimizes business disruption and maximizes efficiency"
-                    },
-                    {
-                        "title": "Flexible Installation",
-                        "description": "Work around your business hours with night and weekend options available"
-                    },
-                    {
-                        "title": "Quality Assurance",
-                        "description": "Thorough inspection and testing to ensure optimal performance"
-                    },
-                    {
-                        "title": "Ongoing Support",
-                        "description": "Energy monitoring assistance and maintenance recommendations"
-                    }
-                ] %}
-                {% include "components/process-steps.njk" %}
-                
-                <div class="case-study-highlight">
-                    <h3>Success Story: Phoenix Shopping Center</h3>
-                    <p>We recently completed a 15,000 sq ft retail space insulation project that resulted in:</p>
-                    <ul>
-                        <li>35% reduction in monthly energy costs</li>
-                        <li>Elimination of hot spots near storefront windows</li>
-                        <li>Significantly quieter shopping environment</li>
-                        <li>ROI achieved in just 2.5 years</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <aside class="service-sidebar">
-                {% include "components/service-menu.njk" %}
-                {% include "components/quick-quote.njk" %}
-                {% include "components/credentials-mini.njk" %}
-            </aside>
-        </div>
+<section class="py-20 bg-surface-dark">
+  <div class="container">
+    <h2 class="text-4xl font-bold text-primary font-display text-center mb-6">Transform Your Retail Space with Professional Insulation</h2>
+    <p class="text-xl text-primary-light text-center max-w-4xl mx-auto mb-12">In Arizona's competitive retail market, creating a comfortable shopping environment while managing operating costs is crucial. Our specialized retail insulation services help businesses achieve both goals.</p>
+    
+    <div class="bg-gradient-to-r from-primary/20 to-accent/20 backdrop-blur border border-primary/30 rounded-lg p-8 mb-12">
+      <h3 class="text-2xl font-bold text-primary mb-6 flex items-center gap-3">
+        <span>🏪</span> Retail Insulation Benefits
+      </h3>
+      <ul class="space-y-3">
+        {% set benefits = [
+          { label: "Enhanced Customer Comfort", desc: "Consistent temperatures throughout your store" },
+          { label: "Reduced Energy Costs", desc: "25-40% savings on HVAC expenses" },
+          { label: "Noise Reduction", desc: "Create a quieter shopping environment" },
+          { label: "Improved Air Quality", desc: "Reduce dust and allergens" },
+          { label: "Extended HVAC Life", desc: "Less strain on your systems" }
+        ] %}
+        
+        {% for benefit in benefits %}
+        <li class="flex items-start gap-3">
+          <span class="text-accent text-xl">✓</span>
+          <div>
+            <strong class="text-primary">{{ benefit.label }}:</strong>
+            <span class="text-text-muted"> {{ benefit.desc }}</span>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
     </div>
+  </div>
 </section>
 
-{% set sectionTitle = "Retail Insulation FAQs" %}
-{% include "sections/service-faq.njk" %}
+<section class="py-20 bg-surface">
+  <div class="container">
+    <h2 class="text-4xl font-bold text-primary font-display text-center mb-12">Specialized Retail Applications</h2>
+    
+    <div class="grid lg:grid-cols-3 gap-8">
+      {% set applications = [
+        {
+          title: "Storefront Insulation",
+          items: [
+            "Eliminate hot spots near windows",
+            "Reduce solar heat gain",
+            "Maintain window display areas",
+            "Improve entrance comfort"
+          ]
+        },
+        {
+          title: "Ceiling & Roof Insulation",
+          items: [
+            "Combat Arizona's extreme roof heat",
+            "Reduce cooling costs significantly",
+            "Prevent temperature stratification",
+            "Protect inventory from heat damage"
+          ]
+        },
+        {
+          title: "Wall Insulation",
+          items: [
+            "Shared wall sound control",
+            "Exterior wall thermal protection",
+            "Loading dock insulation",
+            "Back office comfort"
+          ]
+        }
+      ] %}
+      
+      {% for app in applications %}
+      <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-6 hover:shadow-glow-sm transition-all duration-300">
+        <h3 class="text-xl font-bold text-primary mb-4">{{ app.title }}</h3>
+        <ul class="space-y-2">
+          {% for item in app.items %}
+          <li class="flex items-start gap-2">
+            <span class="text-accent">•</span>
+            <span class="text-text-muted">{{ item }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 
-{% include "sections/cta.njk" %}
+<section class="py-20 bg-surface-dark">
+  <div class="container">
+    <h2 class="text-4xl font-bold text-primary font-display text-center mb-12">Industry-Specific Solutions</h2>
+    
+    <div class="grid md:grid-cols-2 gap-6">
+      {% set industries = [
+        {
+          title: "Clothing & Apparel Stores",
+          desc: "Maintain consistent temperatures to protect fabric inventory and create comfortable fitting room environments."
+        },
+        {
+          title: "Electronics Retailers",
+          desc: "Control temperature and humidity to protect sensitive electronics while reducing display area cooling costs."
+        },
+        {
+          title: "Grocery & Convenience Stores",
+          desc: "Reduce refrigeration costs and maintain consistent temperatures throughout the store."
+        },
+        {
+          title: "Restaurant & Food Service",
+          desc: "Balance kitchen heat with dining area comfort while reducing overall energy consumption."
+        }
+      ] %}
+      
+      {% for industry in industries %}
+      <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-6 hover:shadow-glow-sm transition-all duration-300">
+        <h3 class="text-lg font-bold text-primary mb-3">{{ industry.title }}</h3>
+        <p class="text-text-muted">{{ industry.desc }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% set process = processSteps %}
+{% set processTitle = "The Retail Insulation Process" %}
+{% include "components/sections/process-steps-dark.njk" %}
+
+<section class="py-20 bg-surface">
+  <div class="container">
+    <div class="bg-gradient-to-r from-primary/10 to-accent/10 backdrop-blur border border-primary/30 rounded-lg p-8 max-w-4xl mx-auto">
+      <h3 class="text-2xl font-bold text-primary mb-6">Success Story: Phoenix Shopping Center</h3>
+      <p class="text-lg text-primary-light mb-6">We recently completed a 15,000 sq ft retail space insulation project that resulted in:</p>
+      <div class="grid md:grid-cols-2 gap-6">
+        {% set results = [
+          "35% reduction in monthly energy costs",
+          "Elimination of hot spots near storefront windows",
+          "Significantly quieter shopping environment",
+          "ROI achieved in just 2.5 years"
+        ] %}
+        
+        {% for result in results %}
+        <div class="flex items-start gap-3">
+          <span class="text-accent text-xl">✓</span>
+          <span class="text-text-muted">{{ result }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% set faqs = faqs %}
+{% set faqTitle = "Retail Insulation FAQs" %}
+{% include "components/sections/faq-section-glass.njk" %}
+
+{% include "components/sections/cta-section-dark.njk" %}
 
 {% include "sections/related-services.njk" %}
