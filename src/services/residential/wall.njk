@@ -3,9 +3,13 @@ layout: layouts/service-page.njk
 title: "Wall Insulation Services"
 subtitle: "Complete Wall Insulation Solutions for Arizona Homes"
 meta_description: "Professional wall insulation services in Phoenix & Arizona. Interior and exterior wall solutions. Stop heat transfer and reduce noise. Call 623-241-1939"
-tags: 
-  - residential
-  - services
+heroStats:
+  - value: "25%"
+    label: "Energy Savings"
+  - value: "40%"
+    label: "Noise Reduction"
+  - value: "15°F"
+    label: "Temperature Difference"
 benefits:
   - title: "Temperature Control"
     description: "Stop heat transfer through walls for consistent indoor comfort"
@@ -25,7 +29,7 @@ benefits:
   - title: "Year-Round Comfort"
     description: "Maintain comfortable temperatures in every room"
     icon: "🏠"
-process:
+processSteps:
   - title: "Wall Analysis"
     description: "Comprehensive inspection to identify insulation needs and opportunities"
   - title: "Solution Design"
@@ -36,7 +40,7 @@ process:
     description: "Precise application using the best method for your walls"
   - title: "Quality Assurance"
     description: "Thermal verification and professional finishing touches"
-pricing:
+pricingOptions:
   - type: "Interior Wall Insulation"
     price: "$1.50-3.00/sq ft"
     features:
@@ -52,6 +56,13 @@ pricing:
       - "Air sealing included"
       - "Energy savings priority"
     highlighted: true
+faqItems:
+  - question: "Can you insulate walls without removing drywall?"
+    answer: "Yes! We specialize in retrofit techniques like dense pack and injection foam that require only small access holes, professionally patched after installation."
+  - question: "Which walls should I insulate first?"
+    answer: "Prioritize exterior walls, especially west and south-facing walls that receive the most sun. Interior walls between conditioned and unconditioned spaces come next."
+  - question: "How do I know if my walls need insulation?"
+    answer: "Signs include: hot/cold spots on walls, high energy bills, rooms that won't stay comfortable, and visible temperature differences using thermal imaging."
 relatedServices:
   - title: "Dense Pack Insulation"
     url: "/services/residential/dense-pack/"
@@ -61,330 +72,390 @@ relatedServices:
     url: "/services/residential/attic/"
 ---
 
-<section class="py-24 bg-gradient-to-br from-surface-dark via-surface to-surface-dark text-center">
+<section class="content-section">
   <div class="container">
-    <h1 class="text-5xl font-bold text-primary font-display mb-6">{{ title }}</h1>
-    <p class="text-2xl text-primary-light mb-8">{{ subtitle }}</p>
-    <div class="flex flex-wrap justify-center gap-8">
-      <div class="text-center">
-        <p class="text-5xl font-bold text-accent mb-2">25%</p>
-        <p class="text-primary-light">Energy Savings</p>
-      </div>
-      <div class="text-center">
-        <p class="text-5xl font-bold text-accent mb-2">40%</p>
-        <p class="text-primary-light">Noise Reduction</p>
-      </div>
-      <div class="text-center">
-        <p class="text-5xl font-bold text-accent mb-2">15°F</p>
-        <p class="text-primary-light">Temperature Difference</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="py-20 bg-surface-dark">
-  <div class="container">
-    <h2 class="text-4xl font-bold text-primary font-display text-center mb-6">Wall Insulation for Arizona's Extreme Climate</h2>
-    <p class="text-xl text-primary-light text-center max-w-4xl mx-auto mb-12">Your walls are the largest surface area in your home, and in Arizona's extreme heat, uninsulated or poorly insulated walls can account for 35% of your cooling loss. Professional wall insulation creates a thermal barrier that keeps the heat out and your conditioned air in.</p>
+    <h2 class="section-title">Wall Insulation for Arizona's Extreme Climate</h2>
+    <p class="lead text-center">Your walls are the largest surface area in your home, and in Arizona's extreme heat, uninsulated or poorly insulated walls can account for 35% of your cooling loss. Professional wall insulation creates a thermal barrier that keeps the heat out and your conditioned air in.</p>
     
-    <div class="grid md:grid-cols-2 gap-8">
-      {% set wallTypes = [
-        {
-          title: "Interior Wall Insulation",
-          features: [
-            { label: "Purpose", value: "Climate control between rooms" },
-            { label: "Benefits", value: "Sound reduction, privacy, zoned comfort" },
-            { label: "Best Materials", value: "Open-cell foam, fiberglass batts" },
-            { label: "Installation", value: "During construction or renovation" }
-          ],
-          description: "Interior wall insulation creates comfortable, quiet zones within your home, allowing for efficient room-by-room temperature control."
-        },
-        {
-          title: "Exterior Wall Insulation",
-          features: [
-            { label: "Purpose", value: "Primary thermal barrier" },
-            { label: "Benefits", value: "Energy savings, moisture control, comfort" },
-            { label: "Best Materials", value: "Closed-cell foam, dense pack, hybrid systems" },
-            { label: "Installation", value: "New construction or retrofit options" }
-          ],
-          description: "Exterior wall insulation is your first line of defense against Arizona's heat, providing maximum energy efficiency and comfort."
-        }
-      ] %}
-      
-      {% for type in wallTypes %}
-      <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-8 hover:shadow-glow-sm transition-all duration-300">
-        <h3 class="text-2xl font-bold text-primary mb-4">{{ type.title }}</h3>
-        <ul class="space-y-2 mb-4">
-          {% for feature in type.features %}
-          <li class="flex gap-2">
-            <strong class="text-accent">{{ feature.label }}:</strong>
-            <span class="text-text-muted">{{ feature.value }}</span>
-          </li>
-          {% endfor %}
-        </ul>
-        <p class="text-primary-light">{{ type.description }}</p>
+    <div class="grid grid-2">
+      <div class="glass-panel">
+        <h3>Interior Wall Insulation</h3>
+        <div class="feature-list">
+          <div class="feature-item">
+            <strong>Purpose:</strong> Climate control between rooms
+          </div>
+          <div class="feature-item">
+            <strong>Benefits:</strong> Sound reduction, privacy, zoned comfort
+          </div>
+          <div class="feature-item">
+            <strong>Best Materials:</strong> Open-cell foam, fiberglass batts
+          </div>
+          <div class="feature-item">
+            <strong>Installation:</strong> During construction or renovation
+          </div>
+        </div>
+        <p>Interior wall insulation creates comfortable, quiet zones within your home, allowing for efficient room-by-room temperature control.</p>
       </div>
-      {% endfor %}
+      
+      <div class="glass-panel">
+        <h3>Exterior Wall Insulation</h3>
+        <div class="feature-list">
+          <div class="feature-item">
+            <strong>Purpose:</strong> Primary thermal barrier
+          </div>
+          <div class="feature-item">
+            <strong>Benefits:</strong> Energy savings, moisture control, comfort
+          </div>
+          <div class="feature-item">
+            <strong>Best Materials:</strong> Closed-cell foam, dense pack, hybrid systems
+          </div>
+          <div class="feature-item">
+            <strong>Installation:</strong> New construction or retrofit options
+          </div>
+        </div>
+        <p>Exterior wall insulation is your first line of defense against Arizona's heat, providing maximum energy efficiency and comfort.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="py-20 bg-surface">
+<section class="content-section" style="background: var(--primary-medium);">
   <div class="container">
-    <h2 class="text-4xl font-bold text-primary font-display text-center mb-12">Understanding Heat Transfer Through Walls</h2>
-    <div class="grid md:grid-cols-2 gap-12 items-center">
+    <h2 class="section-title">Understanding Heat Transfer Through Walls</h2>
+    <div class="grid grid-2 align-center">
       <div>
-        <h3 class="text-2xl font-bold text-primary mb-4">The Arizona Wall Challenge</h3>
-        <p class="text-lg text-text-muted mb-6">When exterior temperatures reach 115°F, your wall surfaces can exceed 140°F. Without proper insulation, this heat radiates directly into your living spaces, forcing your AC to work overtime.</p>
+        <h3>The Arizona Wall Challenge</h3>
+        <p>When exterior temperatures reach 115°F, your wall surfaces can exceed 140°F. Without proper insulation, this heat radiates directly into your living spaces, forcing your AC to work overtime.</p>
         
-        <h4 class="text-xl font-bold text-primary mb-4">Heat Transfer Methods:</h4>
-        <ul class="space-y-3">
-          <li class="flex items-start gap-3">
-            <span class="text-accent text-xl">→</span>
+        <h4>Heat Transfer Methods:</h4>
+        <div class="heat-transfer-list">
+          <div class="heat-transfer-item">
+            <span class="arrow">→</span>
             <div>
-              <strong class="text-primary">Conduction:</strong>
-              <span class="text-text-muted"> Heat moves through wall materials</span>
+              <strong>Conduction:</strong> Heat moves through wall materials
             </div>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-accent text-xl">→</span>
+          </div>
+          <div class="heat-transfer-item">
+            <span class="arrow">→</span>
             <div>
-              <strong class="text-primary">Convection:</strong>
-              <span class="text-text-muted"> Air movement carries heat through gaps</span>
+              <strong>Convection:</strong> Air movement carries heat through gaps
             </div>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-accent text-xl">→</span>
+          </div>
+          <div class="heat-transfer-item">
+            <span class="arrow">→</span>
             <div>
-              <strong class="text-primary">Radiation:</strong>
-              <span class="text-text-muted"> Heat radiates from hot surfaces</span>
+              <strong>Radiation:</strong> Heat radiates from hot surfaces
             </div>
-          </li>
-        </ul>
+          </div>
+        </div>
         
-        <p class="text-lg text-primary-light mt-6">Professional wall insulation addresses all three methods, creating a comprehensive thermal barrier.</p>
+        <p class="highlight-text">Professional wall insulation addresses all three methods, creating a comprehensive thermal barrier.</p>
       </div>
       
-      <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-8">
-        <h4 class="text-xl font-bold text-primary mb-6 text-center">Temperature Gradient - Insulated vs Uninsulated</h4>
+      <div class="glass-panel">
+        <h4>Temperature Gradient - Insulated vs Uninsulated</h4>
         
-        <div class="space-y-8">
-          <div>
-            <h5 class="text-lg font-bold text-accent mb-3">Uninsulated Wall</h5>
-            <div class="relative h-12 bg-gradient-to-r from-red-600 via-orange-500 to-yellow-400 rounded mb-2">
-              <span class="absolute left-0 -top-6 text-sm text-text-muted">115°F</span>
-              <span class="absolute left-1/2 -translate-x-1/2 -top-6 text-sm text-text-muted">95°F</span>
-              <span class="absolute right-0 -top-6 text-sm text-text-muted">85°F</span>
+        <div class="temperature-comparison">
+          <div class="temp-example">
+            <h5>Uninsulated Wall</h5>
+            <div class="temp-gradient uninsulated">
+              <span class="temp-label left">115°F</span>
+              <span class="temp-label middle">95°F</span>
+              <span class="temp-label right">85°F</span>
             </div>
-            <p class="text-sm text-text-muted">Heat penetrates easily, raising indoor temperatures</p>
+            <p>Heat penetrates easily, raising indoor temperatures</p>
           </div>
           
-          <div>
-            <h5 class="text-lg font-bold text-accent mb-3">Insulated Wall</h5>
-            <div class="relative h-12 bg-gradient-to-r from-red-600 via-green-500 to-blue-500 rounded mb-2">
-              <span class="absolute left-0 -top-6 text-sm text-text-muted">115°F</span>
-              <span class="absolute left-1/2 -translate-x-1/2 -top-6 text-sm text-text-muted">80°F</span>
-              <span class="absolute right-0 -top-6 text-sm text-text-muted">75°F</span>
+          <div class="temp-example">
+            <h5>Insulated Wall</h5>
+            <div class="temp-gradient insulated">
+              <span class="temp-label left">115°F</span>
+              <span class="temp-label middle">80°F</span>
+              <span class="temp-label right">75°F</span>
             </div>
-            <p class="text-sm text-text-muted">Insulation blocks heat, maintaining comfort</p>
+            <p>Insulation blocks heat, maintaining comfort</p>
           </div>
         </div>
       </div>
     </div>
+
+    <style>
+      .feature-list {
+        margin: 1rem 0;
+      }
+      
+      .feature-item {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      
+      .feature-item:last-child {
+        border-bottom: none;
+      }
+      
+      .heat-transfer-list {
+        margin: 1rem 0;
+      }
+      
+      .heat-transfer-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
+      
+      .arrow {
+        color: var(--accent);
+        font-size: 1.5rem;
+        flex-shrink: 0;
+      }
+      
+      .highlight-text {
+        margin-top: 1.5rem;
+        font-size: 1.1rem;
+        color: var(--primary-light);
+      }
+      
+      .temperature-comparison {
+        margin: 1.5rem 0;
+      }
+      
+      .temp-example {
+        margin-bottom: 2rem;
+      }
+      
+      .temp-example h5 {
+        color: var(--accent);
+        margin-bottom: 1rem;
+      }
+      
+      .temp-gradient {
+        position: relative;
+        height: 50px;
+        border-radius: 8px;
+        margin-bottom: 0.5rem;
+      }
+      
+      .temp-gradient.uninsulated {
+        background: linear-gradient(to right, #dc2626, #f97316, #fbbf24);
+      }
+      
+      .temp-gradient.insulated {
+        background: linear-gradient(to right, #dc2626, #10b981, #3b82f6);
+      }
+      
+      .temp-label {
+        position: absolute;
+        top: -25px;
+        font-size: 0.9rem;
+        font-weight: bold;
+      }
+      
+      .temp-label.left {
+        left: 0;
+      }
+      
+      .temp-label.middle {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      
+      .temp-label.right {
+        right: 0;
+      }
+    </style>
   </div>
 </section>
 
-<section class="py-20 bg-surface-dark">
+<section class="content-section">
   <div class="container">
-    <h2 class="text-4xl font-bold text-primary font-display text-center mb-12">Wall Insulation Methods</h2>
+    <h2 class="section-title">Wall Insulation Methods</h2>
     <div class="overflow-x-auto">
-      <table class="w-full bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg overflow-hidden">
+      <table class="comparison-table">
         <thead>
-          <tr class="bg-primary/20">
-            <th class="p-4 text-left text-primary">Method</th>
-            <th class="p-4 text-left text-primary">Best For</th>
-            <th class="p-4 text-left text-primary">R-Value</th>
-            <th class="p-4 text-left text-primary">Installation</th>
-            <th class="p-4 text-left text-primary">Cost</th>
+          <tr>
+            <th>Method</th>
+            <th>Best For</th>
+            <th>R-Value</th>
+            <th>Installation</th>
+            <th>Cost</th>
           </tr>
         </thead>
         <tbody>
-          <tr class="border-t border-primary/10 hover:bg-primary/5">
-            <td class="p-4 font-bold text-accent">Spray Foam</td>
-            <td class="p-4 text-text-muted">Maximum performance, air sealing</td>
-            <td class="p-4 text-text-muted">R-3.7 to R-6.5/inch</td>
-            <td class="p-4 text-text-muted">Professional only</td>
-            <td class="p-4 text-accent">$$$</td>
+          <tr>
+            <td><strong>Spray Foam</strong></td>
+            <td>Maximum performance, air sealing</td>
+            <td>R-3.7 to R-6.5/inch</td>
+            <td>Professional only</td>
+            <td>$$$</td>
           </tr>
-          <tr class="border-t border-primary/10 hover:bg-primary/5">
-            <td class="p-4 font-bold text-accent">Dense Pack</td>
-            <td class="p-4 text-text-muted">Retrofit existing walls</td>
-            <td class="p-4 text-text-muted">R-3.7 to R-4.2/inch</td>
-            <td class="p-4 text-text-muted">Minimal disruption</td>
-            <td class="p-4 text-accent">$$</td>
+          <tr>
+            <td><strong>Dense Pack</strong></td>
+            <td>Retrofit existing walls</td>
+            <td>R-3.7 to R-4.2/inch</td>
+            <td>Minimal disruption</td>
+            <td>$$</td>
           </tr>
-          <tr class="border-t border-primary/10 hover:bg-primary/5">
-            <td class="p-4 font-bold text-accent">Batt Insulation</td>
-            <td class="p-4 text-text-muted">New construction, open walls</td>
-            <td class="p-4 text-text-muted">R-3.2 to R-3.8/inch</td>
-            <td class="p-4 text-text-muted">DIY possible</td>
-            <td class="p-4 text-accent">$</td>
+          <tr>
+            <td><strong>Batt Insulation</strong></td>
+            <td>New construction, open walls</td>
+            <td>R-3.2 to R-3.8/inch</td>
+            <td>DIY possible</td>
+            <td>$</td>
           </tr>
-          <tr class="border-t border-primary/10 hover:bg-primary/5">
-            <td class="p-4 font-bold text-accent">Injection Foam</td>
-            <td class="p-4 text-text-muted">Closed cavities, minimal access</td>
-            <td class="p-4 text-text-muted">R-4.0 to R-5.0/inch</td>
-            <td class="p-4 text-text-muted">Professional only</td>
-            <td class="p-4 text-accent">$$$</td>
+          <tr>
+            <td><strong>Injection Foam</strong></td>
+            <td>Closed cavities, minimal access</td>
+            <td>R-4.0 to R-5.0/inch</td>
+            <td>Professional only</td>
+            <td>$$$</td>
           </tr>
         </tbody>
       </table>
     </div>
     
     <div class="mt-12">
-      <h3 class="text-2xl font-bold text-primary mb-8 text-center">Choosing the Right Method</h3>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {% set factors = [
-          { icon: "🏗️", title: "Wall Construction", desc: "Different methods work better for different wall types. Stud walls, masonry, and steel framing each have optimal insulation approaches." },
-          { icon: "🏠", title: "Home Age", desc: "Older homes often benefit from retrofit methods like dense pack, while new construction allows for comprehensive solutions." },
-          { icon: "💰", title: "Budget", desc: "We offer solutions for every budget, from cost-effective batts to premium spray foam systems." },
-          { icon: "🎯", title: "Goals", desc: "Whether prioritizing energy savings, comfort, or noise reduction, we'll recommend the best approach for your needs." }
-        ] %}
-        
-        {% for factor in factors %}
-        <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-6 hover:shadow-glow-sm transition-all duration-300">
-          <div class="text-4xl mb-4">{{ factor.icon }}</div>
-          <h4 class="text-lg font-bold text-primary mb-2">{{ factor.title }}</h4>
-          <p class="text-sm text-text-muted">{{ factor.desc }}</p>
+      <h3 class="section-subtitle">Choosing the Right Method</h3>
+      <div class="grid grid-4-md">
+        <div class="glass-panel text-center">
+          <div class="icon-large">🏗️</div>
+          <h4>Wall Construction</h4>
+          <p>Different methods work better for different wall types. Stud walls, masonry, and steel framing each have optimal insulation approaches.</p>
         </div>
-        {% endfor %}
+        
+        <div class="glass-panel text-center">
+          <div class="icon-large">🏠</div>
+          <h4>Home Age</h4>
+          <p>Older homes often benefit from retrofit methods like dense pack, while new construction allows for comprehensive solutions.</p>
+        </div>
+        
+        <div class="glass-panel text-center">
+          <div class="icon-large">💰</div>
+          <h4>Budget</h4>
+          <p>We offer solutions for every budget, from cost-effective batts to premium spray foam systems.</p>
+        </div>
+        
+        <div class="glass-panel text-center">
+          <div class="icon-large">🎯</div>
+          <h4>Goals</h4>
+          <p>Whether prioritizing energy savings, comfort, or noise reduction, we'll recommend the best approach for your needs.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-{% set benefits = benefits %}
-{% include "components/benefits-grid.njk" %}
-
-{% set process = process %}
-{% set processTitle = "Our Professional Installation Process" %}
-{% include "components/sections/process-steps-dark.njk" %}
-
-{% set pricing = pricing %}
-{% set pricingTitle = "Wall Insulation Pricing" %}
-{% include "components/cards/pricing-table-dark.njk" %}
-
-<section class="py-20 bg-surface">
+<section class="content-section" style="background: var(--primary-medium);">
   <div class="container">
-    <h2 class="text-4xl font-bold text-primary font-display text-center mb-12">Common Wall Insulation Challenges & Solutions</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      {% set challenges = [
-        { 
-          icon: "🔥", 
-          title: "West-Facing Walls",
-          challenge: "Intense afternoon sun creates hot spots",
-          solution: "High-performance closed-cell foam with reflective barriers for maximum heat resistance"
-        },
-        { 
-          icon: "🏠", 
-          title: "Older Stucco Homes",
-          challenge: "Limited cavity space and moisture concerns",
-          solution: "Injection foam or careful dense pack installation with moisture management"
-        },
-        { 
-          icon: "🔌", 
-          title: "Electrical & Plumbing",
-          challenge: "Working around existing utilities",
-          solution: "Professional techniques ensure complete coverage without compromising systems"
-        },
-        { 
-          icon: "💨", 
-          title: "Air Leakage",
-          challenge: "Gaps around outlets, windows, and penetrations",
-          solution: "Comprehensive air sealing as part of insulation process"
-        }
-      ] %}
+    <h2 class="section-title">Common Wall Insulation Challenges & Solutions</h2>
+    <div class="grid grid-2">
+      <div class="glass-panel">
+        <h3>🔥 West-Facing Walls</h3>
+        <p><strong>Challenge:</strong> Intense afternoon sun creates hot spots</p>
+        <p><strong>Solution:</strong> High-performance closed-cell foam with reflective barriers for maximum heat resistance</p>
+      </div>
       
-      {% for item in challenges %}
-      <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-6 hover:shadow-glow-sm transition-all duration-300">
-        <h3 class="text-xl font-bold text-primary mb-3 flex items-center gap-3">
-          <span class="text-3xl">{{ item.icon }}</span>
-          {{ item.title }}
-        </h3>
-        <p class="text-text-muted mb-2"><strong class="text-accent">Challenge:</strong> {{ item.challenge }}</p>
-        <p class="text-primary-light"><strong class="text-accent">Solution:</strong> {{ item.solution }}</p>
+      <div class="glass-panel">
+        <h3>🏠 Older Stucco Homes</h3>
+        <p><strong>Challenge:</strong> Limited cavity space and moisture concerns</p>
+        <p><strong>Solution:</strong> Injection foam or careful dense pack installation with moisture management</p>
       </div>
-      {% endfor %}
+      
+      <div class="glass-panel">
+        <h3>🔌 Electrical & Plumbing</h3>
+        <p><strong>Challenge:</strong> Working around existing utilities</p>
+        <p><strong>Solution:</strong> Professional techniques ensure complete coverage without compromising systems</p>
+      </div>
+      
+      <div class="glass-panel">
+        <h3>💨 Air Leakage</h3>
+        <p><strong>Challenge:</strong> Gaps around outlets, windows, and penetrations</p>
+        <p><strong>Solution:</strong> Comprehensive air sealing as part of insulation process</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="py-20 bg-surface-dark">
+<section class="content-section">
   <div class="container">
-    <h2 class="text-4xl font-bold text-primary font-display text-center mb-12">Wall Insulation ROI in Arizona</h2>
-    <div class="max-w-4xl mx-auto">
-      <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-8">
-        <h3 class="text-2xl font-bold text-primary mb-6">Typical 2,000 sq ft Home</h3>
-        <div class="space-y-4 mb-8">
-          <div class="flex justify-between items-center py-3 border-b border-primary/10">
-            <span class="text-primary-light">Average Installation Cost:</span>
-            <span class="text-accent font-bold">$3,000 - $6,000</span>
-          </div>
-          <div class="flex justify-between items-center py-3 border-b border-primary/10">
-            <span class="text-primary-light">Annual Energy Savings:</span>
-            <span class="text-accent font-bold">$600 - $1,200</span>
-          </div>
-          <div class="flex justify-between items-center py-3 border-b border-primary/10">
-            <span class="text-primary-light">Summer Peak Savings:</span>
-            <span class="text-accent font-bold">$150 - $250/month</span>
-          </div>
-          <div class="flex justify-between items-center py-4 bg-primary/10 rounded px-4">
-            <span class="text-primary font-bold">Payback Period:</span>
-            <span class="text-accent font-bold text-xl">3-5 years</span>
-          </div>
+    <h2 class="section-title">Wall Insulation ROI in Arizona</h2>
+    <div class="glass-panel max-w-900 mx-auto">
+      <h3>Typical 2,000 sq ft Home</h3>
+      <div class="roi-breakdown">
+        <div class="roi-item">
+          <span class="roi-label">Average Installation Cost:</span>
+          <span class="roi-value">$3,000 - $6,000</span>
         </div>
-        
-        <div>
-          <h4 class="text-xl font-bold text-primary mb-4">Additional Value:</h4>
-          <ul class="space-y-2">
-            <li class="flex items-start gap-3">
-              <span class="text-accent">✓</span>
-              <span class="text-primary-light">Increased home value (3-5% typical)</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-accent">✓</span>
-              <span class="text-primary-light">Reduced HVAC wear and maintenance</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-accent">✓</span>
-              <span class="text-primary-light">Utility rebates available</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-accent">✓</span>
-              <span class="text-primary-light">Enhanced comfort (priceless!)</span>
-            </li>
-          </ul>
+        <div class="roi-item">
+          <span class="roi-label">Annual Energy Savings:</span>
+          <span class="roi-value">$600 - $1,200</span>
+        </div>
+        <div class="roi-item">
+          <span class="roi-label">Summer Peak Savings:</span>
+          <span class="roi-value">$150 - $250/month</span>
+        </div>
+        <div class="roi-item highlight">
+          <span class="roi-label">Payback Period:</span>
+          <span class="roi-value">3-5 years</span>
         </div>
       </div>
+      
+      <h4>Additional Value:</h4>
+      <ul class="value-list">
+        <li>✓ Increased home value (3-5% typical)</li>
+        <li>✓ Reduced HVAC wear and maintenance</li>
+        <li>✓ Utility rebates available</li>
+        <li>✓ Enhanced comfort (priceless!)</li>
+      </ul>
     </div>
+
+    <style>
+      .roi-breakdown {
+        margin: 2rem 0;
+      }
+      
+      .roi-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      
+      .roi-item.highlight {
+        background: var(--primary);
+        border-radius: 8px;
+        margin-top: 1rem;
+        border: none;
+      }
+      
+      .roi-label {
+        font-weight: 500;
+      }
+      
+      .roi-value {
+        font-weight: bold;
+        color: var(--accent);
+      }
+      
+      .roi-item.highlight .roi-value {
+        color: white;
+      }
+      
+      .value-list {
+        list-style: none;
+        padding: 0;
+        margin-top: 1rem;
+      }
+      
+      .value-list li {
+        padding: 0.5rem 0;
+        color: var(--primary-light);
+      }
+    </style>
   </div>
 </section>
 
-{% set faqs = [
-  {
-    question: "Can you insulate walls without removing drywall?",
-    answer: "Yes! We specialize in retrofit techniques like dense pack and injection foam that require only small access holes, professionally patched after installation."
-  },
-  {
-    question: "Which walls should I insulate first?",
-    answer: "Prioritize exterior walls, especially west and south-facing walls that receive the most sun. Interior walls between conditioned and unconditioned spaces come next."
-  },
-  {
-    question: "How do I know if my walls need insulation?",
-    answer: "Signs include: hot/cold spots on walls, high energy bills, rooms that won't stay comfortable, and visible temperature differences using thermal imaging."
-  }
-] %}
-{% set faqTitle = "Wall Insulation FAQs" %}
-{% include "components/sections/faq-section-glass.njk" %}
-
+{% set ctaTitle = "Ready to Insulate Your Walls?" %}
+{% set ctaSubtitle = "Stop heat transfer and enjoy a more comfortable, energy-efficient home" %}
 {% include "components/sections/cta-section-dark.njk" %}
