@@ -149,7 +149,7 @@
             font-size: 0.8em; 
         }
         
-        /* Mobile Menu */
+        /* Mobile Menu - Fixed sliding animation approach */
         .mobile-menu-toggle { 
             display: none; 
             background: none; 
@@ -170,17 +170,26 @@
         @media (max-width: 768px) {
             .mobile-menu-toggle { display: flex; }
             .nav-list { 
-                display: none; 
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: rgba(10, 10, 10, 0.98);
+                position: fixed;
+                top: 90px;
+                right: -100%;
+                width: 100%;
+                max-width: 300px;
+                height: calc(100vh - 90px);
+                background: rgba(10, 10, 10, 0.95);
+                backdrop-filter: blur(30px);
                 flex-direction: column;
-                padding: 1rem;
+                align-items: flex-start;
+                padding: 2rem;
                 gap: 1rem;
+                border-left: 1px solid rgba(0, 255, 255, 0.3);
+                box-shadow: -10px 0 30px rgba(0, 0, 0, 0.8);
+                transition: right 0.3s ease;
+                overflow-y: auto;
             }
-            .nav-list.mobile-active { display: flex; }
+            .nav-list.mobile-active { 
+                right: 0; 
+            }
         }
         
         /* Hero */
