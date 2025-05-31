@@ -13,7 +13,7 @@
     {% for faq in faqs %}
     <div class="faq-item" data-faq-index="{{ loop.index }}">
       <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-{{ loop.index }}">
-        <span>{{ faq.question }}</span>
+        <span class="question-text">{{ faq.question }}</span>
         <span class="faq-icon">+</span>
       </button>
       <div class="faq-answer" id="faq-answer-{{ loop.index }}" aria-hidden="true">
@@ -29,6 +29,8 @@
 <style>
 .faq-section {
   padding: 3rem 0;
+  position: relative;
+  z-index: 1;
 }
 
 .faq-section .section-title {
@@ -42,30 +44,36 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradient-flow 3s ease infinite;
+  position: relative;
+  z-index: 3;
 }
 
 .faq-container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .faq-item {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   background: var(--surface-dark);
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
   transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
 }
 
 .faq-item:hover {
   border-color: var(--glow-primary);
-  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+  box-shadow: 0 8px 25px rgba(0, 255, 255, 0.2);
 }
 
 .faq-question {
   width: 100%;
-  padding: 1.5rem;
+  padding: 1.5rem 2rem;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -73,10 +81,12 @@
   justify-content: space-between;
   align-items: center;
   font-size: 1.1rem;
-  font-weight: bold;
+  font-weight: 600;
   color: var(--primary);
   text-align: left;
   transition: all 0.3s ease;
+  position: relative;
+  z-index: 3;
 }
 
 .faq-question:hover {
@@ -88,11 +98,29 @@
   outline-offset: -2px;
 }
 
+.question-text {
+  flex: 1;
+  padding-right: 1rem;
+  line-height: 1.4;
+  /* Ensure text stays above any background elements */
+  position: relative;
+  z-index: 4;
+}
+
 .faq-icon {
   font-size: 1.5rem;
   color: var(--glow-primary);
   transition: transform 0.3s ease;
   line-height: 1;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Ensure icon stays above any background elements */
+  position: relative;
+  z-index: 4;
 }
 
 .faq-item.active .faq-icon {
@@ -102,18 +130,22 @@
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-out;
+  transition: max-height 0.4s ease-out;
+  position: relative;
+  z-index: 2;
 }
 
 .faq-item.active .faq-answer {
-  max-height: 1000px;
-  transition: max-height 0.5s ease-in;
+  max-height: 2000px;
+  transition: max-height 0.6s ease-in;
 }
 
 .faq-answer-content {
-  padding: 0 1.5rem 1.5rem;
+  padding: 0 2rem 1.5rem;
   color: var(--text-light);
   line-height: 1.6;
+  position: relative;
+  z-index: 2;
 }
 
 .faq-answer-content p {
@@ -134,15 +166,67 @@
   margin-bottom: 0.5rem;
 }
 
+.faq-answer-content strong {
+  color: var(--primary);
+}
+
+/* Mobile optimizations */
 @media (max-width: 768px) {
   .faq-section .section-title {
     font-size: 2rem;
+    margin-bottom: 2rem;
   }
   
   .faq-question {
     font-size: 1rem;
-    padding: 1.25rem;
+    padding: 1.25rem 1.5rem;
   }
+  
+  .faq-answer-content {
+    padding: 0 1.5rem 1.25rem;
+    font-size: 0.95rem;
+  }
+  
+  .question-text {
+    padding-right: 0.75rem;
+  }
+  
+  .faq-icon {
+    font-size: 1.3rem;
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  .faq-question {
+    padding: 1rem 1.25rem;
+    font-size: 0.95rem;
+  }
+  
+  .faq-answer-content {
+    padding: 0 1.25rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .faq-section .section-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Ensure FAQ section doesn't interfere with other page elements */
+.faq-section * {
+  position: relative;
+}
+
+/* Specific fix for overlapping issues with animated titles */
+.faq-section {
+  isolation: isolate;
+}
+
+.faq-item {
+  isolation: isolate;
 }
 </style>
 
