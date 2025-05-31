@@ -3,7 +3,7 @@
 ## Overview
 This document tracks performance optimizations for insulationcontractorsofarizona.com based on PageSpeed Insights analysis from May 30, 2025.
 
-**Current Performance Score: 74/100**
+**Current Performance Score: 82/100** (as of May 30, 2025)
 **Target Performance Score: 90+/100**
 
 ## Priority Issues & Solutions
@@ -45,6 +45,19 @@ This document tracks performance optimizations for insulationcontractorsofarizon
 - [x] All CSS now loads via single combined file with hash for cache busting
 - [x] Removed individual CSS file references
 - [x] Font loading optimized with preconnect tags
+- [x] All major pages now using base-optimized.njk (May 31, 2025)
+
+### 🔴 HIGH: First Contentful Paint (3.0s)
+**Status:** ⏳ IN PROGRESS
+**Issue:** Still showing red score for FCP despite optimizations
+
+**Remaining Issues to Address:**
+- [ ] Reduce server response time (currently showing as red in PageSpeed)
+- [ ] Optimize critical rendering path further
+- [ ] Consider inlining more critical CSS
+- [ ] Implement resource hints (prefetch/preconnect)
+- [ ] Add width/height attributes to ALL images to prevent CLS
+- [ ] Consider static HTML generation for faster initial paint
 
 ### ✅ FIXED: Image Issues (May 30, 2025)
 **Status:** ✅ COMPLETED
@@ -69,7 +82,7 @@ This document tracks performance optimizations for insulationcontractorsofarizon
 - [ ] Consider virtual scrolling for long lists
 - [ ] Reduce particles complexity or lazy load animation
 
-### 🟡 MEDIUM: Largest Contentful Paint (5.3s)
+### 🟡 MEDIUM: Largest Contentful Paint (3.8s)
 **Status:** ⏳ Partially Complete
 **Issue:** Main content takes too long to render
 
@@ -82,6 +95,7 @@ This document tracks performance optimizations for insulationcontractorsofarizon
 ### ✅ GOOD: Core Web Vitals
 - Total Blocking Time: 0ms ✅
 - Cumulative Layout Shift: 0 ✅
+- Speed Index: 3.4s (improved from 4.5s)
 
 ## Implementation Checklist
 
@@ -100,6 +114,7 @@ This document tracks performance optimizations for insulationcontractorsofarizon
 - [x] Remove individual CSS file references
 - [x] Split critical vs non-critical CSS
 - [x] Implement async CSS loading for non-critical styles
+- [x] Update all major pages to use base-optimized.njk (May 31, 2025)
 
 ### Phase 3: Image Optimization (Week 2) ⏳ IN PROGRESS
 - [x] Fix all broken image references
@@ -122,13 +137,14 @@ This document tracks performance optimizations for insulationcontractorsofarizon
 - [ ] Optimize web fonts loading strategy
 - [ ] Consider CDN for static assets
 - [ ] Implement HTTP/2 push for critical resources
+- [ ] Server-side optimizations (reduce initial server response time)
 
 ## Next Steps
 
-1. **Replace base.njk with base-optimized.njk** - The optimized version is ready to use
-2. **Test combined CSS in production** - Verify all styles load correctly
-3. **Add width/height to all images** - Prevent layout shift
-4. **Implement JavaScript minification** - Further reduce file size
+1. **Focus on First Contentful Paint** - Still showing red, needs immediate attention
+2. **Add width/height to all images** - Prevent layout shift
+3. **Implement JavaScript minification** - Further reduce file size
+4. **Server response time optimization** - Work with Netlify settings
 5. **Run PageSpeed test** - Verify improvements are working
 
 ## Monitoring & Testing
@@ -143,9 +159,9 @@ This document tracks performance optimizations for insulationcontractorsofarizon
 
 After implementing all optimizations:
 - Performance Score: 90-95
-- First Contentful Paint: < 1.5s
-- Largest Contentful Paint: < 2.5s
-- Speed Index: < 3.0s
+- First Contentful Paint: < 1.5s (currently 3.0s)
+- Largest Contentful Paint: < 2.5s (currently 3.8s)
+- Speed Index: < 3.0s (currently 3.4s)
 - No FOUC/text flashing
 - Improved user experience
 
@@ -159,5 +175,5 @@ After implementing all optimizations:
 ---
 
 **Last Updated:** May 31, 2025
-**Status:** Major optimizations complete, ready for deployment
-**Next Review:** June 6, 2025
+**Status:** Major CSS optimizations complete, FCP still needs work
+**Next Review:** June 3, 2025
