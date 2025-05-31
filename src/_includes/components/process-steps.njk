@@ -17,9 +17,6 @@
         <h3>{{ step.title }}</h3>
         <p>{{ step.description }}</p>
       </div>
-      {% if not loop.last %}
-      <div class="step-connector"></div>
-      {% endif %}
     </div>
     {% endfor %}
   </div>
@@ -46,37 +43,84 @@
 .steps-wrapper {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Desktop layout - responsive grid based on number of steps */
+@media (min-width: 1024px) {
+  .steps-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    max-width: 1400px;
+  }
+  
+  /* For 3 steps or fewer, limit to that many columns */
+  .steps-wrapper[data-step-count="1"] {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+  
+  .steps-wrapper[data-step-count="2"] {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+  }
+  
+  .steps-wrapper[data-step-count="3"] {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+  }
+  
+  /* Connection line for desktop */
+  .steps-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, var(--glow-primary) 20%, var(--glow-primary) 80%, transparent 100%);
+    z-index: 0;
+    opacity: 0.3;
+  }
+}
+
+/* Tablet layout */
+@media (min-width: 769px) and (max-width: 1023px) {
+  .steps-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    max-width: 900px;
+  }
 }
 
 .process-step {
   position: relative;
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 2.5rem 1.5rem;
   background: var(--surface-dark);
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: 12px;
   transition: all 0.3s ease;
+  z-index: 1;
 }
 
 .process-step:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
   border-color: var(--glow-primary);
-  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+  box-shadow: 0 15px 40px rgba(0, 255, 255, 0.3);
 }
 
 .step-number {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   margin: 0 auto 1.5rem;
   background: var(--glow-gradient);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: var(--surface-dark);
   position: relative;
@@ -98,93 +142,95 @@
 .step-number::after {
   content: '';
   position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   background: var(--glow-gradient);
   border-radius: 50%;
   opacity: 0.5;
   z-index: -1;
-  animation: rotate 3s linear infinite;
+  animation: rotate 4s linear infinite;
 }
 
 .step-content h3 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: var(--primary);
   margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-weight: 600;
 }
 
 .step-content p {
   color: var(--text-light);
   line-height: 1.6;
+  font-size: 1rem;
 }
 
-/* Step connector line for desktop */
-@media (min-width: 769px) {
-  .steps-wrapper {
-    position: relative;
-  }
-  
-  .steps-wrapper::before {
-    content: '';
-    position: absolute;
-    top: 60px;
-    left: 50%;
-    right: 50%;
-    height: 2px;
-    background: var(--glow-gradient);
-    transform: translateX(-50%);
-    width: 80%;
-    z-index: 0;
-    opacity: 0.3;
-  }
-  
-  .process-step {
-    position: relative;
-    z-index: 1;
-  }
-}
-
-/* Vertical layout for mobile */
+/* Mobile layout - vertical timeline */
 @media (max-width: 768px) {
   .steps-wrapper {
     grid-template-columns: 1fr;
     position: relative;
-    padding-left: 40px;
+    padding-left: 50px;
+    gap: 2.5rem;
   }
   
   .steps-wrapper::before {
     content: '';
     position: absolute;
-    top: 30px;
-    bottom: 30px;
-    left: 30px;
-    width: 2px;
-    background: var(--glow-gradient);
-    opacity: 0.3;
+    top: 35px;
+    bottom: 35px;
+    left: 35px;
+    width: 3px;
+    background: linear-gradient(180deg, transparent 0%, var(--glow-primary) 10%, var(--glow-primary) 90%, transparent 100%);
+    opacity: 0.4;
+    border-radius: 2px;
   }
   
   .process-step {
     text-align: left;
-    display: flex;
-    align-items: flex-start;
-    gap: 1.5rem;
+    padding: 2rem;
+    margin-left: 0;
   }
   
   .step-number {
     position: absolute;
-    left: -40px;
+    left: -50px;
+    top: 2rem;
     margin: 0;
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
+    width: 50px;
+    height: 50px;
+    font-size: 1.4rem;
+  }
+  
+  .step-content {
+    margin-left: 0;
   }
   
   .process-steps .section-title {
     font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .step-content h3 {
+    font-size: 1.2rem;
+  }
+  
+  .step-content p {
+    font-size: 0.95rem;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
   }
 }
 
@@ -197,3 +243,14 @@
   }
 }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Set data attribute for step count to help with CSS grid
+  const stepsWrappers = document.querySelectorAll('.steps-wrapper');
+  stepsWrappers.forEach(wrapper => {
+    const stepCount = wrapper.querySelectorAll('.process-step').length;
+    wrapper.setAttribute('data-step-count', stepCount);
+  });
+});
+</script>
