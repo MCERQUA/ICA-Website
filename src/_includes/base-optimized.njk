@@ -21,7 +21,7 @@
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         html { font-size: 16px; scroll-behavior: smooth; }
         
-        /* FOUC Prevention - Start with invisible body */
+        /* FOUC Prevention - Start with invisible body but ALWAYS show images */
         body { 
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; 
             line-height: 1.6; 
@@ -30,10 +30,54 @@
             opacity: 0;
             overflow-x: hidden; 
             transition: opacity 0.3s ease-in-out;
+            /* Force show body after max 2 seconds */
+            animation: forceShow 2s ease-in-out forwards;
         }
         
         body.loaded { 
             opacity: 1;
+        }
+        
+        /* CRITICAL: Always show images regardless of loading state */
+        img { 
+            opacity: 1 !important; 
+            visibility: visible !important; 
+            display: block !important;
+        }
+        
+        /* Force show content sections after 2.5 seconds maximum */
+        .content-section,
+        .testimonials, 
+        .service-areas, 
+        .blog-preview, 
+        .additional-services,
+        .site-footer { 
+            opacity: 0; 
+            transition: opacity 0.3s ease-in-out;
+            /* Emergency fallback animation */
+            animation: showContent 2.5s ease-in-out forwards;
+        }
+        
+        body.loaded .content-section,
+        body.loaded .testimonials, 
+        body.loaded .service-areas, 
+        body.loaded .blog-preview, 
+        body.loaded .additional-services,
+        body.loaded .site-footer { 
+            opacity: 1; 
+        }
+        
+        /* Fallback animations */
+        @keyframes forceShow {
+            0% { opacity: 0; }
+            80% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        
+        @keyframes showContent {
+            0% { opacity: 0; }
+            85% { opacity: 0; }
+            100% { opacity: 1; }
         }
         
         /* Typography */
@@ -201,26 +245,6 @@
             background: #e55a2b; 
             transform: translateY(-2px); 
             box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3); 
-        }
-        
-        /* Hide content sections initially */
-        .content-section,
-        .testimonials, 
-        .service-areas, 
-        .blog-preview, 
-        .additional-services,
-        .site-footer { 
-            opacity: 0; 
-            transition: opacity 0.3s ease-in-out; 
-        }
-        
-        body.loaded .content-section,
-        body.loaded .testimonials, 
-        body.loaded .service-areas, 
-        body.loaded .blog-preview, 
-        body.loaded .additional-services,
-        body.loaded .site-footer { 
-            opacity: 1; 
         }
     </style>
     
@@ -403,39 +427,69 @@
         </div>
     </footer>
     
-    <!-- Improved FOUC prevention script -->
+    <!-- Ultra-aggressive FOUC prevention with multiple fallbacks -->
     <script>
-    // Reveal body after fonts and critical resources are loaded
+    // Multiple loading detection methods
     (function() {
-        // Check if fonts are loaded
-        function checkFontsLoaded() {
-            if (document.fonts && document.fonts.ready) {
-                document.fonts.ready.then(function() {
-                    document.body.classList.add('loaded');
-                });
-            } else {
-                // Fallback for browsers without font loading API
-                if (document.readyState === 'complete') {
-                    document.body.classList.add('loaded');
-                } else {
-                    window.addEventListener('load', function() {
-                        document.body.classList.add('loaded');
-                    });
-                }
+        let loaded = false;
+        
+        function markLoaded() {
+            if (!loaded) {
+                loaded = true;
+                document.body.classList.add('loaded');
+                console.log('Page marked as loaded');
             }
         }
         
-        // Start checking
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', checkFontsLoaded);
-        } else {
-            checkFontsLoaded();
+        // Method 1: Font loading API
+        if (document.fonts && document.fonts.ready) {
+            document.fonts.ready.then(markLoaded);
         }
         
-        // Fallback to ensure body shows after 1 second max
+        // Method 2: DOM ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', markLoaded);
+        } else {
+            markLoaded();
+        }
+        
+        // Method 3: Window load
+        window.addEventListener('load', markLoaded);
+        
+        // Method 4: Images loaded check
+        const images = document.getElementsByTagName('img');
+        let imageLoadCount = 0;
+        
+        function checkAllImagesLoaded() {
+            imageLoadCount++;
+            if (imageLoadCount >= Math.min(images.length, 5)) { // Check first 5 images
+                markLoaded();
+            }
+        }
+        
+        for (let i = 0; i < Math.min(images.length, 5); i++) {
+            if (images[i].complete) {
+                checkAllImagesLoaded();
+            } else {
+                images[i].addEventListener('load', checkAllImagesLoaded);
+                images[i].addEventListener('error', checkAllImagesLoaded);
+            }
+        }
+        
+        // Method 5: Quick fallback timer - reduced to 500ms
+        setTimeout(markLoaded, 500);
+        
+        // Method 6: Emergency override - force show after 1.5 seconds no matter what
         setTimeout(function() {
-            document.body.classList.add('loaded');
-        }, 1000);
+            markLoaded();
+            // Force show everything manually
+            document.body.style.opacity = '1';
+            const sections = document.querySelectorAll('.content-section, .testimonials, .service-areas, .blog-preview, .additional-services, .site-footer');
+            sections.forEach(section => {
+                section.style.opacity = '1';
+            });
+            console.log('Emergency override activated');
+        }, 1500);
     })();
     </script>
     
