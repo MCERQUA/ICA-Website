@@ -61,466 +61,358 @@ relatedServices:
     url: "/services/residential/crawl-space/"
 ---
 
-<style>
-  .removal-hero {
-    background: linear-gradient(135deg, rgba(30, 60, 114, 0.95), rgba(42, 82, 152, 0.95)), url('/images/insulation-removal.jpg') center/cover;
-    padding: 80px 0;
-    color: white;
-    text-align: center;
-  }
-  
-  .removal-reasons {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin: 40px 0;
-  }
-  
-  .reason-card {
-    background: rgba(255, 255, 255, 0.02);
-    border: 2px solid;
-    border-radius: 15px;
-    padding: 25px;
-    transition: all 0.3s ease;
-  }
-  
-  .reason-card.urgent {
-    border-color: rgba(255, 60, 60, 0.5);
-    background: rgba(255, 60, 60, 0.05);
-  }
-  
-  .reason-card.urgent:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(255, 60, 60, 0.3);
-    border-color: rgba(255, 60, 60, 0.8);
-  }
-  
-  .reason-card.recommended {
-    border-color: rgba(255, 200, 60, 0.5);
-    background: rgba(255, 200, 60, 0.05);
-  }
-  
-  .reason-card.recommended:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(255, 200, 60, 0.3);
-    border-color: rgba(255, 200, 60, 0.8);
-  }
-  
-  .safety-protocols {
-    background: linear-gradient(180deg, var(--surface) 0%, var(--surface-dark) 100%);
-    padding: 60px 0;
-  }
-  
-  .protocol-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin: 40px 0;
-  }
-  
-  .protocol-item {
-    text-align: center;
-    padding: 30px;
-    background: rgba(0, 255, 255, 0.05);
-    border-radius: 15px;
-    border: 1px solid rgba(0, 255, 255, 0.2);
-  }
-  
-  .protocol-icon {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    display: block;
-  }
-  
-  .contamination-types {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 40px;
-    margin: 40px 0;
-  }
-  
-  .contamination-card {
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 15px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-  }
-  
-  .contamination-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 40px rgba(0, 255, 255, 0.3);
-  }
-  
-  .contamination-header {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .contamination-content {
-    padding: 30px;
-  }
-  
-  .before-after-showcase {
-    background: var(--surface-dark);
-    padding: 60px 0;
-    margin: 40px 0;
-  }
-  
-  .ba-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin: 40px 0;
-  }
-  
-  .ba-item {
-    position: relative;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  }
-  
-  .ba-label {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background: var(--primary);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    z-index: 1;
-  }
-  
-  .warning-signs {
-    background: rgba(255, 60, 60, 0.1);
-    border: 2px solid rgba(255, 60, 60, 0.3);
-    border-radius: 15px;
-    padding: 30px;
-    margin: 40px 0;
-  }
-  
-  .warning-signs h3 {
-    color: #ff6666;
-    margin-bottom: 20px;
-  }
-  
-  .warning-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-  }
-  
-  .warning-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .warning-icon {
-    color: #ff6666;
-    font-size: 1.5rem;
-  }
-</style>
-
-<section class="removal-hero">
+<section class="py-24 bg-gradient-to-br from-surface-dark via-surface to-surface-dark text-center">
   <div class="container">
-    <h1>{{ title }}</h1>
-    <p class="lead">{{ subtitle }}</p>
-    <div class="hero-stats">
-      <div class="stat">
-        <span class="stat-number">100%</span>
-        <span class="stat-label">Safe Removal</span>
+    <h1 class="text-5xl font-bold text-primary font-display mb-6">{{ title }}</h1>
+    <p class="text-2xl text-primary-light mb-8">{{ subtitle }}</p>
+    <div class="flex flex-wrap justify-center gap-8">
+      <div class="text-center">
+        <p class="text-5xl font-bold text-accent mb-2">100%</p>
+        <p class="text-primary-light">Safe Removal</p>
       </div>
-      <div class="stat">
-        <span class="stat-number">24hr</span>
-        <span class="stat-label">Typical Timeline</span>
+      <div class="text-center">
+        <p class="text-5xl font-bold text-accent mb-2">24hr</p>
+        <p class="text-primary-light">Typical Timeline</p>
       </div>
-      <div class="stat">
-        <span class="stat-number">90%</span>
-        <span class="stat-label">Air Quality Improvement</span>
+      <div class="text-center">
+        <p class="text-5xl font-bold text-accent mb-2">90%</p>
+        <p class="text-primary-light">Air Quality Improvement</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="content-section">
+<section class="py-20 bg-surface-dark">
   <div class="container">
-    <h2>When to Remove Old Insulation</h2>
-    <p class="lead">Old or damaged insulation doesn't just lose effectiveness—it can become a health hazard. Professional removal is essential before installing new insulation for optimal performance and safety.</p>
+    <h2 class="text-4xl font-bold text-primary font-display text-center mb-6">When to Remove Old Insulation</h2>
+    <p class="text-xl text-primary-light text-center max-w-4xl mx-auto mb-12">Old or damaged insulation doesn't just lose effectiveness—it can become a health hazard. Professional removal is essential before installing new insulation for optimal performance and safety.</p>
     
-    <div class="removal-reasons">
-      <div class="reason-card urgent">
-        <h3>🚨 Urgent Removal Needed</h3>
-        <ul>
-          <li><strong>Rodent Infestation:</strong> Droppings, urine, and nesting materials</li>
-          <li><strong>Water Damage:</strong> Mold growth and structural concerns</li>
-          <li><strong>Fire/Smoke Damage:</strong> Toxic residues and odors</li>
-          <li><strong>Asbestos Presence:</strong> Professional abatement required</li>
-          <li><strong>Severe Contamination:</strong> Health hazards present</li>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-red-900/20 backdrop-blur border-2 border-red-500/50 rounded-lg p-8 hover:shadow-glow-red transition-all duration-300">
+        <h3 class="text-2xl font-bold text-red-400 mb-4 flex items-center gap-3">
+          <span>🚨</span> Urgent Removal Needed
+        </h3>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3">
+            <span class="text-red-400">•</span>
+            <div>
+              <strong class="text-primary">Rodent Infestation:</strong>
+              <span class="text-text-muted"> Droppings, urine, and nesting materials</span>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-red-400">•</span>
+            <div>
+              <strong class="text-primary">Water Damage:</strong>
+              <span class="text-text-muted"> Mold growth and structural concerns</span>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-red-400">•</span>
+            <div>
+              <strong class="text-primary">Fire/Smoke Damage:</strong>
+              <span class="text-text-muted"> Toxic residues and odors</span>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-red-400">•</span>
+            <div>
+              <strong class="text-primary">Asbestos Presence:</strong>
+              <span class="text-text-muted"> Professional abatement required</span>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-red-400">•</span>
+            <div>
+              <strong class="text-primary">Severe Contamination:</strong>
+              <span class="text-text-muted"> Health hazards present</span>
+            </div>
+          </li>
         </ul>
       </div>
       
-      <div class="reason-card recommended">
-        <h3>⚠️ Removal Recommended</h3>
-        <ul>
-          <li><strong>Age 20+ Years:</strong> Degraded performance and settling</li>
-          <li><strong>Dust Accumulation:</strong> Allergens and air quality issues</li>
-          <li><strong>Pest Activity:</strong> Even without visible infestation</li>
-          <li><strong>Renovation Plans:</strong> Access needed for other work</li>
-          <li><strong>Energy Upgrade:</strong> Preparing for modern insulation</li>
+      <div class="bg-yellow-900/20 backdrop-blur border-2 border-yellow-500/50 rounded-lg p-8 hover:shadow-glow-yellow transition-all duration-300">
+        <h3 class="text-2xl font-bold text-yellow-400 mb-4 flex items-center gap-3">
+          <span>⚠️</span> Removal Recommended
+        </h3>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3">
+            <span class="text-yellow-400">•</span>
+            <div>
+              <strong class="text-primary">Age 20+ Years:</strong>
+              <span class="text-text-muted"> Degraded performance and settling</span>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-yellow-400">•</span>
+            <div>
+              <strong class="text-primary">Dust Accumulation:</strong>
+              <span class="text-text-muted"> Allergens and air quality issues</span>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-yellow-400">•</span>
+            <div>
+              <strong class="text-primary">Pest Activity:</strong>
+              <span class="text-text-muted"> Even without visible infestation</span>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-yellow-400">•</span>
+            <div>
+              <strong class="text-primary">Renovation Plans:</strong>
+              <span class="text-text-muted"> Access needed for other work</span>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-yellow-400">•</span>
+            <div>
+              <strong class="text-primary">Energy Upgrade:</strong>
+              <span class="text-text-muted"> Preparing for modern insulation</span>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
     
-    <div class="warning-signs">
-      <h3>⚠️ Warning Signs Your Insulation Needs Removal</h3>
-      <div class="warning-list">
-        <div class="warning-item">
-          <span class="warning-icon">🔴</span>
-          <span>Visible rodent droppings or tunneling</span>
+    <div class="bg-red-900/10 border-2 border-red-500/30 rounded-lg p-8 mt-8">
+      <h3 class="text-2xl font-bold text-red-400 mb-6 flex items-center gap-3">
+        <span>⚠️</span> Warning Signs Your Insulation Needs Removal
+      </h3>
+      <div class="grid md:grid-cols-2 gap-4">
+        {% set warnings = [
+          "Visible rodent droppings or tunneling",
+          "Strong, persistent odors from attic/crawl space",
+          "Water stains or moisture damage",
+          "Compressed or settled insulation",
+          "Increased allergy symptoms at home",
+          "Higher than normal energy bills"
+        ] %}
+        {% for warning in warnings %}
+        <div class="flex items-center gap-3">
+          <span class="text-red-400 text-xl">🔴</span>
+          <span class="text-text-muted">{{ warning }}</span>
         </div>
-        <div class="warning-item">
-          <span class="warning-icon">🔴</span>
-          <span>Strong, persistent odors from attic/crawl space</span>
-        </div>
-        <div class="warning-item">
-          <span class="warning-icon">🔴</span>
-          <span>Water stains or moisture damage</span>
-        </div>
-        <div class="warning-item">
-          <span class="warning-icon">🔴</span>
-          <span>Compressed or settled insulation</span>
-        </div>
-        <div class="warning-item">
-          <span class="warning-icon">🔴</span>
-          <span>Increased allergy symptoms at home</span>
-        </div>
-        <div class="warning-item">
-          <span class="warning-icon">🔴</span>
-          <span>Higher than normal energy bills</span>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </div>
 </section>
 
-<section class="safety-protocols">
+<section class="py-20 bg-surface">
   <div class="container">
-    <h2>Our Safety-First Removal Process</h2>
-    <p class="lead">Professional equipment and protocols ensure safe, thorough removal</p>
+    <h2 class="text-4xl font-bold text-primary font-display text-center mb-6">Our Safety-First Removal Process</h2>
+    <p class="text-xl text-primary-light text-center max-w-3xl mx-auto mb-12">Professional equipment and protocols ensure safe, thorough removal</p>
     
-    <div class="protocol-grid">
-      <div class="protocol-item">
-        <span class="protocol-icon">🛡️</span>
-        <h3>Containment Setup</h3>
-        <p>Plastic barriers and negative air pressure prevent contamination spread throughout your home</p>
-      </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {% set protocols = [
+        { icon: "🛡️", title: "Containment Setup", desc: "Plastic barriers and negative air pressure prevent contamination spread throughout your home" },
+        { icon: "😷", title: "PPE Equipment", desc: "Full protective gear including respirators, suits, and gloves for technician safety" },
+        { icon: "🌪️", title: "HEPA Vacuums", desc: "Industrial-grade vacuum systems capture even microscopic particles and allergens" },
+        { icon: "🧪", title: "Sanitization", desc: "EPA-approved antimicrobial treatments eliminate bacteria, viruses, and odors" },
+        { icon: "📦", title: "Proper Disposal", desc: "Contaminated materials bagged, sealed, and disposed of according to regulations" },
+        { icon: "✅", title: "Final Inspection", desc: "Thorough verification ensures complete removal and readiness for new insulation" }
+      ] %}
       
-      <div class="protocol-item">
-        <span class="protocol-icon">😷</span>
-        <h3>PPE Equipment</h3>
-        <p>Full protective gear including respirators, suits, and gloves for technician safety</p>
+      {% for protocol in protocols %}
+      <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-6 text-center hover:shadow-glow-sm transition-all duration-300">
+        <div class="text-5xl mb-4">{{ protocol.icon }}</div>
+        <h3 class="text-xl font-bold text-primary mb-3">{{ protocol.title }}</h3>
+        <p class="text-text-muted">{{ protocol.desc }}</p>
       </div>
-      
-      <div class="protocol-item">
-        <span class="protocol-icon">🌪️</span>
-        <h3>HEPA Vacuums</h3>
-        <p>Industrial-grade vacuum systems capture even microscopic particles and allergens</p>
-      </div>
-      
-      <div class="protocol-item">
-        <span class="protocol-icon">🧪</span>
-        <h3>Sanitization</h3>
-        <p>EPA-approved antimicrobial treatments eliminate bacteria, viruses, and odors</p>
-      </div>
-      
-      <div class="protocol-item">
-        <span class="protocol-icon">📦</span>
-        <h3>Proper Disposal</h3>
-        <p>Contaminated materials bagged, sealed, and disposed of according to regulations</p>
-      </div>
-      
-      <div class="protocol-item">
-        <span class="protocol-icon">✅</span>
-        <h3>Final Inspection</h3>
-        <p>Thorough verification ensures complete removal and readiness for new insulation</p>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
 
-<section class="contamination-showcase">
+<section class="py-20 bg-surface-dark">
   <div class="container">
-    <h2>Types of Contamination We Handle</h2>
-    <div class="contamination-types">
-      <div class="contamination-card">
-        <div class="contamination-header">
-          <h3>🐭 Rodent Contamination</h3>
-        </div>
-        <div class="contamination-content">
-          <p><strong>Health Risks:</strong> Hantavirus, salmonella, and other diseases</p>
-          <p><strong>Signs:</strong> Droppings, urine stains, nesting materials, tunneling</p>
-          <p><strong>Our Solution:</strong></p>
-          <ul>
-            <li>Complete removal of contaminated insulation</li>
-            <li>HEPA vacuum all surfaces</li>
-            <li>Disinfectant application</li>
-            <li>Seal entry points</li>
-            <li>Install rodent-proof barriers</li>
-          </ul>
-        </div>
-      </div>
+    <h2 class="text-4xl font-bold text-primary font-display text-center mb-12">Types of Contamination We Handle</h2>
+    <div class="grid lg:grid-cols-3 gap-8">
+      {% set contaminations = [
+        {
+          icon: "🐭",
+          title: "Rodent Contamination",
+          risks: "Hantavirus, salmonella, and other diseases",
+          signs: "Droppings, urine stains, nesting materials, tunneling",
+          solutions: [
+            "Complete removal of contaminated insulation",
+            "HEPA vacuum all surfaces",
+            "Disinfectant application",
+            "Seal entry points",
+            "Install rodent-proof barriers"
+          ]
+        },
+        {
+          icon: "💧",
+          title: "Water & Mold Damage",
+          risks: "Respiratory issues, allergies, structural damage",
+          signs: "Discoloration, musty odors, visible mold, sagging insulation",
+          solutions: [
+            "Remove all water-damaged materials",
+            "Identify and fix moisture source",
+            "Apply mold remediation treatments",
+            "Dry affected areas completely",
+            "Install moisture barriers"
+          ]
+        },
+        {
+          icon: "🏚️",
+          title: "Age & Deterioration",
+          risks: "Settled insulation, dust accumulation, reduced R-value",
+          signs: "Uneven coverage, high energy bills, dusty conditions",
+          solutions: [
+            "Complete removal of old material",
+            "Vacuum all dust and debris",
+            "Inspect for hidden damage",
+            "Air seal penetrations",
+            "Prepare for modern insulation"
+          ]
+        }
+      ] %}
       
-      <div class="contamination-card">
-        <div class="contamination-header">
-          <h3>💧 Water & Mold Damage</h3>
+      {% for contamination in contaminations %}
+      <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg overflow-hidden hover:shadow-glow-sm transition-all duration-300">
+        <div class="bg-gradient-to-r from-primary to-accent p-4 text-center">
+          <h3 class="text-xl font-bold text-white flex items-center justify-center gap-3">
+            <span class="text-3xl">{{ contamination.icon }}</span>
+            {{ contamination.title }}
+          </h3>
         </div>
-        <div class="contamination-content">
-          <p><strong>Health Risks:</strong> Respiratory issues, allergies, structural damage</p>
-          <p><strong>Signs:</strong> Discoloration, musty odors, visible mold, sagging insulation</p>
-          <p><strong>Our Solution:</strong></p>
-          <ul>
-            <li>Remove all water-damaged materials</li>
-            <li>Identify and fix moisture source</li>
-            <li>Apply mold remediation treatments</li>
-            <li>Dry affected areas completely</li>
-            <li>Install moisture barriers</li>
+        <div class="p-6">
+          <p class="mb-2"><strong class="text-accent">Health Risks:</strong> <span class="text-text-muted">{{ contamination.risks }}</span></p>
+          <p class="mb-4"><strong class="text-accent">Signs:</strong> <span class="text-text-muted">{{ contamination.signs }}</span></p>
+          <p class="font-bold text-primary mb-2">Our Solution:</p>
+          <ul class="space-y-2">
+            {% for solution in contamination.solutions %}
+            <li class="flex items-start gap-2">
+              <span class="text-accent">✓</span>
+              <span class="text-text-muted text-sm">{{ solution }}</span>
+            </li>
+            {% endfor %}
           </ul>
         </div>
       </div>
-      
-      <div class="contamination-card">
-        <div class="contamination-header">
-          <h3>🏚️ Age & Deterioration</h3>
-        </div>
-        <div class="contamination-content">
-          <p><strong>Issues:</strong> Settled insulation, dust accumulation, reduced R-value</p>
-          <p><strong>Signs:</strong> Uneven coverage, high energy bills, dusty conditions</p>
-          <p><strong>Our Solution:</strong></p>
-          <ul>
-            <li>Complete removal of old material</li>
-            <li>Vacuum all dust and debris</li>
-            <li>Inspect for hidden damage</li>
-            <li>Air seal penetrations</li>
-            <li>Prepare for modern insulation</li>
-          </ul>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
 
-<section class="before-after-showcase">
-  <div class="container">
-    <h2>Transformation Through Professional Removal</h2>
-    <div class="ba-grid">
-      <div class="ba-item">
-        <span class="ba-label">Before</span>
-        <img src="/images/insulation-contaminated-before.jpg" alt="Contaminated insulation before removal">
-        <div class="ba-description">
-          <h4>Typical Contaminated Attic</h4>
-          <ul>
-            <li>Rodent droppings throughout</li>
-            <li>Compressed, ineffective insulation</li>
-            <li>Visible pest damage</li>
-            <li>Health hazards present</li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="ba-item">
-        <span class="ba-label">After</span>
-        <img src="/images/insulation-clean-after.jpg" alt="Clean attic after insulation removal">
-        <div class="ba-description">
-          <h4>Clean, Sanitized Space</h4>
-          <ul>
-            <li>All contamination removed</li>
-            <li>Surfaces sanitized and sealed</li>
-            <li>Ready for new insulation</li>
-            <li>Safe, healthy environment</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+{% set benefits = benefits %}
+{% include "components/benefits-grid.njk" %}
 
-<section class="removal-equipment">
+{% set process = process %}
+{% set processTitle = "Professional Removal Process" %}
+{% include "components/sections/process-steps-dark.njk" %}
+
+{% set pricing = pricing %}
+{% set pricingTitle = "Insulation Removal Pricing" %}
+{% include "components/cards/pricing-table-dark.njk" %}
+
+<section class="py-20 bg-surface">
   <div class="container">
-    <h2>Professional Equipment Makes the Difference</h2>
-    <div class="equipment-showcase">
-      <h3>Why DIY Removal is Dangerous</h3>
-      <div class="comparison-grid">
-        <div class="diy-risks">
-          <h4>❌ DIY Risks</h4>
-          <ul>
-            <li>Exposure to harmful contaminants</li>
-            <li>Spreading contamination throughout home</li>
-            <li>Incomplete removal leaving problems</li>
-            <li>No proper disposal methods</li>
-            <li>Risk of structural damage</li>
-            <li>No sanitization capability</li>
-          </ul>
-        </div>
-        
-        <div class="pro-advantages">
-          <h4>✅ Professional Advantages</h4>
-          <ul>
-            <li>Industrial HEPA vacuum systems</li>
-            <li>Negative air pressure containment</li>
-            <li>Complete contamination removal</li>
-            <li>Licensed disposal and documentation</li>
-            <li>Structural inspection included</li>
-            <li>EPA-approved sanitization</li>
-          </ul>
-        </div>
+    <h2 class="text-4xl font-bold text-primary font-display text-center mb-12">Professional Equipment Makes the Difference</h2>
+    
+    <div class="grid md:grid-cols-2 gap-8 mb-12">
+      <div class="bg-red-900/10 border-2 border-red-500/30 rounded-lg p-8">
+        <h4 class="text-2xl font-bold text-red-400 mb-6">❌ DIY Risks</h4>
+        <ul class="space-y-3">
+          {% set risks = [
+            "Exposure to harmful contaminants",
+            "Spreading contamination throughout home",
+            "Incomplete removal leaving problems",
+            "No proper disposal methods",
+            "Risk of structural damage",
+            "No sanitization capability"
+          ] %}
+          {% for risk in risks %}
+          <li class="flex items-start gap-3">
+            <span class="text-red-400">×</span>
+            <span class="text-text-muted">{{ risk }}</span>
+          </li>
+          {% endfor %}
+        </ul>
       </div>
       
-      <div class="equipment-list">
-        <h3>Our Specialized Equipment</h3>
-        <ul>
-          <li><strong>23HP Insulation Vacuum:</strong> Removes 500-700 bags per hour</li>
-          <li><strong>150ft Hose Systems:</strong> Reaches every corner without damage</li>
-          <li><strong>HEPA Air Scrubbers:</strong> Captures 99.97% of particles</li>
-          <li><strong>Fogger Systems:</strong> Applies sanitizing treatments evenly</li>
-          <li><strong>Moisture Meters:</strong> Identifies hidden water damage</li>
+      <div class="bg-green-900/10 border-2 border-green-500/30 rounded-lg p-8">
+        <h4 class="text-2xl font-bold text-green-400 mb-6">✅ Professional Advantages</h4>
+        <ul class="space-y-3">
+          {% set advantages = [
+            "Industrial HEPA vacuum systems",
+            "Negative air pressure containment",
+            "Complete contamination removal",
+            "Licensed disposal and documentation",
+            "Structural inspection included",
+            "EPA-approved sanitization"
+          ] %}
+          {% for advantage in advantages %}
+          <li class="flex items-start gap-3">
+            <span class="text-green-400">✓</span>
+            <span class="text-text-muted">{{ advantage }}</span>
+          </li>
+          {% endfor %}
         </ul>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="faq-preview">
-  <div class="container">
-    <h2>Removal Service FAQs</h2>
-    <div class="faq-grid">
-      <div class="faq-item">
-        <h3>How long does removal take?</h3>
-        <p>Most residential removal projects are completed in one day. Larger homes or severe contamination may require 2-3 days. We always provide a timeline during our initial assessment.</p>
-      </div>
-      
-      <div class="faq-item">
-        <h3>Can I stay home during removal?</h3>
-        <p>Yes! Our containment procedures keep the work area completely separated from your living space. You can go about your normal routine while we work.</p>
-      </div>
-      
-      <div class="faq-item">
-        <h3>Do you test for asbestos?</h3>
-        <p>We can coordinate asbestos testing if your home was built before 1980. If asbestos is found, we work with certified abatement specialists to ensure safe removal.</p>
-      </div>
+    
+    <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-8">
+      <h3 class="text-2xl font-bold text-primary mb-6">Our Specialized Equipment</h3>
+      <ul class="space-y-3">
+        <li class="flex items-start gap-3">
+          <span class="text-accent">•</span>
+          <div>
+            <strong class="text-primary">23HP Insulation Vacuum:</strong>
+            <span class="text-text-muted"> Removes 500-700 bags per hour</span>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-accent">•</span>
+          <div>
+            <strong class="text-primary">150ft Hose Systems:</strong>
+            <span class="text-text-muted"> Reaches every corner without damage</span>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-accent">•</span>
+          <div>
+            <strong class="text-primary">HEPA Air Scrubbers:</strong>
+            <span class="text-text-muted"> Captures 99.97% of particles</span>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-accent">•</span>
+          <div>
+            <strong class="text-primary">Fogger Systems:</strong>
+            <span class="text-text-muted"> Applies sanitizing treatments evenly</span>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-accent">•</span>
+          <div>
+            <strong class="text-primary">Moisture Meters:</strong>
+            <span class="text-text-muted"> Identifies hidden water damage</span>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </section>
 
-<div class="service-cta-section">
-  <div class="container">
-    <h2>Don't Let Old Insulation Compromise Your Health</h2>
-    <p>Professional removal is the first step to a healthier, more efficient home.</p>
-    <div class="cta-buttons">
-      <a href="/contact/" class="btn btn-primary">Schedule Removal Assessment</a>
-      <a href="tel:623-241-1939" class="btn btn-secondary">Call 623-241-1939</a>
-    </div>
-  </div>
-</div>
+{% set faqs = [
+  {
+    question: "How long does removal take?",
+    answer: "Most residential removal projects are completed in one day. Larger homes or severe contamination may require 2-3 days. We always provide a timeline during our initial assessment."
+  },
+  {
+    question: "Can I stay home during removal?",
+    answer: "Yes! Our containment procedures keep the work area completely separated from your living space. You can go about your normal routine while we work."
+  },
+  {
+    question: "Do you test for asbestos?",
+    answer: "We can coordinate asbestos testing if your home was built before 1980. If asbestos is found, we work with certified abatement specialists to ensure safe removal."
+  }
+] %}
+{% set faqTitle = "Removal Service FAQs" %}
+{% include "components/sections/faq-section-glass.njk" %}
+
+{% include "components/sections/cta-section-dark.njk" %}
