@@ -1,0 +1,191 @@
+{# Glass Morphism FAQ Section Component #}
+{# 
+  Usage: {% include "components/sections/faq-section-glass.njk" %}
+  
+  Variables:
+  - faqTitle: Section title (default: "Frequently Asked Questions")
+  - faqItems: Array of FAQ items
+    - question: The question text
+    - answer: The answer text (can include HTML)
+#}
+
+{% set faqTitle = faqTitle or "Frequently Asked Questions" %}
+
+<section class="faq-section">
+  <div class="container">
+    <h2 class="section-title text-center">{{ faqTitle }}</h2>
+    
+    <div class="faq-container">
+      {% for item in faqItems %}
+      <div class="faq-item glass-panel" data-faq-index="{{ loop.index }}">
+        <div class="faq-question">
+          <h3>{{ item.question }}</h3>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          <div class="answer-content">
+            {{ item.answer | safe }}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq-section {
+    padding: 60px 0;
+    background: var(--primary-dark);
+  }
+  
+  .faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .faq-item {
+    background: rgba(0, 255, 255, 0.03);
+    backdrop-filter: blur(30px) saturate(200%);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .faq-item:hover {
+    border-color: var(--accent-primary);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  .faq-question {
+    padding: 1.5rem 2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 255, 255, 0.02);
+    transition: background 0.3s ease;
+  }
+  
+  .faq-question:hover {
+    background: rgba(0, 255, 255, 0.05);
+  }
+  
+  .faq-question h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--accent-primary);
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: normal;
+    flex: 1;
+    padding-right: 1rem;
+  }
+  
+  .faq-toggle {
+    font-size: 1.5rem;
+    color: var(--accent-primary);
+    font-weight: 300;
+    transition: transform 0.3s ease;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--accent-primary);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  
+  .faq-item.active .faq-toggle {
+    transform: rotate(45deg);
+  }
+  
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .faq-item.active .faq-answer {
+    max-height: 500px;
+  }
+  
+  .answer-content {
+    padding: 0 2rem 2rem 2rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+  
+  .answer-content p {
+    margin-bottom: 1rem;
+  }
+  
+  .answer-content p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .answer-content ul,
+  .answer-content ol {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+  
+  .answer-content li {
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+  }
+  
+  .answer-content strong {
+    color: var(--accent-primary);
+  }
+  
+  @media (max-width: 768px) {
+    .faq-section {
+      padding: 40px 0;
+    }
+    
+    .faq-question {
+      padding: 1.25rem 1.5rem;
+    }
+    
+    .faq-question h3 {
+      font-size: 1.1rem;
+    }
+    
+    .answer-content {
+      padding: 0 1.5rem 1.5rem 1.5rem;
+    }
+    
+    .faq-item.active .faq-answer {
+      max-height: 800px;
+    }
+  }
+</style>
+
+<script>
+  // FAQ Toggle Functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      
+      question.addEventListener('click', () => {
+        // Close all other FAQ items
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item && otherItem.classList.contains('active')) {
+            otherItem.classList.remove('active');
+          }
+        });
+        
+        // Toggle current item
+        item.classList.toggle('active');
+      });
+    });
+  });
+</script>
