@@ -85,99 +85,101 @@ relatedServices:
 {% set subtitle = "Energy-Efficient Solutions for Phoenix Commercial Buildings" %}
 {% include "sections/service-hero.njk" %}
 
-<section class="office-intro content-section">
+<section class="py-20 bg-surface-dark">
   <div class="container">
-    <div class="section-header">
-      <h2>Arizona's Commercial Insulation Specialists</h2>
-      <p class="section-subtitle">Maximize energy efficiency, tenant comfort, and ROI for Phoenix office buildings</p>
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-primary font-display">Arizona's Commercial Insulation Specialists</h2>
+      <p class="text-xl text-primary-light max-w-3xl mx-auto">Maximize energy efficiency, tenant comfort, and ROI for Phoenix office buildings</p>
     </div>
     
-    <div class="intro-grid">
-      <div class="intro-content">
-        <h3>Office Building Challenges in Arizona</h3>
-        <p>Phoenix office buildings face unique challenges with extreme heat, high cooling costs, and the need to maintain comfortable working environments year-round. Our commercial insulation solutions address these challenges while maximizing your return on investment.</p>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-2xl font-bold text-primary mb-4">Office Building Challenges in Arizona</h3>
+        <p class="text-lg text-text-muted mb-6">Phoenix office buildings face unique challenges with extreme heat, high cooling costs, and the need to maintain comfortable working environments year-round. Our commercial insulation solutions address these challenges while maximizing your return on investment.</p>
         
-        <div class="key-challenges">
-          <div class="challenge-item">
-            <span class="challenge-icon">🏢</span>
-            <div>
-              <h4>Multi-Story Heat Gain</h4>
-              <p>Upper floors can be 10-15°F warmer than lower levels due to roof heat exposure</p>
+        <div class="space-y-4">
+          {% set challenges = [
+            { icon: "🏢", title: "Multi-Story Heat Gain", desc: "Upper floors can be 10-15°F warmer than lower levels due to roof heat exposure" },
+            { icon: "💼", title: "Tenant Comfort Zones", desc: "Different tenants have varying temperature preferences and usage patterns" },
+            { icon: "⚡", title: "Peak Demand Charges", desc: "Commercial rates include expensive demand charges during peak cooling periods" }
+          ] %}
+          
+          {% for challenge in challenges %}
+          <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-4 hover:shadow-glow-sm transition-all duration-300">
+            <div class="flex items-start gap-4">
+              <span class="text-3xl">{{ challenge.icon }}</span>
+              <div>
+                <h4 class="text-lg font-bold text-primary mb-1">{{ challenge.title }}</h4>
+                <p class="text-text-muted text-sm">{{ challenge.desc }}</p>
+              </div>
             </div>
           </div>
-          <div class="challenge-item">
-            <span class="challenge-icon">💼</span>
-            <div>
-              <h4>Tenant Comfort Zones</h4>
-              <p>Different tenants have varying temperature preferences and usage patterns</p>
+          {% endfor %}
+        </div>
+      </div>
+      
+      <div>
+        <h3 class="text-2xl font-bold text-primary mb-6">Real ROI Results</h3>
+        <div class="grid grid-cols-2 gap-4">
+          {% set metrics = [
+            { value: "$2.50", label: "Per Sq Ft Annual Savings" },
+            { value: "35%", label: "Average Energy Reduction" },
+            { value: "3.2yr", label: "Typical Payback Period" },
+            { value: "15%", label: "Property Value Increase" }
+          ] %}
+          
+          {% for metric in metrics %}
+          <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-6 text-center hover:shadow-glow-sm transition-all duration-300">
+            <p class="text-3xl font-bold text-accent mb-2">{{ metric.value }}</p>
+            <p class="text-sm text-primary-light uppercase tracking-wider">{{ metric.label }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-surface">
+  <div class="container">
+    <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-8 max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold text-primary text-center mb-8">📍 Case Study: Downtown Phoenix Office Complex</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <div class="grid grid-cols-2 gap-4">
+            {% set stats = [
+              { label: "Building Size", value: "75,000 sq ft" },
+              { label: "Investment", value: "$165,000" },
+              { label: "Annual Savings", value: "$52,000" },
+              { label: "Payback Period", value: "3.2 years" }
+            ] %}
+            
+            {% for stat in stats %}
+            <div class="bg-surface/50 p-4 rounded-lg text-center">
+              <p class="text-sm text-primary-light uppercase tracking-wider mb-2">{{ stat.label }}</p>
+              <p class="text-2xl font-bold text-accent">{{ stat.value }}</p>
             </div>
-          </div>
-          <div class="challenge-item">
-            <span class="challenge-icon">⚡</span>
-            <div>
-              <h4>Peak Demand Charges</h4>
-              <p>Commercial rates include expensive demand charges during peak cooling periods</p>
-            </div>
+            {% endfor %}
           </div>
         </div>
-      </div>
-      
-      <div class="roi-showcase">
-        <h3>Real ROI Results</h3>
-        <div class="roi-metrics">
-          <div class="metric-card">
-            <span class="metric-value">$2.50</span>
-            <span class="metric-label">Per Sq Ft Annual Savings</span>
-          </div>
-          <div class="metric-card">
-            <span class="metric-value">35%</span>
-            <span class="metric-label">Average Energy Reduction</span>
-          </div>
-          <div class="metric-card">
-            <span class="metric-value">3.2yr</span>
-            <span class="metric-label">Typical Payback Period</span>
-          </div>
-          <div class="metric-card">
-            <span class="metric-value">15%</span>
-            <span class="metric-label">Property Value Increase</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="case-study-section content-section">
-  <div class="container">
-    <div class="case-study-card">
-      <h2>📍 Case Study: Downtown Phoenix Office Complex</h2>
-      <div class="case-study-grid">
-        <div class="study-details">
-          <div class="study-stat">
-            <span class="stat-label">Building Size</span>
-            <span class="stat-value">75,000 sq ft</span>
-          </div>
-          <div class="study-stat">
-            <span class="stat-label">Investment</span>
-            <span class="stat-value">$165,000</span>
-          </div>
-          <div class="study-stat">
-            <span class="stat-label">Annual Savings</span>
-            <span class="stat-value">$52,000</span>
-          </div>
-          <div class="study-stat">
-            <span class="stat-label">Payback Period</span>
-            <span class="stat-value">3.2 years</span>
-          </div>
-        </div>
-        <div class="study-results">
-          <h3>Results Achieved:</h3>
-          <ul>
-            <li>38% reduction in cooling costs</li>
-            <li>Consistent temperatures across all 8 floors</li>
-            <li>Significantly improved tenant satisfaction</li>
-            <li>LEED points contributing to certification</li>
-            <li>Reduced HVAC maintenance requirements</li>
+        
+        <div>
+          <h3 class="text-xl font-bold text-primary mb-4">Results Achieved:</h3>
+          <ul class="space-y-2">
+            {% set results = [
+              "38% reduction in cooling costs",
+              "Consistent temperatures across all 8 floors",
+              "Significantly improved tenant satisfaction",
+              "LEED points contributing to certification",
+              "Reduced HVAC maintenance requirements"
+            ] %}
+            
+            {% for result in results %}
+            <li class="flex items-start gap-2">
+              <span class="text-accent">✓</span>
+              <span class="text-primary-light">{{ result }}</span>
+            </li>
+            {% endfor %}
           </ul>
         </div>
       </div>
@@ -185,138 +187,174 @@ relatedServices:
   </div>
 </section>
 
-<section class="building-types-section content-section">
+<section class="py-20 bg-surface-dark">
   <div class="container">
-    <div class="section-header">
-      <h2>Office Building Types We Service</h2>
-    </div>
+    <h2 class="text-4xl font-bold text-primary font-display text-center mb-12">Office Building Types We Service</h2>
     
-    <div class="building-types-grid">
-      <div class="building-type">
-        <div class="building-header">
-          <h3>High-Rise Office Towers</h3>
-          <span class="building-icon">🏬</span>
-        </div>
-        <div class="building-content">
-          <h4>Specialized Solutions:</h4>
-          <ul>
-            <li>Roof deck spray foam systems</li>
-            <li>Curtain wall insulation</li>
-            <li>Mechanical floor treatments</li>
-            <li>Elevator shaft thermal breaks</li>
-          </ul>
-          <div class="key-benefit">
-            <strong>Key Benefit:</strong> Dramatic reduction in stack effect and HVAC load balancing between floors.
-          </div>
-        </div>
-      </div>
+    <div class="grid lg:grid-cols-3 gap-8">
+      {% set buildingTypes = [
+        {
+          title: "High-Rise Office Towers",
+          icon: "🏬",
+          solutions: [
+            "Roof deck spray foam systems",
+            "Curtain wall insulation",
+            "Mechanical floor treatments",
+            "Elevator shaft thermal breaks"
+          ],
+          benefit: "Dramatic reduction in stack effect and HVAC load balancing between floors."
+        },
+        {
+          title: "Mid-Rise Office Buildings",
+          icon: "🏢",
+          solutions: [
+            "Exterior wall retrofits",
+            "Roof insulation upgrades",
+            "Window system integration",
+            "Parking deck ceiling insulation"
+          ],
+          benefit: "Cost-effective whole-building approach with minimal tenant disruption."
+        },
+        {
+          title: "Office Parks & Campuses",
+          icon: "🏘️",
+          solutions: [
+            "Multi-building coordination",
+            "Central plant optimization",
+            "Covered walkway insulation",
+            "Common area treatments"
+          ],
+          benefit: "Campus-wide energy management and consistent comfort across facilities."
+        }
+      ] %}
       
-      <div class="building-type">
-        <div class="building-header">
-          <h3>Mid-Rise Office Buildings</h3>
-          <span class="building-icon">🏢</span>
+      {% for building in buildingTypes %}
+      <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg overflow-hidden hover:shadow-glow-sm transition-all duration-300">
+        <div class="bg-gradient-to-r from-primary to-accent p-6 text-center">
+          <span class="text-4xl mb-2 block">{{ building.icon }}</span>
+          <h3 class="text-xl font-bold text-white">{{ building.title }}</h3>
         </div>
-        <div class="building-content">
-          <h4>Specialized Solutions:</h4>
-          <ul>
-            <li>Exterior wall retrofits</li>
-            <li>Roof insulation upgrades</li>
-            <li>Window system integration</li>
-            <li>Parking deck ceiling insulation</li>
+        <div class="p-6">
+          <h4 class="text-lg font-bold text-primary mb-3">Specialized Solutions:</h4>
+          <ul class="space-y-2 mb-4">
+            {% for solution in building.solutions %}
+            <li class="flex items-start gap-2">
+              <span class="text-accent">•</span>
+              <span class="text-text-muted text-sm">{{ solution }}</span>
+            </li>
+            {% endfor %}
           </ul>
-          <div class="key-benefit">
-            <strong>Key Benefit:</strong> Cost-effective whole-building approach with minimal tenant disruption.
+          <div class="bg-surface/50 p-3 rounded-lg">
+            <p class="text-sm"><strong class="text-accent">Key Benefit:</strong> <span class="text-primary-light">{{ building.benefit }}</span></p>
           </div>
         </div>
       </div>
-      
-      <div class="building-type">
-        <div class="building-header">
-          <h3>Office Parks & Campuses</h3>
-          <span class="building-icon">🏘️</span>
-        </div>
-        <div class="building-content">
-          <h4>Specialized Solutions:</h4>
-          <ul>
-            <li>Multi-building coordination</li>
-            <li>Central plant optimization</li>
-            <li>Covered walkway insulation</li>
-            <li>Common area treatments</li>
-          </ul>
-          <div class="key-benefit">
-            <strong>Key Benefit:</strong> Campus-wide energy management and consistent comfort across facilities.
-          </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
 
-<section class="commercial-approach content-section">
+<section class="py-20 bg-surface">
   <div class="container">
-    <div class="section-header">
-      <h2>Our Commercial Installation Approach</h2>
-    </div>
+    <h2 class="text-4xl font-bold text-primary font-display text-center mb-12">Our Commercial Installation Approach</h2>
     
-    <div class="approach-grid">
-      <div class="approach-item">
-        <h3>🏗️ Minimal Business Disruption</h3>
-        <ul>
-          <li><strong>After-Hours Installation:</strong> Evening and weekend work to avoid disrupting operations</li>
-          <li><strong>Zone-by-Zone Approach:</strong> Complete sections while others remain operational</li>
-          <li><strong>Clean, Professional Crews:</strong> Uniformed, background-checked technicians</li>
-          <li><strong>Property Management Coordination:</strong> Seamless communication throughout project</li>
-        </ul>
-      </div>
+    <div class="grid lg:grid-cols-3 gap-8">
+      {% set approaches = [
+        {
+          icon: "🏗️",
+          title: "Minimal Business Disruption",
+          items: [
+            { label: "After-Hours Installation", desc: "Evening and weekend work to avoid disrupting operations" },
+            { label: "Zone-by-Zone Approach", desc: "Complete sections while others remain operational" },
+            { label: "Clean, Professional Crews", desc: "Uniformed, background-checked technicians" },
+            { label: "Property Management Coordination", desc: "Seamless communication throughout project" }
+          ]
+        },
+        {
+          icon: "📋",
+          title: "Code Compliance & Documentation",
+          items: [
+            { label: "Building Code Compliance", desc: "Meet or exceed all local and state requirements" },
+            { label: "Fire Rating Certifications", desc: "Proper materials for commercial applications" },
+            { label: "LEED Documentation", desc: "Support for green building certifications" },
+            { label: "Warranty Programs", desc: "Commercial-grade warranties on materials and labor" }
+          ]
+        },
+        {
+          icon: "🔧",
+          title: "Commercial-Grade Solutions",
+          items: [
+            { label: "Spray Foam Systems", desc: "High-performance closed-cell foam for maximum efficiency" },
+            { label: "Rigid Board Insulation", desc: "For specific commercial applications" },
+            { label: "Hybrid Systems", desc: "Combining multiple insulation types for optimal performance" },
+            { label: "Air Barrier Systems", desc: "Complete building envelope solutions" }
+          ]
+        }
+      ] %}
       
-      <div class="approach-item">
-        <h3>📋 Code Compliance & Documentation</h3>
-        <ul>
-          <li><strong>Building Code Compliance:</strong> Meet or exceed all local and state requirements</li>
-          <li><strong>Fire Rating Certifications:</strong> Proper materials for commercial applications</li>
-          <li><strong>LEED Documentation:</strong> Support for green building certifications</li>
-          <li><strong>Warranty Programs:</strong> Commercial-grade warranties on materials and labor</li>
+      {% for approach in approaches %}
+      <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-6 hover:shadow-glow-sm transition-all duration-300">
+        <h3 class="text-xl font-bold text-primary mb-6 flex items-center gap-3">
+          <span class="text-3xl">{{ approach.icon }}</span>
+          {{ approach.title }}
+        </h3>
+        <ul class="space-y-3">
+          {% for item in approach.items %}
+          <li class="border-b border-primary/10 pb-3 last:border-0">
+            <strong class="text-accent">{{ item.label }}:</strong>
+            <p class="text-text-muted text-sm mt-1">{{ item.desc }}</p>
+          </li>
+          {% endfor %}
         </ul>
       </div>
-      
-      <div class="approach-item">
-        <h3>🔧 Commercial-Grade Solutions</h3>
-        <ul>
-          <li><strong>Spray Foam Systems:</strong> High-performance closed-cell foam for maximum efficiency</li>
-          <li><strong>Rigid Board Insulation:</strong> For specific commercial applications</li>
-          <li><strong>Hybrid Systems:</strong> Combining multiple insulation types for optimal performance</li>
-          <li><strong>Air Barrier Systems:</strong> Complete building envelope solutions</li>
-        </ul>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
 
-<section class="sustainability-section content-section">
+<section class="py-20 bg-surface-dark">
   <div class="container">
-    <div class="section-header">
-      <h2>Sustainability & LEED Benefits</h2>
-    </div>
+    <h2 class="text-4xl font-bold text-primary font-display text-center mb-12">Sustainability & LEED Benefits</h2>
     
-    <div class="sustainability-grid">
-      <div class="sustainability-item">
-        <h3>🌱 Environmental Impact</h3>
-        <p>Proper insulation can reduce a building's carbon footprint by 30-40%, contributing to corporate sustainability goals and environmental responsibility.</p>
-      </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      {% set sustainability = [
+        {
+          icon: "🌱",
+          title: "Environmental Impact",
+          content: "Proper insulation can reduce a building's carbon footprint by 30-40%, contributing to corporate sustainability goals and environmental responsibility."
+        },
+        {
+          icon: "🏅",
+          title: "LEED Points Available",
+          points: [
+            "Energy & Atmosphere: Up to 20 points",
+            "Indoor Environmental Quality: Up to 5 points",
+            "Innovation in Design: Up to 2 points"
+          ]
+        },
+        {
+          icon: "💚",
+          title: "Tenant Attraction",
+          content: "Energy-efficient buildings attract quality tenants who value sustainability and lower operating costs. Green buildings command 3-7% higher rents on average."
+        }
+      ] %}
       
-      <div class="sustainability-item">
-        <h3>🏅 LEED Points Available</h3>
-        <ul>
-          <li>Energy & Atmosphere: Up to 20 points</li>
-          <li>Indoor Environmental Quality: Up to 5 points</li>
-          <li>Innovation in Design: Up to 2 points</li>
+      {% for item in sustainability %}
+      <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-6 text-center hover:shadow-glow-sm transition-all duration-300">
+        <div class="text-5xl mb-4">{{ item.icon }}</div>
+        <h3 class="text-xl font-bold text-primary mb-4">{{ item.title }}</h3>
+        {% if item.content %}
+        <p class="text-text-muted">{{ item.content }}</p>
+        {% endif %}
+        {% if item.points %}
+        <ul class="space-y-2 text-left">
+          {% for point in item.points %}
+          <li class="text-text-muted">• {{ point }}</li>
+          {% endfor %}
         </ul>
+        {% endif %}
       </div>
-      
-      <div class="sustainability-item">
-        <h3>💚 Tenant Attraction</h3>
-        <p>Energy-efficient buildings attract quality tenants who value sustainability and lower operating costs. Green buildings command 3-7% higher rents on average.</p>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -326,11 +364,11 @@ relatedServices:
 
 {% set process = processSteps %}
 {% set processTitle = "Our Commercial Installation Process" %}
-{% include "components/process-steps.njk" %}
+{% include "components/sections/process-steps-dark.njk" %}
 
 {% set pricing = pricingOptions %}
 {% set pricingTitle = "Commercial Office Insulation Pricing" %}
-{% include "components/pricing-table.njk" %}
+{% include "components/cards/pricing-table-dark.njk" %}
 
 {% include "sections/why-choose-ica.njk" %}
 
@@ -338,368 +376,8 @@ relatedServices:
 
 {% set faqs = faqs %}
 {% set faqTitle = "Commercial Office Insulation FAQs" %}
-{% include "components/faq.njk" %}
+{% include "components/sections/faq-section-glass.njk" %}
 
-{% include "sections/cta.njk" %}
+{% include "components/sections/cta-section-dark.njk" %}
 
 {% include "sections/related-services.njk" %}
-
-<style>
-.office-intro {
-  padding: 4rem 0;
-  background: var(--surface-light);
-}
-
-.office-intro .section-header {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.office-intro h2 {
-  font-size: 2.5rem;
-  color: var(--primary);
-  margin-bottom: 1rem;
-}
-
-.section-subtitle {
-  font-size: 1.3rem;
-  color: var(--text-muted);
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.intro-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.intro-content h3,
-.roi-showcase h3 {
-  font-size: 1.8rem;
-  color: var(--primary);
-  margin-bottom: 1.5rem;
-}
-
-.intro-content p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: var(--text-dark);
-  margin-bottom: 2rem;
-}
-
-.key-challenges {
-  display: grid;
-  gap: 1.5rem;
-}
-
-.challenge-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  background: white;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-
-.challenge-icon {
-  font-size: 1.5rem;
-  flex-shrink: 0;
-}
-
-.challenge-item h4 {
-  font-size: 1.1rem;
-  color: var(--primary);
-  margin-bottom: 0.5rem;
-}
-
-.challenge-item p {
-  color: var(--text-muted);
-  margin: 0;
-  font-size: 0.95rem;
-}
-
-.roi-metrics {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-}
-
-.metric-card {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  border-left: 4px solid var(--primary);
-}
-
-.metric-value {
-  font-size: 2rem;
-  font-weight: bold;
-  color: var(--primary);
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.metric-label {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.case-study-section {
-  padding: 4rem 0;
-  background: white;
-}
-
-.case-study-card {
-  max-width: 1000px;
-  margin: 0 auto;
-  background: var(--surface-light);
-  padding: 3rem;
-  border-radius: 15px;
-  border-left: 5px solid var(--primary);
-}
-
-.case-study-card h2 {
-  color: var(--primary);
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.case-study-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-}
-
-.study-details {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
-
-.study-stat {
-  text-align: center;
-  background: white;
-  padding: 1.5rem;
-  border-radius: 10px;
-}
-
-.stat-label {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  display: block;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: var(--primary);
-}
-
-.study-results h3 {
-  color: var(--primary);
-  margin-bottom: 1rem;
-}
-
-.study-results ul {
-  list-style: none;
-  padding: 0;
-}
-
-.study-results li {
-  padding: 0.5rem 0;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
-  color: var(--text-dark);
-}
-
-.study-results li:before {
-  content: "✓ ";
-  color: var(--primary);
-  font-weight: bold;
-}
-
-.building-types-section {
-  padding: 4rem 0;
-  background: var(--surface-light);
-}
-
-.building-types-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.building-type {
-  background: white;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.building-type:hover {
-  transform: translateY(-5px);
-}
-
-.building-header {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-  padding: 2rem;
-  text-align: center;
-  color: white;
-  position: relative;
-}
-
-.building-icon {
-  font-size: 2rem;
-  display: block;
-  margin-bottom: 1rem;
-}
-
-.building-header h3 {
-  margin: 0;
-  font-size: 1.3rem;
-}
-
-.building-content {
-  padding: 2rem;
-}
-
-.building-content h4 {
-  color: var(--primary);
-  margin-bottom: 1rem;
-}
-
-.building-content ul {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 1.5rem;
-}
-
-.building-content li {
-  padding: 0.25rem 0;
-  color: var(--text-dark);
-}
-
-.building-content li:before {
-  content: "• ";
-  color: var(--primary);
-  font-weight: bold;
-}
-
-.key-benefit {
-  background: var(--surface-light);
-  padding: 1rem;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
-
-.commercial-approach {
-  padding: 4rem 0;
-  background: white;
-}
-
-.approach-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.approach-item {
-  background: var(--surface-light);
-  padding: 2rem;
-  border-radius: 15px;
-  border-left: 5px solid var(--primary);
-}
-
-.approach-item h3 {
-  color: var(--primary);
-  margin-bottom: 1.5rem;
-}
-
-.approach-item ul {
-  list-style: none;
-  padding: 0;
-}
-
-.approach-item li {
-  padding: 0.5rem 0;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
-  color: var(--text-dark);
-}
-
-.sustainability-section {
-  padding: 4rem 0;
-  background: var(--surface-light);
-}
-
-.sustainability-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.sustainability-item {
-  background: white;
-  padding: 2rem;
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.sustainability-item h3 {
-  color: var(--primary);
-  margin-bottom: 1rem;
-}
-
-.sustainability-item ul {
-  list-style: none;
-  padding: 0;
-  text-align: left;
-}
-
-.sustainability-item li {
-  padding: 0.25rem 0;
-  color: var(--text-dark);
-}
-
-@media (max-width: 768px) {
-  .intro-grid,
-  .case-study-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
-  .office-intro h2 {
-    font-size: 2rem;
-  }
-  
-  .section-subtitle {
-    font-size: 1.1rem;
-  }
-  
-  .roi-metrics {
-    grid-template-columns: 1fr;
-  }
-  
-  .study-details {
-    grid-template-columns: 1fr;
-  }
-  
-  .case-study-card {
-    padding: 2rem;
-  }
-}
-</style>
