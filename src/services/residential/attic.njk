@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: layouts/service-page.njk
 title: "Attic Insulation Services Phoenix"
 subtitle: "Combat Arizona's 160°F Attic Temperatures"
 meta_description: "Professional attic insulation services in Phoenix AZ. Reduce energy bills by 30-50%. Expert installation, free estimates. Call 623-241-1939."
@@ -56,7 +56,7 @@ pricingOptions:
       - "25+ year lifespan"
       - "Maximum performance"
     highlighted: true
-faqs:
+faqItems:
   - question: "How hot do Arizona attics really get?"
     answer: "During summer, Arizona attics regularly reach 150-160°F, creating extreme stress on your cooling system and making upper floors unbearably hot. Proper attic insulation creates a thermal barrier that dramatically reduces heat transfer into your living space."
   - question: "What R-value do I need for my Arizona attic?"
@@ -71,56 +71,51 @@ faqs:
     answer: "While possible, DIY installation risks safety hazards, incomplete coverage, and voided warranties. Professional installation ensures proper R-value, air sealing, and safety in Arizona's extreme attic conditions."
 relatedServices:
   - title: "Spray Foam Insulation"
-    description: "The ultimate attic insulation solution for maximum performance"
     url: "/services/residential/spray-foam/"
   - title: "Blown-In Insulation"
-    description: "Cost-effective attic insulation for quick installation"
     url: "/services/residential/blown-in/"
   - title: "Insulation Removal"
-    description: "Safe removal of old or damaged attic insulation"
     url: "/services/residential/removal/"
 ---
 
-{% set title = "Attic Insulation Services Phoenix" %}
-{% set subtitle = "Combat Arizona's 160°F Attic Temperatures" %}
-{% include "sections/service-hero.njk" %}
-
-<section class="attic-challenge content-section">
+<section class="content-section">
   <div class="container">
-    <div class="section-header">
-      <h2>The 160°F Challenge Your Attic Faces</h2>
-      <p class="section-subtitle">Your attic is ground zero in the battle against Arizona heat</p>
-    </div>
+    <h2 class="section-title">The 160°F Challenge Your Attic Faces</h2>
+    <p class="lead text-center">Your attic is ground zero in the battle against Arizona heat</p>
     
     <div class="challenge-grid">
-      <div class="challenge-content">
+      <div class="challenge-card glass-panel">
         <h3>Arizona's Attic Reality</h3>
         <p>When outdoor temperatures hit 115°F, your attic becomes a superheated furnace reaching 160°F or higher. This extreme heat radiates down into your living space, making your AC work overtime and driving up energy costs.</p>
         
-        <div class="temperature-scale">
-          <h4>Attic Temperature Progression</h4>
-          <div class="temp-bar">
-            <div class="temp-segment" style="background: #ffeb3b; width: 20%;">
-              <span>90°F</span>
-              <label>Morning</label>
+        <div class="temperature-visual">
+          <h4>Daily Attic Temperature Progression</h4>
+          <div class="temp-stages">
+            <div class="temp-stage">
+              <span class="temp-time">6 AM</span>
+              <span class="temp-value">90°F</span>
+              <div class="temp-bar" style="height: 40%;"></div>
             </div>
-            <div class="temp-segment" style="background: #ff9800; width: 25%;">
-              <span>120°F</span>
-              <label>Noon</label>
+            <div class="temp-stage">
+              <span class="temp-time">12 PM</span>
+              <span class="temp-value">120°F</span>
+              <div class="temp-bar" style="height: 60%;"></div>
             </div>
-            <div class="temp-segment" style="background: #f44336; width: 30%;">
-              <span>145°F</span>
-              <label>2 PM</label>
+            <div class="temp-stage">
+              <span class="temp-time">2 PM</span>
+              <span class="temp-value">145°F</span>
+              <div class="temp-bar" style="height: 80%;"></div>
             </div>
-            <div class="temp-segment" style="background: #8b0000; width: 25%;">
-              <span>160°F</span>
-              <label>Peak</label>
+            <div class="temp-stage peak">
+              <span class="temp-time">4 PM</span>
+              <span class="temp-value">160°F</span>
+              <div class="temp-bar" style="height: 100%;"></div>
             </div>
           </div>
         </div>
       </div>
       
-      <div class="impact-showcase">
+      <div class="impact-card glass-panel">
         <h3>Hidden Costs of Poor Attic Insulation</h3>
         <div class="impact-items">
           <div class="impact-item">
@@ -157,103 +152,63 @@ relatedServices:
   </div>
 </section>
 
-<section class="insulation-solutions content-section">
+<section class="content-section" style="background: var(--primary-medium);">
   <div class="container">
-    <div class="section-header">
-      <h2>Our Attic Insulation Solutions</h2>
-      <p class="section-subtitle">Multiple options to fit your needs and budget</p>
-    </div>
+    <h2 class="section-title">Our Attic Insulation Solutions</h2>
+    <p class="lead text-center">Multiple options to fit your needs and budget</p>
     
     <div class="solutions-grid">
-      <div class="solution-card featured">
-        <div class="solution-header">
-          <h3>Spray Foam Insulation</h3>
-          <span class="r-value">R-6.5 per inch</span>
-          <span class="best-badge">BEST PERFORMANCE</span>
-        </div>
-        <div class="solution-content">
-          <p><strong>Best for:</strong> Maximum energy efficiency and air sealing</p>
-          <h4>Benefits:</h4>
-          <ul>
-            <li>Superior R-value performance</li>
-            <li>Complete moisture barrier</li>
-            <li>Permanent solution (25+ years)</li>
-            <li>Eliminates air infiltration</li>
-            <li>Adds structural strength</li>
-          </ul>
-          <p><strong>Ideal when:</strong> You want the absolute best performance and long-term value</p>
-        </div>
-      </div>
+      {% set serviceTitle = "Spray Foam Insulation" %}
+      {% set serviceDescription = "Maximum energy efficiency and air sealing with R-6.5 per inch. Superior performance, complete moisture barrier, and 25+ year lifespan. Best for homeowners wanting absolute best performance." %}
+      {% set serviceFeatures = ["Superior R-value performance", "Complete moisture barrier", "Permanent solution (25+ years)", "Eliminates air infiltration", "Adds structural strength"] %}
+      {% set serviceLink = "/services/residential/spray-foam/" %}
+      {% include "components/cards/service-card-glass.njk" %}
       
-      <div class="solution-card">
-        <div class="solution-header">
-          <h3>Blown-In Fiberglass</h3>
-          <span class="r-value">R-2.5 per inch</span>
-        </div>
-        <div class="solution-content">
-          <p><strong>Best for:</strong> Cost-effective coverage of large areas</p>
-          <h4>Benefits:</h4>
-          <ul>
-            <li>Quick installation process</li>
-            <li>Good thermal performance</li>
-            <li>Fire resistant material</li>
-            <li>Budget-friendly option</li>
-            <li>Wide availability</li>
-          </ul>
-          <p><strong>Ideal when:</strong> Budget is a primary concern and you need basic performance</p>
-        </div>
-      </div>
+      {% set serviceTitle = "Blown-In Fiberglass" %}
+      {% set serviceDescription = "Cost-effective coverage with R-2.5 per inch. Quick installation, good thermal performance, and fire resistant. Ideal when budget is a primary concern." %}
+      {% set serviceFeatures = ["Quick installation process", "Good thermal performance", "Fire resistant material", "Budget-friendly option"] %}
+      {% set serviceLink = "/services/residential/blown-in/" %}
+      {% include "components/cards/service-card-glass.njk" %}
       
-      <div class="solution-card">
-        <div class="solution-header">
-          <h3>Blown-In Cellulose</h3>
-          <span class="r-value">R-3.7 per inch</span>
-        </div>
-        <div class="solution-content">
-          <p><strong>Best for:</strong> Eco-friendly insulation with good performance</p>
-          <h4>Benefits:</h4>
-          <ul>
-            <li>85% recycled content</li>
-            <li>Natural pest resistance</li>
-            <li>Excellent sound dampening</li>
-            <li>Fire retardant treated</li>
-            <li>Better air sealing than fiberglass</li>
-          </ul>
-          <p><strong>Ideal when:</strong> You prefer green building materials with solid performance</p>
-        </div>
-      </div>
+      {% set serviceTitle = "Blown-In Cellulose" %}
+      {% set serviceDescription = "Eco-friendly insulation with R-3.7 per inch. Made from 85% recycled content with natural pest resistance. Perfect for green building enthusiasts." %}
+      {% set serviceFeatures = ["85% recycled content", "Natural pest resistance", "Excellent sound dampening", "Fire retardant treated"] %}
+      {% set serviceLink = "/contact/" %}
+      {% include "components/cards/service-card-glass.njk" %}
     </div>
   </div>
 </section>
 
-<section class="arizona-specific content-section">
+<section class="content-section">
   <div class="container">
-    <div class="section-header">
-      <h2>Arizona-Specific Considerations</h2>
-      <p class="section-subtitle">Unique challenges we address for desert conditions</p>
-    </div>
+    <h2 class="section-title">Arizona-Specific Considerations</h2>
+    <p class="lead text-center">Unique challenges we address for desert conditions</p>
     
     <div class="considerations-grid">
-      <div class="consideration-item">
-        <h3>🔥 Extreme Temperature Cycling</h3>
+      <div class="consideration-card glass-panel">
+        <div class="consideration-icon">🔥</div>
+        <h3>Extreme Temperature Cycling</h3>
         <p><strong>Challenge:</strong> Daily temperature swings of 30-40°F stress materials and create thermal expansion issues.</p>
         <p><strong>Our Solution:</strong> We use materials specifically rated for high-temperature performance and thermal cycling resistance.</p>
       </div>
       
-      <div class="consideration-item">
-        <h3>🌧️ Monsoon Moisture</h3>
+      <div class="consideration-card glass-panel">
+        <div class="consideration-icon">🌧️</div>
+        <h3>Monsoon Moisture</h3>
         <p><strong>Challenge:</strong> Sudden humidity spikes during monsoon season can create condensation and mold issues.</p>
         <p><strong>Our Solution:</strong> Proper vapor barriers and moisture management prevent humidity infiltration and damage.</p>
       </div>
       
-      <div class="consideration-item">
-        <h3>💨 Dust and Allergens</h3>
+      <div class="consideration-card glass-panel">
+        <div class="consideration-icon">💨</div>
+        <h3>Dust and Allergens</h3>
         <p><strong>Challenge:</strong> Desert winds carry dust and allergens that infiltrate through gaps in insulation.</p>
         <p><strong>Our Solution:</strong> Complete air sealing eliminates dust infiltration and improves indoor air quality.</p>
       </div>
       
-      <div class="consideration-item">
-        <h3>☀️ Intense Solar Radiation</h3>
+      <div class="consideration-card glass-panel">
+        <div class="consideration-icon">☀️</div>
+        <h3>Intense Solar Radiation</h3>
         <p><strong>Challenge:</strong> Arizona's intense UV and radiant heat create extreme roof surface temperatures.</p>
         <p><strong>Our Solution:</strong> Reflective barriers and high-performance insulation combat radiant heat transfer.</p>
       </div>
@@ -266,74 +221,72 @@ relatedServices:
 
 {% set process = processSteps %}
 {% set processTitle = "Our Professional Attic Insulation Process" %}
-{% include "components/process-steps.njk" %}
+{% include "components/sections/process-steps-dark.njk" %}
 
-<section class="roi-section content-section">
+<section class="content-section" style="background: var(--primary-medium);">
   <div class="container">
-    <div class="section-header">
-      <h2>Investment and Returns</h2>
-      <p class="section-subtitle">Attic insulation pays for itself through energy savings</p>
-    </div>
+    <h2 class="section-title">Investment and Returns</h2>
+    <p class="lead text-center">Attic insulation pays for itself through energy savings</p>
     
-    <div class="roi-grid">
-      <div class="cost-breakdown">
-        <h3>Typical Attic Insulation Costs</h3>
-        <div class="cost-items">
-          <div class="cost-item">
-            <span class="cost-label">Blown-In Insulation</span>
-            <span class="cost-range">$1.50-2.50/sq ft</span>
+    <div class="roi-showcase glass-panel">
+      <div class="roi-grid">
+        <div class="roi-section">
+          <h3>Typical Investment</h3>
+          <div class="roi-items">
+            <div class="roi-item">
+              <span class="roi-label">Blown-In Insulation</span>
+              <span class="roi-value">$1.50-2.50/sq ft</span>
+            </div>
+            <div class="roi-item">
+              <span class="roi-label">Spray Foam Insulation</span>
+              <span class="roi-value">$3.00-5.00/sq ft</span>
+            </div>
+            <div class="roi-item highlight">
+              <span class="roi-label">Average 1,500 sq ft Attic</span>
+              <span class="roi-value">$2,250-7,500</span>
+            </div>
           </div>
-          <div class="cost-item">
-            <span class="cost-label">Spray Foam Insulation</span>
-            <span class="cost-range">$3.00-5.00/sq ft</span>
-          </div>
-          <div class="cost-item highlight">
-            <span class="cost-label">Average 1,500 sq ft Attic</span>
-            <span class="cost-range">$2,250-7,500</span>
+        </div>
+        
+        <div class="roi-section">
+          <h3>Expected Returns</h3>
+          <div class="roi-items">
+            <div class="roi-item">
+              <span class="roi-label">Monthly Summer Savings</span>
+              <span class="roi-value">$150-300</span>
+            </div>
+            <div class="roi-item">
+              <span class="roi-label">Annual Energy Savings</span>
+              <span class="roi-value">$500-1,200</span>
+            </div>
+            <div class="roi-item highlight">
+              <span class="roi-label">Payback Period</span>
+              <span class="roi-value">3-5 Years</span>
+            </div>
           </div>
         </div>
       </div>
       
-      <div class="savings-projection">
-        <h3>Expected Savings</h3>
-        <div class="savings-items">
-          <div class="savings-item">
-            <span class="savings-value">$150-300</span>
-            <span class="savings-label">Monthly Peak Summer Savings</span>
-          </div>
-          <div class="savings-item">
-            <span class="savings-value">$500-1,200</span>
-            <span class="savings-label">Annual Energy Savings</span>
-          </div>
-          <div class="savings-item featured">
-            <span class="savings-value">3-5 Years</span>
-            <span class="savings-label">Typical Payback Period</span>
-          </div>
-        </div>
-        <div class="utility-rebates">
-          <h4>💰 Utility Rebates Available</h4>
-          <p>APS, SRP, and TEP offer energy efficiency rebates that may apply to attic insulation projects</p>
-        </div>
+      <div class="utility-note">
+        <span class="note-icon">💰</span>
+        <p><strong>Utility Rebates Available:</strong> APS, SRP, and TEP offer energy efficiency rebates that may apply to attic insulation projects</p>
       </div>
     </div>
   </div>
 </section>
 
 {% set pricing = pricingOptions %}
-{% set pricingTitle = "Attic Insulation Pricing Options" %}
-{% include "components/pricing-table.njk" %}
+{% include "components/cards/pricing-table-dark.njk" %}
 
-<section class="professional-advantage content-section">
+<section class="content-section">
   <div class="container">
-    <div class="section-header">
-      <h2>The Professional Difference</h2>
-    </div>
+    <h2 class="section-title">The Professional Difference</h2>
     
-    <div class="advantage-comparison">
-      <div class="diy-risks">
-        <h3>❌ Why DIY Attic Insulation Falls Short</h3>
-        <ul>
-          <li><strong>Safety Risks:</strong> Extreme attic temperatures and confined spaces create dangerous conditions</li>
+    <div class="comparison-grid">
+      <div class="comparison-card glass-panel risk">
+        <h3>❌ DIY Attic Insulation Risks</h3>
+        <ul class="comparison-list">
+          <li><strong>Safety Hazards:</strong> Extreme attic temperatures and confined spaces create dangerous conditions</li>
           <li><strong>Incomplete Coverage:</strong> Missed spots create thermal bridges that reduce effectiveness</li>
           <li><strong>Ventilation Issues:</strong> Improper installation can block vents and cause moisture problems</li>
           <li><strong>No Warranty:</strong> DIY installation typically voids manufacturer warranties</li>
@@ -341,9 +294,9 @@ relatedServices:
         </ul>
       </div>
       
-      <div class="pro-advantages">
+      <div class="comparison-card glass-panel advantage">
         <h3>✅ Our Professional Advantage</h3>
-        <ul>
+        <ul class="comparison-list">
           <li><strong>Certified Installers:</strong> Trained specifically in Arizona attic conditions and techniques</li>
           <li><strong>Professional Equipment:</strong> Commercial-grade materials and application equipment</li>
           <li><strong>Complete Solution:</strong> We address air sealing, ventilation, and insulation together</li>
@@ -355,98 +308,82 @@ relatedServices:
   </div>
 </section>
 
-{% include "sections/why-choose-ica.njk" %}
+{% set faqTitle = "Attic Insulation FAQs" %}
+{% include "components/sections/faq-section-glass.njk" %}
 
-{% include "sections/testimonials.njk" %}
-
-{% set sectionTitle = "Attic Insulation FAQs" %}
-{% include "sections/service-faq.njk" %}
-
-{% include "sections/cta.njk" %}
-
-{% include "sections/related-services.njk" %}
+{% set ctaTitle = "Ready to Cool Down Your Attic?" %}
+{% set ctaSubtitle = "Stop letting your attic turn into a 160°F furnace. Get professional attic insulation today." %}
+{% include "components/sections/cta-section-dark.njk" %}
 
 <style>
-.attic-challenge {
-  padding: 4rem 0;
-  background: var(--surface-light);
-}
-
-.attic-challenge .section-header {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.attic-challenge h2 {
-  font-size: 2.5rem;
-  color: var(--primary);
-  margin-bottom: 1rem;
-}
-
-.section-subtitle {
-  font-size: 1.3rem;
-  color: var(--text-muted);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
+/* Attic Page Specific Dark Theme Styles */
 .challenge-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 30px;
+  margin-top: 40px;
 }
 
-.challenge-content h3,
-.impact-showcase h3 {
-  font-size: 1.8rem;
-  color: var(--primary);
+.challenge-card,
+.impact-card {
+  padding: 2.5rem;
+}
+
+.challenge-card h3,
+.impact-card h3 {
+  color: var(--accent-primary);
   margin-bottom: 1.5rem;
+  font-size: 1.5rem;
 }
 
-.challenge-content p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: var(--text-dark);
-  margin-bottom: 2rem;
-}
-
-.temperature-scale {
+.temperature-visual {
   margin-top: 2rem;
 }
 
-.temperature-scale h4 {
-  color: var(--primary);
-  margin-bottom: 1rem;
+.temperature-visual h4 {
+  color: var(--accent-secondary);
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
 }
 
-.temp-bar {
+.temp-stages {
   display: flex;
-  border-radius: 10px;
-  overflow: hidden;
-  height: 60px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 200px;
+  gap: 20px;
 }
 
-.temp-segment {
+.temp-stage {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  color: white;
-  font-weight: bold;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
   position: relative;
 }
 
-.temp-segment span {
+.temp-time {
+  color: var(--text-secondary);
   font-size: 0.9rem;
+  margin-bottom: 5px;
 }
 
-.temp-segment label {
-  font-size: 0.7rem;
-  opacity: 0.9;
+.temp-value {
+  color: var(--accent-primary);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.temp-bar {
+  width: 100%;
+  background: linear-gradient(to top, #00ffff, #ff6b35);
+  border-radius: 5px 5px 0 0;
+  transition: all 0.3s ease;
+}
+
+.temp-stage.peak .temp-value {
+  color: #ff6b35;
+  font-size: 1.2rem;
 }
 
 .impact-items {
@@ -458,11 +395,6 @@ relatedServices:
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  background: white;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  border-left: 4px solid var(--primary);
 }
 
 .impact-icon {
@@ -471,274 +403,209 @@ relatedServices:
 }
 
 .impact-item h4 {
-  font-size: 1.1rem;
-  color: var(--primary);
+  color: var(--accent-primary);
   margin-bottom: 0.5rem;
+  font-size: 1.1rem;
 }
 
 .impact-item p {
-  color: var(--text-muted);
+  color: var(--text-secondary);
   margin: 0;
-  font-size: 0.95rem;
-}
-
-.insulation-solutions {
-  padding: 4rem 0;
-  background: white;
 }
 
 .solutions-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.solution-card {
-  background: var(--surface-light);
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-  position: relative;
-}
-
-.solution-card:hover {
-  transform: translateY(-5px);
-}
-
-.solution-card.featured {
-  border: 2px solid var(--primary);
-  transform: scale(1.02);
-}
-
-.solution-header {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-  padding: 2rem;
-  text-align: center;
-  color: white;
-  position: relative;
-}
-
-.solution-header h3 {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.4rem;
-}
-
-.r-value {
-  font-size: 1.1rem;
-  opacity: 0.9;
-}
-
-.best-badge {
-  position: absolute;
-  top: -5px;
-  right: 10px;
-  background: #ff6b35;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 15px;
-  font-size: 0.7rem;
-  font-weight: bold;
-}
-
-.solution-content {
-  padding: 2rem;
-}
-
-.solution-content h4 {
-  color: var(--primary);
-  margin: 1rem 0 0.5rem 0;
-}
-
-.solution-content ul {
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0;
-}
-
-.solution-content li {
-  padding: 0.25rem 0;
-  color: var(--text-dark);
-}
-
-.solution-content li:before {
-  content: "✓ ";
-  color: var(--primary);
-  font-weight: bold;
-}
-
-.arizona-specific {
-  padding: 4rem 0;
-  background: var(--surface-light);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
 }
 
 .considerations-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
 }
 
-.consideration-item {
-  background: white;
+.consideration-card {
   padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
-.consideration-item h3 {
-  color: var(--primary);
+.consideration-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.consideration-card h3 {
+  color: var(--accent-primary);
   margin-bottom: 1rem;
 }
 
-.consideration-item p {
+.consideration-card p {
+  text-align: left;
   margin-bottom: 1rem;
-  line-height: 1.6;
+  color: var(--text-secondary);
 }
 
-.roi-section {
-  padding: 4rem 0;
-  background: white;
+.consideration-card strong {
+  color: var(--accent-primary);
+}
+
+.roi-showcase {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 3rem;
 }
 
 .roi-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  max-width: 1000px;
-  margin: 3rem auto 0;
+  gap: 40px;
+  margin-bottom: 30px;
 }
 
-.cost-breakdown h3,
-.savings-projection h3 {
-  color: var(--primary);
+.roi-section h3 {
+  color: var(--accent-primary);
   margin-bottom: 1.5rem;
 }
 
-.cost-items,
-.savings-items {
-  display: grid;
+.roi-items {
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
 }
 
-.cost-item,
-.savings-item {
+.roi-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background: var(--surface-light);
+  background: rgba(0, 255, 255, 0.03);
   border-radius: 8px;
+  border: 1px solid rgba(0, 255, 255, 0.1);
 }
 
-.cost-item.highlight,
-.savings-item.featured {
-  background: var(--primary);
-  color: white;
+.roi-item.highlight {
+  background: rgba(0, 255, 255, 0.1);
+  border-color: var(--accent-primary);
 }
 
-.cost-range,
-.savings-value {
+.roi-label {
+  color: var(--text-secondary);
+}
+
+.roi-value {
+  color: var(--accent-primary);
   font-weight: bold;
-  color: var(--primary);
+  font-size: 1.1rem;
 }
 
-.cost-item.highlight .cost-range,
-.savings-item.featured .savings-value {
-  color: white;
-}
-
-.utility-rebates {
-  margin-top: 2rem;
+.utility-note {
+  display: flex;
+  align-items: center;
+  gap: 15px;
   padding: 1.5rem;
-  background: var(--surface-light);
+  background: rgba(0, 255, 255, 0.05);
   border-radius: 10px;
-  border-left: 4px solid var(--primary);
+  border: 1px solid rgba(0, 255, 255, 0.2);
 }
 
-.utility-rebates h4 {
-  color: var(--primary);
-  margin-bottom: 0.5rem;
+.note-icon {
+  font-size: 1.5rem;
 }
 
-.professional-advantage {
-  padding: 4rem 0;
-  background: var(--surface-light);
+.utility-note p {
+  margin: 0;
+  color: var(--text-secondary);
 }
 
-.advantage-comparison {
+.comparison-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  margin-top: 3rem;
+  gap: 30px;
+  margin-top: 40px;
 }
 
-.diy-risks,
-.pro-advantages {
-  padding: 2rem;
-  border-radius: 15px;
+.comparison-card {
+  padding: 2.5rem;
 }
 
-.diy-risks {
-  background: rgba(255, 60, 60, 0.1);
-  border: 2px solid rgba(255, 60, 60, 0.3);
+.comparison-card.risk {
+  border-color: rgba(255, 60, 60, 0.3);
+  background: rgba(255, 60, 60, 0.03);
 }
 
-.pro-advantages {
-  background: rgba(60, 255, 60, 0.1);
-  border: 2px solid rgba(60, 255, 60, 0.3);
+.comparison-card.advantage {
+  border-color: rgba(60, 255, 60, 0.3);
+  background: rgba(60, 255, 60, 0.03);
 }
 
-.diy-risks h3 {
-  color: #ff3333;
+.comparison-card h3 {
   margin-bottom: 1.5rem;
+  font-size: 1.4rem;
 }
 
-.pro-advantages h3 {
-  color: var(--primary);
-  margin-bottom: 1.5rem;
+.comparison-card.risk h3 {
+  color: #ff6b35;
 }
 
-.diy-risks ul,
-.pro-advantages ul {
+.comparison-card.advantage h3 {
+  color: #00ff88;
+}
+
+.comparison-list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.diy-risks li,
-.pro-advantages li {
-  padding: 0.5rem 0;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
-  line-height: 1.4;
+.comparison-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+  color: var(--text-secondary);
 }
 
+.comparison-list li:last-child {
+  border-bottom: none;
+}
+
+.comparison-list strong {
+  color: var(--text-primary);
+}
+
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
   .challenge-grid,
   .roi-grid,
-  .advantage-comparison {
+  .comparison-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
-  .attic-challenge h2 {
-    font-size: 2rem;
-  }
-  
-  .section-subtitle {
-    font-size: 1.1rem;
+    gap: 20px;
   }
   
   .solutions-grid {
     grid-template-columns: 1fr;
   }
   
-  .solution-card.featured {
-    transform: none;
+  .temp-stages {
+    height: 150px;
   }
   
-  .considerations-grid {
-    grid-template-columns: 1fr;
+  .temp-stage {
+    gap: 10px;
+  }
+  
+  .temp-time {
+    font-size: 0.8rem;
+  }
+  
+  .temp-value {
+    font-size: 0.9rem;
+  }
+  
+  .roi-showcase {
+    padding: 2rem;
   }
 }
 </style>
