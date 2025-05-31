@@ -3,6 +3,9 @@
     .service-faq {
       padding: 80px 0;
       background: var(--surface);
+      position: relative;
+      z-index: 10;
+      isolation: isolate;
     }
     
     .service-faq h2 {
@@ -10,12 +13,19 @@
       font-size: 2.5rem;
       color: var(--primary);
       margin-bottom: 60px;
+      position: relative;
+      z-index: 3;
+      /* Prevent conflicts with any animated backgrounds */
+      background: var(--surface);
+      padding: 20px 0;
     }
     
     .faq-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       gap: 40px;
+      position: relative;
+      z-index: 2;
     }
     
     .faq-item {
@@ -24,12 +34,17 @@
       border-radius: 15px;
       padding: 30px;
       transition: all 0.3s ease;
+      position: relative;
+      z-index: 3;
+      /* Ensure FAQ items appear above any background animations */
+      isolation: isolate;
     }
     
     .faq-item:hover {
       transform: translateY(-5px);
       box-shadow: 0 15px 40px rgba(0, 255, 255, 0.2);
       border-color: var(--primary);
+      z-index: 4;
     }
     
     .faq-item h3 {
@@ -39,6 +54,12 @@
       display: flex;
       align-items: start;
       gap: 10px;
+      position: relative;
+      z-index: 4;
+      /* Ensure question text is always visible */
+      background: var(--surface-dark);
+      padding: 5px 0;
+      border-radius: 5px;
     }
     
     .faq-item h3::before {
@@ -50,16 +71,73 @@
       font-size: 0.9rem;
       font-weight: bold;
       flex-shrink: 0;
+      z-index: 5;
+      position: relative;
     }
     
     .faq-item p {
       color: var(--text-light);
       line-height: 1.8;
+      position: relative;
+      z-index: 3;
+      /* Ensure answer text is readable */
+      background: rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      border-radius: 5px;
     }
     
-    @media (max-width: 768px) {
+    /* Desktop improvements */
+    @media (min-width: 1024px) {
+      .faq-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+      }
+      
+      .faq-item {
+        padding: 35px;
+      }
+      
+      .faq-item h3 {
+        font-size: 1.4rem;
+      }
+    }
+    
+    /* Tablet responsive */
+    @media (max-width: 1023px) and (min-width: 768px) {
       .faq-grid {
         grid-template-columns: 1fr;
+        gap: 30px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+    }
+    
+    /* Mobile responsive */
+    @media (max-width: 767px) {
+      .service-faq {
+        padding: 60px 0;
+      }
+      
+      .service-faq h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+      }
+      
+      .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+      
+      .faq-item {
+        padding: 25px;
+      }
+      
+      .faq-item h3 {
+        font-size: 1.2rem;
+      }
+      
+      .faq-item p {
+        font-size: 0.95rem;
       }
     }
   </style>
