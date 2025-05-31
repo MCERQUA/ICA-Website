@@ -1,160 +1,744 @@
 ---
-layout: layouts/service-page.njk
-title: Attic Insulation Services
-subtitle: Combat Arizona's 160°F Attic Temperatures
-description: Professional attic insulation services in Phoenix AZ. Reduce energy bills by 30-50%. Expert installation, free estimates. Call 623-241-1939.
-currentService: /services/residential/attic/
-heroImage: /images/attic-insulation-hero.jpg
+layout: base.njk
+title: "Attic Insulation Services Phoenix"
+subtitle: "Combat Arizona's 160°F Attic Temperatures"
+meta_description: "Professional attic insulation services in Phoenix AZ. Reduce energy bills by 30-50%. Expert installation, free estimates. Call 623-241-1939."
+heroStats:
+  - value: "160°F"
+    label: "Peak Attic Temps"
+  - value: "30-50%"
+    label: "Energy Savings"
+  - value: "R-60"
+    label: "Recommended Value"
 benefits:
-  - title: Dramatic Energy Savings
-    description: Reduce cooling costs by 30-50% with proper attic insulation
-    icon: 💰
-  - title: Consistent Comfort
-    description: Eliminate hot spots and maintain even temperatures throughout your home
-    icon: 🌡️
-  - title: Extended HVAC Life
-    description: Reduce strain on your AC system and avoid costly repairs
-    icon: 🔧
-  - title: Improved Air Quality
-    description: Seal out dust, allergens, and outdoor pollutants
-    icon: 🌬️
-  - title: Moisture Protection
-    description: Prevent monsoon humidity damage and mold growth
-    icon: 💧
-  - title: ROI in 3-5 Years
-    description: Quick payback through energy savings and rebates
-    icon: 📈
-process:
-  - title: Free Attic Assessment
-    description: Comprehensive evaluation of current insulation, air leaks, and ventilation
-  - title: Custom Solution Design
-    description: Tailored recommendations based on your home's specific needs
-  - title: Professional Preparation
-    description: Protect your home and ensure proper ventilation setup
-  - title: Expert Installation
-    description: Certified technicians install to manufacturer specifications
-  - title: Quality Verification
-    description: Thermal imaging to ensure complete coverage and performance
-relatedServices:
-  - title: Spray Foam Insulation
-    description: The ultimate attic insulation solution for maximum performance
-    url: /services/residential/spray-foam/
-    icon: 🏠
-  - title: Blown-In Insulation
-    description: Cost-effective attic insulation for quick installation
-    url: /services/residential/blown-in/
-    icon: 💨
-  - title: Insulation Removal
-    description: Safe removal of old or damaged attic insulation
-    url: /services/residential/removal/
-    icon: 🧹
+  - title: "Dramatic Energy Savings"
+    description: "Reduce cooling costs by 30-50% with proper attic insulation"
+    icon: "💰"
+  - title: "Consistent Comfort"
+    description: "Eliminate hot spots and maintain even temperatures throughout your home"
+    icon: "🌡️"
+  - title: "Extended HVAC Life"
+    description: "Reduce strain on your AC system and avoid costly repairs"
+    icon: "🔧"
+  - title: "Improved Air Quality"
+    description: "Seal out dust, allergens, and outdoor pollutants"
+    icon: "🌬️"
+  - title: "Moisture Protection"
+    description: "Prevent monsoon humidity damage and mold growth"
+    icon: "💧"
+  - title: "ROI in 3-5 Years"
+    description: "Quick payback through energy savings and rebates"
+    icon: "📈"
+processSteps:
+  - title: "Free Attic Assessment"
+    description: "Comprehensive evaluation of current insulation, air leaks, and ventilation using thermal imaging"
+  - title: "Custom Solution Design"
+    description: "Tailored recommendations based on your home's specific needs and Arizona climate challenges"
+  - title: "Professional Preparation"
+    description: "Protect your home and ensure proper ventilation setup before installation"
+  - title: "Expert Installation"
+    description: "Certified technicians install to manufacturer specifications with quality control monitoring"
+  - title: "Quality Verification"
+    description: "Thermal imaging to ensure complete coverage and performance verification"
+pricingOptions:
+  - type: "Blown-In Insulation"
+    price: "$1.50-2.50/sq ft"
+    features:
+      - "R-38 to R-49 coverage"
+      - "Quick 1-day installation"
+      - "Fiberglass or cellulose options"
+      - "Cost-effective solution"
+  - type: "Spray Foam Insulation"
+    price: "$3.00-5.00/sq ft"
+    features:
+      - "R-30 to R-60 coverage"
+      - "Complete air sealing"
+      - "25+ year lifespan"
+      - "Maximum performance"
+    highlighted: true
 faqs:
-  - question: How hot do Arizona attics really get?
-    answer: During summer, Arizona attics regularly reach 150-160°F, creating extreme stress on your cooling system and making upper floors unbearably hot. Proper attic insulation creates a thermal barrier that dramatically reduces heat transfer into your living space.
-  - question: What R-value do I need for my Arizona attic?
-    answer: The Department of Energy recommends R-38 to R-60 for Arizona attics. However, the type of insulation matters as much as the R-value. We'll assess your specific situation and recommend the optimal solution for your home and budget.
-  - question: Should I remove old insulation before adding new?
-    answer: It depends on the condition of existing insulation. If it's contaminated, water-damaged, or pest-infested, removal is recommended. Otherwise, we can often add new insulation on top, saving you money while improving performance.
-  - question: How long does attic insulation installation take?
-    answer: Most attic insulation projects are completed in one day. Larger homes or those requiring old insulation removal may take 2-3 days. We'll provide a detailed timeline during your free assessment.
-  - question: Will new attic insulation really lower my energy bills?
-    answer: Yes! Our customers typically see 30-50% reductions in cooling costs. In Arizona's extreme climate, proper attic insulation is one of the most cost-effective home improvements you can make.
+  - question: "How hot do Arizona attics really get?"
+    answer: "During summer, Arizona attics regularly reach 150-160°F, creating extreme stress on your cooling system and making upper floors unbearably hot. Proper attic insulation creates a thermal barrier that dramatically reduces heat transfer into your living space."
+  - question: "What R-value do I need for my Arizona attic?"
+    answer: "The Department of Energy recommends R-38 to R-60 for Arizona attics. However, the type of insulation matters as much as the R-value. We'll assess your specific situation and recommend the optimal solution for your home and budget."
+  - question: "Should I remove old insulation before adding new?"
+    answer: "It depends on the condition of existing insulation. If it's contaminated, water-damaged, or pest-infested, removal is recommended. Otherwise, we can often add new insulation on top, saving you money while improving performance."
+  - question: "How long does attic insulation installation take?"
+    answer: "Most attic insulation projects are completed in one day. Larger homes or those requiring old insulation removal may take 2-3 days. We'll provide a detailed timeline during your free assessment."
+  - question: "Will new attic insulation really lower my energy bills?"
+    answer: "Yes! Our customers typically see 30-50% reductions in cooling costs. In Arizona's extreme climate, proper attic insulation is one of the most cost-effective home improvements you can make."
+  - question: "Can I install attic insulation myself?"
+    answer: "While possible, DIY installation risks safety hazards, incomplete coverage, and voided warranties. Professional installation ensures proper R-value, air sealing, and safety in Arizona's extreme attic conditions."
+relatedServices:
+  - title: "Spray Foam Insulation"
+    description: "The ultimate attic insulation solution for maximum performance"
+    url: "/services/residential/spray-foam/"
+  - title: "Blown-In Insulation"
+    description: "Cost-effective attic insulation for quick installation"
+    url: "/services/residential/blown-in/"
+  - title: "Insulation Removal"
+    description: "Safe removal of old or damaged attic insulation"
+    url: "/services/residential/removal/"
 ---
 
-<h1>Arizona's Attic Insulation Experts</h1>
+{% set title = "Attic Insulation Services Phoenix" %}
+{% set subtitle = "Combat Arizona's 160°F Attic Temperatures" %}
+{% include "sections/service-hero.njk" %}
 
-<h2>The 160°F Challenge Your Attic Faces</h2>
+<section class="attic-challenge content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>The 160°F Challenge Your Attic Faces</h2>
+      <p class="section-subtitle">Your attic is ground zero in the battle against Arizona heat</p>
+    </div>
+    
+    <div class="challenge-grid">
+      <div class="challenge-content">
+        <h3>Arizona's Attic Reality</h3>
+        <p>When outdoor temperatures hit 115°F, your attic becomes a superheated furnace reaching 160°F or higher. This extreme heat radiates down into your living space, making your AC work overtime and driving up energy costs.</p>
+        
+        <div class="temperature-scale">
+          <h4>Attic Temperature Progression</h4>
+          <div class="temp-bar">
+            <div class="temp-segment" style="background: #ffeb3b; width: 20%;">
+              <span>90°F</span>
+              <label>Morning</label>
+            </div>
+            <div class="temp-segment" style="background: #ff9800; width: 25%;">
+              <span>120°F</span>
+              <label>Noon</label>
+            </div>
+            <div class="temp-segment" style="background: #f44336; width: 30%;">
+              <span>145°F</span>
+              <label>2 PM</label>
+            </div>
+            <div class="temp-segment" style="background: #8b0000; width: 25%;">
+              <span>160°F</span>
+              <label>Peak</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="impact-showcase">
+        <h3>Hidden Costs of Poor Attic Insulation</h3>
+        <div class="impact-items">
+          <div class="impact-item">
+            <span class="impact-icon">💸</span>
+            <div>
+              <h4>Energy Loss</h4>
+              <p>Up to 40% of your cooling energy escapes through an under-insulated attic</p>
+            </div>
+          </div>
+          <div class="impact-item">
+            <span class="impact-icon">🥵</span>
+            <div>
+              <h4>Comfort Issues</h4>
+              <p>Hot ceilings, uneven temperatures, and stuffy upper floors</p>
+            </div>
+          </div>
+          <div class="impact-item">
+            <span class="impact-icon">🔧</span>
+            <div>
+              <h4>HVAC Strain</h4>
+              <p>Your AC runs constantly, leading to premature failure</p>
+            </div>
+          </div>
+          <div class="impact-item">
+            <span class="impact-icon">📊</span>
+            <div>
+              <h4>High Bills</h4>
+              <p>Arizona homeowners pay some of the highest cooling costs in the nation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<p>Your attic is ground zero in the battle against Arizona heat. When outdoor temperatures hit 115°F, your attic becomes a superheated furnace reaching 160°F or higher. This extreme heat radiates down into your living space, making your AC work overtime and driving up energy costs.</p>
+<section class="insulation-solutions content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our Attic Insulation Solutions</h2>
+      <p class="section-subtitle">Multiple options to fit your needs and budget</p>
+    </div>
+    
+    <div class="solutions-grid">
+      <div class="solution-card featured">
+        <div class="solution-header">
+          <h3>Spray Foam Insulation</h3>
+          <span class="r-value">R-6.5 per inch</span>
+          <span class="best-badge">BEST PERFORMANCE</span>
+        </div>
+        <div class="solution-content">
+          <p><strong>Best for:</strong> Maximum energy efficiency and air sealing</p>
+          <h4>Benefits:</h4>
+          <ul>
+            <li>Superior R-value performance</li>
+            <li>Complete moisture barrier</li>
+            <li>Permanent solution (25+ years)</li>
+            <li>Eliminates air infiltration</li>
+            <li>Adds structural strength</li>
+          </ul>
+          <p><strong>Ideal when:</strong> You want the absolute best performance and long-term value</p>
+        </div>
+      </div>
+      
+      <div class="solution-card">
+        <div class="solution-header">
+          <h3>Blown-In Fiberglass</h3>
+          <span class="r-value">R-2.5 per inch</span>
+        </div>
+        <div class="solution-content">
+          <p><strong>Best for:</strong> Cost-effective coverage of large areas</p>
+          <h4>Benefits:</h4>
+          <ul>
+            <li>Quick installation process</li>
+            <li>Good thermal performance</li>
+            <li>Fire resistant material</li>
+            <li>Budget-friendly option</li>
+            <li>Wide availability</li>
+          </ul>
+          <p><strong>Ideal when:</strong> Budget is a primary concern and you need basic performance</p>
+        </div>
+      </div>
+      
+      <div class="solution-card">
+        <div class="solution-header">
+          <h3>Blown-In Cellulose</h3>
+          <span class="r-value">R-3.7 per inch</span>
+        </div>
+        <div class="solution-content">
+          <p><strong>Best for:</strong> Eco-friendly insulation with good performance</p>
+          <h4>Benefits:</h4>
+          <ul>
+            <li>85% recycled content</li>
+            <li>Natural pest resistance</li>
+            <li>Excellent sound dampening</li>
+            <li>Fire retardant treated</li>
+            <li>Better air sealing than fiberglass</li>
+          </ul>
+          <p><strong>Ideal when:</strong> You prefer green building materials with solid performance</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<h2>Why Proper Attic Insulation Matters in Arizona</h2>
+<section class="arizona-specific content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Arizona-Specific Considerations</h2>
+      <p class="section-subtitle">Unique challenges we address for desert conditions</p>
+    </div>
+    
+    <div class="considerations-grid">
+      <div class="consideration-item">
+        <h3>🔥 Extreme Temperature Cycling</h3>
+        <p><strong>Challenge:</strong> Daily temperature swings of 30-40°F stress materials and create thermal expansion issues.</p>
+        <p><strong>Our Solution:</strong> We use materials specifically rated for high-temperature performance and thermal cycling resistance.</p>
+      </div>
+      
+      <div class="consideration-item">
+        <h3>🌧️ Monsoon Moisture</h3>
+        <p><strong>Challenge:</strong> Sudden humidity spikes during monsoon season can create condensation and mold issues.</p>
+        <p><strong>Our Solution:</strong> Proper vapor barriers and moisture management prevent humidity infiltration and damage.</p>
+      </div>
+      
+      <div class="consideration-item">
+        <h3>💨 Dust and Allergens</h3>
+        <p><strong>Challenge:</strong> Desert winds carry dust and allergens that infiltrate through gaps in insulation.</p>
+        <p><strong>Our Solution:</strong> Complete air sealing eliminates dust infiltration and improves indoor air quality.</p>
+      </div>
+      
+      <div class="consideration-item">
+        <h3>☀️ Intense Solar Radiation</h3>
+        <p><strong>Challenge:</strong> Arizona's intense UV and radiant heat create extreme roof surface temperatures.</p>
+        <p><strong>Our Solution:</strong> Reflective barriers and high-performance insulation combat radiant heat transfer.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<h3>The Hidden Cost of Poor Attic Insulation</h3>
+{% set benefits = benefits %}
+{% include "components/benefits-grid.njk" %}
 
-<ul>
-  <li><strong>Energy Loss</strong>: Up to 40% of your cooling energy escapes through an under-insulated attic</li>
-  <li><strong>Comfort Issues</strong>: Hot ceilings, uneven temperatures, and stuffy upper floors</li>
-  <li><strong>HVAC Strain</strong>: Your AC runs constantly, leading to premature failure</li>
-  <li><strong>High Bills</strong>: Arizona homeowners pay some of the highest cooling costs in the nation</li>
-</ul>
+{% set process = processSteps %}
+{% set processTitle = "Our Professional Attic Insulation Process" %}
+{% include "components/process-steps.njk" %}
 
-<h3>Our Attic Insulation Solutions</h3>
+<section class="roi-section content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Investment and Returns</h2>
+      <p class="section-subtitle">Attic insulation pays for itself through energy savings</p>
+    </div>
+    
+    <div class="roi-grid">
+      <div class="cost-breakdown">
+        <h3>Typical Attic Insulation Costs</h3>
+        <div class="cost-items">
+          <div class="cost-item">
+            <span class="cost-label">Blown-In Insulation</span>
+            <span class="cost-range">$1.50-2.50/sq ft</span>
+          </div>
+          <div class="cost-item">
+            <span class="cost-label">Spray Foam Insulation</span>
+            <span class="cost-range">$3.00-5.00/sq ft</span>
+          </div>
+          <div class="cost-item highlight">
+            <span class="cost-label">Average 1,500 sq ft Attic</span>
+            <span class="cost-range">$2,250-7,500</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="savings-projection">
+        <h3>Expected Savings</h3>
+        <div class="savings-items">
+          <div class="savings-item">
+            <span class="savings-value">$150-300</span>
+            <span class="savings-label">Monthly Peak Summer Savings</span>
+          </div>
+          <div class="savings-item">
+            <span class="savings-value">$500-1,200</span>
+            <span class="savings-label">Annual Energy Savings</span>
+          </div>
+          <div class="savings-item featured">
+            <span class="savings-value">3-5 Years</span>
+            <span class="savings-label">Typical Payback Period</span>
+          </div>
+        </div>
+        <div class="utility-rebates">
+          <h4>💰 Utility Rebates Available</h4>
+          <p>APS, SRP, and TEP offer energy efficiency rebates that may apply to attic insulation projects</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<p>We offer multiple attic insulation options to fit your needs and budget:</p>
+{% set pricing = pricingOptions %}
+{% set pricingTitle = "Attic Insulation Pricing Options" %}
+{% include "components/pricing-table.njk" %}
 
-<h4>Spray Foam Insulation (R-6.5 per inch)</h4>
-<ul>
-  <li><strong>Best for</strong>: Maximum energy efficiency and air sealing</li>
-  <li><strong>Benefits</strong>: Superior R-value, moisture barrier, permanent solution</li>
-  <li><strong>Ideal when</strong>: You want the absolute best performance</li>
-</ul>
+<section class="professional-advantage content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>The Professional Difference</h2>
+    </div>
+    
+    <div class="advantage-comparison">
+      <div class="diy-risks">
+        <h3>❌ Why DIY Attic Insulation Falls Short</h3>
+        <ul>
+          <li><strong>Safety Risks:</strong> Extreme attic temperatures and confined spaces create dangerous conditions</li>
+          <li><strong>Incomplete Coverage:</strong> Missed spots create thermal bridges that reduce effectiveness</li>
+          <li><strong>Ventilation Issues:</strong> Improper installation can block vents and cause moisture problems</li>
+          <li><strong>No Warranty:</strong> DIY installation typically voids manufacturer warranties</li>
+          <li><strong>Code Violations:</strong> Incorrect installation may not meet building codes</li>
+        </ul>
+      </div>
+      
+      <div class="pro-advantages">
+        <h3>✅ Our Professional Advantage</h3>
+        <ul>
+          <li><strong>Certified Installers:</strong> Trained specifically in Arizona attic conditions and techniques</li>
+          <li><strong>Professional Equipment:</strong> Commercial-grade materials and application equipment</li>
+          <li><strong>Complete Solution:</strong> We address air sealing, ventilation, and insulation together</li>
+          <li><strong>Guaranteed Results:</strong> Warranty protection and performance guarantees included</li>
+          <li><strong>Safety Protocols:</strong> OSHA-compliant safety procedures and equipment</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-<h4>Blown-In Fiberglass (R-2.5 per inch)</h4>
-<ul>
-  <li><strong>Best for</strong>: Cost-effective coverage of large areas</li>
-  <li><strong>Benefits</strong>: Quick installation, good thermal performance, fire resistant</li>
-  <li><strong>Ideal when</strong>: Budget is a primary concern</li>
-</ul>
+{% include "sections/why-choose-ica.njk" %}
 
-<h4>Blown-In Cellulose (R-3.7 per inch)</h4>
-<ul>
-  <li><strong>Best for</strong>: Eco-friendly insulation with good performance</li>
-  <li><strong>Benefits</strong>: Recycled material, pest resistant, sound dampening</li>
-  <li><strong>Ideal when</strong>: You prefer green building materials</li>
-</ul>
+{% include "sections/testimonials.njk" %}
 
-<h2>The Professional Difference</h2>
+{% set sectionTitle = "Attic Insulation FAQs" %}
+{% include "sections/service-faq.njk" %}
 
-<h3>Why DIY Attic Insulation Falls Short</h3>
+{% include "sections/cta.njk" %}
 
-<ul>
-  <li><strong>Safety Risks</strong>: Extreme attic temperatures and confined spaces</li>
-  <li><strong>Incomplete Coverage</strong>: Missed spots create thermal bridges</li>
-  <li><strong>Ventilation Issues</strong>: Improper installation can cause moisture problems</li>
-  <li><strong>No Warranty</strong>: DIY installation voids manufacturer warranties</li>
-</ul>
+{% include "sections/related-services.njk" %}
 
-<h3>Our Professional Advantage</h3>
+<style>
+.attic-challenge {
+  padding: 4rem 0;
+  background: var(--surface-light);
+}
 
-<ul>
-  <li><strong>Certified Installers</strong>: Trained in Arizona-specific techniques</li>
-  <li><strong>Proper Equipment</strong>: Professional-grade materials and application</li>
-  <li><strong>Complete Solution</strong>: We address air sealing, ventilation, and insulation</li>
-  <li><strong>Guaranteed Results</strong>: Warranty protection and performance guarantee</li>
-</ul>
+.attic-challenge .section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
 
-<h2>Arizona-Specific Considerations</h2>
+.attic-challenge h2 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
 
-<h3>Unique Challenges We Address</h3>
+.section-subtitle {
+  font-size: 1.3rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
 
-<ol>
-  <li><strong>Extreme Temperature Cycling</strong>: Materials that withstand 160°F+ temperatures</li>
-  <li><strong>Monsoon Moisture</strong>: Proper vapor barriers for humidity control</li>
-  <li><strong>Dust and Allergens</strong>: Complete air sealing to improve indoor air quality</li>
-  <li><strong>Radiant Heat</strong>: Reflective barriers to combat intense sun radiation</li>
-</ol>
+.challenge-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-<h2>Investment and Returns</h2>
+.challenge-content h3,
+.impact-showcase h3 {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
 
-<h3>Typical Attic Insulation Costs</h3>
+.challenge-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+}
 
-<ul>
-  <li><strong>Blown-In Insulation</strong>: $1.50-2.50 per square foot</li>
-  <li><strong>Spray Foam Insulation</strong>: $3.00-5.00 per square foot</li>
-  <li><strong>Average 1,500 sq ft Attic</strong>: $2,250-7,500 depending on type</li>
-</ul>
+.temperature-scale {
+  margin-top: 2rem;
+}
 
-<h3>Expected Savings</h3>
+.temperature-scale h4 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
 
-<ul>
-  <li><strong>Monthly Energy Savings</strong>: $150-300 during peak summer</li>
-  <li><strong>Annual Savings</strong>: $500-1,200 on cooling and heating</li>
-  <li><strong>Payback Period</strong>: Typically 3-5 years</li>
-  <li><strong>Utility Rebates</strong>: Available through APS, SRP, and TEP</li>
-</ul>
+.temp-bar {
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 60px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
 
-<h2>Get Started Today</h2>
+.temp-segment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  position: relative;
+}
 
-<p>Don't let another Arizona summer punish your energy bills. Contact us for a free attic assessment and discover how proper insulation can transform your home's comfort and efficiency.</p>
+.temp-segment span {
+  font-size: 0.9rem;
+}
 
-{% include "components/faq.njk" %}
+.temp-segment label {
+  font-size: 0.7rem;
+  opacity: 0.9;
+}
+
+.impact-items {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.impact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  border-left: 4px solid var(--primary);
+}
+
+.impact-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.impact-item h4 {
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.impact-item p {
+  color: var(--text-muted);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.insulation-solutions {
+  padding: 4rem 0;
+  background: white;
+}
+
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.solution-card {
+  background: var(--surface-light);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.solution-card:hover {
+  transform: translateY(-5px);
+}
+
+.solution-card.featured {
+  border: 2px solid var(--primary);
+  transform: scale(1.02);
+}
+
+.solution-header {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.solution-header h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.4rem;
+}
+
+.r-value {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.best-badge {
+  position: absolute;
+  top: -5px;
+  right: 10px;
+  background: #ff6b35;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.solution-content {
+  padding: 2rem;
+}
+
+.solution-content h4 {
+  color: var(--primary);
+  margin: 1rem 0 0.5rem 0;
+}
+
+.solution-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.solution-content li {
+  padding: 0.25rem 0;
+  color: var(--text-dark);
+}
+
+.solution-content li:before {
+  content: "✓ ";
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.arizona-specific {
+  padding: 4rem 0;
+  background: var(--surface-light);
+}
+
+.considerations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.consideration-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.consideration-item h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.consideration-item p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.roi-section {
+  padding: 4rem 0;
+  background: white;
+}
+
+.roi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 3rem auto 0;
+}
+
+.cost-breakdown h3,
+.savings-projection h3 {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.cost-items,
+.savings-items {
+  display: grid;
+  gap: 1rem;
+}
+
+.cost-item,
+.savings-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--surface-light);
+  border-radius: 8px;
+}
+
+.cost-item.highlight,
+.savings-item.featured {
+  background: var(--primary);
+  color: white;
+}
+
+.cost-range,
+.savings-value {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.cost-item.highlight .cost-range,
+.savings-item.featured .savings-value {
+  color: white;
+}
+
+.utility-rebates {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--surface-light);
+  border-radius: 10px;
+  border-left: 4px solid var(--primary);
+}
+
+.utility-rebates h4 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.professional-advantage {
+  padding: 4rem 0;
+  background: var(--surface-light);
+}
+
+.advantage-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.diy-risks,
+.pro-advantages {
+  padding: 2rem;
+  border-radius: 15px;
+}
+
+.diy-risks {
+  background: rgba(255, 60, 60, 0.1);
+  border: 2px solid rgba(255, 60, 60, 0.3);
+}
+
+.pro-advantages {
+  background: rgba(60, 255, 60, 0.1);
+  border: 2px solid rgba(60, 255, 60, 0.3);
+}
+
+.diy-risks h3 {
+  color: #ff3333;
+  margin-bottom: 1.5rem;
+}
+
+.pro-advantages h3 {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.diy-risks ul,
+.pro-advantages ul {
+  list-style: none;
+  padding: 0;
+}
+
+.diy-risks li,
+.pro-advantages li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .challenge-grid,
+  .roi-grid,
+  .advantage-comparison {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .attic-challenge h2 {
+    font-size: 2rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .solutions-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .solution-card.featured {
+    transform: none;
+  }
+  
+  .considerations-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
