@@ -3,7 +3,6 @@ layout: base.njk
 title: "Dense Pack Insulation Services"
 subtitle: "Maximum Performance Retrofit Insulation for Arizona Homes"
 meta_description: "Professional dense pack insulation for walls and closed cavities in Phoenix & Arizona. Superior settling resistance. Expert installation. Call 623-241-1939"
-heroImage: "/images/dense-pack-hero.jpg"
 heroStats:
   - value: "3.5"
     label: "lbs/ft³ Density"
@@ -67,16 +66,58 @@ relatedServices:
 {% set subtitle = "Maximum Performance Retrofit Insulation for Arizona Homes" %}
 {% include "sections/service-hero.njk" %}
 
+<section class="dense-pack-intro content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Arizona's Premier Dense Pack Insulation Specialists</h2>
+      <p class="section-subtitle">Transform your home's energy efficiency without the disruption of full renovation</p>
+    </div>
+    
+    <div class="intro-content">
+      <div class="intro-text">
+        <h3>What Makes Dense Pack Different?</h3>
+        <p>Dense pack insulation is a specialized retrofit technique that fills wall cavities to maximum capacity—3.5 lbs/ft³ compared to standard blown-in at just 1.5 lbs/ft³. This creates a solid thermal barrier that eliminates settling and dramatically improves your home's performance.</p>
+        
+        <div class="key-benefits">
+          <div class="benefit-item">
+            <span class="benefit-icon">🎯</span>
+            <div>
+              <h4>Zero Settling</h4>
+              <p>Unlike loose-fill insulation, dense pack won't settle over time</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <span class="benefit-icon">💨</span>
+            <div>
+              <h4>Superior Air Sealing</h4>
+              <p>High-density installation reduces air infiltration by up to 30%</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <span class="benefit-icon">🏠</span>
+            <div>
+              <h4>Minimal Disruption</h4>
+              <p>No drywall removal - just small access holes that we patch professionally</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 {% include "sections/dense-pack-comparison.njk" %}
 
 {% include "sections/retrofit-benefits.njk" %}
 
 {% set process = processSteps %}
+{% set processTitle = "Our Professional Dense Pack Process" %}
 {% include "components/process-steps.njk" %}
 
 {% include "sections/material-options.njk" %}
 
 {% set pricing = pricingOptions %}
+{% set pricingTitle = "Dense Pack Insulation Pricing" %}
 {% include "components/pricing-table.njk" %}
 
 {% include "sections/why-choose-ica.njk" %}
@@ -89,3 +130,115 @@ relatedServices:
 {% include "sections/cta.njk" %}
 
 {% include "sections/related-services.njk" %}
+
+<style>
+.dense-pack-intro {
+  padding: 4rem 0;
+  background: var(--surface-light);
+}
+
+.dense-pack-intro .section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.dense-pack-intro h2 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.3rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.intro-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.intro-text h3 {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.intro-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.key-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-left: 4px solid var(--primary);
+}
+
+.benefit-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.benefit-item h4 {
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.benefit-item p {
+  color: var(--text-muted);
+  margin: 0;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .dense-pack-intro h2 {
+    font-size: 2rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .intro-text h3 {
+    font-size: 1.5rem;
+  }
+  
+  .intro-text p {
+    font-size: 1rem;
+  }
+  
+  .key-benefits {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .benefit-item {
+    padding: 1.5rem;
+  }
+}
+</style>
