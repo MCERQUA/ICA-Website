@@ -60,6 +60,10 @@
     --gray-900: #212529;
     --black: #000000;
     
+    /* Text Colors */
+    --text-light: #e0e0e0;
+    --text-muted: #adb5bd;
+    
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-light) 100%);
     --gradient-accent: linear-gradient(135deg, var(--accent-secondary) 0%, var(--accent-primary) 100%);
@@ -93,13 +97,25 @@
     --transition-medium: 0.3s ease;
     --transition-slow: 0.5s ease;
     
-    /* Spacing */
+    /* Spacing - Both naming conventions for compatibility */
     --spacing-xs: 0.25rem;
     --spacing-sm: 0.5rem;
     --spacing-md: 1rem;
     --spacing-lg: 2rem;
     --spacing-xl: 3rem;
     --spacing-xxl: 5rem;
+    
+    /* Alternative naming for components that use space- prefix */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --space-xxl: 5rem;
+    
+    /* Surface Colors */
+    --surface: rgba(13, 26, 26, 0.8);
+    --surface-dark: rgba(10, 20, 20, 0.9);
     
     /* Max Width */
     --max-width: 1200px;
