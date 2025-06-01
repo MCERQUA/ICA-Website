@@ -25,7 +25,6 @@
 
 /* Semantic Colors */
 --success: #00ff88;
---warning: #ff6b35;
 --danger: #ff3333;
 ```
 
