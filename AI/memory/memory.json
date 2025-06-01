@@ -24,7 +24,7 @@
       "phone": "623-241-1939",
       "email": "insulationcontractorsofaz@gmail.com",
       "website": "https://insulationcontractorsofarizona.com",
-      "live_website": "https://azfoam.netlify.app/"
+      "deployment_info": "Netlify hosting connected to original domain"
     }
   },
   "certifications_and_credentials": {
@@ -212,12 +212,19 @@
       "agricultural": 3
     }
   },
+  "website_deployment": {
+    "primary_domain": "https://insulationcontractorsofarizona.com",
+    "hosting": "Netlify with custom domain",
+    "repository": "https://github.com/MCERQUA/ICA-Website",
+    "deployment_method": "GitHub auto-deploy to Netlify with custom domain connection",
+    "status": "Live on original domain"
+  },
   "ai_assistant_context": {
     "role": "Echo - SEO and Brand Strategist",
     "primary_focus": "Website optimization and content strategy",
     "current_project": "Website cleanup and service page optimization",
     "repository": "https://github.com/MCERQUA/ICA-Website",
-    "live_deployment": "https://azfoam.netlify.app/",
+    "live_website": "https://insulationcontractorsofarizona.com",
     "last_updated": "2025-06-01"
   }
 }
