@@ -1,0 +1,165 @@
+/* ============================================
+   COMMERCIAL SERVICES PAGE SPECIFIC STYLES
+   Dark glow for headings on green backgrounds
+   ============================================ */
+
+/* Override glow-text for commercial page headings with dark glow */
+.commercial-services-grid .glow-text[data-text],
+.benefits-section .glow-text[data-text],
+.solutions-overview .glow-text[data-text],
+.process-section .glow-text[data-text],
+.industries-section .glow-text[data-text],
+.credentials-section .glow-text[data-text],
+.portfolio-section .glow-text[data-text] {
+    /* Keep the gradient text */
+    background: var(--gradient-text-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+}
+
+/* Dark glow effect for better contrast on green backgrounds */
+.commercial-services-grid .glow-text[data-text]::before,
+.benefits-section .glow-text[data-text]::before,
+.solutions-overview .glow-text[data-text]::before,
+.process-section .glow-text[data-text]::before,
+.industries-section .glow-text[data-text]::before,
+.credentials-section .glow-text[data-text]::before,
+.portfolio-section .glow-text[data-text]::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    color: transparent;
+    /* Dark glow shadow */
+    text-shadow: 
+        0 0 20px rgba(0, 0, 0, 0.8),
+        0 0 40px rgba(0, 0, 0, 0.6),
+        0 0 60px rgba(0, 0, 0, 0.4),
+        0 0 80px rgba(0, 0, 0, 0.2);
+    filter: blur(1px);
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+/* Enhanced dark ambient glow for section titles */
+.commercial-services-grid .glow-text[data-text]::after,
+.benefits-section .glow-text[data-text]::after,
+.solutions-overview .glow-text[data-text]::after,
+.process-section .glow-text[data-text]::after,
+.industries-section .glow-text[data-text]::after,
+.credentials-section .glow-text[data-text]::after,
+.portfolio-section .glow-text[data-text]::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 150%;
+    background: radial-gradient(ellipse at center, 
+        rgba(0, 0, 0, 0.3) 0%, 
+        rgba(0, 0, 0, 0.2) 20%, 
+        transparent 60%);
+    opacity: 0.6;
+    filter: blur(20px);
+    z-index: -2;
+    pointer-events: none;
+}
+
+/* Service intro section with dark glow */
+.service-intro-section .glow-text[data-text] {
+    background: var(--gradient-text-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+}
+
+.service-intro-section .glow-text[data-text]::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    color: transparent;
+    text-shadow: 
+        0 0 15px rgba(0, 0, 0, 0.7),
+        0 0 30px rgba(0, 0, 0, 0.5),
+        0 0 45px rgba(0, 0, 0, 0.3);
+    filter: blur(1px);
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Keep the light glow for hero section (dark background) */
+.service-hero-enhanced .glow-text {
+    /* This maintains the original light glow for the hero */
+    text-shadow: inherit;
+}
+
+/* Ensure proper contrast for all h3 headings in service cards */
+.service-card-enhanced h3[data-text] {
+    background: var(--gradient-text-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.service-card-enhanced h3[data-text]::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    color: transparent;
+    text-shadow: 
+        0 0 10px rgba(0, 0, 0, 0.6),
+        0 0 20px rgba(0, 0, 0, 0.4);
+    filter: blur(0.5px);
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Dark sections get slightly lighter dark glow for balance */
+.dark-gradient .glow-text[data-text]::before {
+    text-shadow: 
+        0 0 15px rgba(0, 0, 0, 0.6),
+        0 0 30px rgba(0, 0, 0, 0.4),
+        0 0 45px rgba(0, 0, 0, 0.2);
+    opacity: 0.6;
+}
+
+/* Section titles specific styling */
+.section-title.glow-text {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Ensure CTA section keeps its original styling */
+.cta-section-enhanced .glow-text {
+    /* Maintains original styling for CTA section */
+}
+
+/* Media queries for responsive text */
+@media (max-width: 768px) {
+    .section-title.glow-text {
+        font-size: 2rem;
+    }
+    
+    .service-card-enhanced h3[data-text] {
+        font-size: 1.25rem;
+    }
+}
