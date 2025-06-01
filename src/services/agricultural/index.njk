@@ -2,21 +2,18 @@
 layout: layouts/service-category.njk
 title: Agricultural Insulation Services
 subtitle: Specialized Solutions for Arizona's Agricultural Industry
+description: Professional agricultural insulation services in Arizona. Tank insulation, barn insulation, and storage facility solutions that save water and reduce costs. 20+ years expertise.
 permalink: /services/agricultural/
 categoryImage: /images/agricultural-hero.jpg
-services:
-  - title: Tank Insulation
-    description: Protect water, chemical, and fertilizer storage tanks from extreme temperatures
-    icon: 🛢️
-    url: /services/agricultural/tank/
-  - title: Barn & Livestock Facility Insulation
-    description: Create comfortable environments for livestock and agricultural operations
-    icon: 🐄
-    url: /services/agricultural/barn/
-  - title: Storage Facility Insulation
-    description: Maintain optimal conditions for crop storage and agricultural products
-    icon: 🌾
-    url: /services/agricultural/storage/
+eleventyNavigation:
+  key: Agricultural
+  parent: Services
+  order: 4
+schema:
+  type: Service
+  serviceType: Agricultural Insulation
+  areaServed: Arizona
+  priceRange: $$
 ---
 
 <div class="category-intro">
@@ -27,11 +24,43 @@ services:
 
 Arizona agriculture operates under some of the most challenging conditions in the nation:
 
-- **Water Tank Protection**: Prevent excessive evaporation and maintain water temperatures
-- **Livestock Comfort**: Reduce heat stress on animals during extreme summer months
-- **Crop Storage**: Maintain stable temperatures for quality preservation
-- **Energy Efficiency**: Reduce cooling costs in agricultural buildings
-- **Equipment Protection**: Shield tanks and equipment from UV damage and thermal stress
+<div class="challenges-grid">
+  <div class="challenge-card">
+    <div class="challenge-icon">🌡️</div>
+    <h3>Extreme Heat Challenges</h3>
+    <ul>
+      <li>Summer temperatures exceeding 115°F</li>
+      <li>Tank surface temperatures reaching 150°F+</li>
+      <li>Rapid water evaporation rates</li>
+      <li>Heat stress on livestock and equipment</li>
+    </ul>
+  </div>
+  
+  <div class="challenge-card">
+    <div class="challenge-icon">💧</div>
+    <h3>Water Conservation Crisis</h3>
+    <ul>
+      <li>500-1000 gallons lost daily per uninsulated tank</li>
+      <li>Rising water costs and restrictions</li>
+      <li>Critical drought conditions</li>
+      <li>Sustainability requirements</li>
+    </ul>
+  </div>
+  
+  <div class="challenge-card">
+    <div class="challenge-icon">💰</div>
+    <h3>Economic Pressures</h3>
+    <ul>
+      <li>Increasing operational costs</li>
+      <li>Energy efficiency mandates</li>
+      <li>Equipment replacement expenses</li>
+      <li>Competitive market demands</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Include the tank showcase component -->
+{% include "sections/agricultural-tank-showcase.njk" %}
 
 ## Our Agricultural Expertise
 
@@ -49,6 +78,129 @@ Arizona agriculture operates under some of the most challenging conditions in th
   <div class="expertise-item">
     <h3 data-text="Water Conservation Focus">Water Conservation Focus</h3>
     <p>Our tank insulation helps preserve Arizona's most precious agricultural resource.</p>
+  </div>
+</div>
+
+## Featured Agricultural Projects
+
+<div class="case-studies">
+  <div class="case-study">
+    <div class="case-study-header">
+      <h3>Maricopa County Dairy Farm</h3>
+      <span class="case-study-type">Water Tank Insulation</span>
+    </div>
+    <div class="case-study-content">
+      <div class="case-study-stats">
+        <div class="stat">
+          <span class="stat-value">10</span>
+          <span class="stat-label">Tanks Insulated</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">75%</span>
+          <span class="stat-label">Water Loss Reduction</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">$30K</span>
+          <span class="stat-label">Annual Savings</span>
+        </div>
+      </div>
+      <div class="case-study-details">
+        <h4>Challenge:</h4>
+        <p>Water tanks losing 500+ gallons daily to evaporation during summer months</p>
+        <h4>Solution:</h4>
+        <p>Applied 3-inch closed-cell spray foam insulation with UV-resistant coating to all storage tanks</p>
+        <h4>Results:</h4>
+        <ul>
+          <li>182,500 gallons of water saved annually</li>
+          <li>ROI achieved in under 18 months</li>
+          <li>Tank lifespan extended by 10+ years</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div class="case-study">
+    <div class="case-study-header">
+      <h3>Yuma Produce Storage</h3>
+      <span class="case-study-type">Facility Insulation</span>
+    </div>
+    <div class="case-study-content">
+      <div class="case-study-stats">
+        <div class="stat">
+          <span class="stat-value">25K</span>
+          <span class="stat-label">Square Feet</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">40%</span>
+          <span class="stat-label">Extended Shelf Life</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">35%</span>
+          <span class="stat-label">Energy Savings</span>
+        </div>
+      </div>
+      <div class="case-study-details">
+        <h4>Challenge:</h4>
+        <p>Temperature fluctuations affecting produce quality and increasing cooling costs</p>
+        <h4>Solution:</h4>
+        <p>Complete facility insulation upgrade with spray foam and vapor barriers</p>
+        <h4>Results:</h4>
+        <ul>
+          <li>Consistent 38°F storage temperature maintained</li>
+          <li>$45,000 annual energy cost reduction</li>
+          <li>Significantly reduced product loss</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+## Comprehensive Agricultural Services
+
+<div class="services-grid">
+  <div class="service-category">
+    <div class="service-header">
+      <div class="service-icon">🛢️</div>
+      <h3>Tank & Vessel Insulation</h3>
+    </div>
+    <ul class="service-list">
+      <li>Water storage tanks (all sizes)</li>
+      <li>Chemical and fertilizer tanks</li>
+      <li>Milk tanks and cooling systems</li>
+      <li>Processing vessels</li>
+      <li>Feed storage silos</li>
+      <li>Irrigation system components</li>
+    </ul>
+  </div>
+  
+  <div class="service-category">
+    <div class="service-header">
+      <div class="service-icon">🏠</div>
+      <h3>Building Insulation</h3>
+    </div>
+    <ul class="service-list">
+      <li>Barns and livestock facilities</li>
+      <li>Storage buildings and warehouses</li>
+      <li>Processing facilities</li>
+      <li>Equipment sheds</li>
+      <li>Office and worker facilities</li>
+      <li>Packing houses</li>
+    </ul>
+  </div>
+  
+  <div class="service-category">
+    <div class="service-header">
+      <div class="service-icon">🌾</div>
+      <h3>Specialty Applications</h3>
+    </div>
+    <ul class="service-list">
+      <li>Greenhouse insulation</li>
+      <li>Cold storage for produce</li>
+      <li>Grain storage facilities</li>
+      <li>Wine storage cellars</li>
+      <li>Aquaculture systems</li>
+      <li>Hydroponic facilities</li>
+    </ul>
   </div>
 </div>
 
@@ -78,61 +230,342 @@ Arizona agriculture operates under some of the most challenging conditions in th
     <h3 data-text="Asset Protection">Asset Protection</h3>
     <p>Extend the life of tanks, buildings, and equipment with proper insulation</p>
   </div>
-</div>
-
-## Featured Agricultural Projects
-
-### Case Study: Maricopa County Dairy Farm
-- **Challenge**: Water tanks losing 500+ gallons daily to evaporation
-- **Solution**: Closed-cell spray foam insulation on 10 storage tanks
-- **Results**: 75% reduction in water loss, $30,000 annual savings
-
-### Case Study: Yuma Produce Storage
-- **Challenge**: Temperature fluctuations affecting produce quality
-- **Solution**: Complete facility insulation with vapor barriers
-- **Results**: Extended shelf life by 40%, reduced cooling costs by 35%
-
-## Agricultural Services We Provide
-
-<div class="service-list">
-  <div class="service-item">
-    <h3 data-text="Tank & Vessel Insulation">Tank & Vessel Insulation</h3>
-    <ul>
-      <li>Water storage tanks</li>
-      <li>Chemical and fertilizer tanks</li>
-      <li>Milk tanks and cooling systems</li>
-      <li>Processing vessels</li>
-    </ul>
+  
+  <div class="benefit-card">
+    <div class="benefit-icon">🌱</div>
+    <h3 data-text="Sustainability">Sustainability</h3>
+    <p>Meet environmental goals and reduce your agricultural carbon footprint</p>
   </div>
   
-  <div class="service-item">
-    <h3 data-text="Building Insulation">Building Insulation</h3>
-    <ul>
-      <li>Barns and livestock facilities</li>
-      <li>Storage buildings and warehouses</li>
-      <li>Processing facilities</li>
-      <li>Equipment sheds</li>
-    </ul>
-  </div>
-  
-  <div class="service-item">
-    <h3 data-text="Specialty Applications">Specialty Applications</h3>
-    <ul>
-      <li>Greenhouse insulation</li>
-      <li>Cold storage for produce</li>
-      <li>Grain storage facilities</li>
-      <li>Irrigation system protection</li>
-    </ul>
+  <div class="benefit-card">
+    <div class="benefit-icon">📈</div>
+    <h3 data-text="Productivity">Productivity</h3>
+    <p>Improved conditions lead to better yields and healthier livestock</p>
   </div>
 </div>
 
-## Get Started with Agricultural Insulation
+## Why Choose ICA for Agricultural Insulation?
 
+<div class="why-choose-agricultural">
+  <div class="reason">
+    <div class="reason-number">01</div>
+    <div class="reason-content">
+      <h4>Agricultural Specialists</h4>
+      <p>We understand the unique challenges of Arizona agriculture and have developed specialized solutions that work in our extreme climate.</p>
+    </div>
+  </div>
+  
+  <div class="reason">
+    <div class="reason-number">02</div>
+    <div class="reason-content">
+      <h4>Proven ROI</h4>
+      <p>Our insulation solutions typically pay for themselves within 2-3 years through water and energy savings alone.</p>
+    </div>
+  </div>
+  
+  <div class="reason">
+    <div class="reason-number">03</div>
+    <div class="reason-content">
+      <h4>Minimal Disruption</h4>
+      <p>We work around your agricultural schedule to minimize impact on operations and livestock.</p>
+    </div>
+  </div>
+  
+  <div class="reason">
+    <div class="reason-number">04</div>
+    <div class="reason-content">
+      <h4>Long-Term Partnership</h4>
+      <p>We provide ongoing support and maintenance recommendations to ensure lasting performance.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Call to Action Section -->
 <div class="cta-section">
   <h2 data-text="Free Agricultural Facility Assessment">Free Agricultural Facility Assessment</h2>
-  <p>Let our agricultural insulation experts evaluate your facility and provide custom recommendations.</p>
+  <p>Let our agricultural insulation experts evaluate your facility and provide custom recommendations for water conservation and energy savings.</p>
+  <div class="cta-features">
+    <div class="cta-feature">
+      <span class="feature-icon">✓</span>
+      <span>No-cost evaluation</span>
+    </div>
+    <div class="cta-feature">
+      <span class="feature-icon">✓</span>
+      <span>ROI calculations</span>
+    </div>
+    <div class="cta-feature">
+      <span class="feature-icon">✓</span>
+      <span>Custom solutions</span>
+    </div>
+  </div>
   <div class="cta-buttons">
-    <a href="/contact/" class="btn btn-primary">Schedule Assessment</a>
-    <a href="tel:623-241-1939" class="btn btn-secondary">Call 623-241-1939</a>
+    <a href="/contact/" class="btn btn-primary">
+      <span>Schedule Assessment</span>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M6 10H14M14 10L10 6M14 10L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+    <a href="tel:623-241-1939" class="btn btn-secondary">
+      <span>Call 623-241-1939</span>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M2 3C2 2.44772 2.44772 2 3 2H6.27924C6.70967 2 7.0896 2.27543 7.22083 2.68377L8.72083 7.18377C8.86161 7.62086 8.67879 8.09463 8.27639 8.29542L6.31672 9.27556C7.25221 11.6001 9.11418 13.5435 11.3669 14.5509L12.4184 12.7553C12.6313 12.3782 13.0712 12.2002 13.4785 12.3238L17.9785 13.6988C18.366 13.8162 18.625 14.1779 18.625 14.5898V17.625C18.625 18.1773 18.1773 18.625 17.625 18.625H16.5C8.49187 18.625 2 12.1331 2 4.125V3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
   </div>
 </div>
+
+<style>
+/* Page-specific styles that complement agricultural.css */
+.challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg, 3rem);
+    margin: var(--space-xl, 4rem) 0;
+}
+
+.challenge-card {
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.05) 0%, rgba(255, 107, 53, 0.02) 100%);
+    border: 1px solid rgba(255, 107, 53, 0.2);
+    border-radius: 20px;
+    padding: var(--space-lg, 3rem);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.challenge-icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-md, 2rem);
+    display: block;
+    filter: drop-shadow(0 0 20px rgba(255, 107, 53, 0.5));
+}
+
+.challenge-card h3 {
+    color: #ff6b35;
+    margin-bottom: var(--space-md, 2rem);
+}
+
+.challenge-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.challenge-card li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: rgba(224, 224, 224, 0.9);
+}
+
+.challenge-card li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #ff6b35;
+}
+
+/* Case Studies */
+.case-studies {
+    display: grid;
+    gap: var(--space-xl, 4rem);
+    margin: var(--space-xxl, 6rem) 0;
+}
+
+.case-study {
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.05) 0%, rgba(0, 255, 255, 0.02) 100%);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.case-study-header {
+    background: rgba(0, 255, 255, 0.1);
+    padding: var(--space-md, 2rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.case-study-header h3 {
+    color: #00ffff;
+    margin: 0;
+}
+
+.case-study-type {
+    background: rgba(255, 107, 53, 0.2);
+    color: #ff6b35;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.case-study-content {
+    padding: var(--space-lg, 3rem);
+}
+
+.case-study-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: var(--space-lg, 3rem);
+    padding-bottom: var(--space-lg, 3rem);
+    border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+.case-study-stats .stat {
+    text-align: center;
+}
+
+.case-study-stats .stat-value {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ff6b35;
+    margin-bottom: 0.5rem;
+}
+
+.case-study-stats .stat-label {
+    font-size: 0.875rem;
+    color: rgba(224, 224, 224, 0.8);
+}
+
+.case-study-details h4 {
+    color: #00ffff;
+    margin: var(--space-md, 2rem) 0 var(--space-sm, 1rem);
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg, 3rem);
+    margin: var(--space-xl, 4rem) 0;
+}
+
+.service-category {
+    background: rgba(10, 10, 10, 0.6);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: var(--space-lg, 3rem);
+    transition: all 0.3s ease;
+}
+
+.service-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md, 2rem);
+    margin-bottom: var(--space-md, 2rem);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    filter: drop-shadow(0 0 15px rgba(0, 255, 255, 0.5));
+}
+
+.service-category h3 {
+    color: #00ffff;
+    margin: 0;
+}
+
+.service-category .service-list {
+    list-style: none;
+    padding: 0;
+}
+
+.service-category .service-list li {
+    padding: 0.75rem 0;
+    padding-left: 2rem;
+    position: relative;
+    color: rgba(224, 224, 224, 0.9);
+    border-bottom: 1px solid rgba(0, 255, 255, 0.05);
+}
+
+.service-category .service-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #ff6b35;
+    font-weight: 700;
+}
+
+/* Why Choose Agricultural */
+.why-choose-agricultural {
+    margin: var(--space-xxl, 6rem) 0;
+}
+
+.reason {
+    display: flex;
+    gap: var(--space-lg, 3rem);
+    align-items: center;
+    margin-bottom: var(--space-lg, 3rem);
+    padding: var(--space-lg, 3rem);
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.05) 0%, transparent 100%);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.reason:hover {
+    transform: translateX(10px);
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, transparent 100%);
+}
+
+.reason-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgba(255, 107, 53, 0.3);
+    font-family: 'Orbitron', sans-serif;
+}
+
+.reason-content h4 {
+    color: #ff6b35;
+    margin-bottom: var(--space-sm, 1rem);
+}
+
+/* CTA Features */
+.cta-features {
+    display: flex;
+    gap: var(--space-lg, 3rem);
+    justify-content: center;
+    margin: var(--space-md, 2rem) 0;
+}
+
+.cta-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(224, 224, 224, 0.9);
+}
+
+.feature-icon {
+    color: #00ffff;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+/* Enhanced button SVG animations */
+.btn svg {
+    transition: transform 0.3s ease;
+}
+
+.btn:hover svg {
+    transform: translateX(5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .case-study-stats {
+        flex-direction: column;
+        gap: var(--space-md, 2rem);
+    }
+    
+    .cta-features {
+        flex-direction: column;
+        gap: var(--space-sm, 1rem);
+    }
+    
+    .reason {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+</style>
