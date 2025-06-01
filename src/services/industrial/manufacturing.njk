@@ -44,6 +44,366 @@ relatedServices:
     url: "/services/commercial/warehouse/"
 ---
 
+<style>
+/* Manufacturing Page Specific Styles */
+.service-intro {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 3rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.lead-text {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #2c3e50;
+    margin-bottom: 0;
+}
+
+/* Facility Types Grid */
+.facility-types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.facility-type {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border-left: 4px solid var(--primary, #ff6b35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.facility-type:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.facility-type h3 {
+    color: var(--primary, #ff6b35);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.facility-type ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.facility-type li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.facility-type li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--success, #28a745);
+    font-weight: bold;
+}
+
+/* Challenge Section */
+.challenge-section {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 5px;
+}
+
+.challenge-section h3 {
+    color: #856404;
+    margin-bottom: 1rem;
+}
+
+.challenge-section ul {
+    margin: 1rem 0;
+}
+
+.challenge-section li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+/* Cost Section */
+.cost-section {
+    background: #f8d7da;
+    border-left: 4px solid #dc3545;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 5px;
+}
+
+.cost-section h3 {
+    color: #721c24;
+    margin-bottom: 1rem;
+}
+
+/* Solutions Section */
+.solution-card {
+    background: white;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.solution-card h3 {
+    color: var(--primary, #ff6b35);
+    margin-bottom: 1rem;
+}
+
+.solution-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.solution-features li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.solution-features li:before {
+    content: "•";
+    color: var(--primary, #ff6b35);
+    font-weight: bold;
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* ROI Calculator */
+.roi-calculator {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    padding: 3rem;
+    border-radius: 10px;
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.roi-calculator h3 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.roi-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.metric {
+    background: rgba(255,255,255,0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.metric-value {
+    display: block;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffc107;
+    margin-bottom: 0.5rem;
+}
+
+.metric-label {
+    display: block;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Case Study */
+.case-study {
+    background: #d4edda;
+    border-left: 4px solid #28a745;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 5px;
+}
+
+.case-study h3 {
+    color: #155724;
+    margin-bottom: 1rem;
+}
+
+.case-study ul {
+    margin: 1rem 0;
+}
+
+.case-study li {
+    margin-bottom: 0.5rem;
+}
+
+.case-study strong {
+    color: #155724;
+}
+
+/* CTA Box */
+.cta-box {
+    background: linear-gradient(135deg, var(--primary, #ff6b35) 0%, #ff8f65 100%);
+    color: white;
+    padding: 3rem;
+    border-radius: 10px;
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.cta-box h3 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    text-align: left;
+    display: inline-block;
+}
+
+.cta-box li {
+    padding: 0.5rem 0;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.cta-box li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.cta-buttons .btn {
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.cta-buttons .btn-primary {
+    background: white;
+    color: var(--primary, #ff6b35);
+}
+
+.cta-buttons .btn-primary:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+}
+
+.cta-buttons .btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.cta-buttons .btn-secondary:hover {
+    background: white;
+    color: var(--primary, #ff6b35);
+}
+
+/* FAQ Section */
+.faq-section {
+    margin: 3rem 0;
+}
+
+.faq-item {
+    background: white;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-left: 4px solid var(--primary, #ff6b35);
+}
+
+.faq-item h3 {
+    color: var(--primary, #ff6b35);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.faq-item p {
+    color: #6c757d;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Expertise Section */
+.expertise-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.expertise-list li {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.expertise-list strong {
+    color: var(--primary, #ff6b35);
+    margin-right: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .service-intro {
+        padding: 2rem 1.5rem;
+    }
+    
+    .facility-types-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .roi-calculator {
+        padding: 2rem 1.5rem;
+    }
+    
+    .metric-value {
+        font-size: 2.5rem;
+    }
+    
+    .cta-box {
+        padding: 2rem 1.5rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+</style>
+
 <div class="service-intro">
   <p class="lead-text">Arizona's extreme temperatures pose unique challenges for manufacturing facilities. Our industrial-grade insulation solutions help maintain optimal production environments while significantly reducing operational costs.</p>
 </div>
@@ -94,49 +454,68 @@ relatedServices:
 
 ## Why Manufacturing Facilities Need Specialized Insulation
 
-### Arizona's Industrial Challenges
+<div class="challenge-section">
+  <h3>Arizona's Industrial Challenges</h3>
+  <p>Manufacturing facilities in Arizona face unique environmental pressures:</p>
+  <ul>
+    <li><strong>Extreme Temperature Fluctuations</strong>: Daily temperature swings of 30-40°F affect equipment calibration and product quality</li>
+    <li><strong>Intense Summer Heat</strong>: Exterior temperatures exceeding 115°F create massive cooling loads</li>
+    <li><strong>Low Humidity</strong>: Desert conditions can affect material properties and static buildup</li>
+    <li><strong>Dust and Particulates</strong>: Proper sealing prevents contamination in sensitive areas</li>
+  </ul>
+</div>
 
-Manufacturing facilities in Arizona face unique environmental pressures:
-
-- **Extreme Temperature Fluctuations**: Daily temperature swings of 30-40°F affect equipment calibration and product quality
-- **Intense Summer Heat**: Exterior temperatures exceeding 115°F create massive cooling loads
-- **Low Humidity**: Desert conditions can affect material properties and static buildup
-- **Dust and Particulates**: Proper sealing prevents contamination in sensitive areas
-
-### The Cost of Poor Insulation
-
-Inadequate insulation in manufacturing facilities leads to:
-
-- **Production Delays**: Temperature variations affecting product quality and equipment performance
-- **Excessive Energy Costs**: HVAC systems running overtime to maintain stable conditions
-- **Worker Discomfort**: Hot spots and cold zones reducing productivity and morale
-- **Equipment Wear**: Temperature stress shortening machinery lifespan
-- **Compliance Issues**: Failing to meet industry-specific temperature requirements
+<div class="cost-section">
+  <h3>The Cost of Poor Insulation</h3>
+  <p>Inadequate insulation in manufacturing facilities leads to:</p>
+  <ul>
+    <li><strong>Production Delays</strong>: Temperature variations affecting product quality and equipment performance</li>
+    <li><strong>Excessive Energy Costs</strong>: HVAC systems running overtime to maintain stable conditions</li>
+    <li><strong>Worker Discomfort</strong>: Hot spots and cold zones reducing productivity and morale</li>
+    <li><strong>Equipment Wear</strong>: Temperature stress shortening machinery lifespan</li>
+    <li><strong>Compliance Issues</strong>: Failing to meet industry-specific temperature requirements</li>
+  </ul>
+</div>
 
 ## Our Manufacturing Insulation Solutions
 
-### Spray Foam Applications
+<div class="solution-card">
+  <h3>Closed-Cell Spray Foam - Premium Solution</h3>
+  <p>Our premium solution for manufacturing facilities:</p>
+  <div class="solution-features">
+    <ul>
+      <li>R-value of 6.5 per inch for maximum thermal efficiency</li>
+      <li>Creates complete air and vapor barriers</li>
+      <li>Adds structural strength to metal buildings</li>
+      <li>Resistant to moisture and industrial chemicals</li>
+      <li>25+ year lifespan with minimal maintenance</li>
+    </ul>
+  </div>
+</div>
 
-**Closed-Cell Spray Foam** - Our premium solution for manufacturing facilities:
-- R-value of 6.5 per inch for maximum thermal efficiency
-- Creates complete air and vapor barriers
-- Adds structural strength to metal buildings
-- Resistant to moisture and industrial chemicals
-- 25+ year lifespan with minimal maintenance
+<div class="solution-card">
+  <h3>Open-Cell Spray Foam - Cost-Effective Option</h3>
+  <p>Cost-effective for specific applications:</p>
+  <div class="solution-features">
+    <ul>
+      <li>Excellent sound absorption for noisy equipment areas</li>
+      <li>R-value of 3.7 per inch</li>
+      <li>Ideal for interior partition walls</li>
+      <li>Budget-friendly option for non-critical areas</li>
+    </ul>
+  </div>
+</div>
 
-**Open-Cell Spray Foam** - Cost-effective for specific applications:
-- Excellent sound absorption for noisy equipment areas
-- R-value of 3.7 per inch
-- Ideal for interior partition walls
-- Budget-friendly option for non-critical areas
-
-### Specialized Manufacturing Solutions
-
-- **Equipment Enclosures**: Custom insulation for machinery and process equipment
-- **Pipe and Duct Insulation**: Prevent energy loss in distribution systems
-- **Cold Storage Integration**: Seamless transitions between temperature zones
-- **Acoustic Treatments**: Reduce noise levels for OSHA compliance
-- **Fire-Rated Assemblies**: Meet building codes and insurance requirements
+<div class="solution-card">
+  <h3>Specialized Manufacturing Solutions</h3>
+  <ul>
+    <li><strong>Equipment Enclosures</strong>: Custom insulation for machinery and process equipment</li>
+    <li><strong>Pipe and Duct Insulation</strong>: Prevent energy loss in distribution systems</li>
+    <li><strong>Cold Storage Integration</strong>: Seamless transitions between temperature zones</li>
+    <li><strong>Acoustic Treatments</strong>: Reduce noise levels for OSHA compliance</li>
+    <li><strong>Fire-Rated Assemblies</strong>: Meet building codes and insurance requirements</li>
+  </ul>
+</div>
 
 ## ROI for Manufacturing Facilities
 
@@ -158,32 +537,41 @@ Inadequate insulation in manufacturing facilities leads to:
   </div>
 </div>
 
-### Case Study: Phoenix Electronics Manufacturer
-
-A 50,000 sq ft electronics manufacturing facility achieved:
-- **42% reduction** in annual HVAC costs
-- **Stable temperatures** within ±2°F throughout production areas
-- **35% decrease** in product defects related to temperature variations
-- **ROI achieved** in just 19 months
+<div class="case-study">
+  <h3>Case Study: Phoenix Electronics Manufacturer</h3>
+  <p>A 50,000 sq ft electronics manufacturing facility achieved:</p>
+  <ul>
+    <li><strong>42% reduction</strong> in annual HVAC costs</li>
+    <li><strong>Stable temperatures</strong> within ±2°F throughout production areas</li>
+    <li><strong>35% decrease</strong> in product defects related to temperature variations</li>
+    <li><strong>ROI achieved</strong> in just 19 months</li>
+  </ul>
+</div>
 
 ## Industry Expertise
 
-Our team brings specialized knowledge to every manufacturing project:
+<p>Our team brings specialized knowledge to every manufacturing project:</p>
 
-- **20+ years** serving Arizona industrial facilities
-- **OSHA safety** certified installation crews
-- **Industry-specific** compliance understanding
-- **Minimal disruption** installation techniques
-- **Ongoing support** and maintenance programs
+<div class="expertise-list">
+  <ul>
+    <li><strong>20+ years</strong> serving Arizona industrial facilities</li>
+    <li><strong>OSHA safety</strong> certified installation crews</li>
+    <li><strong>Industry-specific</strong> compliance understanding</li>
+    <li><strong>Minimal disruption</strong> installation techniques</li>
+    <li><strong>Ongoing support</strong> and maintenance programs</li>
+  </ul>
+</div>
 
 ## Compliance & Certifications
 
-We help manufacturing facilities meet:
-- OSHA workplace temperature requirements
-- Industry-specific regulations (FDA, USDA, ISO)
-- Local building codes and permits
-- Insurance requirements for thermal protection
-- Environmental sustainability goals
+<p>We help manufacturing facilities meet:</p>
+<ul>
+  <li>OSHA workplace temperature requirements</li>
+  <li>Industry-specific regulations (FDA, USDA, ISO)</li>
+  <li>Local building codes and permits</li>
+  <li>Insurance requirements for thermal protection</li>
+  <li>Environmental sustainability goals</li>
+</ul>
 
 ## Get Your Facility Assessment
 
