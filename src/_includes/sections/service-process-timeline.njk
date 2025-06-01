@@ -1,0 +1,309 @@
+<section class="service-process-timeline animated-bg">
+    <div class="container">
+        <h2 data-text="Our Proven Service Process">Our Proven Service Process</h2>
+        <p class="section-intro">From consultation to completion, we ensure excellence at every step</p>
+        
+        <div class="timeline-container">
+            <div class="timeline-line"></div>
+            
+            <!-- Step 1 -->
+            <div class="timeline-step" data-step="1">
+                <div class="step-marker">
+                    <span class="step-number">1</span>
+                    <div class="step-pulse"></div>
+                </div>
+                <div class="step-content glass-panel">
+                    <h3 data-text="Free Consultation">Free Consultation</h3>
+                    <p>We begin with a comprehensive assessment of your property's insulation needs.</p>
+                    <ul class="step-details">
+                        <li>On-site property inspection</li>
+                        <li>Energy efficiency analysis</li>
+                        <li>Thermal imaging assessment</li>
+                        <li>Custom recommendations</li>
+                    </ul>
+                    <div class="step-timeline">Typically 1-2 hours</div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="timeline-step" data-step="2">
+                <div class="step-marker">
+                    <span class="step-number">2</span>
+                    <div class="step-pulse"></div>
+                </div>
+                <div class="step-content glass-panel">
+                    <h3 data-text="Custom Solution Design">Custom Solution Design</h3>
+                    <p>Our experts create a tailored insulation plan specific to your needs and budget.</p>
+                    <ul class="step-details">
+                        <li>Detailed project proposal</li>
+                        <li>Material selection guidance</li>
+                        <li>Cost-benefit analysis</li>
+                        <li>Financing options review</li>
+                    </ul>
+                    <div class="step-timeline">Delivered within 24-48 hours</div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="timeline-step" data-step="3">
+                <div class="step-marker">
+                    <span class="step-number">3</span>
+                    <div class="step-pulse"></div>
+                </div>
+                <div class="step-content glass-panel">
+                    <h3 data-text="Professional Installation">Professional Installation</h3>
+                    <p>Certified technicians execute your project with precision and care.</p>
+                    <ul class="step-details">
+                        <li>Safety preparation</li>
+                        <li>Professional-grade equipment</li>
+                        <li>Clean, efficient installation</li>
+                        <li>Minimal disruption</li>
+                    </ul>
+                    <div class="step-timeline">Most projects complete in 1-3 days</div>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="timeline-step" data-step="4">
+                <div class="step-marker">
+                    <span class="step-number">4</span>
+                    <div class="step-pulse"></div>
+                </div>
+                <div class="step-content glass-panel">
+                    <h3 data-text="Quality Assurance">Quality Assurance</h3>
+                    <p>Thorough inspection ensures your insulation performs to the highest standards.</p>
+                    <ul class="step-details">
+                        <li>Complete system inspection</li>
+                        <li>Performance verification</li>
+                        <li>Clean-up and restoration</li>
+                        <li>Warranty documentation</li>
+                    </ul>
+                    <div class="step-timeline">Final walkthrough same day</div>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="timeline-step" data-step="5">
+                <div class="step-marker">
+                    <span class="step-number">5</span>
+                    <div class="step-pulse"></div>
+                </div>
+                <div class="step-content glass-panel">
+                    <h3 data-text="Ongoing Support">Ongoing Support</h3>
+                    <p>Our relationship doesn't end at installation - we're here for the long term.</p>
+                    <ul class="step-details">
+                        <li>Utility rebate assistance</li>
+                        <li>Energy savings monitoring</li>
+                        <li>Warranty support</li>
+                        <li>Future upgrade consultations</li>
+                    </ul>
+                    <div class="step-timeline">Lifetime support included</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.service-process-timeline {
+    padding: var(--space-xl) 0;
+    position: relative;
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 1000px;
+    margin: var(--space-xl) auto 0;
+    padding: 0 var(--space-md);
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, 
+        transparent, 
+        var(--accent-primary) 10%, 
+        var(--accent-primary) 90%, 
+        transparent);
+    transform: translateX(-50%);
+}
+
+.timeline-step {
+    position: relative;
+    margin-bottom: var(--space-xl);
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.timeline-step:nth-child(2) { animation-delay: 0.1s; }
+.timeline-step:nth-child(3) { animation-delay: 0.2s; }
+.timeline-step:nth-child(4) { animation-delay: 0.3s; }
+.timeline-step:nth-child(5) { animation-delay: 0.4s; }
+.timeline-step:nth-child(6) { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.timeline-step:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.step-marker {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: var(--primary-dark);
+    border: 3px solid var(--accent-primary);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-primary);
+    position: relative;
+    z-index: 2;
+}
+
+.step-pulse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    border: 2px solid var(--accent-primary);
+    border-radius: 50%;
+    animation: pulse-ring 2s ease-out infinite;
+}
+
+@keyframes pulse-ring {
+    0% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+
+.step-content {
+    width: calc(50% - 80px);
+    padding: var(--space-lg);
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.timeline-step:nth-child(odd) .step-content {
+    margin-right: auto;
+}
+
+.timeline-step:nth-child(even) .step-content {
+    margin-left: auto;
+}
+
+.step-content::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 2px;
+    background: var(--accent-primary);
+    transform: translateY(-50%);
+}
+
+.timeline-step:nth-child(odd) .step-content::before {
+    right: -30px;
+}
+
+.timeline-step:nth-child(even) .step-content::before {
+    left: -30px;
+}
+
+.step-content:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+}
+
+.step-details {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-md) 0;
+}
+
+.step-details li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-light);
+}
+
+.step-details li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent-primary);
+}
+
+.step-timeline {
+    margin-top: var(--space-sm);
+    padding: 0.5rem 1rem;
+    background: rgba(0, 255, 255, 0.1);
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 0.875rem;
+    color: var(--accent-primary);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+    .timeline-line {
+        left: 30px;
+    }
+    
+    .timeline-step,
+    .timeline-step:nth-child(even) {
+        flex-direction: row;
+    }
+    
+    .step-marker {
+        left: 30px;
+    }
+    
+    .step-content,
+    .timeline-step:nth-child(odd) .step-content,
+    .timeline-step:nth-child(even) .step-content {
+        width: calc(100% - 100px);
+        margin-left: 100px;
+        margin-right: 0;
+    }
+    
+    .step-content::before,
+    .timeline-step:nth-child(odd) .step-content::before,
+    .timeline-step:nth-child(even) .step-content::before {
+        left: -30px;
+        right: auto;
+    }
+}
+</style>
