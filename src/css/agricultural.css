@@ -1,0 +1,454 @@
+/* Agricultural Services Page Styles */
+
+/* Import base styles if not already loaded */
+.service-category-content {
+    padding: var(--space-xl, 4rem) 0;
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0.95) 0%, rgba(10, 10, 10, 1) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add background pattern */
+.service-category-content::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(0, 255, 255, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 107, 53, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* Category intro section */
+.category-intro {
+    margin-bottom: var(--space-xl, 4rem);
+    padding: var(--space-lg, 3rem);
+    background: rgba(0, 255, 255, 0.02);
+    border: 1px solid rgba(0, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.category-intro::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.lead-text {
+    font-size: clamp(1.125rem, 2vw, 1.375rem);
+    line-height: 1.7;
+    color: rgba(224, 224, 224, 0.9);
+    margin: 0;
+}
+
+/* Expertise Grid */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-md, 2rem);
+    margin: var(--space-xl, 4rem) 0;
+}
+
+.expertise-item {
+    padding: var(--space-lg, 3rem);
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.05) 0%, rgba(0, 255, 255, 0.02) 100%);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.expertise-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #00ffff, transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.expertise-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
+    border-color: rgba(0, 255, 255, 0.4);
+}
+
+.expertise-item:hover::before {
+    transform: translateX(100%);
+}
+
+.expertise-item h3 {
+    color: #00ffff;
+    margin-bottom: var(--space-sm, 1rem);
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+}
+
+/* Benefits Showcase */
+.benefits-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-md, 2rem);
+    margin: var(--space-xl, 4rem) 0;
+}
+
+.benefit-card {
+    padding: var(--space-lg, 3rem);
+    background: rgba(10, 10, 10, 0.6);
+    border: 1px solid rgba(255, 107, 53, 0.2);
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.benefit-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: #ff6b35;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    background: rgba(255, 107, 53, 0.1);
+    border-color: rgba(255, 107, 53, 0.4);
+    box-shadow: 0 20px 40px rgba(255, 107, 53, 0.2);
+}
+
+.benefit-card:hover::after {
+    width: 80%;
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-sm, 1rem);
+    display: block;
+    filter: drop-shadow(0 0 20px rgba(255, 107, 53, 0.5));
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.benefit-card h3 {
+    color: #ff6b35;
+    margin-bottom: var(--space-sm, 1rem);
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+}
+
+/* Service List */
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg, 3rem);
+    margin: var(--space-xl, 4rem) 0;
+}
+
+.service-item {
+    padding: var(--space-lg, 3rem);
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.8) 0%, rgba(20, 20, 20, 0.8) 100%);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-item::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #00ffff, #ff6b35, #00ffff);
+    border-radius: 15px;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+}
+
+.service-item:hover::before {
+    opacity: 1;
+    animation: gradient-rotate 3s linear infinite;
+}
+
+@keyframes gradient-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.service-item h3 {
+    color: #00ffff;
+    margin-bottom: var(--space-md, 2rem);
+    position: relative;
+    z-index: 1;
+}
+
+.service-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.service-item li {
+    padding: var(--space-xs, 0.5rem) 0;
+    padding-left: var(--space-lg, 3rem);
+    position: relative;
+    color: rgba(224, 224, 224, 0.9);
+    transition: color 0.3s ease;
+}
+
+.service-item li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: #ff6b35;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover li {
+    color: #ffffff;
+}
+
+.service-item:hover li::before {
+    transform: translateX(5px);
+}
+
+/* CTA Section Enhancement */
+.cta-section {
+    margin-top: var(--space-xxl, 6rem);
+    padding: var(--space-xl, 4rem);
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(0, 255, 255, 0.1) 100%);
+    border: 2px solid transparent;
+    border-image: linear-gradient(135deg, #ff6b35, #00ffff) 1;
+    border-radius: 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(255, 107, 53, 0.1) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+    50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.8; }
+}
+
+.cta-section h2 {
+    background: linear-gradient(135deg, #ff6b35 0%, #00ffff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: var(--space-md, 2rem);
+    position: relative;
+    z-index: 1;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: var(--space-md, 2rem);
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+/* Enhanced buttons for agricultural page */
+.btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #ff6b35 0%, #ff8855 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+}
+
+.btn-primary:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #00ffff;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+    background: rgba(0, 255, 255, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
+}
+
+/* Case Study Styling */
+h3:has(+ ul) {
+    color: #00ffff;
+    margin-top: var(--space-lg, 3rem);
+    margin-bottom: var(--space-md, 2rem);
+    padding-bottom: var(--space-sm, 1rem);
+    border-bottom: 2px solid rgba(0, 255, 255, 0.3);
+    position: relative;
+}
+
+h3:has(+ ul)::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100px;
+    height: 2px;
+    background: #00ffff;
+    animation: border-slide 3s ease-in-out infinite;
+}
+
+@keyframes border-slide {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(200px); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .expertise-grid,
+    .benefits-showcase,
+    .service-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Add subtle animations to headings */
+h2 {
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff6b35, #00ffff);
+    animation: width-expand 2s ease-in-out infinite alternate;
+}
+
+@keyframes width-expand {
+    0% { width: 60px; }
+    100% { width: 120px; }
+}
+
+/* Main content styling */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md, 2rem);
+}
+
+.main-content h2 {
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    margin: var(--space-xl, 4rem) 0 var(--space-lg, 3rem);
+    color: #ffffff;
+}
+
+.main-content p,
+.main-content li {
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+
+.main-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.main-content > ul > li {
+    padding: var(--space-sm, 1rem) 0;
+    padding-left: var(--space-lg, 3rem);
+    position: relative;
+}
+
+.main-content > ul > li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #ff6b35;
+    font-size: 1.5rem;
+    line-height: 1;
+}
