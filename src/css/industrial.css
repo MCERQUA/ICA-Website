@@ -1,5 +1,10 @@
 /* Industrial Services Page Styles - Modern High-Tech Design */
 
+/* Fix main padding for pages with hero section */
+body:has(.hero) main {
+    padding-top: 0 !important;
+}
+
 /* Industrial Overview Section */
 .industrial-overview {
     padding: var(--space-2xl, 6rem) 0;
@@ -55,7 +60,7 @@
     margin-bottom: 4rem;
 }
 
-.service-card {
+.industrial-overview .service-card {
     background: rgba(20, 20, 20, 0.6);
     border: 1px solid rgba(0, 255, 255, 0.2);
     border-radius: 20px;
@@ -66,7 +71,7 @@
     backdrop-filter: blur(10px);
 }
 
-.service-card::before {
+.industrial-overview .service-card::before {
     content: '';
     position: absolute;
     top: 0;
@@ -78,11 +83,11 @@
     transition: transform 0.3s ease;
 }
 
-.service-card:hover::before {
+.industrial-overview .service-card:hover::before {
     transform: translateX(0);
 }
 
-.service-card:hover {
+.industrial-overview .service-card:hover {
     transform: translateY(-5px);
     border-color: rgba(0, 255, 255, 0.4);
     box-shadow: 
@@ -97,11 +102,11 @@
     animation: float 3s ease-in-out infinite;
 }
 
-.service-card:nth-child(2) .service-icon {
+.industrial-overview .service-card:nth-child(2) .service-icon {
     animation-delay: 1s;
 }
 
-.service-card:nth-child(3) .service-icon {
+.industrial-overview .service-card:nth-child(3) .service-icon {
     animation-delay: 2s;
 }
 
@@ -110,20 +115,20 @@
     50% { transform: translateY(-10px); }
 }
 
-.service-card h2 {
+.industrial-overview .service-card h3 {
     font-size: 1.75rem;
     margin-bottom: 1rem;
     color: #00ffff;
     font-weight: 700;
 }
 
-.service-card h2 a {
+.industrial-overview .service-card h3 a {
     color: inherit;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.service-card h2 a:hover {
+.industrial-overview .service-card h3 a:hover {
     color: #ff6b35;
 }
 
@@ -295,7 +300,7 @@
     gap: 1.5rem;
 }
 
-.stat {
+.industrial-overview .stat {
     background: linear-gradient(135deg, rgba(0, 255, 255, 0.1) 0%, rgba(255, 107, 53, 0.1) 100%);
     border: 1px solid rgba(0, 255, 255, 0.3);
     border-radius: 15px;
@@ -305,7 +310,7 @@
     overflow: hidden;
 }
 
-.stat::before {
+.industrial-overview .stat::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -314,11 +319,11 @@
     transition: transform 0.8s ease;
 }
 
-.stat:hover::before {
+.industrial-overview .stat:hover::before {
     transform: translateX(100%);
 }
 
-.stat-number {
+.industrial-overview .stat-number {
     font-size: 2.5rem;
     font-weight: 900;
     background: linear-gradient(135deg, #ff6b35 0%, #00ffff 100%);
@@ -329,7 +334,7 @@
     margin-bottom: 0.5rem;
 }
 
-.stat-label {
+.industrial-overview .stat-label {
     color: rgba(224, 224, 224, 0.8);
     font-size: 0.9rem;
     text-transform: uppercase;
@@ -388,7 +393,7 @@
 }
 
 /* CTA Section */
-.cta-section {
+.industrial-overview .cta-section {
     margin-top: 4rem;
     padding: 4rem 2rem;
     background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(0, 255, 255, 0.1) 100%);
@@ -398,7 +403,7 @@
     overflow: hidden;
 }
 
-.cta-section::before {
+.industrial-overview .cta-section::before {
     content: '';
     position: absolute;
     inset: -2px;
@@ -409,7 +414,7 @@
     animation: rotate-gradient 8s linear infinite;
 }
 
-.cta-section h2 {
+.industrial-overview .cta-section h2 {
     font-size: clamp(2rem, 4vw, 3rem);
     margin-bottom: 1.5rem;
     background: linear-gradient(135deg, #ff6b35 0%, #00ffff 100%);
@@ -418,7 +423,7 @@
     background-clip: text;
 }
 
-.cta-section p {
+.industrial-overview .cta-section p {
     font-size: 1.25rem;
     color: rgba(224, 224, 224, 0.9);
     margin-bottom: 2rem;
@@ -427,14 +432,14 @@
     margin-right: auto;
 }
 
-.cta-buttons {
+.industrial-overview .cta-buttons {
     display: flex;
     gap: 1.5rem;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.cta-button {
+.industrial-overview .cta-button {
     display: inline-flex;
     align-items: center;
     padding: 1.25rem 2.5rem;
@@ -449,24 +454,24 @@
     letter-spacing: 1px;
 }
 
-.cta-button.primary {
+.industrial-overview .cta-button.primary {
     background: linear-gradient(135deg, #ff6b35 0%, #ff8855 100%);
     color: white;
     box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
 }
 
-.cta-button.primary:hover {
+.industrial-overview .cta-button.primary:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 30px rgba(255, 107, 53, 0.5);
 }
 
-.cta-button.secondary {
+.industrial-overview .cta-button.secondary {
     background: transparent;
     color: #00ffff;
     border: 2px solid #00ffff;
 }
 
-.cta-button.secondary:hover {
+.industrial-overview .cta-button.secondary:hover {
     background: rgba(0, 255, 255, 0.1);
     transform: translateY(-3px);
     box-shadow: 0 6px 30px rgba(0, 255, 255, 0.3);
@@ -479,7 +484,7 @@
         gap: 1.5rem;
     }
     
-    .service-card {
+    .industrial-overview .service-card {
         padding: 2rem;
     }
     
@@ -507,12 +512,12 @@
         font-size: 0.9rem;
     }
     
-    .cta-buttons {
+    .industrial-overview .cta-buttons {
         flex-direction: column;
         align-items: center;
     }
     
-    .cta-button {
+    .industrial-overview .cta-button {
         width: 100%;
         max-width: 300px;
         justify-content: center;
@@ -533,7 +538,7 @@
         padding: 2rem 1.5rem;
     }
     
-    .stat-number {
+    .industrial-overview .stat-number {
         font-size: 2rem;
     }
 }
@@ -550,17 +555,17 @@
     }
 }
 
-.service-card,
+.industrial-overview .service-card,
 .benefit,
-.stat,
+.industrial-overview .stat,
 .industry-item {
     animation: fadeInUp 0.8s ease-out;
     animation-fill-mode: both;
 }
 
-.service-card:nth-child(1) { animation-delay: 0.1s; }
-.service-card:nth-child(2) { animation-delay: 0.2s; }
-.service-card:nth-child(3) { animation-delay: 0.3s; }
+.industrial-overview .service-card:nth-child(1) { animation-delay: 0.1s; }
+.industrial-overview .service-card:nth-child(2) { animation-delay: 0.2s; }
+.industrial-overview .service-card:nth-child(3) { animation-delay: 0.3s; }
 
 .benefit:nth-child(1) { animation-delay: 0.1s; }
 .benefit:nth-child(2) { animation-delay: 0.15s; }
