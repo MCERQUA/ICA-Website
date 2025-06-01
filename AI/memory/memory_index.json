@@ -1,0 +1,29 @@
+{
+  "knowledge_graph_index": {
+    "version": "2.0",
+    "last_updated": "2025-06-01",
+    "description": "Modular knowledge graph index for ICA",
+    "modules": {
+      "core_business": {
+        "file": "core_business.json",
+        "status": "active"
+      },
+      "website_development": {
+        "file": "website_development.json", 
+        "status": "empty"
+      },
+      "social_media_management": {
+        "file": "social_media_management.json",
+        "status": "empty"
+      },
+      "customer_support": {
+        "file": "customer_support.json",
+        "status": "empty"
+      },
+      "company_training": {
+        "file": "company_training.json",
+        "status": "empty"
+      }
+    }
+  }
+}
