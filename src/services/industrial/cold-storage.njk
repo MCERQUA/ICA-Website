@@ -44,6 +44,467 @@ relatedServices:
     url: "/services/commercial/warehouse/"
 ---
 
+<style>
+/* Cold Storage Page Specific Styles */
+.service-intro {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    padding: 3rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-left: 4px solid #2196f3;
+}
+
+.lead-text {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #1565c0;
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+/* Storage Types Grid */
+.storage-types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.storage-type {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border-top: 4px solid #2196f3;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.storage-type:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.storage-type h3 {
+    color: #1565c0;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.storage-type ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.storage-type li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #555;
+}
+
+.storage-type li:before {
+    content: "❄";
+    position: absolute;
+    left: 0;
+    color: #2196f3;
+}
+
+/* Challenge Section */
+.extreme-challenge {
+    background: #fff3e0;
+    border-left: 4px solid #ff6f00;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 5px;
+}
+
+.extreme-challenge h3 {
+    color: #e65100;
+    margin-bottom: 1rem;
+}
+
+.extreme-challenge ul {
+    margin: 1rem 0;
+}
+
+.extreme-challenge li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+/* Consequences Section */
+.consequences-section {
+    background: #ffebee;
+    border-left: 4px solid #d32f2f;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 5px;
+}
+
+.consequences-section h3 {
+    color: #c62828;
+    margin-bottom: 1rem;
+}
+
+/* Solution Section */
+.gold-standard {
+    background: linear-gradient(135deg, #fffde7 0%, #fff9c4 100%);
+    padding: 2.5rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border: 2px solid #fbc02d;
+}
+
+.gold-standard h3 {
+    color: #f57f17;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.gold-standard ul {
+    list-style: none;
+    padding: 0;
+}
+
+.gold-standard li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(251, 192, 45, 0.3);
+}
+
+.gold-standard li:last-child {
+    border-bottom: none;
+}
+
+/* System Components */
+.system-components {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.component {
+    background: #f5f5f5;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 3px solid #2196f3;
+}
+
+.component h4 {
+    color: #1565c0;
+    margin-bottom: 0.5rem;
+}
+
+/* Savings Calculator */
+.savings-calculator {
+    background: linear-gradient(135deg, #1565c0 0%, #2196f3 100%);
+    color: white;
+    padding: 3rem;
+    border-radius: 10px;
+    margin: 3rem 0;
+}
+
+.savings-calculator h3 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.savings-table {
+    width: 100%;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.savings-table th {
+    background: #0d47a1;
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+.savings-table td {
+    padding: 1rem;
+    color: #333;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.savings-table tr:last-child td {
+    border-bottom: none;
+}
+
+.savings-table tr:nth-child(even) {
+    background: #f5f5f5;
+}
+
+/* Additional Benefits */
+.additional-benefits {
+    background: #e8f5e9;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+
+.additional-benefits h3 {
+    color: #2e7d32;
+    margin-bottom: 1rem;
+}
+
+.additional-benefits ul {
+    list-style: none;
+    padding: 0;
+}
+
+.additional-benefits li {
+    padding: 0.5rem 0;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.additional-benefits li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #2e7d32;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Case Studies */
+.case-study {
+    background: white;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border-left: 4px solid #4caf50;
+}
+
+.case-study h3 {
+    color: #2e7d32;
+    margin-bottom: 1rem;
+}
+
+.case-study ul {
+    margin: 1rem 0;
+}
+
+.case-study li {
+    margin-bottom: 0.5rem;
+}
+
+.case-study strong {
+    color: #1b5e20;
+}
+
+/* Installation Process */
+.installation-process {
+    background: #f3e5f5;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+
+.installation-process h2 {
+    color: #6a1b9a;
+    margin-bottom: 1rem;
+}
+
+.installation-process ol {
+    padding-left: 2rem;
+}
+
+.installation-process li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+/* Compliance Section */
+.compliance-section {
+    background: #e3f2fd;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+    border-left: 4px solid #1976d2;
+}
+
+.compliance-section h2 {
+    color: #0d47a1;
+    margin-bottom: 1rem;
+}
+
+.compliance-section ul {
+    columns: 2;
+    column-gap: 2rem;
+}
+
+.compliance-section li {
+    margin-bottom: 0.5rem;
+    break-inside: avoid;
+}
+
+/* CTA Box */
+.cta-box {
+    background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+    color: white;
+    padding: 3rem;
+    border-radius: 10px;
+    margin: 3rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-box::before {
+    content: "❄";
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 150px;
+    opacity: 0.1;
+}
+
+.cta-box h3 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    text-align: left;
+    display: inline-block;
+}
+
+.cta-box li {
+    padding: 0.5rem 0;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.cta-box li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.cta-buttons .btn {
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.cta-buttons .btn-primary {
+    background: white;
+    color: #1565c0;
+}
+
+.cta-buttons .btn-primary:hover {
+    background: #f5f5f5;
+    transform: translateY(-2px);
+}
+
+.cta-buttons .btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.cta-buttons .btn-secondary:hover {
+    background: white;
+    color: #1565c0;
+}
+
+/* FAQ Section */
+.faq-section {
+    margin: 3rem 0;
+}
+
+.faq-item {
+    background: white;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-left: 4px solid #2196f3;
+}
+
+.faq-item h3 {
+    color: #1565c0;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.faq-item p {
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .service-intro {
+        padding: 2rem 1.5rem;
+    }
+    
+    .storage-types-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .savings-calculator {
+        padding: 2rem 1.5rem;
+    }
+    
+    .savings-table {
+        font-size: 0.9rem;
+    }
+    
+    .savings-table th,
+    .savings-table td {
+        padding: 0.75rem 0.5rem;
+    }
+    
+    .compliance-section ul {
+        columns: 1;
+    }
+    
+    .cta-box {
+        padding: 2rem 1.5rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+</style>
+
 <div class="service-intro">
   <p class="lead-text">Cold storage facilities face unique insulation challenges, especially in Arizona's extreme heat. Our specialized spray foam solutions create an impenetrable thermal barrier that maintains consistent temperatures while dramatically reducing energy costs.</p>
 </div>
@@ -94,34 +555,41 @@ relatedServices:
 
 ## The Critical Importance of Proper Cold Storage Insulation
 
-### Arizona's Extreme Challenge
+<div class="extreme-challenge">
+  <h3>Arizona's Extreme Challenge</h3>
+  <p>Cold storage facilities in Arizona face the most extreme temperature differentials in the nation:</p>
+  <ul>
+    <li><strong>Temperature Differential</strong>: Up to 155°F difference between freezer interior (-40°F) and Arizona summer exterior (115°F)</li>
+    <li><strong>Moisture Migration</strong>: Extreme temperature gradients create powerful vapor drive</li>
+    <li><strong>Energy Demands</strong>: Cooling costs can exceed $100,000 annually for inadequately insulated facilities</li>
+    <li><strong>Structural Stress</strong>: Thermal cycling causes expansion/contraction damage</li>
+  </ul>
+</div>
 
-Cold storage facilities in Arizona face the most extreme temperature differentials in the nation:
-
-- **Temperature Differential**: Up to 155°F difference between freezer interior (-40°F) and Arizona summer exterior (115°F)
-- **Moisture Migration**: Extreme temperature gradients create powerful vapor drive
-- **Energy Demands**: Cooling costs can exceed $100,000 annually for inadequately insulated facilities
-- **Structural Stress**: Thermal cycling causes expansion/contraction damage
-
-### Consequences of Poor Insulation
-
-- **Ice Buildup**: Moisture infiltration creates dangerous ice formations
-- **Product Loss**: Temperature fluctuations compromise product quality
-- **Equipment Failure**: Compressors overwork and fail prematurely
-- **Structural Damage**: Moisture causes rot, corrosion, and panel delamination
-- **Compliance Violations**: Failing to maintain required temperatures
+<div class="consequences-section">
+  <h3>Consequences of Poor Insulation</h3>
+  <ul>
+    <li><strong>Ice Buildup</strong>: Moisture infiltration creates dangerous ice formations</li>
+    <li><strong>Product Loss</strong>: Temperature fluctuations compromise product quality</li>
+    <li><strong>Equipment Failure</strong>: Compressors overwork and fail prematurely</li>
+    <li><strong>Structural Damage</strong>: Moisture causes rot, corrosion, and panel delamination</li>
+    <li><strong>Compliance Violations</strong>: Failing to maintain required temperatures</li>
+  </ul>
+</div>
 
 ## Our Cold Storage Insulation Solutions
 
-### Closed-Cell Spray Foam - The Gold Standard
-
-For cold storage applications, closed-cell spray foam is the only choice:
-
-- **R-Value**: 6.5 per inch - highest available
-- **Vapor Barrier**: Complete moisture protection at 1.5" thickness
-- **Seamless Application**: No joints or gaps for thermal bridging
-- **Structural Enhancement**: Adds rigidity to walls and ceilings
-- **Long-Term Performance**: Maintains R-value for 25+ years
+<div class="gold-standard">
+  <h3>Closed-Cell Spray Foam - The Gold Standard</h3>
+  <p>For cold storage applications, closed-cell spray foam is the only choice:</p>
+  <ul>
+    <li><strong>R-Value</strong>: 6.5 per inch - highest available</li>
+    <li><strong>Vapor Barrier</strong>: Complete moisture protection at 1.5" thickness</li>
+    <li><strong>Seamless Application</strong>: No joints or gaps for thermal bridging</li>
+    <li><strong>Structural Enhancement</strong>: Adds rigidity to walls and ceilings</li>
+    <li><strong>Long-Term Performance</strong>: Maintains R-value for 25+ years</li>
+  </ul>
+</div>
 
 ### Complete System Approach
 
@@ -179,54 +647,75 @@ For cold storage applications, closed-cell spray foam is the only choice:
   </table>
 </div>
 
-### Additional Benefits Beyond Energy Savings
-
-- **Reduced Maintenance**: Less ice removal and equipment servicing
-- **Extended Product Shelf Life**: Consistent temperatures preserve quality
-- **Increased Usable Space**: Thinner insulation vs. traditional panels
-- **Lower Insurance Premiums**: Reduced risk of product loss
-- **Carbon Footprint Reduction**: Meet sustainability goals
+<div class="additional-benefits">
+  <h3>Additional Benefits Beyond Energy Savings</h3>
+  <ul>
+    <li><strong>Reduced Maintenance</strong>: Less ice removal and equipment servicing</li>
+    <li><strong>Extended Product Shelf Life</strong>: Consistent temperatures preserve quality</li>
+    <li><strong>Increased Usable Space</strong>: Thinner insulation vs. traditional panels</li>
+    <li><strong>Lower Insurance Premiums</strong>: Reduced risk of product loss</li>
+    <li><strong>Carbon Footprint Reduction</strong>: Meet sustainability goals</li>
+  </ul>
+</div>
 
 ## Case Studies
 
-### Phoenix Food Distribution Center
-- **Size**: 75,000 sq ft multi-temperature facility
-- **Challenge**: $280,000 annual refrigeration costs
-- **Solution**: Complete spray foam retrofit
-- **Results**: 
-  - 38% reduction in energy costs ($106,400 annual savings)
-  - Eliminated all condensation issues
-  - Achieved ROI in 2.7 years
+<div class="case-study">
+  <h3>Phoenix Food Distribution Center</h3>
+  <ul>
+    <li><strong>Size</strong>: 75,000 sq ft multi-temperature facility</li>
+    <li><strong>Challenge</strong>: $280,000 annual refrigeration costs</li>
+    <li><strong>Solution</strong>: Complete spray foam retrofit</li>
+    <li><strong>Results</strong>: 
+      <ul>
+        <li>38% reduction in energy costs ($106,400 annual savings)</li>
+        <li>Eliminated all condensation issues</li>
+        <li>Achieved ROI in 2.7 years</li>
+      </ul>
+    </li>
+  </ul>
+</div>
 
-### Tucson Pharmaceutical Cold Storage
-- **Size**: 15,000 sq ft controlled environment
-- **Challenge**: Temperature variations affecting compliance
-- **Solution**: 6" closed-cell foam with monitoring systems
-- **Results**:
-  - Temperature variance reduced from ±5°F to ±0.5°F
-  - 100% compliance with FDA requirements
-  - 42% energy cost reduction
+<div class="case-study">
+  <h3>Tucson Pharmaceutical Cold Storage</h3>
+  <ul>
+    <li><strong>Size</strong>: 15,000 sq ft controlled environment</li>
+    <li><strong>Challenge</strong>: Temperature variations affecting compliance</li>
+    <li><strong>Solution</strong>: 6" closed-cell foam with monitoring systems</li>
+    <li><strong>Results</strong>:
+      <ul>
+        <li>Temperature variance reduced from ±5°F to ±0.5°F</li>
+        <li>100% compliance with FDA requirements</li>
+        <li>42% energy cost reduction</li>
+      </ul>
+    </li>
+  </ul>
+</div>
 
-## Installation Process for Operating Facilities
+<div class="installation-process">
+  <h2>Installation Process for Operating Facilities</h2>
+  <p>We understand you can't shut down operations. Our process minimizes disruption:</p>
+  <ol>
+    <li><strong>Phased Installation</strong>: Work in sections to maintain operations</li>
+    <li><strong>Off-Hours Work</strong>: Nights and weekends available</li>
+    <li><strong>Temperature Monitoring</strong>: Continuous monitoring during installation</li>
+    <li><strong>Product Protection</strong>: Complete isolation of work areas</li>
+    <li><strong>Rapid Cure Time</strong>: Areas operational within 24 hours</li>
+  </ol>
+</div>
 
-We understand you can't shut down operations. Our process minimizes disruption:
-
-1. **Phased Installation**: Work in sections to maintain operations
-2. **Off-Hours Work**: Nights and weekends available
-3. **Temperature Monitoring**: Continuous monitoring during installation
-4. **Product Protection**: Complete isolation of work areas
-5. **Rapid Cure Time**: Areas operational within 24 hours
-
-## Compliance & Certifications
-
-Our cold storage insulation meets or exceeds:
-
-- USDA requirements for food storage facilities
-- FDA regulations for pharmaceutical storage
-- ASHRAE 90.1 energy standards
-- International Building Code requirements
-- FM Global insurance standards
-- SQF and BRC audit requirements
+<div class="compliance-section">
+  <h2>Compliance & Certifications</h2>
+  <p>Our cold storage insulation meets or exceeds:</p>
+  <ul>
+    <li>USDA requirements for food storage facilities</li>
+    <li>FDA regulations for pharmaceutical storage</li>
+    <li>ASHRAE 90.1 energy standards</li>
+    <li>International Building Code requirements</li>
+    <li>FM Global insurance standards</li>
+    <li>SQF and BRC audit requirements</li>
+  </ul>
+</div>
 
 ## Get Your Cold Storage Assessment
 
