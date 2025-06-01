@@ -890,8 +890,51 @@ main {
     border: 1px solid rgba(0, 255, 255, 0.2);
 }
 
+/* Section Spacing Classes */
+.section-spacing {
+    padding: 80px 0;
+    position: relative;
+}
+
+.section-spacing.bg-dark {
+    background: rgba(13, 32, 32, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+/* Service Hero Section Specific */
+.service-hero-section {
+    position: relative;
+    width: 100vw;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -80px;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    padding-top: 80px;
+    overflow: hidden;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Remove main padding top for services page */
+.services-page main {
+    padding-top: 0;
+}
+
+/* Ensure sections don't have gaps between them */
+section + section {
+    margin-top: 0;
+}
+
 /* Mobile Responsive Layouts */
 @media (max-width: 768px) {
+    .section-spacing {
+        padding: 60px 0;
+    }
+    
     .hero h1 {
         font-size: 2.25rem;
     }
@@ -1028,6 +1071,10 @@ main {
 }
 
 @media (max-width: 480px) {
+    .section-spacing {
+        padding: 40px 0;
+    }
+    
     .hero h1 {
         font-size: 2rem;
     }
