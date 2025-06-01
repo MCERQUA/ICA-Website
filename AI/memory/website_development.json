@@ -1,5 +1,7 @@
 {
   "website_development": {
-    
+    "development_protocols": {
+      "file_management": "Write files directly to GitHub repository, not in artifacts unless specifically requested for display"
+    }
   }
 }
