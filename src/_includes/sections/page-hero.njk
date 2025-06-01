@@ -1,0 +1,15 @@
+{# Page Hero Section Component - Consistent with Home Page Hero #}
+{# Default values - can be overridden when including #}
+{% set pageTitle = pageTitle or title or "Page Title" %}
+{% set pageSubtitle = pageSubtitle or "" %}
+
+<section class="hero hero-image" style="background-image: url('/images-optimized/insulation_contractors_of_arizona_spray_foam_Arizona_Sunset-1920w.webp');">
+    <div class="container">
+        <div class="hero-content-wrapper">
+            <h1 class="hero-title" data-text="{{ pageTitle }}">{{ pageTitle }}</h1>
+            {% if pageSubtitle %}
+            <p class="hero-subtitle">{{ pageSubtitle }}</p>
+            {% endif %}
+        </div>
+    </div>
+</section>
