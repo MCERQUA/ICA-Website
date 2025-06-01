@@ -1,0 +1,223 @@
+{
+  "company_profile": {
+    "business_name": "Insulation Contractors of Arizona LLC",
+    "owner": "Christopher Kuhn", 
+    "established": "20+ years experience",
+    "location": "Glendale, Arizona",
+    "service_area": [
+      "Phoenix",
+      "Glendale", 
+      "Gilbert",
+      "Chandler",
+      "Scottsdale",
+      "Tempe",
+      "Mesa",
+      "Peoria",
+      "Sun Lakes",
+      "Ahwatukee",
+      "Paradise Valley",
+      "Surprise",
+      "Avondale",
+      "Goodyear"
+    ],
+    "contact_info": {
+      "phone": "623-241-1939",
+      "email": "insulationcontractorsofaz@gmail.com",
+      "website": "https://insulationcontractorsofarizona.com",
+      "live_website": "https://azfoam.netlify.app/"
+    }
+  },
+  "certifications_and_credentials": {
+    "icynene_certified_installer": true,
+    "spfa_member": "Spray Polyurethane Foam Alliance",
+    "bbb_rating": "A+ Accredited since February 2022",
+    "licensing": "Licensed, Bonded & Insured",
+    "roc_number": "Licensed ROC#",
+    "safety_training": "Hardison Downey Safety Academy graduate"
+  },
+  "expertise_and_specializations": {
+    "primary_services": [
+      "Spray Foam Insulation (Open & Closed Cell)",
+      "Blown-In Insulation",
+      "Dense Pack Insulation", 
+      "Attic Insulation",
+      "Wall Insulation",
+      "Crawl Space Insulation",
+      "Insulation Removal"
+    ],
+    "commercial_services": [
+      "Office Buildings",
+      "Retail Spaces", 
+      "Warehouses",
+      "New Construction",
+      "Manufacturing Facilities",
+      "Cold Storage",
+      "Equipment Insulation"
+    ],
+    "specialty_services": [
+      "Agricultural Tank Insulation",
+      "Barn Insulation",
+      "Storage Facilities"
+    ],
+    "arizona_climate_expertise": {
+      "extreme_heat_specialization": "160°F+ attic conditions",
+      "monsoon_moisture_protection": true,
+      "desert_climate_solutions": "25+ year lifespan products",
+      "energy_efficiency_focus": "40-60% cooling cost reduction"
+    }
+  },
+  "market_positioning": {
+    "unique_value_propositions": [
+      "20+ years Arizona-specific experience",
+      "Safety-first approach with certified protocols",
+      "Extreme heat specialization (150-160°F attic expertise)",
+      "Agricultural tank insulation specialty (unique in market)",
+      "Commercial project expertise (421,700+ SF installations)",
+      "Monsoon season moisture protection specialist"
+    ],
+    "competitive_advantages": [
+      "Deep Arizona climate knowledge",
+      "Safety Academy training",
+      "Agricultural specialization",
+      "Large commercial project experience",
+      "Family-owned local business",
+      "BBB A+ rating with community trust"
+    ]
+  },
+  "proven_results": {
+    "residential_success": [
+      "Gilbert homeowners: 40% reduction in cooling costs",
+      "Chandler residents: $200+ monthly savings during peak summer",
+      "Sun Lakes retirees: Enhanced comfort with consistent temperatures"
+    ],
+    "commercial_success": [
+      "421,700+ SF commercial installation completed",
+      "30-50% energy savings on large-scale installations"
+    ],
+    "customer_satisfaction": [
+      "4.8/5 Star Rating across Google Reviews, Yelp, and BBB",
+      "BBB A+ Rating with accreditation",
+      "Strong testimonial base across service areas"
+    ]
+  },
+  "products_and_materials": {
+    "spray_foam_types": {
+      "closed_cell": {
+        "r_value": "R-6.5 per inch",
+        "temperature_resistance": "200°F+",
+        "lifespan": "25+ years",
+        "moisture_barrier": true,
+        "best_for": "Attics, exterior walls, commercial buildings"
+      },
+      "open_cell": {
+        "r_value": "R-3.7 per inch", 
+        "temperature_performance": "160°F effective",
+        "sound_dampening": true,
+        "cost_advantage": "Budget-friendly option",
+        "best_for": "Interior walls, crawl spaces, budget projects"
+      }
+    },
+    "traditional_insulation": [
+      "Fiberglass Batts",
+      "Cellulose",
+      "Mineral Wool"
+    ]
+  },
+  "service_process": {
+    "step_1": "Free Consultation & Assessment",
+    "step_2": "Safety Preparation & Protection", 
+    "step_3": "Professional Application",
+    "step_4": "Quality Inspection & Cleanup",
+    "step_5": "Performance Guarantee"
+  },
+  "financing_and_pricing": {
+    "financing_available": true,
+    "financing_features": [
+      "No Money Down options",
+      "Low Monthly Payments",
+      "Quick Approval Process", 
+      "Flexible Terms"
+    ],
+    "pricing_ranges": {
+      "closed_cell_spray_foam": "$1.50-2.50 per sq ft",
+      "open_cell_spray_foam": "$1.00-1.50 per sq ft"
+    },
+    "roi_information": {
+      "payback_period": "3-5 years typical",
+      "annual_savings": "$400-800+ typical",
+      "lifespan": "20-25+ years"
+    },
+    "utility_rebates": [
+      "APS rebates available",
+      "SRP rebates available", 
+      "TEP rebates available"
+    ]
+  },
+  "arizona_market_knowledge": {
+    "climate_challenges": [
+      "Summer temperatures exceeding 115°F for weeks",
+      "Attic temperatures reaching 150-160°F",
+      "Temperature differentials of 40°F+",
+      "Rapid temperature cycling with 30°F+ overnight drops",
+      "Intense UV exposure degrading materials",
+      "Monsoon humidity spikes creating moisture challenges"
+    ],
+    "local_market_insights": [
+      "Phoenix metro area: 1.7M population opportunity",
+      "Gilbert: 270K population, proven success market",
+      "Chandler: 280K population, strong customer base",
+      "Glendale: 250K population, home base market",
+      "Scottsdale: 260K population, premium market",
+      "Retirement communities: Sun Lakes specialty focus"
+    ]
+  },
+  "brand_voice_and_messaging": {
+    "primary_brand_message": "Arizona's Extreme Heat Specialists",
+    "key_messaging_themes": [
+      "Safety-first approach",
+      "Arizona climate expertise", 
+      "Energy efficiency focus",
+      "Professional quality",
+      "Local family business",
+      "Health and comfort benefits"
+    ],
+    "tone_characteristics": [
+      "Professional yet approachable",
+      "Safety-conscious",
+      "Arizona-proud",
+      "Results-focused",
+      "Educational and helpful"
+    ]
+  },
+  "content_assets": {
+    "published_blogs": {
+      "total_count": 10,
+      "blog_topics": [
+        "Beat the Arizona Heat: Complete Insulation Guide",
+        "Summer Heat Protection",
+        "Common Insulation Problems in Arizona Homes", 
+        "Arizona Homeowner's Insulation Timeline",
+        "Spray Foam vs Fiberglass Insulation",
+        "Complete Attic Insulation Guide for Arizona",
+        "Indoor Air Quality Benefits of Insulation",
+        "DIY vs Professional Insulation Safety",
+        "Desert-Proof Strategies for Extreme Heat",
+        "Commercial Insulation Solutions"
+      ]
+    },
+    "service_pages": {
+      "residential": 7,
+      "commercial": 4, 
+      "industrial": 3,
+      "agricultural": 3
+    }
+  },
+  "ai_assistant_context": {
+    "role": "Echo - SEO and Brand Strategist",
+    "primary_focus": "Website optimization and content strategy",
+    "current_project": "Website cleanup and service page optimization",
+    "repository": "https://github.com/MCERQUA/ICA-Website",
+    "live_deployment": "https://azfoam.netlify.app/",
+    "last_updated": "2025-06-01"
+  }
+}
