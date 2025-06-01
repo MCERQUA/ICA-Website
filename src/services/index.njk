@@ -1,5 +1,5 @@
 ---
-layout: page.njk
+layout: base.njk
 title: Insulation Services Arizona | Residential & Commercial Solutions
 meta_description: "Professional insulation services for Phoenix & Arizona. Spray foam, blown-in, attic insulation. 20+ years experience. Free estimates. Call 623-241-1939"
 keywords: "insulation services Phoenix, spray foam insulation Arizona, residential insulation, commercial insulation, attic insulation Phoenix, insulation contractors, agricultural tank insulation"
@@ -7,91 +7,117 @@ schema_type: "Service"
 ---
 
 <!-- Service Hero Section -->
-{% set heroData = {
-  title: "Professional Insulation Services",
-  subtitle: "Arizona's Trusted Insulation Experts Since 2005",
-  description: "Transform your property's energy efficiency with our comprehensive insulation solutions designed for Arizona's extreme climate. From residential homes to commercial complexes and agricultural facilities.",
-  ctaText: "Get Free Estimate",
-  ctaLink: "/contact/",
-  phoneText: "Call Now: 623-241-1939",
-  phoneNumber: "623-241-1939",
-  backgroundImage: "/images/insulation_contractors_of_arizona_spray_foam_Arizona_Sunset.webp"
-} %}
-{% include "sections/service-hero.njk" %}
+<section class="service-hero-section">
+    {% set heroData = {
+      title: "Insulation Services Arizona | Residential & Commercial Solutions",
+      subtitle: "Expert Installation by Arizona's Trusted Contractors",
+      description: "Serving the Valley Since 2004 • Licensed, Bonded & Insured",
+      ctaText: "FREE ESTIMATE",
+      ctaLink: "/contact/",
+      backgroundImage: "/images/insulation_contractors_of_arizona_spray_foam_Arizona_Sunset.webp",
+      badges: [
+        { icon: "bbb", text: "A+ Rating" },
+        { icon: "spfa", text: "Certified" },
+        { icon: "license", text: "Licensed ROC# 340641" }
+      ],
+      rating: "4.8/5 Stars"
+    } %}
+    {% include "sections/service-hero.njk" %}
+</section>
 
 <!-- Service Categories Grid -->
-{% include "sections/service-categories-grid.njk" %}
+<section class="section-spacing">
+    {% include "sections/service-categories-grid.njk" %}
+</section>
 
 <!-- Why Choose ICA Enhanced -->
-{% include "sections/why-choose-ica-enhanced.njk" %}
+<section class="section-spacing bg-dark">
+    {% include "sections/why-choose-ica-enhanced.njk" %}
+</section>
 
 <!-- Service Process Timeline -->
-{% include "sections/service-process-timeline.njk" %}
+<section class="section-spacing">
+    {% include "sections/service-process-timeline.njk" %}
+</section>
 
 <!-- Material Comparison Interactive -->
-{% include "sections/material-comparison-interactive.njk" %}
+<section class="section-spacing bg-dark">
+    {% include "sections/material-comparison-interactive.njk" %}
+</section>
 
 <!-- Arizona Climate Challenge -->
-{% include "sections/arizona-climate-challenge.njk" %}
+<section class="section-spacing">
+    {% include "sections/arizona-climate-challenge.njk" %}
+</section>
 
 <!-- Credentials Banner -->
-{% include "sections/credentials-banner.njk" %}
+<section class="section-spacing bg-dark">
+    {% include "sections/credentials-banner.njk" %}
+</section>
 
 <!-- Service Areas -->
-{% include "sections/service-areas.njk" %}
+<section class="section-spacing">
+    {% include "sections/service-areas.njk" %}
+</section>
 
 <!-- Testimonials -->
-{% include "sections/testimonials.njk" %}
+<section class="section-spacing bg-dark">
+    {% include "sections/testimonials.njk" %}
+</section>
 
 <!-- FAQ Section -->
-{% set faqData = {
-  title: "Frequently Asked Questions About Our Services",
-  faqs: [
-    {
-      question: "What type of insulation is best for Arizona homes?",
-      answer: "For Arizona's extreme heat, spray foam insulation (both open and closed cell) provides the best performance. Closed cell spray foam offers the highest R-value (R-6.5 per inch) and creates a complete air and moisture barrier, making it ideal for attics that can reach 160°F+. Open cell spray foam is a more budget-friendly option that still provides excellent air sealing and is perfect for interior walls and sound dampening."
-    },
-    {
-      question: "How much can I save on energy bills with new insulation?",
-      answer: "Most Arizona homeowners see a 30-50% reduction in cooling costs after professional insulation installation. With closed cell spray foam in the attic, savings can reach 40-60%. Given Arizona's long cooling season, many customers save $400-800+ annually, meaning the investment typically pays for itself in 3-5 years."
-    },
-    {
-      question: "Do you offer financing for insulation projects?",
-      answer: "Yes! We offer flexible financing options with no money down and low monthly payments. Our quick approval process makes it easy to get started on your project immediately. We also help you take advantage of APS, SRP, and TEP utility rebates to further reduce your investment."
-    },
-    {
-      question: "How long does insulation installation take?",
-      answer: "Most residential projects are completed in 1-3 days. Spray foam insulation in an average attic takes about one day. Larger commercial projects may take 3-7 days depending on scope. We work efficiently to minimize disruption to your daily routine."
-    },
-    {
-      question: "Is spray foam insulation safe for my family?",
-      answer: "Absolutely. Once cured (typically 24 hours), spray foam insulation is completely safe and inert. Our certified installers follow strict safety protocols during application. We're Icynene certified and graduates of the Hardison Downey Safety Academy, ensuring the highest safety standards."
-    },
-    {
-      question: "What makes ICA different from other insulation contractors?",
-      answer: "With 20+ years serving Arizona, we understand the unique challenges of our desert climate. We're one of the few contractors specializing in agricultural tank insulation, have completed projects over 421,700 square feet, maintain an A+ BBB rating, and our team includes certified professionals who prioritize safety and quality. We're not just contractors – we're your neighbors committed to improving Arizona homes and businesses."
-    }
-  ]
-} %}
-{% include "sections/service-faq.njk" %}
+<section class="section-spacing">
+    {% set faqData = {
+      title: "Frequently Asked Questions About Our Services",
+      faqs: [
+        {
+          question: "What type of insulation is best for Arizona homes?",
+          answer: "For Arizona's extreme heat, spray foam insulation (both open and closed cell) provides the best performance. Closed cell spray foam offers the highest R-value (R-6.5 per inch) and creates a complete air and moisture barrier, making it ideal for attics that can reach 160°F+. Open cell spray foam is a more budget-friendly option that still provides excellent air sealing and is perfect for interior walls and sound dampening."
+        },
+        {
+          question: "How much can I save on energy bills with new insulation?",
+          answer: "Most Arizona homeowners see a 30-50% reduction in cooling costs after professional insulation installation. With closed cell spray foam in the attic, savings can reach 40-60%. Given Arizona's long cooling season, many customers save $400-800+ annually, meaning the investment typically pays for itself in 3-5 years."
+        },
+        {
+          question: "Do you offer financing for insulation projects?",
+          answer: "Yes! We offer flexible financing options with no money down and low monthly payments. Our quick approval process makes it easy to get started on your project immediately. We also help you take advantage of APS, SRP, and TEP utility rebates to further reduce your investment."
+        },
+        {
+          question: "How long does insulation installation take?",
+          answer: "Most residential projects are completed in 1-3 days. Spray foam insulation in an average attic takes about one day. Larger commercial projects may take 3-7 days depending on scope. We work efficiently to minimize disruption to your daily routine."
+        },
+        {
+          question: "Is spray foam insulation safe for my family?",
+          answer: "Absolutely. Once cured (typically 24 hours), spray foam insulation is completely safe and inert. Our certified installers follow strict safety protocols during application. We're Icynene certified and graduates of the Hardison Downey Safety Academy, ensuring the highest safety standards."
+        },
+        {
+          question: "What makes ICA different from other insulation contractors?",
+          answer: "With 20+ years serving Arizona, we understand the unique challenges of our desert climate. We're one of the few contractors specializing in agricultural tank insulation, have completed projects over 421,700 square feet, maintain an A+ BBB rating, and our team includes certified professionals who prioritize safety and quality. We're not just contractors – we're your neighbors committed to improving Arizona homes and businesses."
+        }
+      ]
+    } %}
+    {% include "sections/service-faq.njk" %}
+</section>
 
 <!-- CTA Section -->
-{% set ctaData = {
-  heading: "Ready to Transform Your Property's Efficiency?",
-  subheading: "Join thousands of satisfied Arizona property owners who trust ICA",
-  description: "Whether you need residential, commercial, industrial, or agricultural insulation, our expert team is ready to help you achieve maximum energy efficiency and comfort.",
-  primaryButtonText: "Schedule Free Consultation",
-  primaryButtonLink: "/contact/",
-  secondaryButtonText: "Call 623-241-1939",
-  secondaryButtonLink: "tel:623-241-1939",
-  features: [
-    "Free on-site assessment",
-    "Custom solutions for your property",
-    "Financing available",
-    "Utility rebate assistance"
-  ]
-} %}
-{% include "sections/cta.njk" %}
+<section class="section-spacing bg-dark">
+    {% set ctaData = {
+      heading: "Ready to Transform Your Property's Efficiency?",
+      subheading: "Join thousands of satisfied Arizona property owners who trust ICA",
+      description: "Whether you need residential, commercial, industrial, or agricultural insulation, our expert team is ready to help you achieve maximum energy efficiency and comfort.",
+      primaryButtonText: "Schedule Free Consultation",
+      primaryButtonLink: "/contact/",
+      secondaryButtonText: "Call 623-241-1939",
+      secondaryButtonLink: "tel:623-241-1939",
+      features: [
+        "Free on-site assessment",
+        "Custom solutions for your property",
+        "Financing available",
+        "Utility rebate assistance"
+      ]
+    } %}
+    {% include "sections/cta.njk" %}
+</section>
 
 <!-- Schema Markup for Services -->
 <script type="application/ld+json">
