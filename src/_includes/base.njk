@@ -357,6 +357,10 @@
     <link rel="stylesheet" href="/css/agricultural.css">
     {% endif %}
     
+    {% if page.url and page.url.includes('/services/industrial/') %}
+    <link rel="stylesheet" href="/css/industrial.css">
+    {% endif %}
+    
     <!-- Preload critical resources -->
     <link rel="preload" href="/images-optimized/Insulation_Contractors_of_arizona_logo-200w.webp" as="image">
     <link rel="preload" href="/images-optimized/insulation_contractors_of_arizona_spray_foam_Arizona_Sunset-1920w.webp" as="image" media="(min-width: 1200px)">
