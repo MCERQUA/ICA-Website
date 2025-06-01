@@ -1,0 +1,377 @@
+/* ============================================
+   SERVICE PAGE SPECIFIC STYLES
+   Following ICA Dark Theme with Aqua/Cyan Accents
+   ============================================ */
+
+/* Service Intro Section */
+.service-intro {
+    background: rgba(0, 255, 255, 0.03);
+    backdrop-filter: blur(30px) saturate(200%);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 0 0 1px rgba(0, 255, 255, 0.1),
+        0 0 80px rgba(0, 255, 255, 0.2);
+}
+
+.lead-text {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: var(--gray-100);
+    margin-bottom: 0;
+}
+
+/* Facility Types Grid */
+.facility-types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.facility-type {
+    background: rgba(0, 255, 255, 0.03);
+    backdrop-filter: blur(30px) saturate(200%);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 0 0 1px rgba(0, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.facility-type:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-primary);
+    box-shadow: 
+        0 10px 40px rgba(0, 0, 0, 0.4),
+        inset 0 0 0 1px rgba(0, 255, 255, 0.2),
+        0 0 100px rgba(0, 255, 255, 0.3);
+}
+
+.facility-type h3 {
+    color: var(--accent-primary);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.facility-type ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.facility-type li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--gray-100);
+}
+
+.facility-type li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent-primary);
+    font-weight: bold;
+}
+
+/* Alert/Info Boxes - Dark Theme */
+.warning-box {
+    background: rgba(255, 193, 7, 0.1);
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    border-left: 4px solid #ffc107;
+}
+
+.warning-box h3 {
+    color: #ffc107;
+}
+
+.danger-box {
+    background: rgba(220, 53, 69, 0.1);
+    border: 1px solid rgba(220, 53, 69, 0.3);
+    border-left: 4px solid #dc3545;
+}
+
+.danger-box h3 {
+    color: #ff6b6b;
+}
+
+.success-box {
+    background: rgba(40, 167, 69, 0.1);
+    border: 1px solid rgba(40, 167, 69, 0.3);
+    border-left: 4px solid #28a745;
+}
+
+.success-box h3 {
+    color: #00ff88;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.stat-value {
+    display: block;
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--accent-primary);
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.stat-label {
+    display: block;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--gray-200);
+}
+
+/* CTA Section Enhancements */
+.cta-section {
+    background: linear-gradient(135deg, 
+        rgba(0, 255, 255, 0.05) 0%, 
+        rgba(0, 212, 255, 0.05) 100%);
+    backdrop-filter: blur(30px);
+    color: var(--gray-100);
+    padding: 3rem;
+    border-radius: 15px;
+    margin: 3rem 0;
+    text-align: center;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    box-shadow: 
+        0 10px 40px rgba(0, 0, 0, 0.4),
+        inset 0 0 100px rgba(0, 255, 255, 0.1);
+}
+
+.cta-section h3 {
+    color: var(--accent-primary);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem auto;
+    text-align: left;
+    display: inline-block;
+}
+
+.cta-section li {
+    padding: 0.5rem 0;
+    padding-left: 2rem;
+    position: relative;
+    color: var(--gray-100);
+}
+
+.cta-section li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+    color: var(--accent-primary);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+/* Feature Grid */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.feature-grid ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-grid li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+    color: var(--gray-100);
+}
+
+/* Expertise List */
+.expertise-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.expertise-list li {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    color: var(--gray-100);
+}
+
+.expertise-list strong {
+    color: var(--accent-primary);
+    margin-right: 0.5rem;
+}
+
+/* FAQ Section - Dark Theme */
+.faq-section {
+    margin: 3rem 0;
+}
+
+.faq-section h2 {
+    color: var(--accent-primary);
+    margin-bottom: 2rem;
+}
+
+.accordion-item {
+    background: rgba(0, 255, 255, 0.03);
+    backdrop-filter: blur(30px);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.accordion-item:hover {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.accordion-header {
+    padding: 1.5rem 2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.accordion-header:hover {
+    background: rgba(0, 255, 255, 0.05);
+}
+
+.accordion-header h4 {
+    margin: 0;
+    color: var(--accent-primary);
+    font-size: 1.2rem;
+}
+
+.accordion-icon {
+    color: var(--accent-primary);
+    transition: transform 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 2rem;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 500px;
+    padding: 0 2rem 1.5rem;
+}
+
+.accordion-content p {
+    color: var(--gray-200);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .service-intro,
+    .cta-section {
+        padding: 1.5rem;
+    }
+    
+    .facility-types-grid,
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .stat-value {
+        font-size: 2.5rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .cta-buttons .btn,
+    .cta-buttons .cta-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Ensure all text remains readable */
+.glass-panel p,
+.glass-panel li,
+.glass-panel span {
+    color: var(--gray-100);
+}
+
+.glass-panel strong {
+    color: var(--accent-primary);
+}
+
+/* Override any inline styles that might conflict */
+.glass-panel,
+.card,
+.facility-type,
+.accordion-item {
+    background: rgba(0, 255, 255, 0.03) !important;
+    backdrop-filter: blur(30px) saturate(200%) !important;
+    border: 1px solid rgba(0, 255, 255, 0.2) !important;
+}
+
+/* Ensure dark theme is maintained */
+body {
+    background: var(--primary-dark) !important;
+    color: var(--gray-100) !important;
+}
+
+/* Service pages specific section backgrounds */
+.service-details {
+    background: var(--primary-dark);
+}
+
+.service-details:nth-child(even) {
+    background: var(--primary-medium);
+}
