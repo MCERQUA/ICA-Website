@@ -59,6 +59,44 @@
 
 ---
 
+## CSS and Styling Issues
+
+### Service Pages Displaying Light Theme Instead of Dark Theme
+
+**Issue:** Service pages (e.g., `/services/industrial/manufacturing/`) display with light backgrounds and colors instead of the established dark theme with cyan accents
+
+**Root Cause:** Service pages contain inline `<style>` blocks that override the global CSS with light theme styles (white backgrounds, light gray colors). These inline styles take precedence over the external stylesheets that define the dark theme.
+
+**Solution:** 
+1. Remove all inline `<style>` blocks from service pages
+2. Use established CSS classes from the component library
+3. Add service-specific styles to `src/css/services.css` if needed
+
+**Quick Fix Script:** Run `node fix-service-styles.js` to automatically fix all service pages
+
+**Files Created/Modified:**
+- `src/css/services.css` - Service-specific dark theme styles
+- `src/css/style.css` - Updated to import services.css
+- `fix-service-styles.js` - Automated fix script
+
+**CSS Classes to Use:**
+- `.glass-panel` - Glass morphism effect containers
+- `.card` - Standard content cards
+- `.services-grid` - Service card grids
+- `.cta-section` - Call-to-action sections
+- `.accordion-item` - FAQ/collapsible content
+- `.warning-box`, `.danger-box`, `.success-box` - Alert boxes
+
+**Prevention:** 
+- Never add inline styles to pages
+- Always use established CSS classes
+- Follow the style guide: dark backgrounds (#0a1a1a), cyan accents (#00ffff)
+- Test pages locally before committing
+
+**Status:** ✅ Resolved - Created fix script and CSS module on 2025-05-31
+
+---
+
 ## Future Issue Template
 
 **Issue:** [Brief description]
