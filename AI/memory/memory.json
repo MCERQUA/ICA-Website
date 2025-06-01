@@ -221,17 +221,18 @@
   },
   "website_design_guidelines": {
     "page_hero_standard": {
-      "important": "ALL PAGES must use the same hero component as the home page",
-      "implementation": "Use {% include 'sections/page-hero.njk' %} for all service and content pages",
+      "important": "ALL PAGES must use the existing hero.njk component from sections",
+      "implementation": "Use {% include 'sections/hero.njk' %} with heroTitle and heroSubtitle variables",
       "hero_features": [
         "Same background image as home page (Arizona sunset)",
         "No dark overlay - shows full image",
-        "No spacing at top - hero starts immediately after header",
-        "Title and optional subtitle only",
-        "Consistent styling across all pages"
+        "Full complement of hero elements including badges, trust signals, CTAs",
+        "Consistent styling across all pages",
+        "Variables: heroTitle, heroSubtitle, ctaPrimary, ctaPrimaryLink"
       ],
-      "component_location": "src/_includes/sections/page-hero.njk",
-      "note": "Unless specifically instructed otherwise, always use the standard page-hero component"
+      "component_location": "src/_includes/sections/hero.njk",
+      "css_fix": "Pages with hero need CSS rule to remove main padding-top",
+      "note": "Do NOT create separate page-hero components, use the existing hero.njk"
     }
   },
   "ai_assistant_context": {
@@ -287,30 +288,33 @@
         ]
       },
       "2025-06-01-industrial": {
-        "task": "Industrial services page modernization with standard hero",
+        "task": "Industrial services page using standard hero component",
         "status": "completed",
         "changes": [
-          "Created page-hero.njk component for consistent hero styling across all pages",
-          "Updated industrial/index.njk to use standard page-hero component",
-          "Created industrial.css with modern high-tech styling",
+          "Updated industrial/index.njk to use standard hero.njk component",
+          "Fixed main padding-top issue with CSS :has() selector",
+          "Updated industrial.css with modern high-tech styling",
           "Added conditional CSS loading in base.njk for industrial pages",
           "Implemented glassmorphism effects and animations",
           "Enhanced mobile responsiveness with proper breakpoints",
           "Added schema.org structured data for industrial services",
           "Created modern service cards with hover effects and animations"
         ],
-        "new_components": [
-          "page-hero.njk - Reusable hero component matching home page style"
+        "components_reused": [
+          "sections/hero.njk - Standard hero component with all features",
+          "sections/why-choose-ica.njk - Trust signals section",
+          "sections/testimonials.njk - Customer testimonials",
+          "sections/cta.njk - Call to action section"
         ],
         "styling_features": [
-          "Consistent hero styling with home page",
+          "Uses standard hero with full features (badges, CTAs, etc)",
           "Glassmorphism service cards with gradient borders",
           "Animated statistics counters",
           "Industry badges with hover effects",
           "Responsive grid layouts",
           "Modern CTA section with rotating gradient border"
         ],
-        "important_guideline": "Established standard that ALL pages should use the same hero style as home page unless specifically instructed otherwise"
+        "important_lesson": "Always use existing hero.njk component instead of creating new page-specific hero components"
       }
     }
   }
