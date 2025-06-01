@@ -1,15 +1,14 @@
 ---
-layout: page.njk
+layout: base.njk
 title: Industrial Insulation Services
-pageTitle: Industrial Insulation Services
-pageSubtitle: Specialized Solutions for Manufacturing & Processing Facilities
-meta_description: "Expert industrial insulation solutions for manufacturing facilities, cold storage, and equipment in Phoenix, AZ. 20+ years experience, 400K+ sq ft installed. Licensed & insured ROC# 340641."
-keywords: "industrial insulation Phoenix, manufacturing facility insulation Arizona, cold storage insulation, equipment insulation, industrial spray foam, factory insulation contractors"
+description: Expert industrial insulation solutions for manufacturing facilities, cold storage, and equipment in Phoenix, AZ. 20+ years experience, 400K+ sq ft installed. Licensed & insured ROC# 340641.
+heroTitle: Industrial Insulation Services
+heroSubtitle: Specialized Solutions for Manufacturing & Processing Facilities
 ---
 
-{% include "sections/page-hero.njk" %}
+{% include "sections/hero.njk" %}
 
-<section class="industrial-overview">
+<section class="content-section industrial-overview">
     <div class="container">
         <div class="intro-section">
             <p>Industrial facilities require specialized insulation solutions that go beyond traditional approaches. With over 20 years of experience in Arizona's industrial sector, Insulation Contractors of Arizona provides comprehensive insulation services designed to meet the unique demands of manufacturing, processing, and storage facilities. Our expertise in extreme temperature control and moisture management makes us the trusted choice for industrial operations across the Phoenix metropolitan area.</p>
@@ -18,7 +17,7 @@ keywords: "industrial insulation Phoenix, manufacturing facility insulation Ariz
         <div class="services-grid">
             <div class="service-card">
                 <div class="service-icon">🏭</div>
-                <h2><a href="/services/industrial/manufacturing/">Manufacturing Facilities</a></h2>
+                <h3><a href="/services/industrial/manufacturing/">Manufacturing Facilities</a></h3>
                 <p>Complete insulation solutions for production facilities, assembly plants, and industrial complexes. We understand the critical role insulation plays in maintaining process temperatures, reducing energy costs, and ensuring worker comfort in Arizona's extreme climate.</p>
                 <ul class="service-features">
                     <li>Process temperature control</li>
@@ -31,7 +30,7 @@ keywords: "industrial insulation Phoenix, manufacturing facility insulation Ariz
 
             <div class="service-card">
                 <div class="service-icon">❄️</div>
-                <h2><a href="/services/industrial/cold-storage/">Cold Storage Facilities</a></h2>
+                <h3><a href="/services/industrial/cold-storage/">Cold Storage Facilities</a></h3>
                 <p>Specialized insulation for refrigerated warehouses, blast freezers, and cold storage facilities. Our solutions prevent condensation, maintain strict temperature requirements, and reduce refrigeration costs in Phoenix's hot climate.</p>
                 <ul class="service-features">
                     <li>Vapor barrier systems</li>
@@ -44,7 +43,7 @@ keywords: "industrial insulation Phoenix, manufacturing facility insulation Ariz
 
             <div class="service-card">
                 <div class="service-icon">⚙️</div>
-                <h2><a href="/services/industrial/equipment/">Equipment Insulation</a></h2>
+                <h3><a href="/services/industrial/equipment/">Equipment Insulation</a></h3>
                 <p>Custom insulation solutions for industrial equipment, pipes, tanks, and mechanical systems. We provide removable insulation blankets, pipe insulation, and equipment wrapping for optimal performance and personnel protection.</p>
                 <ul class="service-features">
                     <li>Removable insulation blankets</li>
@@ -141,6 +140,10 @@ keywords: "industrial insulation Phoenix, manufacturing facility insulation Ariz
     </div>
 </section>
 
+{% include "sections/why-choose-ica.njk" %}
+{% include "sections/testimonials.njk" %}
+{% include "sections/cta.njk" %}
+
 <!-- Schema.org Industrial Service Markup -->
 <script type="application/ld+json">
 {
@@ -180,3 +183,10 @@ keywords: "industrial insulation Phoenix, manufacturing facility insulation Ariz
   }]
 }
 </script>
+
+<style>
+/* Override main padding for pages with hero */
+.industrial-page main {
+    padding-top: 0;
+}
+</style>
