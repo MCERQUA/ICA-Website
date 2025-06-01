@@ -44,375 +44,17 @@ relatedServices:
     url: "/services/commercial/warehouse/"
 ---
 
-<style>
-/* Manufacturing Page Specific Styles */
-.service-intro {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    padding: 3rem;
-    border-radius: 10px;
-    margin: 2rem 0;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
 
-.lead-text {
-    font-size: 1.3rem;
-    line-height: 1.8;
-    color: #2c3e50;
-    margin-bottom: 0;
-}
 
-/* Facility Types Grid */
-.facility-types-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin: 3rem 0;
-}
-
-.facility-type {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    border-left: 4px solid var(--primary, #ff6b35);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.facility-type:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-}
-
-.facility-type h3 {
-    color: var(--primary, #ff6b35);
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
-}
-
-.facility-type ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.facility-type li {
-    padding: 0.5rem 0;
-    padding-left: 1.5rem;
-    position: relative;
-}
-
-.facility-type li:before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: var(--success, #28a745);
-    font-weight: bold;
-}
-
-/* Challenge Section */
-.challenge-section {
-    background: #fff3cd;
-    border-left: 4px solid #ffc107;
-    padding: 2rem;
-    margin: 2rem 0;
-    border-radius: 5px;
-}
-
-.challenge-section h3 {
-    color: #856404;
-    margin-bottom: 1rem;
-}
-
-.challenge-section ul {
-    margin: 1rem 0;
-}
-
-.challenge-section li {
-    margin-bottom: 0.75rem;
-    line-height: 1.6;
-}
-
-/* Cost Section */
-.cost-section {
-    background: #f8d7da;
-    border-left: 4px solid #dc3545;
-    padding: 2rem;
-    margin: 2rem 0;
-    border-radius: 5px;
-}
-
-.cost-section h3 {
-    color: #721c24;
-    margin-bottom: 1rem;
-}
-
-/* Solutions Section */
-.solution-card {
-    background: white;
-    padding: 2rem;
-    margin: 2rem 0;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-
-.solution-card h3 {
-    color: var(--primary, #ff6b35);
-    margin-bottom: 1rem;
-}
-
-.solution-features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-    margin-top: 1.5rem;
-}
-
-.solution-features li {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 0.5rem;
-}
-
-.solution-features li:before {
-    content: "•";
-    color: var(--primary, #ff6b35);
-    font-weight: bold;
-    margin-right: 0.5rem;
-    font-size: 1.2rem;
-}
-
-/* ROI Calculator */
-.roi-calculator {
-    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
-    color: white;
-    padding: 3rem;
-    border-radius: 10px;
-    margin: 3rem 0;
-    text-align: center;
-}
-
-.roi-calculator h3 {
-    color: white;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-}
-
-.roi-metrics {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-}
-
-.metric {
-    background: rgba(255,255,255,0.1);
-    padding: 2rem;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-}
-
-.metric-value {
-    display: block;
-    font-size: 3rem;
-    font-weight: bold;
-    color: #ffc107;
-    margin-bottom: 0.5rem;
-}
-
-.metric-label {
-    display: block;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* Case Study */
-.case-study {
-    background: #d4edda;
-    border-left: 4px solid #28a745;
-    padding: 2rem;
-    margin: 2rem 0;
-    border-radius: 5px;
-}
-
-.case-study h3 {
-    color: #155724;
-    margin-bottom: 1rem;
-}
-
-.case-study ul {
-    margin: 1rem 0;
-}
-
-.case-study li {
-    margin-bottom: 0.5rem;
-}
-
-.case-study strong {
-    color: #155724;
-}
-
-/* CTA Box */
-.cta-box {
-    background: linear-gradient(135deg, var(--primary, #ff6b35) 0%, #ff8f65 100%);
-    color: white;
-    padding: 3rem;
-    border-radius: 10px;
-    margin: 3rem 0;
-    text-align: center;
-}
-
-.cta-box h3 {
-    color: white;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.cta-box ul {
-    list-style: none;
-    padding: 0;
-    margin: 2rem 0;
-    text-align: left;
-    display: inline-block;
-}
-
-.cta-box li {
-    padding: 0.5rem 0;
-    padding-left: 2rem;
-    position: relative;
-}
-
-.cta-box li:before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    font-size: 1.2rem;
-}
-
-.cta-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-}
-
-.cta-buttons .btn {
-    padding: 1rem 2rem;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.cta-buttons .btn-primary {
-    background: white;
-    color: var(--primary, #ff6b35);
-}
-
-.cta-buttons .btn-primary:hover {
-    background: #f8f9fa;
-    transform: translateY(-2px);
-}
-
-.cta-buttons .btn-secondary {
-    background: transparent;
-    color: white;
-    border: 2px solid white;
-}
-
-.cta-buttons .btn-secondary:hover {
-    background: white;
-    color: var(--primary, #ff6b35);
-}
-
-/* FAQ Section */
-.faq-section {
-    margin: 3rem 0;
-}
-
-.faq-item {
-    background: white;
-    padding: 2rem;
-    margin-bottom: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border-left: 4px solid var(--primary, #ff6b35);
-}
-
-.faq-item h3 {
-    color: var(--primary, #ff6b35);
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-}
-
-.faq-item p {
-    color: #6c757d;
-    line-height: 1.6;
-    margin: 0;
-}
-
-/* Expertise Section */
-.expertise-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-    margin: 2rem 0;
-}
-
-.expertise-list li {
-    display: flex;
-    align-items: center;
-    padding: 0.5rem 0;
-}
-
-.expertise-list strong {
-    color: var(--primary, #ff6b35);
-    margin-right: 0.5rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .service-intro {
-        padding: 2rem 1.5rem;
-    }
-    
-    .facility-types-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
-    .roi-calculator {
-        padding: 2rem 1.5rem;
-    }
-    
-    .metric-value {
-        font-size: 2.5rem;
-    }
-    
-    .cta-box {
-        padding: 2rem 1.5rem;
-    }
-    
-    .cta-buttons {
-        flex-direction: column;
-    }
-    
-    .cta-buttons .btn {
-        width: 100%;
-        text-align: center;
-    }
-}
-</style>
-
-<div class="service-intro">
+<div class="glass-panel">
   <p class="lead-text">Arizona's extreme temperatures pose unique challenges for manufacturing facilities. Our industrial-grade insulation solutions help maintain optimal production environments while significantly reducing operational costs.</p>
 </div>
 
 ## Manufacturing Facilities We Serve
 
-<div class="facility-types-grid">
-  <div class="facility-type">
-    <h3>Food & Beverage Production</h3>
+<div class="services-grid">
+  <div class="card glass-panel">
+    <h3 data-text="Food & Beverage Production">Food & Beverage Production</h3>
     <ul>
       <li>Temperature-sensitive processing areas</li>
       <li>Clean room environments</li>
@@ -421,8 +63,8 @@ relatedServices:
     </ul>
   </div>
   
-  <div class="facility-type">
-    <h3>Electronics Manufacturing</h3>
+  <div class="card glass-panel">
+    <h3 data-text="Electronics Manufacturing">Electronics Manufacturing</h3>
     <ul>
       <li>Precision climate control</li>
       <li>Static-free environments</li>
@@ -431,8 +73,8 @@ relatedServices:
     </ul>
   </div>
   
-  <div class="facility-type">
-    <h3>Metal Fabrication</h3>
+  <div class="card glass-panel">
+    <h3 data-text="Metal Fabrication">Metal Fabrication</h3>
     <ul>
       <li>High-temperature process areas</li>
       <li>Welding bay insulation</li>
@@ -441,8 +83,8 @@ relatedServices:
     </ul>
   </div>
   
-  <div class="facility-type">
-    <h3>Chemical Processing</h3>
+  <div class="card glass-panel">
+    <h3 data-text="Chemical Processing">Chemical Processing</h3>
     <ul>
       <li>Corrosion-resistant materials</li>
       <li>Vapor barrier installation</li>
@@ -454,8 +96,8 @@ relatedServices:
 
 ## Why Manufacturing Facilities Need Specialized Insulation
 
-<div class="challenge-section">
-  <h3>Arizona's Industrial Challenges</h3>
+<div class="glass-panel warning-box">
+  <h3 data-text="Arizona's Industrial Challenges">Arizona's Industrial Challenges</h3>
   <p>Manufacturing facilities in Arizona face unique environmental pressures:</p>
   <ul>
     <li><strong>Extreme Temperature Fluctuations</strong>: Daily temperature swings of 30-40°F affect equipment calibration and product quality</li>
@@ -465,8 +107,8 @@ relatedServices:
   </ul>
 </div>
 
-<div class="cost-section">
-  <h3>The Cost of Poor Insulation</h3>
+<div class="glass-panel danger-box">
+  <h3 data-text="The Cost of Poor Insulation">The Cost of Poor Insulation</h3>
   <p>Inadequate insulation in manufacturing facilities leads to:</p>
   <ul>
     <li><strong>Production Delays</strong>: Temperature variations affecting product quality and equipment performance</li>
@@ -479,8 +121,8 @@ relatedServices:
 
 ## Our Manufacturing Insulation Solutions
 
-<div class="solution-card">
-  <h3>Closed-Cell Spray Foam - Premium Solution</h3>
+<div class="card glass-panel">
+  <h3 data-text="Closed-Cell Spray Foam - Premium Solution">Closed-Cell Spray Foam - Premium Solution</h3>
   <p>Our premium solution for manufacturing facilities:</p>
   <div class="solution-features">
     <ul>
@@ -493,8 +135,8 @@ relatedServices:
   </div>
 </div>
 
-<div class="solution-card">
-  <h3>Open-Cell Spray Foam - Cost-Effective Option</h3>
+<div class="card glass-panel">
+  <h3 data-text="Open-Cell Spray Foam - Cost-Effective Option">Open-Cell Spray Foam - Cost-Effective Option</h3>
   <p>Cost-effective for specific applications:</p>
   <div class="solution-features">
     <ul>
@@ -506,8 +148,8 @@ relatedServices:
   </div>
 </div>
 
-<div class="solution-card">
-  <h3>Specialized Manufacturing Solutions</h3>
+<div class="card glass-panel">
+  <h3 data-text="Specialized Manufacturing Solutions">Specialized Manufacturing Solutions</h3>
   <ul>
     <li><strong>Equipment Enclosures</strong>: Custom insulation for machinery and process equipment</li>
     <li><strong>Pipe and Duct Insulation</strong>: Prevent energy loss in distribution systems</li>
@@ -519,8 +161,8 @@ relatedServices:
 
 ## ROI for Manufacturing Facilities
 
-<div class="roi-calculator">
-  <h3>Typical Return on Investment</h3>
+<div class="cta-section glass-panel">
+  <h3 data-text="Typical Return on Investment">Typical Return on Investment</h3>
   <div class="roi-metrics">
     <div class="metric">
       <span class="metric-value">18-24</span>
@@ -537,8 +179,8 @@ relatedServices:
   </div>
 </div>
 
-<div class="case-study">
-  <h3>Case Study: Phoenix Electronics Manufacturer</h3>
+<div class="glass-panel success-box">
+  <h3 data-text="Case Study: Phoenix Electronics Manufacturer">Case Study: Phoenix Electronics Manufacturer</h3>
   <p>A 50,000 sq ft electronics manufacturing facility achieved:</p>
   <ul>
     <li><strong>42% reduction</strong> in annual HVAC costs</li>
@@ -575,8 +217,8 @@ relatedServices:
 
 ## Get Your Facility Assessment
 
-<div class="cta-box">
-  <h3>Free Manufacturing Facility Analysis</h3>
+<div class="cta-section glass-panel">
+  <h3 data-text="Free Manufacturing Facility Analysis">Free Manufacturing Facility Analysis</h3>
   <p>Our industrial insulation experts will evaluate your facility and provide:</p>
   <ul>
     <li>Thermal imaging assessment</li>
@@ -594,23 +236,23 @@ relatedServices:
 ## Frequently Asked Questions
 
 <div class="faq-section">
-  <div class="faq-item">
-    <h3>Can you work around our production schedule?</h3>
+  <div class="accordion-item glass-panel">
+    <h3 data-text="Can you work around our production schedule?">Can you work around our production schedule?</h3>
     <p>Absolutely. We understand downtime costs money. Our crews can work nights, weekends, or during scheduled maintenance windows to minimize disruption to your operations.</p>
   </div>
   
-  <div class="faq-item">
-    <h3>How long does installation take for a typical facility?</h3>
+  <div class="accordion-item glass-panel">
+    <h3 data-text="How long does installation take for a typical facility?">How long does installation take for a typical facility?</h3>
     <p>Installation time varies by facility size and complexity. A 20,000 sq ft facility typically takes 3-5 days, while larger facilities may require phased installation over several weeks.</p>
   </div>
   
-  <div class="faq-item">
-    <h3>Will spray foam insulation affect our equipment?</h3>
+  <div class="accordion-item glass-panel">
+    <h3 data-text="Will spray foam insulation affect our equipment?">Will spray foam insulation affect our equipment?</h3>
     <p>Our professional installation process includes proper masking and protection of all equipment. The cured foam is inert and won't affect machinery or electronics.</p>
   </div>
   
-  <div class="faq-item">
-    <h3>What about fire safety?</h3>
+  <div class="accordion-item glass-panel">
+    <h3 data-text="What about fire safety?">What about fire safety?</h3>
     <p>We use fire-rated spray foam products that meet or exceed building codes. Closed-cell foam can actually improve fire resistance when properly installed with appropriate thermal barriers.</p>
   </div>
 </div>

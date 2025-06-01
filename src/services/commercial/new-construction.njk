@@ -51,7 +51,7 @@ processSteps:
 
 <section class="py-20 bg-surface-dark">
   <div class="container">
-    <h2 class="text-4xl font-bold text-primary font-display text-center mb-6">Your Trusted Partner for New Construction Insulation</h2>
+    <h2 class="text-4xl font-bold text-primary font-display text-center mb-6" data-text="Your Trusted Partner for New Construction Insulation">Your Trusted Partner for New Construction Insulation</h2>
     <p class="text-xl text-primary-light text-center max-w-4xl mx-auto mb-12">Building in Arizona? Partner with insulation experts who understand our unique climate challenges. We work seamlessly with general contractors, builders, and developers to deliver code-compliant, energy-efficient insulation solutions.</p>
     
     <div class="bg-gradient-to-r from-primary/20 to-accent/20 backdrop-blur border border-primary/30 rounded-lg p-8">
@@ -83,7 +83,7 @@ processSteps:
 
 <section class="py-20 bg-surface">
   <div class="container">
-    <h2 class="text-4xl font-bold text-primary font-display text-center mb-12">Construction Types We Serve</h2>
+    <h2 class="text-4xl font-bold text-primary font-display text-center mb-12" data-text="Construction Types We Serve">Construction Types We Serve</h2>
     
     <div class="grid lg:grid-cols-3 gap-8">
       {% set constructionTypes = [
@@ -121,7 +121,7 @@ processSteps:
       
       {% for type in constructionTypes %}
       <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-6 hover:shadow-glow-sm transition-all duration-300">
-        <h3 class="text-xl font-bold text-primary mb-4">{{ type.title }}</h3>
+        <h3 class="text-xl font-bold text-primary mb-4" data-text="{{ type.title }}">{{ type.title }}</h3>
         <ul class="space-y-2">
           {% for item in type.items %}
           <li class="flex items-start gap-2">
@@ -142,9 +142,9 @@ processSteps:
 
 <section class="py-20 bg-surface">
   <div class="container">
-    <h2 class="text-4xl font-bold text-primary font-display text-center mb-12">Code Compliance & Energy Standards</h2>
+    <h2 class="text-4xl font-bold text-primary font-display text-center mb-12" data-text="Code Compliance & Energy Standards">Code Compliance & Energy Standards</h2>
     
-    <h3 class="text-2xl font-bold text-primary text-center mb-8">We Ensure Compliance With:</h3>
+    <h3 class="text-2xl font-bold text-primary text-center mb-8" data-text="We Ensure Compliance With:">We Ensure Compliance With:</h3>
     
     <div class="grid lg:grid-cols-3 gap-8">
       {% set compliance = [
@@ -176,7 +176,7 @@ processSteps:
       
       {% for standard in compliance %}
       <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-6">
-        <h4 class="text-xl font-bold text-primary mb-4">{{ standard.title }}</h4>
+        <h4 class="text-xl font-bold text-primary mb-4" data-text="{{ standard.title }}">{{ standard.title }}</h4>
         <ul class="space-y-2">
           {% for item in standard.items %}
           <li class="flex items-start gap-2">
@@ -193,7 +193,7 @@ processSteps:
 
 <section class="py-20 bg-surface-dark">
   <div class="container">
-    <h2 class="text-4xl font-bold text-primary font-display text-center mb-6">Value Engineering Services</h2>
+    <h2 class="text-4xl font-bold text-primary font-display text-center mb-6" data-text="Value Engineering Services">Value Engineering Services</h2>
     <p class="text-lg text-primary-light text-center max-w-3xl mx-auto mb-12">Our experienced team can help optimize your insulation investment:</p>
     
     <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-8 max-w-4xl mx-auto">
@@ -222,7 +222,7 @@ processSteps:
 
 <section class="py-20 bg-surface">
   <div class="container">
-    <h3 class="text-3xl font-bold text-primary text-center mb-12">Benefits for Builders & Contractors</h3>
+    <h3 class="text-3xl font-bold text-primary text-center mb-12" data-text="Benefits for Builders & Contractors">Benefits for Builders & Contractors</h3>
     
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
       {% set benefits = [
@@ -234,14 +234,14 @@ processSteps:
       
       {% for benefit in benefits %}
       <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-6 text-center hover:shadow-glow-sm transition-all duration-300">
-        <h4 class="text-lg font-bold text-primary mb-3">{{ benefit.title }}</h4>
+        <h4 class="text-lg font-bold text-primary mb-3" data-text="{{ benefit.title }}">{{ benefit.title }}</h4>
         <p class="text-text-muted text-sm">{{ benefit.desc }}</p>
       </div>
       {% endfor %}
     </div>
     
     <div class="bg-gradient-to-r from-primary/10 to-accent/10 backdrop-blur border border-primary/30 rounded-lg p-8 mt-12 max-w-4xl mx-auto">
-      <h3 class="text-2xl font-bold text-primary mb-6">Recent Project: Mesa Office Complex</h3>
+      <h3 class="text-2xl font-bold text-primary mb-6" data-text="Recent Project: Mesa Office Complex">Recent Project: Mesa Office Complex</h3>
       <p class="text-lg text-primary-light mb-6">45,000 sq ft commercial office building:</p>
       <ul class="space-y-3">
         {% set achievements = [

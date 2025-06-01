@@ -44,468 +44,9 @@ relatedServices:
     url: "/services/commercial/warehouse/"
 ---
 
-<style>
-/* Cold Storage Page Specific Styles */
-.service-intro {
-    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-    padding: 3rem;
-    border-radius: 10px;
-    margin: 2rem 0;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    border-left: 4px solid #2196f3;
-}
 
-.lead-text {
-    font-size: 1.3rem;
-    line-height: 1.8;
-    color: #1565c0;
-    margin-bottom: 0;
-    font-weight: 500;
-}
 
-/* Storage Types Grid */
-.storage-types-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin: 3rem 0;
-}
-
-.storage-type {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    border-top: 4px solid #2196f3;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.storage-type:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-}
-
-.storage-type h3 {
-    color: #1565c0;
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
-}
-
-.storage-type ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.storage-type li {
-    padding: 0.5rem 0;
-    padding-left: 1.5rem;
-    position: relative;
-    color: #555;
-}
-
-.storage-type li:before {
-    content: "❄";
-    position: absolute;
-    left: 0;
-    color: #2196f3;
-}
-
-/* Challenge Section */
-.extreme-challenge {
-    background: #fff3e0;
-    border-left: 4px solid #ff6f00;
-    padding: 2rem;
-    margin: 2rem 0;
-    border-radius: 5px;
-}
-
-.extreme-challenge h3 {
-    color: #e65100;
-    margin-bottom: 1rem;
-}
-
-.extreme-challenge ul {
-    margin: 1rem 0;
-}
-
-.extreme-challenge li {
-    margin-bottom: 0.75rem;
-    line-height: 1.6;
-}
-
-/* Consequences Section */
-.consequences-section {
-    background: #ffebee;
-    border-left: 4px solid #d32f2f;
-    padding: 2rem;
-    margin: 2rem 0;
-    border-radius: 5px;
-}
-
-.consequences-section h3 {
-    color: #c62828;
-    margin-bottom: 1rem;
-}
-
-/* Solution Section */
-.gold-standard {
-    background: linear-gradient(135deg, #fffde7 0%, #fff9c4 100%);
-    padding: 2.5rem;
-    border-radius: 10px;
-    margin: 2rem 0;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    border: 2px solid #fbc02d;
-}
-
-.gold-standard h3 {
-    color: #f57f17;
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-.gold-standard ul {
-    list-style: none;
-    padding: 0;
-}
-
-.gold-standard li {
-    padding: 0.75rem 0;
-    border-bottom: 1px solid rgba(251, 192, 45, 0.3);
-}
-
-.gold-standard li:last-child {
-    border-bottom: none;
-}
-
-/* System Components */
-.system-components {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin: 2rem 0;
-}
-
-.component {
-    background: #f5f5f5;
-    padding: 1.5rem;
-    border-radius: 8px;
-    border-left: 3px solid #2196f3;
-}
-
-.component h4 {
-    color: #1565c0;
-    margin-bottom: 0.5rem;
-}
-
-/* Savings Calculator */
-.savings-calculator {
-    background: linear-gradient(135deg, #1565c0 0%, #2196f3 100%);
-    color: white;
-    padding: 3rem;
-    border-radius: 10px;
-    margin: 3rem 0;
-}
-
-.savings-calculator h3 {
-    color: white;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.savings-table {
-    width: 100%;
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-}
-
-.savings-table th {
-    background: #0d47a1;
-    color: white;
-    padding: 1rem;
-    text-align: left;
-    font-weight: 600;
-}
-
-.savings-table td {
-    padding: 1rem;
-    color: #333;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.savings-table tr:last-child td {
-    border-bottom: none;
-}
-
-.savings-table tr:nth-child(even) {
-    background: #f5f5f5;
-}
-
-/* Additional Benefits */
-.additional-benefits {
-    background: #e8f5e9;
-    padding: 2rem;
-    border-radius: 10px;
-    margin: 2rem 0;
-}
-
-.additional-benefits h3 {
-    color: #2e7d32;
-    margin-bottom: 1rem;
-}
-
-.additional-benefits ul {
-    list-style: none;
-    padding: 0;
-}
-
-.additional-benefits li {
-    padding: 0.5rem 0;
-    padding-left: 2rem;
-    position: relative;
-}
-
-.additional-benefits li:before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: #2e7d32;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-/* Case Studies */
-.case-study {
-    background: white;
-    padding: 2rem;
-    margin: 2rem 0;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    border-left: 4px solid #4caf50;
-}
-
-.case-study h3 {
-    color: #2e7d32;
-    margin-bottom: 1rem;
-}
-
-.case-study ul {
-    margin: 1rem 0;
-}
-
-.case-study li {
-    margin-bottom: 0.5rem;
-}
-
-.case-study strong {
-    color: #1b5e20;
-}
-
-/* Installation Process */
-.installation-process {
-    background: #f3e5f5;
-    padding: 2rem;
-    border-radius: 10px;
-    margin: 2rem 0;
-}
-
-.installation-process h2 {
-    color: #6a1b9a;
-    margin-bottom: 1rem;
-}
-
-.installation-process ol {
-    padding-left: 2rem;
-}
-
-.installation-process li {
-    margin-bottom: 0.75rem;
-    line-height: 1.6;
-}
-
-/* Compliance Section */
-.compliance-section {
-    background: #e3f2fd;
-    padding: 2rem;
-    border-radius: 10px;
-    margin: 2rem 0;
-    border-left: 4px solid #1976d2;
-}
-
-.compliance-section h2 {
-    color: #0d47a1;
-    margin-bottom: 1rem;
-}
-
-.compliance-section ul {
-    columns: 2;
-    column-gap: 2rem;
-}
-
-.compliance-section li {
-    margin-bottom: 0.5rem;
-    break-inside: avoid;
-}
-
-/* CTA Box */
-.cta-box {
-    background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
-    color: white;
-    padding: 3rem;
-    border-radius: 10px;
-    margin: 3rem 0;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.cta-box::before {
-    content: "❄";
-    position: absolute;
-    top: -20px;
-    right: -20px;
-    font-size: 150px;
-    opacity: 0.1;
-}
-
-.cta-box h3 {
-    color: white;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.cta-box ul {
-    list-style: none;
-    padding: 0;
-    margin: 2rem 0;
-    text-align: left;
-    display: inline-block;
-}
-
-.cta-box li {
-    padding: 0.5rem 0;
-    padding-left: 2rem;
-    position: relative;
-}
-
-.cta-box li:before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    font-size: 1.2rem;
-}
-
-.cta-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-}
-
-.cta-buttons .btn {
-    padding: 1rem 2rem;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.cta-buttons .btn-primary {
-    background: white;
-    color: #1565c0;
-}
-
-.cta-buttons .btn-primary:hover {
-    background: #f5f5f5;
-    transform: translateY(-2px);
-}
-
-.cta-buttons .btn-secondary {
-    background: transparent;
-    color: white;
-    border: 2px solid white;
-}
-
-.cta-buttons .btn-secondary:hover {
-    background: white;
-    color: #1565c0;
-}
-
-/* FAQ Section */
-.faq-section {
-    margin: 3rem 0;
-}
-
-.faq-item {
-    background: white;
-    padding: 2rem;
-    margin-bottom: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border-left: 4px solid #2196f3;
-}
-
-.faq-item h3 {
-    color: #1565c0;
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-}
-
-.faq-item p {
-    color: #555;
-    line-height: 1.6;
-    margin: 0;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .service-intro {
-        padding: 2rem 1.5rem;
-    }
-    
-    .storage-types-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
-    .savings-calculator {
-        padding: 2rem 1.5rem;
-    }
-    
-    .savings-table {
-        font-size: 0.9rem;
-    }
-    
-    .savings-table th,
-    .savings-table td {
-        padding: 0.75rem 0.5rem;
-    }
-    
-    .compliance-section ul {
-        columns: 1;
-    }
-    
-    .cta-box {
-        padding: 2rem 1.5rem;
-    }
-    
-    .cta-buttons {
-        flex-direction: column;
-    }
-    
-    .cta-buttons .btn {
-        width: 100%;
-        text-align: center;
-    }
-}
-</style>
-
-<div class="service-intro">
+<div class="glass-panel">
   <p class="lead-text">Cold storage facilities face unique insulation challenges, especially in Arizona's extreme heat. Our specialized spray foam solutions create an impenetrable thermal barrier that maintains consistent temperatures while dramatically reducing energy costs.</p>
 </div>
 
@@ -513,7 +54,7 @@ relatedServices:
 
 <div class="storage-types-grid">
   <div class="storage-type">
-    <h3>Freezer Storage (-10°F to -40°F)</h3>
+    <h3 data-text="Freezer Storage (-10°F to -40°F)">Freezer Storage (-10°F to -40°F)</h3>
     <ul>
       <li>Blast freezers</li>
       <li>Long-term frozen storage</li>
@@ -523,7 +64,7 @@ relatedServices:
   </div>
   
   <div class="storage-type">
-    <h3>Cooler Storage (32°F to 40°F)</h3>
+    <h3 data-text="Cooler Storage (32°F to 40°F)">Cooler Storage (32°F to 40°F)</h3>
     <ul>
       <li>Produce storage</li>
       <li>Dairy coolers</li>
@@ -533,7 +74,7 @@ relatedServices:
   </div>
   
   <div class="storage-type">
-    <h3>Controlled Atmosphere</h3>
+    <h3 data-text="Controlled Atmosphere">Controlled Atmosphere</h3>
     <ul>
       <li>Ripening rooms</li>
       <li>Modified atmosphere storage</li>
@@ -543,7 +84,7 @@ relatedServices:
   </div>
   
   <div class="storage-type">
-    <h3>Distribution Centers</h3>
+    <h3 data-text="Distribution Centers">Distribution Centers</h3>
     <ul>
       <li>Multi-temperature zones</li>
       <li>Loading dock transitions</li>
@@ -556,7 +97,7 @@ relatedServices:
 ## The Critical Importance of Proper Cold Storage Insulation
 
 <div class="extreme-challenge">
-  <h3>Arizona's Extreme Challenge</h3>
+  <h3 data-text="Arizona's Extreme Challenge">Arizona's Extreme Challenge</h3>
   <p>Cold storage facilities in Arizona face the most extreme temperature differentials in the nation:</p>
   <ul>
     <li><strong>Temperature Differential</strong>: Up to 155°F difference between freezer interior (-40°F) and Arizona summer exterior (115°F)</li>
@@ -567,7 +108,7 @@ relatedServices:
 </div>
 
 <div class="consequences-section">
-  <h3>Consequences of Poor Insulation</h3>
+  <h3 data-text="Consequences of Poor Insulation">Consequences of Poor Insulation</h3>
   <ul>
     <li><strong>Ice Buildup</strong>: Moisture infiltration creates dangerous ice formations</li>
     <li><strong>Product Loss</strong>: Temperature fluctuations compromise product quality</li>
@@ -580,7 +121,7 @@ relatedServices:
 ## Our Cold Storage Insulation Solutions
 
 <div class="gold-standard">
-  <h3>Closed-Cell Spray Foam - The Gold Standard</h3>
+  <h3 data-text="Closed-Cell Spray Foam - The Gold Standard">Closed-Cell Spray Foam - The Gold Standard</h3>
   <p>For cold storage applications, closed-cell spray foam is the only choice:</p>
   <ul>
     <li><strong>R-Value</strong>: 6.5 per inch - highest available</li>
@@ -595,22 +136,22 @@ relatedServices:
 
 <div class="system-components">
   <div class="component">
-    <h4>Wall Systems</h4>
+    <h4 data-text="Wall Systems">Wall Systems</h4>
     <p>4-6 inches of closed-cell foam for optimal thermal resistance and vapor protection</p>
   </div>
   
   <div class="component">
-    <h4>Ceiling/Roof Systems</h4>
+    <h4 data-text="Ceiling/Roof Systems">Ceiling/Roof Systems</h4>
     <p>6-8 inches to combat Arizona's intense roof heat and prevent condensation</p>
   </div>
   
   <div class="component">
-    <h4>Floor Systems</h4>
+    <h4 data-text="Floor Systems">Floor Systems</h4>
     <p>Specialized under-slab insulation to prevent frost heaving and heat transfer</p>
   </div>
   
   <div class="component">
-    <h4>Transition Areas</h4>
+    <h4 data-text="Transition Areas">Transition Areas</h4>
     <p>Critical attention to dock doors, pass-throughs, and temperature zone transitions</p>
   </div>
 </div>
@@ -618,7 +159,7 @@ relatedServices:
 ## Energy Savings & ROI Analysis
 
 <div class="savings-calculator">
-  <h3>Typical Energy Savings for Cold Storage</h3>
+  <h3 data-text="Typical Energy Savings for Cold Storage">Typical Energy Savings for Cold Storage</h3>
   <table class="savings-table">
     <tr>
       <th>Facility Type</th>
@@ -648,7 +189,7 @@ relatedServices:
 </div>
 
 <div class="additional-benefits">
-  <h3>Additional Benefits Beyond Energy Savings</h3>
+  <h3 data-text="Additional Benefits Beyond Energy Savings">Additional Benefits Beyond Energy Savings</h3>
   <ul>
     <li><strong>Reduced Maintenance</strong>: Less ice removal and equipment servicing</li>
     <li><strong>Extended Product Shelf Life</strong>: Consistent temperatures preserve quality</li>
@@ -660,8 +201,8 @@ relatedServices:
 
 ## Case Studies
 
-<div class="case-study">
-  <h3>Phoenix Food Distribution Center</h3>
+<div class="glass-panel success-box">
+  <h3 data-text="Phoenix Food Distribution Center">Phoenix Food Distribution Center</h3>
   <ul>
     <li><strong>Size</strong>: 75,000 sq ft multi-temperature facility</li>
     <li><strong>Challenge</strong>: $280,000 annual refrigeration costs</li>
@@ -676,8 +217,8 @@ relatedServices:
   </ul>
 </div>
 
-<div class="case-study">
-  <h3>Tucson Pharmaceutical Cold Storage</h3>
+<div class="glass-panel success-box">
+  <h3 data-text="Tucson Pharmaceutical Cold Storage">Tucson Pharmaceutical Cold Storage</h3>
   <ul>
     <li><strong>Size</strong>: 15,000 sq ft controlled environment</li>
     <li><strong>Challenge</strong>: Temperature variations affecting compliance</li>
@@ -693,7 +234,7 @@ relatedServices:
 </div>
 
 <div class="installation-process">
-  <h2>Installation Process for Operating Facilities</h2>
+  <h2 data-text="Installation Process for Operating Facilities">Installation Process for Operating Facilities</h2>
   <p>We understand you can't shut down operations. Our process minimizes disruption:</p>
   <ol>
     <li><strong>Phased Installation</strong>: Work in sections to maintain operations</li>
@@ -705,7 +246,7 @@ relatedServices:
 </div>
 
 <div class="compliance-section">
-  <h2>Compliance & Certifications</h2>
+  <h2 data-text="Compliance & Certifications">Compliance & Certifications</h2>
   <p>Our cold storage insulation meets or exceeds:</p>
   <ul>
     <li>USDA requirements for food storage facilities</li>
@@ -719,8 +260,8 @@ relatedServices:
 
 ## Get Your Cold Storage Assessment
 
-<div class="cta-box">
-  <h3>Free Energy Audit & ROI Analysis</h3>
+<div class="cta-section glass-panel">
+  <h3 data-text="Free Energy Audit & ROI Analysis">Free Energy Audit & ROI Analysis</h3>
   <p>Our cold storage specialists will provide:</p>
   <ul>
     <li>Thermal imaging of current insulation</li>
@@ -738,23 +279,23 @@ relatedServices:
 ## Frequently Asked Questions
 
 <div class="faq-section">
-  <div class="faq-item">
-    <h3>Can spray foam be applied to existing cold storage?</h3>
+  <div class="accordion-item glass-panel">
+    <h3 data-text="Can spray foam be applied to existing cold storage?">Can spray foam be applied to existing cold storage?</h3>
     <p>Yes! We specialize in retrofitting existing facilities. Our closed-cell foam adheres to metal panels, concrete, and existing insulation, creating a seamless thermal barrier.</p>
   </div>
   
-  <div class="faq-item">
-    <h3>How does spray foam compare to insulated metal panels?</h3>
+  <div class="accordion-item glass-panel">
+    <h3 data-text="How does spray foam compare to insulated metal panels?">How does spray foam compare to insulated metal panels?</h3>
     <p>Spray foam eliminates thermal bridging at panel joints, provides superior R-value per inch, and creates a monolithic vapor barrier. It typically outperforms panels by 30-40% in real-world conditions.</p>
   </div>
   
-  <div class="faq-item">
-    <h3>Will installation affect our stored products?</h3>
+  <div class="accordion-item glass-panel">
+    <h3 data-text="Will installation affect our stored products?">Will installation affect our stored products?</h3>
     <p>No. We use careful containment procedures and can work in phases to ensure your products remain at proper temperatures throughout the installation process.</p>
   </div>
   
-  <div class="faq-item">
-    <h3>What about fire ratings for cold storage?</h3>
+  <div class="accordion-item glass-panel">
+    <h3 data-text="What about fire ratings for cold storage?">What about fire ratings for cold storage?</h3>
     <p>Our closed-cell foam meets all fire code requirements when installed with appropriate thermal barriers. We ensure full compliance with local building codes and insurance requirements.</p>
   </div>
 </div>

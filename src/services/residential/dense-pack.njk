@@ -69,13 +69,13 @@ relatedServices:
 <section class="py-20 bg-surface-dark">
   <div class="container">
     <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold text-primary font-display">Arizona's Premier Dense Pack Insulation Specialists</h2>
+      <h2 class="text-4xl font-bold text-primary font-display" data-text="Arizona's Premier Dense Pack Insulation Specialists">Arizona's Premier Dense Pack Insulation Specialists</h2>
       <p class="text-xl text-primary-light max-w-3xl mx-auto">Transform your home's energy efficiency without the disruption of full renovation</p>
     </div>
     
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-12">
-        <h3 class="text-2xl font-bold text-primary mb-6">What Makes Dense Pack Different?</h3>
+        <h3 class="text-2xl font-bold text-primary mb-6" data-text="What Makes Dense Pack Different?">What Makes Dense Pack Different?</h3>
         <p class="text-lg text-text-muted max-w-4xl mx-auto">Dense pack insulation is a specialized retrofit technique that fills wall cavities to maximum capacity—3.5 lbs/ft³ compared to standard blown-in at just 1.5 lbs/ft³. This creates a solid thermal barrier that eliminates settling and dramatically improves your home's performance.</p>
       </div>
       
@@ -101,7 +101,7 @@ relatedServices:
         {% for benefit in keyBenefits %}
         <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-6 hover:shadow-glow-sm transition-all duration-300">
           <div class="text-4xl mb-4">{{ benefit.icon }}</div>
-          <h4 class="text-xl font-bold text-primary mb-2">{{ benefit.title }}</h4>
+          <h4 class="text-xl font-bold text-primary mb-2" data-text="{{ benefit.title }}">{{ benefit.title }}</h4>
           <p class="text-text-muted">{{ benefit.description }}</p>
         </div>
         {% endfor %}

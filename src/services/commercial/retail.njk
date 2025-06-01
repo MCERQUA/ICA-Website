@@ -49,7 +49,7 @@ processSteps:
 
 <section class="py-20 bg-surface-dark">
   <div class="container">
-    <h2 class="text-4xl font-bold text-primary font-display text-center mb-6">Transform Your Retail Space with Professional Insulation</h2>
+    <h2 class="text-4xl font-bold text-primary font-display text-center mb-6" data-text="Transform Your Retail Space with Professional Insulation">Transform Your Retail Space with Professional Insulation</h2>
     <p class="text-xl text-primary-light text-center max-w-4xl mx-auto mb-12">In Arizona's competitive retail market, creating a comfortable shopping environment while managing operating costs is crucial. Our specialized retail insulation services help businesses achieve both goals.</p>
     
     <div class="bg-gradient-to-r from-primary/20 to-accent/20 backdrop-blur border border-primary/30 rounded-lg p-8 mb-12">
@@ -81,7 +81,7 @@ processSteps:
 
 <section class="py-20 bg-surface">
   <div class="container">
-    <h2 class="text-4xl font-bold text-primary font-display text-center mb-12">Specialized Retail Applications</h2>
+    <h2 class="text-4xl font-bold text-primary font-display text-center mb-12" data-text="Specialized Retail Applications">Specialized Retail Applications</h2>
     
     <div class="grid lg:grid-cols-3 gap-8">
       {% set applications = [
@@ -116,7 +116,7 @@ processSteps:
       
       {% for app in applications %}
       <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-6 hover:shadow-glow-sm transition-all duration-300">
-        <h3 class="text-xl font-bold text-primary mb-4">{{ app.title }}</h3>
+        <h3 class="text-xl font-bold text-primary mb-4" data-text="{{ app.title }}">{{ app.title }}</h3>
         <ul class="space-y-2">
           {% for item in app.items %}
           <li class="flex items-start gap-2">
@@ -133,7 +133,7 @@ processSteps:
 
 <section class="py-20 bg-surface-dark">
   <div class="container">
-    <h2 class="text-4xl font-bold text-primary font-display text-center mb-12">Industry-Specific Solutions</h2>
+    <h2 class="text-4xl font-bold text-primary font-display text-center mb-12" data-text="Industry-Specific Solutions">Industry-Specific Solutions</h2>
     
     <div class="grid md:grid-cols-2 gap-6">
       {% set industries = [
@@ -157,7 +157,7 @@ processSteps:
       
       {% for industry in industries %}
       <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-6 hover:shadow-glow-sm transition-all duration-300">
-        <h3 class="text-lg font-bold text-primary mb-3">{{ industry.title }}</h3>
+        <h3 class="text-lg font-bold text-primary mb-3" data-text="{{ industry.title }}">{{ industry.title }}</h3>
         <p class="text-text-muted">{{ industry.desc }}</p>
       </div>
       {% endfor %}
@@ -172,7 +172,7 @@ processSteps:
 <section class="py-20 bg-surface">
   <div class="container">
     <div class="bg-gradient-to-r from-primary/10 to-accent/10 backdrop-blur border border-primary/30 rounded-lg p-8 max-w-4xl mx-auto">
-      <h3 class="text-2xl font-bold text-primary mb-6">Success Story: Phoenix Shopping Center</h3>
+      <h3 class="text-2xl font-bold text-primary mb-6" data-text="Success Story: Phoenix Shopping Center">Success Story: Phoenix Shopping Center</h3>
       <p class="text-lg text-primary-light mb-6">We recently completed a 15,000 sq ft retail space insulation project that resulted in:</p>
       <div class="grid md:grid-cols-2 gap-6">
         {% set results = [

@@ -67,7 +67,7 @@ pricingOptions:
 
 <section class="py-20 bg-surface-dark">
   <div class="container">
-    <h2 class="text-4xl font-bold text-primary font-display text-center mb-6">Industrial-Scale Warehouse Insulation Expertise</h2>
+    <h2 class="text-4xl font-bold text-primary font-display text-center mb-6" data-text="Industrial-Scale Warehouse Insulation Expertise">Industrial-Scale Warehouse Insulation Expertise</h2>
     <p class="text-xl text-primary-light text-center max-w-4xl mx-auto mb-12">With over 421,700 square feet of completed warehouse projects, Insulation Contractors of Arizona brings unmatched expertise to large-scale industrial insulation. We understand the unique challenges of Arizona warehouses.</p>
     
     <div class="bg-gradient-to-r from-primary/20 to-accent/20 backdrop-blur border border-primary/30 rounded-lg p-8">
@@ -99,7 +99,7 @@ pricingOptions:
 
 <section class="py-20 bg-surface">
   <div class="container">
-    <h2 class="text-4xl font-bold text-primary font-display text-center mb-12">Specialized Warehouse Applications</h2>
+    <h2 class="text-4xl font-bold text-primary font-display text-center mb-12" data-text="Specialized Warehouse Applications">Specialized Warehouse Applications</h2>
     
     <div class="grid lg:grid-cols-3 gap-8">
       {% set applications = [
@@ -137,7 +137,7 @@ pricingOptions:
       
       {% for app in applications %}
       <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-6 hover:shadow-glow-sm transition-all duration-300">
-        <h3 class="text-xl font-bold text-primary mb-4">{{ app.title }}</h3>
+        <h3 class="text-xl font-bold text-primary mb-4" data-text="{{ app.title }}">{{ app.title }}</h3>
         <ul class="space-y-2">
           {% for item in app.items %}
           <li class="flex items-start gap-2">
@@ -158,11 +158,11 @@ pricingOptions:
 
 <section class="py-20 bg-surface">
   <div class="container">
-    <h2 class="text-4xl font-bold text-primary font-display text-center mb-6">Metal Building Expertise</h2>
+    <h2 class="text-4xl font-bold text-primary font-display text-center mb-6" data-text="Metal Building Expertise">Metal Building Expertise</h2>
     <p class="text-lg text-primary-light text-center max-w-3xl mx-auto mb-12">Metal warehouses present unique insulation challenges that we've mastered over 20+ years:</p>
     
     <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-8 mb-12">
-      <h3 class="text-2xl font-bold text-primary mb-6">Common Metal Building Issues We Solve:</h3>
+      <h3 class="text-2xl font-bold text-primary mb-6" data-text="Common Metal Building Issues We Solve:">Common Metal Building Issues We Solve:</h3>
       <ul class="space-y-4">
         {% set issues = [
           { problem: "Condensation & Rust", solution: "Spray foam eliminates moisture issues" },
@@ -185,7 +185,7 @@ pricingOptions:
     </div>
     
     <div class="bg-gradient-to-r from-primary/10 to-accent/10 backdrop-blur border border-primary/30 rounded-lg p-8">
-      <h3 class="text-2xl font-bold text-primary mb-6">Recent Project: 421,700 Sq Ft Distribution Center</h3>
+      <h3 class="text-2xl font-bold text-primary mb-6" data-text="Recent Project: 421,700 Sq Ft Distribution Center">Recent Project: 421,700 Sq Ft Distribution Center</h3>
       <p class="text-lg text-primary-light mb-6">Our largest completed project showcases our capability:</p>
       <div class="grid md:grid-cols-2 gap-6">
         {% set achievements = [
@@ -209,7 +209,7 @@ pricingOptions:
 
 <section class="py-20 bg-surface-dark">
   <div class="container">
-    <h2 class="text-4xl font-bold text-primary font-display text-center mb-12">Industry-Specific Solutions</h2>
+    <h2 class="text-4xl font-bold text-primary font-display text-center mb-12" data-text="Industry-Specific Solutions">Industry-Specific Solutions</h2>
     
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
       {% set industries = [
@@ -221,7 +221,7 @@ pricingOptions:
       
       {% for industry in industries %}
       <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-6 text-center hover:shadow-glow-sm transition-all duration-300">
-        <h3 class="text-lg font-bold text-primary mb-3">{{ industry.title }}</h3>
+        <h3 class="text-lg font-bold text-primary mb-3" data-text="{{ industry.title }}">{{ industry.title }}</h3>
         <p class="text-text-muted text-sm">{{ industry.desc }}</p>
       </div>
       {% endfor %}
