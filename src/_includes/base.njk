@@ -10,9 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Preload critical fonts -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@700;900&display=swap" as="style">
-    
     <!-- Critical CSS - Inline to prevent render blocking -->
     <style>
         /* Critical CSS for Above-the-Fold Content */
@@ -344,8 +341,16 @@
         }
     </style>
     
-    <!-- Load Google Fonts immediately after critical CSS -->
+    <!-- Load Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CRITICAL FIX: Load CSS files directly instead of preload -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/performance.css">
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="stylesheet" href="/css/layout.css">
     
     <!-- Preload critical resources -->
     <link rel="preload" href="/images-optimized/Insulation_Contractors_of_arizona_logo-200w.webp" as="image">
@@ -523,31 +528,6 @@
             </div>
         </div>
     </footer>
-    
-    <!-- Load non-critical CSS asynchronously -->
-    <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/components.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/animations.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/performance.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/forms.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/layout.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    
-    <!-- Fallback for browsers without JavaScript -->
-    <noscript>
-        <link rel="stylesheet" href="/css/style.css">
-        <link rel="stylesheet" href="/css/components.css">
-        <link rel="stylesheet" href="/css/animations.css">
-        <link rel="stylesheet" href="/css/performance.css">
-        <link rel="stylesheet" href="/css/forms.css">
-        <link rel="stylesheet" href="/css/layout.css">
-        <style>
-            body { opacity: 1 !important; animation: none !important; }
-            .content-section, .testimonials, .service-areas, .blog-preview, .additional-services, .site-footer { 
-                opacity: 1 !important; 
-                animation: none !important; 
-            }
-        </style>
-    </noscript>
     
     <!-- IMPROVED FOUC prevention script with multiple fallbacks -->
     <script>
