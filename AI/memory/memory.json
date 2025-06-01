@@ -219,6 +219,21 @@
     "deployment_method": "GitHub auto-deploy to Netlify with custom domain connection",
     "status": "Live on original domain"
   },
+  "website_design_guidelines": {
+    "page_hero_standard": {
+      "important": "ALL PAGES must use the same hero component as the home page",
+      "implementation": "Use {% include 'sections/page-hero.njk' %} for all service and content pages",
+      "hero_features": [
+        "Same background image as home page (Arizona sunset)",
+        "No dark overlay - shows full image",
+        "No spacing at top - hero starts immediately after header",
+        "Title and optional subtitle only",
+        "Consistent styling across all pages"
+      ],
+      "component_location": "src/_includes/sections/page-hero.njk",
+      "note": "Unless specifically instructed otherwise, always use the standard page-hero component"
+    }
+  },
   "ai_assistant_context": {
     "role": "Echo-AZ - SEO and Brand Strategist",
     "primary_focus": "Website optimization and content strategy",
@@ -270,6 +285,32 @@
           "Custom timeline with animated markers",
           "Interactive form inputs with focus states"
         ]
+      },
+      "2025-06-01-industrial": {
+        "task": "Industrial services page modernization with standard hero",
+        "status": "completed",
+        "changes": [
+          "Created page-hero.njk component for consistent hero styling across all pages",
+          "Updated industrial/index.njk to use standard page-hero component",
+          "Created industrial.css with modern high-tech styling",
+          "Added conditional CSS loading in base.njk for industrial pages",
+          "Implemented glassmorphism effects and animations",
+          "Enhanced mobile responsiveness with proper breakpoints",
+          "Added schema.org structured data for industrial services",
+          "Created modern service cards with hover effects and animations"
+        ],
+        "new_components": [
+          "page-hero.njk - Reusable hero component matching home page style"
+        ],
+        "styling_features": [
+          "Consistent hero styling with home page",
+          "Glassmorphism service cards with gradient borders",
+          "Animated statistics counters",
+          "Industry badges with hover effects",
+          "Responsive grid layouts",
+          "Modern CTA section with rotating gradient border"
+        ],
+        "important_guideline": "Established standard that ALL pages should use the same hero style as home page unless specifically instructed otherwise"
       }
     }
   }
