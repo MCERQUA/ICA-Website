@@ -1,0 +1,659 @@
+/* Industrial Services Page Styles - Modern High-Tech Design */
+
+/* Industrial Hero Section */
+.industrial-hero {
+    min-height: 60vh;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 80px;
+}
+
+.industrial-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(255, 107, 53, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+        linear-gradient(180deg, transparent 0%, rgba(0, 255, 255, 0.05) 100%);
+    z-index: 1;
+}
+
+.industrial-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+        repeating-linear-gradient(90deg, 
+            transparent 0, 
+            transparent 100px, 
+            rgba(0, 255, 255, 0.03) 100px, 
+            rgba(0, 255, 255, 0.03) 101px
+        ),
+        repeating-linear-gradient(0deg, 
+            transparent 0, 
+            transparent 100px, 
+            rgba(0, 255, 255, 0.03) 100px, 
+            rgba(0, 255, 255, 0.03) 101px
+        );
+    z-index: 1;
+    animation: grid-slide 20s linear infinite;
+}
+
+@keyframes grid-slide {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(100px, 100px); }
+}
+
+.industrial-hero .container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.industrial-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    background: linear-gradient(135deg, #ff6b35 0%, #ff8855 25%, #00cccc 75%, #00ffff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: glow-pulse 3s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+    0%, 100% { filter: brightness(1) drop-shadow(0 0 20px rgba(0, 255, 255, 0.5)); }
+    50% { filter: brightness(1.2) drop-shadow(0 0 30px rgba(0, 255, 255, 0.8)); }
+}
+
+.hero-subtitle {
+    font-size: clamp(1.2rem, 2.5vw, 1.75rem);
+    color: rgba(224, 224, 224, 0.9);
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* Industrial Overview Section */
+.industrial-overview {
+    padding: var(--space-2xl, 6rem) 0;
+    background: #0a0a0a;
+    position: relative;
+}
+
+.intro-section {
+    max-width: 900px;
+    margin: 0 auto 4rem;
+    padding: 2rem;
+    background: rgba(20, 20, 20, 0.5);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.intro-section::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(45deg, #ff6b35, #00ffff, #ff6b35);
+    border-radius: 20px;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+    animation: rotate-gradient 4s linear infinite;
+}
+
+.intro-section:hover::before {
+    opacity: 0.3;
+}
+
+@keyframes rotate-gradient {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.intro-section p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: rgba(224, 224, 224, 0.9);
+    margin: 0;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.service-card {
+    background: rgba(20, 20, 20, 0.6);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ff6b35 0%, #00ffff 100%);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover::before {
+    transform: translateX(0);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 255, 255, 0.4);
+    box-shadow: 
+        0 10px 30px rgba(0, 255, 255, 0.2),
+        0 20px 60px rgba(255, 107, 53, 0.1);
+}
+
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+}
+
+.service-card:nth-child(2) .service-icon {
+    animation-delay: 1s;
+}
+
+.service-card:nth-child(3) .service-icon {
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.service-card h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: #00ffff;
+    font-weight: 700;
+}
+
+.service-card h2 a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.service-card h2 a:hover {
+    color: #ff6b35;
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.service-features li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: rgba(224, 224, 224, 0.8);
+}
+
+.service-features li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #ff6b35;
+    font-weight: bold;
+}
+
+.service-link {
+    display: inline-flex;
+    align-items: center;
+    color: #00ffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.service-link:hover {
+    color: #ff6b35;
+    transform: translateX(5px);
+}
+
+/* Why Industrial Section */
+.why-industrial {
+    margin: 4rem 0;
+    padding: 3rem;
+    background: linear-gradient(135deg, rgba(20, 20, 20, 0.8) 0%, rgba(10, 10, 10, 0.8) 100%);
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.why-industrial::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+        radial-gradient(circle at 0% 0%, rgba(255, 107, 53, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 100% 100%, rgba(0, 255, 255, 0.1) 0%, transparent 50%);
+    z-index: -1;
+}
+
+.why-industrial h2 {
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, #ff6b35 0%, #00ffff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.benefit {
+    background: rgba(30, 30, 30, 0.6);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.benefit::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.benefit:hover::after {
+    opacity: 1;
+}
+
+.benefit:hover {
+    transform: translateY(-5px) scale(1.02);
+    border-color: rgba(0, 255, 255, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+}
+
+.benefit h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #00ffff;
+}
+
+.benefit p {
+    color: rgba(224, 224, 224, 0.8);
+    line-height: 1.6;
+}
+
+/* Industrial Expertise Section */
+.industrial-expertise {
+    margin: 4rem 0;
+    background: rgba(20, 20, 20, 0.4);
+    border-radius: 20px;
+    padding: 3rem;
+    border: 1px solid rgba(255, 107, 53, 0.2);
+}
+
+.industrial-expertise h2 {
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 3rem;
+    color: #ff6b35;
+}
+
+.expertise-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.expertise-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.expertise-text li {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+    position: relative;
+    line-height: 1.8;
+}
+
+.expertise-text li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #00ffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.expertise-text strong {
+    color: #ff6b35;
+}
+
+.expertise-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.stat {
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.1) 0%, rgba(255, 107, 53, 0.1) 100%);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 2rem 1rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+    transform: translateX(-100%);
+    transition: transform 0.8s ease;
+}
+
+.stat:hover::before {
+    transform: translateX(100%);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #ff6b35 0%, #00ffff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: rgba(224, 224, 224, 0.8);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Industries Served */
+.industries-served {
+    margin: 4rem 0;
+    text-align: center;
+}
+
+.industries-served h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 3rem;
+    color: #00ffff;
+}
+
+.industry-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.industry-item {
+    background: rgba(30, 30, 30, 0.8);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    color: rgba(224, 224, 224, 0.9);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.industry-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #ff6b35 0%, #00ffff 100%);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+}
+
+.industry-item:hover {
+    color: #0a0a0a;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0, 255, 255, 0.3);
+}
+
+.industry-item:hover::before {
+    opacity: 1;
+}
+
+/* CTA Section */
+.cta-section {
+    margin-top: 4rem;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(0, 255, 255, 0.1) 100%);
+    border-radius: 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(45deg, #ff6b35, #00ffff, #ff6b35);
+    border-radius: 30px;
+    opacity: 0.3;
+    z-index: -1;
+    animation: rotate-gradient 8s linear infinite;
+}
+
+.cta-section h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #ff6b35 0%, #00ffff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cta-section p {
+    font-size: 1.25rem;
+    color: rgba(224, 224, 224, 0.9);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 1.25rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.125rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-button.primary {
+    background: linear-gradient(135deg, #ff6b35 0%, #ff8855 100%);
+    color: white;
+    box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
+}
+
+.cta-button.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 30px rgba(255, 107, 53, 0.5);
+}
+
+.cta-button.secondary {
+    background: transparent;
+    color: #00ffff;
+    border: 2px solid #00ffff;
+}
+
+.cta-button.secondary:hover {
+    background: rgba(0, 255, 255, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 30px rgba(0, 255, 255, 0.3);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .industrial-hero {
+        min-height: 50vh;
+    }
+    
+    .industrial-hero h1 {
+        font-size: clamp(2rem, 8vw, 3rem);
+        letter-spacing: 1px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .service-card {
+        padding: 2rem;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .expertise-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .expertise-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .industry-list {
+        gap: 0.75rem;
+    }
+    
+    .industry-item {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-button {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .industrial-overview {
+        padding: var(--space-xl, 4rem) 0;
+    }
+    
+    .intro-section {
+        padding: 1.5rem;
+    }
+    
+    .why-industrial,
+    .industrial-expertise {
+        padding: 2rem 1.5rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+}
+
+/* Animations for scroll reveal */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.service-card,
+.benefit,
+.stat,
+.industry-item {
+    animation: fadeInUp 0.8s ease-out;
+    animation-fill-mode: both;
+}
+
+.service-card:nth-child(1) { animation-delay: 0.1s; }
+.service-card:nth-child(2) { animation-delay: 0.2s; }
+.service-card:nth-child(3) { animation-delay: 0.3s; }
+
+.benefit:nth-child(1) { animation-delay: 0.1s; }
+.benefit:nth-child(2) { animation-delay: 0.15s; }
+.benefit:nth-child(3) { animation-delay: 0.2s; }
+.benefit:nth-child(4) { animation-delay: 0.25s; }
+.benefit:nth-child(5) { animation-delay: 0.3s; }
+.benefit:nth-child(6) { animation-delay: 0.35s; }
