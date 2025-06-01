@@ -38,7 +38,6 @@ src/css/
 --accent-tertiary: #00a8cc      /* Darker accent */
 
 --success: #00ff88             /* Green for success */
---warning: #ff6b35             /* Orange for warnings */
 --danger: #ff3333              /* Red for errors */
 ```
 
