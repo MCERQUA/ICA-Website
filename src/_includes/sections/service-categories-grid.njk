@@ -1,0 +1,203 @@
+<section class="service-categories animated-bg">
+    <div class="container">
+        <h2 data-text="Our Insulation Services">Our Insulation Services</h2>
+        <p class="section-intro">Comprehensive solutions for every property type in Arizona</p>
+        
+        <div class="categories-grid">
+            <!-- Residential Services -->
+            <div class="category-card glass-panel" data-category="residential">
+                <div class="category-icon">
+                    <span class="icon-house">🏠</span>
+                </div>
+                <h3 data-text="Residential Services">Residential Services</h3>
+                <p>Transform your home's comfort and efficiency with our comprehensive residential insulation solutions.</p>
+                <ul class="service-list">
+                    <li><a href="/services/residential/spray-foam/">Spray Foam Insulation</a></li>
+                    <li><a href="/services/residential/attic/">Attic Insulation</a></li>
+                    <li><a href="/services/residential/blown-in/">Blown-In Insulation</a></li>
+                    <li><a href="/services/residential/dense-pack/">Dense Pack Insulation</a></li>
+                    <li><a href="/services/residential/wall/">Wall Insulation</a></li>
+                    <li><a href="/services/residential/crawl-space/">Crawl Space Insulation</a></li>
+                    <li><a href="/services/residential/removal/">Insulation Removal</a></li>
+                </ul>
+                <a href="/services/residential/" class="category-link btn btn-secondary">
+                    View All Residential →
+                </a>
+            </div>
+
+            <!-- Commercial Services -->
+            <div class="category-card glass-panel" data-category="commercial">
+                <div class="category-icon">
+                    <span class="icon-building">🏢</span>
+                </div>
+                <h3 data-text="Commercial Services">Commercial Services</h3>
+                <p>Maximize energy efficiency and occupant comfort in your commercial properties.</p>
+                <ul class="service-list">
+                    <li><a href="/services/commercial/office/">Office Buildings</a></li>
+                    <li><a href="/services/commercial/retail/">Retail Spaces</a></li>
+                    <li><a href="/services/commercial/warehouse/">Warehouses</a></li>
+                    <li><a href="/services/commercial/new-construction/">New Construction</a></li>
+                </ul>
+                <a href="/services/commercial/" class="category-link btn btn-secondary">
+                    View All Commercial →
+                </a>
+            </div>
+
+            <!-- Industrial Services -->
+            <div class="category-card glass-panel" data-category="industrial">
+                <div class="category-icon">
+                    <span class="icon-factory">🏭</span>
+                </div>
+                <h3 data-text="Industrial Services">Industrial Services</h3>
+                <p>Specialized insulation solutions for manufacturing and industrial facilities.</p>
+                <ul class="service-list">
+                    <li><a href="/services/industrial/manufacturing/">Manufacturing Facilities</a></li>
+                    <li><a href="/services/industrial/cold-storage/">Cold Storage</a></li>
+                    <li><a href="/services/industrial/equipment/">Equipment Insulation</a></li>
+                </ul>
+                <a href="/services/industrial/" class="category-link btn btn-secondary">
+                    View All Industrial →
+                </a>
+            </div>
+
+            <!-- Agricultural Services -->
+            <div class="category-card glass-panel" data-category="agricultural">
+                <div class="category-icon">
+                    <span class="icon-farm">🌾</span>
+                </div>
+                <h3 data-text="Agricultural Services">Agricultural Services</h3>
+                <p>Protect your agricultural investments with specialized insulation solutions.</p>
+                <ul class="service-list">
+                    <li><a href="/services/agricultural/tank/">Tank Insulation</a></li>
+                    <li><a href="/services/agricultural/barn/">Barn Insulation</a></li>
+                    <li><a href="/services/agricultural/storage/">Storage Facilities</a></li>
+                </ul>
+                <a href="/services/agricultural/" class="category-link btn btn-secondary">
+                    View All Agricultural →
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.service-categories {
+    padding: var(--space-xl) 0;
+    position: relative;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.category-card {
+    padding: var(--space-lg);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(0, 255, 255, 0.1) 0%, 
+        rgba(0, 212, 255, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.category-card:hover::before {
+    opacity: 1;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+}
+
+.category-icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-sm);
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+}
+
+.category-card:nth-child(2) .category-icon {
+    animation-delay: 0.5s;
+}
+
+.category-card:nth-child(3) .category-icon {
+    animation-delay: 1s;
+}
+
+.category-card:nth-child(4) .category-icon {
+    animation-delay: 1.5s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.service-list {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-md) 0;
+}
+
+.service-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+.service-list li:last-child {
+    border-bottom: none;
+}
+
+.service-list a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.service-list a::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.service-list a:hover {
+    color: var(--accent-primary);
+    padding-left: 1.5rem;
+}
+
+.service-list a:hover::before {
+    opacity: 1;
+}
+
+.category-link {
+    margin-top: var(--space-md);
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
