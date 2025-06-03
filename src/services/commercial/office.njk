@@ -1,383 +1,53 @@
 ---
-layout: base.njk
-title: "Office Building Insulation Services Phoenix"
-subtitle: "Energy-Efficient Insulation Solutions for Phoenix Office Buildings"
-meta_description: "Commercial office building insulation in Phoenix & Arizona. Reduce energy costs, improve comfort, meet code requirements. Expert installation. Call 623-241-1939"
-heroStats:
-  - value: "30-40%"
-    label: "Energy Savings"
-  - value: "3-4 Years"
-    label: "Typical ROI"
-  - value: "LEED"
-    label: "Points Available"
-benefits:
-  - title: "Energy Cost Reduction"
-    description: "Cut HVAC costs by 30-40% with proper insulation"
-    icon: "💰"
-  - title: "Tenant Comfort"
-    description: "Maintain consistent temperatures across all floors and zones"
-    icon: "🌡️"
-  - title: "Sound Control"
-    description: "Reduce noise transfer between offices and floors"
-    icon: "🔇"
-  - title: "LEED Certification"
-    description: "Meet green building standards and sustainability goals"
-    icon: "🏅"
-  - title: "ROI Performance"
-    description: "Typical payback period of 2-4 years through energy savings"
-    icon: "📈"
-  - title: "Code Compliance"
-    description: "Meet or exceed all commercial building codes"
-    icon: "✅"
-processSteps:
-  - title: "Energy Audit"
-    description: "Comprehensive assessment of current insulation and energy usage"
-  - title: "Custom Solutions"
-    description: "Tailored recommendations based on building design and usage"
-  - title: "Minimal Disruption"
-    description: "Flexible scheduling to avoid business interruption"
-  - title: "Professional Installation"
-    description: "Commercial-grade materials and expert application"
-  - title: "Performance Verification"
-    description: "Post-installation testing and energy monitoring"
-pricingOptions:
-  - type: "Retrofit Projects"
-    price: "Custom Quote"
-    features:
-      - "Existing building upgrades"
-      - "Minimal business disruption"
-      - "Zone-by-zone installation"
-      - "Energy modeling included"
-  - type: "New Construction"
-    price: "Competitive Pricing"
-    features:
-      - "Complete building envelope"
-      - "Code compliance guaranteed"
-      - "Project timeline coordination"
-      - "Warranty programs available"
-    highlighted: true
-faqs:
-  - question: "Can you work around our business hours?"
-    answer: "Absolutely. We specialize in after-hours and weekend installations to minimize disruption. Our crews are experienced in working in occupied buildings with strict scheduling requirements."
-  - question: "How much can we really save?"
-    answer: "Phoenix office buildings typically see 30-40% reduction in HVAC costs. With demand charges and time-of-use rates, savings can exceed $3 per square foot annually."
-  - question: "Do you handle permit requirements?"
-    answer: "Yes, we manage all permit applications and inspections for commercial projects. Our team is familiar with local building departments and code requirements."
-  - question: "What about LEED certification points?"
-    answer: "Proper insulation can contribute to multiple LEED categories: Energy & Atmosphere (up to 20 points), Indoor Environmental Quality (up to 5 points), and Innovation in Design (up to 2 points)."
-  - question: "How long do commercial installations take?"
-    answer: "Project timelines vary by building size and scope. A typical 50,000 sq ft office building takes 2-3 weeks with our after-hours approach to minimize business disruption."
-  - question: "Do you work with property management companies?"
-    answer: "Yes, we regularly partner with property management firms and understand their specific requirements for tenant coordination, scheduling, and documentation."
-relatedServices:
-  - title: "Warehouse Insulation"
-    url: "/services/commercial/warehouse/"
-    description: "Large-scale warehouse solutions"
-  - title: "Retail Space Insulation"
-    url: "/services/commercial/retail/"
-    description: "Retail and shopping center insulation"
-  - title: "Spray Foam Solutions"
-    url: "/services/residential/spray-foam/"
-    description: "Premium spray foam applications"
+layout: layouts/base.njk
+title: Office Building Insulation Services Phoenix
+heroTitle: Office Building Insulation
+heroSubtitle: Energy-Efficient Solutions for Phoenix Commercial Buildings
+description: Commercial office building insulation in Phoenix & Arizona. Reduce energy costs, improve comfort, meet code requirements. Expert installation. Call 623-241-1939
+keywords: office building insulation Phoenix, commercial insulation contractors, office energy efficiency, HVAC cost reduction, tenant comfort solutions
+pageClass: commercial-page
+ctaPrimary: Get Free Assessment
+ctaPrimaryLink: /contact/
+additionalCss:
+  - /css/commercial.css
 ---
 
-{% set title = "Office Building Insulation Services" %}
-{% set subtitle = "Energy-Efficient Solutions for Phoenix Commercial Buildings" %}
-{% include "sections/service-hero.njk" %}
+<!-- Use standard hero component -->
+{% include "sections/hero.njk" %}
 
-<section class="py-20 bg-surface-dark">
+<!-- Office Building Overview -->
+<section class="service-intro-section content-section">
   <div class="container">
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold text-primary font-display" data-text="Arizona's Commercial Insulation Specialists">Arizona's Commercial Insulation Specialists</h2>
-      <p class="text-xl text-primary-light max-w-3xl mx-auto">Maximize energy efficiency, tenant comfort, and ROI for Phoenix office buildings</p>
-    </div>
-    
-    <div class="grid md:grid-cols-2 gap-8">
-      <div>
-        <h3 class="text-2xl font-bold text-primary mb-4" data-text="Office Building Challenges in Arizona">Office Building Challenges in Arizona</h3>
-        <p class="text-lg text-text-muted mb-6">Phoenix office buildings face unique challenges with extreme heat, high cooling costs, and the need to maintain comfortable working environments year-round. Our commercial insulation solutions address these challenges while maximizing your return on investment.</p>
-        
-        <div class="space-y-4">
-          {% set challenges = [
-            { icon: "🏢", title: "Multi-Story Heat Gain", desc: "Upper floors can be 10-15°F warmer than lower levels due to roof heat exposure" },
-            { icon: "💼", title: "Tenant Comfort Zones", desc: "Different tenants have varying temperature preferences and usage patterns" },
-            { icon: "⚡", title: "Peak Demand Charges", desc: "Commercial rates include expensive demand charges during peak cooling periods" }
-          ] %}
-          
-          {% for challenge in challenges %}
-          <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-4 hover:shadow-glow-sm transition-all duration-300">
-            <div class="flex items-start gap-4">
-              <span class="text-3xl">{{ challenge.icon }}</span>
-              <div>
-                <h4 class="text-lg font-bold text-primary mb-1" data-text="{{ challenge.title }}">{{ challenge.title }}</h4>
-                <p class="text-text-muted text-sm">{{ challenge.desc }}</p>
-              </div>
-            </div>
-          </div>
-          {% endfor %}
+    <div class="service-intro glass-panel">
+      <h2 class="glow-text" data-text="Office Building Insulation Specialists">Office Building Insulation Specialists</h2>
+      <p class="lead-text">Transform your office building's energy efficiency with professional insulation. We specialize in minimizing disruption while maximizing ROI for Phoenix commercial properties.</p>
+      <div class="intro-features">
+        <div class="feature-item">
+          <i class="icon">💰</i>
+          <span>30-40% Energy Savings</span>
         </div>
-      </div>
-      
-      <div>
-        <h3 class="text-2xl font-bold text-primary mb-6" data-text="Real ROI Results">Real ROI Results</h3>
-        <div class="grid grid-cols-2 gap-4">
-          {% set metrics = [
-            { value: "$2.50", label: "Per Sq Ft Annual Savings" },
-            { value: "35%", label: "Average Energy Reduction" },
-            { value: "3.2yr", label: "Typical Payback Period" },
-            { value: "15%", label: "Property Value Increase" }
-          ] %}
-          
-          {% for metric in metrics %}
-          <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-6 text-center hover:shadow-glow-sm transition-all duration-300">
-            <p class="text-3xl font-bold text-accent mb-2">{{ metric.value }}</p>
-            <p class="text-sm text-primary-light uppercase tracking-wider">{{ metric.label }}</p>
-          </div>
-          {% endfor %}
+        <div class="feature-item">
+          <i class="icon">🏢</i>
+          <span>After-Hours Install</span>
+        </div>
+        <div class="feature-item">
+          <i class="icon">🏅</i>
+          <span>LEED Certified</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="py-20 bg-surface">
-  <div class="container">
-    <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-8 max-w-5xl mx-auto">
-      <h2 class="text-3xl font-bold text-primary text-center mb-8" data-text="📍 Case Study: Downtown Phoenix Office Complex">📍 Case Study: Downtown Phoenix Office Complex</h2>
-      <div class="grid md:grid-cols-2 gap-8">
-        <div>
-          <div class="grid grid-cols-2 gap-4">
-            {% set stats = [
-              { label: "Building Size", value: "75,000 sq ft" },
-              { label: "Investment", value: "$165,000" },
-              { label: "Annual Savings", value: "$52,000" },
-              { label: "Payback Period", value: "3.2 years" }
-            ] %}
-            
-            {% for stat in stats %}
-            <div class="bg-surface/50 p-4 rounded-lg text-center">
-              <p class="text-sm text-primary-light uppercase tracking-wider mb-2">{{ stat.label }}</p>
-              <p class="text-2xl font-bold text-accent">{{ stat.value }}</p>
-            </div>
-            {% endfor %}
-          </div>
-        </div>
-        
-        <div>
-          <h3 class="text-xl font-bold text-primary mb-4" data-text="Results Achieved:">Results Achieved:</h3>
-          <ul class="space-y-2">
-            {% set results = [
-              "38% reduction in cooling costs",
-              "Consistent temperatures across all 8 floors",
-              "Significantly improved tenant satisfaction",
-              "LEED points contributing to certification",
-              "Reduced HVAC maintenance requirements"
-            ] %}
-            
-            {% for result in results %}
-            <li class="flex items-start gap-2">
-              <span class="text-accent">✓</span>
-              <span class="text-primary-light">{{ result }}</span>
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- Use existing components -->
+{% include "sections/commercial-showcase.njk" %}
 
-<section class="py-20 bg-surface-dark">
-  <div class="container">
-    <h2 class="text-4xl font-bold text-primary font-display text-center mb-12" data-text="Office Building Types We Service">Office Building Types We Service</h2>
-    
-    <div class="grid lg:grid-cols-3 gap-8">
-      {% set buildingTypes = [
-        {
-          title: "High-Rise Office Towers",
-          icon: "🏬",
-          solutions: [
-            "Roof deck spray foam systems",
-            "Curtain wall insulation",
-            "Mechanical floor treatments",
-            "Elevator shaft thermal breaks"
-          ],
-          benefit: "Dramatic reduction in stack effect and HVAC load balancing between floors."
-        },
-        {
-          title: "Mid-Rise Office Buildings",
-          icon: "🏢",
-          solutions: [
-            "Exterior wall retrofits",
-            "Roof insulation upgrades",
-            "Window system integration",
-            "Parking deck ceiling insulation"
-          ],
-          benefit: "Cost-effective whole-building approach with minimal tenant disruption."
-        },
-        {
-          title: "Office Parks & Campuses",
-          icon: "🏘️",
-          solutions: [
-            "Multi-building coordination",
-            "Central plant optimization",
-            "Covered walkway insulation",
-            "Common area treatments"
-          ],
-          benefit: "Campus-wide energy management and consistent comfort across facilities."
-        }
-      ] %}
-      
-      {% for building in buildingTypes %}
-      <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg overflow-hidden hover:shadow-glow-sm transition-all duration-300">
-        <div class="bg-gradient-to-r from-primary to-accent p-6 text-center">
-          <span class="text-4xl mb-2 block">{{ building.icon }}</span>
-          <h3 class="text-xl font-bold text-white" data-text="{{ building.title }}">{{ building.title }}</h3>
-        </div>
-        <div class="p-6">
-          <h4 class="text-lg font-bold text-primary mb-3" data-text="Specialized Solutions:">Specialized Solutions:</h4>
-          <ul class="space-y-2 mb-4">
-            {% for solution in building.solutions %}
-            <li class="flex items-start gap-2">
-              <span class="text-accent">•</span>
-              <span class="text-text-muted text-sm">{{ solution }}</span>
-            </li>
-            {% endfor %}
-          </ul>
-          <div class="bg-surface/50 p-3 rounded-lg">
-            <p class="text-sm"><strong class="text-accent">Key Benefit:</strong> <span class="text-primary-light">{{ building.benefit }}</span></p>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
+{% include "sections/why-choose-ica-enhanced.njk" %}
 
-<section class="py-20 bg-surface">
-  <div class="container">
-    <h2 class="text-4xl font-bold text-primary font-display text-center mb-12" data-text="Our Commercial Installation Approach">Our Commercial Installation Approach</h2>
-    
-    <div class="grid lg:grid-cols-3 gap-8">
-      {% set approaches = [
-        {
-          icon: "🏗️",
-          title: "Minimal Business Disruption",
-          items: [
-            { label: "After-Hours Installation", desc: "Evening and weekend work to avoid disrupting operations" },
-            { label: "Zone-by-Zone Approach", desc: "Complete sections while others remain operational" },
-            { label: "Clean, Professional Crews", desc: "Uniformed, background-checked technicians" },
-            { label: "Property Management Coordination", desc: "Seamless communication throughout project" }
-          ]
-        },
-        {
-          icon: "📋",
-          title: "Code Compliance & Documentation",
-          items: [
-            { label: "Building Code Compliance", desc: "Meet or exceed all local and state requirements" },
-            { label: "Fire Rating Certifications", desc: "Proper materials for commercial applications" },
-            { label: "LEED Documentation", desc: "Support for green building certifications" },
-            { label: "Warranty Programs", desc: "Commercial-grade warranties on materials and labor" }
-          ]
-        },
-        {
-          icon: "🔧",
-          title: "Commercial-Grade Solutions",
-          items: [
-            { label: "Spray Foam Systems", desc: "High-performance closed-cell foam for maximum efficiency" },
-            { label: "Rigid Board Insulation", desc: "For specific commercial applications" },
-            { label: "Hybrid Systems", desc: "Combining multiple insulation types for optimal performance" },
-            { label: "Air Barrier Systems", desc: "Complete building envelope solutions" }
-          ]
-        }
-      ] %}
-      
-      {% for approach in approaches %}
-      <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-6 hover:shadow-glow-sm transition-all duration-300">
-        <h3 class="text-xl font-bold text-primary mb-6 flex items-center gap-3">
-          <span class="text-3xl">{{ approach.icon }}</span>
-          {{ approach.title }}
-        </h3>
-        <ul class="space-y-3">
-          {% for item in approach.items %}
-          <li class="border-b border-primary/10 pb-3 last:border-0">
-            <strong class="text-accent">{{ item.label }}:</strong>
-            <p class="text-text-muted text-sm mt-1">{{ item.desc }}</p>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
+{% include "sections/commercial-calculator.njk" %}
 
-<section class="py-20 bg-surface-dark">
-  <div class="container">
-    <h2 class="text-4xl font-bold text-primary font-display text-center mb-12" data-text="Sustainability & LEED Benefits">Sustainability & LEED Benefits</h2>
-    
-    <div class="grid md:grid-cols-3 gap-8">
-      {% set sustainability = [
-        {
-          icon: "🌱",
-          title: "Environmental Impact",
-          content: "Proper insulation can reduce a building's carbon footprint by 30-40%, contributing to corporate sustainability goals and environmental responsibility."
-        },
-        {
-          icon: "🏅",
-          title: "LEED Points Available",
-          points: [
-            "Energy & Atmosphere: Up to 20 points",
-            "Indoor Environmental Quality: Up to 5 points",
-            "Innovation in Design: Up to 2 points"
-          ]
-        },
-        {
-          icon: "💚",
-          title: "Tenant Attraction",
-          content: "Energy-efficient buildings attract quality tenants who value sustainability and lower operating costs. Green buildings command 3-7% higher rents on average."
-        }
-      ] %}
-      
-      {% for item in sustainability %}
-      <div class="bg-surface-dark/50 backdrop-blur border border-primary/20 rounded-lg p-6 text-center hover:shadow-glow-sm transition-all duration-300">
-        <div class="text-5xl mb-4">{{ item.icon }}</div>
-        <h3 class="text-xl font-bold text-primary mb-4" data-text="{{ item.title }}">{{ item.title }}</h3>
-        {% if item.content %}
-        <p class="text-text-muted">{{ item.content }}</p>
-        {% endif %}
-        {% if item.points %}
-        <ul class="space-y-2 text-left">
-          {% for point in item.points %}
-          <li class="text-text-muted">• {{ point }}</li>
-          {% endfor %}
-        </ul>
-        {% endif %}
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
+{% include "sections/service-process-timeline.njk" %}
 
-{% set benefits = benefits %}
-{% include "components/benefits-grid.njk" %}
+{% include "sections/credentials-banner.njk" %}
 
-{% set process = processSteps %}
-{% set processTitle = "Our Commercial Installation Process" %}
-{% include "components/sections/process-steps-dark.njk" %}
-
-{% set pricing = pricingOptions %}
-{% set pricingTitle = "Commercial Office Insulation Pricing" %}
-{% include "components/cards/pricing-table-dark.njk" %}
-
-{% include "sections/why-choose-ica.njk" %}
-
-{% include "sections/testimonials.njk" %}
-
-{% set faqs = faqs %}
-{% set faqTitle = "Commercial Office Insulation FAQs" %}
-{% include "components/sections/faq-section-glass.njk" %}
-
-{% include "components/sections/cta-section-dark.njk" %}
-
-{% include "sections/related-services.njk" %}
+{% include "sections/cta.njk" %}
