@@ -1,0 +1,570 @@
+<!-- Commercial Energy Savings Calculator Component -->
+<section class="commercial-calculator-section">
+  <div class="container">
+    <div class="calculator-wrapper glass-panel">
+      <h2 class="calculator-title glow-text" data-text="Commercial Energy Savings Calculator">Commercial Energy Savings Calculator</h2>
+      <p class="calculator-subtitle">Estimate your potential savings with professional insulation</p>
+      
+      <div class="calculator-grid">
+        <!-- Input Section -->
+        <div class="calculator-inputs">
+          <h3>Building Information</h3>
+          
+          <div class="input-group">
+            <label for="building-size">Building Size (sq ft)</label>
+            <input type="number" id="building-size" value="50000" min="1000" max="1000000" step="1000">
+            <span class="input-helper">Total conditioned space</span>
+          </div>
+          
+          <div class="input-group">
+            <label for="building-type">Building Type</label>
+            <select id="building-type">
+              <option value="office">Office Building</option>
+              <option value="warehouse">Warehouse/Distribution</option>
+              <option value="retail">Retail Space</option>
+              <option value="manufacturing">Manufacturing</option>
+              <option value="multifamily">Multi-Family</option>
+              <option value="healthcare">Healthcare</option>
+              <option value="education">Educational</option>
+            </select>
+          </div>
+          
+          <div class="input-group">
+            <label for="current-insulation">Current Insulation</label>
+            <select id="current-insulation">
+              <option value="none">No Insulation</option>
+              <option value="minimal">Minimal (R-11 or less)</option>
+              <option value="standard">Standard (R-13 to R-19)</option>
+              <option value="above-average">Above Average (R-20+)</option>
+            </select>
+          </div>
+          
+          <div class="input-group">
+            <label for="energy-cost">Average Monthly Energy Cost</label>
+            <div class="input-with-prefix">
+              <span class="prefix">$</span>
+              <input type="number" id="energy-cost" value="5000" min="100" max="100000" step="100">
+            </div>
+            <span class="input-helper">Combined electric & gas</span>
+          </div>
+          
+          <div class="input-group">
+            <label for="operating-hours">Operating Hours/Week</label>
+            <input type="number" id="operating-hours" value="60" min="1" max="168" step="1">
+            <span class="input-helper">Business hours only</span>
+          </div>
+        </div>
+        
+        <!-- Results Section -->
+        <div class="calculator-results">
+          <h3>Projected Savings</h3>
+          
+          <div class="result-card primary">
+            <div class="result-label">Monthly Energy Savings</div>
+            <div class="result-value" id="monthly-savings">$1,500</div>
+            <div class="result-percentage" id="savings-percentage">30%</div>
+          </div>
+          
+          <div class="result-card">
+            <div class="result-label">Annual Energy Savings</div>
+            <div class="result-value" id="annual-savings">$18,000</div>
+          </div>
+          
+          <div class="result-card">
+            <div class="result-label">Estimated Project Cost</div>
+            <div class="result-value" id="project-cost">$75,000</div>
+            <div class="result-detail">$1.50 per sq ft average</div>
+          </div>
+          
+          <div class="result-card highlight">
+            <div class="result-label">Return on Investment</div>
+            <div class="result-value" id="roi-period">4.2 years</div>
+            <div class="result-detail">Full payback period</div>
+          </div>
+          
+          <div class="savings-over-time">
+            <h4>Cumulative Savings</h4>
+            <div class="timeline-savings">
+              <div class="timeline-item">
+                <span class="year">5 Years</span>
+                <span class="amount" id="savings-5yr">$90,000</span>
+              </div>
+              <div class="timeline-item">
+                <span class="year">10 Years</span>
+                <span class="amount" id="savings-10yr">$180,000</span>
+              </div>
+              <div class="timeline-item">
+                <span class="year">20 Years</span>
+                <span class="amount" id="savings-20yr">$360,000</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Additional Benefits -->
+      <div class="additional-benefits">
+        <h3>Additional Benefits Not Included in Calculations</h3>
+        <div class="benefits-grid">
+          <div class="benefit-item">
+            <i class="benefit-icon">🏢</i>
+            <span>5-7% Property Value Increase</span>
+          </div>
+          <div class="benefit-item">
+            <i class="benefit-icon">💰</i>
+            <span>Tax Credits & Incentives</span>
+          </div>
+          <div class="benefit-item">
+            <i class="benefit-icon">⚙️</i>
+            <span>Reduced HVAC Maintenance</span>
+          </div>
+          <div class="benefit-item">
+            <i class="benefit-icon">😊</i>
+            <span>Improved Occupant Comfort</span>
+          </div>
+          <div class="benefit-item">
+            <i class="benefit-icon">🔇</i>
+            <span>Enhanced Sound Control</span>
+          </div>
+          <div class="benefit-item">
+            <i class="benefit-icon">🌡️</i>
+            <span>Extended Equipment Life</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="calculator-cta">
+        <p>Ready for a detailed analysis specific to your building?</p>
+        <a href="/contact/" class="cta-button pulse-glow">Get Professional Assessment</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+// Commercial Energy Savings Calculator Logic
+document.addEventListener('DOMContentLoaded', function() {
+  const inputs = {
+    buildingSize: document.getElementById('building-size'),
+    buildingType: document.getElementById('building-type'),
+    currentInsulation: document.getElementById('current-insulation'),
+    energyCost: document.getElementById('energy-cost'),
+    operatingHours: document.getElementById('operating-hours')
+  };
+  
+  const results = {
+    monthlySavings: document.getElementById('monthly-savings'),
+    savingsPercentage: document.getElementById('savings-percentage'),
+    annualSavings: document.getElementById('annual-savings'),
+    projectCost: document.getElementById('project-cost'),
+    roiPeriod: document.getElementById('roi-period'),
+    savings5yr: document.getElementById('savings-5yr'),
+    savings10yr: document.getElementById('savings-10yr'),
+    savings20yr: document.getElementById('savings-20yr')
+  };
+  
+  // Savings percentages by building type and current insulation
+  const savingsMatrix = {
+    office: { none: 0.45, minimal: 0.35, standard: 0.25, 'above-average': 0.15 },
+    warehouse: { none: 0.50, minimal: 0.40, standard: 0.30, 'above-average': 0.20 },
+    retail: { none: 0.40, minimal: 0.30, standard: 0.20, 'above-average': 0.12 },
+    manufacturing: { none: 0.48, minimal: 0.38, standard: 0.28, 'above-average': 0.18 },
+    multifamily: { none: 0.42, minimal: 0.32, standard: 0.22, 'above-average': 0.14 },
+    healthcare: { none: 0.38, minimal: 0.28, standard: 0.18, 'above-average': 0.10 },
+    education: { none: 0.40, minimal: 0.30, standard: 0.20, 'above-average': 0.12 }
+  };
+  
+  // Cost per square foot by building type
+  const costPerSqFt = {
+    office: 1.50,
+    warehouse: 1.25,
+    retail: 1.60,
+    manufacturing: 1.35,
+    multifamily: 1.45,
+    healthcare: 1.75,
+    education: 1.55
+  };
+  
+  function calculateSavings() {
+    const size = parseFloat(inputs.buildingSize.value) || 0;
+    const type = inputs.buildingType.value;
+    const insulation = inputs.currentInsulation.value;
+    const monthlyEnergy = parseFloat(inputs.energyCost.value) || 0;
+    const hours = parseFloat(inputs.operatingHours.value) || 0;
+    
+    // Calculate savings percentage based on building type and current insulation
+    const savingsPercent = savingsMatrix[type][insulation];
+    
+    // Adjust for operating hours (more hours = more savings opportunity)
+    const hoursAdjustment = Math.min(hours / 168, 1); // Cap at 24/7 operation
+    const adjustedSavingsPercent = savingsPercent * (0.7 + (0.3 * hoursAdjustment));
+    
+    // Calculate monthly and annual savings
+    const monthlySavings = monthlyEnergy * adjustedSavingsPercent;
+    const annualSavings = monthlySavings * 12;
+    
+    // Calculate project cost
+    const projectCost = size * costPerSqFt[type];
+    
+    // Calculate ROI period
+    const roiYears = projectCost / annualSavings;
+    
+    // Update results
+    results.monthlySavings.textContent = '$' + monthlySavings.toLocaleString('en-US', { maximumFractionDigits: 0 });
+    results.savingsPercentage.textContent = (adjustedSavingsPercent * 100).toFixed(0) + '%';
+    results.annualSavings.textContent = '$' + annualSavings.toLocaleString('en-US', { maximumFractionDigits: 0 });
+    results.projectCost.textContent = '$' + projectCost.toLocaleString('en-US', { maximumFractionDigits: 0 });
+    results.roiPeriod.textContent = roiYears.toFixed(1) + ' years';
+    
+    // Calculate cumulative savings
+    results.savings5yr.textContent = '$' + (annualSavings * 5).toLocaleString('en-US', { maximumFractionDigits: 0 });
+    results.savings10yr.textContent = '$' + (annualSavings * 10).toLocaleString('en-US', { maximumFractionDigits: 0 });
+    results.savings20yr.textContent = '$' + (annualSavings * 20).toLocaleString('en-US', { maximumFractionDigits: 0 });
+    
+    // Highlight ROI card based on payback period
+    const roiCard = results.roiPeriod.closest('.result-card');
+    roiCard.classList.toggle('excellent', roiYears <= 3);
+    roiCard.classList.toggle('good', roiYears > 3 && roiYears <= 5);
+    roiCard.classList.toggle('moderate', roiYears > 5);
+  }
+  
+  // Add event listeners
+  Object.values(inputs).forEach(input => {
+    input.addEventListener('input', calculateSavings);
+    input.addEventListener('change', calculateSavings);
+  });
+  
+  // Initial calculation
+  calculateSavings();
+});
+</script>
+
+<style>
+/* Commercial Calculator Styles */
+.commercial-calculator-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.commercial-calculator-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(0, 201, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(146, 254, 157, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.calculator-wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+
+.calculator-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.calculator-subtitle {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 3rem;
+}
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Input Styles */
+.calculator-inputs h3,
+.calculator-results h3 {
+  color: white;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--commercial-primary);
+  box-shadow: 0 0 20px rgba(0, 201, 255, 0.3);
+}
+
+.input-with-prefix {
+  display: flex;
+  align-items: center;
+}
+
+.prefix {
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.input-with-prefix input {
+  border-radius: 0 8px 8px 0;
+}
+
+.input-helper {
+  display: block;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 0.25rem;
+}
+
+/* Results Styles */
+.result-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.result-card.primary {
+  background: linear-gradient(135deg, rgba(0, 201, 255, 0.1) 0%, rgba(146, 254, 157, 0.1) 100%);
+  border-color: rgba(0, 201, 255, 0.3);
+}
+
+.result-card.highlight {
+  position: relative;
+  overflow: hidden;
+}
+
+.result-card.highlight::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: var(--commercial-gradient);
+  border-radius: 15px;
+  z-index: -1;
+  animation: highlight-pulse 2s ease-in-out infinite;
+}
+
+@keyframes highlight-pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.8; }
+}
+
+.result-card.excellent .result-value {
+  color: #4ecdc4;
+}
+
+.result-card.good .result-value {
+  color: #92fe9d;
+}
+
+.result-card.moderate .result-value {
+  color: #ffd93d;
+}
+
+.result-label {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.result-value {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: white;
+  line-height: 1;
+}
+
+.result-percentage {
+  display: inline-block;
+  background: var(--commercial-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-left: 1rem;
+}
+
+.result-detail {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 0.5rem;
+}
+
+/* Savings Timeline */
+.savings-over-time {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 15px;
+}
+
+.savings-over-time h4 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.timeline-savings {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.timeline-item {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.timeline-item .year {
+  display: block;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-item .amount {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: var(--commercial-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Additional Benefits */
+.additional-benefits {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 15px;
+  margin-bottom: 2rem;
+}
+
+.additional-benefits h3 {
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--commercial-primary);
+}
+
+.benefit-icon {
+  font-size: 2rem;
+}
+
+.benefit-item span {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+/* CTA Section */
+.calculator-cta {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.calculator-cta p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .calculator-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .timeline-savings {
+    grid-template-columns: 1fr;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .result-value {
+    font-size: 2rem;
+  }
+}
+
+/* Dark mode select styling */
+select option {
+  background: #1a1a2e;
+  color: white;
+}
+</style>
