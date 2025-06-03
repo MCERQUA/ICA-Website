@@ -1,0 +1,85 @@
+{# Temperature & Energy Visualization Component #}
+<div class="temperature-viz-container">
+  <div class="viz-header">
+    <h3 class="viz-title">{{ title | default('Arizona Attic Temperature Reality') }}</h3>
+    <p class="viz-subtitle">{{ subtitle | default('How insulation protects your home from extreme heat') }}</p>
+  </div>
+  
+  <div class="temperature-comparison">
+    <div class="temp-scenario uninsulated">
+      <h4>Without Proper Insulation</h4>
+      <div class="house-diagram">
+        <div class="attic-temp">
+          <span class="temp-value">160°F</span>
+          <span class="temp-label">Attic Temperature</span>
+        </div>
+        <div class="heat-flow-arrows">
+          <div class="arrow"></div>
+          <div class="arrow"></div>
+          <div class="arrow"></div>
+        </div>
+        <div class="living-temp">
+          <span class="temp-value">85°F</span>
+          <span class="temp-label">Living Space</span>
+          <span class="ac-status">AC Running Constantly</span>
+        </div>
+      </div>
+      <div class="energy-cost">
+        <span class="cost-label">Monthly Cooling Cost</span>
+        <span class="cost-value">$450+</span>
+      </div>
+    </div>
+    
+    <div class="temp-scenario insulated">
+      <h4>With Spray Foam Insulation</h4>
+      <div class="house-diagram">
+        <div class="attic-temp">
+          <span class="temp-value">160°F</span>
+          <span class="temp-label">Attic Temperature</span>
+        </div>
+        <div class="insulation-barrier">
+          <span class="r-value">R-38</span>
+        </div>
+        <div class="living-temp">
+          <span class="temp-value">72°F</span>
+          <span class="temp-label">Living Space</span>
+          <span class="ac-status">AC Cycles Normally</span>
+        </div>
+      </div>
+      <div class="energy-cost">
+        <span class="cost-label">Monthly Cooling Cost</span>
+        <span class="cost-value">$225</span>
+        <span class="savings">Save $225/month</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="heat-scale">
+    <div class="scale-header">Temperature Scale</div>
+    <div class="temperature-gradient">
+      <div class="gradient-bar"></div>
+      <div class="temperature-markers">
+        <div class="marker" style="left: 0%">
+          <span class="temp">70°F</span>
+          <span class="label">Comfort Zone</span>
+        </div>
+        <div class="marker" style="left: 25%">
+          <span class="temp">85°F</span>
+          <span class="label">Uncomfortable</span>
+        </div>
+        <div class="marker" style="left: 50%">
+          <span class="temp">100°F</span>
+          <span class="label">Extreme</span>
+        </div>
+        <div class="marker" style="left: 75%">
+          <span class="temp">130°F</span>
+          <span class="label">Dangerous</span>
+        </div>
+        <div class="marker" style="left: 100%">
+          <span class="temp">160°F+</span>
+          <span class="label">Attic Peak</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
