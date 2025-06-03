@@ -362,6 +362,13 @@
     <link rel="stylesheet" href="/css/industrial.css">
     {% endif %}
     
+    <!-- Additional CSS from front matter -->
+    {% if additionalCss %}
+      {% for cssFile in additionalCss %}
+        <link rel="stylesheet" href="{{ cssFile }}">
+      {% endfor %}
+    {% endif %}
+    
     <!-- Preload critical resources -->
     <link rel="preload" href="/images-optimized/Insulation_Contractors_of_arizona_logo-200w.webp" as="image">
     <link rel="preload" href="/images-optimized/insulation_contractors_of_arizona_spray_foam_Arizona_Sunset-1920w.webp" as="image" media="(min-width: 1200px)">
@@ -463,7 +470,7 @@
     }
     </script>
 </head>
-<body>
+<body class="{{ pageClass }}">
     <!-- Enhanced Animated Background with Grid Lines and More Particles -->
     <div class="animated-bg">
         <div class="grid-lines"></div>
