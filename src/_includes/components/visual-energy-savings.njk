@@ -1,0 +1,145 @@
+{# Energy Savings Calculator Visual Component #}
+<div class="energy-savings-viz-container">
+  <div class="savings-header">
+    <h3 class="savings-title">{{ title | default('Your Potential Energy Savings') }}</h3>
+    <p class="savings-subtitle">{{ subtitle | default('See how spray foam insulation pays for itself') }}</p>
+  </div>
+  
+  <div class="savings-calculator-visual">
+    <div class="home-size-selector">
+      <h4>Select Your Home Size</h4>
+      <div class="size-options">
+        <button class="size-option" data-size="1500">
+          <span class="sqft">1,500 sq ft</span>
+          <span class="type">Small Home</span>
+        </button>
+        <button class="size-option active" data-size="2000">
+          <span class="sqft">2,000 sq ft</span>
+          <span class="type">Average Home</span>
+        </button>
+        <button class="size-option" data-size="3000">
+          <span class="sqft">3,000 sq ft</span>
+          <span class="type">Large Home</span>
+        </button>
+      </div>
+    </div>
+    
+    <div class="savings-breakdown">
+      <div class="current-costs">
+        <h4>Current Annual Cooling Costs</h4>
+        <div class="cost-display">
+          <span class="cost-amount" id="current-cost">$3,600</span>
+          <span class="cost-period">per year</span>
+        </div>
+        <div class="monthly-breakdown">
+          <span>Average $300/month in summer</span>
+        </div>
+      </div>
+      
+      <div class="arrow-indicator">
+        <svg width="60" height="60" viewBox="0 0 60 60">
+          <path d="M30 10 L50 30 L40 30 L40 50 L20 50 L20 30 L10 30 Z" fill="url(#arrowGradient)"/>
+          <defs>
+            <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style="stop-color:#00ffff;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#0088aa;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      
+      <div class="projected-costs">
+        <h4>After Spray Foam Insulation</h4>
+        <div class="cost-display">
+          <span class="cost-amount savings" id="new-cost">$1,800</span>
+          <span class="cost-period">per year</span>
+        </div>
+        <div class="monthly-breakdown">
+          <span>Average $150/month in summer</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="annual-savings-display">
+      <div class="savings-amount">
+        <h4>Annual Savings</h4>
+        <span class="amount" id="annual-savings">$1,800</span>
+      </div>
+      <div class="payback-period">
+        <h4>Investment Payback</h4>
+        <span class="period" id="payback">4.2 years</span>
+      </div>
+      <div class="lifetime-savings">
+        <h4>25-Year Savings</h4>
+        <span class="total" id="lifetime-savings">$45,000</span>
+      </div>
+    </div>
+    
+    <div class="savings-visualization">
+      <h4>Savings Over Time</h4>
+      <div class="savings-graph">
+        <div class="graph-bars">
+          <div class="year-bar" data-year="1" data-savings="1800">
+            <div class="bar-fill" style="height: 10%"></div>
+            <span class="year-label">Year 1</span>
+          </div>
+          <div class="year-bar" data-year="5" data-savings="9000">
+            <div class="bar-fill" style="height: 20%"></div>
+            <span class="year-label">Year 5</span>
+          </div>
+          <div class="year-bar" data-year="10" data-savings="18000">
+            <div class="bar-fill" style="height: 40%"></div>
+            <span class="year-label">Year 10</span>
+          </div>
+          <div class="year-bar" data-year="15" data-savings="27000">
+            <div class="bar-fill" style="height: 60%"></div>
+            <span class="year-label">Year 15</span>
+          </div>
+          <div class="year-bar" data-year="20" data-savings="36000">
+            <div class="bar-fill" style="height: 80%"></div>
+            <span class="year-label">Year 20</span>
+          </div>
+          <div class="year-bar highlight" data-year="25" data-savings="45000">
+            <div class="bar-fill" style="height: 100%"></div>
+            <span class="year-label">Year 25</span>
+          </div>
+        </div>
+        <div class="investment-line">
+          <span class="line-label">Initial Investment: ~$7,500</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="utility-rebates-info">
+      <h4>Available Utility Rebates</h4>
+      <div class="rebate-grid">
+        <div class="rebate-item aps">
+          <img src="/images/aps-logo.svg" alt="APS" class="utility-logo">
+          <span class="rebate-amount">Up to $400</span>
+        </div>
+        <div class="rebate-item srp">
+          <img src="/images/srp-logo.svg" alt="SRP" class="utility-logo">
+          <span class="rebate-amount">Up to $500</span>
+        </div>
+        <div class="rebate-item tep">
+          <img src="/images/tep-logo.svg" alt="TEP" class="utility-logo">
+          <span class="rebate-amount">Up to $350</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="temperature-impact-bar">
+    <h4>Indoor Temperature Stability</h4>
+    <div class="temp-stability-graph">
+      <div class="temp-line before">
+        <span class="label">Before: 68°F - 85°F swings</span>
+        <div class="temp-variance high-variance"></div>
+      </div>
+      <div class="temp-line after">
+        <span class="label">After: Consistent 72°F - 74°F</span>
+        <div class="temp-variance low-variance"></div>
+      </div>
+    </div>
+  </div>
+</div>
