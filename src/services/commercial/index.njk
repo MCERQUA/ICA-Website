@@ -1,46 +1,50 @@
 ---
-layout: layouts/service-category.njk
+layout: layouts/base.njk
 title: Commercial Insulation Services in Phoenix & Arizona
-subtitle: Energy-Efficient Solutions for Arizona Businesses
+heroTitle: Commercial Insulation Excellence
+heroSubtitle: Energy-Efficient Solutions for Arizona Businesses
 description: Professional commercial insulation services in Phoenix. Office buildings, warehouses, retail spaces. Save 30-50% on energy costs. Licensed & insured ROC #334041. Free assessments.
 keywords: commercial insulation Phoenix, office building insulation Arizona, warehouse insulation, retail space insulation, spray foam commercial, energy efficiency business
-heroImage: /images/commercial-hero.jpg
+pageClass: commercial-page
+ctaPrimary: Get Free Assessment
+ctaPrimaryLink: /contact/
+additionalCss:
+  - /css/commercial.css
+schema:
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Commercial Insulation Services",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Insulation Contractors of Arizona",
+    "telephone": "623-241-1939",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Phoenix",
+      "addressRegion": "AZ"
+    }
+  },
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 33.4484,
+      "longitude": -112.0740
+    },
+    "geoRadius": "50000"
+  },
+  "description": "Professional commercial insulation services for office buildings, warehouses, retail spaces, and industrial facilities in Phoenix and throughout Arizona. 20+ years experience, 421,700+ sq ft completed.",
+  "offers": {
+    "@type": "Offer",
+    "name": "Commercial Insulation Installation",
+    "priceRange": "$1.25-$1.75 per sq ft"
+  }
 ---
 
-<!-- Include commercial-specific CSS for dark glow on headings -->
-<link rel="stylesheet" href="/css/commercial.css">
+<!-- Use standard hero component -->
+{% include "sections/hero.njk" %}
 
-<section class="service-hero-enhanced">
-  <div class="hero-background">
-    <div class="grid-overlay"></div>
-    <div class="particle-field"></div>
-  </div>
-  <div class="container">
-    <div class="hero-content">
-      <h1 class="hero-title glow-text" data-text="Commercial Insulation Excellence">Commercial Insulation Excellence</h1>
-      <p class="hero-subtitle">Transform Your Business with Energy-Efficient Insulation Solutions</p>
-      <div class="hero-stats">
-        <div class="stat-item">
-          <span class="stat-value" data-count="421700">421,700+</span>
-          <span class="stat-label">Square Feet Completed</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-value" data-count="50">30-50%</span>
-          <span class="stat-label">Energy Savings</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-value" data-count="20">20+</span>
-          <span class="stat-label">Years Experience</span>
-        </div>
-      </div>
-      <div class="hero-cta">
-        <a href="#contact" class="cta-button pulse-glow">Get Free Assessment</a>
-        <a href="tel:623-241-1939" class="btn btn-primary">Call 623-241-1939</a>
-      </div>
-    </div>
-  </div>
-</section>
-
+<!-- Commercial Services Overview -->
 <section class="service-intro-section content-section">
   <div class="container">
     <div class="service-intro glass-panel">
@@ -64,26 +68,31 @@ heroImage: /images/commercial-hero.jpg
   </div>
 </section>
 
+<!-- Commercial Success Stories -->
+{% include "sections/commercial-showcase.njk" %}
+
+<!-- Service Categories -->
 <section class="commercial-services-grid content-section">
   <div class="container">
-    <h2 class="section-title text-center glow-text" data-text="Our Commercial Services">Our Commercial Services</h2>
-    <p class="section-intro text-center">Comprehensive insulation solutions tailored for every commercial need</p>
+    <h2 class="section-title text-center glow-text" data-text="Commercial Insulation Solutions">Commercial Insulation Solutions</h2>
+    <p class="section-intro text-center">Tailored solutions for every commercial application</p>
     
     <div class="services-showcase">
       <div class="service-card-enhanced glass-panel">
         <div class="service-icon-wrapper">
           <div class="icon-glow"></div>
-          <img src="/images/office-icon.svg" alt="Office Buildings" class="service-icon">
+          <i class="service-icon">🏢</i>
         </div>
         <h3 data-text="Office Buildings">Office Buildings</h3>
         <p>Create comfortable, energy-efficient workspaces that boost productivity and reduce operating costs.</p>
         <ul class="feature-list">
           <li>Climate control optimization</li>
-          <li>Acoustic insulation</li>
-          <li>HVAC efficiency boost</li>
+          <li>Acoustic insulation for privacy</li>
+          <li>HVAC efficiency maximization</li>
+          <li>Minimal disruption installation</li>
         </ul>
         <a href="/services/commercial/office/" class="btn-glass">
-          <span>Explore Office Solutions</span>
+          <span>Office Solutions</span>
           <i class="arrow">→</i>
         </a>
       </div>
@@ -91,17 +100,18 @@ heroImage: /images/commercial-hero.jpg
       <div class="service-card-enhanced glass-panel">
         <div class="service-icon-wrapper">
           <div class="icon-glow"></div>
-          <img src="/images/retail-icon.svg" alt="Retail Spaces" class="service-icon">
+          <i class="service-icon">🛍️</i>
         </div>
         <h3 data-text="Retail Spaces">Retail Spaces</h3>
         <p>Maintain consistent temperatures for customer comfort while controlling energy expenses.</p>
         <ul class="feature-list">
           <li>Customer comfort priority</li>
           <li>Energy cost reduction</li>
-          <li>Quick installation</li>
+          <li>Weekend/night installation</li>
+          <li>Storefront insulation</li>
         </ul>
         <a href="/services/commercial/retail/" class="btn-glass">
-          <span>Explore Retail Solutions</span>
+          <span>Retail Solutions</span>
           <i class="arrow">→</i>
         </a>
       </div>
@@ -109,7 +119,7 @@ heroImage: /images/commercial-hero.jpg
       <div class="service-card-enhanced glass-panel">
         <div class="service-icon-wrapper">
           <div class="icon-glow"></div>
-          <img src="/images/warehouse-icon.svg" alt="Warehouses" class="service-icon">
+          <i class="service-icon">📦</i>
         </div>
         <h3 data-text="Warehouses">Warehouses</h3>
         <p>Large-scale insulation solutions for distribution centers and storage facilities.</p>
@@ -117,9 +127,10 @@ heroImage: /images/commercial-hero.jpg
           <li>Temperature stabilization</li>
           <li>Condensation control</li>
           <li>Structural protection</li>
+          <li>Loading dock sealing</li>
         </ul>
         <a href="/services/commercial/warehouse/" class="btn-glass">
-          <span>Explore Warehouse Solutions</span>
+          <span>Warehouse Solutions</span>
           <i class="arrow">→</i>
         </a>
       </div>
@@ -127,7 +138,7 @@ heroImage: /images/commercial-hero.jpg
       <div class="service-card-enhanced glass-panel">
         <div class="service-icon-wrapper">
           <div class="icon-glow"></div>
-          <img src="/images/construction-icon.svg" alt="New Construction" class="service-icon">
+          <i class="service-icon">🏗️</i>
         </div>
         <h3 data-text="New Construction">New Construction</h3>
         <p>Partner with contractors and developers for code-compliant, high-performance insulation.</p>
@@ -135,9 +146,10 @@ heroImage: /images/commercial-hero.jpg
           <li>Building code expertise</li>
           <li>Schedule coordination</li>
           <li>Performance optimization</li>
+          <li>LEED compliance support</li>
         </ul>
         <a href="/services/commercial/new-construction/" class="btn-glass">
-          <span>Explore New Construction</span>
+          <span>New Construction</span>
           <i class="arrow">→</i>
         </a>
       </div>
@@ -145,140 +157,29 @@ heroImage: /images/commercial-hero.jpg
   </div>
 </section>
 
-<section class="benefits-section content-section dark-gradient">
-  <div class="container">
-    <h2 class="section-title text-center glow-text" data-text="Why Businesses Choose ICA">Why Businesses Choose ICA</h2>
-    
-    <div class="benefits-grid">
-      <div class="benefit-card glass-panel">
-        <div class="benefit-header">
-          <i class="benefit-icon">💰</i>
-          <h3>Financial Benefits</h3>
-        </div>
-        <ul class="benefit-list">
-          <li><strong>30-50% Energy Savings</strong>: Dramatically reduce HVAC operating costs</li>
-          <li><strong>Rapid ROI</strong>: Most projects pay for themselves in 2-4 years</li>
-          <li><strong>Tax Incentives</strong>: Qualify for energy efficiency tax credits</li>
-          <li><strong>Increased Property Value</strong>: Energy-efficient buildings command premium rents</li>
-        </ul>
-      </div>
-      
-      <div class="benefit-card glass-panel">
-        <div class="benefit-header">
-          <i class="benefit-icon">⚙️</i>
-          <h3>Operational Advantages</h3>
-        </div>
-        <ul class="benefit-list">
-          <li><strong>Flexible Scheduling</strong>: Work around your business hours</li>
-          <li><strong>Minimal Disruption</strong>: Clean, efficient installation process</li>
-          <li><strong>Code Compliance</strong>: Meet or exceed all building codes</li>
-          <li><strong>Warranty Protection</strong>: Comprehensive coverage for peace of mind</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- Energy Savings Calculator -->
+{% include "sections/commercial-calculator.njk" %}
 
-<section class="solutions-overview content-section">
-  <div class="container">
-    <h2 class="section-title text-center glow-text" data-text="Commercial Insulation Solutions">Commercial Insulation Solutions</h2>
-    
-    <div class="solutions-tabs">
-      <div class="tab-buttons">
-        <button class="tab-button active" data-tab="spray-foam">Spray Foam Systems</button>
-        <button class="tab-button" data-tab="traditional">Traditional Insulation</button>
-        <button class="tab-button" data-tab="specialty">Specialty Applications</button>
-      </div>
-      
-      <div class="tab-content">
-        <div class="tab-pane active" id="spray-foam">
-          <div class="solution-grid">
-            <div class="solution-item glass-panel">
-              <h4>Closed-Cell Spray Foam</h4>
-              <p>Maximum R-value and structural enhancement for demanding applications</p>
-              <ul>
-                <li>R-6.5 per inch</li>
-                <li>Vapor barrier</li>
-                <li>Structural strength</li>
-              </ul>
-            </div>
-            <div class="solution-item glass-panel">
-              <h4>Open-Cell Spray Foam</h4>
-              <p>Cost-effective solution for interior applications and sound control</p>
-              <ul>
-                <li>R-3.7 per inch</li>
-                <li>Sound dampening</li>
-                <li>Budget-friendly</li>
-              </ul>
-            </div>
-            <div class="solution-item glass-panel">
-              <h4>Roofing Systems</h4>
-              <p>Seamless protection for flat and metal roofs</p>
-              <ul>
-                <li>Waterproofing</li>
-                <li>Energy reflection</li>
-                <li>Longevity</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        
-        <div class="tab-pane" id="traditional">
-          <div class="solution-grid">
-            <div class="solution-item glass-panel">
-              <h4>Fiberglass Batts</h4>
-              <p>Economical choice for new construction projects</p>
-            </div>
-            <div class="solution-item glass-panel">
-              <h4>Blown-In Insulation</h4>
-              <p>Quick retrofit solution for existing buildings</p>
-            </div>
-            <div class="solution-item glass-panel">
-              <h4>Rigid Board</h4>
-              <p>Ideal for continuous insulation requirements</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="tab-pane" id="specialty">
-          <div class="solution-grid">
-            <div class="solution-item glass-panel">
-              <h4>Fire-Rated Assemblies</h4>
-              <p>Meet strict fire code requirements</p>
-            </div>
-            <div class="solution-item glass-panel">
-              <h4>Sound Attenuation</h4>
-              <p>Reduce noise transmission between spaces</p>
-            </div>
-            <div class="solution-item glass-panel">
-              <h4>Vapor Barriers</h4>
-              <p>Control moisture in critical areas</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+<!-- Process Timeline -->
 <section class="process-section content-section with-particles">
   <div class="container">
     <h2 class="section-title text-center glow-text" data-text="Our Commercial Process">Our Commercial Process</h2>
+    <p class="section-intro text-center">Professional service from assessment to completion</p>
     
     <div class="process-timeline">
       <div class="timeline-item">
         <div class="timeline-marker">1</div>
         <div class="timeline-content glass-panel">
           <h3>Free Energy Assessment</h3>
-          <p>Comprehensive evaluation of your facility with thermal imaging and energy analysis</p>
+          <p>Comprehensive evaluation with thermal imaging, energy analysis, and custom recommendations for your facility.</p>
         </div>
       </div>
       
       <div class="timeline-item">
         <div class="timeline-marker">2</div>
         <div class="timeline-content glass-panel">
-          <h3>Custom Proposal</h3>
-          <p>Detailed recommendations with ROI analysis and energy savings projections</p>
+          <h3>Detailed Proposal</h3>
+          <p>Custom solution with ROI analysis, energy projections, and financing options tailored to your budget.</p>
         </div>
       </div>
       
@@ -286,7 +187,7 @@ heroImage: /images/commercial-hero.jpg
         <div class="timeline-marker">3</div>
         <div class="timeline-content glass-panel">
           <h3>Project Planning</h3>
-          <p>Coordinate with your schedule and operations for minimal disruption</p>
+          <p>Coordinate installation schedule to minimize disruption, working nights/weekends if needed.</p>
         </div>
       </div>
       
@@ -294,32 +195,34 @@ heroImage: /images/commercial-hero.jpg
         <div class="timeline-marker">4</div>
         <div class="timeline-content glass-panel">
           <h3>Professional Installation</h3>
-          <p>Experienced crews with commercial expertise execute the project</p>
+          <p>Experienced commercial crews execute the project efficiently with safety protocols in place.</p>
         </div>
       </div>
       
       <div class="timeline-item">
         <div class="timeline-marker">5</div>
         <div class="timeline-content glass-panel">
-          <h3>Documentation</h3>
-          <p>Complete warranty and compliance documentation for your records</p>
+          <h3>Quality Inspection</h3>
+          <p>Thorough inspection with thermal verification to ensure complete coverage and performance.</p>
         </div>
       </div>
       
       <div class="timeline-item">
         <div class="timeline-marker">6</div>
         <div class="timeline-content glass-panel">
-          <h3>Follow-Up Support</h3>
-          <p>Ongoing maintenance recommendations and performance monitoring</p>
+          <h3>Documentation & Support</h3>
+          <p>Complete warranty documentation, compliance certificates, and ongoing maintenance recommendations.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Industries We Serve -->
 <section class="industries-section content-section">
   <div class="container">
     <h2 class="section-title text-center glow-text" data-text="Industries We Serve">Industries We Serve</h2>
+    <p class="section-intro text-center">Specialized solutions for every sector</p>
     
     <div class="industries-grid">
       <div class="industry-item glass-panel">
@@ -332,7 +235,7 @@ heroImage: /images/commercial-hero.jpg
       </div>
       <div class="industry-item glass-panel">
         <i class="industry-icon">📦</i>
-        <h4>Warehouses & Distribution</h4>
+        <h4>Warehouses</h4>
       </div>
       <div class="industry-item glass-panel">
         <i class="industry-icon">🏭</i>
@@ -354,105 +257,33 @@ heroImage: /images/commercial-hero.jpg
         <i class="industry-icon">🏘️</i>
         <h4>Multi-Family</h4>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="credentials-section content-section dark-gradient">
-  <div class="container">
-    <h2 class="section-title text-center glow-text" data-text="Commercial Credentials">Commercial Credentials</h2>
-    
-    <div class="credentials-showcase">
-      <div class="credential-card glass-panel">
-        <img src="/images/roc-license.png" alt="ROC License">
-        <h4>Licensed & Insured</h4>
-        <p>ROC #334041</p>
+      <div class="industry-item glass-panel">
+        <i class="industry-icon">⛪</i>
+        <h4>Religious</h4>
       </div>
-      <div class="credential-card glass-panel">
-        <img src="/images/icynene-certified.png" alt="Icynene Certified">
-        <h4>Icynene Certified</h4>
-        <p>Premium spray foam applications</p>
+      <div class="industry-item glass-panel">
+        <i class="industry-icon">🏛️</i>
+        <h4>Government</h4>
       </div>
-      <div class="credential-card glass-panel">
-        <img src="/images/spfa-member.png" alt="SPFA Member">
-        <h4>SPFA Member</h4>
-        <p>Industry best practices</p>
+      <div class="industry-item glass-panel">
+        <i class="industry-icon">🚗</i>
+        <h4>Automotive</h4>
       </div>
-      <div class="credential-card glass-panel">
-        <img src="/images/safety-certified.png" alt="Safety Certified">
-        <h4>Safety Certified</h4>
-        <p>Hardison Downey Construction Safety</p>
-      </div>
-      <div class="credential-card glass-panel">
-        <img src="/images/bbb-rating.png" alt="BBB A+ Rating">
-        <h4>BBB A+ Rating</h4>
-        <p>Proven business reliability</p>
+      <div class="industry-item glass-panel">
+        <i class="industry-icon">🏋️</i>
+        <h4>Recreation</h4>
       </div>
     </div>
   </div>
 </section>
 
-<section class="portfolio-section content-section">
-  <div class="container">
-    <h2 class="section-title text-center glow-text" data-text="Project Highlights">Project Highlights</h2>
-    <h3 class="section-subtitle text-center">Recent Success Stories</h3>
-    
-    <div class="portfolio-grid">
-      <div class="portfolio-item glass-panel">
-        <div class="portfolio-image">
-          <img src="/images/phoenix-distribution-center.jpg" alt="Phoenix Distribution Center">
-          <div class="portfolio-overlay">
-            <span class="project-size">421,700 SF</span>
-          </div>
-        </div>
-        <div class="portfolio-content">
-          <h4>Phoenix Distribution Center</h4>
-          <p>Massive spray foam application completed on schedule</p>
-        </div>
-      </div>
-      
-      <div class="portfolio-item glass-panel">
-        <div class="portfolio-image">
-          <img src="/images/scottsdale-office.jpg" alt="Scottsdale Office Complex">
-          <div class="portfolio-overlay">
-            <span class="project-size">50% Energy Reduction</span>
-          </div>
-        </div>
-        <div class="portfolio-content">
-          <h4>Scottsdale Office Complex</h4>
-          <p>Achieved 50% energy reduction with comprehensive retrofit</p>
-        </div>
-      </div>
-      
-      <div class="portfolio-item glass-panel">
-        <div class="portfolio-image">
-          <img src="/images/mesa-retail.jpg" alt="Mesa Retail Center">
-          <div class="portfolio-overlay">
-            <span class="project-size">Zero Downtime</span>
-          </div>
-        </div>
-        <div class="portfolio-content">
-          <h4>Mesa Retail Center</h4>
-          <p>Completed without business interruption</p>
-        </div>
-      </div>
-      
-      <div class="portfolio-item glass-panel">
-        <div class="portfolio-image">
-          <img src="/images/tempe-manufacturing.jpg" alt="Tempe Manufacturing">
-          <div class="portfolio-overlay">
-            <span class="project-size">Enhanced Productivity</span>
-          </div>
-        </div>
-        <div class="portfolio-content">
-          <h4>Tempe Manufacturing</h4>
-          <p>Improved worker comfort and productivity</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- Why Choose ICA -->
+{% include "sections/why-choose-ica-enhanced.njk" %}
 
+<!-- Credentials -->
+{% include "sections/credentials-banner.njk" %}
+
+<!-- CTA Section -->
 <section class="cta-section-enhanced" id="contact">
   <div class="cta-background">
     <div class="grid-overlay"></div>
@@ -464,8 +295,8 @@ heroImage: /images/commercial-hero.jpg
   </div>
   <div class="container">
     <div class="cta-content glass-panel">
-      <h2 class="cta-title glow-text" data-text="Get Your Free Commercial Assessment">Get Your Free Commercial Assessment</h2>
-      <p class="cta-subtitle">Ready to reduce operating costs and improve your facility's performance?</p>
+      <h2 class="cta-title glow-text" data-text="Ready to Reduce Operating Costs?">Ready to Reduce Operating Costs?</h2>
+      <p class="cta-subtitle">Get your free commercial energy assessment today</p>
       
       <div class="cta-features">
         <div class="cta-feature">
@@ -474,15 +305,15 @@ heroImage: /images/commercial-hero.jpg
         </div>
         <div class="cta-feature">
           <i class="check-icon">✓</i>
-          <span>Energy Savings Projections</span>
+          <span>Energy Savings Report</span>
         </div>
         <div class="cta-feature">
           <i class="check-icon">✓</i>
-          <span>Custom ROI Report</span>
+          <span>Custom ROI Analysis</span>
         </div>
         <div class="cta-feature">
           <i class="check-icon">✓</i>
-          <span>No Obligation Quote</span>
+          <span>No Obligation</span>
         </div>
       </div>
       
@@ -498,3 +329,79 @@ heroImage: /images/commercial-hero.jpg
     </div>
   </div>
 </section>
+
+<!-- Add JavaScript for animations -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Intersection Observer for animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, observerOptions);
+  
+  // Observe all content sections
+  document.querySelectorAll('.content-section').forEach(section => {
+    observer.observe(section);
+  });
+  
+  // Tab functionality
+  const tabButtons = document.querySelectorAll('.tab-button');
+  const tabPanes = document.querySelectorAll('.tab-pane');
+  
+  tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const targetTab = button.getAttribute('data-tab');
+      
+      // Update active states
+      tabButtons.forEach(btn => btn.classList.remove('active'));
+      tabPanes.forEach(pane => pane.classList.remove('active'));
+      
+      button.classList.add('active');
+      document.getElementById(targetTab).classList.add('active');
+    });
+  });
+  
+  // Counter animation for stats
+  function animateCounter(element, target) {
+    const duration = 2000;
+    const start = 0;
+    const increment = target / (duration / 16);
+    let current = start;
+    
+    const updateCounter = () => {
+      current += increment;
+      if (current < target) {
+        element.textContent = Math.floor(current).toLocaleString() + '+';
+        requestAnimationFrame(updateCounter);
+      } else {
+        element.textContent = target.toLocaleString() + '+';
+      }
+    };
+    
+    updateCounter();
+  }
+  
+  // Animate stats when visible
+  const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+        entry.target.classList.add('animated');
+        const target = parseInt(entry.target.getAttribute('data-count'));
+        animateCounter(entry.target, target);
+      }
+    });
+  }, { threshold: 0.5 });
+  
+  document.querySelectorAll('[data-count]').forEach(stat => {
+    statsObserver.observe(stat);
+  });
+});
+</script>
