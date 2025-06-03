@@ -1,0 +1,124 @@
+{# R-Value Comparison Visual Component #}
+<div class="r-value-comparison-container">
+  <div class="comparison-header">
+    <h3 class="comparison-title">{{ title | default('Insulation R-Value Comparison') }}</h3>
+    <p class="comparison-subtitle">{{ subtitle | default('Understanding thermal resistance for Arizona homes') }}</p>
+  </div>
+  
+  <div class="r-value-chart">
+    <div class="chart-bars">
+      <div class="insulation-type fiberglass">
+        <div class="bar-container">
+          <div class="bar" data-height="35">
+            <span class="r-value-label">R-3.5/inch</span>
+          </div>
+          <div class="thickness-indicator">
+            <span class="thickness">11" needed for R-38</span>
+          </div>
+        </div>
+        <div class="type-info">
+          <h4>Fiberglass Batts</h4>
+          <ul class="pros-cons">
+            <li class="pro">Lower upfront cost</li>
+            <li class="con">Loses effectiveness when compressed</li>
+            <li class="con">Allows air infiltration</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="insulation-type cellulose">
+        <div class="bar-container">
+          <div class="bar" data-height="38">
+            <span class="r-value-label">R-3.8/inch</span>
+          </div>
+          <div class="thickness-indicator">
+            <span class="thickness">10" needed for R-38</span>
+          </div>
+        </div>
+        <div class="type-info">
+          <h4>Blown Cellulose</h4>
+          <ul class="pros-cons">
+            <li class="pro">Good coverage</li>
+            <li class="con">Settles over time</li>
+            <li class="con">Absorbs moisture</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="insulation-type open-cell">
+        <div class="bar-container">
+          <div class="bar" data-height="37">
+            <span class="r-value-label">R-3.7/inch</span>
+          </div>
+          <div class="thickness-indicator">
+            <span class="thickness">10.5" needed for R-38</span>
+          </div>
+        </div>
+        <div class="type-info">
+          <h4>Open-Cell Foam</h4>
+          <ul class="pros-cons">
+            <li class="pro">Air sealing</li>
+            <li class="pro">Sound dampening</li>
+            <li class="con">Lower R-value</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="insulation-type closed-cell featured">
+        <div class="bar-container">
+          <div class="bar" data-height="65">
+            <span class="r-value-label">R-6.5/inch</span>
+          </div>
+          <div class="thickness-indicator">
+            <span class="thickness">6" needed for R-38</span>
+          </div>
+        </div>
+        <div class="type-info">
+          <h4>Closed-Cell Foam</h4>
+          <ul class="pros-cons">
+            <li class="pro">Highest R-value</li>
+            <li class="pro">Moisture barrier</li>
+            <li class="pro">Structural strength</li>
+            <li class="pro">25+ year lifespan</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="performance-heat-map">
+      <h4>Performance in Arizona Heat</h4>
+      <div class="heat-performance-grid">
+        <div class="performance-row">
+          <span class="material">Fiberglass</span>
+          <div class="performance-bar low"></div>
+          <span class="rating">Fair</span>
+        </div>
+        <div class="performance-row">
+          <span class="material">Cellulose</span>
+          <div class="performance-bar medium"></div>
+          <span class="rating">Good</span>
+        </div>
+        <div class="performance-row">
+          <span class="material">Open-Cell</span>
+          <div class="performance-bar medium-high"></div>
+          <span class="rating">Very Good</span>
+        </div>
+        <div class="performance-row">
+          <span class="material">Closed-Cell</span>
+          <div class="performance-bar high"></div>
+          <span class="rating">Excellent</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="heat-gradient-scale">
+    <div class="gradient-bar"></div>
+    <div class="scale-labels">
+      <span>Poor</span>
+      <span>Fair</span>
+      <span>Good</span>
+      <span>Excellent</span>
+    </div>
+  </div>
+</div>
