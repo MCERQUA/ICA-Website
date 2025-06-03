@@ -233,6 +233,34 @@
       "component_location": "src/_includes/sections/hero.njk",
       "css_fix": "Pages with hero need CSS rule to remove main padding-top",
       "note": "Do NOT create separate page-hero components, use the existing hero.njk"
+    },
+    "critical_patterns": {
+      "layout_declaration": {
+        "correct": "layout: base.njk",
+        "wrong": "layout: layouts/base.njk",
+        "reason": "Eleventy automatically looks in _includes/layouts/ directory"
+      },
+      "page_styling": {
+        "requirement": "Pages needing custom styling MUST set pageClass in front matter",
+        "implementation": "pageClass: commercial-page",
+        "base_template_requirement": "base.njk MUST have <body class=\"{{ pageClass }}\">",
+        "css_loading": "Use additionalCss array in front matter to load page-specific CSS"
+      },
+      "schema_markup": {
+        "correct_location": "At bottom of page as <script type=\"application/ld+json\">",
+        "wrong_location": "In YAML front matter",
+        "reason": "YAML cannot handle complex nested objects"
+      },
+      "component_architecture": {
+        "max_page_size": "Keep pages under 5KB",
+        "use_components": "Always use existing components from src/_includes/sections/",
+        "avoid": "Large inline HTML blocks, duplicate component functionality"
+      },
+      "dark_backgrounds": {
+        "force_dark": "Use !important on background declarations",
+        "text_contrast": "Always white/light text on dark backgrounds",
+        "css_pattern": ".page-class { background: #0A0A0A !important; color: #ffffff !important; }"
+      }
     }
   },
   "ai_assistant_context": {
@@ -241,7 +269,7 @@
     "current_project": "Website cleanup and service page optimization",
     "repository": "https://github.com/MCERQUA/ICA-Website",
     "live_website": "https://insulationcontractorsofarizona.com",
-    "last_updated": "2025-06-02",
+    "last_updated": "2025-06-03",
     "recent_updates": {
       "2025-06-01-services": {
         "task": "Services page redesign and spacing fix",
@@ -349,7 +377,60 @@
           "Fully responsive design",
           "Temperature scale gradients matching original design"
         ]
+      },
+      "2025-06-03-commercial-pages": {
+        "task": "Commercial pages complete overhaul with styling fixes",
+        "status": "completed",
+        "changes": [
+          "Created comprehensive commercial.css (17KB → 13.8KB optimized)",
+          "Created commercial-showcase.njk component with case studies",
+          "Created commercial-calculator.njk with interactive ROI calculator",
+          "Updated commercial/index.njk to use standard hero and new components",
+          "Simplified office.njk from 17KB to 2.5KB using modular components",
+          "Fixed YAML front matter errors (removed schema objects)",
+          "Fixed layout path errors (layouts/base.njk → base.njk)",
+          "Updated base.njk to apply pageClass to body element",
+          "Added additionalCss handling for loading page-specific CSS"
+        ],
+        "critical_fixes": [
+          "White text on white background - forced dark backgrounds throughout",
+          "pageClass not being applied - updated base.njk body tag",
+          "Build failures from incorrect layout paths",
+          "YAML parsing errors from complex schema objects"
+        ],
+        "lessons_learned": [
+          "Always use 'layout: base.njk' not 'layout: layouts/base.njk'",
+          "Schema markup must go in script tags, not YAML front matter",
+          "Pages must set pageClass for custom styling to work",
+          "base.njk must have <body class=\"{{ pageClass }}\">",
+          "Keep pages small (<5KB) and use components for content",
+          "Force dark backgrounds with !important when needed"
+        ],
+        "documentation_created": [
+          "docs/CRITICAL-PATTERNS.md - Comprehensive guide to prevent repeated errors"
+        ]
       }
+    },
+    "critical_reminders": {
+      "before_any_changes": [
+        "Check docs/CRITICAL-PATTERNS.md for common pitfalls",
+        "Verify layout is 'base.njk' not 'layouts/base.njk'",
+        "Ensure pageClass is set for custom styling",
+        "Use existing components instead of creating inline content",
+        "Put schema markup in script tags at page bottom"
+      ],
+      "css_patterns": [
+        "Pages with dark themes MUST set pageClass in front matter",
+        "CSS must force backgrounds with !important",
+        "Always ensure proper text contrast",
+        "Load page-specific CSS via additionalCss array"
+      ],
+      "component_usage": [
+        "Always use standard hero.njk for all pages",
+        "Keep pages under 5KB by using components",
+        "Check src/_includes/sections/ for existing components",
+        "Create new components rather than inline HTML blocks"
+      ]
     }
   }
 }
