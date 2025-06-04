@@ -31,6 +31,7 @@
     "icynene_certified_installer": true,
     "spfa_member": "Spray Polyurethane Foam Alliance",
     "bbb_rating": "A+ Accredited since February 2022",
+    "bbb_ethics_award_nominee": "Nominated for BBB Business Ethics Award 2025",
     "licensing": "Licensed, Bonded & Insured",
     "roc_number": "Licensed ROC#",
     "safety_training": "Hardison Downey Safety Academy graduate"
@@ -57,7 +58,8 @@
     "specialty_services": [
       "Agricultural Tank Insulation",
       "Barn Insulation",
-      "Storage Facilities"
+      "Storage Facilities",
+      "Shed Insulation (Extensive Portfolio)"
     ],
     "arizona_climate_expertise": {
       "extreme_heat_specialization": "160°F+ attic conditions",
@@ -72,16 +74,19 @@
       "Safety-first approach with certified protocols",
       "Extreme heat specialization (150-160°F attic expertise)",
       "Agricultural tank insulation specialty (unique in market)",
+      "Shed insulation expertise with extensive portfolio",
       "Commercial project expertise (421,700+ SF installations)",
-      "Monsoon season moisture protection specialist"
+      "Monsoon season moisture protection specialist",
+      "BBB Business Ethics Award Nominee 2025"
     ],
     "competitive_advantages": [
       "Deep Arizona climate knowledge",
       "Safety Academy training",
       "Agricultural specialization",
+      "Shed company partnerships",
       "Large commercial project experience",
       "Family-owned local business",
-      "BBB A+ rating with community trust"
+      "BBB A+ rating with Ethics Award nomination"
     ]
   },
   "proven_results": {
@@ -107,7 +112,7 @@
         "temperature_resistance": "200°F+",
         "lifespan": "25+ years",
         "moisture_barrier": true,
-        "best_for": "Attics, exterior walls, commercial buildings"
+        "best_for": "Attics, exterior walls, commercial buildings, sheds"
       },
       "open_cell": {
         "r_value": "R-3.7 per inch", 
@@ -168,7 +173,8 @@
       "Chandler: 280K population, strong customer base",
       "Glendale: 250K population, home base market",
       "Scottsdale: 260K population, premium market",
-      "Retirement communities: Sun Lakes specialty focus"
+      "Retirement communities: Sun Lakes specialty focus",
+      "Shed companies: Large untapped market in Arizona"
     ]
   },
   "brand_voice_and_messaging": {
@@ -269,7 +275,40 @@
     "current_project": "Website cleanup and service page optimization",
     "repository": "https://github.com/MCERQUA/ICA-Website",
     "live_website": "https://insulationcontractorsofarizona.com",
-    "last_updated": "2025-06-03",
+    "last_updated": "2025-06-04",
+    "pending_tasks": {
+      "high_priority": [
+        {
+          "task": "Add BBB Business Ethics Award Nomination section",
+          "details": "Prominently feature Chris's 2025 BBB Business Ethics Award nomination on homepage and about page",
+          "rationale": "Major trust signal and competitive differentiator",
+          "implementation_ideas": [
+            "Add to hero badges/trust signals",
+            "Create dedicated section on homepage",
+            "Update about page with award details",
+            "Add to footer credentials"
+          ]
+        },
+        {
+          "task": "Create Shed Insulation service page",
+          "details": "Dedicated page for spray foam shed insulation with Chris's extensive portfolio",
+          "rationale": "Tons of shed companies in Arizona, significant market opportunity",
+          "implementation_ideas": [
+            "Create /services/shed-insulation/ page",
+            "Showcase before/after photos from portfolio",
+            "Target shed companies for partnerships",
+            "Highlight temperature control benefits for stored items",
+            "Include testimonials from shed owners/companies"
+          ]
+        }
+      ],
+      "future_enhancements": [
+        "Review and optimize remaining service pages",
+        "Enhance local SEO for each service area city",
+        "Create more interactive calculators and tools",
+        "Expand educational content with visual components"
+      ]
+    },
     "recent_updates": {
       "2025-06-01-services": {
         "task": "Services page redesign and spacing fix",
