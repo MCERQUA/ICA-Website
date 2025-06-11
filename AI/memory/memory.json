@@ -2,7 +2,8 @@
   "company_profile": {
     "business_name": "Insulation Contractors of Arizona LLC",
     "owner": "Christopher Kuhn", 
-    "established": "20+ years experience",
+    "established": "Serving the Valley Since 2004",
+    "founded_year": "2004",
     "location": "Glendale, Arizona",
     "service_area": [
       "Phoenix",
@@ -25,6 +26,16 @@
       "email": "insulationcontractorsofaz@gmail.com",
       "website": "https://insulationcontractorsofarizona.com",
       "deployment_info": "Netlify hosting connected to original domain"
+    },
+    "business_hours": {
+      "monday_friday": "7:00 AM - 6:00 PM",
+      "saturday": "8:00 AM - 2:00 PM",
+      "emergency_service": "Available"
+    },
+    "response_times": {
+      "glendale_phoenix": "Same day",
+      "east_valley": "1-2 days", 
+      "all_areas": "Within 48 hours"
     }
   },
   "certifications_and_credentials": {
@@ -33,8 +44,10 @@
     "bbb_rating": "A+ Accredited since February 2022",
     "bbb_ethics_award_nominee": "Nominated for BBB Business Ethics Award 2025",
     "licensing": "Licensed, Bonded & Insured",
-    "roc_number": "Licensed ROC#",
-    "safety_training": "Hardison Downey Safety Academy graduate"
+    "roc_number": "335896",
+    "roc_full": "Licensed ROC# 335896",
+    "safety_training": "Hardison Downey Safety Academy graduate",
+    "sfww_ambassador": "2025 SFWW Ambassador Badge"
   },
   "expertise_and_specializations": {
     "primary_services": [
@@ -44,7 +57,8 @@
       "Attic Insulation",
       "Wall Insulation",
       "Crawl Space Insulation",
-      "Insulation Removal"
+      "Insulation Removal",
+      "Air Duct Cleaning (NEW 2025)"
     ],
     "commercial_services": [
       "Office Buildings",
@@ -70,14 +84,15 @@
   },
   "market_positioning": {
     "unique_value_propositions": [
-      "20+ years Arizona-specific experience",
+      "Since 2004 - Arizona-specific experience",
       "Safety-first approach with certified protocols",
       "Extreme heat specialization (150-160°F attic expertise)",
       "Agricultural tank insulation specialty (unique in market)",
       "Shed insulation expertise with extensive portfolio",
       "Commercial project expertise (421,700+ SF installations)",
       "Monsoon season moisture protection specialist",
-      "BBB Business Ethics Award Nominee 2025"
+      "BBB Business Ethics Award Nominee 2025",
+      "Now offering Air Duct Cleaning services"
     ],
     "competitive_advantages": [
       "Deep Arizona climate knowledge",
@@ -86,18 +101,28 @@
       "Shed company partnerships",
       "Large commercial project experience",
       "Family-owned local business",
-      "BBB A+ rating with Ethics Award nomination"
+      "BBB A+ rating with Ethics Award nomination",
+      "2025 SFWW Ambassador status"
     ]
   },
   "proven_results": {
     "residential_success": [
       "Gilbert homeowners: 40% reduction in cooling costs",
       "Chandler residents: $200+ monthly savings during peak summer",
-      "Sun Lakes retirees: Enhanced comfort with consistent temperatures"
+      "Sun Lakes retirees: Enhanced comfort with consistent temperatures",
+      "Sarah M., Gilbert: $185/month savings",
+      "Mike R., Chandler: 40% improvement in comfort",
+      "Jennifer K., Glendale: $120/month energy savings"
     ],
     "commercial_success": [
-      "421,700+ SF commercial installation completed",
-      "30-50% energy savings on large-scale installations"
+      "Phoenix Distribution Hub: 421,700 SF, 45% energy savings, 3.2 year ROI",
+      "Scottsdale Corporate Center: 85,000 SF, $48,000 annual savings",
+      "Mesa Shopping Plaza: 32,000 SF, 40% energy reduction",
+      "Tempe Production Facility: 156,000 SF, 15% production increase"
+    ],
+    "agricultural_success": [
+      "Maricopa County Dairy Farm: 10 tanks, 75% water loss reduction, $30K annual savings",
+      "Yuma Produce Storage: 25K SF, 40% extended shelf life, 35% energy savings"
     ],
     "customer_satisfaction": [
       "4.8/5 Star Rating across Google Reviews, Yelp, and BBB",
@@ -275,7 +300,27 @@
     "current_project": "Website cleanup and service page optimization",
     "repository": "https://github.com/MCERQUA/ICA-Website",
     "live_website": "https://insulationcontractorsofarizona.com",
-    "last_updated": "2025-06-04",
+    "last_updated": "2025-06-11",
+    "website_review_june_2025": {
+      "findings": [
+        "Company founding confirmed as 2004 - consistently shown as 'Serving the Valley Since 2004'",
+        "ROC license consistently #335896 throughout site",
+        "Air Duct Cleaning service prominently featured as new offering",
+        "2025 SFWW Ambassador Badge displayed in credentials",
+        "Detailed case studies with specific metrics and ROI data",
+        "Interactive agricultural water savings calculator functioning",
+        "Commercial page includes comprehensive ROI calculator"
+      ],
+      "potential_issues": [
+        "Commercial page shows both ROC #335896 and #334041 - need to verify correct number"
+      ],
+      "new_content_discovered": [
+        "Air Duct Cleaning service promotion",
+        "Detailed business hours and response time commitments",
+        "Comprehensive case study data with specific square footages",
+        "Interactive calculators on agricultural and commercial pages"
+      ]
+    },
     "pending_tasks": {
       "high_priority": [
         {
@@ -299,6 +344,16 @@
             "Target shed companies for partnerships",
             "Highlight temperature control benefits for stored items",
             "Include testimonials from shed owners/companies"
+          ]
+        },
+        {
+          "task": "Fix ROC license inconsistency",
+          "details": "Commercial page shows both ROC #335896 and #334041 - verify and fix",
+          "rationale": "Ensure consistent, accurate licensing information",
+          "implementation_ideas": [
+            "Audit all mentions of ROC number across site",
+            "Verify correct number with Chris",
+            "Update all instances to consistent format"
           ]
         }
       ],
