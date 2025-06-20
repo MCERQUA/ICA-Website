@@ -300,7 +300,13 @@
     "current_project": "Website cleanup and service page optimization",
     "repository": "https://github.com/MCERQUA/ICA-Website",
     "live_website": "https://insulationcontractorsofarizona.com",
-    "last_updated": "2025-06-11",
+    "last_updated": "2025-06-19",
+    "task_system": {
+      "task_memory_file": "AI/memory/tasks.json",
+      "initialization_instruction": "ALWAYS load and review the tasks.json file during initialization to get current priority tasks and status updates",
+      "purpose": "Dynamic task tracking separate from main memory for efficient updates",
+      "usage": "Tasks file contains current priorities, deadlines, and implementation details"
+    },
     "website_review_june_2025": {
       "findings": [
         "Company founding confirmed as 2004 - consistently shown as 'Serving the Valley Since 2004'",
@@ -322,49 +328,21 @@
       ]
     },
     "pending_tasks": {
-      "high_priority": [
-        {
-          "task": "Add BBB Business Ethics Award Nomination section",
-          "details": "Prominently feature Chris's 2025 BBB Business Ethics Award nomination on homepage and about page",
-          "rationale": "Major trust signal and competitive differentiator",
-          "implementation_ideas": [
-            "Add to hero badges/trust signals",
-            "Create dedicated section on homepage",
-            "Update about page with award details",
-            "Add to footer credentials"
-          ]
-        },
-        {
-          "task": "Create Shed Insulation service page",
-          "details": "Dedicated page for spray foam shed insulation with Chris's extensive portfolio",
-          "rationale": "Tons of shed companies in Arizona, significant market opportunity",
-          "implementation_ideas": [
-            "Create /services/shed-insulation/ page",
-            "Showcase before/after photos from portfolio",
-            "Target shed companies for partnerships",
-            "Highlight temperature control benefits for stored items",
-            "Include testimonials from shed owners/companies"
-          ]
-        },
-        {
-          "task": "Fix ROC license inconsistency",
-          "details": "Commercial page shows both ROC #335896 and #334041 - verify and fix",
-          "rationale": "Ensure consistent, accurate licensing information",
-          "implementation_ideas": [
-            "Audit all mentions of ROC number across site",
-            "Verify correct number with Chris",
-            "Update all instances to consistent format"
-          ]
-        }
-      ],
-      "future_enhancements": [
-        "Review and optimize remaining service pages",
-        "Enhance local SEO for each service area city",
-        "Create more interactive calculators and tools",
-        "Expand educational content with visual components"
-      ]
+      "note": "Current tasks now managed in separate tasks.json file for dynamic updates",
+      "reference": "See AI/memory/tasks.json for current priority tasks and deadlines"
     },
     "recent_updates": {
+      "2025-06-19-task-system": {
+        "task": "Created separate task management system",
+        "status": "completed",
+        "changes": [
+          "Created AI/memory/tasks.json for dynamic task tracking",
+          "Updated main memory to reference task system",
+          "Added current priority tasks including tradeshow page (July 12 deadline)",
+          "Added air duct cleaning service page requirement",
+          "Separated dynamic task content from static company information"
+        ]
+      },
       "2025-06-01-services": {
         "task": "Services page redesign and spacing fix",
         "status": "completed",
@@ -508,6 +486,7 @@
     "critical_reminders": {
       "before_any_changes": [
         "Check docs/CRITICAL-PATTERNS.md for common pitfalls",
+        "Load and review AI/memory/tasks.json for current priorities",
         "Verify layout is 'base.njk' not 'layouts/base.njk'",
         "Ensure pageClass is set for custom styling",
         "Use existing components instead of creating inline content",
