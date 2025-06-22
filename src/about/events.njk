@@ -21,6 +21,26 @@ keywords: "Arizona home shows, insulation events Phoenix, Maricopa County home s
         <div class="upcoming-events">
             <h2>Upcoming Events</h2>
             
+            <div class="event-card featured urgent">
+                <div class="event-date">
+                    <div class="month">JUL</div>
+                    <div class="days">11-13</div>
+                    <div class="year">2025</div>
+                </div>
+                <div class="event-details">
+                    <h3>Phoenix Home & Garden Show 2025</h3>
+                    <p class="event-location">📍 Phoenix Convention Center</p>
+                    <p class="event-description">Don't miss Arizona's premier summer home show! Visit our booth for live spray foam demonstrations, exclusive show discounts, and expert consultations on beating the Arizona heat.</p>
+                    <div class="event-features">
+                        <span class="feature">Live Demos</span>
+                        <span class="feature">15% Off Show Special</span>
+                        <span class="feature">Free Attic Inspections</span>
+                        <span class="feature">Air Duct Cleaning Deals</span>
+                    </div>
+                    <a href="/events/home-garden-show-2025/" class="event-link featured-link">Get Show Discounts & Details →</a>
+                </div>
+            </div>
+
             <div class="event-card featured">
                 <div class="event-date">
                     <div class="month">JAN</div>
@@ -250,6 +270,33 @@ keywords: "Arizona home shows, insulation events Phoenix, Maricopa County home s
     border: 2px solid var(--primary);
 }
 
+/* Special styling for the urgent July show */
+.event-card.urgent {
+    background: linear-gradient(135deg, var(--surface-dark) 0%, rgba(239, 68, 68, 0.1) 100%);
+    border: 2px solid #ef4444;
+    position: relative;
+    animation: glow-urgent 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow-urgent {
+    from { box-shadow: 0 0 20px rgba(239, 68, 68, 0.3); }
+    to { box-shadow: 0 0 30px rgba(239, 68, 68, 0.5); }
+}
+
+.event-card.urgent::before {
+    content: '🔥 COMING SOON';
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    z-index: 2;
+}
+
 .event-date {
     background: var(--primary);
     color: var(--background);
@@ -257,6 +304,10 @@ keywords: "Arizona home shows, insulation events Phoenix, Maricopa County home s
     border-radius: 8px;
     text-align: center;
     min-width: 100px;
+}
+
+.event-card.urgent .event-date {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
 }
 
 .event-date .month {
@@ -284,6 +335,10 @@ keywords: "Arizona home shows, insulation events Phoenix, Maricopa County home s
     margin-bottom: 10px;
 }
 
+.event-card.urgent .event-details h3 {
+    color: #ef4444;
+}
+
 .event-location {
     color: var(--secondary);
     margin-bottom: 10px;
@@ -306,6 +361,12 @@ keywords: "Arizona home shows, insulation events Phoenix, Maricopa County home s
     border: 1px solid var(--primary);
 }
 
+.event-card.urgent .feature {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    border-color: #ef4444;
+}
+
 .event-link {
     color: var(--primary);
     font-weight: bold;
@@ -315,6 +376,22 @@ keywords: "Arizona home shows, insulation events Phoenix, Maricopa County home s
 
 .event-link:hover {
     color: var(--secondary);
+}
+
+.featured-link {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white !important;
+    padding: 12px 25px;
+    border-radius: 25px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.featured-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(239, 68, 68, 0.4);
+    color: white !important;
 }
 
 .past-events {
