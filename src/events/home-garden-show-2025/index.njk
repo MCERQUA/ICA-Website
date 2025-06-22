@@ -1,0 +1,327 @@
+---
+layout: base.njk
+title: "Meet ICA at the Home & Garden Show 2025 | July 11-13 | Insulation Contractors of Arizona"
+description: "Visit Insulation Contractors of Arizona at the Phoenix Home & Garden Show July 11-13, 2025. Get exclusive show discounts, free estimates, and expert insulation advice for your Arizona home."
+permalink: "/events/home-garden-show-2025/"
+pageClass: "home-garden-show-page"
+additionalCss: 
+  - "/css/events.css"
+
+# Hero Section Variables
+heroTitle: "See You at the Home & Garden Show!"
+heroSubtitle: "July 11-13, 2025 | Phoenix | Visit Our Booth for Exclusive Show Discounts"
+ctaPrimary: "Get Show Discount"
+ctaPrimaryLink: "#show-form"
+
+# SEO and Social
+canonical: "https://insulationcontractorsofarizona.com/events/home-garden-show-2025/"
+ogTitle: "Meet ICA at Phoenix Home & Garden Show 2025 - Exclusive Discounts"
+ogDescription: "Join us July 11-13 at the Phoenix Home & Garden Show. Get exclusive insulation discounts, free estimates, and expert advice for Arizona homes."
+ogImage: "/images/ica-tradeshow-booth.jpg"
+---
+
+{% include 'sections/hero.njk' %}
+
+<!-- Show Information Section -->
+<section class="show-info-section">
+  <div class="container">
+    <div class="show-info-grid">
+      <div class="show-details">
+        <h2>Event Details</h2>
+        <div class="event-card">
+          <div class="event-header">
+            <h3>Phoenix Home & Garden Show 2025</h3>
+            <div class="event-badge">3 Days Only</div>
+          </div>
+          <div class="event-details">
+            <div class="detail-item">
+              <strong>Dates:</strong> July 11-13, 2025
+            </div>
+            <div class="detail-item">
+              <strong>Hours:</strong> 
+              <ul>
+                <li>Friday: 12:00 PM - 8:00 PM</li>
+                <li>Saturday: 10:00 AM - 8:00 PM</li>
+                <li>Sunday: 10:00 AM - 6:00 PM</li>
+              </ul>
+            </div>
+            <div class="detail-item">
+              <strong>Location:</strong> Phoenix Convention Center
+            </div>
+            <div class="detail-item">
+              <strong>Our Booth:</strong> Come find us - we'll be showcasing spray foam insulation demos!
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="show-highlights">
+        <h2>What to Expect at Our Booth</h2>
+        <div class="highlights-grid">
+          <div class="highlight-card">
+            <div class="highlight-icon">🎯</div>
+            <h4>Live Spray Foam Demos</h4>
+            <p>See how spray foam insulation works and why it's perfect for Arizona's extreme heat.</p>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">💰</div>
+            <h4>Exclusive Show Discounts</h4>
+            <p>Special pricing available only for show attendees - save big on your insulation project!</p>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">📋</div>
+            <h4>Free Consultations</h4>
+            <p>Get expert advice from Chris Kuhn and our certified team about your home's insulation needs.</p>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">🏆</div>
+            <h4>Award-Winning Team</h4>
+            <p>Meet our BBB Business Ethics Award nominated team serving Arizona since 2004.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lead Capture Form Section -->
+<section class="show-form-section" id="show-form">
+  <div class="container">
+    <div class="form-container">
+      <div class="form-header">
+        <h2>Get Your Exclusive Show Discount</h2>
+        <p>Fill out this form to receive your special Home & Garden Show pricing and schedule your free consultation!</p>
+        <div class="urgency-banner">
+          <span class="urgency-icon">⏰</span>
+          <strong>Limited Time:</strong> Show discounts valid through July 31, 2025
+        </div>
+      </div>
+      
+      <form class="show-lead-form" name="home-garden-show-2025" method="POST" data-netlify="true" action="/confirmation/">
+        <input type="hidden" name="form-name" value="home-garden-show-2025">
+        <input type="hidden" name="source" value="Home Garden Show 2025">
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name *</label>
+            <input type="text" id="firstName" name="firstName" required>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name *</label>
+            <input type="text" id="lastName" name="lastName" required>
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="address">Home Address</label>
+          <input type="text" id="address" name="address" placeholder="Street Address, City, AZ">
+        </div>
+        
+        <div class="form-group">
+          <label for="projectType">What type of insulation project interests you? *</label>
+          <select id="projectType" name="projectType" required>
+            <option value="">Select your project type</option>
+            <option value="Attic Insulation">Attic Insulation</option>
+            <option value="Whole Home Insulation">Whole Home Insulation</option>
+            <option value="Crawl Space Insulation">Crawl Space Insulation</option>
+            <option value="Wall Insulation">Wall Insulation</option>
+            <option value="Commercial Project">Commercial Project</option>
+            <option value="Shed/Outbuilding">Shed/Outbuilding Insulation</option>
+            <option value="Not Sure">Not Sure - Need Consultation</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="timeline">When are you looking to complete this project?</label>
+          <select id="timeline" name="timeline">
+            <option value="">Select timeline</option>
+            <option value="ASAP">As soon as possible</option>
+            <option value="Within 30 days">Within 30 days</option>
+            <option value="Within 90 days">Within 90 days</option>
+            <option value="This fall/winter">This fall/winter</option>
+            <option value="Next year">Next year</option>
+            <option value="Just gathering information">Just gathering information</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="comments">Questions or Additional Information</label>
+          <textarea id="comments" name="comments" rows="4" placeholder="Tell us about your home, any specific concerns, or questions you have..."></textarea>
+        </div>
+        
+        <div class="form-group checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" name="newsletter" value="yes">
+            <span class="checkmark"></span>
+            Yes, I'd like to receive energy-saving tips and seasonal maintenance reminders
+          </label>
+        </div>
+        
+        <button type="submit" class="submit-btn">
+          <span class="btn-text">Get My Show Discount & Free Estimate</span>
+          <span class="btn-icon">→</span>
+        </button>
+        
+        <div class="form-footer">
+          <p>By submitting this form, you agree to be contacted by Insulation Contractors of Arizona about your project. We respect your privacy and never share your information.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Show Exclusive Offers Section -->
+<section class="show-offers-section">
+  <div class="container">
+    <h2>Exclusive Home & Garden Show Offers</h2>
+    <div class="offers-grid">
+      <div class="offer-card featured">
+        <div class="offer-badge">Show Special</div>
+        <h3>Free Attic Inspection</h3>
+        <div class="offer-value">$150 Value</div>
+        <p>Complete thermal imaging inspection of your attic to identify energy loss areas.</p>
+        <ul>
+          <li>Professional thermal imaging</li>
+          <li>Written assessment report</li>
+          <li>R-value recommendations</li>
+          <li>Energy savings projections</li>
+        </ul>
+      </div>
+      
+      <div class="offer-card">
+        <div class="offer-badge">Limited Time</div>
+        <h3>Show Discount</h3>
+        <div class="offer-value">15% Off</div>
+        <p>Save 15% on any residential insulation project contracted at the show.</p>
+        <ul>
+          <li>Valid on all insulation types</li>
+          <li>No project size minimum</li>
+          <li>Contract must be signed at show</li>
+          <li>Work completed by Sept 30, 2025</li>
+        </ul>
+      </div>
+      
+      <div class="offer-card">
+        <div class="offer-badge">Bonus</div>
+        <h3>Air Duct Cleaning Add-On</h3>
+        <div class="offer-value">50% Off</div>
+        <p>Add our new air duct cleaning service to any insulation project.</p>
+        <ul>
+          <li>Complete duct system cleaning</li>
+          <li>Improves indoor air quality</li>
+          <li>Enhances HVAC efficiency</li>
+          <li>Perfect with new insulation</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="offer-cta">
+      <p><strong>These offers are only available to Home & Garden Show attendees and must be claimed by July 31, 2025.</strong></p>
+      <a href="#show-form" class="cta-button">Claim Your Discount Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- Why Visit Us Section -->
+<section class="why-visit-section">
+  <div class="container">
+    <h2>Why Visit Insulation Contractors of Arizona?</h2>
+    <div class="reasons-grid">
+      <div class="reason-item">
+        <div class="reason-number">20+</div>
+        <h4>Years in Arizona</h4>
+        <p>Serving the Valley since 2004 with deep understanding of Arizona's extreme climate challenges.</p>
+      </div>
+      <div class="reason-item">
+        <div class="reason-number">A+</div>
+        <h4>BBB Rating</h4>
+        <p>Better Business Bureau A+ rating and nominated for 2025 Business Ethics Award.</p>
+      </div>
+      <div class="reason-item">
+        <div class="reason-number">160°F</div>
+        <h4>Extreme Heat Specialists</h4>
+        <p>Proven solutions for Arizona attics that reach 160°F+ in summer heat.</p>
+      </div>
+      <div class="reason-item">
+        <div class="reason-number">40%</div>
+        <h4>Energy Savings</h4>
+        <p>Customers typically see 40-60% reduction in cooling costs with our insulation solutions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Information -->
+<section class="show-contact-section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Can't Make It to the Show?</h3>
+        <p>No problem! Contact us directly for the same great service and competitive pricing.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <strong>Phone:</strong> <a href="tel:623-241-1939">(623) 241-1939</a>
+          </div>
+          <div class="contact-item">
+            <strong>Email:</strong> <a href="mailto:insulationcontractorsofaz@gmail.com">insulationcontractorsofaz@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <strong>Service Areas:</strong> Phoenix, Glendale, Gilbert, Chandler, Scottsdale, Tempe, Mesa, and all surrounding areas
+          </div>
+        </div>
+      </div>
+      <div class="emergency-contact">
+        <h3>Summer Emergency Service</h3>
+        <p>AC failed? Attic too hot? We offer emergency insulation services during Arizona's brutal summer months.</p>
+        <a href="tel:623-241-1939" class="emergency-btn">Call for Emergency Service</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Insulation Contractors of Arizona at Phoenix Home & Garden Show 2025",
+  "description": "Visit ICA at the Phoenix Home & Garden Show for exclusive insulation discounts, live demonstrations, and expert consultations.",
+  "startDate": "2025-07-11T12:00:00-07:00",
+  "endDate": "2025-07-13T18:00:00-07:00",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "location": {
+    "@type": "Place",
+    "name": "Phoenix Convention Center",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Phoenix",
+      "addressRegion": "AZ",
+      "addressCountry": "US"
+    }
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "Insulation Contractors of Arizona LLC",
+    "url": "https://insulationcontractorsofarizona.com",
+    "telephone": "623-241-1939"
+  },
+  "offers": {
+    "@type": "Offer",
+    "name": "Home & Garden Show Special Discounts",
+    "description": "15% off insulation projects, free attic inspections, and discounted air duct cleaning",
+    "validFrom": "2025-07-11",
+    "validThrough": "2025-07-31"
+  }
+}
+</script>
