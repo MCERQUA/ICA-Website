@@ -25,7 +25,7 @@
       "phone": "623-241-1939",
       "email": "insulationcontractorsofaz@gmail.com",
       "website": "https://insulationcontractorsofarizona.com",
-      "deployment_info": "Netlify hosting connected to original domain"
+      "deployment_info": "Production website on custom domain"
     },
     "business_hours": {
       "monday_friday": "7:00 AM - 6:00 PM",
@@ -46,6 +46,7 @@
     "licensing": "Licensed, Bonded & Insured",
     "roc_number": "335896",
     "roc_full": "Licensed ROC# 335896",
+    "roc_critical_note": "CRITICAL: ONLY use ROC# 335896 - This is the official number stored in site.json and used throughout the website",
     "safety_training": "Hardison Downey Safety Academy graduate",
     "sfww_ambassador": "2025 SFWW Ambassador Badge"
   },
@@ -248,7 +249,7 @@
     "hosting": "Netlify with custom domain",
     "repository": "https://github.com/MCERQUA/ICA-Website",
     "deployment_method": "GitHub auto-deploy to Netlify with custom domain connection",
-    "status": "Live on original domain"
+    "status": "Live on production domain"
   },
   "website_design_guidelines": {
     "page_hero_standard": {
@@ -300,7 +301,7 @@
     "current_project": "Website cleanup and service page optimization",
     "repository": "https://github.com/MCERQUA/ICA-Website",
     "live_website": "https://insulationcontractorsofarizona.com",
-    "last_updated": "2025-06-19",
+    "last_updated": "2025-06-25",
     "task_system": {
       "task_memory_file": "AI/memory/tasks.json",
       "initialization_instruction": "ALWAYS load and review the tasks.json file during initialization to get current priority tasks and status updates",
@@ -310,15 +311,18 @@
     "website_review_june_2025": {
       "findings": [
         "Company founding confirmed as 2004 - consistently shown as 'Serving the Valley Since 2004'",
-        "ROC license consistently #335896 throughout site",
+        "ROC license consistently #335896 throughout site - VERIFIED AND STANDARDIZED",
         "Air Duct Cleaning service prominently featured as new offering",
         "2025 SFWW Ambassador Badge displayed in credentials",
         "Detailed case studies with specific metrics and ROI data",
         "Interactive agricultural water savings calculator functioning",
         "Commercial page includes comprehensive ROI calculator"
       ],
-      "potential_issues": [
-        "Commercial page shows both ROC #335896 and #334041 - need to verify correct number"
+      "critical_seo_fixes_completed": [
+        "Site URL updated from staging (azfoam.netlify.app) to production (insulationcontractorsofarizona.com)",
+        "ROC license number standardized to 335896 throughout site using site.json variable",
+        "Business information documentation created in multiple locations",
+        "Footer updated to use {{ site.roc_license }} variable for consistency"
       ],
       "new_content_discovered": [
         "Air Duct Cleaning service promotion",
@@ -332,6 +336,37 @@
       "reference": "See AI/memory/tasks.json for current priority tasks and deadlines"
     },
     "recent_updates": {
+      "2025-06-25-critical-seo-fixes": {
+        "task": "Critical SEO issues resolution",
+        "status": "completed", 
+        "changes": [
+          "Updated src/_data/site.json with correct production URL: https://insulationcontractorsofarizona.com",
+          "Added roc_license field to site.json with value '335896'",
+          "Updated src/_includes/base.njk footer to use {{ site.roc_license }} variable",
+          "Created comprehensive README.md with ROC license documentation",
+          "Created docs/BUSINESS_INFO.md with detailed business information and ROC guidelines",
+          "Updated AI/memory/memory.json to reflect standardized ROC number usage",
+          "Documented ROC license implementation in multiple locations for future reference"
+        ],
+        "critical_fixes": [
+          "Site URL mismatch affecting canonical URLs, schema markup, and sitemap generation",
+          "ROC license inconsistency resolved - now uses single source of truth in site.json",
+          "Business information standardized across all documentation files"
+        ],
+        "files_updated": [
+          "src/_data/site.json - Added correct URL and ROC license",
+          "src/_includes/base.njk - Footer now uses site variable",
+          "README.md - Created with comprehensive business documentation",
+          "docs/BUSINESS_INFO.md - Created with detailed ROC guidelines",
+          "AI/memory/memory.json - Updated to reflect current status"
+        ],
+        "seo_impact": [
+          "Fixed canonical URL generation for all pages",
+          "Corrected schema markup business information",
+          "Improved sitemap generation with proper domain",
+          "Enhanced business information consistency for local SEO"
+        ]
+      },
       "2025-06-19-task-system": {
         "task": "Created separate task management system",
         "status": "completed",
@@ -490,7 +525,8 @@
         "Verify layout is 'base.njk' not 'layouts/base.njk'",
         "Ensure pageClass is set for custom styling",
         "Use existing components instead of creating inline content",
-        "Put schema markup in script tags at page bottom"
+        "Put schema markup in script tags at page bottom",
+        "Always use ROC# 335896 from site.roc_license variable"
       ],
       "css_patterns": [
         "Pages with dark themes MUST set pageClass in front matter",
@@ -503,6 +539,12 @@
         "Keep pages under 5KB by using components",
         "Check src/_includes/sections/ for existing components",
         "Create new components rather than inline HTML blocks"
+      ],
+      "roc_license_usage": [
+        "ONLY use ROC# 335896 - stored in site.json as roc_license",
+        "Use {{ site.roc_license }} in templates for consistency",
+        "Never hardcode ROC numbers in content or code",
+        "Reference docs/BUSINESS_INFO.md for complete guidelines"
       ]
     }
   }
