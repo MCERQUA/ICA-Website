@@ -1,0 +1,505 @@
+<!-- Home & Garden Show 2025 Promotional Component -->
+<section class="home-garden-show-promo">
+  <div class="container">
+    <div class="show-promo-wrapper">
+      <!-- Left Content -->
+      <div class="show-promo-content">
+        <div class="show-dates-badge">
+          <span class="dates">July 11-13, 2025</span>
+          <span class="location">Phoenix Convention Center</span>
+        </div>
+        
+        <h2 class="show-title">
+          Visit Us at the <span class="highlight">Home & Garden Show</span>
+        </h2>
+        
+        <p class="show-description">
+          Join Insulation Contractors of Arizona at Phoenix's premier home improvement event! 
+          Experience live spray foam demonstrations, exclusive show discounts, and expert 
+          consultations for your insulation needs.
+        </p>
+        
+        <div class="show-features">
+          <div class="feature-item">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span>Booth #1247</span>
+          </div>
+          <div class="feature-item">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+            <span>Live Demos Daily</span>
+          </div>
+          <div class="feature-item">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+            </svg>
+            <span>Free Consultations</span>
+          </div>
+        </div>
+        
+        <div class="cta-buttons">
+          <a href="/events/home-garden-show-2025/" class="btn btn-primary">
+            <span>Event Details</span>
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+          <a href="/events/home-garden-show-2025/#lead-form" class="btn btn-secondary">
+            <span>Pre-Register for Exclusive Offers</span>
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 11l3 3L22 4"/>
+              <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+            </svg>
+          </a>
+        </div>
+        
+        <div class="show-offer">
+          <div class="offer-tag">Show Special</div>
+          <p class="offer-text">Save up to <strong>$500</strong> on whole-home insulation projects booked at the show!</p>
+        </div>
+      </div>
+      
+      <!-- Right Image -->
+      <div class="show-promo-image">
+        <div class="image-wrapper">
+          <img 
+            src="/images/home-garden-show-booth.jpg" 
+            alt="Insulation Contractors of Arizona booth at Home & Garden Show with spray foam demonstrations"
+            loading="lazy"
+          >
+          <div class="image-overlay">
+            <div class="demo-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polygon points="10 8 16 12 10 16 10 8"/>
+              </svg>
+              <span>Watch Live Demos</span>
+            </div>
+          </div>
+        </div>
+        <div class="floating-elements">
+          <div class="float-1"></div>
+          <div class="float-2"></div>
+          <div class="float-3"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.home-garden-show-promo {
+  position: relative;
+  padding: var(--spacing-xl) 0;
+  background: linear-gradient(135deg, #0A0A0A 0%, #1a1a1a 100%);
+  overflow: hidden;
+}
+
+.home-garden-show-promo::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,107,0,0.05) 0%, transparent 70%);
+  animation: pulse-glow 8s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-glow {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+  100% { transform: translate(-10%, -10%) scale(1.1); opacity: 0.8; }
+}
+
+.show-promo-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Content Section */
+.show-promo-content {
+  padding-right: var(--spacing-md);
+}
+
+.show-dates-badge {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, rgba(255,107,0,0.1) 0%, rgba(255,107,0,0.05) 100%);
+  border: 1px solid rgba(255,107,0,0.3);
+  border-radius: 0.75rem;
+  margin-bottom: var(--spacing-md);
+  backdrop-filter: blur(10px);
+}
+
+.show-dates-badge .dates {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.show-dates-badge .location {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.7);
+  margin-top: 0.25rem;
+}
+
+.show-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: var(--spacing-md);
+  line-height: 1.2;
+}
+
+.show-title .highlight {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #ff8c42 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.show-description {
+  font-size: 1.125rem;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Features */
+.show-features {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 2rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,107,0,0.3);
+  transform: translateY(-2px);
+}
+
+.feature-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--color-primary);
+}
+
+.feature-item span {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.9);
+}
+
+/* CTA Buttons */
+.cta-buttons {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.75rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #ff8c42 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(255,107,0,0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255,107,0,0.4);
+}
+
+.btn-secondary {
+  background: rgba(255,255,255,0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: rgba(255,107,0,0.5);
+  transform: translateY(-2px);
+}
+
+.btn-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover .btn-icon {
+  transform: translateX(3px);
+}
+
+/* Show Offer */
+.show-offer {
+  padding: 1.25rem;
+  background: linear-gradient(135deg, rgba(255,107,0,0.1) 0%, rgba(255,107,0,0.05) 100%);
+  border: 1px solid rgba(255,107,0,0.3);
+  border-radius: 0.75rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.show-offer::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, var(--color-primary), #ff8c42, var(--color-primary));
+  border-radius: 0.75rem;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+  animation: gradient-rotate 3s linear infinite;
+}
+
+@keyframes gradient-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.show-offer:hover::before {
+  opacity: 0.5;
+}
+
+.offer-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.offer-text {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.9);
+  margin: 0;
+}
+
+.offer-text strong {
+  color: var(--color-primary);
+  font-size: 1.25rem;
+}
+
+/* Image Section */
+.show-promo-image {
+  position: relative;
+}
+
+.image-wrapper {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  background: linear-gradient(135deg, rgba(255,107,0,0.1) 0%, rgba(255,107,0,0.05) 100%);
+  padding: 0.25rem;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.75rem;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.7) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--spacing-md);
+}
+
+.image-wrapper:hover .image-overlay {
+  opacity: 1;
+}
+
+.demo-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 2rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.demo-badge svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Floating Elements */
+.floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.float-1, .float-2, .float-3 {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,107,0,0.3) 0%, transparent 70%);
+  filter: blur(40px);
+}
+
+.float-1 {
+  width: 200px;
+  height: 200px;
+  top: -100px;
+  right: -50px;
+  animation: float-1 15s ease-in-out infinite;
+}
+
+.float-2 {
+  width: 150px;
+  height: 150px;
+  bottom: -75px;
+  left: -50px;
+  animation: float-2 20s ease-in-out infinite;
+}
+
+.float-3 {
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  right: 10%;
+  animation: float-3 12s ease-in-out infinite;
+}
+
+@keyframes float-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-30px, 30px) scale(1.1); }
+}
+
+@keyframes float-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, -30px) scale(0.9); }
+}
+
+@keyframes float-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-20px, -20px) scale(1.2); }
+  66% { transform: translate(20px, 20px) scale(0.8); }
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .show-promo-wrapper {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+  
+  .show-promo-content {
+    padding-right: 0;
+  }
+  
+  .show-promo-image {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .show-features {
+    flex-direction: column;
+  }
+  
+  .feature-item {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .show-title {
+    font-size: 1.75rem;
+  }
+}
+</style>
