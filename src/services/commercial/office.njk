@@ -60,10 +60,36 @@ additionalCss:
   "name": "Office Building Insulation Services",
   "provider": {
     "@type": "LocalBusiness",
-    "name": "Insulation Contractors of Arizona",
-    "telephone": "623-241-1939"
+    "@id": "{{ site.url }}",
+    "name": "{{ site.name }}",
+    "telephone": "{{ site.phone }}",
+    "email": "{{ site.email }}",
+    "url": "{{ site.url }}",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Glendale",
+      "addressRegion": "AZ",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "{{ site.social.google }}",
+      "{{ site.social.yelp }}"
+    ]
   },
-  "areaServed": "Phoenix, AZ",
-  "description": "Professional office building insulation services. 30-40% energy savings, improved tenant comfort, LEED certification support."
+  "areaServed": [
+    "Phoenix, AZ",
+    "Glendale, AZ", 
+    "Gilbert, AZ",
+    "Chandler, AZ",
+    "Scottsdale, AZ",
+    "Tempe, AZ",
+    "Mesa, AZ"
+  ],
+  "description": "Professional office building insulation services. 30-40% energy savings, improved tenant comfort, LEED certification support.",
+  "offers": {
+    "@type": "Offer",
+    "name": "Office Building Insulation Installation",
+    "priceRange": "$1.50-$2.50 per sq ft"
+  }
 }
 </script>
