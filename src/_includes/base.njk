@@ -412,8 +412,8 @@
       "@type": "LocalBusiness",
       "name": "{{ site.name }}",
       "image": "/images-optimized/Insulation_Contractors_of_arizona_logo-original.webp",
-      "@id": "https://insulationcontractorsofarizona.com",
-      "url": "https://insulationcontractorsofarizona.com",
+      "@id": "{{ site.url }}",
+      "url": "{{ site.url }}",
       "telephone": "{{ site.phone }}",
       "email": "{{ site.email }}",
       "address": {
@@ -541,7 +541,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; {{ site.name }} {% set year = 2025 %}{{ year }}. All rights reserved. | ROC# 335896</p>
+                <p>&copy; {{ site.name }} {% set year = 2025 %}{{ year }}. All rights reserved. | ROC# {{ site.roc_license }}</p>
             </div>
         </div>
     </footer>
