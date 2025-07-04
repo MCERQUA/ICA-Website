@@ -11,298 +11,508 @@ excerpt: "Arizona families unknowingly breathe contaminated air in their homes e
 ---
 
 <style>
+/* Modern, clean design with proper contrast */
 .ica-hero {
-    background: linear-gradient(135deg, rgba(0,51,102,0.9), rgba(255,140,0,0.9));
+    background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
     color: white;
-    padding: 60px 40px;
+    padding: 80px 40px;
     text-align: center;
-    border-radius: 15px;
+    border-radius: 20px;
     margin: 40px 0;
     position: relative;
+    overflow: hidden;
+}
+
+.ica-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0,212,255,0.1) 0%, transparent 70%);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; }
 }
 
 .ica-hero h1 {
-    font-size: 2.8em;
-    font-weight: bold;
+    font-size: 3em;
+    font-weight: 800;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    color: white !important;
+    background: linear-gradient(135deg, #ffffff 0%, #00d4ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    z-index: 1;
     border-bottom: none !important;
 }
 
 .ica-hero .subtitle {
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin-bottom: 25px;
-    opacity: 0.95;
+    color: #b8e3ff;
+    position: relative;
+    z-index: 1;
 }
 
 .ica-hero .stats {
-    background: rgba(255,255,255,0.1);
-    padding: 20px;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(20px);
     margin-top: 25px;
     display: inline-block;
+    border: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    z-index: 1;
 }
 
 .ica-cta {
-    background: linear-gradient(135deg, #003366, #004080);
+    background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
     color: white;
-    padding: 30px;
-    border-radius: 15px;
-    margin: 40px 0;
+    padding: 50px;
+    border-radius: 20px;
+    margin: 60px 0;
     text-align: center;
-    border: 3px solid #ff8c00;
+    border: 1px solid rgba(0,212,255,0.3);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .ica-cta h3 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
-    color: #ff8c00 !important;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #00d4ff !important;
     border-bottom: none !important;
+    font-weight: 700;
 }
 
-.ica-cta button {
-    background: #ff8c00;
-    color: white;
+.ica-cta button, .ica-cta a.button {
+    background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+    color: #0a0a0a;
     border: none;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    border-radius: 8px;
+    padding: 18px 40px;
+    font-size: 1.1em;
+    border-radius: 50px;
     cursor: pointer;
-    margin-top: 15px;
+    margin-top: 20px;
     transition: all 0.3s ease;
     text-decoration: none;
     display: inline-block;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.ica-cta button:hover {
-    background: #e67e00;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+.ica-cta button:hover, .ica-cta a.button:hover {
+    background: linear-gradient(135deg, #00b8e6 0%, #0088bb 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,212,255,0.4);
 }
 
 .ica-highlight-box {
-    background: linear-gradient(135deg, #fff9e6, #ffed4e);
-    border-left: 5px solid #ff8c00;
-    padding: 25px;
-    margin: 30px 0;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    border-left: 5px solid #00d4ff;
+    padding: 30px;
+    margin: 40px 0;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    color: white;
 }
 
 .ica-highlight-box h4 {
-    color: #003366 !important;
-    font-size: 1.3em;
-    margin-bottom: 10px;
+    color: #00d4ff !important;
+    font-size: 1.4em;
+    margin-bottom: 15px;
     display: flex;
     align-items: center;
     border-bottom: none !important;
+    font-weight: 700;
 }
 
 .ica-highlight-box h4::before {
-    content: "💨";
-    margin-right: 10px;
+    content: "🌟";
+    margin-right: 15px;
+    font-size: 1.2em;
+}
+
+.ica-highlight-box p {
+    color: #e0e0e0;
+    line-height: 1.8;
+}
+
+.ica-highlight-box strong {
+    color: #ffffff;
 }
 
 .health-section {
-    background: #f8f9fa;
-    border-radius: 15px;
-    padding: 40px;
-    margin: 50px 0;
-    border-left: 5px solid #ff8c00;
+    background: #f5f7fa;
+    border-radius: 20px;
+    padding: 50px;
+    margin: 60px 0;
+    border-left: 5px solid #0099cc;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.health-section h3 {
+    color: #1a1a2e !important;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.health-section p {
+    color: #333333;
+    line-height: 1.8;
 }
 
 .health-header {
-    background: linear-gradient(135deg, #003366, #004080);
+    background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
     color: white !important;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
 }
 
 .health-header h2 {
     color: white !important;
     margin: 0 !important;
     border-bottom: none !important;
-    font-size: 1.8em;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
 }
 
 .health-icon {
-    background: #ff8c00;
-    color: white;
-    width: 50px;
-    height: 50px;
+    background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+    color: #0a0a0a;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5em;
-    margin-right: 15px;
+    font-size: 1.8em;
+    margin-right: 20px;
+    box-shadow: 0 4px 15px rgba(0,212,255,0.4);
 }
 
 .solution-steps {
     background: white;
-    padding: 25px;
-    border-radius: 10px;
-    margin: 20px 0;
-    border: 1px solid #e6f3ff;
+    padding: 35px;
+    border-radius: 15px;
+    margin: 25px 0;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
 }
 
 .solution-steps h4 {
-    color: #003366 !important;
-    margin-bottom: 15px;
-    font-size: 1.3em;
-    border-bottom: none !important;
+    color: #0f3460 !important;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+    font-weight: 700;
+    border-bottom: 2px solid #00d4ff !important;
+    padding-bottom: 10px;
+}
+
+.solution-steps ul li, .solution-steps ol li {
+    color: #333333;
+    margin-bottom: 12px;
+    line-height: 1.7;
+}
+
+.solution-steps strong {
+    color: #0f3460;
 }
 
 .ica-table {
     width: 100%;
-    border-collapse: collapse;
-    margin: 30px 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 40px 0;
     background: white;
-    border-radius: 10px;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
 .ica-table th {
-    background: linear-gradient(135deg, #003366, #004080);
+    background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
     color: white;
-    padding: 20px;
+    padding: 25px 20px;
     text-align: left;
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .ica-table td {
     padding: 20px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333333;
 }
 
 .ica-table tr:nth-child(even) {
-    background-color: #f8f9fa;
+    background-color: #f8f9fb;
 }
 
 .ica-table tr:hover {
-    background-color: #e6f3ff;
+    background-color: #e8f4f9;
+    transition: background-color 0.3s ease;
+}
+
+.ica-table tr:last-child td {
+    border-bottom: none;
 }
 
 .cost-highlight {
-    background: linear-gradient(135deg, #e6f3ff, #cce6ff);
-    border: 2px solid #ff8c00;
-    border-radius: 15px;
-    padding: 25px;
-    margin: 30px 0;
+    background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+    border: 2px solid #00d4ff;
+    border-radius: 20px;
+    padding: 35px;
+    margin: 40px 0;
+    color: white;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
 }
 
 .cost-highlight h4 {
-    color: #003366 !important;
-    font-size: 1.4em;
-    margin-bottom: 15px;
+    color: #00d4ff !important;
+    font-size: 1.6em;
+    margin-bottom: 20px;
     border-bottom: none !important;
+    font-weight: 700;
+}
+
+.cost-highlight p {
+    color: #e0e0e0;
+    line-height: 1.8;
+}
+
+.cost-highlight strong {
+    color: #ffffff;
+    font-weight: 700;
 }
 
 .ica-faq {
-    background: #f8f9fa;
-    padding: 40px;
-    border-radius: 15px;
-    margin: 50px 0;
+    background: #f5f7fa;
+    padding: 60px 40px;
+    border-radius: 20px;
+    margin: 60px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
 .ica-faq h2 {
-    color: #003366 !important;
+    color: #1a1a2e !important;
     text-align: center;
-    margin-bottom: 30px;
-    font-size: 2.2em;
+    margin-bottom: 40px;
+    font-size: 2.5em;
     border-bottom: none !important;
+    font-weight: 800;
 }
 
 .faq-item {
     background: white;
-    margin: 20px 0;
-    border-radius: 10px;
+    margin: 25px 0;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.12);
 }
 
 .faq-question {
-    background: linear-gradient(135deg, #003366, #004080);
+    background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
     color: white;
-    padding: 20px;
+    padding: 25px 30px;
     cursor: pointer;
-    font-weight: bold;
-    font-size: 1.1em;
+    font-weight: 700;
+    font-size: 1.15em;
+    transition: background 0.3s ease;
+    position: relative;
+}
+
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    font-size: 1.5em;
+    transition: transform 0.3s ease;
+}
+
+.faq-question:hover {
+    background: linear-gradient(135deg, #16486d 0%, #1d2a4a 100%);
+}
+
+.faq-question.active::after {
+    transform: translateY(-50%) rotate(45deg);
 }
 
 .faq-answer {
-    padding: 20px;
+    padding: 30px;
     display: none;
-    border-top: 2px solid #ff8c00;
+    border-top: 3px solid #00d4ff;
+    background: #fafbfc;
+}
+
+.faq-answer p {
+    color: #333333;
+    line-height: 1.8;
 }
 
 .ica-contact {
-    background: linear-gradient(135deg, #003366, #001a33);
+    background: linear-gradient(135deg, #0f3460 0%, #0a0a0a 100%);
     color: white;
-    padding: 60px 40px;
+    padding: 80px 40px;
     text-align: center;
-    border-radius: 15px;
-    margin: 50px 0;
+    border-radius: 20px;
+    margin: 60px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.ica-contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(0,212,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)" /></svg>');
+    opacity: 0.3;
 }
 
 .ica-contact h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #ff8c00 !important;
+    font-size: 2.8em;
+    margin-bottom: 25px;
+    background: linear-gradient(135deg, #ffffff 0%, #00d4ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     border-bottom: none !important;
+    font-weight: 800;
+    position: relative;
+    z-index: 1;
 }
 
 .ica-contact p {
     font-size: 1.2em;
-    margin-bottom: 30px;
-    opacity: 0.9;
+    margin-bottom: 40px;
+    color: #b8e3ff;
+    position: relative;
+    z-index: 1;
 }
 
 .contact-info {
     display: flex;
     justify-content: center;
-    gap: 40px;
-    margin: 40px 0;
+    gap: 30px;
+    margin: 50px 0;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
 }
 
 .contact-item {
-    background: rgba(255,255,255,0.1);
-    padding: 20px;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.08);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,212,255,0.3);
 }
 
 .contact-item h4 {
-    color: #ff8c00;
+    color: #00d4ff;
     margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: 700;
 }
 
-.ica-contact button {
-    background: white;
-    color: #003366;
+.contact-item p {
+    color: white;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+.ica-contact a.button {
+    background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+    color: #0a0a0a;
     border: none;
-    padding: 20px 40px;
-    font-size: 1.3em;
-    border-radius: 10px;
+    padding: 20px 50px;
+    font-size: 1.2em;
+    border-radius: 50px;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 800;
     transition: all 0.3s ease;
     text-decoration: none;
     display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 1;
 }
 
-.ica-contact button:hover {
-    background: #ff8c00;
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+.ica-contact a.button:hover {
+    background: linear-gradient(135deg, #00b8e6 0%, #0088bb 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0,212,255,0.5);
 }
 
+/* Base content styling for enhanced readability */
+article p {
+    color: #e0e0e0;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+}
+
+article ul, article ol {
+    color: #e0e0e0;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+    padding-left: 2rem;
+}
+
+article li {
+    margin-bottom: 0.5rem;
+}
+
+article a {
+    color: #00d4ff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+article a:hover {
+    color: #00ffff;
+    border-bottom-color: #00ffff;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+}
+
+/* Ensure proper spacing between sections */
+section + section,
+div[class*="ica-"] + div[class*="ica-"],
+.health-section + .health-section {
+    margin-top: 3rem;
+}
+
+/* Mobile Responsive Styles */
 @media (max-width: 768px) {
     .ica-hero {
         padding: 40px 20px;
@@ -327,6 +537,19 @@ excerpt: "Arizona families unknowingly breathe contaminated air in their homes e
     
     .health-section {
         padding: 20px;
+    }
+    
+    .ica-cta, .ica-highlight-box, .cost-highlight {
+        padding: 25px 20px;
+    }
+    
+    .faq-question {
+        padding: 20px;
+        font-size: 1.05em;
+    }
+    
+    .faq-question::after {
+        right: 20px;
     }
 }
 </style>
@@ -643,22 +866,26 @@ function toggleFAQ(element) {
     const answer = element.nextElementSibling;
     const allAnswers = document.querySelectorAll('.faq-answer');
     const allQuestions = document.querySelectorAll('.faq-question');
+    const isOpen = answer.style.display === 'block';
     
-    // Close all other FAQs
+    // Close all FAQs
     allAnswers.forEach((ans, index) => {
-        if (ans !== answer) {
-            ans.style.display = 'none';
-            allQuestions[index].style.backgroundColor = '#003366';
-        }
+        ans.style.display = 'none';
+        allQuestions[index].classList.remove('active');
+        allQuestions[index].querySelector('::after') && (allQuestions[index].style.setProperty('--rotation', '0deg'));
     });
     
-    // Toggle current FAQ
-    if (answer.style.display === 'block') {
-        answer.style.display = 'none';
-        element.style.backgroundColor = '#003366';
-    } else {
+    // Toggle current FAQ if it wasn't open
+    if (!isOpen) {
         answer.style.display = 'block';
-        element.style.backgroundColor = '#004080';
+        element.classList.add('active');
+        element.style.setProperty('--rotation', '45deg');
+        
+        // Smooth scroll to FAQ if needed
+        const rect = element.getBoundingClientRect();
+        if (rect.top < 100) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+        }
     }
 }
 
