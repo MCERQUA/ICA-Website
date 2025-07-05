@@ -181,38 +181,50 @@ layout: "base.njk"
     font-weight: bold;
 }
 
+.climate-factors {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 30px 0;
+    border-left: 5px solid #00d4ff;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    color: white;
+}
+
 .benefits-section {
-    background: white;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
     padding: 30px;
     border-radius: 15px;
     margin: 25px 0;
-    border: 2px solid #e6f3ff;
-    color: #333333;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    border: 2px solid #00d4ff;
+    color: white;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
 }
 
 .benefits-section h4 {
-    color: #0f3460 !important;
+    color: white !important;
     margin-bottom: 20px;
     font-size: 1.4em;
     font-weight: 700;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3), 0 0 15px rgba(0,212,255,0.4);
 }
 
 .cost-highlight {
-    background: linear-gradient(135deg, #e6f3ff 0%, #cce6ff 100%);
+    background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
     border: 3px solid #00d4ff;
     border-radius: 20px;
     padding: 35px;
     margin: 40px 0;
-    color: #333333;
-    box-shadow: 0 8px 25px rgba(0,212,255,0.2);
+    color: white;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
 }
 
 .cost-highlight h4 {
-    color: #0f3460 !important;
+    color: #00d4ff !important;
     font-size: 1.6em;
     margin-bottom: 20px;
     font-weight: 700;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 /* Table styling with modern design */
@@ -421,7 +433,7 @@ layout: "base.njk"
     color: #0a0a0a !important;
 }
 
-/* Ensure proper text color in all contexts */
+/* CRITICAL TEXT VISIBILITY FIXES - No more cyan on white, grey on grid */
 article a {
     color: #00d4ff;
     text-decoration: none;
@@ -433,27 +445,31 @@ article a:hover {
     text-decoration: underline;
 }
 
+/* ALL headings on grid background must be white with glow */
 article h2, article h3 {
-    color: #0f3460;
+    color: white !important;
     margin: 40px 0 25px 0;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5), 0 0 20px rgba(0,212,255,0.4);
+    font-weight: 700;
 }
 
 article h2 {
     font-size: 2.5em;
-    font-weight: 700;
     border-bottom: 3px solid #00d4ff;
     padding-bottom: 15px;
 }
 
 article h3 {
     font-size: 1.8em;
-    font-weight: 600;
+    font-weight: 700;
 }
 
+/* ALL body text must be white on grid background */
 article p, article li {
-    color: #333333;
+    color: white !important;
     line-height: 1.8;
     font-size: 1.1em;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
 article ul, article ol {
@@ -463,11 +479,13 @@ article ul, article ol {
 
 article li {
     margin-bottom: 12px;
+    color: white !important;
 }
 
 article strong {
-    color: #0f3460;
+    color: #00d4ff !important;
     font-weight: 700;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
 /* Mobile Responsive */
@@ -545,8 +563,8 @@ article strong {
 ## Understanding Commercial Building Thermal Challenges
 
 <div class="climate-factors">
-    <h3 style="color: #0f3460; margin-bottom: 20px; font-weight: 700;">Commercial vs. Residential: Why Standard Solutions Fail</h3>
-    <p style="color: #333333; line-height: 1.8;">Commercial buildings in Arizona face unique thermal challenges that residential solutions simply cannot address. The scale, construction methods, and operational requirements create complex problems requiring specialized expertise and materials.</p>
+    <h3 style="color: white !important; margin-bottom: 20px; font-weight: 700; text-shadow: 0 2px 8px rgba(0,0,0,0.5), 0 0 15px rgba(0,212,255,0.4);">Commercial vs. Residential: Why Standard Solutions Fail</h3>
+    <p style="color: white !important; line-height: 1.8; text-shadow: 0 1px 3px rgba(0,0,0,0.3);">Commercial buildings in Arizona face unique thermal challenges that residential solutions simply cannot address. The scale, construction methods, and operational requirements create complex problems requiring specialized expertise and materials.</p>
 </div>
 
 <div class="highlight-box">
@@ -621,8 +639,8 @@ article strong {
 ## Commercial-Grade Materials and Systems
 
 <div class="climate-factors">
-    <h3 style="color: #0f3460; margin-bottom: 20px; font-weight: 700;">Arizona-Specific Material Selection</h3>
-    <p style="color: #333333; line-height: 1.8;">Desert climate commercial insulation requires materials and systems specifically engineered for extreme temperature variations, UV exposure, and thermal cycling unique to Arizona's commercial environment.</p>
+    <h3 style="color: white !important; margin-bottom: 20px; font-weight: 700; text-shadow: 0 2px 8px rgba(0,0,0,0.5), 0 0 15px rgba(0,212,255,0.4);">Arizona-Specific Material Selection</h3>
+    <p style="color: white !important; line-height: 1.8; text-shadow: 0 1px 3px rgba(0,0,0,0.3);">Desert climate commercial insulation requires materials and systems specifically engineered for extreme temperature variations, UV exposure, and thermal cycling unique to Arizona's commercial environment.</p>
 </div>
 
 <table class="comparison-table">
@@ -671,8 +689,8 @@ article strong {
 ## Commercial Project Implementation
 
 <div class="climate-factors">
-    <h3 style="color: #0f3460; margin-bottom: 20px; font-weight: 700;">Business-Focused Execution</h3>
-    <p style="color: #333333; line-height: 1.8;">Commercial insulation projects require sophisticated project management that minimizes business disruption while ensuring optimal performance. Our approach prioritizes operational continuity alongside technical excellence.</p>
+    <h3 style="color: white !important; margin-bottom: 20px; font-weight: 700; text-shadow: 0 2px 8px rgba(0,0,0,0.5), 0 0 15px rgba(0,212,255,0.4);">Business-Focused Execution</h3>
+    <p style="color: white !important; line-height: 1.8; text-shadow: 0 1px 3px rgba(0,0,0,0.3);">Commercial insulation projects require sophisticated project management that minimizes business disruption while ensuring optimal performance. Our approach prioritizes operational continuity alongside technical excellence.</p>
 </div>
 
 <div class="cost-highlight">
