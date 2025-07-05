@@ -476,13 +476,13 @@ excerpt: "Arizona families unknowingly breathe contaminated air in their homes e
 
 /* Base content styling for enhanced readability */
 article p {
-    color: #e0e0e0;
+    color: white;
     line-height: 1.8;
     margin-bottom: 1.2rem;
 }
 
 article ul, article ol {
-    color: #e0e0e0;
+    color: white;
     line-height: 1.8;
     margin-bottom: 1.2rem;
     padding-left: 2rem;
@@ -490,6 +490,7 @@ article ul, article ol {
 
 article li {
     margin-bottom: 0.5rem;
+    color: white;
 }
 
 article a {

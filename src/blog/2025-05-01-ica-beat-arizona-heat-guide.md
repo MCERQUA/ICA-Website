@@ -1,153 +1,982 @@
 ---
-layout: post.njk
+layout: base.njk
 title: "Beat the Arizona Heat: Complete Guide to Home Insulation Types & R-Values"
 date: 2025-05-01
 author: "Christopher Kuhn"
 excerpt: "Discover how different insulation types perform in Arizona's extreme climate. Learn about R-values, material comparisons, and expert recommendations from 20+ years of desert experience."
 tags: ["insulation", "arizona", "r-values", "energy-efficiency", "spray-foam", "fiberglass"]
+featured: true
+description: "Comprehensive guide to insulation types and R-values for Arizona's extreme climate. Expert comparisons of spray foam, fiberglass, cellulose, and radiant barriers with cost analysis and performance data."
+keywords: "Arizona insulation types, R-values desert climate, spray foam vs fiberglass Arizona, insulation comparison Phoenix, best insulation Arizona heat"
 ---
+
+<style>
+/* Modern Arizona insulation guide styling - Professional blue/cyan palette */
+.heat-guide-hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+    color: white;
+    padding: 80px 40px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 40px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.heat-guide-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0,212,255,0.1) 0%, transparent 70%);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; }
+}
+
+.heat-guide-hero h1 {
+    font-size: 3em;
+    font-weight: 800;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #ffffff 0%, #00d4ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    z-index: 1;
+    border-bottom: none !important;
+}
+
+.heat-guide-hero .subtitle {
+    font-size: 1.3em;
+    margin-bottom: 25px;
+    color: #b8e3ff;
+    position: relative;
+    z-index: 1;
+}
+
+.heat-guide-hero .expert-badge {
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(20px);
+    margin-top: 25px;
+    display: inline-block;
+    border: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.climate-challenge {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    border-left: 5px solid #00d4ff;
+    padding: 30px;
+    margin: 40px 0;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    color: white;
+}
+
+.climate-challenge h2 {
+    color: #00d4ff !important;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    border-bottom: none !important;
+    font-weight: 700;
+}
+
+.climate-factors {
+    background: #f5f7fa;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 30px 0;
+    border-left: 5px solid #0099cc;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.climate-factors h3 {
+    color: #1a1a2e !important;
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    border-bottom: none !important;
+    font-weight: 700;
+}
+
+.climate-factors p, .climate-factors ul, .climate-factors li {
+    color: #333333 !important;
+    line-height: 1.8;
+}
+
+.climate-factors strong {
+    color: #0f3460 !important;
+}
+
+.rvalue-section {
+    background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+    color: white !important;
+    padding: 50px 40px;
+    border-radius: 20px;
+    margin: 60px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.rvalue-section h2 {
+    color: #00d4ff !important;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    border-bottom: none !important;
+    font-weight: 800;
+}
+
+.rvalue-section h3 {
+    color: white !important;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #00d4ff !important;
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+
+.rvalue-section p, .rvalue-section ul, .rvalue-section li {
+    color: #e0e0e0 !important;
+    line-height: 1.8;
+}
+
+.rvalue-section strong {
+    color: #ffffff !important;
+}
+
+.rvalue-requirements {
+    background: rgba(255,255,255,0.08);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(20px);
+    margin: 25px 0;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.rvalue-requirements h4 {
+    color: #00d4ff !important;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+    font-weight: 700;
+    border-bottom: none !important;
+}
+
+.rvalue-requirements ul li {
+    color: white !important;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.insulation-comparison {
+    background: #f5f7fa;
+    padding: 60px 40px;
+    border-radius: 20px;
+    margin: 60px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.insulation-comparison h2 {
+    color: #1a1a2e !important;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    border-bottom: none !important;
+    font-weight: 800;
+}
+
+.insulation-type {
+    background: white;
+    margin: 40px 0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.insulation-type:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.insulation-header {
+    background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+    color: white;
+    padding: 30px;
+    position: relative;
+}
+
+.insulation-header h3 {
+    color: white !important;
+    font-size: 2em;
+    margin: 0 !important;
+    border-bottom: none !important;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.insulation-icon {
+    background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+    color: #0a0a0a;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8em;
+    margin-right: 20px;
+    box-shadow: 0 4px 15px rgba(0,212,255,0.4);
+}
+
+.insulation-subtitle {
+    color: #b8e3ff !important;
+    font-size: 1.2em;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.insulation-content {
+    padding: 40px;
+}
+
+.insulation-subtype {
+    margin: 30px 0;
+    padding: 25px;
+    background: #f8f9fb;
+    border-radius: 15px;
+    border-left: 4px solid #00d4ff;
+}
+
+.insulation-subtype h4 {
+    color: #0f3460 !important;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    border-bottom: none !important;
+    font-weight: 700;
+}
+
+.insulation-subtype p, .insulation-subtype ul, .insulation-subtype li {
+    color: #333333 !important;
+    line-height: 1.7;
+}
+
+.insulation-subtype strong {
+    color: #0f3460 !important;
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.spec-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.spec-item h5 {
+    color: #0f3460 !important;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    border-bottom: none !important;
+    font-weight: 600;
+}
+
+.spec-item p {
+    color: #333333 !important;
+    margin: 0;
+    font-size: 1em;
+}
+
+.pros-cons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin: 25px 0;
+}
+
+.pros, .cons {
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.pros {
+    background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%);
+    border-left: 4px solid #00cc44;
+}
+
+.cons {
+    background: linear-gradient(135deg, #ffeaea 0%, #fff0f0 100%);
+    border-left: 4px solid #ff6b35;
+}
+
+.pros h5, .cons h5 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    border-bottom: none !important;
+    font-weight: 700;
+}
+
+.pros h5 {
+    color: #006622 !important;
+}
+
+.cons h5 {
+    color: #cc3300 !important;
+}
+
+.pros ul li, .cons ul li {
+    color: #333333 !important;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.recommendation-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(255,107,53,0.4);
+}
+
+.heat-guide-cta {
+    background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+    color: white;
+    padding: 50px;
+    border-radius: 20px;
+    margin: 60px 0;
+    text-align: center;
+    border: 1px solid rgba(0,212,255,0.3);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.heat-guide-cta h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #00d4ff !important;
+    border-bottom: none !important;
+    font-weight: 700;
+}
+
+.heat-guide-cta button, .heat-guide-cta a.button {
+    background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+    color: #0a0a0a;
+    border: none;
+    padding: 18px 40px;
+    font-size: 1.1em;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.heat-guide-cta button:hover, .heat-guide-cta a.button:hover {
+    background: linear-gradient(135deg, #00b8e6 0%, #0088bb 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,212,255,0.4);
+}
+
+.heat-guide-contact {
+    background: linear-gradient(135deg, #0f3460 0%, #0a0a0a 100%);
+    color: white;
+    padding: 80px 40px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 60px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.heat-guide-contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(0,212,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)" /></svg>');
+    opacity: 0.3;
+}
+
+.heat-guide-contact h2 {
+    font-size: 2.8em;
+    margin-bottom: 25px;
+    background: linear-gradient(135deg, #ffffff 0%, #00d4ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border-bottom: none !important;
+    font-weight: 800;
+    position: relative;
+    z-index: 1;
+}
+
+.heat-guide-contact p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #b8e3ff !important;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px 0;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-item {
+    background: rgba(255,255,255,0.08);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,212,255,0.3);
+}
+
+.contact-item h4 {
+    color: #00d4ff !important;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: 700;
+    border-bottom: none !important;
+}
+
+.contact-item p {
+    color: white !important;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+.heat-guide-contact a.button {
+    background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+    color: #0a0a0a;
+    border: none;
+    padding: 20px 50px;
+    font-size: 1.2em;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 800;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 1;
+}
+
+.heat-guide-contact a.button:hover {
+    background: linear-gradient(135deg, #00b8e6 0%, #0088bb 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0,212,255,0.5);
+}
+
+/* Enhanced content styling for readability */
+article p {
+    color: white !important;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+}
+
+article ul, article ol {
+    color: white !important;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+    padding-left: 2rem;
+}
+
+article li {
+    margin-bottom: 0.5rem;
+    color: white !important;
+}
+
+article a {
+    color: #00d4ff !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+article a:hover {
+    color: #00ffff !important;
+    border-bottom-color: #00ffff;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+}
+
+/* Ensure proper spacing between sections */
+section + section,
+div[class*="heat-"] + div[class*="heat-"],
+.climate-challenge + .climate-factors,
+.insulation-type + .insulation-type {
+    margin-top: 3rem;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .heat-guide-hero {
+        padding: 40px 20px;
+    }
+    
+    .heat-guide-hero h1 {
+        font-size: 2.2em;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .pros-cons {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .specs-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .insulation-comparison, .rvalue-section, .heat-guide-cta {
+        padding: 30px 20px;
+    }
+    
+    .insulation-header h3 {
+        font-size: 1.6em;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .insulation-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .recommendation-badge {
+        position: static;
+        margin: 10px 0;
+        display: inline-block;
+    }
+}
+</style>
+
+<div class="heat-guide-hero">
+    <h1>Beat the Arizona Heat: Complete Insulation Guide</h1>
+    <div class="subtitle">Expert R-Value Comparisons & Material Analysis for Desert Climate Performance</div>
+    <div class="expert-badge">
+        <strong>20+ Years Arizona Experience • Licensed & Insured • Professional Installation</strong>
+    </div>
+</div>
 
 Living in Arizona means battling extreme temperatures that can exceed 120°F in summer. With attics reaching a scorching 160°F during peak heat, choosing the right insulation isn't just about comfort—it's about survival and significant energy savings. After 20+ years installing insulation across Phoenix and surrounding areas, I've seen firsthand how the right insulation choice can transform a home's comfort and efficiency.
 
-## The Arizona Climate Challenge
+<div class="climate-challenge">
+    <h2>The Arizona Climate Challenge</h2>
+    <p>Before diving into insulation types, let's understand what we're up against in Arizona's extreme desert environment:</p>
+</div>
 
-Before diving into insulation types, let's understand what we're up against:
+<div class="climate-factors">
+    <h3>Desert Climate Extremes</h3>
+    <ul>
+        <li><strong>Summer temperatures</strong> regularly exceed 110°F for weeks</li>
+        <li><strong>Attic temperatures</strong> can reach 150-160°F</li>
+        <li><strong>Temperature swings</strong> of 30-40°F between day and night</li>
+        <li><strong>Monsoon humidity</strong> creates unique moisture challenges</li>
+        <li><strong>Intense UV radiation</strong> degrades materials faster than other climates</li>
+    </ul>
+    <p><strong>Bottom Line:</strong> These extreme conditions mean insulation in Arizona works harder than anywhere else in the country.</p>
+</div>
 
-- **Summer temperatures** regularly exceed 110°F for weeks
-- **Attic temperatures** can reach 150-160°F
-- **Temperature swings** of 30-40°F between day and night
-- **Monsoon humidity** creates unique moisture challenges
-- **Intense UV radiation** degrades materials faster than other climates
+<div class="rvalue-section">
+    <h2>Understanding R-Values in Desert Climates</h2>
+    
+    <h3>What is R-Value?</h3>
+    <p>R-value measures thermal resistance—how well insulation resists heat flow. In Arizona, we need higher R-values than most of the country because of our extreme temperature differentials.</p>
+    
+    <div class="rvalue-requirements">
+        <h4>Arizona's R-Value Requirements</h4>
+        <ul>
+            <li><strong>Attics:</strong> R-38 to R-49 (recommended R-49)</li>
+            <li><strong>Walls:</strong> R-13 to R-21</li>
+            <li><strong>Floors:</strong> R-19 to R-25</li>
+            <li><strong>Crawl spaces:</strong> R-19 minimum</li>
+        </ul>
+        <p><strong>Important:</strong> These are minimums. In my experience, exceeding these values pays for itself through energy savings within 3-5 years.</p>
+    </div>
+</div>
 
-These extreme conditions mean insulation in Arizona works harder than anywhere else in the country.
+<div class="insulation-comparison">
+    <h2>Comprehensive Insulation Type Comparison</h2>
+    
+    <div class="insulation-type">
+        <div class="insulation-header">
+            <h3><span class="insulation-icon">🔥</span>Spray Foam Insulation</h3>
+            <div class="insulation-subtitle">Our Top Recommendation for Arizona</div>
+            <div class="recommendation-badge">Top Choice</div>
+        </div>
+        
+        <div class="insulation-content">
+            <p><strong>Why it's #1 for Arizona:</strong> Creates an air-tight seal that addresses both temperature and air infiltration—responsible for 40% of energy loss.</p>
+            
+            <div class="insulation-subtype">
+                <h4>Closed-Cell Spray Foam</h4>
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <h5>R-Value</h5>
+                        <p>R-6.5 to R-7 per inch</p>
+                    </div>
+                    <div class="spec-item">
+                        <h5>Best For</h5>
+                        <p>Attics, exterior walls, flat roofs</p>
+                    </div>
+                    <div class="spec-item">
+                        <h5>Cost</h5>
+                        <p>$1.50-$2.50 per sq ft</p>
+                    </div>
+                    <div class="spec-item">
+                        <h5>Lifespan</h5>
+                        <p>25-30+ years</p>
+                    </div>
+                </div>
+                
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h5>Pros</h5>
+                        <ul>
+                            <li>Maintains R-value at extreme temperatures</li>
+                            <li>Acts as vapor barrier (crucial during monsoons)</li>
+                            <li>Adds structural strength</li>
+                            <li>Prevents pest infiltration</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h5>Cons</h5>
+                        <ul>
+                            <li>Higher upfront cost</li>
+                            <li>Requires professional installation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="insulation-subtype">
+                <h4>Open-Cell Spray Foam</h4>
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <h5>R-Value</h5>
+                        <p>R-3.5 to R-3.7 per inch</p>
+                    </div>
+                    <div class="spec-item">
+                        <h5>Best For</h5>
+                        <p>Interior walls, sound dampening</p>
+                    </div>
+                    <div class="spec-item">
+                        <h5>Cost</h5>
+                        <p>$1.00-$1.50 per sq ft</p>
+                    </div>
+                    <div class="spec-item">
+                        <h5>Lifespan</h5>
+                        <p>20-25 years</p>
+                    </div>
+                </div>
+                
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h5>Pros</h5>
+                        <ul>
+                            <li>More affordable than closed-cell</li>
+                            <li>Excellent sound reduction</li>
+                            <li>Flexible application</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h5>Cons</h5>
+                        <ul>
+                            <li>Not a moisture barrier</li>
+                            <li>Lower R-value per inch</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-## Understanding R-Values in Desert Climates
+    <div class="insulation-type">
+        <div class="insulation-header">
+            <h3><span class="insulation-icon">🏠</span>Fiberglass Insulation</h3>
+            <div class="insulation-subtitle">The Traditional Choice</div>
+        </div>
+        
+        <div class="insulation-content">
+            <p><strong>The traditional choice:</strong> Still effective when properly installed but requires meticulous attention to air sealing.</p>
+            
+            <div class="insulation-subtype">
+                <h4>Batts/Rolls</h4>
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <h5>R-Value</h5>
+                        <p>R-2.2 to R-3.8 per inch</p>
+                    </div>
+                    <div class="spec-item">
+                        <h5>Best For</h5>
+                        <p>Standard stud walls, accessible attics</p>
+                    </div>
+                    <div class="spec-item">
+                        <h5>Cost</h5>
+                        <p>$0.50-$1.00 per sq ft</p>
+                    </div>
+                    <div class="spec-item">
+                        <h5>Lifespan</h5>
+                        <p>15-20 years</p>
+                    </div>
+                </div>
+                
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h5>Pros</h5>
+                        <ul>
+                            <li>Affordable upfront cost</li>
+                            <li>DIY-friendly</li>
+                            <li>Readily available</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h5>Cons</h5>
+                        <ul>
+                            <li>Loses effectiveness if compressed</li>
+                            <li>Doesn't stop air infiltration</li>
+                            <li>Can sag over time in heat</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="insulation-subtype">
+                <h4>Blown-In Fiberglass</h4>
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <h5>R-Value</h5>
+                        <p>R-2.5 to R-3.7 per inch</p>
+                    </div>
+                    <div class="spec-item">
+                        <h5>Best For</h5>
+                        <p>Attic floors, retrofit applications</p>
+                    </div>
+                    <div class="spec-item">
+                        <h5>Cost</h5>
+                        <p>$0.75-$1.25 per sq ft</p>
+                    </div>
+                    <div class="spec-item">
+                        <h5>Lifespan</h5>
+                        <p>15-20 years</p>
+                    </div>
+                </div>
+                
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h5>Pros</h5>
+                        <ul>
+                            <li>Better coverage than batts</li>
+                            <li>Good for irregular spaces</li>
+                            <li>Can be added over existing insulation</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h5>Cons</h5>
+                        <ul>
+                            <li>Settles over time (10-20% loss)</li>
+                            <li>Requires professional installation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-### What is R-Value?
-
-R-value measures thermal resistance—how well insulation resists heat flow. In Arizona, we need higher R-values than most of the country because of our extreme temperature differentials.
-
-### Arizona's R-Value Requirements
-
-- **Attics**: R-38 to R-49 (recommended R-49)
-- **Walls**: R-13 to R-21
-- **Floors**: R-19 to R-25
-- **Crawl spaces**: R-19 minimum
-
-**Important**: These are minimums. In my experience, exceeding these values pays for itself through energy savings within 3-5 years.
-
-## Comprehensive Insulation Type Comparison
-
-### 1. Spray Foam Insulation (Our Top Recommendation)
-
-**Why it's #1 for Arizona**: Creates an air-tight seal that addresses both temperature and air infiltration—responsible for 40% of energy loss.
-
-#### Closed-Cell Spray Foam
-- **R-Value**: R-6.5 to R-7 per inch
-- **Best for**: Attics, exterior walls, flat roofs
-- **Pros**: 
-  - Maintains R-value at extreme temperatures
-  - Acts as vapor barrier (crucial during monsoons)
-  - Adds structural strength
-  - Prevents pest infiltration
-- **Cons**: Higher upfront cost
-- **Cost**: $1.50-$2.50 per sq ft
-- **Lifespan**: 25-30+ years
-
-#### Open-Cell Spray Foam
-- **R-Value**: R-3.5 to R-3.7 per inch
-- **Best for**: Interior walls, sound dampening
-- **Pros**: 
-  - More affordable than closed-cell
-  - Excellent sound reduction
-  - Flexible application
-- **Cons**: Not a moisture barrier
-- **Cost**: $1.00-$1.50 per sq ft
-- **Lifespan**: 20-25 years
-
-### 2. Fiberglass Insulation
-
-**The traditional choice**: Still effective when properly installed but requires meticulous attention to air sealing.
-
-#### Batts/Rolls
-- **R-Value**: R-2.2 to R-3.8 per inch
-- **Best for**: Standard stud walls, accessible attics
-- **Pros**: 
-  - Affordable upfront cost
-  - DIY-friendly
-  - Readily available
-- **Cons**: 
-  - Loses effectiveness if compressed
-  - Doesn't stop air infiltration
-  - Can sag over time in heat
-- **Cost**: $0.50-$1.00 per sq ft
-- **Lifespan**: 15-20 years
-
-#### Blown-In Fiberglass
-- **R-Value**: R-2.5 to R-3.7 per inch
-- **Best for**: Attic floors, retrofit applications
-- **Pros**: 
-  - Better coverage than batts
-  - Good for irregular spaces
-  - Can be added over existing insulation
-- **Cons**: 
-  - Settles over time (10-20% loss)
-  - Requires professional installation
-- **Cost**: $0.75-$1.25 per sq ft
-- **Lifespan**: 15-20 years
-
-### 3. Cellulose Insulation
-
-**The eco-friendly option**: Made from recycled paper, treated for fire and pest resistance.
-
-- **R-Value**: R-3.2 to R-3.8 per inch
-- **Best for**: Attics, retrofit wall applications
-- **Pros**: 
-  - Environmentally friendly
-  - Good air sealing properties
-  - Fire resistant treatment
-  - Cost-effective
-- **Cons**: 
-  - Can absorb moisture
-  - Settles 15-20% over time
-  - May attract pests if treatment wears off
-- **Cost**: $0.60-$1.20 per sq ft
-- **Lifespan**: 20-30 years
-
-### 4. Reflective/Radiant Barriers
-
-**The Arizona secret weapon**: Not technically insulation but crucial for our climate.
-
-- **Function**: Reflects up to 97% of radiant heat
-- **Best for**: Attic rafters, roof decking
-- **Pros**: 
-  - Reduces attic temps by 20-30°F
-  - Works with any insulation type
-  - Minimal maintenance
-- **Cons**: 
-  - No R-value (supplements, doesn't replace)
-  - Must face air space to work
-  - Installation angle matters
-- **Cost**: $0.25-$0.75 per sq ft
-- **Lifespan**: 10-25 years
-
-### 5. Mineral Wool (Rock Wool)
-
-**The premium alternative**: Growing in popularity for specific applications.
-
-- **R-Value**: R-3.0 to R-3.3 per inch
-- **Best for**: Fire-prone areas, soundproofing
-- **Pros**: 
-  - Fire resistant to 2000°F
-  - Excellent sound absorption
-  - Doesn't absorb moisture
-  - Pest resistant
-- **Cons**: 
-  - More expensive than fiberglass
-  - Heavier to work with
-  - Limited availability
-- **Cost**: $1.00-$2.00 per sq ft
-- **Lifespan**: 30+ years
+    <div class="insulation-type">
+        <div class="insulation-header">
+            <h3><span class="insulation-icon">🌱</span>Cellulose Insulation</h3>
+            <div class="insulation-subtitle">The Eco-Friendly Option</div>
+        </div>
+        
+        <div class="insulation-content">
+            <p><strong>The eco-friendly option:</strong> Made from recycled paper, treated for fire and pest resistance.</p>
+            
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <h5>R-Value</h5>
+                    <p>R-3.2 to R-3.8 per inch</p>
+                </div>
+                <div class="spec-item">
+                    <h5>Best For</h5>
+                    <p>Attics, retrofit wall applications</p>
+                </div>
+                <div class="spec-item">
+                    <h5>Cost</h5>
+                    <p>$0.60-$1.20 per sq ft</p>
+                </div>
+                <div class="spec-item">
+                    <h5>Lifespan</h5>
+                    <p>20-30 years</p>
+                </div>
+            </div>
+            
+            <div class="pros-cons">
+                <div class="pros">
+                    <h5>Pros</h5>
+                    <ul>
+                        <li>Environmentally friendly</li>
+                        <li>Good air sealing properties</li>
+                        <li>Fire resistant treatment</li>
+                        <li>Cost-effective</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h5>Cons</h5>
+                    <ul>
+                        <li>Can absorb moisture</li>
+                        <li>Settles 15-20% over time</li>
+                        <li>May attract pests if treatment wears off</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="insulation-type">
+        <div class="insulation-header">
+            <h3><span class="insulation-icon">☀️</span>Reflective/Radiant Barriers</h3>
+            <div class="insulation-subtitle">The Arizona Secret Weapon</div>
+        </div>
+        
+        <div class="insulation-content">
+            <p><strong>The Arizona secret weapon:</strong> Not technically insulation but crucial for our climate.</p>
+            
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <h5>Function</h5>
+                    <p>Reflects up to 97% of radiant heat</p>
+                </div>
+                <div class="spec-item">
+                    <h5>Best For</h5>
+                    <p>Attic rafters, roof decking</p>
+                </div>
+                <div class="spec-item">
+                    <h5>Cost</h5>
+                    <p>$0.25-$0.75 per sq ft</p>
+                </div>
+                <div class="spec-item">
+                    <h5>Lifespan</h5>
+                    <p>10-25 years</p>
+                </div>
+            </div>
+            
+            <div class="pros-cons">
+                <div class="pros">
+                    <h5>Pros</h5>
+                    <ul>
+                        <li>Reduces attic temps by 20-30°F</li>
+                        <li>Works with any insulation type</li>
+                        <li>Minimal maintenance</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h5>Cons</h5>
+                    <ul>
+                        <li>No R-value (supplements, doesn't replace)</li>
+                        <li>Must face air space to work</li>
+                        <li>Installation angle matters</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="insulation-type">
+        <div class="insulation-header">
+            <h3><span class="insulation-icon">🗻</span>Mineral Wool (Rock Wool)</h3>
+            <div class="insulation-subtitle">The Premium Alternative</div>
+        </div>
+        
+        <div class="insulation-content">
+            <p><strong>The premium alternative:</strong> Growing in popularity for specific applications.</p>
+            
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <h5>R-Value</h5>
+                    <p>R-3.0 to R-3.3 per inch</p>
+                </div>
+                <div class="spec-item">
+                    <h5>Best For</h5>
+                    <p>Fire-prone areas, soundproofing</p>
+                </div>
+                <div class="spec-item">
+                    <h5>Cost</h5>
+                    <p>$1.00-$2.00 per sq ft</p>
+                </div>
+                <div class="spec-item">
+                    <h5>Lifespan</h5>
+                    <p>30+ years</p>
+                </div>
+            </div>
+            
+            <div class="pros-cons">
+                <div class="pros">
+                    <h5>Pros</h5>
+                    <ul>
+                        <li>Fire resistant to 2000°F</li>
+                        <li>Excellent sound absorption</li>
+                        <li>Doesn't absorb moisture</li>
+                        <li>Pest resistant</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h5>Cons</h5>
+                    <ul>
+                        <li>More expensive than fiberglass</li>
+                        <li>Heavier to work with</li>
+                        <li>Limited availability</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 ## Real-World Performance in Arizona
 
@@ -248,8 +1077,34 @@ After 20+ years in Arizona's insulation industry, here's my professional recomme
 
 Remember, in Arizona's extreme climate, insulation isn't just about energy savings—it's about making your home livable during our brutal summers. The right insulation transforms your home from an oven into an oasis.
 
-## Take Action Today
+<div class="heat-guide-cta">
+    <h3>Ready to Beat the Arizona Heat?</h3>
+    <p>Don't wait for another scorching summer to address your insulation needs. Every day of inadequate insulation costs money and comfort. Get a professional assessment from Arizona's insulation experts.</p>
+    <a href="tel:623-241-1939" class="button">Call 623-241-1939 for Free Assessment</a>
+</div>
 
-Don't wait for another scorching summer to address your insulation needs. Every day of inadequate insulation costs money and comfort. Contact Insulation Contractors of Arizona at 623-241-1939 for a free assessment and see why homeowners across the Valley trust us with their comfort.
-
-*Christopher Kuhn is the owner of Insulation Contractors of Arizona, bringing 20+ years of specialized experience in desert climate insulation solutions. Licensed, bonded, and insured, ICA serves the entire Phoenix metropolitan area.*
+<div class="heat-guide-contact">
+    <h2>Take Action Today</h2>
+    <p>Transform your home from an oven into an oasis with professional insulation solutions designed specifically for Arizona's extreme climate.</p>
+    
+    <div class="contact-info">
+        <div class="contact-item">
+            <h4>📞 Call Now</h4>
+            <p>623-241-1939</p>
+        </div>
+        <div class="contact-item">
+            <h4>📧 Email</h4>
+            <p>insulationcontractorsofaz@gmail.com</p>
+        </div>
+        <div class="contact-item">
+            <h4>🌐 Website</h4>
+            <p>insulationcontractorsofarizona.com</p>
+        </div>
+    </div>
+    
+    <a href="tel:623-241-1939" class="button">Get Your FREE Insulation Assessment</a>
+    
+    <p style="margin-top: 30px; opacity: 0.8;">
+        <em>Christopher Kuhn is the owner of Insulation Contractors of Arizona, bringing 20+ years of specialized experience in desert climate insulation solutions. Licensed, bonded, and insured, ICA serves the entire Phoenix metropolitan area.</em>
+    </p>
+</div>

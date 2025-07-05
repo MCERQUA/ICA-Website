@@ -3,151 +3,509 @@ title: "Summer Heat Protection: Why Arizona Homes Need Premium Insulation"
 date: 2025-01-11
 description: "Arizona homes need premium insulation to combat extreme summer heat. Learn how thermal imaging reveals heat loss and how premium insulation cuts cooling costs by up to 40%."
 tags: ["summer heat protection", "arizona cooling costs", "premium insulation", "thermal imaging", "desert climate", "energy savings", "phoenix"]
-layout: "post.njk"
+layout: "base.njk"
 ---
 
 <style>
-/* Modern Blog Color Palette */
-.article-hero {
+/* Modern Arizona Premium Insulation Guide styling - Professional blue/cyan palette */
+.summer-hero {
     background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
     color: white;
-    padding: 60px 20px;
+    padding: 80px 40px;
     text-align: center;
-    border-radius: 15px;
-    margin-bottom: 40px;
+    border-radius: 20px;
+    margin: 40px 0;
+    position: relative;
+    overflow: hidden;
 }
 
-.article-hero h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: white;
+.summer-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;\n    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0,212,255,0.1) 0%, transparent 70%);
+    animation: heatPulse 5s ease-in-out infinite;
 }
 
-.article-hero .subtitle {
-    font-size: 1.2em;
-    opacity: 0.9;
-    margin-bottom: 20px;
+@keyframes heatPulse {
+    0%, 100% { opacity: 0.3; transform: scale(1) rotate(0deg); }
+    50% { opacity: 0.7; transform: scale(1.2) rotate(180deg); }
+}
+
+.summer-hero h1 {
+    font-size: 3.2em;
+    font-weight: 800;
+    margin-bottom: 25px;
+    background: linear-gradient(135deg, #ffffff 0%, #00d4ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    border-bottom: none !important;
+}
+
+.summer-hero .subtitle {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+    color: #e0f2ff;
+    position: relative;
+    z-index: 1;
 }
 
 .stats-box {
-    background: rgba(0,212,255,0.1);
-    border: 1px solid rgba(0,212,255,0.3);
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px 0;
-    color: white;
+    background: rgba(0,212,255,0.15);
+    border: 2px solid rgba(0,212,255,0.3);
+    padding: 25px;
+    border-radius: 15px;
+    margin: 25px auto;
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(10px);
 }
 
 .cta-section {
     background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
     color: white;
-    padding: 30px;
-    border-radius: 15px;
-    margin: 40px 0;
+    padding: 40px;
+    border-radius: 20px;
+    margin: 50px 0;
     text-align: center;
-    border: 1px solid rgba(0,212,255,0.3);
+    border: 2px solid rgba(0,212,255,0.3);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 .cta-section h3 {
-    color: #00d4ff;
-    margin-bottom: 15px;
+    color: #00d4ff !important;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    border-bottom: none !important;
+}
+
+.cta-section p {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+    color: #e0f2ff;
 }
 
 .cta-button {
     background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
     color: #0a0a0a !important;
     border: none;
-    padding: 15px 30px;
-    font-size: 1.1em;
-    border-radius: 8px;
+    padding: 20px 45px;
+    font-size: 1.2em;
+    border-radius: 50px;
     text-decoration: none;
     display: inline-block;
     margin-top: 15px;
-    font-weight: bold;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0,212,255,0.3);
+}
+
+.cta-button:hover {
+    background: linear-gradient(135deg, #00ffff 0%, #00d4ff 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0,212,255,0.5);
+    color: #0a0a0a !important;
 }
 
 .highlight-box {
     background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
     color: white;
-    border-left: 5px solid #00d4ff;
-    padding: 25px;
-    margin: 30px 0;
-    border-radius: 10px;
+    border-left: 6px solid #00d4ff;
+    padding: 35px;
+    margin: 40px 0;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
 .highlight-box h4 {
-    color: #00d4ff;
-    margin-bottom: 15px;
+    color: #00d4ff !important;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    border-bottom: none !important;
+}
+
+.highlight-box h4::before {
+    content: "🔥";
+    margin-right: 15px;
+    font-size: 1.3em;
 }
 
 .case-study {
     background: linear-gradient(135deg, #e6f3ff 0%, #cce6ff 100%);
-    border: 2px solid #00d4ff;
-    border-radius: 15px;
-    padding: 30px;
-    margin: 40px 0;
+    border: 3px solid #00d4ff;
+    border-radius: 20px;
+    padding: 40px;
+    margin: 50px 0;
     color: #333333;
+    box-shadow: 0 10px 30px rgba(0,212,255,0.2);
 }
 
 .case-study h3 {
-    color: #0f3460;
-    font-size: 1.8em;
-    margin-bottom: 20px;
+    color: #0f3460 !important;
+    font-size: 2em;
+    margin-bottom: 25px;
+    font-weight: 700;
+    border-bottom: 3px solid #00d4ff !important;
+    padding-bottom: 15px;
 }
 
-/* Table styling */
+.case-study p {
+    color: #333333;
+    line-height: 1.8;
+    font-size: 1.1em;
+}
+
+.case-study ul li {
+    color: #333333;
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+.case-study strong {
+    color: #0f3460;
+    font-weight: 700;
+}
+
+.climate-factors {
+    background: #f5f7fa;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 30px 0;
+    border-left: 5px solid #0099cc;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.climate-factors h3 {
+    color: #0f3460 !important;
+    margin-bottom: 20px;
+    font-weight: 700;
+    border-bottom: none !important;
+}
+
+.climate-factors p {
+    color: #333333;
+    line-height: 1.8;
+}
+
+/* Enhanced Table styling */
 .comparison-table {
     width: 100%;
-    border-collapse: collapse;
-    margin: 30px 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 40px 0;
     background: white;
-    border-radius: 10px;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
 }
 
 .comparison-table th {
     background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
     color: white;
-    padding: 20px;
+    padding: 25px;
     text-align: left;
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 1.1em;
 }
 
 .comparison-table td {
-    padding: 20px;
-    border-bottom: 1px solid #eee;
+    padding: 25px;
+    border-bottom: 1px solid #e5e7eb;
     color: #333333;
+    font-size: 1.05em;
 }
 
 .comparison-table tr:nth-child(even) {
-    background-color: #f5f7fa;
+    background-color: #f9fafb;
 }
 
-/* Ensure proper text color in all contexts */
+.comparison-table tr:hover {
+    background-color: #f3f4f6;
+    transition: background 0.3s ease;
+}
+
+.comparison-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* FAQ Section */
+.faq-section {
+    background: #f8fafc;
+    padding: 60px 40px;
+    border-radius: 20px;
+    margin: 60px 0;
+}
+
+.faq-section h2 {
+    color: #0f3460 !important;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.8em;
+    font-weight: 800;
+    border-bottom: none !important;
+}
+
+.faq-item {
+    background: white;
+    margin: 30px 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.faq-question {
+    background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+    color: white;
+    padding: 25px 30px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.2em;
+    transition: background 0.3s ease;
+    position: relative;
+}
+
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.8em;
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active::after {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.faq-answer {
+    padding: 30px;
+    display: none;
+    border-top: 4px solid #00d4ff;
+    background: #fafbfc;
+}
+
+.faq-answer p {
+    color: #374151;
+    line-height: 1.8;
+    font-size: 1.1em;
+}
+
+/* Contact Section */
+.contact-section {
+    background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+    color: white;
+    padding: 80px 40px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 60px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width=\"60\" height=\"60\" xmlns=\"http://www.w3.org/2000/svg\"><defs><pattern id=\"cooling\" width=\"60\" height=\"60\" patternUnits=\"userSpaceOnUse\"><text x=\"15\" y=\"40\" fill=\"rgba(0,212,255,0.1)\" font-size=\"30\">❄️</text></pattern></defs><rect width=\"100%\" height=\"100%\" fill=\"url(%23cooling)\" /></svg>');
+    opacity: 0.3;
+}
+
+.contact-section h2 {
+    font-size: 2.8em;
+    margin-bottom: 25px;
+    color: #00d4ff !important;
+    position: relative;
+    z-index: 1;
+    font-weight: 800;
+    border-bottom: none !important;
+}
+
+.contact-section p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    color: #e0f2ff;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 50px 0;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-item {
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    min-width: 200px;
+}
+
+.contact-item h4 {
+    color: #00d4ff;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.contact-item p {
+    font-size: 1.1em;
+    margin: 0;
+}
+
+.contact-button {
+    background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+    color: #0a0a0a !important;
+    border: none;
+    padding: 25px 60px;
+    font-size: 1.4em;
+    border-radius: 60px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 800;
+    transition: all 0.3s ease;
+    margin: 20px;
+    box-shadow: 0 8px 30px rgba(0,212,255,0.4);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-button:hover {
+    background: linear-gradient(135deg, #00ffff 0%, #00d4ff 100%);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0,212,255,0.5);
+    color: #0a0a0a !important;
+}
+
+/* Enhanced content styling with proper visibility */
 article a {
     color: #00d4ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 article a:hover {
     color: #00ffff;
+    text-decoration: underline;
 }
 
 article h2, article h3 {
-    color: #0f3460;
+    color: white !important;
+    margin: 40px 0 25px 0;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    font-weight: 700;
+}
+
+article h2 {
+    font-size: 2.5em;
+    border-bottom: 3px solid #00d4ff !important;
+    padding-bottom: 15px;
+}
+
+article h3 {
+    font-size: 1.8em;
+    font-weight: 600;
 }
 
 article p, article li {
-    color: #333333;
+    color: white !important;
+    line-height: 1.8;
+    font-size: 1.1em;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+article ul, article ol {
+    margin: 25px 0;
+    padding-left: 30px;
+}
+
+article li {
+    margin-bottom: 12px;
+}
+
+article strong {
+    color: #00d4ff;
+    font-weight: 700;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .summer-hero {
+        padding: 50px 20px;
+    }
+    
+    .summer-hero h1 {
+        font-size: 2.5em;
+    }
+    
+    .case-study {
+        padding: 25px 20px;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .comparison-table {
+        font-size: 0.9em;
+    }
+    
+    .comparison-table th, .comparison-table td {
+        padding: 15px;
+    }
+    
+    .faq-section {
+        padding: 40px 20px;
+    }
+    
+    .contact-section {
+        padding: 60px 20px;
+    }
+    
+    .contact-button {
+        padding: 20px 40px;
+        font-size: 1.2em;
+    }
 }
 </style>
 
-<div class="article-hero">
+<div class="summer-hero">
     <h1>Summer Heat Protection</h1>
     <div class="subtitle">Why Arizona Homes Need Premium Insulation</div>
     <div class="stats-box">
-        <strong>Arizona homeowners pay $476+ for summer cooling<br>
-        Premium insulation can reduce that by 20-40%</strong>
+        <strong>Arizona homeowners pay $476+ for summer cooling • Premium insulation can reduce that by 20-40% • Combat 160°F attic temperatures</strong>
     </div>
 </div>
 
@@ -396,22 +754,54 @@ Arizona's diverse geography means different insulation strategies work best in d
     </ul>
 </div>
 
-## Frequently Asked Questions
+<div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            How much can premium insulation really save on my Arizona cooling bills?
+        </div>
+        <div class="faq-answer">
+            <p>Premium insulation typically reduces cooling costs by 20-40% in Arizona homes. For a home spending $400/month on summer cooling, that's $80-$160 in monthly savings, or $240-$480 during the peak 3-month summer season.</p>
+        </div>
+    </div>
 
-**How much can premium insulation really save on my Arizona cooling bills?**
-Premium insulation typically reduces cooling costs by 20-40% in Arizona homes. For a home spending $400/month on summer cooling, that's $80-$160 in monthly savings, or $240-$480 during the peak 3-month summer season.
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            What makes insulation "premium" versus standard insulation?
+        </div>
+        <div class="faq-answer">
+            <p>Premium insulation combines higher R-values, superior air sealing, and materials specifically designed for extreme heat. This includes spray foam that maintains performance at 150°F+, radiant barriers that reflect 95% of heat, and continuous insulation that eliminates thermal bridging.</p>
+        </div>
+    </div>
 
-**What makes insulation "premium" versus standard insulation?**
-Premium insulation combines higher R-values, superior air sealing, and materials specifically designed for extreme heat. This includes spray foam that maintains performance at 150°F+, radiant barriers that reflect 95% of heat, and continuous insulation that eliminates thermal bridging.
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            How does thermal imaging help identify insulation problems?
+        </div>
+        <div class="faq-answer">
+            <p>Thermal imaging cameras detect temperature differences invisible to the naked eye. They reveal hot spots where heat infiltrates your home, air leaks where conditioned air escapes, and areas with missing or inadequate insulation – all critical information for designing an effective upgrade strategy.</p>
+        </div>
+    </div>
 
-**How does thermal imaging help identify insulation problems?**
-Thermal imaging cameras detect temperature differences invisible to the naked eye. They reveal hot spots where heat infiltrates your home, air leaks where conditioned air escapes, and areas with missing or inadequate insulation – all critical information for designing an effective upgrade strategy.
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            Is premium insulation worth the higher upfront cost?
+        </div>
+        <div class="faq-answer">
+            <p>Absolutely. While premium insulation costs more initially, the energy savings typically provide payback in 3-6 years. After that, you continue saving money every month while enjoying superior comfort. Plus, premium insulation adds value to your home and extends HVAC equipment life.</p>
+        </div>
+    </div>
 
-**Is premium insulation worth the higher upfront cost?**
-Absolutely. While premium insulation costs more initially, the energy savings typically provide payback in 3-6 years. After that, you continue saving money every month while enjoying superior comfort. Plus, premium insulation adds value to your home and extends HVAC equipment life.
-
-**What's the best insulation strategy for Phoenix area homes?**
-Phoenix area homes (Climate Zone 2) benefit most from R-49 to R-60 attic insulation combined with radiant barriers, spray foam wall insulation or continuous exterior insulation, and complete air sealing. This comprehensive approach addresses all three heat transfer mechanisms.
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            What's the best insulation strategy for Phoenix area homes?
+        </div>
+        <div class="faq-answer">
+            <p>Phoenix area homes (Climate Zone 2) benefit most from R-49 to R-60 attic insulation combined with radiant barriers, spray foam wall insulation or continuous exterior insulation, and complete air sealing. This comprehensive approach addresses all three heat transfer mechanisms.</p>
+        </div>
+    </div>
+</div>
 
 ## Ready to Beat the Arizona Heat?
 
@@ -434,14 +824,90 @@ Our thermal imaging assessments reveal exactly where your home is losing the bat
     <a href="tel:623-241-1939" class="cta-button">Schedule Your Assessment</a>
 </div>
 
----
+<div class="contact-section">
+    <h2>Ready to Beat the Arizona Heat?</h2>
+    <p>Stop letting Arizona's extreme heat control your budget and comfort. Our premium insulation solutions are designed specifically for desert conditions.</p>
+    
+    <div class="contact-info">
+        <div class="contact-item">
+            <h4>📞 Call Now</h4>
+            <p>623-241-1939</p>
+        </div>
+        <div class="contact-item">
+            <h4>📧 Email</h4>
+            <p>insulationcontractorsofaz@gmail.com</p>
+        </div>
+        <div class="contact-item">
+            <h4>🌐 Website</h4>
+            <p>insulationcontractorsofarizona.com</p>
+        </div>
+    </div>
+    
+    <a href="tel:623-241-1939" class="contact-button">Get Your FREE Thermal Assessment</a>
+    
+    <p style="margin-top: 30px; opacity: 0.8;">
+        Licensed, Bonded & Insured • BBB Accredited • 20+ Years Serving Arizona • Thermal Imaging Specialists
+    </p>
+</div>
 
-**Ready to Beat the Arizona Heat?**
+<script>
+function toggleFAQ(element) {
+    const answer = element.nextElementSibling;
+    const allAnswers = document.querySelectorAll('.faq-answer');
+    const allQuestions = document.querySelectorAll('.faq-question');
+    const isOpen = answer.style.display === 'block';
+    
+    // Close all FAQs
+    allAnswers.forEach((ans, index) => {
+        ans.style.display = 'none';
+        allQuestions[index].classList.remove('active');
+    });
+    
+    // Toggle current FAQ if it wasn't open
+    if (!isOpen) {
+        answer.style.display = 'block';
+        element.classList.add('active');
+        
+        // Smooth scroll to FAQ if needed
+        const rect = element.getBoundingClientRect();
+        if (rect.top < 100) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+        }
+    }
+}
 
-Stop letting Arizona's extreme heat control your budget and comfort. Our premium insulation solutions are designed specifically for desert conditions.
+// Add animation on scroll
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+};
 
-- **📞 Call:** 623-241-1939
-- **📧 Email:** insulationcontractorsofaz@gmail.com
-- **🌐 Website:** insulationcontractorsofarizona.com
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.animation = 'fadeInUp 0.6s ease-out';
+        }
+    });
+}, observerOptions);
 
-*Licensed, Bonded & Insured • BBB Accredited • 20+ Years Serving Arizona • Thermal Imaging Specialists*
+// Observe all key elements
+document.querySelectorAll('.highlight-box, .comparison-table, .case-study').forEach(el => {
+    observer.observe(el);
+});
+
+// Add fadeInUp animation keyframes
+const style = document.createElement('style');
+style.textContent = `
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+`;
+document.head.appendChild(style);
+</script>
