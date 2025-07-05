@@ -1,0 +1,57 @@
+{
+  "permissions": {
+    "defaultMode": "bypassPermissions",
+    "allow": [
+      "*"
+    ],
+    "deny": []
+  },
+  "diff_viewing": true,
+  "show_changes_in_ide": true,
+  "enable_background_tasks": true,
+  "background_task_limit": 8,
+  "env": {
+    "ECHO_MODE": "active",
+    "ECHO_STARTUP": "enabled",
+    "ECHO_SLACK_CHANNEL": "C0943NFUBDF"
+  },
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "session_start",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🚀 Echo AI Session Starting - Auto-executing startup sequence...' && echo '/startup' > /tmp/echo_startup_trigger"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if [ -f /tmp/echo_startup_trigger ] && [ \"$CLAUDE_TOOL_NAME\" != \"startup\" ]; then rm /tmp/echo_startup_trigger && echo 'ECHO_STARTUP_REQUESTED'; fi"
+          }
+        ]
+      }
+    ]
+  },
+  "startup_commands": [
+    "/startup"
+  ],
+  "project_info": {
+    "name": "ICA Website",
+    "type": "insulation_contractor_website",
+    "tech_stack": ["11ty", "liquid", "tailwind_css", "javascript"],
+    "deployment": "netlify"
+  },
+  "echo_config": {
+    "auto_startup": true,
+    "slack_updates": true,
+    "memory_sync": true,
+    "verbose_logging": true
+  }
+}

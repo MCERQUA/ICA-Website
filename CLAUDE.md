@@ -70,6 +70,104 @@ npm run lint            # Run linter (if configured)
 - Contact form is configured for Netlify Forms with proper attributes
 - The project uses 11ty with Liquid templating, which may have compatibility issues with some plugins
 
+## Blog Article Styling Guidelines
+
+### Critical Color Contrast Rules
+**IMPORTANT**: Always ensure proper text/background contrast to prevent white-on-white text issues.
+
+#### Modern Blog Color Palette
+```css
+/* Primary Colors - Deep Blues/Teals */
+--primary-dark: #0f3460;
+--primary-medium: #16213e;
+--primary-light: #1a1a2e;
+
+/* Accent Colors - Cyan/Aqua */
+--accent-primary: #00d4ff;
+--accent-secondary: #00d4ff;
+--accent-tertiary: #0099cc;
+```
+
+#### Blog Component Styling Standards
+1. **Hero Sections**: Use dark gradient backgrounds with white/light text
+   ```css
+   background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+   color: white;
+   ```
+
+2. **CTA Sections**: Dark backgrounds with cyan accents
+   ```css
+   background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+   color: white;
+   border: 1px solid rgba(0,212,255,0.3);
+   ```
+
+3. **Highlight Boxes**: Deep blue gradients with white text
+   ```css
+   background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+   color: white;
+   border-left: 5px solid #00d4ff;
+   ```
+
+4. **Content Sections**: Light backgrounds with dark text
+   ```css
+   background: #f5f7fa;
+   color: #333333;
+   ```
+
+5. **Tables**: Dark headers with white text, light rows with dark text
+   ```css
+   th { background: linear-gradient(135deg, #0f3460 0%, #16213e 100%); color: white; }
+   td { color: #333333; }
+   ```
+
+#### Text Color Safety Rules
+- **Never use**: Light text colors (#fff9e6, #ffed4e) on light backgrounds
+- **Always use**: High contrast combinations:
+  - White/light cyan text on dark blue backgrounds
+  - Dark gray/black text on light backgrounds
+  - Cyan accent color (#00d4ff) for links and highlights
+
+#### Button Styling
+```css
+/* Primary buttons with forced text color */
+.button, .btn {
+    background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+    color: #0a0a0a !important; /* Force dark text on light button */
+}
+```
+
+### Blog Template Example
+When creating new blog articles with custom styling:
+```markdown
+---
+title: "Article Title"
+layout: "base.njk"
+---
+
+<style>
+/* Use the modern color scheme */
+.article-hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+    color: white;
+}
+
+.highlight-section {
+    background: #f5f7fa;
+    color: #333333;
+}
+
+/* Ensure links are visible */
+article a {
+    color: #00d4ff;
+}
+
+article a:hover {
+    color: #00ffff;
+}
+</style>
+```
+
 ## Image Optimization
 
 - Uses Sharp for image optimization
