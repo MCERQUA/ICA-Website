@@ -91,29 +91,34 @@ keywords: "Arizona insulation types, R-values desert climate, spray foam vs fibe
 }
 
 .climate-factors {
-    background: #f5f7fa;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
     border-radius: 15px;
     padding: 30px;
     margin: 30px 0;
-    border-left: 5px solid #0099cc;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    border-left: 5px solid #00d4ff;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    color: white;
 }
 
 .climate-factors h3 {
-    color: #1a1a2e !important;
+    color: white !important;
     font-size: 1.6em;
     margin-bottom: 20px;
     border-bottom: none !important;
     font-weight: 700;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5), 0 0 15px rgba(0,212,255,0.4);
 }
 
 .climate-factors p, .climate-factors ul, .climate-factors li {
-    color: #333333 !important;
+    color: white !important;
     line-height: 1.8;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
 .climate-factors strong {
-    color: #0f3460 !important;
+    color: #00d4ff !important;
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
 .rvalue-section {
@@ -176,29 +181,33 @@ keywords: "Arizona insulation types, R-values desert climate, spray foam vs fibe
 }
 
 .insulation-comparison {
-    background: #f5f7fa;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
     padding: 60px 40px;
     border-radius: 20px;
     margin: 60px 0;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    color: white;
 }
 
 .insulation-comparison h2 {
-    color: #1a1a2e !important;
+    color: white !important;
     text-align: center;
     margin-bottom: 40px;
     font-size: 2.5em;
     border-bottom: none !important;
     font-weight: 800;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5), 0 0 20px rgba(0,212,255,0.4);
 }
 
 .insulation-type {
-    background: white;
+    background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
     margin: 40px 0;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: white;
+    border: 1px solid rgba(0,212,255,0.2);
 }
 
 .insulation-type:hover {
@@ -251,26 +260,32 @@ keywords: "Arizona insulation types, R-values desert climate, spray foam vs fibe
 .insulation-subtype {
     margin: 30px 0;
     padding: 25px;
-    background: #f8f9fb;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
     border-radius: 15px;
     border-left: 4px solid #00d4ff;
+    color: white;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
 }
 
 .insulation-subtype h4 {
-    color: #0f3460 !important;
+    color: white !important;
     font-size: 1.4em;
     margin-bottom: 20px;
     border-bottom: none !important;
     font-weight: 700;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5), 0 0 15px rgba(0,212,255,0.4);
 }
 
 .insulation-subtype p, .insulation-subtype ul, .insulation-subtype li {
-    color: #333333 !important;
+    color: white !important;
     line-height: 1.7;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
 .insulation-subtype strong {
-    color: #0f3460 !important;
+    color: #00d4ff !important;
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
 .specs-grid {
@@ -281,25 +296,28 @@ keywords: "Arizona insulation types, R-values desert climate, spray foam vs fibe
 }
 
 .spec-item {
-    background: white;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
     padding: 20px;
     border-radius: 10px;
-    border: 1px solid #e0e0e0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,212,255,0.2);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    color: white;
 }
 
 .spec-item h5 {
-    color: #0f3460 !important;
+    color: white !important;
     font-size: 1.1em;
     margin-bottom: 10px;
     border-bottom: none !important;
     font-weight: 600;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5), 0 0 15px rgba(0,212,255,0.4);
 }
 
 .spec-item p {
-    color: #333333 !important;
+    color: white !important;
     margin: 0;
     font-size: 1em;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
 .pros-cons {
@@ -315,13 +333,17 @@ keywords: "Arizona insulation types, R-values desert climate, spray foam vs fibe
 }
 
 .pros {
-    background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%);
-    border-left: 4px solid #00cc44;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    border-left: 4px solid #00d4ff;
+    color: white;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
 }
 
 .cons {
-    background: linear-gradient(135deg, #ffeaea 0%, #fff0f0 100%);
+    background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
     border-left: 4px solid #ff6b35;
+    color: white;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
 }
 
 .pros h5, .cons h5 {
@@ -329,20 +351,22 @@ keywords: "Arizona insulation types, R-values desert climate, spray foam vs fibe
     margin-bottom: 15px;
     border-bottom: none !important;
     font-weight: 700;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5), 0 0 15px rgba(0,212,255,0.4);
 }
 
 .pros h5 {
-    color: #006622 !important;
+    color: white !important;
 }
 
 .cons h5 {
-    color: #cc3300 !important;
+    color: white !important;
 }
 
 .pros ul li, .cons ul li {
-    color: #333333 !important;
+    color: white !important;
     margin-bottom: 8px;
     line-height: 1.6;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
 .recommendation-badge {
