@@ -1,6 +1,7 @@
 ---
 layout: post.njk
 title: "Essential Construction Site Safety Tips for Homeowners"
+description: "Construction site safety guide for homeowners. Protect your family and workers with essential safety tips, hazard awareness, and best practices during home projects."
 date: 2024-02-15
 author: "Mike Thompson"
 excerpt: "When construction work is happening at your home, safety should be everyone's top priority. Learn how to maintain a safe environment during your project."

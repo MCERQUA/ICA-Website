@@ -1,6 +1,7 @@
 ---
 layout: post.njk
 title: "Top Home Renovation Trends for 2024"
+description: "Latest 2024 home renovation trends transforming spaces and adding property value. Sustainable materials, smart technology, and modern design trends for homeowners."
 date: 2024-02-01
 author: "Sarah Johnson"
 excerpt: "Discover the latest trends in home renovation that are transforming spaces and adding value to properties this year."

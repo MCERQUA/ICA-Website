@@ -1,6 +1,7 @@
 ---
 layout: post.njk
 title: "How to Choose the Right Contractor for Your Project"
+description: "Expert guide to selecting the right contractor for your construction project. Learn about licensing, insurance, vetting, and red flags to avoid costly mistakes."
 date: 2024-01-15
 author: "John Smith"
 excerpt: "Selecting the right contractor is crucial for your project's success. Here are key factors to consider when making your choice."

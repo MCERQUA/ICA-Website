@@ -1,6 +1,7 @@
 ---
 layout: post.njk
 title: "Mikes test article"
+description: "Test article for website functionality and blog system testing. Demonstration of content management and publishing workflow."
 date: 2024-01-15
 author: "mike Smith"
 excerpt: "hoping to see this work"

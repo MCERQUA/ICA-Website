@@ -573,7 +573,7 @@ In Arizona's extreme desert climate, where **attic temperatures reach 160°F and
     <a href="tel:623-241-1939" class="button">Call 623-241-1939 for Free Assessment</a>
 </div>
 
-After 20+ years of helping Arizona families improve their homes, we've seen firsthand how proper insulation transforms not just energy efficiency, but family health and quality of life. [Understanding how different insulation types perform in Arizona's climate](https://insulationcontractorsofarizona.com/2025/05/15/beat-the-arizona-heat-the-best-home-insulation-types-to-cut-energy-costs/) is crucial for both energy efficiency and air quality.
+After 20+ years of helping Arizona families improve their homes, we've seen firsthand how proper insulation transforms not just energy efficiency, but family health and quality of life. [Understanding how different insulation types perform in Arizona's climate](/blog/2025-01-10-spray-foam-vs-fiberglass-arizona-comparison/) is crucial for both energy efficiency and air quality.
 
 <div class="ica-highlight-box">
     <h4>The Arizona Air Quality Challenge</h4>
@@ -593,7 +593,7 @@ Arizona's desert environment creates unique challenges that make proper insulati
 - **Allergen Concentration**: Desert plants like palo verde, mesquite, and various grasses produce allergens that poor insulation allows to infiltrate homes
 - **Chemical Off-gassing**: High temperatures accelerate off-gassing from building materials, requiring proper ventilation and air barrier management
 
-When insulation fails to create an effective air barrier, your home becomes vulnerable to these outdoor contaminants. [Advanced insulation solutions like spray foam](https://insulationcontractorsofarizona.com/2024/12/27/why-spray-foam-insulation-is-key-for-arizona-homes-and-businesses/) create comprehensive air sealing that addresses these desert-specific challenges.
+When insulation fails to create an effective air barrier, your home becomes vulnerable to these outdoor contaminants. [Advanced insulation solutions like spray foam](/blog/2025-01-08-commercial-insulation-arizona-business-guide/) create comprehensive air sealing that addresses these desert-specific challenges.
 
 <div class="health-section">
     <div class="health-header">
@@ -643,7 +643,7 @@ When insulation fails to create an effective air barrier, your home becomes vuln
         <strong>Result</strong>: Healthier family + $1,560 annual savings</p>
     </div>
 
-    <p>Learn how <a href="https://insulationcontractorsofarizona.com/2024/12/27/gilbert-residents-discover-why-spray-foam-insulation-is-the-deserts-best-kept-secret/">Gilbert residents are solving similar air quality challenges</a> through professional insulation solutions designed for Arizona's unique environment.</p>
+    <p>Learn how <a href="/blog/2025-01-06-energy-cost-savings-arizona-insulation/">Gilbert residents are solving similar air quality challenges</a> through professional insulation solutions designed for Arizona's unique environment.</p>
 </div>
 
 ## Professional Solutions for Arizona Air Quality
@@ -703,7 +703,7 @@ Arizona's extreme climate demands insulation materials and installation techniqu
     </tbody>
 </table>
 
-See real results from Arizona homeowners who prioritized health through insulation improvements. [Chandler families have achieved remarkable improvements](https://insulationcontractorsofarizona.com/2024/12/27/how-chandler-homeowners-are-slashing-their-energy-bills-by-40-with-spray-foam-insulation/) in both health and energy efficiency through comprehensive insulation upgrades.
+See real results from Arizona homeowners who prioritized health through insulation improvements. [Chandler families have achieved remarkable improvements](/blog/2025-01-11-summer-heat-protection-arizona-premium-insulation/) in both health and energy efficiency through comprehensive insulation upgrades.
 
 <div class="ica-cta">
     <h3>Health-Focused Insulation Assessment</h3>
@@ -729,7 +729,7 @@ Proper insulation provides immediate and long-term health benefits that extend f
 - **Mold Prevention**: Proper moisture control prevents toxic mold exposure and related health issues
 - **Chemical Exposure Reduction**: Controlled ventilation manages indoor air pollutants and off-gassing
 
-The health benefits are particularly pronounced for Arizona seniors and families with respiratory sensitivities. [Sun Lakes residents have experienced remarkable health improvements](https://insulationcontractorsofarizona.com/2024/12/27/sun-lakes-retirees-save-big-with-modern-spray-foam-insulation/) through targeted insulation upgrades that prioritize air quality and comfort.
+The health benefits are particularly pronounced for Arizona seniors and families with respiratory sensitivities. [Sun Lakes residents have experienced remarkable health improvements](/blog/2025-01-09-arizona-homeowner-insulation-timeline-guide/) through targeted insulation upgrades that prioritize air quality and comfort.
 
 ## The Energy-Health Connection: Double Benefits for Arizona Families
 
@@ -744,7 +744,7 @@ Investing in proper insulation delivers both health improvements and substantial
     <strong>Total Value</strong>: Health improvements provide additional unmeasurable benefits</p>
 </div>
 
-Discover how environmentally conscious Arizona communities are embracing health-focused insulation solutions. [Agritopia residents demonstrate the connection](https://insulationcontractorsofarizona.com/2024/12/27/why-agritopias-eco-conscious-community-is-switching-to-spray-foam-insulation/) between environmental responsibility and family health through smart insulation choices.
+Discover how environmentally conscious Arizona communities are embracing health-focused insulation solutions. [Agritopia residents demonstrate the connection](/blog/2025-01-12-arizona-desert-proof-insulation-strategies/) between environmental responsibility and family health through smart insulation choices.
 
 ## Getting Started: Your Path to Healthier Indoor Air
 

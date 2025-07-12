@@ -6,10 +6,6 @@
     ],
     "deny": []
   },
-  "diff_viewing": true,
-  "show_changes_in_ide": true,
-  "enable_background_tasks": true,
-  "background_task_limit": 8,
   "env": {
     "ECHO_MODE": "active",
     "ECHO_STARTUP": "enabled",
@@ -38,20 +34,5 @@
         ]
       }
     ]
-  },
-  "startup_commands": [
-    "/startup"
-  ],
-  "project_info": {
-    "name": "ICA Website",
-    "type": "insulation_contractor_website",
-    "tech_stack": ["11ty", "liquid", "tailwind_css", "javascript"],
-    "deployment": "netlify"
-  },
-  "echo_config": {
-    "auto_startup": true,
-    "slack_updates": true,
-    "memory_sync": true,
-    "verbose_logging": true
   }
 }
