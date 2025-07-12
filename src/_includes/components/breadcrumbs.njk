@@ -29,13 +29,17 @@
           {# Format the display name #}
           {% set displayName = part | replace("-", " ") | title %}
           
-          {# Special cases for better display names #}
+          {# Special cases for better display names and custom URLs #}
+          {% set customUrl = "" %}
           {% if part == "blog" %}
             {% set displayName = "Blog" %}
           {% elif part == "services" %}
             {% set displayName = "Services" %}
           {% elif part == "ica" %}
             {% set displayName = "ICA" %}
+          {% elif part == "events" %}
+            {% set displayName = "Events" %}
+            {% set customUrl = "/about/events/" %}
           {% endif %}
           
           <li class="breadcrumb-item {% if loop.last %}active{% endif %}">
@@ -44,7 +48,8 @@
               <span class="breadcrumb-current">{{ title or displayName }}</span>
             {% else %}
               {# Parent page - with link #}
-              <a href="{{ currentPath }}" class="breadcrumb-link">{{ displayName }}</a>
+              {% set linkUrl = customUrl if customUrl else currentPath %}
+              <a href="{{ linkUrl }}" class="breadcrumb-link">{{ displayName }}</a>
             {% endif %}
           </li>
         {% endif %}

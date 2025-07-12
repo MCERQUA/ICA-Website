@@ -14,4 +14,11 @@ eleventyExcludeFromCollections: true
     </url>
     {%- endif %}
   {%- endfor %}
+  <!-- AI System Resources -->
+  <url>
+    <loc>{{ site.url }}/llms.txt</loc>
+    <lastmod>{{ build.timestamp | dateToISO }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

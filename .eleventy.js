@@ -72,6 +72,9 @@ module.exports = function(eleventyConfig) {
   // Copy optimized images folder
   eleventyConfig.addPassthroughCopy("src/images-optimized");
   
+  // Copy llms.txt for AI systems
+  eleventyConfig.addPassthroughCopy("src/llms.txt");
+  
   // Add date filters
   eleventyConfig.addFilter("postDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
