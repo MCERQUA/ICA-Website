@@ -8,6 +8,8 @@ excerpt: "When construction work is happening at your home, safety should be eve
 tags: ["safety", "tips", "construction"]
 ---
 
+# Essential Construction Site Safety Tips for Homeowners
+
 Having construction work done at your home can be exciting, but it also introduces potential safety hazards. Whether you're having a small renovation or a major addition built, understanding construction site safety helps protect your family, workers, and property.
 
 ## Why Safety Matters

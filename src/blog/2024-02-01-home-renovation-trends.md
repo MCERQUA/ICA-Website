@@ -8,6 +8,8 @@ excerpt: "Discover the latest trends in home renovation that are transforming sp
 tags: ["renovation", "trends", "design"]
 ---
 
+# Top Home Renovation Trends for 2024
+
 As we move through 2024, homeowners are embracing new renovation trends that combine functionality, sustainability, and style. Whether you're planning a major overhaul or a simple refresh, these trends can help guide your renovation decisions.
 
 ## 1. Open Concept Living Spaces
