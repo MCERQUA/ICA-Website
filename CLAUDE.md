@@ -339,3 +339,157 @@ If deployment fails:
 - `✅ [ECHO-CC-ICA] COMPLETE: New service page deployed successfully`
 
 This ensures Josh and the team stay informed of all AI work progress in real-time.
+
+## SEO Link Best Practices & Anchor Text Guidelines
+
+### Critical Issue: Non-Descriptive Anchor Text
+**Current Problem**: SEMrush reports 81 links with non-descriptive anchor text on the website, significantly impacting SEO performance.
+
+### Google's Link Best Practices (Source: developers.google.com/search/docs/crawling-indexing/links-crawlable)
+
+#### **Crawlable Links Requirements**
+- Use `<a>` HTML elements with valid `href` attributes
+- Ensure URLs resolve to actual web addresses
+- Dynamically inserted links must follow HTML markup standards
+
+#### **Descriptive Anchor Text Rules**
+**Good anchor text characteristics:**
+- Descriptive and concise
+- Provides context about the linked page
+- Readable when viewed in isolation
+- Contains relevant keywords naturally
+
+#### **Examples of BAD Anchor Text (AVOID THESE):**
+```html
+<!-- ❌ Generic/Non-descriptive -->
+<a href="/services/">Learn More</a>
+<a href="/blog/post/">Read More</a>
+<a href="/contact/">Click Here</a>
+<a href="/services/">Get Started</a>
+<a href="/quote/">Here</a>
+<a href="/about/">This</a>
+<a href="/services/">Website</a>
+<a href="/blog/">Article</a>
+```
+
+#### **Examples of GOOD Anchor Text (USE THESE):**
+```html
+<!-- ✅ Descriptive and contextual -->
+<a href="/services/spray-foam/">Arizona Spray Foam Insulation Services</a>
+<a href="/blog/energy-savings/">Read Energy Cost Savings Guide</a>
+<a href="/services/attic/">Learn About Attic Insulation Options</a>
+<a href="/contact/">Get Your Free Arizona Insulation Quote</a>
+<a href="/services/commercial/">Explore Commercial Insulation Solutions</a>
+<a href="/about/">Meet ICA's Licensed Insulation Experts</a>
+```
+
+### **Current Website Issues Identified:**
+
+#### **Most Common Problems (34+ template instances):**
+1. **"Learn More" Pattern** - Found in 23+ locations:
+   - `/src/_includes/sections/services-preview.njk` (4 instances)
+   - `/src/services/residential/index.njk` (6 instances)
+   - `/src/_includes/sections/insulation-applications.njk` (6 instances)
+
+2. **"Read More" Pattern** - Blog and news sections:
+   - `/src/blog.njk` - Blog post listings
+   - `/src/_includes/sections/recent-posts.njk`
+
+3. **"Get Started/Get Quote" Pattern** - CTA sections:
+   - `/src/_includes/components/cards/pricing-table-dark.njk`
+   - `/src/_includes/components/sections/cta-section-dark.njk`
+
+4. **Critical "Click Here" Instance** - Must fix immediately:
+   - `/src/_includes/sections/insulation-applications.njk` (line 130)
+
+### **Anchor Text Improvement Guidelines**
+
+#### **Service Links - Replace Generic "Learn More":**
+```html
+<!-- ❌ BEFORE -->
+<a href="/services/residential/" class="btn">Learn More</a>
+
+<!-- ✅ AFTER -->
+<a href="/services/residential/" class="btn">Explore Home Insulation Services</a>
+<a href="/services/spray-foam/" class="btn">Get Arizona Spray Foam Details</a>
+<a href="/services/attic/" class="btn">Learn About Attic Insulation</a>
+```
+
+#### **Blog Links - Replace Generic "Read More":**
+```html
+<!-- ❌ BEFORE -->
+<a href="{{ post.url }}" class="read-more">Read More →</a>
+
+<!-- ✅ AFTER -->
+<a href="{{ post.url }}" class="read-more">Read {{ post.title }}</a>
+<a href="/blog/energy-savings/" class="read-more">Read Arizona Energy Savings Guide</a>
+<a href="/blog/insulation-tips/" class="read-more">See Desert Climate Tips</a>
+```
+
+#### **CTA Links - Replace Generic "Get Started":**
+```html
+<!-- ❌ BEFORE -->
+<a href="/contact/" class="btn-cta">Get Started</a>
+
+<!-- ✅ AFTER -->
+<a href="/contact/" class="btn-cta">Schedule Free Insulation Assessment</a>
+<a href="/quote/" class="btn-cta">Get Your Arizona Insulation Quote</a>
+<a href="/contact/" class="btn-cta">Request Licensed Contractor Consultation</a>
+```
+
+### **Template-Level Implementation Strategy**
+
+#### **Dynamic Anchor Text with Context:**
+```liquid
+<!-- Service cards with specific context -->
+{% assign serviceContext = {
+  "residential": "Explore Home Insulation Solutions",
+  "commercial": "Learn About Business Insulation",
+  "industrial": "Discover Industrial Insulation Services",
+  "spray-foam": "Get Arizona Spray Foam Details"
+} %}
+
+<a href="{{ service.url }}" class="btn">
+  {{ serviceContext[service.type] | default: "Learn About " + service.title + " Services" }}
+</a>
+```
+
+#### **Blog Post Context-Aware Links:**
+```liquid
+<!-- Blog listings with article-specific text -->
+<a href="{{ post.url }}" class="read-more">
+  {% if post.title.size > 50 %}
+    Read {{ post.title | truncate: 50 }}
+  {% else %}
+    Read {{ post.title }}
+  {% endif %}
+</a>
+```
+
+### **SEO Testing Protocol**
+
+#### **Anchor Text Quality Test:**
+1. **Isolation Test**: Can you understand the destination by reading just the anchor text?
+2. **Context Test**: Does the anchor text describe what users will find?
+3. **Keyword Test**: Does it contain relevant, natural keywords?
+4. **Length Test**: Is it concise but descriptive (5-10 words optimal)?
+
+#### **Before Deployment Checklist:**
+- [ ] No "Click Here", "Read More", "Learn More" without context
+- [ ] Each link describes its destination specifically
+- [ ] Service links mention the service type and location (Arizona)
+- [ ] Blog links include article topic or title
+- [ ] CTA links specify the action and value proposition
+- [ ] Navigation links are descriptive of their sections
+
+### **Priority Fix List (Immediate Action Required):**
+
+1. **HIGH PRIORITY**: Fix "Click Here" in insulation-applications.njk
+2. **MEDIUM PRIORITY**: Update all "Learn More" buttons with service-specific text
+3. **MEDIUM PRIORITY**: Replace "Read More" with article-specific titles
+4. **LOW PRIORITY**: Enhance navigation and footer link descriptions
+
+### **Impact Measurement:**
+- Target: Reduce SEMrush non-descriptive link warnings from 81 to <10
+- Monitor: Organic search traffic improvement for service-related keywords
+- Track: Click-through rates on improved anchor text links

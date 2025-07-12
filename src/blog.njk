@@ -24,7 +24,7 @@ description: "Arizona insulation tips, energy-saving advice, and industry insigh
                     {% endif %}
                 </div>
                 <p>{{ post.data.excerpt }}</p>
-                <a href="{{ post.url }}" class="read-more">Read More →</a>
+                <a href="{{ post.url }}" class="read-more">Read {{ post.data.title }} →</a>
             </article>
             {% endfor %}
         </div>
