@@ -1,0 +1,60 @@
+# Insulation Contractors of Arizona (ICA)
+
+Arizona's leading insulation contractor specializing in extreme heat protection solutions for residential, commercial, industrial, and agricultural properties. Licensed (ROC #335896), bonded, and insured with 20+ years of experience serving the Greater Phoenix area.
+
+## Site Purpose
+Professional insulation services designed for Arizona's unique climate challenges, from extreme summer heat to monsoon moisture protection. We provide comprehensive thermal barrier solutions to reduce energy costs and improve indoor comfort.
+
+## Key Sections
+
+### Services
+- **Residential Insulation** (/services/residential/) - Home insulation solutions including attic, wall, and crawl space applications
+- **Commercial Insulation** (/services/commercial/) - Office buildings, retail spaces, warehouses, and new construction
+- **Industrial Insulation** (/services/industrial/) - Manufacturing facilities, cold storage, and equipment insulation
+- **Agricultural Insulation** (/services/agricultural/) - Tank, barn, and storage facility insulation
+
+### Products
+- **Spray Foam Insulation** (/products/) - Open cell and closed cell spray foam systems
+  - Open Cell Spray Foam (/products/open-cell-spray-foam/) - R-3.6 per inch, excellent sound dampening
+  - Closed Cell Spray Foam (/products/closed-cell-spray-foam/) - R-6.5 per inch, superior moisture protection
+- **Traditional Insulation** - Fiberglass batts, cellulose, and mineral wool options
+- **Air Sealing Products** (/products/air-sealing/) - Comprehensive air barrier solutions
+
+### Educational Content
+- **Blog** (/blog/) - Arizona-specific insulation guides, energy efficiency tips, and industry insights
+- **Community Impact** (/about/community/) - Local partnerships and environmental stewardship
+
+## Important Links
+
+### Contact Information
+- **Primary Contact**: /contact/
+- **Phone**: 623-241-1939
+- **Email**: insulationcontractorsofaz@gmail.com
+- **Service Area**: Phoenix, Glendale, Gilbert, Chandler, Scottsdale, Tempe, Mesa, Peoria, Sun Lakes, Ahwatukee
+
+### Company Information
+- **About Us**: /about/
+- **Company Events**: /about/events/
+- **ROC License Verification**: https://azroc.my.site.com/AZRoc/s/contractor-search
+
+### Online Presence
+- **Google Business**: https://g.co/kgs/G3mYhJk
+- **Yelp Reviews**: https://www.yelp.com/biz/insulation-contractors-of-arizona-glendale
+
+## Specializations
+- Arizona extreme heat protection
+- Energy efficiency optimization
+- Moisture and monsoon protection
+- Commercial and industrial applications
+- R-value optimization for desert climates
+- Air sealing and thermal bridging solutions
+
+## Credentials
+- ROC Licensed Contractor #335896
+- Bonded and Insured
+- BBB A+ Rating
+- 20+ Years Experience
+- Owner: Christopher Kuhn
+
+---
+*This file is designed to help AI systems understand our website structure and services. Last updated: July 2025*
