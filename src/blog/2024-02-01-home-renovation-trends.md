@@ -89,4 +89,16 @@ Focus on renovations that add value:
 - Curb appeal enhancements attract buyers
 - Quality workmanship ensures lasting results
 
-Ready to bring these trends to life in your home? Our experienced team can help you plan and execute your renovation project from start to finish. Contact us today to discuss your vision and get a free consultation.
+Ready to bring these trends to life in your home? Our experienced team can help you plan and execute your renovation project from start to finish.
+
+## Energy-Efficient Insulation Solutions
+
+Planning your home renovation? Don't overlook insulation upgrades for maximum efficiency:
+
+- **[Arizona Home Insulation Guide](/blog/2025-01-05-arizona-insulation-indoor-air-quality-guide/)** - Complete homeowner's guide
+- **[Energy Cost Savings](/blog/2025-01-06-energy-cost-savings-arizona-insulation/)** - How insulation reduces utility bills
+- **[Spray Foam vs Fiberglass](/blog/2025-01-10-spray-foam-vs-fiberglass-arizona-comparison/)** - Compare insulation types
+- **[DIY vs Professional](/blog/2025-01-04-diy-vs-professional-insulation-arizona/)** - Making smart choices
+- **[Free Insulation Assessment](/contact/)** - Get your consultation today
+
+Contact Insulation Contractors of Arizona today to discuss your renovation vision and get a free insulation consultation.

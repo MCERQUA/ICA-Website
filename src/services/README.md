@@ -1,3 +1,6 @@
+---
+eleventyExcludeFromCollections: true
+---
 # Service Pages
 
 This directory contains individual service pages for Insulation Contractors of Arizona.
