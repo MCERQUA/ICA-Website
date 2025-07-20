@@ -95,7 +95,7 @@
                     <li>Energy savings</li>
                     <li>Noise reduction</li>
                 </ul>
-                <a href="/services/residential/blown-in/" class="btn btn-primary">Blown-In Attic Insulation Services</a>
+                <a href="/services/residential/blown-in/" class="btn btn-primary">Blown-In Attic Services</a>
             </div>
 
             <!-- Drill & Fill Spray Foam -->
@@ -316,6 +316,62 @@
     margin-left: 0.5rem;
 }
 
+/* CRITICAL: Button Container Fixes - All Breakpoints */
+/* Fix tablet/desktop button clipping issues */
+@media (min-width: 769px) {
+    .applications-grid {
+        gap: 1.5rem !important; /* Reduce gap for better fit */
+    }
+    
+    .application-card {
+        padding: 1.5rem !important; /* Reduce padding for better button fit */
+    }
+    
+    .application-card .btn {
+        font-size: 0.85rem !important;
+        padding: 0.7rem 1rem !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        display: block !important;
+        text-align: center !important;
+    }
+    
+    .cta-section .btn {
+        font-size: 0.95rem !important;
+        padding: 0.8rem 1.5rem !important;
+        white-space: nowrap !important;
+    }
+}
+
+/* Tablet specific fixes */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .applications-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.2rem !important;
+    }
+    
+    .application-card .btn {
+        font-size: 0.8rem !important;
+        padding: 0.6rem 0.8rem !important;
+    }
+}
+
+/* Desktop specific fixes */
+@media (min-width: 1201px) {
+    .applications-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 1.5rem !important;
+    }
+    
+    .application-card .btn {
+        font-size: 0.85rem !important;
+        padding: 0.7rem 1rem !important;
+    }
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 1200px) {
     .applications-grid {
@@ -329,10 +385,24 @@
     }
     
     .applications-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
         margin-top: 2rem;
         margin-bottom: 3rem;
+    }
+    
+    /* Mobile button fixes */
+    .application-card .btn {
+        font-size: 0.85rem !important;
+        padding: 0.6rem 1rem !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        display: block !important;
+        text-align: center !important;
+        margin: 1rem 0 0 0 !important;
     }
     
     .cta-section {
@@ -351,15 +421,30 @@
     .application-card h3 {
         font-size: 1.3rem;
     }
+    
+    .cta-section .btn {
+        font-size: 0.9rem !important;
+        padding: 0.7rem 1.2rem !important;
+    }
 }
 
 @media (max-width: 480px) {
+    .application-card .btn {
+        font-size: 0.8rem !important;
+        padding: 0.5rem 0.8rem !important;
+    }
+    
     .cta-section {
         padding: 1.5rem;
     }
     
     .cta-section h3 {
         font-size: 1.3rem;
+    }
+    
+    .cta-section .btn {
+        font-size: 0.85rem !important;
+        padding: 0.6rem 1rem !important;
     }
 }
 </style>
