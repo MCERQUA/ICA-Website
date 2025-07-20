@@ -33,67 +33,73 @@
 
 <style>
 /* Blog cards mobile fix - Prevent button clipping and ensure proper spacing */
+/* CRITICAL: High specificity mobile button fixes for clipping issues */
 @media (max-width: 768px) {
     .recent-posts .blog-grid {
-        padding: 0 0.5rem;
-        gap: 1.5rem;
+        padding: 0 0.5rem !important;
+        gap: 1.5rem !important;
     }
     
     .recent-posts .blog-card {
-        padding: 1.5rem;
-        margin: 0 0.25rem;
+        padding: 1.5rem !important;
+        margin: 0 0.25rem !important;
     }
     
-    .recent-posts .blog-card .btn {
-        font-size: 0.85rem;
-        padding: 0.6rem 1rem;
-        line-height: 1.3;
-        white-space: nowrap;
-        text-align: center;
-        margin: 1rem 0 0 0;
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-        overflow: hidden;
-        text-overflow: ellipsis;
+    /* CRITICAL: Force button styles with !important to override all other CSS */
+    .recent-posts .blog-card .btn,
+    .recent-posts .blog-card .btn-secondary {
+        font-size: 0.75rem !important;
+        padding: 0.5rem 0.8rem !important;
+        line-height: 1.2 !important;
+        white-space: nowrap !important;
+        text-align: center !important;
+        margin: 1rem 0 0 0 !important;
+        width: auto !important;
+        max-width: 90% !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        display: inline-block !important;
     }
 }
 
 /* Extra small devices - even more conservative spacing */
 @media (max-width: 480px) {
     .recent-posts .blog-card {
-        padding: 1.25rem;
-        margin: 0;
+        padding: 1.25rem !important;
+        margin: 0 !important;
     }
     
-    .recent-posts .blog-card .btn {
-        font-size: 0.8rem;
-        padding: 0.5rem 0.8rem;
-        margin: 0.75rem 0 0 0;
+    .recent-posts .blog-card .btn,
+    .recent-posts .blog-card .btn-secondary {
+        font-size: 0.7rem !important;
+        padding: 0.4rem 0.6rem !important;
+        margin: 0.75rem 0 0 0 !important;
+        max-width: 85% !important;
     }
     
     .recent-posts .blog-grid {
-        padding: 0 0.25rem;
+        padding: 0 0.25rem !important;
     }
 }
 
 /* Fix for main "View All Resources" button */
 @media (max-width: 768px) {
     .recent-posts .text-center .btn-primary {
-        font-size: 0.85rem;
-        padding: 0.7rem 1.2rem;
-        white-space: nowrap;
-        max-width: 90%;
-        margin: 0 auto;
-        display: inline-block;
+        font-size: 0.8rem !important;
+        padding: 0.6rem 1rem !important;
+        white-space: nowrap !important;
+        max-width: 85% !important;
+        margin: 0 auto !important;
+        display: inline-block !important;
     }
 }
 
 @media (max-width: 480px) {
     .recent-posts .text-center .btn-primary {
-        font-size: 0.8rem;
-        padding: 0.6rem 1rem;
-        max-width: 95%;
+        font-size: 0.75rem !important;
+        padding: 0.5rem 0.8rem !important;
+        max-width: 80% !important;
     }
 }
 
@@ -108,5 +114,10 @@
 .recent-posts .blog-card p {
     line-height: 1.4;
     margin-bottom: 1rem;
+}
+
+/* Extra safety: Ensure no button extends beyond container */
+.recent-posts .blog-card {
+    overflow-x: hidden;
 }
 </style>
