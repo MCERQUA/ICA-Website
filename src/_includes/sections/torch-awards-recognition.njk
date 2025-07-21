@@ -1,0 +1,363 @@
+{# Torch Awards Recognition Section #}
+{# Usage: {% include "sections/torch-awards-recognition.njk" %} #}
+
+<section class="torch-awards-recognition">
+  <div class="container">
+    <div class="recognition-content">
+      <div class="recognition-header">
+        <div class="award-badge">
+          <img src="/images/2025-Torch-Finalist Logo_Color.png" 
+               alt="2025 Torch Awards Finalist - Arizona Chamber of Commerce" 
+               class="award-logo"
+               width="120"
+               height="120"
+               loading="lazy">
+        </div>
+        <div class="recognition-text">
+          <h2 class="recognition-title">2025 Torch Awards Finalist</h2>
+          <p class="recognition-subtitle">
+            Proud to be recognized for excellence in business ethics and community impact
+          </p>
+        </div>
+      </div>
+
+      <div class="recognition-details">
+        <div class="details-grid">
+          <div class="detail-item">
+            <div class="detail-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 11V6a3 3 0 116 0v5M9 11a3 3 0 106 0M9 11v7a2 2 0 002 2h2a2 2 0 002-2v-7"/>
+                <circle cx="12" cy="4" r="1"/>
+              </svg>
+            </div>
+            <h3>Ethical Excellence</h3>
+            <p>Recognized for maintaining the highest standards of business integrity and ethical practices in the Arizona market.</p>
+          </div>
+
+          <div class="detail-item">
+            <div class="detail-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+              </svg>
+            </div>
+            <h3>Community Impact</h3>
+            <p>Committed to serving Arizona families and businesses with integrity, quality workmanship, and exceptional customer service.</p>
+          </div>
+
+          <div class="detail-item">
+            <div class="detail-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+            <h3>Industry Leadership</h3>
+            <p>Two decades of professional excellence in insulation services, setting the standard for quality and reliability in Arizona.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="verification-links">
+        <h3 class="verification-title">Verify Our Recognition</h3>
+        <div class="verify-buttons">
+          <a href="https://www.bbb.org/us/az/glendale/profile/insulation-contractors/insulation-contractors-of-arizona-1126-1000090032" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="verify-btn">
+            <span class="btn-icon">⭐</span>
+            View BBB Profile & Rating
+          </a>
+          <a href="https://www.bbb.org/local/1126/torch-awards-for-ethics/arizona" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="verify-btn">
+            <span class="btn-icon">🏆</span>
+            BBB Torch Awards Program
+          </a>
+        </div>
+        <p class="verification-note">
+          The Torch Awards represent the highest honor BBB bestows upon businesses for demonstrating 
+          exceptional character, culture, customer focus, and community involvement.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Torch Awards Recognition Section */
+.torch-awards-recognition {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.torch-awards-recognition::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(30, 64, 175, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(220, 38, 38, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.recognition-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Header Section */
+.recognition-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.award-badge {
+  flex-shrink: 0;
+}
+
+.award-logo {
+  width: 120px;
+  height: 120px;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+  transition: transform 0.3s ease;
+}
+
+.award-logo:hover {
+  transform: scale(1.05);
+}
+
+.recognition-text {
+  max-width: 600px;
+}
+
+.recognition-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recognition-subtitle {
+  font-size: 1.25rem;
+  color: #64748b;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* Details Grid */
+.recognition-details {
+  margin-bottom: 3rem;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.detail-item {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(30, 58, 138, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.detail-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(30, 58, 138, 0.1);
+  border-color: rgba(30, 58, 138, 0.2);
+}
+
+.detail-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.detail-item h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.detail-item p {
+  font-size: 1rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* Verification Links */
+.verification-links {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(30, 58, 138, 0.1);
+  border-radius: 20px;
+  padding: 2.5rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.verification-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.verify-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.verify-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+  color: white !important;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  border: 2px solid transparent;
+}
+
+.verify-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-icon {
+  font-size: 1.25rem;
+}
+
+.verification-note {
+  font-size: 1rem;
+  color: #64748b;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+  font-style: italic;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .torch-awards-recognition {
+    padding: 3rem 0;
+  }
+
+  .recognition-header {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .recognition-title {
+    font-size: 2.2rem;
+  }
+
+  .recognition-subtitle {
+    font-size: 1.125rem;
+  }
+
+  .award-logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .detail-item {
+    padding: 1.5rem;
+  }
+
+  .detail-icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .verify-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .verify-btn {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+
+  .verification-links {
+    padding: 2rem;
+  }
+}
+
+/* Tablet Responsive */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .recognition-header {
+    gap: 1.5rem;
+  }
+
+  .recognition-title {
+    font-size: 2.5rem;
+  }
+
+  .details-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Animation for award logo */
+@keyframes gentle-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.award-logo {
+  animation: gentle-float 3s ease-in-out infinite;
+}
+</style>
