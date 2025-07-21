@@ -1,0 +1,138 @@
+{# Torch Awards 2025 Finalist Badge Component #}
+<div class="torch-finalist-badge">
+    <div class="torch-badge-content">
+        <img src="/images/2025-Torch-Finalist Logo_Color.png" 
+             alt="2025 Torch Awards Finalist - Arizona Chamber of Commerce" 
+             class="torch-logo"
+             width="120"
+             height="120"
+             loading="lazy">
+        <div class="torch-text">
+            <span class="torch-year">2025</span>
+            <span class="torch-title">TORCH AWARDS</span>
+            <span class="torch-subtitle">FINALIST</span>
+            <span class="torch-org">Arizona Chamber</span>
+        </div>
+    </div>
+</div>
+
+<style>
+.torch-finalist-badge {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border: 2px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 12px 16px;
+    margin: 8px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.torch-finalist-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.torch-badge-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.torch-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.torch-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.torch-year {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1e40af;
+    letter-spacing: 0.5px;
+}
+
+.torch-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: #1e3a8a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 2px 0;
+}
+
+.torch-subtitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: #dc2626;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.torch-org {
+    font-size: 11px;
+    font-weight: 500;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .torch-finalist-badge {
+        padding: 8px 12px;
+        margin: 6px 0;
+    }
+    
+    .torch-logo {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .torch-badge-content {
+        gap: 10px;
+    }
+    
+    .torch-year {
+        font-size: 12px;
+    }
+    
+    .torch-title {
+        font-size: 14px;
+    }
+    
+    .torch-subtitle {
+        font-size: 12px;
+    }
+    
+    .torch-org {
+        font-size: 10px;
+    }
+}
+
+/* Animation for attention */
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        box-shadow: 0 4px 20px rgba(30, 64, 175, 0.2);
+    }
+}
+
+.torch-finalist-badge {
+    animation: pulse-glow 3s ease-in-out infinite;
+}
+</style>

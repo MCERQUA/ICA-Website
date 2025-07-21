@@ -158,6 +158,21 @@ main {
     box-shadow: none;
 }
 
+/* Torch Awards Finalist Container */
+.torch-finalist-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 10;
+}
+
+@media (max-width: 768px) {
+    .torch-finalist-container {
+        margin-bottom: 0.8rem;
+    }
+}
+
 /* Service Area Badge */
 .service-area-badge {
     display: inline-flex;
