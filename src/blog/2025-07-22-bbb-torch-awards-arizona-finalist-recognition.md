@@ -509,6 +509,714 @@ As we prepare for the November 19, 2025 ceremony, we remain focused on our missi
     <p>Follow our journey to the 2025 BBB Torch Awards ceremony and celebrate with us as we represent Arizona's commitment to business ethics and community excellence. Together, we're building a more trustworthy marketplace for all Arizonans.</p>
 </div>
 
+## Frequently Asked Questions About BBB Torch Awards for Ethics
+
+<div class="faq-container">
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>What are the BBB Torch Awards for Ethics?</span>
+            <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>The BBB Torch Awards for Ethics is the highest honor the Better Business Bureau can bestow upon a business. Established in 1998, this prestigious program recognizes companies that demonstrate exceptional ethical standards across four key areas: Character, Culture, Customers, and Community.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>How does a business become a BBB Torch Awards finalist?</span>
+            <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>Businesses become finalists through a rigorous selection process involving public nominations, comprehensive evaluation of business practices, BBB accreditation requirements, community impact assessment, and financial stability review. The process typically takes 6-8 months from nomination to final selection.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>What does it mean to be a BBB Torch Awards finalist in Arizona?</span>
+            <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>Being a BBB Torch Awards finalist in Arizona places a business among the top ethical companies in the state, representing less than 1% of all BBB-accredited businesses. It signifies exceptional commitment to marketplace integrity, customer service excellence, and community engagement.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>When is the 2025 BBB Torch Awards ceremony in Arizona?</span>
+            <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>The 2025 BBB Torch Awards for Ethics ceremony is scheduled for November 19, 2025, at a premium Arizona venue. The event brings together Arizona's business community to celebrate marketplace integrity and ethical leadership.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>What are the four pillars evaluated for BBB Torch Awards?</span>
+            <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>The four pillars are: 1) <strong>Character</strong> - Leadership integrity and personal ethics, 2) <strong>Culture</strong> - Organizational values and employee treatment, 3) <strong>Customers</strong> - Service excellence and transparent practices, and 4) <strong>Community</strong> - Local engagement and social responsibility.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>How many businesses are selected as BBB Torch Awards finalists in Arizona?</span>
+            <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>Typically, 25-30 businesses are selected as finalists across different employee size categories in Greater Arizona, with 6-8 winners chosen from the finalist pool. The 2024 program had 28 finalists and 7 winners.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>What employee size categories exist for the BBB Torch Awards?</span>
+            <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>The categories are: 1-2 employees, 3-5 employees, 6-10 employees, 11-20 employees, 21-99 employees, 100-199 employees, and 200+ employees. Each category has one winner, ensuring fair competition among similarly sized businesses.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>Can customers nominate a business for BBB Torch Awards?</span>
+            <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>Yes, customers can nominate businesses for BBB Torch Awards. Public nominations from customers and community members are a key part of the selection process, along with self-nominations and referrals from other businesses.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>What is the difference between BBB accreditation and Torch Awards?</span>
+            <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>BBB accreditation is a baseline requirement for business reliability and trust, while Torch Awards represent the highest level of ethical excellence. All Torch Awards recipients must be BBB accredited, but only exceptional businesses become finalists.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>How long has the BBB Torch Awards program existed?</span>
+            <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>The BBB Torch Awards program was established in 1998, making 2025 the 27th year of recognizing ethical business practices. The program has evolved to include modern criteria like ESG practices and digital ethics.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>What benefits do BBB Torch Awards finalists receive?</span>
+            <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>Benefits include enhanced credibility and trust, marketing materials and digital badges, networking opportunities with other ethical businesses, increased customer confidence, improved employee pride and retention, and recognition in BBB promotional materials.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>Are BBB Torch Awards recognized nationally or just locally?</span>
+            <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>BBB Torch Awards are recognized both locally and nationally. While administered by local BBB chapters, the program follows national BBB standards and criteria, making the recognition credible across the entire United States.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>What industries are represented in Arizona BBB Torch Awards?</span>
+            <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>Arizona BBB Torch Awards represent diverse industries including construction, home services, healthcare, technology, manufacturing, entertainment, retail, professional services, and nonprofit organizations, reflecting Arizona's diverse economy.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>How does BBB Torch Awards recognition help consumers?</span>
+            <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>The recognition helps consumers identify trustworthy businesses with proven ethical standards, transparent practices, excellent customer service, and community commitment. It serves as a reliable indicator when choosing service providers.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>What role does community involvement play in BBB Torch Awards selection?</span>
+            <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>Community involvement is one of the four key evaluation pillars. Businesses are assessed on local engagement, charitable contributions, environmental responsibility, economic impact, job creation, and overall contribution to community well-being.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>Can a business win BBB Torch Awards multiple years?</span>
+            <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>Yes, businesses can be nominated and win BBB Torch Awards in multiple years, though they must go through the full evaluation process each time. Past recognition doesn't guarantee future awards, ensuring continued excellence.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>What is the judging process for BBB Torch Awards?</span>
+            <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>Judging involves a panel of community leaders, business professionals, and BBB representatives who evaluate applications based on the four pillars. The process includes written applications, interviews, reference checks, and site visits when necessary.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>How do BBB Torch Awards impact business reputation?</span>
+            <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>BBB Torch Awards significantly enhance business reputation by providing third-party validation of ethical practices, increasing customer trust, improving search engine visibility, attracting quality employees, and differentiating the business from competitors.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>What is required to maintain BBB accreditation for Torch Awards eligibility?</span>
+            <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>Businesses must maintain BBB accreditation by upholding BBB standards, responding to customer complaints promptly, maintaining transparent business practices, paying annual fees, and demonstrating ongoing commitment to marketplace trust.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>Are there age or business longevity requirements for BBB Torch Awards?</span>
+            <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>Yes, businesses typically must be in operation for at least 12 months and maintain BBB accreditation for a minimum period before being eligible for nomination. This ensures established track records of ethical business practices.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>How do ESG practices factor into modern BBB Torch Awards evaluation?</span>
+            <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>Environmental, Social, and Governance (ESG) practices are increasingly important in BBB Torch Awards evaluation, reflecting modern business ethics standards including sustainability, social responsibility, diversity and inclusion, and transparent governance.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>What is the economic impact of BBB Torch Awards on Arizona's business community?</span>
+            <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>The awards program enhances market stability by increasing consumer confidence, reducing fraudulent practices, raising industry standards, promoting ethical business networks, and contributing to Arizona's reputation as a trustworthy business environment.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>How can customers verify a business's BBB Torch Awards status?</span>
+            <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>Customers can verify BBB Torch Awards status by checking the business's BBB profile, looking for official award badges on the company website, contacting the local BBB office, or reviewing the annual list of winners and finalists published by BBB.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>What trends are emerging in BBB Torch Awards criteria for 2025 and beyond?</span>
+            <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>Emerging trends include greater emphasis on digital ethics, climate resilience, supply chain transparency, remote work policies, cyber security practices, diversity and inclusion initiatives, and adaptation to changing consumer expectations post-pandemic.</p>
+        </div>
+    </div>
+</div>
+
+## Related Articles
+
+<div class="related-articles-carousel">
+    <div class="carousel-header">
+        <h3>Continue Reading About Business Excellence & Arizona Services</h3>
+        <div class="carousel-controls">
+            <button class="carousel-btn prev" onclick="scrollCarousel(-1)">‹</button>
+            <button class="carousel-btn next" onclick="scrollCarousel(1)">›</button>
+        </div>
+    </div>
+    
+    <div class="carousel-container">
+        <div class="carousel-track" id="articlesCarousel">
+            <article class="carousel-card">
+                <div class="card-image">
+                    <img src="/images/arizona-desert-insulation.jpg" alt="Arizona Desert Climate Insulation" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h4><a href="/blog/2025-01-12-arizona-desert-proof-insulation-strategies/">Arizona Desert-Proof Insulation Strategies</a></h4>
+                    <p>Expert strategies for insulating homes in Arizona's extreme desert climate with proven techniques for year-round comfort.</p>
+                    <span class="read-time">8 min read</span>
+                </div>
+            </article>
+
+            <article class="carousel-card">
+                <div class="card-image">
+                    <img src="/images/energy-savings-calculator.jpg" alt="Arizona Energy Cost Savings" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h4><a href="/blog/2025-01-06-energy-cost-savings-arizona-insulation/">Energy Cost Savings with Arizona Insulation</a></h4>
+                    <p>Calculate your potential energy savings with proper insulation in Arizona's challenging climate conditions.</p>
+                    <span class="read-time">6 min read</span>
+                </div>
+            </article>
+
+            <article class="carousel-card">
+                <div class="card-image">
+                    <img src="/images/choosing-contractor.jpg" alt="Choosing Right Insulation Contractor" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h4><a href="/blog/2024-01-15-choosing-right-contractor/">Choosing the Right Insulation Contractor</a></h4>
+                    <p>Essential guide to selecting a trustworthy, qualified insulation contractor in Arizona with key questions to ask.</p>
+                    <span class="read-time">7 min read</span>
+                </div>
+            </article>
+
+            <article class="carousel-card">
+                <div class="card-image">
+                    <img src="/images/spray-foam-comparison.jpg" alt="Spray Foam vs Fiberglass" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h4><a href="/blog/2025-01-10-spray-foam-vs-fiberglass-arizona-comparison/">Spray Foam vs Fiberglass: Arizona Comparison</a></h4>
+                    <p>Comprehensive comparison of insulation types for Arizona homes, including R-values, costs, and performance.</p>
+                    <span class="read-time">9 min read</span>
+                </div>
+            </article>
+
+            <article class="carousel-card">
+                <div class="card-image">
+                    <img src="/images/summer-heat-protection.jpg" alt="Arizona Summer Heat Protection" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h4><a href="/blog/2025-01-11-summer-heat-protection-arizona-premium-insulation/">Summer Heat Protection with Premium Insulation</a></h4>
+                    <p>Protect your Arizona home from extreme summer heat with advanced insulation solutions and cooling strategies.</p>
+                    <span class="read-time">8 min read</span>
+                </div>
+            </article>
+
+            <article class="carousel-card">
+                <div class="card-image">
+                    <img src="/images/diy-vs-professional.jpg" alt="DIY vs Professional Insulation" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h4><a href="/blog/2025-01-04-diy-vs-professional-insulation-arizona/">DIY vs Professional Insulation in Arizona</a></h4>
+                    <p>When to DIY and when to hire professionals for insulation projects in Arizona's unique climate conditions.</p>
+                    <span class="read-time">6 min read</span>
+                </div>
+            </article>
+        </div>
+    </div>
+    
+    <div class="carousel-dots">
+        <span class="dot active" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+        <span class="dot" onclick="goToSlide(2)"></span>
+    </div>
+</div>
+
+<style>
+/* FAQ Section Styling */
+.faq-container {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.faq-item {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-color: #00d4ff;
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 1.5rem;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2d3748;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background: #f7fafc;
+    color: #00d4ff;
+}
+
+.faq-question span:first-child {
+    flex: 1;
+    margin-right: 1rem;
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #00d4ff;
+    transition: transform 0.3s ease;
+    min-width: 24px;
+    text-align: center;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-item.active .faq-question {
+    background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+    color: white;
+}
+
+.faq-item.active .faq-icon {
+    color: #00d4ff;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    background: #f7fafc;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 300px;
+    padding: 1.5rem;
+    border-top: 1px solid rgba(0,212,255,0.2);
+}
+
+.faq-answer p {
+    margin: 0;
+    line-height: 1.6;
+    color: #4a5568;
+    font-size: 1rem;
+}
+
+.faq-answer strong {
+    color: #2d3748;
+    font-weight: 600;
+}
+
+/* Related Articles Carousel */
+.related-articles-carousel {
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    margin: 4rem 0;
+}
+
+.carousel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.carousel-header h3 {
+    color: #2d3748;
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+.carousel-controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.carousel-btn {
+    background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,212,255,0.4);
+}
+
+.carousel-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.carousel-container {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 1.5rem;
+    transition: transform 0.4s ease;
+    padding: 0.5rem 0;
+}
+
+.carousel-card {
+    flex: 0 0 300px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.carousel-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.card-image {
+    height: 160px;
+    overflow: hidden;
+    background: #e2e8f0;
+    position: relative;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.carousel-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h4 {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.card-content h4 a {
+    color: #2d3748;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.card-content h4 a:hover {
+    color: #00d4ff;
+}
+
+.card-content p {
+    margin: 0 0 1rem 0;
+    color: #4a5568;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.read-time {
+    color: #718096;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #cbd5e0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active,
+.dot:hover {
+    background: #00d4ff;
+    transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .faq-question {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+    
+    .faq-answer {
+        font-size: 0.9rem;
+    }
+    
+    .faq-item.active .faq-answer {
+        padding: 1rem;
+    }
+    
+    .carousel-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .carousel-card {
+        flex: 0 0 280px;
+    }
+    
+    .related-articles-carousel {
+        padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-card {
+        flex: 0 0 250px;
+    }
+    
+    .card-content {
+        padding: 1rem;
+    }
+}
+</style>
+
+<script>
+// FAQ Toggle Functionality
+function toggleFAQ(button) {
+    const faqItem = button.parentElement;
+    const isActive = faqItem.classList.contains('active');
+    
+    // Close all other FAQ items
+    document.querySelectorAll('.faq-item.active').forEach(item => {
+        if (item !== faqItem) {
+            item.classList.remove('active');
+        }
+    });
+    
+    // Toggle current item
+    faqItem.classList.toggle('active', !isActive);
+}
+
+// Carousel Functionality
+let currentSlide = 0;
+const slidesPerView = window.innerWidth > 768 ? 3 : (window.innerWidth > 480 ? 2 : 1);
+const totalSlides = document.querySelectorAll('.carousel-card').length;
+const maxSlide = Math.max(0, totalSlides - slidesPerView);
+
+function updateCarousel() {
+    const track = document.getElementById('articlesCarousel');
+    const cardWidth = 300 + 24; // card width + gap
+    const offset = currentSlide * cardWidth;
+    track.style.transform = `translateX(-${offset}px)`;
+    
+    // Update dots
+    const dotsContainer = document.querySelector('.carousel-dots');
+    const totalDots = Math.ceil(totalSlides / slidesPerView);
+    const activeDot = Math.floor(currentSlide / slidesPerView);
+    
+    dotsContainer.innerHTML = '';
+    for (let i = 0; i < totalDots; i++) {
+        const dot = document.createElement('span');
+        dot.className = `dot ${i === activeDot ? 'active' : ''}`;
+        dot.onclick = () => goToSlide(i);
+        dotsContainer.appendChild(dot);
+    }
+    
+    // Update button states
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const nextBtn = document.querySelector('.carousel-btn.next');
+    prevBtn.disabled = currentSlide === 0;
+    nextBtn.disabled = currentSlide >= maxSlide;
+}
+
+function scrollCarousel(direction) {
+    const newSlide = currentSlide + direction;
+    if (newSlide >= 0 && newSlide <= maxSlide) {
+        currentSlide = newSlide;
+        updateCarousel();
+    }
+}
+
+function goToSlide(slideIndex) {
+    currentSlide = slideIndex * slidesPerView;
+    if (currentSlide > maxSlide) currentSlide = maxSlide;
+    updateCarousel();
+}
+
+// Initialize carousel
+document.addEventListener('DOMContentLoaded', function() {
+    updateCarousel();
+});
+
+// Handle window resize
+window.addEventListener('resize', function() {
+    const newSlidesPerView = window.innerWidth > 768 ? 3 : (window.innerWidth > 480 ? 2 : 1);
+    if (newSlidesPerView !== slidesPerView) {
+        currentSlide = 0;
+        updateCarousel();
+    }
+});
+</script>
+
 ---
 
 *For more information about the BBB Torch Awards for Ethics program, visit [torchawards.bbbcommunity.org](https://torchawards.bbbcommunity.org). To learn more about our award-winning insulation services, [contact ICA today](/contact/) for your free consultation.*
