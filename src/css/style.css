@@ -17,11 +17,11 @@
 
 /* CSS Variables - Updated Color Scheme */
 :root {
-    /* Primary Colors - Darker Teal Sections */
-    --primary-dark: #0a1a1a;
-    --primary-medium: #0d2020;
-    --primary-light: #0f2424;
-    --section-separator: #1a3030;
+    /* Primary Colors - Lighter Background Sections */
+    --primary-dark: #f8fafc;
+    --primary-medium: #e2e8f0;
+    --primary-light: #cbd5e1;
+    --section-separator: #94a3b8;
     
     /* Accent Colors - Professional Aqua/Teal */
     --accent-primary: #00ffff;
@@ -64,13 +64,14 @@
     --black: #000000;
     
     /* Text Colors */
-    --text-light: #e0e0e0;
-    --text-muted: #adb5bd;
+    --text-light: #334155;
+    --text-muted: #64748b;
     
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-light) 100%);
     --gradient-accent: linear-gradient(135deg, var(--accent-secondary) 0%, var(--accent-primary) 100%);
-    --gradient-hero: linear-gradient(180deg, rgba(10, 26, 26, 0.9) 0%, rgba(15, 36, 36, 0.8) 100%);
+    --gradient-hero: linear-gradient(180deg, rgba(248, 250, 252, 0.9) 0%, rgba(226, 232, 240, 0.8) 100%);
+    --gradient-dark: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
     --glow-gradient: linear-gradient(135deg, var(--accent-tertiary), var(--accent-primary));
     --text-gradient: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
     
@@ -119,8 +120,8 @@
     --space-xxl: 5rem;
     
     /* Surface Colors */
-    --surface: rgba(13, 26, 26, 0.8);
-    --surface-dark: rgba(10, 20, 20, 0.9);
+    --surface: rgba(255, 255, 255, 0.8);
+    --surface-dark: rgba(248, 250, 252, 0.9);
     
     /* Border Colors */
     --border-color: rgba(0, 255, 255, 0.2);
@@ -138,7 +139,7 @@
 
 body {
     font-family: var(--font-primary);
-    color: var(--gray-100);
+    color: var(--text-light);
     background-color: var(--primary-dark);
     line-height: 1.6;
     overflow-x: hidden;
