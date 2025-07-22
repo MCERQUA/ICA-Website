@@ -32,10 +32,43 @@
 </section>
 
 <style>
-/* Fix gradient text animation alignment */
+/* Fix gradient text animation alignment - Force proper positioning */
 .recent-posts .section-header h2 {
-    position: relative;
+    position: relative !important;
     z-index: 1;
+    display: inline-block;
+}
+
+/* Ensure pseudo-element aligns properly */
+.recent-posts .section-header h2[data-text]::before {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    line-height: inherit !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    text-align: inherit !important;
+    z-index: -1;
+}
+
+/* Better button hover effects - Remove cyan background, add scale and glow */
+.recent-posts .blog-card .btn,
+.recent-posts .blog-card .btn-secondary {
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary);
+    background: transparent;
+    color: var(--primary);
+}
+
+.recent-posts .blog-card .btn:hover,
+.recent-posts .blog-card .btn-secondary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4), 0 0 40px rgba(0, 255, 255, 0.2);
+    border-color: var(--accent-primary);
+    background: transparent !important;
+    color: var(--accent-primary);
 }
 
 /* Blog cards mobile fix - Prevent button clipping and ensure proper spacing */
