@@ -6,17 +6,29 @@ tags: ["BBB Torch Awards", "Arizona Business", "Ethics Recognition", "Insulation
 author: "ICA Team"
 featured: true
 layout: "post.njk"
+image: "/images/torch-awards-thumbnail.png"
+hero_image: "/images/torch-awards-thumbnail.png"
+social_image: "/images/torch-awards-thumbnail.png"
+thumbnail: "/images/torch-awards-thumbnail.png"
 ---
 
 <style>
 /* Modern Blog Color Scheme */
 .article-hero {
-    background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+    background: 
+        linear-gradient(135deg, rgba(26, 26, 46, 0.85) 0%, rgba(15, 52, 96, 0.85) 100%),
+        url('/images/torch-awards-thumbnail.png') center/cover no-repeat;
     color: white;
     padding: 4rem 2rem;
     border-radius: 12px;
     margin-bottom: 3rem;
     text-align: center;
+    position: relative;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .highlight-section {
