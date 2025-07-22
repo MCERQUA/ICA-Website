@@ -30,10 +30,10 @@
 2. `www.azcommerce.com/building-codes/` → `up.codes/codes/arizona` (Arizona building codes reference)
 3. `www.azcentral.com/story/money/real-estate/2024/population-growth-arizona/` → `www.census.gov/quickfacts/fact/table/AZ/PST045223` (Arizona population data)
 
-**Working External Links Verified:**
-- `www.shiningstarprod.com` ✅
-- `www.air-zona.com` ✅ 
-- `www.forrestair.com` ✅
+**Fixed External Links (2025-07-22):**
+- `www.shiningstarprod.com` → `shiningstarentertainmentaz.com` ✅
+- `www.air-zona.com` → `www.air-zona.net` ✅ 
+- `www.forrestair.com` → `www.forrestanderson.net` ✅
 
 ### ✅ FIXED - Meta Description Duplicates
 **Status:** RESOLVED

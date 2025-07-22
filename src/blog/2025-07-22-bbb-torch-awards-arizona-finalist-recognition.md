@@ -209,7 +209,7 @@ To understand the caliber of recognition, here are the 2024 BBB Torch Awards for
 <tbody>
 <tr>
 <td>1-2 Employees</td>
-<td><a href="https://www.shiningstarprod.com" target="_blank" rel="noopener">Shining Star International Productions, LLC</a></td>
+<td><a href="https://shiningstarentertainmentaz.com" target="_blank" rel="noopener">Shining Star International Productions, LLC</a></td>
 <td>Entertainment/Production</td>
 </tr>
 <tr>
@@ -229,7 +229,7 @@ To understand the caliber of recognition, here are the 2024 BBB Torch Awards for
 </tr>
 <tr>
 <td>21-99 Employees</td>
-<td><a href="https://www.forrestair.com" target="_blank" rel="noopener">Forrest Anderson Plumbing and Air Conditioning, Inc.</a></td>
+<td><a href="https://www.forrestanderson.net" target="_blank" rel="noopener">Forrest Anderson Plumbing and Air Conditioning, Inc.</a></td>
 <td>Home Services</td>
 </tr>
 <tr>
@@ -247,7 +247,7 @@ To understand the caliber of recognition, here are the 2024 BBB Torch Awards for
 
 ### Notable 2024 Finalists
 - **[Blue Signal Search](https://bluesignal.com)** - Recruitment services
-- **[Air-zona Air Conditioning, Heating & Ventilation L.L.C.](https://www.air-zona.com)** - HVAC services  
+- **[Air-zona Air Conditioning, Heating & Ventilation L.L.C.](https://www.air-zona.net)** - HVAC services  
 - **[Imperial Plumbing](https://www.imperialplumbing.com)** (Tucson) - Plumbing services
 
 ## The Growing Importance of Business Ethics in Arizona
@@ -382,7 +382,7 @@ Our BBB Torch Awards finalist status provides Arizona homeowners with multiple a
 
 ### Setting Standards for Contractor Ethics
 
-Our recognition alongside other home services companies ([Wyman Plumbing](https://www.wymanplumbing.com), [Forrest Anderson](https://www.forrestair.com), [Imperial Plumbing](https://www.imperialplumbing.com)) demonstrates Arizona's commitment to ethical practices in the construction and home improvement industries.
+Our recognition alongside other home services companies ([Wyman Plumbing](https://www.wymanplumbing.com), [Forrest Anderson](https://www.forrestanderson.net), [Imperial Plumbing](https://www.imperialplumbing.com)) demonstrates Arizona's commitment to ethical practices in the construction and home improvement industries.
 
 **Industry Best Practices:**
 - [Transparent project communication](/blog/2025-01-09-arizona-homeowner-insulation-timeline-guide/)
