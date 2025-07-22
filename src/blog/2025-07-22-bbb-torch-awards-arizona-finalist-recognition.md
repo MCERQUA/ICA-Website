@@ -80,6 +80,10 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 2rem 0;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 th {
@@ -87,12 +91,25 @@ th {
     color: white !important;
     padding: 1rem;
     text-align: left;
+    font-weight: bold;
 }
 
 td {
-    color: #333333 !important;
+    background: white !important;
+    color: #2d3748 !important;
     padding: 0.75rem 1rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #e2e8f0;
+    font-weight: 500;
+}
+
+tbody tr:nth-child(even) td {
+    background: #f7fafc !important;
+    color: #2d3748 !important;
+}
+
+tbody tr:hover td {
+    background: #edf2f7 !important;
+    color: #1a202c !important;
 }
 
 .cta-section {
