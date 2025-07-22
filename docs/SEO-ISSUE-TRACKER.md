@@ -174,6 +174,19 @@ curl -I [URL] | head -n 1
 
 ## MONITORING & MAINTENANCE
 
+### ✅ FIXED - Homepage Gradient Text Animation Alignment
+**Status:** RESOLVED
+**Date Fixed:** 2025-07-22
+**Issue:** "Insulation Resources & Expert Advice" section header had misaligned animated gradient causing "dubbling effect"
+**Root Cause:** JavaScript was adding data-text attributes to ALL headings, triggering CSS pseudo-element overlay that was misaligned
+**Solution:** Modified main.js to exclude .recent-posts section headers from receiving animated gradient effect
+
+**Technical Details:**
+- Problem: CSS rule `h2[data-text]::before` creates animated pseudo-element overlay
+- Issue: JavaScript automatically added data-text to all h2 elements including recent-posts section
+- Fix: Added conditional check to skip recent-posts headers when adding data-text attributes
+- Result: Clean gradient text without duplicate overlay misalignment
+
 ### Weekly SEO Health Checks
 - [ ] Run SEMrush site audit
 - [ ] Check for new 404 errors

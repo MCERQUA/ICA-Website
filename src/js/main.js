@@ -93,7 +93,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     headings.forEach(heading => {
         if (!heading.getAttribute('data-text')) {
-            heading.setAttribute('data-text', heading.textContent);
+            // Skip recent-posts section headers to prevent double gradient effect
+            const isRecentPostsHeader = heading.closest('.recent-posts');
+            if (!isRecentPostsHeader) {
+                heading.setAttribute('data-text', heading.textContent);
+            }
         }
     });
 });
