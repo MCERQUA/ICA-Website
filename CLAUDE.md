@@ -168,6 +168,17 @@ article a:hover {
 </style>
 ```
 
+## Custom Slash Commands
+
+The project includes custom slash commands located in `.claude/commands/` directory:
+
+- **`/research`** - Comprehensive research assistant for ICA project
+  - Industry research (insulation trends, Arizona regulations, energy codes)
+  - Content research (SEO keywords, blog topics, competitor analysis)
+  - Technical research (11ty best practices, Tailwind patterns, performance)
+  - Business research (lead generation, local SEO, conversion optimization)
+  - Usage: `/research [topic]` (e.g., `/research Arizona insulation regulations 2024`)
+
 ## Image Optimization
 
 - Uses Sharp for image optimization
