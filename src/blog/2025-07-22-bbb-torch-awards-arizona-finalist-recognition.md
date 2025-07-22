@@ -844,97 +844,188 @@ As we prepare for the November 19, 2025 ceremony, we remain focused on our missi
 <style>
 /* FAQ Section Styling */
 .faq-container {
-    max-width: 800px;
-    margin: 3rem auto;
-    padding: 0 1rem;
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.faq-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+    border-radius: 16px 16px 0 0;
+}
+
+.faq-container h2 {
+    text-align: center;
+    color: #1a202c;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.faq-container h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+    border-radius: 2px;
 }
 
 .faq-item {
     background: white;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    margin-bottom: 1rem;
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
     overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 
+        0 4px 6px rgba(0,0,0,0.07),
+        0 1px 3px rgba(0,0,0,0.06);
+    position: relative;
+}
+
+.faq-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e0 100%);
     transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .faq-item:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    border-color: #00d4ff;
+    transform: translateY(-2px);
+    box-shadow: 
+        0 10px 25px rgba(0,0,0,0.12),
+        0 4px 10px rgba(0,0,0,0.08);
+}
+
+.faq-item:hover::before {
+    background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+}
+
+.faq-item.active {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 15px 35px rgba(0,212,255,0.15),
+        0 8px 20px rgba(0,0,0,0.1);
+}
+
+.faq-item.active::before {
+    background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+    width: 6px;
 }
 
 .faq-question {
     width: 100%;
     background: none;
     border: none;
-    padding: 1.5rem;
+    padding: 2rem 2rem 2rem 2.5rem;
     text-align: left;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.1rem;
+    font-size: 1.125rem;
     font-weight: 600;
     color: #2d3748;
     transition: all 0.3s ease;
+    position: relative;
 }
 
 .faq-question:hover {
-    background: #f7fafc;
-    color: #00d4ff;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    color: #1a202c;
 }
 
 .faq-question span:first-child {
     flex: 1;
-    margin-right: 1rem;
+    margin-right: 1.5rem;
+    line-height: 1.5;
 }
 
 .faq-icon {
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: #00d4ff;
-    transition: transform 0.3s ease;
-    min-width: 24px;
-    text-align: center;
-}
-
-.faq-item.active .faq-icon {
-    transform: rotate(45deg);
-}
-
-.faq-item.active .faq-question {
-    background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+    background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
     color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0,212,255,0.3);
+}
+
+.faq-item:hover .faq-icon {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0,212,255,0.4);
 }
 
 .faq-item.active .faq-icon {
-    color: #00d4ff;
+    transform: rotate(45deg) scale(1.1);
+    background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+    box-shadow: 0 4px 15px rgba(15,52,96,0.4);
 }
 
 .faq-answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease, padding 0.3s ease;
-    background: #f7fafc;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
 }
 
 .faq-item.active .faq-answer {
-    max-height: 300px;
-    padding: 1.5rem;
-    border-top: 1px solid rgba(0,212,255,0.2);
+    max-height: 400px;
+    padding: 0 2.5rem 2rem 2.5rem;
+    border-top: 1px solid rgba(0,212,255,0.1);
 }
 
 .faq-answer p {
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.7;
     color: #4a5568;
     font-size: 1rem;
+    text-align: left;
 }
 
 .faq-answer strong {
     color: #2d3748;
     font-weight: 600;
+}
+
+/* FAQ Header Enhancement */
+.faq-intro {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding: 0 1rem;
+}
+
+.faq-intro p {
+    color: #64748b;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 /* Related Articles Carousel */
@@ -1101,17 +1192,37 @@ As we prepare for the November 19, 2025 ceremony, we remain focused on our missi
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .faq-container {
+        margin: 3rem auto;
+        padding: 2rem 1.5rem;
+    }
+    
+    .faq-container h2 {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+    
     .faq-question {
         font-size: 1rem;
-        padding: 1rem;
+        padding: 1.5rem 1.5rem 1.5rem 2rem;
+    }
+    
+    .faq-question span:first-child {
+        margin-right: 1rem;
+    }
+    
+    .faq-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 1.125rem;
     }
     
     .faq-answer {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
     }
     
     .faq-item.active .faq-answer {
-        padding: 1rem;
+        padding: 0 2rem 1.5rem 2rem;
     }
     
     .carousel-header {
