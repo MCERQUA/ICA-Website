@@ -3,6 +3,25 @@
 ## Overview
 This document provides specific guidelines for AI assistants working on the ICA website. Following these rules will prevent common errors and ensure consistent, high-quality code.
 
+## 🚨 CRITICAL: MANDATORY STYLING RULES
+
+**⚠️ BEFORE ANY CSS/STYLING WORK: READ `docs/MANDATORY_STYLING_RULES.md` COMPLETELY**
+
+**This is the #1 rule that prevents unreadable content. Violation creates serious usability issues.**
+
+### Styling Priority Order:
+1. **FIRST**: Read `docs/MANDATORY_STYLING_RULES.md` 
+2. **SECOND**: Apply only approved color combinations
+3. **THIRD**: Validate contrast before implementing
+4. **FOURTH**: Test readability visually
+
+### Quick Styling Rules Reminder:
+- ✅ **ALWAYS**: Dark backgrounds + white text
+- ✅ **ALWAYS**: Cyan accents ONLY on dark backgrounds  
+- ❌ **NEVER**: White/light backgrounds with ANY colored text
+- ❌ **NEVER**: Cyan text on white backgrounds
+- ❌ **NEVER**: White text on white backgrounds
+
 ## Critical Rules (MUST FOLLOW)
 
 ### 1. Layout References ⚠️ CRITICAL
@@ -160,14 +179,17 @@ Service pages should follow this order:
 - Include alt text for accessibility
 
 ### CSS Guidelines
+- **READ MANDATORY STYLING RULES FIRST**: `docs/MANDATORY_STYLING_RULES.md`
 - Use existing CSS variables
 - Follow component-based structure
 - Include responsive design
 - Optimize for performance
+- **NEVER use light backgrounds with any text**
 
 ## Error Prevention Checklist
 
 ### Before Creating New Files
+- [ ] **Read `docs/MANDATORY_STYLING_RULES.md` if any styling involved**
 - [ ] Check if similar content already exists
 - [ ] Verify all template dependencies exist
 - [ ] Ensure unique URL/permalink
@@ -180,12 +202,20 @@ Service pages should follow this order:
 - [ ] Ensure required variables are defined
 - [ ] Test locally before deployment
 
+### Before Any Styling Work
+- [ ] **MANDATORY: Read `docs/MANDATORY_STYLING_RULES.md`**
+- [ ] Apply only approved dark background + white text combinations
+- [ ] Validate contrast ratios
+- [ ] Test readability visually
+- [ ] Check for cyan text on white backgrounds (forbidden)
+
 ### Before Deployment
 - [ ] Run `npm run build` locally
 - [ ] Check browser console for errors
 - [ ] Verify all links work
 - [ ] Test responsive design
 - [ ] Validate HTML structure
+- [ ] **Verify text is readable against backgrounds**
 
 ## Common Mistakes to Avoid
 
@@ -211,6 +241,28 @@ layout: layouts/service-page.njk
 
 <!-- ✅ CORRECT -->
 {% include "sections/service-hero.njk" %}
+```
+
+### Styling Mistakes (CRITICAL)
+```css
+/* ❌ FORBIDDEN - Creates unreadable content */
+.section {
+    background: white;
+    color: #00ffff; /* Cyan on white = unreadable */
+}
+
+/* ❌ FORBIDDEN - Creates invisible content */
+.section {
+    background: #f5f7fa;
+    color: white; /* White on light = invisible */
+}
+
+/* ✅ REQUIRED - Always readable */
+.section {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
+    color: white !important;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
 ```
 
 ### Frontmatter Errors
@@ -249,6 +301,7 @@ npm run build
 3. Check browser console for errors
 4. Test all interactive elements
 5. Verify responsive design
+6. **Check text readability against all backgrounds**
 
 ### Pre-Deployment Validation
 1. All builds complete successfully
@@ -256,6 +309,7 @@ npm run build
 3. All images load properly
 4. Internal links work correctly
 5. SEO elements are present
+6. **All text is readable (no white on white, no cyan on white)**
 
 ## Problem-Solving Approach
 
@@ -266,11 +320,19 @@ npm run build
 4. **Compare with working examples**
 5. **Test fixes locally before pushing**
 
+### When Content is Unreadable
+1. **Apply emergency CSS from `MANDATORY_STYLING_RULES.md`**
+2. **Change background to dark gradient**
+3. **Change text to white with text-shadow**
+4. **Move cyan accents to dark backgrounds only**
+5. **Test readability immediately**
+
 ### Common Error Patterns
 - Layout not found → Check path format
 - Template not found → Verify file exists
 - Duplicate permalinks → Remove duplicate files
 - Build failures → Check syntax and dependencies
+- **Unreadable content → Apply mandatory styling rules**
 
 ## Documentation Requirements
 
@@ -312,6 +374,7 @@ npm run build
 - Verify template dependencies
 - Test locally before approval
 - Review SEO elements
+- **Verify readability of all text content**
 
 ### Communication
 - Use clear commit messages
@@ -327,6 +390,13 @@ npm run build
 3. Apply appropriate fix from common issues
 4. Test locally
 5. Push fix and monitor deployment
+
+### Readability Crisis (Unreadable Content)
+1. **Immediately apply dark background CSS**
+2. **Change all text to white**
+3. **Move cyan text to dark backgrounds only**
+4. **Deploy fix immediately**
+5. **Review `MANDATORY_STYLING_RULES.md` to prevent recurrence**
 
 ### Quick Fixes
 ```bash
@@ -356,6 +426,7 @@ node fix-layouts.js
 - Arizona-specific context
 - Professional presentation
 - Clear calls-to-action
+- **100% readable text content**
 
 ### Maintenance
 - Up-to-date documentation
