@@ -1,0 +1,1314 @@
+---
+layout: base.njk
+title: "Insulation Contractor Arizona | #1 Rated Phoenix Metro | ICA"
+description: "Arizona's trusted insulation contractor since 2004. BBB A+ rated, licensed ROC# 335896. Free quotes for spray foam, blown-in & attic insulation. Call 623-241-1939"
+permalink: /insulation-contractor-arizona/
+---
+
+<style>
+/* Power Page Custom Styles */
+.power-page-hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300d4ff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.torch-badge-prominent {
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+    color: #0a0a0a;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.service-area-map {
+    background: #f5f7fa;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.city-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.city-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.city-card:hover {
+    border-color: #00d4ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,212,255,0.2);
+}
+
+.roi-calculator {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 3rem;
+    border-radius: 1rem;
+    margin: 3rem 0;
+}
+
+.contractor-comparison-table {
+    overflow-x: auto;
+    margin: 2rem 0;
+}
+
+.contractor-comparison-table table {
+    width: 100%;
+    background: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.contractor-comparison-table th {
+    background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+    color: white;
+    padding: 1rem;
+    text-align: left;
+}
+
+.contractor-comparison-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.timeline-section {
+    position: relative;
+    padding: 3rem 0;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #00d4ff;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    padding: 2rem;
+    width: calc(50% - 2rem);
+    margin-bottom: 2rem;
+}
+
+.timeline-item:nth-child(odd) {
+    margin-left: auto;
+}
+
+.timeline-dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #00d4ff;
+    border-radius: 50%;
+    top: 2rem;
+}
+
+.timeline-item:nth-child(odd) .timeline-dot {
+    left: -2.5rem;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+    right: -2.5rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.before-after-slider {
+    position: relative;
+    overflow: hidden;
+    cursor: col-resize;
+}
+
+.before-after-slider img {
+    width: 100%;
+    display: block;
+}
+
+.slider-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #00d4ff;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: col-resize;
+}
+
+.slider-handle::before {
+    content: '◀ ▶';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #00d4ff;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .timeline-line {
+        left: 2rem;
+    }
+    
+    .timeline-item {
+        width: calc(100% - 4rem);
+        margin-left: 4rem;
+    }
+    
+    .timeline-dot {
+        left: -2.5rem !important;
+    }
+}
+</style>
+
+<!-- LocalBusiness + Service Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "Service"],
+  "name": "Insulation Contractors of Arizona",
+  "alternateName": "ICA",
+  "description": "Arizona's premier insulation contractor since 2004. BBB A+ rated, Torch Awards finalist. Specializing in spray foam, blown-in, and attic insulation for residential, commercial, and industrial properties.",
+  "url": "https://insulationcontractorsofarizona.com/insulation-contractor-arizona/",
+  "telephone": "623-241-1939",
+  "email": "ica.thesprayfoampeople@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "3825 E Camelback Rd #134",
+    "addressLocality": "Phoenix",
+    "addressRegion": "AZ",
+    "postalCode": "85251",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 33.5092,
+    "longitude": -112.0011
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "07:00",
+      "closes": "17:00"
+    }
+  ],
+  "priceRange": "$$$",
+  "paymentAccepted": ["Cash", "Check", "Credit Card", "Invoice"],
+  "currenciesAccepted": "USD",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Phoenix"
+    },
+    {
+      "@type": "City",
+      "name": "Scottsdale"
+    },
+    {
+      "@type": "City",
+      "name": "Mesa"
+    },
+    {
+      "@type": "City",
+      "name": "Chandler"
+    },
+    {
+      "@type": "City",
+      "name": "Gilbert"
+    },
+    {
+      "@type": "City",
+      "name": "Tempe"
+    },
+    {
+      "@type": "City",
+      "name": "Glendale"
+    },
+    {
+      "@type": "City",
+      "name": "Peoria"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Insulation Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Spray Foam Insulation",
+          "description": "Professional open-cell and closed-cell spray foam insulation installation"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Blown-In Insulation",
+          "description": "Fiberglass and cellulose blown-in attic insulation services"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Attic Insulation",
+          "description": "Complete attic insulation solutions including removal and replacement"
+        }
+      }
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "127",
+    "bestRating": "5"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "John Mitchell"
+      },
+      "reviewBody": "ICA transformed our home's energy efficiency. Our cooling bills dropped by 40% after their spray foam installation. Professional team, fair pricing, and exceptional results."
+    }
+  ],
+  "image": [
+    "https://insulationcontractorsofarizona.com/images/spray-foam-installation.jpg",
+    "https://insulationcontractorsofarizona.com/images/team-photo.jpg",
+    "https://insulationcontractorsofarizona.com/images/bbb-torch-award.jpg"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Josh Luttmer"
+  },
+  "foundingDate": "2004",
+  "numberOfEmployees": {
+    "@type": "QuantitativeValue",
+    "minValue": 10,
+    "maxValue": 50
+  },
+  "slogan": "Arizona's Most Trusted Insulation Experts",
+  "knowsAbout": [
+    "Spray Foam Insulation",
+    "Blown-In Insulation",
+    "Attic Insulation",
+    "Commercial Insulation",
+    "Industrial Insulation",
+    "Energy Efficiency",
+    "Air Sealing",
+    "Insulation Removal"
+  ],
+  "memberOf": [
+    {
+      "@type": "Organization",
+      "name": "Better Business Bureau",
+      "url": "https://www.bbb.org/"
+    },
+    {
+      "@type": "Organization",
+      "name": "Spray Polyurethane Foam Alliance",
+      "url": "https://www.sprayfoam.org/"
+    }
+  ],
+  "award": "BBB Torch Awards for Ethics Finalist 2025"
+}
+</script>
+
+<!-- Hero Section -->
+<section class="power-page-hero relative py-24 px-6">
+    <div class="hero-pattern"></div>
+    <div class="container mx-auto relative z-10">
+        <div class="max-w-5xl mx-auto text-center">
+            <!-- BBB Torch Awards Badge -->
+            <div class="flex justify-center mb-8">
+                <div class="torch-badge-prominent">
+                    <img src="/images/2025-Torch-Finalist Logo_Color.png" alt="BBB Torch Awards Finalist 2025" class="h-12">
+                    <span>2025 BBB Torch Awards Finalist</span>
+                </div>
+            </div>
+            
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                Arizona's Premier Insulation Contractor - Serving Phoenix Since 2004
+            </h1>
+            
+            <p class="text-xl md:text-2xl mb-8 text-cyan-100">
+                BBB A+ Rated • Licensed ROC# 335896 • 5,000+ Projects Completed
+            </p>
+            
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#roi-calculator" class="bg-gradient-to-r from-cyan-400 to-cyan-600 !text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-500 hover:to-cyan-700 transition-all">
+                    Calculate Your Savings
+                </a>
+                <a href="tel:623-241-1939" class="bg-white !text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all">
+                    Call 623-241-1939
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Introduction Section -->
+<section class="py-16 px-6">
+    <div class="container mx-auto max-w-4xl">
+        <div class="prose prose-lg max-w-none">
+            <p class="text-xl leading-relaxed">
+                When it comes to protecting your Arizona property from extreme heat and reducing energy costs, choosing the right insulation contractor makes all the difference. <strong>Insulation Contractors of Arizona (ICA)</strong> has been the Phoenix metro area's trusted insulation expert since 2004, delivering superior comfort and energy savings to thousands of homeowners and businesses.
+            </p>
+            
+            <p class="text-lg mt-4">
+                As a <strong>BBB A+ rated contractor</strong> and <strong>2025 Torch Awards for Ethics finalist</strong>, we've built our reputation on integrity, expertise, and exceptional results. Our team of licensed professionals (ROC# 335896) specializes in advanced insulation solutions that combat Arizona's unique climate challenges while maximizing your return on investment.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Service Area Map Section -->
+<section class="py-16 px-6 bg-gray-50">
+    <div class="container mx-auto">
+        <div class="service-area-map">
+            <h2 class="text-3xl font-bold mb-6 text-center">Serving the Entire Phoenix Metro Area</h2>
+            <p class="text-center text-lg mb-8">Click on any city below to learn about our insulation services in your area:</p>
+            
+            <div class="city-grid">
+                <a href="/services/residential/" class="city-card block">
+                    <h3 class="font-semibold text-lg mb-2">Phoenix</h3>
+                    <p class="text-sm text-gray-600">Central Phoenix, North Phoenix, South Phoenix</p>
+                    <p class="text-cyan-600 font-medium mt-2">500+ Projects Completed</p>
+                </a>
+                
+                <a href="/services/residential/" class="city-card block">
+                    <h3 class="font-semibold text-lg mb-2">Scottsdale</h3>
+                    <p class="text-sm text-gray-600">Old Town, North Scottsdale, McCormick Ranch</p>
+                    <p class="text-cyan-600 font-medium mt-2">300+ Projects Completed</p>
+                </a>
+                
+                <a href="/services/residential/" class="city-card block">
+                    <h3 class="font-semibold text-lg mb-2">Mesa</h3>
+                    <p class="text-sm text-gray-600">East Mesa, West Mesa, Downtown Mesa</p>
+                    <p class="text-cyan-600 font-medium mt-2">400+ Projects Completed</p>
+                </a>
+                
+                <a href="/services/residential/" class="city-card block">
+                    <h3 class="font-semibold text-lg mb-2">Chandler</h3>
+                    <p class="text-sm text-gray-600">South Chandler, Ocotillo, Downtown</p>
+                    <p class="text-cyan-600 font-medium mt-2">350+ Projects Completed</p>
+                </a>
+                
+                <a href="/services/residential/" class="city-card block">
+                    <h3 class="font-semibold text-lg mb-2">Gilbert</h3>
+                    <p class="text-sm text-gray-600">Power Ranch, Val Vista Lakes, Agritopia</p>
+                    <p class="text-cyan-600 font-medium mt-2">300+ Projects Completed</p>
+                </a>
+                
+                <a href="/services/residential/" class="city-card block">
+                    <h3 class="font-semibold text-lg mb-2">Tempe</h3>
+                    <p class="text-sm text-gray-600">ASU Area, Downtown Tempe, South Tempe</p>
+                    <p class="text-cyan-600 font-medium mt-2">250+ Projects Completed</p>
+                </a>
+                
+                <a href="/services/residential/" class="city-card block">
+                    <h3 class="font-semibold text-lg mb-2">Glendale</h3>
+                    <p class="text-sm text-gray-600">Historic Glendale, Arrowhead, Westgate</p>
+                    <p class="text-cyan-600 font-medium mt-2">200+ Projects Completed</p>
+                </a>
+                
+                <a href="/services/residential/" class="city-card block">
+                    <h3 class="font-semibold text-lg mb-2">Peoria</h3>
+                    <p class="text-sm text-gray-600">Old Town Peoria, Vistancia, North Peoria</p>
+                    <p class="text-cyan-600 font-medium mt-2">200+ Projects Completed</p>
+                </a>
+                
+                <a href="/services/residential/" class="city-card block">
+                    <h3 class="font-semibold text-lg mb-2">Surprise</h3>
+                    <p class="text-sm text-gray-600">Sun City Grand, Surprise Farms, Marley Park</p>
+                    <p class="text-cyan-600 font-medium mt-2">150+ Projects Completed</p>
+                </a>
+                
+                <a href="/services/residential/" class="city-card block">
+                    <h3 class="font-semibold text-lg mb-2">Avondale</h3>
+                    <p class="text-sm text-gray-600">Garden Lakes, Coldwater Springs</p>
+                    <p class="text-cyan-600 font-medium mt-2">100+ Projects Completed</p>
+                </a>
+                
+                <a href="/services/residential/" class="city-card block">
+                    <h3 class="font-semibold text-lg mb-2">Goodyear</h3>
+                    <p class="text-sm text-gray-600">Estrella Mountain Ranch, Palm Valley</p>
+                    <p class="text-cyan-600 font-medium mt-2">150+ Projects Completed</p>
+                </a>
+                
+                <a href="/services/residential/" class="city-card block">
+                    <h3 class="font-semibold text-lg mb-2">Queen Creek</h3>
+                    <p class="text-sm text-gray-600">Queen Creek Marketplace, Encanterra</p>
+                    <p class="text-cyan-600 font-medium mt-2">100+ Projects Completed</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ROI Calculator Section -->
+<section id="roi-calculator" class="py-16 px-6">
+    <div class="container mx-auto">
+        <div class="roi-calculator">
+            <h2 class="text-3xl font-bold mb-8 text-center">Calculate Your Insulation ROI</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <label class="block mb-2 font-semibold">Home Square Footage</label>
+                    <input type="number" id="sqft" class="w-full px-4 py-2 rounded text-gray-900" placeholder="2000" value="2000">
+                    
+                    <label class="block mt-4 mb-2 font-semibold">Current Monthly Energy Bill</label>
+                    <input type="number" id="bill" class="w-full px-4 py-2 rounded text-gray-900" placeholder="350" value="350">
+                    
+                    <label class="block mt-4 mb-2 font-semibold">Insulation Type</label>
+                    <select id="type" class="w-full px-4 py-2 rounded text-gray-900">
+                        <option value="spray-foam">Spray Foam (30-50% savings)</option>
+                        <option value="blown-in">Blown-In (20-30% savings)</option>
+                        <option value="combo">Combination (35-45% savings)</option>
+                    </select>
+                </div>
+                
+                <div class="bg-white/10 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4">Your Estimated Savings</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span>Monthly Savings:</span>
+                            <span class="font-bold text-2xl" id="monthly-savings">$140</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Annual Savings:</span>
+                            <span class="font-bold text-2xl" id="annual-savings">$1,680</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>5-Year Savings:</span>
+                            <span class="font-bold text-2xl text-cyan-300" id="five-year-savings">$8,400</span>
+                        </div>
+                        <div class="flex justify-between pt-4 border-t border-white/20">
+                            <span>ROI Timeline:</span>
+                            <span class="font-bold" id="roi-timeline">18-24 months</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <a href="/contact/" class="inline-block bg-white !text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all">
+                    Get Your Exact Quote
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Types of Insulation Contractors Comparison -->
+<section class="py-16 px-6 bg-gray-50">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-8 text-center">Types of Insulation Contractors: Making the Right Choice</h2>
+        
+        <div class="contractor-comparison-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Contractor Type</th>
+                        <th>Services Offered</th>
+                        <th>Expertise Level</th>
+                        <th>Typical Cost</th>
+                        <th>Best For</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Full-Service Contractors (ICA)</strong></td>
+                        <td>All insulation types, removal, air sealing, energy audits</td>
+                        <td>Expert - All certifications</td>
+                        <td>$$$</td>
+                        <td>Complete solutions, quality guarantee</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Spray Foam Specialists</strong></td>
+                        <td>Open & closed-cell spray foam only</td>
+                        <td>Specialized</td>
+                        <td>$$$$</td>
+                        <td>High-performance applications</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Blown-In Contractors</strong></td>
+                        <td>Fiberglass/cellulose blown-in</td>
+                        <td>Moderate</td>
+                        <td>$$</td>
+                        <td>Attic upgrades, retrofits</td>
+                    </tr>
+                    <tr>
+                        <td><strong>General Contractors</strong></td>
+                        <td>Basic insulation as part of construction</td>
+                        <td>Basic</td>
+                        <td>$$</td>
+                        <td>New construction only</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Handyman Services</strong></td>
+                        <td>Small repairs, batt installation</td>
+                        <td>Limited</td>
+                        <td>$</td>
+                        <td>Minor projects</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="mt-8 bg-cyan-50 border-l-4 border-cyan-600 p-6 rounded">
+            <p class="text-lg">
+                <strong>Why ICA Stands Out:</strong> As a full-service insulation contractor, we offer the complete range of insulation solutions backed by 20+ years of Arizona-specific expertise. Our BBB A+ rating and Torch Awards recognition reflect our commitment to ethical business practices and superior results.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Experience Timeline -->
+<section class="py-16 px-6">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-12 text-center">20 Years of Excellence: Our Journey</h2>
+        
+        <div class="timeline-section max-w-6xl mx-auto">
+            <div class="timeline-line hidden md:block"></div>
+            
+            <div class="timeline-item bg-white rounded-lg shadow-lg">
+                <div class="timeline-dot"></div>
+                <h3 class="text-xl font-bold mb-2">2004 - Foundation</h3>
+                <p>Josh Luttmer establishes ICA with a mission to bring honest, quality insulation services to Arizona homeowners.</p>
+            </div>
+            
+            <div class="timeline-item bg-white rounded-lg shadow-lg">
+                <div class="timeline-dot"></div>
+                <h3 class="text-xl font-bold mb-2">2008 - Spray Foam Certification</h3>
+                <p>Became one of Arizona's first certified spray foam contractors, pioneering advanced insulation techniques.</p>
+            </div>
+            
+            <div class="timeline-item bg-white rounded-lg shadow-lg">
+                <div class="timeline-dot"></div>
+                <h3 class="text-xl font-bold mb-2">2012 - BBB Accreditation</h3>
+                <p>Achieved BBB A+ rating, recognizing our commitment to ethical business practices and customer satisfaction.</p>
+            </div>
+            
+            <div class="timeline-item bg-white rounded-lg shadow-lg">
+                <div class="timeline-dot"></div>
+                <h3 class="text-xl font-bold mb-2">2015 - 1,000th Project</h3>
+                <p>Celebrated completing our 1,000th insulation project, marking a milestone in serving Arizona families.</p>
+            </div>
+            
+            <div class="timeline-item bg-white rounded-lg shadow-lg">
+                <div class="timeline-dot"></div>
+                <h3 class="text-xl font-bold mb-2">2018 - Commercial Expansion</h3>
+                <p>Expanded services to include large-scale commercial and industrial insulation projects.</p>
+            </div>
+            
+            <div class="timeline-item bg-white rounded-lg shadow-lg">
+                <div class="timeline-dot"></div>
+                <h3 class="text-xl font-bold mb-2">2020 - Industry Leadership</h3>
+                <p>Joined SPFA (Spray Polyurethane Foam Alliance) as active members, contributing to industry standards.</p>
+            </div>
+            
+            <div class="timeline-item bg-white rounded-lg shadow-lg">
+                <div class="timeline-dot"></div>
+                <h3 class="text-xl font-bold mb-2">2023 - 5,000th Project</h3>
+                <p>Reached 5,000 completed projects, saving Arizona residents millions in energy costs.</p>
+            </div>
+            
+            <div class="timeline-item bg-white rounded-lg shadow-lg">
+                <div class="timeline-dot"></div>
+                <h3 class="text-xl font-bold mb-2 text-cyan-600">2025 - Torch Awards Finalist</h3>
+                <p class="font-semibold">Nominated for BBB Torch Awards for Ethics, recognizing two decades of integrity and excellence.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Comprehensive Service Overview -->
+<section class="py-16 px-6 bg-gray-50">
+    <div class="container mx-auto max-w-6xl">
+        <h2 class="text-3xl font-bold mb-12 text-center">Complete Insulation Solutions for Every Arizona Property</h2>
+        
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-2xl font-bold mb-4 text-cyan-600">Residential Insulation</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <span class="text-cyan-600 mr-2">✓</span>
+                        <a href="/services/residential/spray-foam/" class="hover:text-cyan-600">Spray Foam Insulation Installation</a>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-cyan-600 mr-2">✓</span>
+                        <a href="/services/residential/attic/" class="hover:text-cyan-600">Complete Attic Insulation Solutions</a>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-cyan-600 mr-2">✓</span>
+                        <a href="/services/residential/blown-in/" class="hover:text-cyan-600">Blown-In Fiberglass & Cellulose</a>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-cyan-600 mr-2">✓</span>
+                        <a href="/services/residential/wall/" class="hover:text-cyan-600">Wall Insulation Retrofits</a>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-cyan-600 mr-2">✓</span>
+                        <a href="/services/residential/crawl-space/" class="hover:text-cyan-600">Crawl Space Encapsulation</a>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-cyan-600 mr-2">✓</span>
+                        <a href="/services/residential/removal/" class="hover:text-cyan-600">Old Insulation Removal</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-2xl font-bold mb-4 text-cyan-600">Commercial Insulation</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <span class="text-cyan-600 mr-2">✓</span>
+                        <a href="/services/commercial/office/" class="hover:text-cyan-600">Office Building Insulation</a>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-cyan-600 mr-2">✓</span>
+                        <a href="/services/commercial/retail/" class="hover:text-cyan-600">Retail Space Solutions</a>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-cyan-600 mr-2">✓</span>
+                        <a href="/services/commercial/warehouse/" class="hover:text-cyan-600">Warehouse Insulation Systems</a>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-cyan-600 mr-2">✓</span>
+                        <a href="/services/commercial/new-construction/" class="hover:text-cyan-600">New Construction Projects</a>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-cyan-600 mr-2">✓</span>
+                        <span>Metal Building Insulation</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-cyan-600 mr-2">✓</span>
+                        <span>Tenant Improvement Projects</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-2xl font-bold mb-4 text-cyan-600">Industrial & Agricultural</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <span class="text-cyan-600 mr-2">✓</span>
+                        <a href="/services/industrial/manufacturing/" class="hover:text-cyan-600">Manufacturing Facilities</a>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-cyan-600 mr-2">✓</span>
+                        <a href="/services/industrial/cold-storage/" class="hover:text-cyan-600">Cold Storage Insulation</a>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-cyan-600 mr-2">✓</span>
+                        <a href="/services/agricultural/tank/" class="hover:text-cyan-600">Tank & Equipment Coating</a>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-cyan-600 mr-2">✓</span>
+                        <a href="/services/agricultural/barn/" class="hover:text-cyan-600">Barn & Livestock Buildings</a>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-cyan-600 mr-2">✓</span>
+                        <a href="/services/agricultural/storage/" class="hover:text-cyan-600">Agricultural Storage</a>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-cyan-600 mr-2">✓</span>
+                        <span>Pipeline Insulation</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose ICA - Expanded -->
+<section class="py-16 px-6">
+    <div class="container mx-auto max-w-6xl">
+        <h2 class="text-3xl font-bold mb-12 text-center">Why Arizona Property Owners Choose ICA</h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="space-y-6">
+                <div class="bg-gradient-to-r from-cyan-50 to-blue-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3">✅ Licensed & Insured Excellence</h3>
+                    <p>ROC# 335896 - Fully licensed, bonded, and insured. We carry comprehensive liability insurance and workers' compensation, protecting your property and investment.</p>
+                </div>
+                
+                <div class="bg-gradient-to-r from-cyan-50 to-blue-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3">🏆 BBB A+ Rating & Ethics Recognition</h3>
+                    <p>Our 2025 Torch Awards finalist status demonstrates our unwavering commitment to ethical business practices, transparency, and customer satisfaction.</p>
+                </div>
+                
+                <div class="bg-gradient-to-r from-cyan-50 to-blue-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3">🌡️ Arizona Climate Expertise</h3>
+                    <p>20+ years combating extreme desert heat. We understand Arizona's unique challenges and deliver solutions that perform in 120°F+ temperatures.</p>
+                </div>
+                
+                <div class="bg-gradient-to-r from-cyan-50 to-blue-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3">💰 Proven Energy Savings</h3>
+                    <p>Our customers report 30-50% reduction in cooling costs. With Arizona's high energy rates, proper insulation pays for itself faster than ever.</p>
+                </div>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="bg-gradient-to-r from-cyan-50 to-blue-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3">🛡️ Comprehensive Warranties</h3>
+                    <p>We stand behind our work with industry-leading warranties. Material warranties up to lifetime, plus our exclusive workmanship guarantee.</p>
+                </div>
+                
+                <div class="bg-gradient-to-r from-cyan-50 to-blue-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3">👨‍🔧 Certified Installation Teams</h3>
+                    <p>SPFA-certified installers ensure perfect application every time. Our crews undergo continuous training on the latest techniques and safety protocols.</p>
+                </div>
+                
+                <div class="bg-gradient-to-r from-cyan-50 to-blue-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3">📊 Free Energy Assessments</h3>
+                    <p>Comprehensive evaluation of your property's insulation needs. We provide detailed reports with thermal imaging and customized recommendations.</p>
+                </div>
+                
+                <div class="bg-gradient-to-r from-cyan-50 to-blue-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3">🤝 Transparent Pricing</h3>
+                    <p>No hidden fees or surprise charges. We provide detailed quotes upfront and honor our pricing throughout the project.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Project Gallery Preview -->
+<section class="py-16 px-6 bg-gray-50">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-8 text-center">Before & After: Real Arizona Transformations</h2>
+        <p class="text-center text-lg mb-12">View 50+ project photos showcasing our work across Phoenix metro</p>
+        
+        <div class="gallery-grid">
+            <!-- Gallery items would be dynamically loaded, showing placeholder structure -->
+            <div class="gallery-item">
+                <div class="before-after-slider" data-comparison>
+                    <img src="/images/projects/attic-before-1.jpg" alt="Attic before insulation - Phoenix home" class="w-full">
+                    <div class="slider-handle"></div>
+                </div>
+                <div class="p-4">
+                    <h4 class="font-semibold">Phoenix Attic Transformation</h4>
+                    <p class="text-sm text-gray-600">R-38 blown-in fiberglass - 45% energy savings</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <div class="before-after-slider" data-comparison>
+                    <img src="/images/projects/spray-foam-before-1.jpg" alt="Walls before spray foam - Scottsdale home" class="w-full">
+                    <div class="slider-handle"></div>
+                </div>
+                <div class="p-4">
+                    <h4 class="font-semibold">Scottsdale Spray Foam Upgrade</h4>
+                    <p class="text-sm text-gray-600">Closed-cell spray foam - 50% cooling cost reduction</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <div class="before-after-slider" data-comparison>
+                    <img src="/images/projects/commercial-before-1.jpg" alt="Warehouse before insulation - Mesa" class="w-full">
+                    <div class="slider-handle"></div>
+                </div>
+                <div class="p-4">
+                    <h4 class="font-semibold">Mesa Warehouse Project</h4>
+                    <p class="text-sm text-gray-600">10,000 sq ft spray foam application</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-8">
+            <a href="/projects/" class="inline-block bg-cyan-600 !text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-all">
+                View Full Project Gallery (50+ Photos)
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Understanding Insulation in Arizona -->
+<section class="py-16 px-6">
+    <div class="container mx-auto max-w-4xl">
+        <h2 class="text-3xl font-bold mb-8">Understanding Insulation in Arizona's Extreme Climate</h2>
+        
+        <div class="prose prose-lg max-w-none space-y-6">
+            <p>
+                Arizona's unique desert climate presents extraordinary challenges for property owners. With summer temperatures regularly exceeding 115°F and dramatic day-to-night temperature swings, proper insulation isn't just about comfort—it's about survival and financial sustainability.
+            </p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">The Science Behind Desert Insulation</h3>
+            <p>
+                In Arizona, insulation serves a dual purpose that's more critical than in moderate climates. During our intense summers, quality insulation acts as a thermal barrier, preventing superheated air from infiltrating your living spaces. The key metric here is the R-value—the measure of thermal resistance.
+            </p>
+            
+            <p>
+                For Arizona homes, the Department of Energy recommends minimum R-values of:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+                <li><strong>Attic:</strong> R-38 to R-60 (higher is better in our climate)</li>
+                <li><strong>Walls:</strong> R-13 to R-21 for framed walls</li>
+                <li><strong>Floors:</strong> R-19 to R-25 over unconditioned spaces</li>
+                <li><strong>Crawl Spaces:</strong> R-25 to R-30</li>
+            </ul>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">Types of Insulation: What Works Best in Arizona</h3>
+            
+            <h4 class="text-xl font-semibold mt-6 mb-3">Spray Foam Insulation: The Gold Standard</h4>
+            <p>
+                Spray foam insulation has revolutionized how we protect Arizona properties from extreme heat. Available in two primary types—open-cell and closed-cell—spray foam offers superior performance:
+            </p>
+            
+            <div class="bg-gray-50 p-6 rounded-lg my-6">
+                <h5 class="font-semibold mb-3">Open-Cell Spray Foam</h5>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>R-value: 3.5-3.6 per inch</li>
+                    <li>Excellent sound dampening properties</li>
+                    <li>Allows some vapor permeability</li>
+                    <li>Cost-effective for large areas</li>
+                    <li>Ideal for: Interior walls, attics, sound control</li>
+                </ul>
+            </div>
+            
+            <div class="bg-gray-50 p-6 rounded-lg my-6">
+                <h5 class="font-semibold mb-3">Closed-Cell Spray Foam</h5>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>R-value: 6.0-7.0 per inch</li>
+                    <li>Creates air and moisture barrier</li>
+                    <li>Adds structural strength</li>
+                    <li>Highest R-value per inch</li>
+                    <li>Ideal for: Roofs, exterior walls, basements</li>
+                </ul>
+            </div>
+            
+            <h4 class="text-xl font-semibold mt-6 mb-3">Blown-In Insulation: Versatile and Effective</h4>
+            <p>
+                Blown-in insulation remains a popular choice for Arizona attics and retrofit applications. Two main types dominate the market:
+            </p>
+            
+            <div class="bg-gray-50 p-6 rounded-lg my-6">
+                <h5 class="font-semibold mb-3">Fiberglass Blown-In</h5>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>R-value: 2.2-2.7 per inch</li>
+                    <li>Non-combustible and pest-resistant</li>
+                    <li>Settles less than cellulose</li>
+                    <li>Excellent for attic applications</li>
+                    <li>Cost-effective for large areas</li>
+                </ul>
+            </div>
+            
+            <div class="bg-gray-50 p-6 rounded-lg my-6">
+                <h5 class="font-semibold mb-3">Cellulose Blown-In</h5>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>R-value: 3.2-3.8 per inch</li>
+                    <li>Made from recycled materials</li>
+                    <li>Excellent air sealing properties</li>
+                    <li>Treated for fire and pest resistance</li>
+                    <li>Dense-pack option for walls</li>
+                </ul>
+            </div>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">The Hidden Costs of Poor Insulation in Arizona</h3>
+            <p>
+                Many Arizona property owners don't realize the true cost of inadequate insulation until they experience:
+            </p>
+            
+            <ol class="list-decimal pl-6 space-y-3">
+                <li>
+                    <strong>Astronomical Energy Bills:</strong> Poorly insulated homes can see summer cooling costs exceed $500-$800 per month. With proper insulation, these costs typically drop by 30-50%.
+                </li>
+                <li>
+                    <strong>HVAC System Strain:</strong> Air conditioners in under-insulated homes run constantly, leading to premature failure. Replacing an AC system costs $5,000-$10,000—far more than proper insulation.
+                </li>
+                <li>
+                    <strong>Comfort Issues:</strong> Hot spots, cold rooms, and inability to maintain consistent temperatures make living spaces uncomfortable despite running AC constantly.
+                </li>
+                <li>
+                    <strong>Moisture Problems:</strong> Poor insulation allows condensation, leading to mold growth—a serious health hazard in our climate.
+                </li>
+                <li>
+                    <strong>Reduced Property Value:</strong> Energy-efficient homes command premium prices. Poor insulation can reduce property value by 5-10%.
+                </li>
+            </ol>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">Arizona Building Codes and Insulation Requirements</h3>
+            <p>
+                Arizona has adopted the International Energy Conservation Code (IECC) with state-specific amendments. Current requirements for new construction include:
+            </p>
+            
+            <div class="bg-amber-50 border-l-4 border-amber-600 p-6 my-6">
+                <h4 class="font-semibold mb-3">2021 IECC Requirements for Arizona (Climate Zone 2B)</h4>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Ceiling R-value: R-38 minimum</li>
+                    <li>Wood frame wall: R-13 + R-5 continuous or R-20</li>
+                    <li>Mass wall: R-13 minimum</li>
+                    <li>Floor: R-19 minimum</li>
+                    <li>Basement wall: R-10 continuous</li>
+                    <li>Crawl space wall: R-10 continuous</li>
+                </ul>
+            </div>
+            
+            <p>
+                However, these are <em>minimum</em> requirements. For optimal performance in Arizona's extreme climate, we recommend exceeding these values by 20-50%.
+            </p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">The ICA Installation Process: What to Expect</h3>
+            <p>
+                When you choose Insulation Contractors of Arizona, you're selecting a proven process refined over 20 years and 5,000+ successful projects:
+            </p>
+            
+            <ol class="list-decimal pl-6 space-y-4">
+                <li>
+                    <strong>Free Comprehensive Assessment</strong>
+                    <ul class="list-disc pl-6 mt-2">
+                        <li>Thermal imaging to identify heat infiltration</li>
+                        <li>Attic and crawl space inspection</li>
+                        <li>Energy usage analysis</li>
+                        <li>Custom recommendations report</li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <strong>Detailed Proposal and Planning</strong>
+                    <ul class="list-disc pl-6 mt-2">
+                        <li>Material options with pros/cons</li>
+                        <li>Precise measurements and calculations</li>
+                        <li>Timeline and milestone schedule</li>
+                        <li>Fixed-price quote with no hidden fees</li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <strong>Professional Preparation</strong>
+                    <ul class="list-disc pl-6 mt-2">
+                        <li>Protection of living spaces and belongings</li>
+                        <li>Removal of old insulation if needed</li>
+                        <li>Air sealing of gaps and penetrations</li>
+                        <li>Installation of proper ventilation baffles</li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <strong>Expert Installation</strong>
+                    <ul class="list-disc pl-6 mt-2">
+                        <li>SPFA-certified technicians only</li>
+                        <li>Proper safety equipment and protocols</li>
+                        <li>Continuous quality monitoring</li>
+                        <li>Clean, efficient work practices</li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <strong>Quality Assurance and Cleanup</strong>
+                    <ul class="list-disc pl-6 mt-2">
+                        <li>Thermal imaging verification</li>
+                        <li>Thickness and coverage inspection</li>
+                        <li>Complete site cleanup</li>
+                        <li>Final walkthrough with homeowner</li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <strong>Follow-Up and Support</strong>
+                    <ul class="list-disc pl-6 mt-2">
+                        <li>30-day satisfaction check-in</li>
+                        <li>Energy savings monitoring assistance</li>
+                        <li>Warranty documentation</li>
+                        <li>Ongoing support and maintenance tips</li>
+                    </ul>
+                </li>
+            </ol>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">Financing Your Insulation Investment</h3>
+            <p>
+                We understand that quality insulation is a significant investment. That's why ICA offers flexible financing options:
+            </p>
+            
+            <ul class="list-disc pl-6 space-y-3">
+                <li><strong>0% Interest Programs:</strong> Qualified buyers can access 12-18 month same-as-cash financing</li>
+                <li><strong>Low Monthly Payments:</strong> Extended terms available with competitive rates</li>
+                <li><strong>Utility Rebates:</strong> We help you access available rebates from APS, SRP, and other utilities</li>
+                <li><strong>Tax Credits:</strong> Federal tax credits may cover up to 30% of insulation costs</li>
+                <li><strong>Property Value Increase:</strong> Insulation improvements typically increase home value by 2-6%</li>
+            </ul>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">Commercial and Industrial Expertise</h3>
+            <p>
+                Beyond residential services, ICA has become Arizona's trusted partner for commercial and industrial insulation projects. Our portfolio includes:
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6 my-6">
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h4 class="font-semibold mb-3">Commercial Projects</h4>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Office buildings and medical facilities</li>
+                        <li>Retail stores and shopping centers</li>
+                        <li>Restaurants and hospitality venues</li>
+                        <li>Schools and educational facilities</li>
+                        <li>Religious buildings and community centers</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h4 class="font-semibold mb-3">Industrial Applications</h4>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Manufacturing facilities</li>
+                        <li>Cold storage and refrigeration</li>
+                        <li>Agricultural buildings and tanks</li>
+                        <li>Metal building systems</li>
+                        <li>Process equipment insulation</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">Environmental Impact and Sustainability</h3>
+            <p>
+                At ICA, we're committed to environmental stewardship. Proper insulation is one of the most impactful ways to reduce carbon emissions:
+            </p>
+            
+            <ul class="list-disc pl-6 space-y-3">
+                <li>Average home saves 2-3 tons of CO2 annually with proper insulation</li>
+                <li>Reduced strain on Arizona's power grid during peak summer demand</li>
+                <li>Many of our products contain recycled content</li>
+                <li>Spray foam insulation can last 50+ years, reducing landfill waste</li>
+                <li>Lower energy consumption means fewer power plant emissions</li>
+            </ul>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">Frequently Asked Questions</h3>
+            
+            <div class="space-y-6">
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h4 class="font-semibold mb-2">How long does insulation installation take?</h4>
+                    <p>Most residential projects complete in 1-2 days. Larger homes or complete retrofits may take 3-4 days. Commercial projects vary based on scope.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h4 class="font-semibold mb-2">Will I need to leave my home during installation?</h4>
+                    <p>For blown-in insulation, you can typically stay home. For spray foam applications, we recommend being away for 24 hours to allow proper curing and ventilation.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h4 class="font-semibold mb-2">How soon will I see energy savings?</h4>
+                    <p>Immediately! Most customers report noticeable comfort improvements within hours and see reduced energy bills in the first full billing cycle.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h4 class="font-semibold mb-2">Do you remove old insulation?</h4>
+                    <p>Yes, we're fully equipped for insulation removal when necessary. This includes contaminated, damaged, or insufficient existing insulation.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h4 class="font-semibold mb-2">What warranties do you offer?</h4>
+                    <p>We provide manufacturer material warranties (up to lifetime for some products) plus our exclusive 5-year workmanship guarantee.</p>
+                </div>
+            </div>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">The ICA Difference: Why Experience Matters</h3>
+            <p>
+                In Arizona's challenging climate, experience isn't just valuable—it's essential. Here's what sets ICA apart from other insulation contractors:
+            </p>
+            
+            <ol class="list-decimal pl-6 space-y-4">
+                <li>
+                    <strong>Desert-Specific Expertise:</strong> We've spent 20 years perfecting techniques specifically for Arizona's extreme temperatures and low humidity.
+                </li>
+                
+                <li>
+                    <strong>Complete Solutions Approach:</strong> We don't just install insulation—we solve comfort and energy problems comprehensively.
+                </li>
+                
+                <li>
+                    <strong>Proven Track Record:</strong> 5,000+ successful projects with documented energy savings averaging 35-45%.
+                </li>
+                
+                <li>
+                    <strong>Industry Leadership:</strong> Active members of SPFA, contributing to best practices and safety standards.
+                </li>
+                
+                <li>
+                    <strong>Local Relationships:</strong> Strong partnerships with suppliers ensure best pricing and material availability.
+                </li>
+                
+                <li>
+                    <strong>Community Investment:</strong> As a local family business, we're invested in Arizona's future and our neighbors' success.
+                </li>
+            </ol>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">Take Action: Your Comfort and Savings Await</h3>
+            <p>
+                Every day you wait to upgrade your insulation costs money—in high energy bills, wear on your HVAC system, and compromised comfort. With ICA's proven solutions and flexible financing, there's never been a better time to invest in your property's efficiency and value.
+            </p>
+            
+            <p class="text-lg font-semibold mt-6">
+                Don't let another Arizona summer drain your wallet and comfort. Contact Insulation Contractors of Arizona today for your free assessment and discover why thousands of your neighbors trust us with their insulation needs.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA Section -->
+<section class="py-16 px-6 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">
+    <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-6">Ready to Transform Your Property's Comfort and Efficiency?</h2>
+        <p class="text-xl mb-8 max-w-3xl mx-auto">
+            Join thousands of satisfied Arizona property owners who've chosen ICA for superior insulation solutions. 
+            Get your free assessment and detailed quote today.
+        </p>
+        
+        <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+            <a href="tel:623-241-1939" class="bg-white !text-gray-900 px-8 py-4 rounded-lg font-bold text-xl hover:bg-gray-100 transition-all inline-flex items-center">
+                <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                </svg>
+                Call 623-241-1939 Now
+            </a>
+            
+            <a href="/contact/" class="bg-transparent border-2 border-white !text-white px-8 py-4 rounded-lg font-bold text-xl hover:bg-white hover:!text-gray-900 transition-all">
+                Get Free Assessment Online
+            </a>
+        </div>
+        
+        <div class="mt-12 flex flex-wrap justify-center gap-8 text-sm">
+            <div class="flex items-center">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Licensed ROC# 335896
+            </div>
+            <div class="flex items-center">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                BBB A+ Rated
+            </div>
+            <div class="flex items-center">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Free Estimates
+            </div>
+            <div class="flex items-center">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Financing Available
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ROI Calculator Script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const sqftInput = document.getElementById('sqft');
+    const billInput = document.getElementById('bill');
+    const typeSelect = document.getElementById('type');
+    
+    function calculateROI() {
+        const sqft = parseFloat(sqftInput.value) || 2000;
+        const bill = parseFloat(billInput.value) || 350;
+        const type = typeSelect.value;
+        
+        let savingsPercent = 0.35; // Default 35%
+        if (type === 'spray-foam') savingsPercent = 0.40;
+        if (type === 'blown-in') savingsPercent = 0.25;
+        if (type === 'combo') savingsPercent = 0.40;
+        
+        const monthlySavings = bill * savingsPercent;
+        const annualSavings = monthlySavings * 12;
+        const fiveYearSavings = annualSavings * 5;
+        
+        // Estimate cost based on sq ft and type
+        let costPerSqFt = 1.50; // Default
+        if (type === 'spray-foam') costPerSqFt = 2.50;
+        if (type === 'blown-in') costPerSqFt = 1.00;
+        if (type === 'combo') costPerSqFt = 2.00;
+        
+        const estimatedCost = sqft * costPerSqFt;
+        const roiMonths = Math.ceil(estimatedCost / monthlySavings);
+        
+        document.getElementById('monthly-savings').textContent = '$' + monthlySavings.toFixed(0);
+        document.getElementById('annual-savings').textContent = '$' + annualSavings.toFixed(0);
+        document.getElementById('five-year-savings').textContent = '$' + fiveYearSavings.toFixed(0);
+        document.getElementById('roi-timeline').textContent = roiMonths + '-' + (roiMonths + 6) + ' months';
+    }
+    
+    sqftInput.addEventListener('input', calculateROI);
+    billInput.addEventListener('input', calculateROI);
+    typeSelect.addEventListener('change', calculateROI);
+    
+    // Initial calculation
+    calculateROI();
+    
+    // Before/After Slider functionality
+    const sliders = document.querySelectorAll('[data-comparison]');
+    sliders.forEach(slider => {
+        let isDown = false;
+        const handle = slider.querySelector('.slider-handle');
+        
+        slider.addEventListener('mousedown', () => isDown = true);
+        slider.addEventListener('mouseup', () => isDown = false);
+        slider.addEventListener('mouseleave', () => isDown = false);
+        
+        slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            const x = e.offsetX;
+            const width = slider.offsetWidth;
+            const percent = (x / width) * 100;
+            handle.style.left = percent + '%';
+        });
+    });
+});
+</script>
