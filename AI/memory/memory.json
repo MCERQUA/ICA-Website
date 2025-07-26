@@ -319,6 +319,24 @@
       "purpose": "Dynamic task tracking separate from main memory for efficient updates",
       "usage": "Tasks file contains current priorities, deadlines, and implementation details"
     },
+    "styling_safety_system": {
+      "critical_importance": "Prevents unreadable content that damages user experience and business credibility",
+      "mandatory_document": "docs/MANDATORY_STYLING_RULES.md",
+      "enforcement": "Must be read before ANY CSS/styling work",
+      "emergency_patterns": "Dark backgrounds with white text for immediate readability fixes",
+      "forbidden_combinations": [
+        "Cyan text on white backgrounds",
+        "White text on white backgrounds", 
+        "Light gray text on light backgrounds",
+        "Any colored text on light backgrounds"
+      ],
+      "required_combinations": [
+        "Dark gradients with white text",
+        "Cyan accents ONLY on dark backgrounds",
+        "Text shadows for enhanced readability",
+        "High contrast ratios (7:1 minimum)"
+      ]
+    },
     "website_review_july_2025": {
       "findings": [
         "BBB Torch Awards for Ethics Finalist status confirmed and featured",
@@ -328,7 +346,8 @@
         "ROC license consistently #335896 throughout site - VERIFIED AND STANDARDIZED",
         "Air Duct Cleaning service prominently featured as new offering",
         "2025 SFWW Ambassador Badge displayed in credentials",
-        "Website improvement roadmap documented with 21 high-impact suggestions"
+        "Website improvement roadmap documented with 21 high-impact suggestions",
+        "CRITICAL: Styling readability issues identified requiring mandatory prevention system"
       ],
       "critical_seo_fixes_completed": [
         "Site URL updated from staging to production (insulationcontractorsofarizona.com)",
@@ -353,6 +372,42 @@
       "bbb_torch_awards_feature": "Implement BBB Torch Awards finalist promotion across site"
     },
     "recent_updates": {
+      "2025-07-26-styling-safety-system": {
+        "task": "Created comprehensive styling safety prevention system",
+        "status": "completed",
+        "urgency": "CRITICAL - Prevents unreadable content creation",
+        "changes": [
+          "Created docs/MANDATORY_STYLING_RULES.md with explicit forbidden/required patterns",
+          "Updated docs/ai-coding-guidelines.md to prioritize styling rules as #1 requirement",
+          "Enhanced .claude/commands/startup.md to load styling rules during initialization",
+          "Updated .claude/commands/echo-rules.md with styling safety emphasis",
+          "Added emergency CSS patterns for immediate readability fixes",
+          "Documented specific color combinations that cause readability issues",
+          "Created validation checklists for all styling work"
+        ],
+        "prevention_system": [
+          "Mandatory document reading before any CSS work",
+          "Explicit forbidden color combinations (cyan on white, white on white)",
+          "Required patterns (dark backgrounds + white text + text shadows)",
+          "Emergency fix CSS for immediate application",
+          "Contrast ratio validation requirements",
+          "Visual readability testing protocols"
+        ],
+        "enforcement_levels": [
+          "Documentation priority: Styling rules read first",
+          "Startup protocol: Claude Code loads styling rules during initialization",
+          "Validation checklists: Required before any styling deployment",
+          "Emergency procedures: Immediate fixes for unreadable content",
+          "Communication protocols: Report readability issues to Slack immediately"
+        ],
+        "business_impact": [
+          "Prevents user frustration from unreadable content",
+          "Maintains professional appearance and credibility",
+          "Ensures accessibility compliance for wider audience",
+          "Reduces support requests about website usability",
+          "Protects brand reputation through consistent quality"
+        ]
+      },
       "2025-07-26-memory-review": {
         "task": "Comprehensive documentation review and memory update",
         "status": "completed",
@@ -402,160 +457,11 @@
           "Improved sitemap generation with proper domain",
           "Enhanced business information consistency for local SEO"
         ]
-      },
-      "2025-06-19-task-system": {
-        "task": "Created separate task management system",
-        "status": "completed",
-        "changes": [
-          "Created AI/memory/tasks.json for dynamic task tracking",
-          "Updated main memory to reference task system",
-          "Added current priority tasks including tradeshow page (July 12 deadline)",
-          "Added air duct cleaning service page requirement",
-          "Separated dynamic task content from static company information"
-        ]
-      },
-      "2025-06-01-services": {
-        "task": "Services page redesign and spacing fix",
-        "status": "completed",
-        "changes": [
-          "Created component-based services page structure",
-          "Added 4 new section components: service-categories-grid, why-choose-ica-enhanced, service-process-timeline, material-comparison-interactive",
-          "Updated services/index.njk with modern component-based approach",
-          "Enhanced SEO with schema markup and improved meta descriptions",
-          "Implemented modern styling with glassmorphism effects and animations",
-          "Created services.css for page-specific styles",
-          "Improved internal linking structure for better SEO",
-          "Fixed CSS variable naming issue - added missing --space- prefixed variables in style.css to match component usage"
-        ],
-        "issues_resolved": [
-          "Services page sections not showing proper spacing due to CSS variable mismatch",
-          "Components using --space-xl instead of --spacing-xl fixed by adding both naming conventions"
-        ]
-      },
-      "2025-06-01-agricultural": {
-        "task": "Agricultural services page complete redesign",
-        "status": "completed",
-        "changes": [
-          "Created agricultural.css with modern, high-tech styling",
-          "Developed agricultural-tank-showcase.njk component with interactive water savings calculator",
-          "Redesigned agricultural/index.njk with component-based structure",
-          "Added conditional CSS loading in base.njk for agricultural pages",
-          "Implemented advanced animations: shimmer effects, gradient rotations, pulse animations",
-          "Created interactive elements: tank types grid, process timeline, benefits showcase",
-          "Added comprehensive case studies section with visual stats",
-          "Enhanced SEO with schema markup and agricultural-specific keywords",
-          "Integrated water conservation calculator with real-time calculations"
-        ],
-        "new_components": [
-          "agricultural-tank-showcase.njk - Interactive showcase with calculator and timeline"
-        ],
-        "styling_features": [
-          "Glassmorphism effects on cards and sections",
-          "Animated gradient borders and backgrounds",
-          "Hover animations with transform and shadow effects",
-          "Responsive grid layouts for all screen sizes",
-          "Custom timeline with animated markers",
-          "Interactive form inputs with focus states"
-        ]
-      },
-      "2025-06-01-industrial": {
-        "task": "Industrial services page using standard hero component",
-        "status": "completed",
-        "changes": [
-          "Updated industrial/index.njk to use standard hero.njk component",
-          "Fixed main padding-top issue with CSS :has() selector",
-          "Updated industrial.css with modern high-tech styling",
-          "Added conditional CSS loading in base.njk for industrial pages",
-          "Implemented glassmorphism effects and animations",
-          "Enhanced mobile responsiveness with proper breakpoints",
-          "Added schema.org structured data for industrial services",
-          "Created modern service cards with hover effects and animations"
-        ],
-        "components_reused": [
-          "sections/hero.njk - Standard hero component with all features",
-          "sections/why-choose-ica.njk - Trust signals section",
-          "sections/testimonials.njk - Customer testimonials",
-          "sections/cta.njk - Call to action section"
-        ],
-        "styling_features": [
-          "Uses standard hero with full features (badges, CTAs, etc)",
-          "Glassmorphism service cards with gradient borders",
-          "Animated statistics counters",
-          "Industry badges with hover effects",
-          "Responsive grid layouts",
-          "Modern CTA section with rotating gradient border"
-        ],
-        "important_lesson": "Always use existing hero.njk component instead of creating new page-specific hero components"
-      },
-      "2025-06-02-visual-components": {
-        "task": "Created high-quality visual components for educational content",
-        "status": "completed",
-        "changes": [
-          "Created 4 new visual components with gradient heat bars and modern styling",
-          "Added visual-crawlspace-diagram.njk - layered encapsulation system with moisture comparison",
-          "Added visual-temperature-comparison.njk - side-by-side home temperature visualization",
-          "Added visual-rvalue-comparison.njk - bar chart comparing insulation materials with performance heat map",
-          "Added visual-energy-savings.njk - interactive calculator with savings projections",
-          "Created visual-components.css with comprehensive styling including gradient scales",
-          "Updated base.njk to include visual-components.css",
-          "Integrated components into relevant service pages"
-        ],
-        "new_components": [
-          "visual-crawlspace-diagram.njk - Complete crawl space encapsulation visualization",
-          "visual-temperature-comparison.njk - Temperature and energy cost comparisons",
-          "visual-rvalue-comparison.njk - R-value and performance comparison chart",
-          "visual-energy-savings.njk - Energy savings calculator with 25-year projection"
-        ],
-        "pages_updated": [
-          "crawl-space.njk - Added crawlspace diagram component",
-          "attic.njk - Added temperature comparison and energy savings components",
-          "spray-foam-insulation.njk - Added R-value comparison component"
-        ],
-        "styling_features": [
-          "Dark tech-style backgrounds with gradient borders",
-          "Color-coded heat gradient bars (blue to red)",
-          "Glassmorphism effects on all components",
-          "Animated shimmer and pulse effects",
-          "Interactive hover states",
-          "Fully responsive design",
-          "Temperature scale gradients matching original design"
-        ]
-      },
-      "2025-06-03-commercial-pages": {
-        "task": "Commercial pages complete overhaul with styling fixes",
-        "status": "completed",
-        "changes": [
-          "Created comprehensive commercial.css (17KB → 13.8KB optimized)",
-          "Created commercial-showcase.njk component with case studies",
-          "Created commercial-calculator.njk with interactive ROI calculator",
-          "Updated commercial/index.njk to use standard hero and new components",
-          "Simplified office.njk from 17KB to 2.5KB using modular components",
-          "Fixed YAML front matter errors (removed schema objects)",
-          "Fixed layout path errors (layouts/base.njk → base.njk)",
-          "Updated base.njk to apply pageClass to body element",
-          "Added additionalCss handling for loading page-specific CSS"
-        ],
-        "critical_fixes": [
-          "White text on white background - forced dark backgrounds throughout",
-          "pageClass not being applied - updated base.njk body tag",
-          "Build failures from incorrect layout paths",
-          "YAML parsing errors from complex schema objects"
-        ],
-        "lessons_learned": [
-          "Always use 'layout: base.njk' not 'layout: layouts/base.njk'",
-          "Schema markup must go in script tags, not YAML front matter",
-          "Pages must set pageClass for custom styling to work",
-          "base.njk must have <body class=\"{{ pageClass }}\">",
-          "Keep pages small (<5KB) and use components for content",
-          "Force dark backgrounds with !important when needed"
-        ],
-        "documentation_created": [
-          "docs/CRITICAL-PATTERNS.md - Comprehensive guide to prevent repeated errors"
-        ]
       }
     },
     "critical_reminders": {
       "before_any_changes": [
+        "🚨 FIRST: Read docs/MANDATORY_STYLING_RULES.md if any styling involved",
         "Check docs/CRITICAL-PATTERNS.md for common pitfalls",
         "Load and review AI/memory/tasks.json for current priorities",
         "Check docs/BLOG_VISIBILITY_FIXES_PLAN.md for blog work status",
@@ -567,10 +473,13 @@
         "Always use ROC# 335896 from site.roc_license variable"
       ],
       "css_patterns": [
+        "🚨 MANDATORY: Read MANDATORY_STYLING_RULES.md before any CSS work",
         "Pages with dark themes MUST set pageClass in front matter",
         "CSS must force backgrounds with !important",
-        "Always ensure proper text contrast",
-        "Load page-specific CSS via additionalCss array"
+        "Always ensure proper text contrast (7:1 minimum ratio)",
+        "Load page-specific CSS via additionalCss array",
+        "NEVER use light backgrounds with ANY colored text",
+        "ALWAYS use dark backgrounds with white text + text shadows"
       ],
       "component_usage": [
         "Always use standard hero.njk for all pages",
@@ -589,6 +498,13 @@
         "Verify exact URL structure before creating internal links",
         "Test external links during research phase",
         "Use full date-prefixed URLs, not shortened versions"
+      ],
+      "readability_validation": [
+        "🚨 CRITICAL: Test ALL text for readability against backgrounds",
+        "Apply emergency dark background CSS if content is unreadable",
+        "Report readability issues immediately to prevent user frustration",
+        "Validate contrast ratios before deployment",
+        "Squint test: If you can't read it easily, users definitely can't"
       ]
     }
   }
