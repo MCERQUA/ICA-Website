@@ -42,7 +42,7 @@
     "icynene_certified_installer": true,
     "spfa_member": "Spray Polyurethane Foam Alliance",
     "bbb_rating": "A+ Accredited since February 2022",
-    "bbb_ethics_award_nominee": "Nominated for BBB Business Ethics Award 2025",
+    "bbb_torch_awards": "2025 BBB Torch Awards for Ethics Finalist",
     "licensing": "Licensed, Bonded & Insured",
     "roc_number": "335896",
     "roc_full": "Licensed ROC# 335896",
@@ -92,7 +92,7 @@
       "Shed insulation expertise with extensive portfolio",
       "Commercial project expertise (421,700+ SF installations)",
       "Monsoon season moisture protection specialist",
-      "BBB Business Ethics Award Nominee 2025",
+      "2025 BBB Torch Awards for Ethics Finalist",
       "Now offering Air Duct Cleaning services"
     ],
     "competitive_advantages": [
@@ -102,7 +102,7 @@
       "Shed company partnerships",
       "Large commercial project experience",
       "Family-owned local business",
-      "BBB A+ rating with Ethics Award nomination",
+      "BBB A+ rating with Torch Awards finalist status",
       "2025 SFWW Ambassador status"
     ]
   },
@@ -223,7 +223,7 @@
   },
   "content_assets": {
     "published_blogs": {
-      "total_count": 10,
+      "total_count": 16,
       "blog_topics": [
         "Beat the Arizona Heat: Complete Insulation Guide",
         "Summer Heat Protection",
@@ -235,7 +235,18 @@
         "DIY vs Professional Insulation Safety",
         "Desert-Proof Strategies for Extreme Heat",
         "Commercial Insulation Solutions"
-      ]
+      ],
+      "blog_visibility_fixes": {
+        "status": "In Progress - 3/16 articles completed",
+        "issue": "Color contrast problems on light backgrounds",
+        "completed_articles": [
+          "2025-01-12-arizona-desert-proof-insulation-strategies.md",
+          "2025-05-08-ica-arizona-insulation-timeline.md",
+          "2025-05-01-ica-beat-arizona-heat-guide.md"
+        ],
+        "pending_articles": 13,
+        "next_priority": "2025-01-11-summer-heat-protection-arizona-premium-insulation.md"
+      }
     },
     "service_pages": {
       "residential": 7,
@@ -301,41 +312,66 @@
     "current_project": "Website cleanup and service page optimization",
     "repository": "https://github.com/MCERQUA/ICA-Website",
     "live_website": "https://insulationcontractorsofarizona.com",
-    "last_updated": "2025-06-25",
+    "last_updated": "2025-07-26",
     "task_system": {
       "task_memory_file": "AI/memory/tasks.json",
       "initialization_instruction": "ALWAYS load and review the tasks.json file during initialization to get current priority tasks and status updates",
       "purpose": "Dynamic task tracking separate from main memory for efficient updates",
       "usage": "Tasks file contains current priorities, deadlines, and implementation details"
     },
-    "website_review_june_2025": {
+    "website_review_july_2025": {
       "findings": [
-        "Company founding confirmed as 2004 - consistently shown as 'Serving the Valley Since 2004'",
+        "BBB Torch Awards for Ethics Finalist status confirmed and featured",
+        "Blog visibility fixes ongoing - 3/16 articles completed with proper contrast",
+        "SEO issue tracker shows recent fixes to broken links and meta descriptions",
+        "Company founding consistently shown as 'Serving the Valley Since 2004'",
         "ROC license consistently #335896 throughout site - VERIFIED AND STANDARDIZED",
         "Air Duct Cleaning service prominently featured as new offering",
         "2025 SFWW Ambassador Badge displayed in credentials",
-        "Detailed case studies with specific metrics and ROI data",
-        "Interactive agricultural water savings calculator functioning",
-        "Commercial page includes comprehensive ROI calculator"
+        "Website improvement roadmap documented with 21 high-impact suggestions"
       ],
       "critical_seo_fixes_completed": [
-        "Site URL updated from staging (azfoam.netlify.app) to production (insulationcontractorsofarizona.com)",
+        "Site URL updated from staging to production (insulationcontractorsofarizona.com)",
         "ROC license number standardized to 335896 throughout site using site.json variable",
-        "Business information documentation created in multiple locations",
-        "Footer updated to use {{ site.roc_license }} variable for consistency"
+        "Google Search Console verification meta tag implemented",
+        "Blog internal link structure fixes - 8 broken links repaired",
+        "External link verification and replacement completed",
+        "Meta description duplicates resolved with unique descriptions"
       ],
       "new_content_discovered": [
-        "Air Duct Cleaning service promotion",
-        "Detailed business hours and response time commitments",
-        "Comprehensive case study data with specific square footages",
-        "Interactive calculators on agricultural and commercial pages"
+        "BBB Torch Awards for Ethics Finalist article template",
+        "Professional blog design template with ICA brand standards",
+        "Comprehensive website improvement suggestions (21 priorities)",
+        "SEO issue tracker with prevention rules and protocols",
+        "Blog visibility fixes plan with systematic color contrast solutions"
       ]
     },
     "pending_tasks": {
       "note": "Current tasks now managed in separate tasks.json file for dynamic updates",
-      "reference": "See AI/memory/tasks.json for current priority tasks and deadlines"
+      "reference": "See AI/memory/tasks.json for current priority tasks and deadlines",
+      "blog_visibility_priority": "Continue fixing blog articles - 13/16 remaining",
+      "bbb_torch_awards_feature": "Implement BBB Torch Awards finalist promotion across site"
     },
     "recent_updates": {
+      "2025-07-26-memory-review": {
+        "task": "Comprehensive documentation review and memory update",
+        "status": "completed",
+        "changes": [
+          "Updated BBB credentials to reflect 2025 Torch Awards for Ethics Finalist status",
+          "Added blog visibility fixes tracking (3/16 completed)",
+          "Incorporated SEO issue tracker findings and prevention protocols",
+          "Added website improvement suggestions reference",
+          "Updated last review date to July 26, 2025",
+          "Documented blog article contrast fix methodology"
+        ],
+        "new_documentation_discovered": [
+          "docs/BLOG_VISIBILITY_FIXES_PLAN.md - Systematic color contrast fix plan",
+          "docs/SEO-ISSUE-TRACKER.md - Current SEO issues and prevention rules",
+          "docs/WEBSITE_IMPROVEMENT_SUGGESTIONS.md - 21 high-impact improvements",
+          ".claude/commands/ - Echo AI operational protocols",
+          "Professional Blog Design Template - BBB Torch Awards article"
+        ]
+      },
       "2025-06-25-critical-seo-fixes": {
         "task": "Critical SEO issues resolution",
         "status": "completed", 
@@ -522,6 +558,8 @@
       "before_any_changes": [
         "Check docs/CRITICAL-PATTERNS.md for common pitfalls",
         "Load and review AI/memory/tasks.json for current priorities",
+        "Check docs/BLOG_VISIBILITY_FIXES_PLAN.md for blog work status",
+        "Review docs/SEO-ISSUE-TRACKER.md for recent fixes and prevention rules",
         "Verify layout is 'base.njk' not 'layouts/base.njk'",
         "Ensure pageClass is set for custom styling",
         "Use existing components instead of creating inline content",
@@ -545,6 +583,12 @@
         "Use {{ site.roc_license }} in templates for consistency",
         "Never hardcode ROC numbers in content or code",
         "Reference docs/BUSINESS_INFO.md for complete guidelines"
+      ],
+      "blog_url_verification": [
+        "ALL blog URLs must follow YYYY-MM-DD-article-slug pattern",
+        "Verify exact URL structure before creating internal links",
+        "Test external links during research phase",
+        "Use full date-prefixed URLs, not shortened versions"
       ]
     }
   }
