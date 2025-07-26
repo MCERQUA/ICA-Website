@@ -15,109 +15,110 @@ eleventyNavigation:
 {% set heroImage = "/images/vent-cleaning_arizona-original.webp" %}
 
 <div class="service-page air-duct-cleaning-page">
-  <!-- Hero Section -->
-  <section class="service-hero bg-gradient-dark">
+  <!-- Hero Section with Background Image -->
+  <section class="duct-hero-section">
+    <div class="duct-hero-bg">
+      <img src="{{ heroImage }}" 
+           alt="Professional air duct cleaning service technician in Arizona" 
+           loading="eager"
+           width="1920" 
+           height="800">
+    </div>
     <div class="container">
-      <div class="service-hero-content">
-        <div class="service-hero-text">
-          <div class="service-badge">
+      <div class="duct-hero-content">
+        <div class="hero-spacer"></div>
+        <div class="duct-hero-text">
+          <div class="license-badge">
             <span class="badge-icon">🏆</span>
-            <span>Licensed & NADCA Certified</span>
+            <span class="badge-text">Licensed & NADCA Certified</span>
           </div>
-          <h1 class="hero-title">{{ pageTitle }}</h1>
-          <p class="hero-subtitle">{{ pageSubtitle }}</p>
-          <p class="hero-description">
+          <h1 class="duct-hero-title">{{ pageTitle }}</h1>
+          <p class="duct-hero-subtitle">{{ pageSubtitle }}</p>
+          <p class="duct-hero-description">
             Breathe cleaner air and improve HVAC efficiency with professional air duct cleaning from Arizona's licensed specialists. Our NADCA-certified technicians use advanced equipment and proven techniques to remove dust, allergens, and contaminants from your ductwork.
           </p>
-          <div class="hero-actions">
-            <a href="/contact" class="btn btn-primary">Get Free Quote</a>
-            <a href="tel:{{ site.phone }}" class="btn btn-secondary">{{ site.phone }}</a>
+          <div class="duct-hero-actions">
+            <a href="/contact" class="duct-btn-primary">Get Free Quote</a>
+            <a href="tel:{{ site.phone }}" class="duct-btn-secondary">Call {{ site.phone }}</a>
           </div>
-          <div class="hero-features">
-            <div class="feature-item">
-              <span class="feature-icon">✓</span>
-              <span>ROC Licensed Contractor</span>
+          <div class="duct-hero-features">
+            <div class="duct-feature-item">
+              <span class="check-icon">✓</span>
+              <span>ROC Licensed #{{ site.roc_license }}</span>
             </div>
-            <div class="feature-item">
-              <span class="feature-icon">✓</span>
+            <div class="duct-feature-item">
+              <span class="check-icon">✓</span>
               <span>Arizona Desert Climate Experts</span>
             </div>
-            <div class="feature-item">
-              <span class="feature-icon">✓</span>
+            <div class="duct-feature-item">
+              <span class="check-icon">✓</span>
               <span>NADCA Certified Technicians</span>
             </div>
           </div>
-        </div>
-        <div class="service-hero-image">
-          <img src="{{ heroImage }}" 
-               alt="Professional air duct cleaning service in Arizona" 
-               loading="eager"
-               width="600" 
-               height="400">
         </div>
       </div>
     </div>
   </section>
 
   <!-- Why Choose ICA Section -->
-  <section class="why-choose-section py-16">
+  <section class="duct-why-choose py-20 bg-gray-50">
     <div class="container">
-      <div class="section-header text-center">
-        <h2 class="section-title">Why Choose ICA for Air Duct Cleaning?</h2>
-        <p class="section-subtitle">Arizona's Trusted Air Quality Specialists</p>
+      <div class="text-center mb-12">
+        <h2 class="duct-section-title">Why Choose ICA for Air Duct Cleaning?</h2>
+        <p class="duct-section-subtitle">Arizona's Trusted Air Quality Specialists</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="feature-card">
-          <div class="feature-icon-wrapper">
-            <span class="feature-icon text-4xl">🛡️</span>
+        <div class="duct-feature-card">
+          <div class="duct-icon-wrapper">
+            <span class="text-5xl">🛡️</span>
           </div>
-          <h3 class="feature-title">Licensed & Insured</h3>
-          <p class="feature-description">
+          <h3 class="duct-card-title">Licensed & Insured</h3>
+          <p class="duct-card-text">
             ROC licensed contractor (#{{ site.roc_license }}) with comprehensive insurance coverage. Unlike many unlicensed competitors, we meet Arizona's professional standards.
           </p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon-wrapper">
-            <span class="feature-icon text-4xl">🏜️</span>
+        <div class="duct-feature-card">
+          <div class="duct-icon-wrapper">
+            <span class="text-5xl">🏜️</span>
           </div>
-          <h3 class="feature-title">Desert Climate Experts</h3>
-          <p class="feature-description">
+          <h3 class="duct-card-title">Desert Climate Experts</h3>
+          <p class="duct-card-text">
             Specialized knowledge of Arizona's unique challenges: monsoon dust storms, extreme heat, and year-round allergen exposure. We know what works in the desert.
           </p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon-wrapper">
-            <span class="feature-icon text-4xl">🔧</span>
+        <div class="duct-feature-card">
+          <div class="duct-icon-wrapper">
+            <span class="text-5xl">🔧</span>
           </div>
-          <h3 class="feature-title">Advanced Equipment</h3>
-          <p class="feature-description">
+          <h3 class="duct-card-title">Advanced Equipment</h3>
+          <p class="duct-card-text">
             Truck-mounted vacuum systems with 1,178+ CFM power, HEPA filtration, and inspection cameras. Professional-grade equipment for thorough cleaning.
           </p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon-wrapper">
-            <span class="feature-icon text-4xl">👨‍🔬</span>
+        <div class="duct-feature-card">
+          <div class="duct-icon-wrapper">
+            <span class="text-5xl">👨‍🔬</span>
           </div>
-          <h3 class="feature-title">NADCA Certified</h3>
-          <p class="feature-description">
+          <h3 class="duct-card-title">NADCA Certified</h3>
+          <p class="duct-card-text">
             Our technicians follow National Air Duct Cleaners Association standards for assessment, cleaning, and restoration. Industry-leading best practices.
           </p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon-wrapper">
-            <span class="feature-icon text-4xl">💰</span>
+        <div class="duct-feature-card">
+          <div class="duct-icon-wrapper">
+            <span class="text-5xl">💰</span>
           </div>
-          <h3 class="feature-title">Transparent Pricing</h3>
-          <p class="feature-description">
+          <h3 class="duct-card-title">Transparent Pricing</h3>
+          <p class="duct-card-text">
             No bait-and-switch tactics. Upfront pricing based on your home's specific needs. Professional assessment with written estimates.
           </p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon-wrapper">
-            <span class="feature-icon text-4xl">🤝</span>
+        <div class="duct-feature-card">
+          <div class="duct-icon-wrapper">
+            <span class="text-5xl">🤝</span>
           </div>
-          <h3 class="feature-title">Service Integration</h3>
-          <p class="feature-description">
+          <h3 class="duct-card-title">Service Integration</h3>
+          <p class="duct-card-text">
             Combine air duct cleaning with insulation services for maximum efficiency and savings. Complete indoor air quality solutions.
           </p>
         </div>
@@ -126,109 +127,115 @@ eleventyNavigation:
   </section>
 
   <!-- Arizona Air Quality Challenges -->
-  <section class="arizona-challenges py-16 bg-gray-50">
+  <section class="duct-arizona-challenges py-20">
     <div class="container">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div class="challenge-content">
-          <h2 class="section-title">Arizona's Unique Air Quality Challenges</h2>
-          <div class="challenge-stats">
-            <div class="stat-item">
-              <div class="stat-number">40 lbs</div>
-              <div class="stat-label">Average dust accumulation per year in Arizona homes</div>
+        <div>
+          <h2 class="duct-section-title">Arizona's Unique Air Quality Challenges</h2>
+          <div class="duct-stats-grid">
+            <div class="duct-stat-card">
+              <div class="duct-stat-number">40 lbs</div>
+              <div class="duct-stat-label">Average dust accumulation per year in Arizona homes</div>
             </div>
-            <div class="stat-item">
-              <div class="stat-number">6.8%</div>
-              <div class="stat-label">Phoenix "good" air quality days (worst among 12 western cities)</div>
+            <div class="duct-stat-card">
+              <div class="duct-stat-number">6.8%</div>
+              <div class="duct-stat-label">Phoenix "good" air quality days (worst among 12 western cities)</div>
             </div>
-            <div class="stat-item">
-              <div class="stat-number">Year-Round</div>
-              <div class="stat-label">Allergy season in desert climate (unlike seasonal patterns elsewhere)</div>
+            <div class="duct-stat-card">
+              <div class="duct-stat-number">Year-Round</div>
+              <div class="duct-stat-label">Allergy season in desert climate</div>
             </div>
           </div>
-          <div class="challenge-factors">
-            <h3 class="text-xl font-bold mb-4">Contributing Factors:</h3>
-            <ul class="challenge-list">
-              <li>
-                <span class="list-icon">🌪️</span>
-                <strong>Monsoon Season Dust Storms:</strong> Mid-June through September brings massive haboobs depositing dust throughout HVAC systems
+          <div class="duct-challenge-list">
+            <h3 class="duct-subsection-title">Contributing Factors:</h3>
+            <ul class="space-y-4">
+              <li class="duct-list-item">
+                <span class="duct-list-icon">🌪️</span>
+                <div>
+                  <strong>Monsoon Season Dust Storms:</strong> Mid-June through September brings massive haboobs depositing dust throughout HVAC systems
+                </div>
               </li>
-              <li>
-                <span class="list-icon">🌵</span>
-                <strong>Desert Particulates:</strong> PM 10 dust particles constantly infiltrate homes through HVAC air intakes
+              <li class="duct-list-item">
+                <span class="duct-list-icon">🌵</span>
+                <div>
+                  <strong>Desert Particulates:</strong> PM 10 dust particles constantly infiltrate homes through HVAC air intakes
+                </div>
               </li>
-              <li>
-                <span class="list-icon">🌸</span>
-                <strong>10,000+ Plant Species:</strong> Sonoran Desert's biodiversity creates continuous pollen cycles
+              <li class="duct-list-item">
+                <span class="duct-list-icon">🌸</span>
+                <div>
+                  <strong>10,000+ Plant Species:</strong> Sonoran Desert's biodiversity creates continuous pollen cycles
+                </div>
               </li>
-              <li>
-                <span class="list-icon">🔥</span>
-                <strong>Extreme Heat:</strong> 160°F+ attic temperatures accelerate dust circulation and system contamination
+              <li class="duct-list-item">
+                <span class="duct-list-icon">🔥</span>
+                <div>
+                  <strong>Extreme Heat:</strong> 160°F+ attic temperatures accelerate dust circulation
+                </div>
               </li>
             </ul>
           </div>
         </div>
-        <div class="challenge-image">
-          <img src="/images/insulation_contractors_of_arizona_spray_foam_Arizona_Sunset-original.webp" 
-               alt="Arizona desert landscape showing dust and environmental challenges" 
-               loading="lazy"
-               width="600" 
-               height="400"
-               class="rounded-lg shadow-lg">
+        <div class="duct-image-wrapper">
+          <div class="duct-placeholder-image">
+            <span class="text-6xl">🏜️</span>
+            <p class="duct-placeholder-text">Arizona Desert Climate</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Service Process -->
-  <section class="service-process py-16">
+  <section class="duct-process py-20 bg-gray-50">
     <div class="container">
-      <div class="section-header text-center">
-        <h2 class="section-title">Our Professional Cleaning Process</h2>
-        <p class="section-subtitle">NADCA-Certified Source Removal Method</p>
+      <div class="text-center mb-12">
+        <h2 class="duct-section-title">Our Professional Cleaning Process</h2>
+        <p class="duct-section-subtitle">NADCA-Certified Source Removal Method</p>
       </div>
-      <div class="process-steps">
-        <div class="process-step">
-          <div class="step-number">1</div>
-          <div class="step-content">
-            <h3 class="step-title">Initial Assessment</h3>
-            <p class="step-description">
-              Comprehensive inspection using camera technology to document contamination levels, identify problem areas, and assess ductwork condition. Written assessment provided.
+      <div class="duct-process-grid">
+        <div class="duct-process-step">
+          <div class="duct-step-number">1</div>
+          <div class="duct-step-content">
+            <h3 class="duct-step-title">Initial Assessment</h3>
+            <p class="duct-step-text">
+              Comprehensive inspection using camera technology to document contamination levels, identify problem areas, and assess ductwork condition.
             </p>
           </div>
         </div>
-        <div class="process-step">
-          <div class="step-number">2</div>
-          <div class="step-content">
-            <h3 class="step-title">System Preparation</h3>
-            <p class="step-description">
-              Protect your home with drop cloths and containment barriers. Connect truck-mounted vacuum systems and establish negative pressure throughout the HVAC system.
+        <div class="duct-process-step">
+          <div class="duct-step-number">2</div>
+          <div class="duct-step-content">
+            <h3 class="duct-step-title">System Preparation</h3>
+            <p class="duct-step-text">
+              Protect your home with drop cloths and containment barriers. Connect truck-mounted vacuum systems and establish negative pressure.
             </p>
           </div>
         </div>
-        <div class="process-step">
-          <div class="step-number">3</div>
-          <div class="step-content">
-            <h3 class="step-title">Source Removal Cleaning</h3>
-            <p class="step-description">
-              Mechanical agitation using rotary brushes, air whips, and compressed air to dislodge contaminants. Continuous vacuum extraction removes all loosened debris.
+        <div class="duct-process-step">
+          <div class="duct-step-number">3</div>
+          <div class="duct-step-content">
+            <h3 class="duct-step-title">Source Removal Cleaning</h3>
+            <p class="duct-step-text">
+              Mechanical agitation using rotary brushes, air whips, and compressed air to dislodge contaminants. Continuous vacuum extraction.
             </p>
           </div>
         </div>
-        <div class="process-step">
-          <div class="step-number">4</div>
-          <div class="step-content">
-            <h3 class="step-title">Component Cleaning</h3>
-            <p class="step-description">
-              Clean supply and return air ducts, registers, grilles, diffusers, heat exchangers, cooling coils, and fan motor housing. Complete system restoration.
+        <div class="duct-process-step">
+          <div class="duct-step-number">4</div>
+          <div class="duct-step-content">
+            <h3 class="duct-step-title">Component Cleaning</h3>
+            <p class="duct-step-text">
+              Clean supply and return air ducts, registers, grilles, diffusers, heat exchangers, cooling coils, and fan motor housing.
             </p>
           </div>
         </div>
-        <div class="process-step">
-          <div class="step-number">5</div>
-          <div class="step-content">
-            <h3 class="step-title">Final Inspection</h3>
-            <p class="step-description">
-              Post-cleaning camera inspection to verify cleanliness. Document results and provide maintenance recommendations for Arizona's climate conditions.
+        <div class="duct-process-step">
+          <div class="duct-step-number">5</div>
+          <div class="duct-step-content">
+            <h3 class="duct-step-title">Final Inspection</h3>
+            <p class="duct-step-text">
+              Post-cleaning camera inspection to verify cleanliness. Document results and provide maintenance recommendations.
             </p>
           </div>
         </div>
@@ -237,121 +244,119 @@ eleventyNavigation:
   </section>
 
   <!-- Health Benefits -->
-  <section class="health-benefits py-16 bg-primary-50">
+  <section class="duct-benefits py-20">
     <div class="container">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div class="benefits-image">
-          <img src="/images/Fibreglass_Home_insulation-original.webp" 
-               alt="Clean indoor air quality representation" 
-               loading="lazy"
-               width="600" 
-               height="400"
-               class="rounded-lg shadow-lg">
+        <div class="duct-image-wrapper">
+          <div class="duct-placeholder-image">
+            <span class="text-6xl">🏠</span>
+            <p class="duct-placeholder-text">Clean Indoor Air Quality</p>
+          </div>
         </div>
-        <div class="benefits-content">
-          <h2 class="section-title">Health & Efficiency Benefits</h2>
-          <div class="benefits-grid">
-            <div class="benefit-item">
-              <div class="benefit-icon">🫁</div>
-              <div class="benefit-text">
-                <h4>Improved Respiratory Health</h4>
-                <p>Reduces allergens, dust mites, and airborne particles that trigger asthma and allergies.</p>
+        <div>
+          <h2 class="duct-section-title">Health & Efficiency Benefits</h2>
+          <div class="duct-benefits-grid">
+            <div class="duct-benefit-item">
+              <div class="duct-benefit-icon">🫁</div>
+              <div>
+                <h4 class="duct-benefit-title">Improved Respiratory Health</h4>
+                <p class="duct-benefit-text">Reduces allergens, dust mites, and airborne particles that trigger asthma and allergies.</p>
               </div>
             </div>
-            <div class="benefit-item">
-              <div class="benefit-icon">❄️</div>
-              <div class="benefit-text">
-                <h4>Enhanced HVAC Efficiency</h4>
-                <p>Clean ducts improve airflow, reducing energy consumption by up to 25-40%.</p>
+            <div class="duct-benefit-item">
+              <div class="duct-benefit-icon">❄️</div>
+              <div>
+                <h4 class="duct-benefit-title">Enhanced HVAC Efficiency</h4>
+                <p class="duct-benefit-text">Clean ducts improve airflow, reducing energy consumption by up to 25-40%.</p>
               </div>
             </div>
-            <div class="benefit-item">
-              <div class="benefit-icon">🌿</div>
-              <div class="benefit-text">
-                <h4>Odor Elimination</h4>
-                <p>Removes musty smells, pet odors, and cooking odors trapped in ductwork.</p>
+            <div class="duct-benefit-item">
+              <div class="duct-benefit-icon">🌿</div>
+              <div>
+                <h4 class="duct-benefit-title">Odor Elimination</h4>
+                <p class="duct-benefit-text">Removes musty smells, pet odors, and cooking odors trapped in ductwork.</p>
               </div>
             </div>
-            <div class="benefit-item">
-              <div class="benefit-icon">🏠</div>
-              <div class="benefit-text">
-                <h4>Cleaner Home Environment</h4>
-                <p>Reduces dust accumulation on furniture, electronics, and surfaces.</p>
+            <div class="duct-benefit-item">
+              <div class="duct-benefit-icon">🏠</div>
+              <div>
+                <h4 class="duct-benefit-title">Cleaner Home Environment</h4>
+                <p class="duct-benefit-text">Reduces dust accumulation on furniture, electronics, and surfaces.</p>
               </div>
             </div>
           </div>
-          <div class="benefits-cta">
-            <p class="text-lg font-semibold mb-4">Ready to breathe cleaner air?</p>
-            <a href="/contact" class="btn btn-primary">Schedule Your Assessment</a>
+          <div class="mt-8">
+            <p class="duct-cta-text">Ready to breathe cleaner air?</p>
+            <a href="/contact" class="duct-btn-primary">Schedule Your Assessment</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- When to Clean Your Ducts -->
-  <section class="when-to-clean py-16">
+  <!-- When to Clean -->
+  <section class="duct-timing py-20 bg-gray-50">
     <div class="container">
-      <div class="section-header text-center">
-        <h2 class="section-title">When Do You Need Air Duct Cleaning?</h2>
-        <p class="section-subtitle">Arizona-Specific Timing and Warning Signs</p>
+      <div class="text-center mb-12">
+        <h2 class="duct-section-title">When Do You Need Air Duct Cleaning?</h2>
+        <p class="duct-section-subtitle">Arizona-Specific Timing and Warning Signs</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="timing-card">
-          <h3 class="card-title">Arizona Recommended Schedule</h3>
-          <ul class="timing-list">
+        <div class="duct-timing-card">
+          <h3 class="duct-card-title">Arizona Recommended Schedule</h3>
+          <ul class="duct-timing-list">
             <li>
-              <span class="timing-icon">📅</span>
+              <span class="duct-timing-icon">📅</span>
               <div>
                 <strong>Every 3-4 years:</strong> Standard homes under normal conditions
               </div>
             </li>
             <li>
-              <span class="timing-icon">🌪️</span>
+              <span class="duct-timing-icon">🌪️</span>
               <div>
                 <strong>Every 2-3 years:</strong> Homes in high-dust areas or allergy sufferers
               </div>
             </li>
             <li>
-              <span class="timing-icon">🏠</span>
+              <span class="duct-timing-icon">🏠</span>
               <div>
                 <strong>After major dust storms:</strong> Post-monsoon professional cleaning
               </div>
             </li>
             <li>
-              <span class="timing-icon">🔨</span>
+              <span class="duct-timing-icon">🔨</span>
               <div>
                 <strong>After renovations:</strong> Construction dust requires immediate cleaning
               </div>
             </li>
           </ul>
         </div>
-        <div class="warning-signs-card">
-          <h3 class="card-title">Warning Signs You Need Cleaning</h3>
-          <ul class="warning-signs-list">
+        <div class="duct-timing-card">
+          <h3 class="duct-card-title">Warning Signs You Need Cleaning</h3>
+          <ul class="duct-warning-list">
             <li>
-              <span class="warning-icon">👁️</span>
-              <div>Visible dust or debris around vents and registers</div>
+              <span class="duct-warning-icon">👁️</span>
+              <span>Visible dust or debris around vents and registers</span>
             </li>
             <li>
-              <span class="warning-icon">👃</span>
-              <div>Musty or stale odors when HVAC system runs</div>
+              <span class="duct-warning-icon">👃</span>
+              <span>Musty or stale odors when HVAC system runs</span>
             </li>
             <li>
-              <span class="warning-icon">🤧</span>
-              <div>Increased allergy symptoms or respiratory issues</div>
+              <span class="duct-warning-icon">🤧</span>
+              <span>Increased allergy symptoms or respiratory issues</span>
             </li>
             <li>
-              <span class="warning-icon">💨</span>
-              <div>Reduced airflow from vents and registers</div>
+              <span class="duct-warning-icon">💨</span>
+              <span>Reduced airflow from vents and registers</span>
             </li>
             <li>
-              <span class="warning-icon">💡</span>
-              <div>Higher than normal energy bills</div>
+              <span class="duct-warning-icon">💡</span>
+              <span>Higher than normal energy bills</span>
             </li>
             <li>
-              <span class="warning-icon">🧹</span>
-              <div>Excessive dust accumulation on surfaces</div>
+              <span class="duct-warning-icon">🧹</span>
+              <span>Excessive dust accumulation on surfaces</span>
             </li>
           </ul>
         </div>
@@ -360,16 +365,16 @@ eleventyNavigation:
   </section>
 
   <!-- Service Areas -->
-  <section class="service-areas py-16 bg-gray-50">
+  <section class="duct-service-areas py-20">
     <div class="container">
-      <div class="section-header text-center">
-        <h2 class="section-title">Arizona Service Areas</h2>
-        <p class="section-subtitle">Professional Air Duct Cleaning Throughout the Valley</p>
+      <div class="text-center mb-12">
+        <h2 class="duct-section-title">Arizona Service Areas</h2>
+        <p class="duct-section-subtitle">Professional Air Duct Cleaning Throughout the Valley</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="area-card">
-          <h3 class="area-title">Phoenix Metro</h3>
-          <ul class="area-list">
+        <div class="duct-area-card">
+          <h3 class="duct-area-title">Phoenix Metro</h3>
+          <ul class="duct-area-list">
             <li>Phoenix</li>
             <li>Scottsdale</li>
             <li>Tempe</li>
@@ -380,9 +385,9 @@ eleventyNavigation:
             <li>Surprise</li>
           </ul>
         </div>
-        <div class="area-card">
-          <h3 class="area-title">East Valley</h3>
-          <ul class="area-list">
+        <div class="duct-area-card">
+          <h3 class="duct-area-title">East Valley</h3>
+          <ul class="duct-area-list">
             <li>Gilbert</li>
             <li>Queen Creek</li>
             <li>Apache Junction</li>
@@ -391,9 +396,9 @@ eleventyNavigation:
             <li>Ahwatukee</li>
           </ul>
         </div>
-        <div class="area-card">
-          <h3 class="area-title">Tucson Area</h3>
-          <ul class="area-list">
+        <div class="duct-area-card">
+          <h3 class="duct-area-title">Tucson Area</h3>
+          <ul class="duct-area-list">
             <li>Tucson</li>
             <li>Oro Valley</li>
             <li>Marana</li>
@@ -406,72 +411,72 @@ eleventyNavigation:
   </section>
 
   <!-- FAQ Section -->
-  <section class="faq-section py-16">
+  <section class="duct-faq py-20 bg-gray-50">
     <div class="container">
-      <div class="section-header text-center">
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-subtitle">Expert Answers About Air Duct Cleaning in Arizona</p>
+      <div class="text-center mb-12">
+        <h2 class="duct-section-title">Frequently Asked Questions</h2>
+        <p class="duct-section-subtitle">Expert Answers About Air Duct Cleaning in Arizona</p>
       </div>
-      <div class="faq-grid">
-        <div class="faq-item">
-          <h3 class="faq-question">How much does air duct cleaning cost in Arizona?</h3>
-          <div class="faq-answer">
-            <p>Professional air duct cleaning typically ranges from $450-$2,500 depending on home size, system complexity, and contamination level. We provide upfront pricing with no hidden fees.</p>
-          </div>
+      <div class="duct-faq-grid">
+        <div class="duct-faq-item">
+          <h3 class="duct-faq-question">How much does air duct cleaning cost in Arizona?</h3>
+          <p class="duct-faq-answer">
+            Professional air duct cleaning typically ranges from $450-$2,500 depending on home size, system complexity, and contamination level. We provide upfront pricing with no hidden fees.
+          </p>
         </div>
-        <div class="faq-item">
-          <h3 class="faq-question">Why does Arizona need more frequent duct cleaning?</h3>
-          <div class="faq-answer">
-            <p>Arizona's desert climate, monsoon dust storms, and year-round allergen exposure create unique challenges. Dust accumulation happens faster here than in other climates, requiring more frequent professional cleaning.</p>
-          </div>
+        <div class="duct-faq-item">
+          <h3 class="duct-faq-question">Why does Arizona need more frequent duct cleaning?</h3>
+          <p class="duct-faq-answer">
+            Arizona's desert climate, monsoon dust storms, and year-round allergen exposure create unique challenges. Dust accumulation happens faster here than in other climates.
+          </p>
         </div>
-        <div class="faq-item">
-          <h3 class="faq-question">Is air duct cleaning worth it?</h3>
-          <div class="faq-answer">
-            <p>Yes, especially in Arizona. Professional cleaning improves indoor air quality, reduces allergens, increases HVAC efficiency by 25-40%, and extends equipment life. The health and energy benefits outweigh the cost.</p>
-          </div>
+        <div class="duct-faq-item">
+          <h3 class="duct-faq-question">Is air duct cleaning worth it?</h3>
+          <p class="duct-faq-answer">
+            Yes, especially in Arizona. Professional cleaning improves indoor air quality, reduces allergens, increases HVAC efficiency by 25-40%, and extends equipment life.
+          </p>
         </div>
-        <div class="faq-item">
-          <h3 class="faq-question">How long does the cleaning process take?</h3>
-          <div class="faq-answer">
-            <p>Most residential air duct cleaning takes 3-5 hours depending on system size and contamination level. We work efficiently while maintaining thorough NADCA standards.</p>
-          </div>
+        <div class="duct-faq-item">
+          <h3 class="duct-faq-question">How long does the cleaning process take?</h3>
+          <p class="duct-faq-answer">
+            Most residential air duct cleaning takes 3-5 hours depending on system size and contamination level. We work efficiently while maintaining NADCA standards.
+          </p>
         </div>
-        <div class="faq-item">
-          <h3 class="faq-question">Do I need to be home during cleaning?</h3>
-          <div class="faq-answer">
-            <p>We recommend being home for the initial assessment and final walkthrough, but you don't need to be present during the entire cleaning process. Our technicians are licensed, bonded, and insured.</p>
-          </div>
+        <div class="duct-faq-item">
+          <h3 class="duct-faq-question">Do I need to be home during cleaning?</h3>
+          <p class="duct-faq-answer">
+            We recommend being home for the initial assessment and final walkthrough, but you don't need to be present during the entire cleaning process.
+          </p>
         </div>
-        <div class="faq-item">
-          <h3 class="faq-question">What makes ICA different from other air duct cleaners?</h3>
-          <div class="faq-answer">
-            <p>We're ROC licensed contractors with NADCA certification, specializing in Arizona's unique climate challenges. Our truck-mounted equipment, transparent pricing, and integration with insulation services set us apart.</p>
-          </div>
+        <div class="duct-faq-item">
+          <h3 class="duct-faq-question">What makes ICA different from other air duct cleaners?</h3>
+          <p class="duct-faq-answer">
+            We're ROC licensed contractors with NADCA certification, specializing in Arizona's unique climate challenges. Our truck-mounted equipment and transparent pricing set us apart.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section class="cta-section py-16 bg-gradient-dark text-white">
+  <section class="duct-cta py-20">
     <div class="container text-center">
-      <h2 class="cta-title">Ready for Cleaner Air and Better HVAC Efficiency?</h2>
-      <p class="cta-subtitle">Join hundreds of satisfied Arizona homeowners who trust ICA for professional air duct cleaning services.</p>
-      <div class="cta-actions">
-        <a href="/contact" class="btn btn-primary btn-lg">Get Your Free Quote</a>
-        <a href="tel:{{ site.phone }}" class="btn btn-secondary btn-lg">Call {{ site.phone }}</a>
+      <h2 class="duct-cta-title">Ready for Cleaner Air and Better HVAC Efficiency?</h2>
+      <p class="duct-cta-subtitle">Join hundreds of satisfied Arizona homeowners who trust ICA for professional air duct cleaning services.</p>
+      <div class="duct-cta-actions">
+        <a href="/contact" class="duct-btn-primary-large">Get Your Free Quote</a>
+        <a href="tel:{{ site.phone }}" class="duct-btn-secondary-large">Call {{ site.phone }}</a>
       </div>
-      <div class="cta-features">
-        <div class="feature-badge">
+      <div class="duct-trust-badges">
+        <div class="duct-trust-badge">
           <span class="badge-icon">🛡️</span>
           <span>Licensed & Insured</span>
         </div>
-        <div class="feature-badge">
+        <div class="duct-trust-badge">
           <span class="badge-icon">⭐</span>
           <span>BBB A+ Rating</span>
         </div>
-        <div class="feature-badge">
+        <div class="duct-trust-badge">
           <span class="badge-icon">📜</span>
           <span>NADCA Certified</span>
         </div>
@@ -481,26 +486,65 @@ eleventyNavigation:
 </div>
 
 <style>
-/* Air Duct Cleaning Page Styles */
-.air-duct-cleaning-page .service-hero {
-  background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
-  color: white;
-  padding: 4rem 0;
+/* Air Duct Cleaning Page - Complete Redesign with Proper Contrast */
+
+/* Hero Section */
+.duct-hero-section {
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #f8f9fa;
 }
 
-.service-hero-content {
+.duct-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.duct-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+}
+
+.duct-hero-content {
+  position: relative;
+  z-index: 2;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 2rem;
   align-items: center;
+  min-height: 600px;
 }
 
-.service-badge {
+.hero-spacer {
+  /* Empty space for worker image on left */
+}
+
+.duct-hero-text {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Badge */
+.license-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(0, 212, 255, 0.1);
-  border: 1px solid rgba(0, 212, 255, 0.3);
+  background-color: #f3f4f6;
+  border: 2px solid #1f2937;
+  color: #1f2937;
   padding: 0.5rem 1rem;
   border-radius: 25px;
   font-size: 0.9rem;
@@ -508,100 +552,211 @@ eleventyNavigation:
   margin-bottom: 1.5rem;
 }
 
-.hero-title {
-  font-size: 3rem;
+/* Typography */
+.duct-hero-title {
+  font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, #00d4ff 0%, #00ffff 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #111827;
 }
 
-.hero-features {
+.duct-hero-subtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #374151;
+}
+
+.duct-hero-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #4b5563;
+}
+
+/* Buttons */
+.duct-btn-primary {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  background-color: #1f2937;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid #1f2937;
+}
+
+.duct-btn-primary:hover {
+  background-color: #374151;
+  border-color: #374151;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(31, 41, 55, 0.3);
+}
+
+.duct-btn-secondary {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  background-color: transparent;
+  color: #1f2937;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid #1f2937;
+}
+
+.duct-btn-secondary:hover {
+  background-color: #1f2937;
+  color: #ffffff;
+}
+
+.duct-hero-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Features */
+.duct-hero-features {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 2rem;
 }
 
-.feature-item {
+.duct-feature-item {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   font-size: 0.9rem;
+  color: #4b5563;
 }
 
-.feature-icon {
-  color: #00d4ff;
+.check-icon {
+  color: #059669;
   font-weight: bold;
+  font-size: 1.1rem;
 }
 
-.arizona-challenges .challenge-stats {
+/* Section Typography */
+.duct-section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.duct-section-subtitle {
+  font-size: 1.25rem;
+  color: #6b7280;
+  margin-bottom: 3rem;
+}
+
+/* Feature Cards */
+.duct-feature-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.duct-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.duct-icon-wrapper {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.duct-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.duct-card-text {
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* Stats Section */
+.duct-stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
+  gap: 1.5rem;
   margin: 2rem 0;
 }
 
-.stat-item {
+.duct-stat-card {
+  background: #f3f4f6;
+  padding: 2rem;
+  border-radius: 12px;
   text-align: center;
-  padding: 1.5rem;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
 }
 
-.stat-number {
+.duct-stat-number {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #0f3460;
+  color: #1f2937;
   margin-bottom: 0.5rem;
 }
 
-.challenge-list {
-  list-style: none;
-  padding: 0;
+.duct-stat-label {
+  color: #6b7280;
+  font-size: 0.9rem;
 }
 
-.challenge-list li {
+/* List Items */
+.duct-list-item {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  margin-bottom: 1rem;
   padding: 1rem;
-  background: white;
+  background: #f9fafb;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
 }
 
-.list-icon {
+.duct-list-icon {
   font-size: 1.5rem;
   flex-shrink: 0;
 }
 
-.service-process .process-steps {
+.duct-subsection-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+/* Process Steps */
+.duct-process-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-  margin-top: 3rem;
 }
 
-.process-step {
-  display: flex;
-  align-items: flex-start;
-  gap: 2rem;
+.duct-process-step {
+  text-align: center;
   padding: 2rem;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  border-left: 4px solid #00d4ff;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  position: relative;
 }
 
-.step-number {
-  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
-  color: white;
+.duct-step-number {
+  background: #1f2937;
+  color: #ffffff;
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
@@ -610,153 +765,325 @@ eleventyNavigation:
   justify-content: center;
   font-size: 1.5rem;
   font-weight: 700;
-  flex-shrink: 0;
+  margin: 0 auto 1.5rem;
 }
 
-.health-benefits .benefits-grid {
+.duct-step-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+.duct-step-text {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* Benefits */
+.duct-benefits-grid {
   display: grid;
-  grid-template-columns: 1fr;
   gap: 1.5rem;
-  margin-top: 2rem;
 }
 
-.benefit-item {
+.duct-benefit-item {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
   padding: 1.5rem;
-  background: white;
+  background: #f9fafb;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
 }
 
-.benefit-icon {
+.duct-benefit-icon {
   font-size: 2rem;
   flex-shrink: 0;
 }
 
-.when-to-clean .timing-list,
-.when-to-clean .warning-signs-list {
-  list-style: none;
-  padding: 0;
+.duct-benefit-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
 }
 
-.when-to-clean .timing-list li,
-.when-to-clean .warning-signs-list li {
+.duct-benefit-text {
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* Timing Cards */
+.duct-timing-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.duct-timing-list,
+.duct-warning-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.duct-timing-list li,
+.duct-warning-list li {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  background: #f8f9fa;
-  border-radius: 8px;
+  padding: 1rem 0;
+  border-bottom: 1px solid #f3f4f6;
+  color: #4b5563;
 }
 
-.timing-icon,
-.warning-icon {
+.duct-timing-list li:last-child,
+.duct-warning-list li:last-child {
+  border-bottom: none;
+}
+
+.duct-timing-icon,
+.duct-warning-icon {
   font-size: 1.5rem;
   flex-shrink: 0;
 }
 
-.service-areas .area-card {
-  background: white;
+/* Service Areas */
+.duct-area-card {
+  background: #ffffff;
   padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
 }
 
-.area-title {
+.duct-area-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #0f3460;
-  margin-bottom: 1rem;
-  text-align: center;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
 }
 
-.area-list {
+.duct-area-list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.area-list li {
+.duct-area-list li {
   padding: 0.5rem 0;
-  border-bottom: 1px solid #e5e7eb;
-  text-align: center;
+  color: #6b7280;
+  border-bottom: 1px solid #f3f4f6;
 }
 
-.faq-section .faq-grid {
+.duct-area-list li:last-child {
+  border-bottom: none;
+}
+
+/* FAQ */
+.duct-faq-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 2rem;
-  margin-top: 3rem;
 }
 
-.faq-item {
-  background: white;
+.duct-faq-item {
+  background: #ffffff;
   padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
-.faq-question {
+.duct-faq-question {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #0f3460;
+  color: #111827;
   margin-bottom: 1rem;
 }
 
-.cta-section {
-  background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+.duct-faq-answer {
+  color: #6b7280;
+  line-height: 1.6;
 }
 
-.cta-title {
+/* CTA Section */
+.duct-cta {
+  background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+  color: #ffffff;
+}
+
+.duct-cta-title {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  color: #ffffff;
 }
 
-.cta-features {
+.duct-cta-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: #e5e7eb;
+}
+
+.duct-cta-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.duct-cta-actions {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 1rem;
+  margin-bottom: 2rem;
   flex-wrap: wrap;
 }
 
-.feature-badge {
+.duct-btn-primary-large,
+.duct-btn-secondary-large {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+}
+
+.duct-btn-primary-large {
+  background-color: #ffffff;
+  color: #1f2937;
+  border: 2px solid #ffffff;
+}
+
+.duct-btn-primary-large:hover {
+  background-color: #f3f4f6;
+  border-color: #f3f4f6;
+}
+
+.duct-btn-secondary-large {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.duct-btn-secondary-large:hover {
+  background-color: #ffffff;
+  color: #1f2937;
+}
+
+/* Trust Badges */
+.duct-trust-badges {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.duct-trust-badge {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(0, 212, 255, 0.1);
-  border: 1px solid rgba(0, 212, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 0.75rem 1.5rem;
   border-radius: 25px;
   font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Image Placeholders */
+.duct-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.duct-placeholder-image {
+  background: #f3f4f6;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 4rem;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.duct-placeholder-text {
+  margin-top: 1rem;
+  color: #6b7280;
+  font-size: 1.1rem;
   font-weight: 600;
 }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-  .service-hero-content {
+  .duct-hero-content {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1rem;
+    min-height: auto;
   }
   
-  .hero-title {
+  .hero-spacer {
+    display: none;
+  }
+  
+  .duct-hero-text {
+    padding: 2rem;
+    margin: 1rem;
+  }
+  
+  .duct-hero-title {
     font-size: 2rem;
   }
   
-  .arizona-challenges .challenge-stats {
+  .duct-section-title {
+    font-size: 1.875rem;
+  }
+  
+  .duct-hero-actions {
+    flex-direction: column;
+  }
+  
+  .duct-faq-grid {
     grid-template-columns: 1fr;
   }
   
-  .faq-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .cta-features {
+  .duct-cta-actions {
     flex-direction: column;
     align-items: center;
+  }
+  
+  .duct-btn-primary,
+  .duct-btn-secondary,
+  .duct-btn-primary-large,
+  .duct-btn-secondary-large {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .duct-hero-text {
+    padding: 1.5rem;
+    margin: 0.5rem;
+  }
+  
+  .duct-hero-title {
+    font-size: 1.75rem;
+  }
+  
+  .duct-hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .duct-section-title {
+    font-size: 1.5rem;
+  }
+  
+  .duct-faq-grid {
+    gap: 1rem;
   }
 }
 </style>
