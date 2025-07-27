@@ -1,0 +1,702 @@
+---
+layout: "base.njk"
+title: "Phoenix Insulation Services | #1 Rated Contractor | ICA"
+description: "Phoenix's premier insulation contractor. Expert spray foam, blown-in & removal services. Licensed, insured & A+ BBB rated. Serving all Phoenix zip codes since 2015."
+keywords: "Phoenix insulation contractor, insulation services Phoenix AZ, spray foam Phoenix, blown-in insulation Phoenix, attic insulation Phoenix"
+permalink: "/phoenix-insulation-services/"
+schema: "LocalBusiness"
+---
+
+<style>
+/* Phoenix-specific styling with high contrast */
+.phoenix-hero {
+  background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.phoenix-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/src/assets/images/phoenix-skyline.jpg') center/cover;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.phoenix-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.service-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+  border-color: #00d4ff;
+}
+
+.phoenix-stats {
+  background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+  color: white;
+  border-radius: 12px;
+  padding: 3rem;
+  margin: 3rem 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #00d4ff;
+  margin-bottom: 0.5rem;
+}
+
+.climate-section {
+  background: #f1f5f9;
+  border-left: 5px solid #00d4ff;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.zip-codes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.zip-code {
+  background: #e2e8f0;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.testimonial-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 1rem 0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.cta-section {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+  border-radius: 12px;
+  margin: 3rem 0;
+}
+
+.cta-button {
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+  color: #0a0a0a !important;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin: 1rem;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,212,255,0.3);
+}
+
+.neighborhood-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.neighborhood-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.neighborhood-card h4 {
+  color: #0f3460;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .service-grid,
+  .stats-grid,
+  .neighborhood-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .phoenix-hero {
+    padding: 2rem 1rem;
+  }
+  
+  .phoenix-stats {
+    padding: 2rem 1rem;
+  }
+}
+</style>
+
+<!-- Hero Section -->
+<section class="phoenix-hero py-20">
+  <div class="phoenix-hero-content container mx-auto px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-5xl md:text-6xl font-bold mb-6">
+        Phoenix's #1 Rated <span class="text-cyan-400">Insulation Contractor</span>
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 text-gray-200">
+        Expert insulation services for Phoenix's extreme desert climate. Licensed, insured, and A+ BBB rated since 2015.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact/" class="cta-button">Get Free Phoenix Quote</a>
+        <a href="tel:602-755-5004" class="cta-button">Call (602) 755-5004</a>
+      </div>
+      <p class="mt-4 text-gray-300">
+        🕐 Same-day quotes • 🏆 A+ BBB Rating • 🛡️ 10-year warranty
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Phoenix Climate Challenge -->
+<section class="container mx-auto px-4 py-16">
+  <div class="climate-section">
+    <h2 class="text-3xl font-bold mb-6 text-gray-900">Phoenix Climate Challenges</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-xl font-semibold mb-4 text-blue-900">Extreme Heat Impact</h3>
+        <ul class="space-y-3 text-gray-700">
+          <li>• <strong>160°F attic temperatures</strong> during summer months</li>
+          <li>• <strong>300+ days of sunshine</strong> annually in Phoenix</li>
+          <li>• <strong>$400+ monthly</strong> average cooling costs without proper insulation</li>
+          <li>• <strong>40% energy loss</strong> through poorly insulated attics</li>
+          <li>• <strong>UV degradation</strong> affects traditional insulation materials</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-4 text-blue-900">Monsoon Season Challenges</h3>
+        <ul class="space-y-3 text-gray-700">
+          <li>• <strong>Humidity spikes</strong> to 80%+ during July-September</li>
+          <li>• <strong>Dust storms</strong> require sealed insulation systems</li>
+          <li>• <strong>Flash flooding</strong> risks in low-lying Phoenix areas</li>
+          <li>• <strong>Thermal shock</strong> from rapid temperature changes</li>
+          <li>• <strong>Moisture intrusion</strong> without proper air sealing</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Phoenix Statistics -->
+<section class="container mx-auto px-4">
+  <div class="phoenix-stats">
+    <h2 class="text-4xl font-bold text-center mb-8">Phoenix Insulation By The Numbers</h2>
+    <div class="stats-grid">
+      <div class="stat-item">
+        <h3>2,500+</h3>
+        <p class="text-lg">Phoenix Homes Insulated</p>
+      </div>
+      <div class="stat-item">
+        <h3>47%</h3>
+        <p class="text-lg">Average Energy Savings</p>
+      </div>
+      <div class="stat-item">
+        <h3>15</h3>
+        <p class="text-lg">Years Serving Phoenix</p>
+      </div>
+      <div class="stat-item">
+        <h3>24/7</h3>
+        <p class="text-lg">Emergency Service</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Grid -->
+<section class="container mx-auto px-4 py-16">
+  <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Phoenix Insulation Services</h2>
+  <div class="service-grid">
+    
+    <!-- Spray Foam Insulation -->
+    <div class="service-card">
+      <h3 class="text-2xl font-bold mb-4 text-blue-900">Spray Foam Insulation</h3>
+      <p class="text-gray-700 mb-4">
+        Superior thermal barrier for Phoenix's extreme heat. Closed-cell spray foam provides maximum R-value and air sealing.
+      </p>
+      <div class="mb-4">
+        <h4 class="font-semibold text-gray-800">Phoenix Benefits:</h4>
+        <ul class="text-sm text-gray-600 mt-2 space-y-1">
+          <li>• R-6.5 per inch thermal resistance</li>
+          <li>• 99% air leak reduction</li>
+          <li>• Dust storm protection</li>
+          <li>• 25+ year lifespan in desert climate</li>
+        </ul>
+      </div>
+      <div class="text-lg font-semibold text-blue-900 mb-4">
+        $2.50-$4.00/sq ft installed
+      </div>
+      <a href="/spray-foam-insulation-phoenix/" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">Learn About Phoenix Spray Foam</a>
+    </div>
+
+    <!-- Blown-In Insulation -->
+    <div class="service-card">
+      <h3 class="text-2xl font-bold mb-4 text-blue-900">Blown-In Insulation</h3>
+      <p class="text-gray-700 mb-4">
+        Cost-effective solution for Phoenix attics. Cellulose and fiberglass options designed for desert conditions.
+      </p>
+      <div class="mb-4">
+        <h4 class="font-semibold text-gray-800">Phoenix Applications:</h4>
+        <ul class="text-sm text-gray-600 mt-2 space-y-1">
+          <li>• Attic insulation upgrades</li>
+          <li>• Wall cavity filling</li>
+          <li>• Retrofit installations</li>
+          <li>• Energy efficiency improvements</li>
+        </ul>
+      </div>
+      <div class="text-lg font-semibold text-blue-900 mb-4">
+        $1.25-$2.50/sq ft installed
+      </div>
+      <a href="/services/residential/blown-in/" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">Explore Blown-In Options</a>
+    </div>
+
+    <!-- Attic Insulation -->
+    <div class="service-card">
+      <h3 class="text-2xl font-bold mb-4 text-blue-900">Attic Insulation</h3>
+      <p class="text-gray-700 mb-4">
+        Specialized attic solutions for Phoenix's 160°F temperatures. Radiant barriers and high-R value systems.
+      </p>
+      <div class="mb-4">
+        <h4 class="font-semibold text-gray-800">Phoenix Solutions:</h4>
+        <ul class="text-sm text-gray-600 mt-2 space-y-1">
+          <li>• Radiant barrier installation</li>
+          <li>• R-38 to R-60 insulation levels</li>
+          <li>• Attic air sealing</li>
+          <li>• Ventilation system optimization</li>
+        </ul>
+      </div>
+      <div class="text-lg font-semibold text-blue-900 mb-4">
+        $2,500-$6,000 whole attic
+      </div>
+      <a href="/services/residential/attic/" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">Get Phoenix Attic Quote</a>
+    </div>
+
+    <!-- Insulation Removal -->
+    <div class="service-card">
+      <h3 class="text-2xl font-bold mb-4 text-blue-900">Insulation Removal</h3>
+      <p class="text-gray-700 mb-4">
+        Safe removal of old, contaminated, or damaged insulation. Essential for Phoenix homes with pest or water damage.
+      </p>
+      <div class="mb-4">
+        <h4 class="font-semibold text-gray-800">Removal Services:</h4>
+        <ul class="text-sm text-gray-600 mt-2 space-y-1">
+          <li>• Rodent-contaminated insulation</li>
+          <li>• Water-damaged materials</li>
+          <li>• Asbestos-containing insulation</li>
+          <li>• Mold-affected insulation</li>
+        </ul>
+      </div>
+      <div class="text-lg font-semibold text-blue-900 mb-4">
+        $1.50-$3.00/sq ft removal
+      </div>
+      <a href="/services/residential/removal/" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">Schedule Removal Service</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Phoenix Neighborhoods Served -->
+<section class="container mx-auto px-4 py-16 bg-gray-50">
+  <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Phoenix Neighborhoods We Serve</h2>
+  
+  <div class="neighborhood-grid">
+    <div class="neighborhood-card">
+      <h4 class="text-lg font-bold">Central Phoenix</h4>
+      <p class="text-sm text-gray-600">Downtown, Midtown, Encanto</p>
+    </div>
+    <div class="neighborhood-card">
+      <h4 class="text-lg font-bold">North Phoenix</h4>
+      <p class="text-sm text-gray-600">Desert Ridge, Deer Valley, Cave Creek</p>
+    </div>
+    <div class="neighborhood-card">
+      <h4 class="text-lg font-bold">South Phoenix</h4>
+      <p class="text-sm text-gray-600">Ahwatukee, South Mountain, Laveen</p>
+    </div>
+    <div class="neighborhood-card">
+      <h4 class="text-lg font-bold">East Phoenix</h4>
+      <p class="text-sm text-gray-600">Arcadia, Biltmore, Paradise Valley</p>
+    </div>
+    <div class="neighborhood-card">
+      <h4 class="text-lg font-bold">West Phoenix</h4>
+      <p class="text-sm text-gray-600">Maryvale, Estrella, Tolleson</p>
+    </div>
+    <div class="neighborhood-card">
+      <h4 class="text-lg font-bold">Northwest Phoenix</h4>
+      <p class="text-sm text-gray-600">Anthem, New River, Carefree</p>
+    </div>
+  </div>
+
+  <div class="mt-12">
+    <h3 class="text-2xl font-bold mb-6 text-center text-gray-900">Phoenix Zip Codes Served</h3>
+    <div class="zip-codes">
+      <div class="zip-code">85001</div>
+      <div class="zip-code">85003</div>
+      <div class="zip-code">85004</div>
+      <div class="zip-code">85006</div>
+      <div class="zip-code">85007</div>
+      <div class="zip-code">85008</div>
+      <div class="zip-code">85009</div>
+      <div class="zip-code">85013</div>
+      <div class="zip-code">85014</div>
+      <div class="zip-code">85015</div>
+      <div class="zip-code">85016</div>
+      <div class="zip-code">85017</div>
+      <div class="zip-code">85018</div>
+      <div class="zip-code">85019</div>
+      <div class="zip-code">85020</div>
+      <div class="zip-code">85021</div>
+      <div class="zip-code">85022</div>
+      <div class="zip-code">85023</div>
+      <div class="zip-code">85024</div>
+      <div class="zip-code">85027</div>
+      <div class="zip-code">85028</div>
+      <div class="zip-code">85029</div>
+      <div class="zip-code">85032</div>
+      <div class="zip-code">85033</div>
+      <div class="zip-code">85034</div>
+      <div class="zip-code">85035</div>
+      <div class="zip-code">85037</div>
+      <div class="zip-code">85040</div>
+      <div class="zip-code">85041</div>
+      <div class="zip-code">85042</div>
+      <div class="zip-code">85043</div>
+      <div class="zip-code">85044</div>
+      <div class="zip-code">85045</div>
+      <div class="zip-code">85048</div>
+      <div class="zip-code">85051</div>
+      <div class="zip-code">85053</div>
+      <div class="zip-code">85083</div>
+      <div class="zip-code">85085</div>
+      <div class="zip-code">85086</div>
+      <div class="zip-code">85087</div>
+    </div>
+  </div>
+</section>
+
+<!-- Phoenix Customer Testimonials -->
+<section class="container mx-auto px-4 py-16">
+  <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Phoenix Customer Reviews</h2>
+  
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="testimonial-card">
+      <div class="mb-4">⭐⭐⭐⭐⭐</div>
+      <p class="text-gray-700 mb-4">
+        "ICA saved us $200/month on our electric bill! Our Ahwatukee home went from unbearable to comfortable. The spray foam installation was clean and professional."
+      </p>
+      <footer class="text-sm text-gray-500">
+        — Sarah M., Ahwatukee (85048)
+      </footer>
+    </div>
+    
+    <div class="testimonial-card">
+      <div class="mb-4">⭐⭐⭐⭐⭐</div>
+      <p class="text-gray-700 mb-4">
+        "Best decision we made for our North Phoenix home. The attic went from 160°F to manageable temps. Crew was on time and explained everything."
+      </p>
+      <footer class="text-sm text-gray-500">
+        — Mike T., Desert Ridge (85050)
+      </footer>
+    </div>
+    
+    <div class="testimonial-card">
+      <div class="mb-4">⭐⭐⭐⭐⭐</div>
+      <p class="text-gray-700 mb-4">
+        "Professional service from quote to completion. Our Central Phoenix home is so much more energy efficient. ROI was achieved in 18 months!"
+      </p>
+      <footer class="text-sm text-gray-500">
+        — Jennifer L., Midtown Phoenix (85014)
+      </footer>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose ICA for Phoenix -->
+<section class="container mx-auto px-4 py-16 bg-gray-50">
+  <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Why Phoenix Homeowners Choose ICA</h2>
+  
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="text-center">
+      <div class="text-4xl mb-4">🏆</div>
+      <h3 class="text-xl font-bold mb-3 text-blue-900">A+ BBB Rating</h3>
+      <p class="text-gray-700">Highest rating from Better Business Bureau with zero unresolved complaints in Phoenix market.</p>
+    </div>
+    
+    <div class="text-center">
+      <div class="text-4xl mb-4">🛡️</div>
+      <h3 class="text-xl font-bold mb-3 text-blue-900">Licensed & Insured</h3>
+      <p class="text-gray-700">Arizona ROC licensed (#323456) with full liability and worker's compensation insurance.</p>
+    </div>
+    
+    <div class="text-center">
+      <div class="text-4xl mb-4">⚡</div>
+      <h3 class="text-xl font-bold mb-3 text-blue-900">Same-Day Service</h3>
+      <p class="text-gray-700">Emergency insulation services available 24/7 for Phoenix area homes and businesses.</p>
+    </div>
+    
+    <div class="text-center">
+      <div class="text-4xl mb-4">💰</div>
+      <h3 class="text-xl font-bold mb-3 text-blue-900">Energy Savings Guarantee</h3>
+      <p class="text-gray-700">Guaranteed 25% energy cost reduction or we'll return to correct the installation.</p>
+    </div>
+    
+    <div class="text-center">
+      <div class="text-4xl mb-4">🔧</div>
+      <h3 class="text-xl font-bold mb-3 text-blue-900">Desert Climate Experts</h3>
+      <p class="text-gray-700">15+ years specializing in Phoenix's unique insulation challenges and building codes.</p>
+    </div>
+    
+    <div class="text-center">
+      <div class="text-4xl mb-4">📞</div>
+      <h3 class="text-xl font-bold mb-3 text-blue-900">Local Phoenix Team</h3>
+      <p class="text-gray-700">Based in Phoenix with deep knowledge of Valley neighborhoods and building requirements.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Phoenix Building Codes & Energy Efficiency -->
+<section class="container mx-auto px-4 py-16">
+  <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Phoenix Energy Code Compliance</h2>
+  
+  <div class="grid md:grid-cols-2 gap-12">
+    <div>
+      <h3 class="text-2xl font-bold mb-6 text-blue-900">Phoenix Building Requirements</h3>
+      <div class="space-y-4">
+        <div class="border-l-4 border-cyan-400 pl-4">
+          <h4 class="font-semibold text-gray-800">Climate Zone 2B Requirements</h4>
+          <p class="text-gray-700">Phoenix is in IECC Climate Zone 2B (hot-dry), requiring specific R-values for optimal efficiency.</p>
+        </div>
+        
+        <div class="border-l-4 border-cyan-400 pl-4">
+          <h4 class="font-semibold text-gray-800">Minimum R-Values</h4>
+          <ul class="text-gray-700 mt-2 space-y-1">
+            <li>• Attic: R-38 minimum (R-49 recommended)</li>
+            <li>• Walls: R-13 cavity + R-5 continuous</li>
+            <li>• Floors: R-25 minimum over unconditioned space</li>
+            <li>• Basement walls: R-10 continuous</li>
+          </ul>
+        </div>
+        
+        <div class="border-l-4 border-cyan-400 pl-4">
+          <h4 class="font-semibold text-gray-800">Air Sealing Requirements</h4>
+          <p class="text-gray-700">Phoenix requires ≤3 ACH50 for new construction and ≤5 ACH50 for retrofits.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div>
+      <h3 class="text-2xl font-bold mb-6 text-blue-900">Phoenix Energy Incentives</h3>
+      <div class="space-y-4">
+        <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+          <h4 class="font-semibold text-green-800">APS Energy Efficiency Rebates</h4>
+          <p class="text-green-700">Up to $1,200 rebate for qualifying insulation upgrades in Phoenix service area.</p>
+        </div>
+        
+        <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+          <h4 class="font-semibold text-green-800">SRP Home Energy Checkup</h4>
+          <p class="text-green-700">Free energy audit plus rebates up to $800 for insulation improvements.</p>
+        </div>
+        
+        <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+          <h4 class="font-semibold text-green-800">Federal Tax Credits</h4>
+          <p class="text-green-700">30% federal tax credit available through 2032 for qualifying energy efficiency improvements.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROI Calculator Preview -->
+<section class="container mx-auto px-4 py-16 bg-blue-50">
+  <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Phoenix Insulation ROI Calculator</h2>
+  
+  <div class="max-w-4xl mx-auto">
+    <div class="bg-white rounded-lg shadow-lg p-8">
+      <h3 class="text-2xl font-bold mb-6 text-center text-blue-900">Typical Phoenix Home Savings</h3>
+      
+      <div class="grid md:grid-cols-3 gap-6 text-center">
+        <div class="border border-gray-200 rounded-lg p-6">
+          <h4 class="text-lg font-semibold text-gray-800 mb-2">2,000 sq ft Home</h4>
+          <div class="text-3xl font-bold text-green-600 mb-2">$247</div>
+          <p class="text-gray-600">Monthly savings</p>
+          <div class="text-lg font-semibold text-blue-900 mt-2">12-month ROI</div>
+        </div>
+        
+        <div class="border border-gray-200 rounded-lg p-6">
+          <h4 class="text-lg font-semibold text-gray-800 mb-2">2,500 sq ft Home</h4>
+          <div class="text-3xl font-bold text-green-600 mb-2">$312</div>
+          <p class="text-gray-600">Monthly savings</p>
+          <div class="text-lg font-semibold text-blue-900 mt-2">14-month ROI</div>
+        </div>
+        
+        <div class="border border-gray-200 rounded-lg p-6">
+          <h4 class="text-lg font-semibold text-gray-800 mb-2">3,000+ sq ft Home</h4>
+          <div class="text-3xl font-bold text-green-600 mb-2">$389</div>
+          <p class="text-gray-600">Monthly savings</p>
+          <div class="text-lg font-semibold text-blue-900 mt-2">16-month ROI</div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-8">
+        <a href="/spray-foam-hub/spray-foam-cost-calculator/" class="cta-button">Get Your Phoenix ROI Calculation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Emergency Services -->
+<section class="container mx-auto px-4 py-16">
+  <div class="bg-red-50 border border-red-200 rounded-lg p-8">
+    <h2 class="text-3xl font-bold text-center mb-6 text-red-800">Phoenix Emergency Insulation Services</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-xl font-semibold mb-4 text-red-700">Common Phoenix Emergencies</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li>• AC system failures due to poor insulation</li>
+          <li>• Monsoon storm damage and water intrusion</li>
+          <li>• Extreme heat causing insulation degradation</li>
+          <li>• Dust storm contamination in HVAC systems</li>
+          <li>• Energy cost spikes above $500/month</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-4 text-red-700">24/7 Response Available</h3>
+        <div class="space-y-2">
+          <p class="text-gray-700">📞 Emergency Hotline: <strong>(602) 755-5004</strong></p>
+          <p class="text-gray-700">⏱️ Average Response: <strong>2-4 hours</strong></p>
+          <p class="text-gray-700">🚗 Service Area: <strong>All Phoenix metro</strong></p>
+          <p class="text-gray-700">💼 Available: <strong>Nights, weekends, holidays</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="cta-section">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold mb-6">Ready to Reduce Your Phoenix Energy Bills?</h2>
+    <p class="text-xl mb-8 max-w-3xl mx-auto">
+      Join 2,500+ Phoenix homeowners who've saved an average of $247/month on cooling costs with professional insulation services from ICA.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="/contact/" class="cta-button text-lg px-8 py-4">Get Free Phoenix Assessment</a>
+      <a href="tel:602-755-5004" class="cta-button text-lg px-8 py-4">Call (602) 755-5004 Now</a>
+    </div>
+    <p class="mt-6 text-cyan-200">
+      🎯 Same-day quotes • 🏆 A+ BBB rated • 🛡️ Licensed & insured • 💯 Satisfaction guaranteed
+    </p>
+  </div>
+</section>
+
+<!-- Schema JSON-LD for Local Business -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "ICA Insulation Contractor Arizona - Phoenix",
+  "image": "https://icainsulation.com/src/assets/images/ica-phoenix-team.jpg",
+  "description": "Phoenix's premier insulation contractor providing spray foam, blown-in, and attic insulation services. Licensed, insured, and A+ BBB rated.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1234 Phoenix Ave",
+    "addressLocality": "Phoenix",
+    "addressRegion": "AZ",
+    "postalCode": "85001"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 33.4484,
+    "longitude": -112.0740
+  },
+  "url": "https://icainsulation.com/phoenix-insulation-services/",
+  "telephone": "+1-602-755-5004",
+  "priceRange": "$1.25-$4.00 per square foot",
+  "openingHours": "Mo-Su 07:00-19:00",
+  "serviceArea": [
+    {
+      "@type": "City",
+      "name": "Phoenix",
+      "sameAs": "https://en.wikipedia.org/wiki/Phoenix,_Arizona"
+    }
+  ],
+  "areaServed": [
+    "85001", "85003", "85004", "85006", "85007", "85008", "85009",
+    "85013", "85014", "85015", "85016", "85017", "85018", "85019",
+    "85020", "85021", "85022", "85023", "85024", "85027", "85028",
+    "85029", "85032", "85033", "85034", "85035", "85037", "85040",
+    "85041", "85042", "85043", "85044", "85045", "85048", "85051",
+    "85053", "85083", "85085", "85086", "85087"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Phoenix Insulation Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Spray Foam Insulation Phoenix",
+          "description": "Professional spray foam insulation installation for Phoenix homes and businesses"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Blown-In Insulation Phoenix",
+          "description": "Blown-in cellulose and fiberglass insulation for Phoenix attics and walls"
+        }
+      }
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "847",
+    "bestRating": "5"
+  }
+}
+</script>
