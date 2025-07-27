@@ -461,7 +461,7 @@ img {
     background: var(--primary-medium);
     border: 1px solid var(--accent-dim);
     border-radius: 8px;
-    padding: 25px;
+    padding: 15px;
     opacity: 0;
     visibility: hidden;
     transition: all var(--transition-medium);
@@ -469,6 +469,8 @@ img {
     box-shadow: var(--shadow-xl);
     backdrop-filter: blur(10px);
     max-width: 90vw;
+    max-height: 80vh;
+    overflow-y: auto;
     white-space: nowrap;
 }
 
@@ -509,7 +511,7 @@ img {
 /* Different layouts based on menu content */
 .submenu {
     display: grid;
-    gap: 25px;
+    gap: 15px;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -519,36 +521,36 @@ img {
 /* Large menus (Services, Products) - Multi-column layout */
 .nav-item:nth-child(2) .submenu,
 .nav-item:nth-child(3) .submenu {
-    grid-template-columns: repeat(3, minmax(220px, 1fr));
-    max-width: 750px;
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+    max-width: 600px;
 }
 
 /* Fallback for browsers without :has() support */
 .submenu {
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
-    max-width: 500px;
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
+    max-width: 400px;
 }
 
 /* Medium menus - Two column layout */
 .submenu-wrapper:has(.submenu-section:nth-child(3)) .submenu {
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
-    max-width: 500px;
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
+    max-width: 400px;
 }
 
 /* Small menus (About) - Single column layout */
 .submenu-wrapper:not(:has(.submenu-section:nth-child(2))) .submenu,
 .nav-item:nth-last-child(2) .submenu {
     grid-template-columns: 1fr;
-    min-width: 200px;
-    max-width: 250px;
+    min-width: 160px;
+    max-width: 200px;
 }
 
 /* Responsive dropdown adjustments */
 @media (max-width: 1200px) {
     .nav-item:nth-child(2) .submenu,
     .nav-item:nth-child(3) .submenu {
-        grid-template-columns: repeat(2, minmax(200px, 1fr));
-        max-width: 500px;
+        grid-template-columns: repeat(2, minmax(160px, 1fr));
+        max-width: 400px;
     }
 }
 
@@ -575,7 +577,7 @@ img {
 .submenu-section {
     list-style: none;
     border-left: 3px solid transparent;
-    padding-left: 15px;
+    padding-left: 10px;
     transition: border-color var(--transition-fast);
 }
 
@@ -586,13 +588,13 @@ img {
 .submenu-title {
     font-weight: bold;
     color: var(--accent-primary);
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     display: block;
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     border-bottom: 1px solid rgba(0, 255, 255, 0.2);
-    padding-bottom: 8px;
+    padding-bottom: 6px;
     transition: all var(--transition-fast);
 }
 
@@ -608,16 +610,16 @@ img {
 }
 
 .submenu-items li {
-    margin-bottom: 6px;
+    margin-bottom: 4px;
     position: relative;
 }
 
 .submenu-items a {
     color: var(--gray-100);
     transition: all var(--transition-fast);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     display: block;
-    padding: 6px 0;
+    padding: 4px 0;
     position: relative;
     border-radius: 4px;
 }
@@ -625,7 +627,7 @@ img {
 .submenu-items a:hover {
     color: var(--accent-primary);
     text-decoration: none;
-    padding-left: 12px;
+    padding-left: 8px;
     background: rgba(0, 255, 255, 0.1);
 }
 
