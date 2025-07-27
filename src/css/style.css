@@ -469,8 +469,6 @@ img {
     box-shadow: var(--shadow-xl);
     backdrop-filter: blur(10px);
     max-width: 90vw;
-    max-height: 80vh;
-    overflow-y: auto;
     white-space: nowrap;
 }
 
@@ -521,14 +519,21 @@ img {
 /* Large menus (Services, Products) - 4-column layout */
 .nav-item:nth-child(2) .submenu,
 .nav-item:nth-child(3) .submenu {
-    grid-template-columns: repeat(4, minmax(160px, 1fr));
-    max-width: 750px;
+    grid-template-columns: repeat(4, minmax(160px, 1fr)) !important;
+    max-width: 750px !important;
 }
 
-/* Fallback for browsers without :has() support */
+/* Ensure Services and Products specifically get 4 columns */
+.nav-item:nth-child(2) .submenu-wrapper .submenu,
+.nav-item:nth-child(3) .submenu-wrapper .submenu {
+    grid-template-columns: repeat(4, minmax(160px, 1fr)) !important;
+    max-width: 750px !important;
+}
+
+/* Fallback for browsers without :has() support - smaller menus */
 .submenu {
-    grid-template-columns: repeat(3, minmax(160px, 1fr));
-    max-width: 550px;
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
+    max-width: 400px;
 }
 
 /* Medium menus - Two column layout */
