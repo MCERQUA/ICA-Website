@@ -449,6 +449,45 @@
       }
     }
     </script>
+    
+    <!-- Page-specific Schema.org Structured Data -->
+    {% if schema %}
+      {% for schemaItem in schema %}
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "{{ schemaItem.type }}",
+          "name": "{{ schemaItem.name }}",
+          "description": "{{ schemaItem.description }}",
+          {% if schemaItem.address %}
+          "address": {
+            "@type": "{{ schemaItem.address.type }}",
+            {% if schemaItem.address.streetAddress %}"streetAddress": "{{ schemaItem.address.streetAddress }}",{% endif %}
+            "addressLocality": "{{ schemaItem.address.addressLocality }}",
+            "addressRegion": "{{ schemaItem.address.addressRegion }}",
+            "addressCountry": "{{ schemaItem.address.addressCountry }}"
+          },
+          {% endif %}
+          {% if schemaItem.telephone %}"telephone": "{{ schemaItem.telephone }}",{% endif %}
+          {% if schemaItem.url %}"url": "{{ schemaItem.url }}",{% endif %}
+          {% if schemaItem.areaServed %}
+          "areaServed": [
+            {% for area in schemaItem.areaServed %}
+            "{{ area }}"{% if not loop.last %},{% endif %}
+            {% endfor %}
+          ],
+          {% endif %}
+          "sameAs": [
+            "{{ site.social.google }}",
+            "{{ site.social.yelp }}",
+            "https://www.facebook.com/InsulationContractorsAZ",
+            "https://www.instagram.com/insulation_contractors_of_az/",
+            "https://www.tiktok.com/@insulationcontractorsaz"
+          ]
+        }
+        </script>
+      {% endfor %}
+    {% endif %}
 </head>
 <body class="{{ pageClass }}">
     
