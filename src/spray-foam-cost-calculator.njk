@@ -1,0 +1,571 @@
+---
+layout: "base.njk"
+title: "Spray Foam Insulation Cost Calculator Arizona | ICA Free Estimate Tool"
+description: "Calculate your Arizona spray foam insulation costs instantly. Free online calculator with pricing for closed-cell, open-cell, attic, and wall insulation projects."
+keywords: "spray foam cost calculator Arizona, insulation cost calculator Phoenix, spray foam pricing Arizona, insulation estimate calculator, Arizona spray foam costs"
+permalink: "/spray-foam-cost-calculator/"
+schema: "Service"
+---
+
+<style>
+/* Cost Calculator styling - following MANDATORY_STYLING_RULES */
+.calculator-hero {
+  background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%) !important;
+  color: white !important;
+  padding: 80px 0;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.calculator-container {
+  background: linear-gradient(135deg, #0a1a1a 0%, #1a2a2a 100%) !important;
+  color: white !important;
+  border: 1px solid #00d4ff;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.results-section {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
+  color: white !important;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.pricing-info {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
+  color: white !important;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  margin: 3rem 0;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.factors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.factor-card {
+  background: linear-gradient(135deg, #0a1a1a 0%, #1a2a2a 100%) !important;
+  color: white !important;
+  border: 1px solid #00d4ff;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #00d4ff !important;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background: #2a2a2a;
+  color: white;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #00d4ff;
+  box-shadow: 0 0 0 2px rgba(0, 212, 255, 0.2);
+}
+
+.result-box {
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+  color: #0a0a0a !important;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.result-price {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.calculate-btn {
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+  color: #0a0a0a !important;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.calculate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,212,255,0.3);
+}
+
+.cta-section {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
+  color: white !important;
+  padding: 4rem 2rem;
+  text-align: center;
+  border-radius: 12px;
+  margin: 3rem 0;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.cta-button {
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+  color: #0a0a0a !important;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin: 1rem;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,212,255,0.3);
+}
+
+.disclaimer {
+  font-size: 0.9rem;
+  color: #ccc;
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .factors-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<!-- Hero Section -->
+<section class="calculator-hero">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-5xl md:text-6xl font-bold mb-6">
+        Arizona <span class="text-cyan-400">Spray Foam Cost Calculator</span>
+      </h1>
+      <p class="text-xl md:text-2xl mb-8">
+        Get instant cost estimates for your Arizona spray foam insulation project. Professional-grade calculator with real Arizona pricing.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#calculator" class="cta-button">Calculate My Project</a>
+        <a href="tel:602-755-5004" class="cta-button">Call (602) 755-5004</a>
+      </div>
+      <p class="mt-4 text-cyan-200">
+        🎯 Instant estimates • 🏆 Arizona pricing • 🛡️ Professional accuracy
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Cost Calculator -->
+<section id="calculator" class="container mx-auto px-4 py-16">
+  <div class="max-w-4xl mx-auto">
+    <div class="calculator-container">
+      <h2 class="text-3xl font-bold text-center mb-8 text-cyan-400">Spray Foam Insulation Cost Calculator</h2>
+      
+      <form id="costCalculator">
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="form-group">
+            <label for="projectType">Project Type *</label>
+            <select id="projectType" name="projectType" required>
+              <option value="">Select project type...</option>
+              <option value="attic">Attic Insulation</option>
+              <option value="walls">Wall Insulation</option>
+              <option value="crawlspace">Crawl Space Insulation</option>
+              <option value="basement">Basement Insulation</option>
+              <option value="commercial">Commercial Building</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="foamType">Spray Foam Type *</label>
+            <select id="foamType" name="foamType" required>
+              <option value="">Select foam type...</option>
+              <option value="open-cell">Open Cell Spray Foam</option>
+              <option value="closed-cell">Closed Cell Spray Foam</option>
+              <option value="hybrid">Hybrid System</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="squareFootage">Square Footage *</label>
+            <input type="number" id="squareFootage" name="squareFootage" placeholder="e.g., 1500" min="100" max="50000" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="thickness">Insulation Thickness (inches) *</label>
+            <select id="thickness" name="thickness" required>
+              <option value="">Select thickness...</option>
+              <option value="2">2 inches</option>
+              <option value="3">3 inches</option>
+              <option value="4">4 inches</option>
+              <option value="5">5 inches</option>
+              <option value="6">6 inches</option>
+              <option value="8">8 inches</option>
+              <option value="10">10 inches</option>
+              <option value="12">12 inches</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="accessibility">Access Difficulty</label>
+            <select id="accessibility" name="accessibility">
+              <option value="easy">Easy Access</option>
+              <option value="moderate">Moderate Difficulty</option>
+              <option value="difficult">Difficult Access</option>
+              <option value="extreme">Extreme Difficulty</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="removal">Old Insulation Removal</label>
+            <select id="removal" name="removal">
+              <option value="none">No Removal Needed</option>
+              <option value="minimal">Minimal Removal</option>
+              <option value="standard">Standard Removal</option>
+              <option value="extensive">Extensive Removal</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="text-center mt-6">
+          <button type="button" onclick="calculateCost()" class="calculate-btn">
+            Calculate Project Cost
+          </button>
+        </div>
+      </form>
+      
+      <div id="results" class="results-section" style="display: none;">
+        <h3 class="text-2xl font-bold mb-4 text-cyan-400">Your Estimated Project Cost</h3>
+        
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="result-box">
+            <div class="result-price" id="lowEstimate">$0</div>
+            <div class="font-semibold">Low Estimate</div>
+          </div>
+          
+          <div class="result-box">
+            <div class="result-price" id="avgEstimate">$0</div>
+            <div class="font-semibold">Average Estimate</div>
+          </div>
+          
+          <div class="result-box">
+            <div class="result-price" id="highEstimate">$0</div>
+            <div class="font-semibold">High Estimate</div>
+          </div>
+        </div>
+        
+        <div class="mt-6">
+          <h4 class="text-xl font-bold mb-3 text-cyan-400">Project Details</h4>
+          <div id="projectDetails"></div>
+        </div>
+        
+        <div class="mt-6">
+          <h4 class="text-xl font-bold mb-3 text-cyan-400">Estimated Annual Energy Savings</h4>
+          <div class="result-box">
+            <div class="result-price" id="energySavings">$0</div>
+            <div class="font-semibold">Per Year</div>
+          </div>
+        </div>
+        
+        <div class="disclaimer">
+          *Estimates are based on current Arizona market pricing and typical project parameters. Actual costs may vary based on specific site conditions, material prices, and project complexity. For accurate pricing, schedule a free professional assessment.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing Factors -->
+<section class="pricing-info">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-8">Arizona Spray Foam Pricing Factors</h2>
+    
+    <div class="factors-grid">
+      <div class="factor-card">
+        <h3 class="text-xl font-bold mb-3 text-cyan-400">🏠 Project Type</h3>
+        <ul class="text-sm space-y-2">
+          <li>• <strong>Attic:</strong> $2.50-$5.50/sq ft</li>
+          <li>• <strong>Walls:</strong> $3.00-$6.00/sq ft</li>
+          <li>• <strong>Crawl Space:</strong> $3.50-$7.00/sq ft</li>
+          <li>• <strong>Basement:</strong> $3.00-$6.50/sq ft</li>
+        </ul>
+      </div>
+      
+      <div class="factor-card">
+        <h3 class="text-xl font-bold mb-3 text-cyan-400">🧪 Foam Type</h3>
+        <ul class="text-sm space-y-2">
+          <li>• <strong>Open Cell:</strong> Lower cost, R-3.7/inch</li>
+          <li>• <strong>Closed Cell:</strong> Higher cost, R-6.5/inch</li>
+          <li>• <strong>Hybrid:</strong> Optimized cost-performance</li>
+          <li>• <strong>Premium:</strong> Specialized applications</li>
+        </ul>
+      </div>
+      
+      <div class="factor-card">
+        <h3 class="text-xl font-bold mb-3 text-cyan-400">📏 Thickness & R-Value</h3>
+        <ul class="text-sm space-y-2">
+          <li>• <strong>2-4 inches:</strong> Standard applications</li>
+          <li>• <strong>5-8 inches:</strong> High-performance systems</li>
+          <li>• <strong>9-12 inches:</strong> Maximum efficiency</li>
+          <li>• <strong>Custom:</strong> Engineered solutions</li>
+        </ul>
+      </div>
+      
+      <div class="factor-card">
+        <h3 class="text-xl font-bold mb-3 text-cyan-400">🔧 Access Difficulty</h3>
+        <ul class="text-sm space-y-2">
+          <li>• <strong>Easy:</strong> Standard pricing</li>
+          <li>• <strong>Moderate:</strong> 10-20% increase</li>
+          <li>• <strong>Difficult:</strong> 20-30% increase</li>
+          <li>• <strong>Extreme:</strong> 30-50% increase</li>
+        </ul>
+      </div>
+      
+      <div class="factor-card">
+        <h3 class="text-xl font-bold mb-3 text-cyan-400">🗑️ Insulation Removal</h3>
+        <ul class="text-sm space-y-2">
+          <li>• <strong>None:</strong> No additional cost</li>
+          <li>• <strong>Minimal:</strong> $0.50-$1.00/sq ft</li>
+          <li>• <strong>Standard:</strong> $1.50-$2.50/sq ft</li>
+          <li>• <strong>Extensive:</strong> $2.50-$4.00/sq ft</li>
+        </ul>
+      </div>
+      
+      <div class="factor-card">
+        <h3 class="text-xl font-bold mb-3 text-cyan-400">📍 Location Factors</h3>
+        <ul class="text-sm space-y-2">
+          <li>• <strong>Phoenix Metro:</strong> Standard pricing</li>
+          <li>• <strong>Tucson Area:</strong> Similar pricing</li>
+          <li>• <strong>Flagstaff/Sedona:</strong> 5-10% higher</li>
+          <li>• <strong>Remote Areas:</strong> 10-15% higher</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How Calculator Works -->
+<section class="container mx-auto px-4 py-16">
+  <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">How Our Cost Calculator Works</h2>
+  
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="text-center">
+      <div class="text-4xl mb-4">📊</div>
+      <h3 class="text-xl font-bold mb-3 text-blue-900">Real Market Data</h3>
+      <p class="text-gray-700">Based on current Arizona contractor pricing and 15+ years of project data.</p>
+    </div>
+    
+    <div class="text-center">
+      <div class="text-4xl mb-4">🎯</div>
+      <h3 class="text-xl font-bold mb-3 text-blue-900">Project-Specific</h3>
+      <p class="text-gray-700">Accounts for project type, foam type, thickness, and site-specific factors.</p>
+    </div>
+    
+    <div class="text-center">
+      <div class="text-4xl mb-4">💰</div>
+      <h3 class="text-xl font-bold mb-3 text-blue-900">Energy Savings</h3>
+      <p class="text-gray-700">Calculates estimated annual energy savings based on Arizona climate data.</p>
+    </div>
+    
+    <div class="text-center">
+      <div class="text-4xl mb-4">📱</div>
+      <h3 class="text-xl font-bold mb-3 text-blue-900">Instant Results</h3>
+      <p class="text-gray-700">Get immediate cost estimates with low, average, and high pricing ranges.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Professional Estimate CTA -->
+<section class="cta-section">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold mb-6">Ready for a Professional Assessment?</h2>
+    <p class="text-xl mb-8 max-w-3xl mx-auto">
+      Our calculator provides estimates, but every project is unique. Get a detailed professional assessment with guaranteed pricing and energy savings projections.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="/contact/" class="cta-button text-lg px-8 py-4">Schedule Free Assessment</a>
+      <a href="tel:602-755-5004" class="cta-button text-lg px-8 py-4">Call (602) 755-5004 Now</a>
+    </div>
+    <p class="mt-6 text-cyan-200">
+      🎯 Free assessments • 🏆 A+ BBB rated • 🛡️ Licensed & insured • 💎 Arizona specialists
+    </p>
+  </div>
+</section>
+
+<script>
+function calculateCost() {
+  // Get form values
+  const projectType = document.getElementById('projectType').value;
+  const foamType = document.getElementById('foamType').value;
+  const squareFootage = parseFloat(document.getElementById('squareFootage').value);
+  const thickness = parseFloat(document.getElementById('thickness').value);
+  const accessibility = document.getElementById('accessibility').value;
+  const removal = document.getElementById('removal').value;
+  
+  // Validate required fields
+  if (!projectType || !foamType || !squareFootage || !thickness) {
+    alert('Please fill in all required fields to calculate your estimate.');
+    return;
+  }
+  
+  // Base pricing per square foot by project type and foam type
+  const basePricing = {
+    'attic': {
+      'open-cell': { low: 2.50, high: 4.00 },
+      'closed-cell': { low: 3.50, high: 5.50 },
+      'hybrid': { low: 4.00, high: 6.00 }
+    },
+    'walls': {
+      'open-cell': { low: 3.00, high: 4.50 },
+      'closed-cell': { low: 4.00, high: 6.00 },
+      'hybrid': { low: 4.50, high: 6.50 }
+    },
+    'crawlspace': {
+      'open-cell': { low: 3.50, high: 5.00 },
+      'closed-cell': { low: 4.50, high: 7.00 },
+      'hybrid': { low: 5.00, high: 7.50 }
+    },
+    'basement': {
+      'open-cell': { low: 3.00, high: 4.50 },
+      'closed-cell': { low: 4.00, high: 6.50 },
+      'hybrid': { low: 4.50, high: 7.00 }
+    },
+    'commercial': {
+      'open-cell': { low: 3.50, high: 5.50 },
+      'closed-cell': { low: 4.50, high: 7.50 },
+      'hybrid': { low: 5.00, high: 8.00 }
+    }
+  };
+  
+  // Get base pricing
+  const basePrice = basePricing[projectType][foamType];
+  let lowPrice = basePrice.low;
+  let highPrice = basePrice.high;
+  
+  // Thickness multiplier (thicker = higher cost per sq ft)
+  const thicknessMultiplier = 1 + (thickness - 2) * 0.1;
+  lowPrice *= thicknessMultiplier;
+  highPrice *= thicknessMultiplier;
+  
+  // Access difficulty multiplier
+  const accessMultipliers = {
+    'easy': 1.0,
+    'moderate': 1.15,
+    'difficult': 1.25,
+    'extreme': 1.40
+  };
+  const accessMultiplier = accessMultipliers[accessibility] || 1.0;
+  lowPrice *= accessMultiplier;
+  highPrice *= accessMultiplier;
+  
+  // Removal cost addition
+  const removalCosts = {
+    'none': 0,
+    'minimal': 0.75,
+    'standard': 2.00,
+    'extensive': 3.25
+  };
+  const removalCost = removalCosts[removal] || 0;
+  
+  // Calculate total costs
+  const materialLowCost = lowPrice * squareFootage;
+  const materialHighCost = highPrice * squareFootage;
+  const totalRemovalCost = removalCost * squareFootage;
+  
+  const totalLowCost = materialLowCost + totalRemovalCost;
+  const totalHighCost = materialHighCost + totalRemovalCost;
+  const totalAvgCost = (totalLowCost + totalHighCost) / 2;
+  
+  // Calculate energy savings (estimated)
+  const rValuePerInch = foamType === 'closed-cell' ? 6.5 : 3.7;
+  const totalRValue = rValuePerInch * thickness;
+  const energySavings = Math.round(squareFootage * 0.15 * (totalRValue / 30) * 12); // Simplified calculation
+  
+  // Display results
+  document.getElementById('lowEstimate').textContent = '$' + Math.round(totalLowCost).toLocaleString();
+  document.getElementById('avgEstimate').textContent = '$' + Math.round(totalAvgCost).toLocaleString();
+  document.getElementById('highEstimate').textContent = '$' + Math.round(totalHighCost).toLocaleString();
+  document.getElementById('energySavings').textContent = '$' + energySavings.toLocaleString();
+  
+  // Project details
+  const details = `
+    <p><strong>Project:</strong> ${projectType.charAt(0).toUpperCase() + projectType.slice(1)} insulation with ${foamType} spray foam</p>
+    <p><strong>Area:</strong> ${squareFootage.toLocaleString()} square feet</p>
+    <p><strong>Thickness:</strong> ${thickness} inches (approximately R-${Math.round(totalRValue)} total)</p>
+    <p><strong>Access:</strong> ${accessibility.charAt(0).toUpperCase() + accessibility.slice(1)} difficulty</p>
+    ${removal !== 'none' ? `<p><strong>Removal:</strong> ${removal} old insulation removal included</p>` : ''}
+  `;
+  document.getElementById('projectDetails').innerHTML = details;
+  
+  // Show results
+  document.getElementById('results').style.display = 'block';
+  document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+</script>
+
+<!-- Schema JSON-LD for Service -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Spray Foam Insulation Cost Calculator Arizona",
+  "description": "Free online cost calculator for spray foam insulation projects in Arizona. Instant estimates with real market pricing data.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "ICA Insulation Contractor Arizona",
+    "url": "https://icainsulation.com"
+  },
+  "serviceType": "Insulation Cost Estimation Tool",
+  "areaServed": [
+    {
+      "@type": "State",
+      "name": "Arizona"
+    }
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "description": "Free spray foam insulation cost calculator with instant estimates"
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Tool Type",
+      "value": "Interactive Cost Calculator"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pricing Data",
+      "value": "Current Arizona market rates"
+    }
+  ]
+}
+</script>

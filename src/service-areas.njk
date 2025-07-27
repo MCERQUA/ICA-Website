@@ -1,0 +1,593 @@
+---
+layout: "base.njk"
+title: "Arizona Insulation Service Areas | Phoenix Metro & Statewide | ICA"
+description: "ICA provides professional insulation services throughout Arizona. Serving Phoenix metro, Tucson, Flagstaff, and surrounding communities. Licensed statewide contractors."
+keywords: "Arizona insulation service areas, Phoenix insulation contractor, Tucson insulation services, Arizona cities served, statewide insulation contractor"
+permalink: "/service-areas/"
+schema: "Service"
+---
+
+<style>
+/* Service Areas styling - following MANDATORY_STYLING_RULES */
+.service-areas-hero {
+  background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%) !important;
+  color: white !important;
+  padding: 80px 0;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.metro-section {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
+  color: white !important;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  margin: 3rem 0;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.city-card {
+  background: linear-gradient(135deg, #0a1a1a 0%, #1a2a2a 100%) !important;
+  color: white !important;
+  border: 1px solid #00d4ff;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.city-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 212, 255, 0.3);
+}
+
+.region-section {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
+  color: white !important;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  margin: 3rem 0;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.cities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.zip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.zip-code {
+  background: linear-gradient(135deg, #1a2a2a 0%, #2a3a3a 100%) !important;
+  color: white !important;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 600;
+  border: 1px solid #00d4ff;
+  font-size: 0.9rem;
+}
+
+.coverage-stats {
+  background: linear-gradient(135deg, #0f3460 0%, #16213e 100%) !important;
+  color: white !important;
+  border-radius: 12px;
+  padding: 3rem;
+  margin: 3rem 0;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #00d4ff !important;
+  margin-bottom: 0.5rem;
+}
+
+.cta-section {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
+  color: white !important;
+  padding: 4rem 2rem;
+  text-align: center;
+  border-radius: 12px;
+  margin: 3rem 0;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.cta-button {
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+  color: #0a0a0a !important;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin: 1rem;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,212,255,0.3);
+}
+
+@media (max-width: 768px) {
+  .cities-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .zip-grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+}
+</style>
+
+<!-- Hero Section -->
+<section class="service-areas-hero">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-5xl md:text-6xl font-bold mb-6">
+        Arizona <span class="text-cyan-400">Service Areas</span>
+      </h1>
+      <p class="text-xl md:text-2xl mb-8">
+        Professional insulation services throughout Arizona. Licensed statewide contractors serving Phoenix metro, Tucson, Flagstaff, and beyond.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact/" class="cta-button">Get Local Quote</a>
+        <a href="tel:602-755-5004" class="cta-button">Call (602) 755-5004</a>
+      </div>
+      <p class="mt-4 text-cyan-200">
+        🎯 Statewide coverage • 🏆 Licensed ROC #323456 • 🛡️ Same-day service
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Coverage Statistics -->
+<section class="container mx-auto px-4 py-16">
+  <div class="coverage-stats">
+    <h2 class="text-4xl font-bold text-center mb-8">Arizona Coverage by the Numbers</h2>
+    <div class="stats-grid">
+      <div>
+        <div class="stat-number">50+</div>
+        <p class="text-lg">Cities Served</p>
+      </div>
+      <div>
+        <div class="stat-number">200+</div>
+        <p class="text-lg">Zip Codes Covered</p>
+      </div>
+      <div>
+        <div class="stat-number">8,500+</div>
+        <p class="text-lg">Arizona Homes Insulated</p>
+      </div>
+      <div>
+        <div class="stat-number">15+</div>
+        <p class="text-lg">Years Serving Arizona</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Phoenix Metro Area -->
+<section class="metro-section">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-8">Phoenix Metropolitan Area</h2>
+    <p class="text-xl text-center mb-8">
+      Our primary service area covers the entire Phoenix metro region with same-day service availability.
+    </p>
+    
+    <div class="cities-grid">
+      <div class="city-card">
+        <h3 class="text-2xl font-bold mb-4 text-cyan-400">🏙️ Phoenix</h3>
+        <p class="mb-4">Arizona's capital and largest city. Full service coverage for all neighborhoods and districts.</p>
+        <div class="zip-grid">
+          <div class="zip-code">85001</div>
+          <div class="zip-code">85003</div>
+          <div class="zip-code">85004</div>
+          <div class="zip-code">85006</div>
+          <div class="zip-code">85007</div>
+          <div class="zip-code">85008</div>
+          <div class="zip-code">85009</div>
+          <div class="zip-code">85013</div>
+          <div class="zip-code">85014</div>
+          <div class="zip-code">85015</div>
+          <div class="zip-code">85016</div>
+          <div class="zip-code">85017</div>
+          <div class="zip-code">85018</div>
+          <div class="zip-code">85019</div>
+          <div class="zip-code">85020</div>
+          <div class="zip-code">85021</div>
+          <div class="zip-code">85022</div>
+          <div class="zip-code">85023</div>
+          <div class="zip-code">85027</div>
+          <div class="zip-code">85028</div>
+          <div class="zip-code">85029</div>
+          <div class="zip-code">85031</div>
+          <div class="zip-code">85032</div>
+          <div class="zip-code">85033</div>
+          <div class="zip-code">85034</div>
+          <div class="zip-code">85035</div>
+          <div class="zip-code">85037</div>
+          <div class="zip-code">85040</div>
+          <div class="zip-code">85041</div>
+          <div class="zip-code">85042</div>
+          <div class="zip-code">85043</div>
+          <div class="zip-code">85044</div>
+          <div class="zip-code">85045</div>
+          <div class="zip-code">85048</div>
+          <div class="zip-code">85051</div>
+          <div class="zip-code">85053</div>
+          <div class="zip-code">85083</div>
+          <div class="zip-code">85085</div>
+        </div>
+      </div>
+      
+      <div class="city-card">
+        <h3 class="text-2xl font-bold mb-4 text-cyan-400">🏡 Scottsdale</h3>
+        <p class="mb-4">Luxury home specialists serving Paradise Valley, Desert Mountain, and all Scottsdale communities.</p>
+        <div class="zip-grid">
+          <div class="zip-code">85250</div>
+          <div class="zip-code">85251</div>
+          <div class="zip-code">85252</div>
+          <div class="zip-code">85253</div>
+          <div class="zip-code">85254</div>
+          <div class="zip-code">85255</div>
+          <div class="zip-code">85256</div>
+          <div class="zip-code">85257</div>
+          <div class="zip-code">85258</div>
+          <div class="zip-code">85259</div>
+          <div class="zip-code">85260</div>
+          <div class="zip-code">85261</div>
+          <div class="zip-code">85262</div>
+          <div class="zip-code">85266</div>
+        </div>
+      </div>
+      
+      <div class="city-card">
+        <h3 class="text-2xl font-bold mb-4 text-cyan-400">👨‍👩‍👧‍👦 Gilbert</h3>
+        <p class="mb-4">Family-focused service for Power Ranch, Agritopia, San Tan Ranch, and all Gilbert neighborhoods.</p>
+        <div class="zip-grid">
+          <div class="zip-code">85233</div>
+          <div class="zip-code">85234</div>
+          <div class="zip-code">85295</div>
+          <div class="zip-code">85296</div>
+          <div class="zip-code">85297</div>
+          <div class="zip-code">85298</div>
+          <div class="zip-code">85299</div>
+        </div>
+      </div>
+      
+      <div class="city-card">
+        <h3 class="text-2xl font-bold mb-4 text-cyan-400">🎓 Tempe</h3>
+        <p class="mb-4">Student housing and university area specialists. ASU campus area, Tempe Town Lake coverage.</p>
+        <div class="zip-grid">
+          <div class="zip-code">85281</div>
+          <div class="zip-code">85282</div>
+          <div class="zip-code">85283</div>
+          <div class="zip-code">85284</div>
+          <div class="zip-code">85285</div>
+          <div class="zip-code">85287</div>
+          <div class="zip-code">85288</div>
+        </div>
+      </div>
+      
+      <div class="city-card">
+        <h3 class="text-2xl font-bold mb-4 text-cyan-400">🏛️ Glendale</h3>
+        <p class="mb-4">Historic home retrofits and new developments. Arrowhead Ranch, Westgate, Desert Garden coverage.</p>
+        <div class="zip-grid">
+          <div class="zip-code">85301</div>
+          <div class="zip-code">85302</div>
+          <div class="zip-code">85303</div>
+          <div class="zip-code">85304</div>
+          <div class="zip-code">85305</div>
+          <div class="zip-code">85306</div>
+          <div class="zip-code">85307</div>
+          <div class="zip-code">85308</div>
+          <div class="zip-code">85309</div>
+          <div class="zip-code">85310</div>
+        </div>
+      </div>
+      
+      <div class="city-card">
+        <h3 class="text-2xl font-bold mb-4 text-cyan-400">⭐ Chandler</h3>
+        <p class="mb-4">Tech corridor homes and family communities. Ahwatukee, Ocotillo, Sun Lakes service coverage.</p>
+        <div class="zip-grid">
+          <div class="zip-code">85224</div>
+          <div class="zip-code">85225</div>
+          <div class="zip-code">85226</div>
+          <div class="zip-code">85248</div>
+          <div class="zip-code">85249</div>
+          <div class="zip-code">85286</div>
+          <div class="zip-code">85044</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- East Valley -->
+<section class="container mx-auto px-4 py-16">
+  <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">East Valley Communities</h2>
+  
+  <div class="cities-grid">
+    <div class="city-card">
+      <h3 class="text-2xl font-bold mb-4 text-cyan-400">Mesa</h3>
+      <p class="mb-4">Arizona's third-largest city with diverse neighborhoods and housing types.</p>
+      <ul class="text-sm space-y-1">
+        <li>• Las Sendas luxury communities</li>
+        <li>• Eastmark master-planned development</li>
+        <li>• Red Mountain ranch estates</li>
+        <li>• Downtown Mesa urban living</li>
+      </ul>
+    </div>
+    
+    <div class="city-card">
+      <h3 class="text-2xl font-bold mb-4 text-cyan-400">Apache Junction</h3>
+      <p class="mb-4">Gateway to the Superstition Mountains with unique desert challenges.</p>
+      <ul class="text-sm space-y-1">
+        <li>• Mountain foothills properties</li>
+        <li>• Manufactured home communities</li>
+        <li>• Desert landscaping challenges</li>
+        <li>• Extreme temperature variations</li>
+      </ul>
+    </div>
+    
+    <div class="city-card">
+      <h3 class="text-2xl font-bold mb-4 text-cyan-400">Queen Creek</h3>
+      <p class="mb-4">Rapidly growing family community with new construction focus.</p>
+      <ul class="text-sm space-y-1">
+        <li>• New home insulation upgrades</li>
+        <li>• Energy efficiency improvements</li>
+        <li>• Master-planned communities</li>
+        <li>• Growing family neighborhoods</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- West Valley -->
+<section class="region-section">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-8">West Valley Region</h2>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="text-center">
+        <h3 class="text-xl font-bold mb-3 text-cyan-400">Peoria</h3>
+        <p class="text-sm">Lake Pleasant area communities, golf course neighborhoods, and family developments.</p>
+      </div>
+      
+      <div class="text-center">
+        <h3 class="text-xl font-bold mb-3 text-cyan-400">Surprise</h3>
+        <p class="text-sm">Active adult communities, spring training facilities, and growing residential areas.</p>
+      </div>
+      
+      <div class="text-center">
+        <h3 class="text-xl font-bold mb-3 text-cyan-400">Avondale</h3>
+        <p class="text-sm">Industrial corridor homes, new developments, and established neighborhoods.</p>
+      </div>
+      
+      <div class="text-center">
+        <h3 class="text-xl font-bold mb-3 text-cyan-400">Goodyear</h3>
+        <p class="text-sm">Master-planned communities, PebbleCreek, and Estrella Mountain Ranch areas.</p>
+      </div>
+      
+      <div class="text-center">
+        <h3 class="text-xl font-bold mb-3 text-cyan-400">Buckeye</h3>
+        <p class="text-sm">Fastest growing Arizona city with new construction and rural properties.</p>
+      </div>
+      
+      <div class="text-center">
+        <h3 class="text-xl font-bold mb-3 text-cyan-400">Litchfield Park</h3>
+        <p class="text-sm">Historic Wigwam resort area, golf communities, and luxury neighborhoods.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Northern Arizona -->
+<section class="container mx-auto px-4 py-16">
+  <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Northern Arizona Coverage</h2>
+  
+  <div class="cities-grid">
+    <div class="city-card">
+      <h3 class="text-2xl font-bold mb-4 text-cyan-400">🏔️ Flagstaff</h3>
+      <p class="mb-4">Mountain climate specialists for high-altitude insulation challenges.</p>
+      <ul class="text-sm space-y-1">
+        <li>• Snow load considerations</li>
+        <li>• Extreme temperature variations</li>
+        <li>• Cabin and mountain home expertise</li>
+        <li>• NAU campus area service</li>
+      </ul>
+    </div>
+    
+    <div class="city-card">
+      <h3 class="text-2xl font-bold mb-4 text-cyan-400">🌲 Sedona</h3>
+      <p class="mb-4">Red rock country homes with unique architectural and climate needs.</p>
+      <ul class="text-sm space-y-1">
+        <li>• Custom home specialization</li>
+        <li>• Rock formation microclimates</li>
+        <li>• Energy efficiency in elevation</li>
+        <li>• Luxury home standards</li>
+      </ul>
+    </div>
+    
+    <div class="city-card">
+      <h3 class="text-2xl font-bold mb-4 text-cyan-400">🏕️ Prescott</h3>
+      <p class="mb-4">Historic mountain town with diverse housing and climate challenges.</p>
+      <ul class="text-sm space-y-1">
+        <li>• Historic home retrofits</li>
+        <li>• Mountain climate adaptations</li>
+        <li>• Four-season insulation needs</li>
+        <li>• Rural property service</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Southern Arizona -->
+<section class="region-section">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-8">Southern Arizona Service</h2>
+    
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-2xl font-bold mb-4 text-cyan-400">🌵 Tucson Metro</h3>
+        <ul class="space-y-3">
+          <li>• <strong>Tucson</strong> - Full city coverage including foothills</li>
+          <li>• <strong>Oro Valley</strong> - Luxury home specialists</li>
+          <li>• <strong>Marana</strong> - Growing family communities</li>
+          <li>• <strong>Sahuarita</strong> - Master-planned developments</li>
+          <li>• <strong>Green Valley</strong> - Active adult communities</li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="text-2xl font-bold mb-4 text-cyan-400">🏜️ Other Southern Cities</h3>
+        <ul class="space-y-3">
+          <li>• <strong>Casa Grande</strong> - Central corridor communities</li>
+          <li>• <strong>Sierra Vista</strong> - Military housing specialists</li>
+          <li>• <strong>Yuma</strong> - Border region service</li>
+          <li>• <strong>Lake Havasu City</strong> - Waterfront properties</li>
+          <li>• <strong>Kingman</strong> - Route 66 corridor</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service Guarantees -->
+<section class="container mx-auto px-4 py-16">
+  <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Statewide Service Guarantees</h2>
+  
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="text-center">
+      <div class="text-4xl mb-4">🚗</div>
+      <h3 class="text-xl font-bold mb-3 text-blue-900">No Travel Charges</h3>
+      <p class="text-gray-700">Free estimates throughout our service area with no additional travel fees.</p>
+    </div>
+    
+    <div class="text-center">
+      <div class="text-4xl mb-4">⏰</div>
+      <h3 class="text-xl font-bold mb-3 text-blue-900">Same-Day Response</h3>
+      <p class="text-gray-700">Emergency service available with most areas receiving same-day response.</p>
+    </div>
+    
+    <div class="text-center">
+      <div class="text-4xl mb-4">🏆</div>
+      <h3 class="text-xl font-bold mb-3 text-blue-900">Licensed Statewide</h3>
+      <p class="text-gray-700">Arizona ROC #323456 licensed contractor with statewide coverage authority.</p>
+    </div>
+    
+    <div class="text-center">
+      <div class="text-4xl mb-4">🛡️</div>
+      <h3 class="text-xl font-bold mb-3 text-blue-900">Service Warranty</h3>
+      <p class="text-gray-700">25-year warranty honored statewide with local service and support.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="cta-section">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold mb-6">Ready to Improve Your Arizona Home?</h2>
+    <p class="text-xl mb-8 max-w-3xl mx-auto">
+      Professional insulation services throughout Arizona. Licensed, insured, and ready to serve your community with expert solutions.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="/contact/" class="cta-button text-lg px-8 py-4">Get Free Local Estimate</a>
+      <a href="tel:602-755-5004" class="cta-button text-lg px-8 py-4">Call (602) 755-5004 Now</a>
+    </div>
+    <p class="mt-6 text-cyan-200">
+      🎯 Free estimates statewide • 🏆 A+ BBB rated • 🛡️ Licensed & insured • 🌵 Arizona specialists
+    </p>
+  </div>
+</section>
+
+<!-- Schema JSON-LD for Service -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Arizona Insulation Services Statewide",
+  "description": "Professional insulation services throughout Arizona including Phoenix metro, Tucson, Flagstaff, and all major communities. Licensed statewide contractor.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "ICA Insulation Contractor Arizona",
+    "url": "https://icainsulation.com"
+  },
+  "serviceType": "Residential and Commercial Insulation Services",
+  "areaServed": [
+    {
+      "@type": "State",
+      "name": "Arizona"
+    },
+    {
+      "@type": "City",
+      "name": "Phoenix"
+    },
+    {
+      "@type": "City", 
+      "name": "Scottsdale"
+    },
+    {
+      "@type": "City",
+      "name": "Gilbert"
+    },
+    {
+      "@type": "City",
+      "name": "Tempe"
+    },
+    {
+      "@type": "City",
+      "name": "Chandler"
+    },
+    {
+      "@type": "City",
+      "name": "Glendale"
+    },
+    {
+      "@type": "City",
+      "name": "Mesa"
+    },
+    {
+      "@type": "City",
+      "name": "Tucson"
+    },
+    {
+      "@type": "City",
+      "name": "Flagstaff"
+    }
+  ],
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Cities Served",
+      "value": "50+"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Zip Codes Covered", 
+      "value": "200+"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "License Number",
+      "value": "ROC #323456"
+    }
+  ]
+}
+</script>
