@@ -518,17 +518,17 @@ img {
     white-space: normal;
 }
 
-/* Large menus (Services, Products) - Multi-column layout */
+/* Large menus (Services, Products) - 4-column layout */
 .nav-item:nth-child(2) .submenu,
 .nav-item:nth-child(3) .submenu {
-    grid-template-columns: repeat(3, minmax(180px, 1fr));
-    max-width: 600px;
+    grid-template-columns: repeat(4, minmax(160px, 1fr));
+    max-width: 750px;
 }
 
 /* Fallback for browsers without :has() support */
 .submenu {
-    grid-template-columns: repeat(2, minmax(160px, 1fr));
-    max-width: 400px;
+    grid-template-columns: repeat(3, minmax(160px, 1fr));
+    max-width: 550px;
 }
 
 /* Medium menus - Two column layout */
@@ -549,8 +549,8 @@ img {
 @media (max-width: 1200px) {
     .nav-item:nth-child(2) .submenu,
     .nav-item:nth-child(3) .submenu {
-        grid-template-columns: repeat(2, minmax(160px, 1fr));
-        max-width: 400px;
+        grid-template-columns: repeat(3, minmax(160px, 1fr));
+        max-width: 550px;
     }
 }
 
@@ -569,8 +569,8 @@ img {
     
     .nav-item:nth-child(2) .submenu,
     .nav-item:nth-child(3) .submenu {
-        grid-template-columns: 1fr;
-        max-width: 300px;
+        grid-template-columns: repeat(2, minmax(140px, 1fr));
+        max-width: 350px;
     }
 }
 
