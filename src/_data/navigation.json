@@ -52,6 +52,10 @@
         {
           "title": "Air Duct Cleaning",
           "url": "/services/air-duct-cleaning/"
+        },
+        {
+          "title": "Arizona Insulation Contractor",
+          "url": "/insulation-contractor-arizona/"
         }
       ]
     },
@@ -59,6 +63,17 @@
       "title": "Products",
       "url": "/products/",
       "submenu": [
+        {
+          "title": "Spray Foam Hub",
+          "url": "/spray-foam-insulation-phoenix/",
+          "items": [
+            {"title": "Cost Calculator", "url": "/spray-foam-hub/spray-foam-cost-calculator/"},
+            {"title": "Open vs Closed Cell", "url": "/spray-foam-hub/open-cell-vs-closed-cell/"},
+            {"title": "R-Value Guide", "url": "/spray-foam-hub/spray-foam-r-value-guide/"},
+            {"title": "Installation Process", "url": "/spray-foam-hub/spray-foam-installation-process/"},
+            {"title": "Find Contractors", "url": "/spray-foam-hub/spray-foam-contractors-near-me/"}
+          ]
+        },
         {
           "title": "Spray Foam Types",
           "items": [
