@@ -7,25 +7,6 @@ eleventyNavigation:
   key: Spray Foam Cost Calculator
   parent: Spray Foam Hub
   order: 1
-schema:
-  - type: FAQPage
-    questions:
-      - question: "How much does spray foam insulation cost per square foot in Phoenix?"
-        answer: "In Phoenix, spray foam insulation costs range from $0.35-$0.65 per board foot for open-cell foam and $1.00-$2.00 per board foot for closed-cell foam. Total project costs typically range from $1,500-$8,000 for attic insulation in an average 2,000 sq ft home."
-      - question: "What factors affect spray foam insulation pricing?"
-        answer: "Key factors include: type of foam (open vs closed cell), project size, thickness required, accessibility, existing insulation removal, seasonal demand, and local labor costs. Larger projects typically have lower per-square-foot costs."
-      - question: "How long does it take to recoup spray foam insulation costs?"
-        answer: "Most Phoenix homeowners see payback within 3-7 years through energy savings. With average monthly savings of $140-$175 on cooling costs, a $5,000 investment typically pays for itself in 3.5-5 years."
-      - question: "Are there financing options for spray foam insulation?"
-        answer: "Yes, many options exist including: contractor financing plans, home improvement loans, HELOC, energy-efficiency loans, and PACE financing. Many contractors offer 0% interest for 12-24 months."
-  - type: Product
-    name: "Spray Foam Insulation Cost Calculator"
-    description: "Interactive calculator for estimating spray foam insulation costs in Phoenix, AZ"
-    brand: "Insulation Contractor of Arizona"
-    offers:
-      priceCurrency: "USD"
-      price: "0"
-      availability: "https://schema.org/InStock"
 ---
 
 <article class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -1591,4 +1572,67 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initial calculation
   calculateCosts();
 });
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does spray foam insulation cost per square foot in Phoenix?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In Phoenix, spray foam insulation costs range from $0.35-$0.65 per board foot for open-cell foam and $1.00-$2.00 per board foot for closed-cell foam. Total project costs typically range from $1,500-$8,000 for attic insulation in an average 2,000 sq ft home."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What factors affect spray foam insulation pricing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Key factors include: type of foam (open vs closed cell), project size, thickness required, accessibility, existing insulation removal, seasonal demand, and local labor costs. Larger projects typically have lower per-square-foot costs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to recoup spray foam insulation costs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most Phoenix homeowners see payback within 3-7 years through energy savings. With average monthly savings of $140-$175 on cooling costs, a $5,000 investment typically pays for itself in 3.5-5 years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there financing options for spray foam insulation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, many options exist including: contractor financing plans, home improvement loans, HELOC, energy-efficiency loans, and PACE financing. Many contractors offer 0% interest for 12-24 months."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Product Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Spray Foam Insulation Cost Calculator",
+  "description": "Interactive calculator for estimating spray foam insulation costs in Phoenix, AZ",
+  "brand": {
+    "@type": "Brand",
+    "name": "Insulation Contractors of Arizona"
+  },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "0",
+    "availability": "https://schema.org/InStock",
+    "url": "https://insulationcontractorsofarizona.com/spray-foam-hub/spray-foam-cost-calculator/"
+  }
+}
 </script>
