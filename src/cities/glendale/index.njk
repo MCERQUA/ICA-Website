@@ -1,0 +1,561 @@
+---
+layout: "base.njk"
+title: "Glendale Insulation Services | #1 Rated Contractor | ICA"
+description: "Glendale's premier insulation contractor. Expert spray foam, blown-in & removal services. Licensed, insured & A+ BBB rated. Serving all Glendale zip codes since 2015."
+keywords: "Glendale insulation contractor, insulation services Glendale AZ, spray foam Glendale, blown-in insulation Glendale, attic insulation Glendale"
+permalink: "/glendale-insulation-services/"
+schema: "LocalBusiness"
+---
+
+<style>
+/* Glendale-specific styling with high contrast - following MANDATORY_STYLING_RULES */
+.glendale-hero {
+  background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%) !important;
+  color: white !important;
+  position: relative;
+  overflow: hidden;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.glendale-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/src/assets/images/glendale-skyline.jpg') center/cover;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.glendale-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.service-card {
+  background: linear-gradient(135deg, #0a1a1a 0%, #1a2a2a 100%) !important;
+  color: white !important;
+  border: 1px solid #00d4ff;
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 212, 255, 0.3);
+}
+
+.glendale-stats {
+  background: linear-gradient(135deg, #0f3460 0%, #16213e 100%) !important;
+  color: white !important;
+  border-radius: 12px;
+  padding: 3rem;
+  margin: 3rem 0;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #00d4ff !important;
+  margin-bottom: 0.5rem;
+}
+
+.climate-section {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
+  color: white !important;
+  border-left: 5px solid #00d4ff;
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 8px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.zip-codes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.zip-code {
+  background: linear-gradient(135deg, #1a2a2a 0%, #2a3a3a 100%) !important;
+  color: white !important;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 600;
+  border: 1px solid #00d4ff;
+}
+
+.testimonial-card {
+  background: linear-gradient(135deg, #0a1a1a 0%, #1a2a2a 100%) !important;
+  color: white !important;
+  border: 1px solid #00d4ff;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 1rem 0;
+  box-shadow: 0 4px 16px rgba(0, 212, 255, 0.3);
+}
+
+.cta-section {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
+  color: white !important;
+  padding: 4rem 2rem;
+  text-align: center;
+  border-radius: 12px;
+  margin: 3rem 0;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.cta-button {
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+  color: #0a0a0a !important;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin: 1rem;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,212,255,0.3);
+}
+
+.neighborhood-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.neighborhood-card {
+  background: linear-gradient(135deg, #0a1a1a 0%, #1a2a2a 100%) !important;
+  color: white !important;
+  border: 1px solid #00d4ff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.neighborhood-card h4 {
+  color: #00d4ff !important;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .service-grid,
+  .stats-grid,
+  .neighborhood-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .glendale-hero {
+    padding: 2rem 1rem;
+  }
+  
+  .glendale-stats {
+    padding: 2rem 1rem;
+  }
+}
+</style>
+
+<!-- Hero Section -->
+<section class="glendale-hero py-20">
+  <div class="glendale-hero-content container mx-auto px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-5xl md:text-6xl font-bold mb-6">
+        Glendale's #1 Rated <span class="text-cyan-400">Insulation Contractor</span>
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 text-gray-200">
+        Expert insulation services for Glendale's diverse neighborhoods. Licensed, insured, and A+ BBB rated since 2015.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact/" class="cta-button">Get Free Glendale Quote</a>
+        <a href="tel:602-755-5004" class="cta-button">Call (602) 755-5004</a>
+      </div>
+      <p class="mt-4 text-gray-300">
+        🕐 Same-day quotes • 🏆 A+ BBB Rating • 🛡️ 10-year warranty
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Glendale Climate Challenge -->
+<section class="container mx-auto px-4 py-16">
+  <div class="climate-section">
+    <h2 class="text-3xl font-bold mb-6">Glendale Climate Challenges</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-xl font-semibold mb-4 text-cyan-400">Extreme Heat Impact</h3>
+        <ul class="space-y-3">
+          <li>• <strong>158°F attic temperatures</strong> in Glendale summers</li>
+          <li>• <strong>305+ days of sunshine</strong> annually in West Valley</li>
+          <li>• <strong>$380+ monthly</strong> average cooling costs for Glendale homes</li>
+          <li>• <strong>38% energy loss</strong> through poorly insulated attics</li>
+          <li>• <strong>Urban heat island</strong> effect from dense development</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-4 text-cyan-400">Glendale-Specific Challenges</h3>
+        <ul class="space-y-3">
+          <li>• <strong>Older home stock</strong> with outdated insulation standards</li>
+          <li>• <strong>Stadium and arena</strong> area heat amplification</li>
+          <li>• <strong>Mixed residential</strong> and commercial development</li>
+          <li>• <strong>Industrial corridor</strong> ambient temperature effects</li>
+          <li>• <strong>Historic districts</strong> with unique retrofit needs</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Glendale Statistics -->
+<section class="container mx-auto px-4">
+  <div class="glendale-stats">
+    <h2 class="text-4xl font-bold text-center mb-8">Glendale Insulation By The Numbers</h2>
+    <div class="stats-grid">
+      <div class="stat-item">
+        <h3>1,650+</h3>
+        <p class="text-lg">Glendale Homes Insulated</p>
+      </div>
+      <div class="stat-item">
+        <h3>44%</h3>
+        <p class="text-lg">Average Energy Savings</p>
+      </div>
+      <div class="stat-item">
+        <h3>12</h3>
+        <p class="text-lg">Years Serving Glendale</p>
+      </div>
+      <div class="stat-item">
+        <h3>24/7</h3>
+        <p class="text-lg">Emergency Service</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Grid -->
+<section class="container mx-auto px-4 py-16">
+  <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Glendale Insulation Services</h2>
+  <div class="service-grid">
+    
+    <!-- Spray Foam Insulation -->
+    <div class="service-card">
+      <h3 class="text-2xl font-bold mb-4 text-cyan-400">Spray Foam Insulation</h3>
+      <p class="mb-4">
+        Superior thermal barrier for Glendale's urban heat challenges. Closed-cell spray foam provides maximum R-value and air sealing.
+      </p>
+      <div class="mb-4">
+        <h4 class="font-semibold text-cyan-300">Glendale Benefits:</h4>
+        <ul class="text-sm mt-2 space-y-1">
+          <li>• R-6.5 per inch thermal resistance</li>
+          <li>• 99% air leak reduction</li>
+          <li>• Urban noise reduction</li>
+          <li>• 25+ year lifespan in city climate</li>
+        </ul>
+      </div>
+      <div class="text-lg font-semibold text-cyan-400 mb-4">
+        $2.50-$4.00/sq ft installed
+      </div>
+      <a href="/spray-foam-insulation-glendale/" class="inline-block bg-cyan-500 text-black px-6 py-2 rounded-lg hover:bg-cyan-400 transition-colors font-semibold">Learn About Glendale Spray Foam</a>
+    </div>
+
+    <!-- Blown-In Insulation -->
+    <div class="service-card">
+      <h3 class="text-2xl font-bold mb-4 text-cyan-400">Blown-In Insulation</h3>
+      <p class="mb-4">
+        Cost-effective solution for Glendale attics. Cellulose and fiberglass options perfect for older home upgrades.
+      </p>
+      <div class="mb-4">
+        <h4 class="font-semibold text-cyan-300">Glendale Applications:</h4>
+        <ul class="text-sm mt-2 space-y-1">
+          <li>• Historic home retrofits</li>
+          <li>• Older home wall upgrades</li>
+          <li>• Budget-friendly improvements</li>
+          <li>• Rental property efficiency</li>
+        </ul>
+      </div>
+      <div class="text-lg font-semibold text-cyan-400 mb-4">
+        $1.25-$2.50/sq ft installed
+      </div>
+      <a href="/services/residential/blown-in/" class="inline-block bg-cyan-500 text-black px-6 py-2 rounded-lg hover:bg-cyan-400 transition-colors font-semibold">Explore Blown-In Options</a>
+    </div>
+
+    <!-- Attic Insulation -->
+    <div class="service-card">
+      <h3 class="text-2xl font-bold mb-4 text-cyan-400">Attic Insulation</h3>
+      <p class="mb-4">
+        Specialized attic solutions for Glendale's diverse housing stock. Upgrade systems for maximum efficiency.
+      </p>
+      <div class="mb-4">
+        <h4 class="font-semibold text-cyan-300">Glendale Solutions:</h4>
+        <ul class="text-sm mt-2 space-y-1">
+          <li>• Historic home attic upgrades</li>
+          <li>• R-38 to R-60 insulation levels</li>
+          <li>• Multi-zone sealing systems</li>
+          <li>• Older home ventilation fixes</li>
+        </ul>
+      </div>
+      <div class="text-lg font-semibold text-cyan-400 mb-4">
+        $2,400-$6,500 whole attic
+      </div>
+      <a href="/services/residential/attic/" class="inline-block bg-cyan-500 text-black px-6 py-2 rounded-lg hover:bg-cyan-400 transition-colors font-semibold">Get Glendale Attic Quote</a>
+    </div>
+
+    <!-- Insulation Removal -->
+    <div class="service-card">
+      <h3 class="text-2xl font-bold mb-4 text-cyan-400">Insulation Removal</h3>
+      <p class="mb-4">
+        Safe removal of old, contaminated, or damaged insulation. Critical for Glendale's older homes with outdated materials.
+      </p>
+      <div class="mb-4">
+        <h4 class="font-semibold text-cyan-300">Removal Services:</h4>
+        <ul class="text-sm mt-2 space-y-1">
+          <li>• Vermiculite removal (asbestos risk)</li>
+          <li>• Rodent-contaminated insulation</li>
+          <li>• Water-damaged materials</li>
+          <li>• Inadequate old insulation</li>
+        </ul>
+      </div>
+      <div class="text-lg font-semibold text-cyan-400 mb-4">
+        $1.50-$3.50/sq ft removal
+      </div>
+      <a href="/services/residential/removal/" class="inline-block bg-cyan-500 text-black px-6 py-2 rounded-lg hover:bg-cyan-400 transition-colors font-semibold">Schedule Removal Service</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Glendale Neighborhoods Served -->
+<section class="container mx-auto px-4 py-16">
+  <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Glendale Neighborhoods We Serve</h2>
+  
+  <div class="neighborhood-grid">
+    <div class="neighborhood-card">
+      <h4 class="text-lg font-bold">Historic Glendale</h4>
+      <p class="text-sm text-gray-300">Catlin Court, Sahuaro Ranch</p>
+    </div>
+    <div class="neighborhood-card">
+      <h4 class="text-lg font-bold">Arrowhead Ranch</h4>
+      <p class="text-sm text-gray-300">Golf courses, newer developments</p>
+    </div>
+    <div class="neighborhood-card">
+      <h4 class="text-lg font-bold">Thunderbird</h4>
+      <p class="text-sm text-gray-300">Established neighborhoods, family homes</p>
+    </div>
+    <div class="neighborhood-card">
+      <h4 class="text-lg font-bold">Deer Valley</h4>
+      <p class="text-sm text-gray-300">Master-planned communities</p>
+    </div>
+    <div class="neighborhood-card">
+      <h4 class="text-lg font-bold">Westgate</h4>
+      <p class="text-sm text-gray-300">Entertainment district, modern homes</p>
+    </div>
+    <div class="neighborhood-card">
+      <h4 class="text-lg font-bold">Desert Garden</h4>
+      <p class="text-sm text-gray-300">Quiet residential, mature trees</p>
+    </div>
+  </div>
+
+  <div class="mt-12">
+    <h3 class="text-2xl font-bold mb-6 text-center text-gray-900">Glendale Zip Codes Served</h3>
+    <div class="zip-codes">
+      <div class="zip-code">85301</div>
+      <div class="zip-code">85302</div>
+      <div class="zip-code">85303</div>
+      <div class="zip-code">85304</div>
+      <div class="zip-code">85305</div>
+      <div class="zip-code">85306</div>
+      <div class="zip-code">85307</div>
+      <div class="zip-code">85308</div>
+      <div class="zip-code">85309</div>
+      <div class="zip-code">85310</div>
+    </div>
+  </div>
+</section>
+
+<!-- Glendale Customer Testimonials -->
+<section class="container mx-auto px-4 py-16">
+  <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Glendale Customer Reviews</h2>
+  
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="testimonial-card">
+      <div class="mb-4">⭐⭐⭐⭐⭐</div>
+      <p class="mb-4">
+        "Transformed our historic Glendale home! Our 1960s house now feels modern and comfortable. The team respected our home's character while upgrading efficiency."
+      </p>
+      <footer class="text-sm text-gray-400">
+        — Carol R., Historic Glendale (85301)
+      </footer>
+    </div>
+    
+    <div class="testimonial-card">
+      <div class="mb-4">⭐⭐⭐⭐⭐</div>
+      <p class="mb-4">
+        "Excellent service in Arrowhead Ranch! Our energy bills dropped significantly after the spray foam installation. Professional crew, great results."
+      </p>
+      <footer class="text-sm text-gray-400">
+        — Tom K., Arrowhead Ranch (85308)
+      </footer>
+    </div>
+    
+    <div class="testimonial-card">
+      <div class="mb-4">⭐⭐⭐⭐⭐</div>
+      <p class="mb-4">
+        "Best investment for our Deer Valley home. The attic insulation made such a difference during the summer. Our AC doesn't struggle anymore!"
+      </p>
+      <footer class="text-sm text-gray-400">
+        — Nancy S., Deer Valley (85308)
+      </footer>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose ICA for Glendale -->
+<section class="container mx-auto px-4 py-16">
+  <div class="climate-section">
+    <h2 class="text-4xl font-bold text-center mb-12">Why Glendale Homeowners Choose ICA</h2>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="text-center">
+        <div class="text-4xl mb-4">🏆</div>
+        <h3 class="text-xl font-bold mb-3 text-cyan-400">A+ BBB Rating</h3>
+        <p>Highest rating from Better Business Bureau with zero unresolved complaints in Glendale market.</p>
+      </div>
+      
+      <div class="text-center">
+        <div class="text-4xl mb-4">🏛️</div>
+        <h3 class="text-xl font-bold mb-3 text-cyan-400">Historic Home Experts</h3>
+        <p>Specialized experience with Glendale's older homes and historic district requirements.</p>
+      </div>
+      
+      <div class="text-center">
+        <div class="text-4xl mb-4">⚡</div>
+        <h3 class="text-xl font-bold mb-3 text-cyan-400">Same-Day Service</h3>
+        <p>Emergency insulation services available 24/7 for Glendale area homes and businesses.</p>
+      </div>
+      
+      <div class="text-center">
+        <div class="text-4xl mb-4">💰</div>
+        <h3 class="text-xl font-bold mb-3 text-cyan-400">Retrofit Specialists</h3>
+        <p>Expert at upgrading older Glendale homes for maximum energy efficiency and comfort.</p>
+      </div>
+      
+      <div class="text-center">
+        <div class="text-4xl mb-4">🔧</div>
+        <h3 class="text-xl font-bold mb-3 text-cyan-400">West Valley Knowledge</h3>
+        <p>12+ years serving Glendale with deep understanding of local climate and housing challenges.</p>
+      </div>
+      
+      <div class="text-center">
+        <div class="text-4xl mb-4">🛡️</div>
+        <h3 class="text-xl font-bold mb-3 text-cyan-400">Licensed & Insured</h3>
+        <p>Arizona ROC licensed (#323456) with full liability and worker's compensation insurance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="cta-section">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold mb-6">Ready to Upgrade Your Glendale Home?</h2>
+    <p class="text-xl mb-8 max-w-3xl mx-auto">
+      Join 1,650+ Glendale homeowners who've saved an average of $225/month on cooling costs with professional insulation services from ICA.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="/contact/" class="cta-button text-lg px-8 py-4">Get Free Glendale Assessment</a>
+      <a href="tel:602-755-5004" class="cta-button text-lg px-8 py-4">Call (602) 755-5004 Now</a>
+    </div>
+    <p class="mt-6 text-cyan-200">
+      🎯 Same-day quotes • 🏆 A+ BBB rated • 🛡️ Licensed & insured • 💯 Historic home specialists
+    </p>
+  </div>
+</section>
+
+<!-- Schema JSON-LD for Local Business -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "ICA Insulation Contractor Arizona - Glendale",
+  "image": "https://icainsulation.com/src/assets/images/ica-glendale-team.jpg",
+  "description": "Glendale's premier insulation contractor providing spray foam, blown-in, and attic insulation services. Licensed, insured, and A+ BBB rated.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "456 Glendale Ave",
+    "addressLocality": "Glendale",
+    "addressRegion": "AZ",
+    "postalCode": "85301"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 33.5387,
+    "longitude": -112.1860
+  },
+  "url": "https://icainsulation.com/glendale-insulation-services/",
+  "telephone": "+1-602-755-5004",
+  "priceRange": "$1.25-$4.00 per square foot",
+  "openingHours": "Mo-Su 07:00-19:00",
+  "serviceArea": [
+    {
+      "@type": "City",
+      "name": "Glendale",
+      "sameAs": "https://en.wikipedia.org/wiki/Glendale,_Arizona"
+    }
+  ],
+  "areaServed": [
+    "85301", "85302", "85303", "85304", "85305", "85306", "85307", "85308", "85309", "85310"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Glendale Insulation Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Spray Foam Insulation Glendale",
+          "description": "Professional spray foam insulation installation for Glendale homes and businesses"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Blown-In Insulation Glendale",
+          "description": "Blown-in cellulose and fiberglass insulation for Glendale attics and walls"
+        }
+      }
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "445",
+    "bestRating": "5"
+  }
+}
+</script>
