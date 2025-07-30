@@ -584,7 +584,7 @@ Arizona residents face some of the highest energy costs in the Southwest, with c
 
 Arizona's intense solar radiation and extreme temperatures create unique heat transfer challenges that proper insulation directly addresses. The EPA's Energy Star program validates that homeowners can save an average of 15% on heating and cooling costs through proper insulation and air sealing.
 
-For homeowners considering a comprehensive approach, understanding [whether to DIY or hire professionals for Arizona insulation work](/blog/2025-01-04-diy-vs-professional-insulation-arizona/) can help determine the most cost-effective path to achieving these energy savings.
+For homeowners considering a comprehensive approach, understanding [whether to DIY or hire professionals for Arizona insulation work](/blog/2025-01-04-diy-vs-professional-insulation-arizona/) can help determine the most cost-effective path to achieving these energy savings. Before starting any energy-saving project, it's also wise to identify and fix [common insulation problems](/blog/2025-01-03-common-insulation-problems-arizona/) that may be silently draining your wallet.
 
 <div class="ica-cta">
     <h3>Calculate Your Potential Savings</h3>
@@ -775,7 +775,7 @@ To maximize your energy savings investment, consider reviewing [your complete in
             What's the best insulation type for Arizona's desert climate?
         </div>
         <div class="ica-faq-answer">
-            <p>For maximum energy savings in Arizona's desert climate, closed-cell spray foam provides the highest performance but requires the highest investment. For best value, blown fiberglass combined with a radiant barrier offers excellent performance at moderate cost. Radiant barriers are particularly effective in Arizona's sunny climate, reducing attic temperatures by 20-30°F.</p>
+            <p>For maximum energy savings in Arizona's desert climate, closed-cell spray foam provides the highest performance but requires the highest investment. For best value, blown fiberglass combined with a radiant barrier offers excellent performance at moderate cost. Radiant barriers are particularly effective in Arizona's sunny climate, reducing attic temperatures by 20-30°F. For a detailed analysis of material options, see our [comprehensive comparison of spray foam vs fiberglass insulation](/blog/2025-01-10-spray-foam-vs-fiberglass-arizona-comparison/) for Arizona homes.</p>
         </div>
     </div>
     

@@ -391,6 +391,7 @@ Arizona's climate creates insulation challenges that simply don't exist in moder
     <p><strong>10-Year Total Cost of Ownership (1,500 sq ft attic):</strong><br>
     <strong>Spray Foam</strong>: $3,000 initial - $5,000 energy savings = <em>$2,000 net savings</em><br>
     <strong>Fiberglass</strong>: $1,500 initial - $3,000 energy savings + $500 maintenance = <em>$200 net cost</em></p>
+    <p><em>For detailed energy savings calculations and ROI analysis, see our comprehensive guide on [Arizona energy cost savings with proper insulation](/blog/2025-01-06-energy-cost-savings-arizona-insulation/).</em></p>
 </div>
 
 ## Installation Timing and Considerations
@@ -401,6 +402,8 @@ Arizona's climate creates insulation challenges that simply don't exist in moder
 - **Winter (December-February)**: Good conditions, occasional cold snaps
 - **Early Spring (March-April)**: Good conditions before extreme heat
 - **Summer (May-August)**: Challenging, safety-focused approach required
+
+For comprehensive planning and maintenance scheduling, see our detailed [Arizona homeowner insulation timeline guide](/blog/2025-01-09-arizona-homeowner-insulation-timeline-guide/).
 
 <div class="highlight-box">
     <h4>Professional Assessment Value</h4>
