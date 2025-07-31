@@ -1,158 +1,243 @@
-{# Local Service Areas Component #}
-<section class="local-service-areas content-section bg-gray-50">
+{# Local Coverage & Response Time Component #}
+<section class="local-coverage content-section bg-gradient-to-br from-blue-50 to-white">
     <div class="container">
         <div class="section-header text-center">
-            <h2 class="text-4xl font-bold mb-6 text-gray-900">Serving the Greater Phoenix Area</h2>
+            <h2 class="text-4xl font-bold mb-6 text-gray-900">Valley-Wide Coverage & Fast Response</h2>
             <p class="section-intro text-xl text-gray-700 mb-12 max-w-3xl mx-auto">
-                Professional insulation services across all major Valley cities. Local expertise, licensed contractors, and proven results.
+                Professional insulation services across all major Phoenix area cities with guaranteed 24-hour response times and local expertise.
             </p>
         </div>
         
-        <div class="service-areas-grid grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="area-card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                <div class="area-icon mb-4 text-center">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
-                        <svg class="w-8 h-8 text-blue-600" width="32" height="32" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
-                            <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
-                        </svg>
-                    </div>
+        {# Response Time Promise #}
+        <div class="response-promise bg-white rounded-xl shadow-lg p-8 mb-12 max-w-4xl mx-auto border-l-4 border-blue-600">
+            <div class="flex items-center justify-center gap-8 flex-wrap">
+                <div class="response-metric text-center">
+                    <div class="metric-value text-4xl font-bold text-blue-600 mb-2">24hr</div>
+                    <div class="metric-label text-gray-700 font-medium">Response Time</div>
                 </div>
-                <h3 class="text-xl font-bold mb-3 text-center text-blue-900">Phoenix</h3>
-                <p class="text-gray-600 mb-4 text-center">Arizona's largest city with unique desert climate challenges. Expert insulation for 160°F attics and extreme heat.</p>
-                <div class="text-center">
-                    <a href="/phoenix-insulation-services/" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">Phoenix Insulation Services</a>
+                <div class="response-metric text-center">
+                    <div class="metric-value text-4xl font-bold text-green-600 mb-2">40+</div>
+                    <div class="metric-label text-gray-700 font-medium">Zip Codes</div>
                 </div>
-            </div>
-
-            <div class="area-card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                <div class="area-icon mb-4 text-center">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto">
-                        <svg class="w-8 h-8 text-green-600" width="32" height="32" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
-                        </svg>
-                    </div>
+                <div class="response-metric text-center">
+                    <div class="metric-value text-4xl font-bold text-orange-600 mb-2">20+</div>
+                    <div class="metric-label text-gray-700 font-medium">Years Local</div>
                 </div>
-                <h3 class="text-xl font-bold mb-3 text-center text-blue-900">Mesa</h3>
-                <p class="text-gray-600 mb-4 text-center">Family-friendly community with diverse housing styles. Specialized solutions for adobe and traditional construction.</p>
-                <div class="text-center">
-                    <a href="/mesa-insulation-services/" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">Mesa Insulation Services</a>
-                </div>
-            </div>
-
-            <div class="area-card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                <div class="area-icon mb-4 text-center">
-                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto">
-                        <svg class="w-8 h-8 text-purple-600" width="32" height="32" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h12a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8z" clip-rule="evenodd"/>
-                        </svg>
-                    </div>
-                </div>
-                <h3 class="text-xl font-bold mb-3 text-center text-blue-900">Chandler</h3>
-                <p class="text-gray-600 mb-4 text-center">Fast-growing tech hub with modern homes and businesses. Energy-efficient solutions for new construction.</p>
-                <div class="text-center">
-                    <a href="/chandler-insulation-services/" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">Chandler Insulation Services</a>
-                </div>
-            </div>
-
-            <div class="area-card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                <div class="area-icon mb-4 text-center">
-                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto">
-                        <svg class="w-8 h-8 text-yellow-600" width="32" height="32" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                        </svg>
-                    </div>
-                </div>
-                <h3 class="text-xl font-bold mb-3 text-center text-blue-900">Scottsdale</h3>
-                <p class="text-gray-600 mb-4 text-center">Luxury homes and resorts requiring premium insulation solutions. High-end materials and precision installation.</p>
-                <div class="text-center">
-                    <a href="/scottsdale-insulation-services/" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">Scottsdale Insulation Services</a>
-                </div>
-            </div>
-
-            <div class="area-card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                <div class="area-icon mb-4 text-center">
-                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto">
-                        <svg class="w-8 h-8 text-red-600" width="32" height="32" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                        </svg>
-                    </div>
-                </div>
-                <h3 class="text-xl font-bold mb-3 text-center text-blue-900">Gilbert</h3>
-                <p class="text-gray-600 mb-4 text-center">Master-planned communities with energy-conscious homeowners. Comprehensive efficiency upgrades and retrofits.</p>
-                <div class="text-center">
-                    <a href="/gilbert-insulation-services/" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">Gilbert Insulation Services</a>
-                </div>
-            </div>
-
-            <div class="area-card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                <div class="area-icon mb-4 text-center">
-                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto">
-                        <svg class="w-8 h-8 text-indigo-600" width="32" height="32" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"/>
-                        </svg>
-                    </div>
-                </div>
-                <h3 class="text-xl font-bold mb-3 text-center text-blue-900">Tempe & Glendale</h3>
-                <p class="text-gray-600 mb-4 text-center">University town and growing suburbs. Student housing, family homes, and commercial properties.</p>
-                <div class="text-center flex flex-col sm:flex-row gap-2 justify-center">
-                    <a href="/tempe-insulation-services/" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm">Tempe Services</a>
-                    <a href="/glendale-insulation-services/" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm">Glendale Services</a>
+                <div class="response-metric text-center">
+                    <div class="metric-value text-4xl font-bold text-purple-600 mb-2">FREE</div>
+                    <div class="metric-label text-gray-700 font-medium">Estimates</div>
                 </div>
             </div>
         </div>
 
-        <div class="text-center mt-12">
-            <div class="bg-blue-50 rounded-lg p-8 max-w-4xl mx-auto">
-                <h3 class="text-2xl font-bold mb-4 text-blue-900">Complete Valley Coverage</h3>
-                <p class="text-gray-700 mb-6">
-                    Serving 40+ zip codes across Maricopa County with the same high-quality insulation services, local expertise, and customer commitment.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="/insulation-contractor-arizona/" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">Arizona Insulation Contractor</a>
-                    <a href="/spray-foam-insulation-phoenix/" class="inline-block bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-colors font-semibold">Phoenix Spray Foam Hub</a>
+        {# Coverage Map Visual #}
+        <div class="coverage-map bg-white rounded-xl shadow-lg p-8 mb-12">
+            <h3 class="text-2xl font-bold text-center mb-8 text-gray-900">Complete Phoenix Metro Coverage</h3>
+            <div class="coverage-grid grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="coverage-area text-center p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                    <div class="area-icon mb-3">
+                        <svg class="w-8 h-8 mx-auto text-blue-600" width="32" height="32" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-1">Phoenix</h4>
+                    <p class="text-sm text-gray-600">Central Hub</p>
                 </div>
+                
+                <div class="coverage-area text-center p-4 bg-green-50 rounded-lg hover:bg-green-100 transition-colors">
+                    <div class="area-icon mb-3">
+                        <svg class="w-8 h-8 mx-auto text-green-600" width="32" height="32" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-1">Scottsdale</h4>
+                    <p class="text-sm text-gray-600">Premium Services</p>
+                </div>
+                
+                <div class="coverage-area text-center p-4 bg-purple-50 rounded-lg hover:bg-purple-100 transition-colors">
+                    <div class="area-icon mb-3">
+                        <svg class="w-8 h-8 mx-auto text-purple-600" width="32" height="32" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-1">Mesa</h4>
+                    <p class="text-sm text-gray-600">East Valley</p>
+                </div>
+                
+                <div class="coverage-area text-center p-4 bg-orange-50 rounded-lg hover:bg-orange-100 transition-colors">
+                    <div class="area-icon mb-3">
+                        <svg class="w-8 h-8 mx-auto text-orange-600" width="32" height="32" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-1">Chandler</h4>
+                    <p class="text-sm text-gray-600">Tech Corridor</p>
+                </div>
+                
+                <div class="coverage-area text-center p-4 bg-teal-50 rounded-lg hover:bg-teal-100 transition-colors">
+                    <div class="area-icon mb-3">
+                        <svg class="w-8 h-8 mx-auto text-teal-600" width="32" height="32" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-1">Gilbert</h4>
+                    <p class="text-sm text-gray-600">Family Communities</p>
+                </div>
+                
+                <div class="coverage-area text-center p-4 bg-red-50 rounded-lg hover:bg-red-100 transition-colors">
+                    <div class="area-icon mb-3">
+                        <svg class="w-8 h-8 mx-auto text-red-600" width="32" height="32" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-1">Tempe</h4>
+                    <p class="text-sm text-gray-600">University Area</p>
+                </div>
+                
+                <div class="coverage-area text-center p-4 bg-indigo-50 rounded-lg hover:bg-indigo-100 transition-colors">
+                    <div class="area-icon mb-3">
+                        <svg class="w-8 h-8 mx-auto text-indigo-600" width="32" height="32" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-1">Glendale</h4>
+                    <p class="text-sm text-gray-600">West Valley</p>
+                </div>
+                
+                <div class="coverage-area text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div class="area-icon mb-3">
+                        <svg class="w-8 h-8 mx-auto text-gray-600" width="32" height="32" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                        </svg>
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-1">+32 More</h4>
+                    <p class="text-sm text-gray-600">Valley Cities</p>
+                </div>
+            </div>
+        </div>
+
+        {# Emergency Service & Contact CTA #}
+        <div class="emergency-service bg-gradient-to-r from-red-600 to-orange-600 rounded-xl text-white p-8 text-center">
+            <h3 class="text-3xl font-bold mb-4">Emergency Insulation Services Available</h3>
+            <p class="text-xl mb-6 text-red-100">
+                Extreme weather damage? HVAC failure? We provide emergency insulation repairs and installations across the Valley.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto">
+                <a href="tel:623-241-1939" class="bg-white text-red-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-bold text-lg flex items-center justify-center gap-2">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                    </svg>
+                    Call (623) 241-1939
+                </a>
+                <a href="/contact/" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-red-600 transition-colors font-bold text-lg">
+                    Get Free Estimate
+                </a>
             </div>
         </div>
     </div>
 </section>
 
 <style>
-.local-service-areas {
+.local-coverage {
     padding: 4rem 0;
 }
 
-.service-areas-grid {
-    margin-top: 3rem;
+.response-promise {
+    position: relative;
+    overflow: hidden;
 }
 
-.area-card {
+.response-promise::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.5), transparent);
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+.response-metric {
+    transition: transform 0.3s ease;
+}
+
+.response-metric:hover {
+    transform: scale(1.05);
+}
+
+.coverage-area {
     transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
 }
 
-.area-card:hover {
-    transform: translateY(-4px);
+.coverage-area:hover {
+    transform: translateY(-2px);
+    border-color: rgba(59, 130, 246, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .area-icon svg {
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    transition: transform 0.3s ease;
     max-width: 32px;
     max-height: 32px;
-    flex-shrink: 0;
+}
+
+.coverage-area:hover .area-icon svg {
+    transform: scale(1.1);
+}
+
+.emergency-service {
+    position: relative;
+    overflow: hidden;
+}
+
+.emergency-service::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+    animation: shine 4s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+@keyframes shine {
+    0%, 100% { transform: translateX(-100%); }
+    50% { transform: translateX(100%); }
 }
 
 @media (max-width: 768px) {
-    .local-service-areas {
+    .local-coverage {
         padding: 2rem 0;
     }
     
-    .service-areas-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+    .response-promise {
+        padding: 1.5rem;
     }
     
-    .area-card {
+    .response-metric {
+        min-width: 120px;
+    }
+    
+    .coverage-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    
+    .emergency-service {
         padding: 1.5rem;
+    }
+    
+    .emergency-service h3 {
+        font-size: 1.5rem;
     }
 }
 </style>
