@@ -28,4 +28,8 @@ npm run lint            # Run linter (if configured)
 - Use the Echo Slack update protocol for tracking progress
 - Communicate ALL significant work activities
 
+### Slack Channel IDs
+- **chris-tasks**: C097J53CAVC (ONLY use when specifically instructed to send to "chris-tasks" - direct communication with Chris only)
+- **echoai-updates-feed**: C0943NFUBDF (for general progress updates)
+
 [Rest of the existing content remains the same...]
