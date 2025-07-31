@@ -52,22 +52,24 @@
         {
           "title": "Air Duct Cleaning",
           "url": "/services/air-duct-cleaning/"
-        },
+        }
+      ]
+    },
+    {
+      "title": "Locations",
+      "url": "/service-locations/",
+      "submenu": [
         {
-          "title": "Arizona Insulation Contractor",
-          "url": "/insulation-contractor-arizona/"
-        },
-        {
-          "title": "Local Service Areas",
-          "url": "/service-areas/",
+          "title": "Arizona",
+          "url": "/service-locations/arizona/",
           "items": [
-            {"title": "Phoenix Insulation Services", "url": "/phoenix-insulation-services/"},
-            {"title": "Mesa Insulation Services", "url": "/mesa-insulation-services/"},
-            {"title": "Chandler Insulation Services", "url": "/chandler-insulation-services/"},
-            {"title": "Scottsdale Insulation Services", "url": "/scottsdale-insulation-services/"},
-            {"title": "Gilbert Insulation Services", "url": "/gilbert-insulation-services/"},
-            {"title": "Glendale Insulation Services", "url": "/glendale-insulation-services/"},
-            {"title": "Tempe Insulation Services", "url": "/tempe-insulation-services/"}
+            {"title": "Phoenix Insulation Services", "url": "/service-locations/arizona/phoenix/"},
+            {"title": "Mesa Insulation Services", "url": "/service-locations/arizona/mesa/"},
+            {"title": "Chandler Insulation Services", "url": "/service-locations/arizona/chandler/"},
+            {"title": "Scottsdale Insulation Services", "url": "/service-locations/arizona/scottsdale/"},
+            {"title": "Gilbert Insulation Services", "url": "/service-locations/arizona/gilbert/"},
+            {"title": "Glendale Insulation Services", "url": "/service-locations/arizona/glendale/"},
+            {"title": "Tempe Insulation Services", "url": "/service-locations/arizona/tempe/"}
           ]
         }
       ]

@@ -2,7 +2,7 @@
 layout: base.njk
 title: "Insulation Contractor Arizona | #1 Rated Phoenix Metro | ICA"
 description: "Arizona's trusted insulation contractor since 2004. BBB A+ rated, licensed ROC# 335896. Free quotes for spray foam, blown-in & attic insulation. Call 623-241-1939"
-permalink: /insulation-contractor-arizona/
+permalink: /service-locations/arizona/
 ---
 
 <style>
@@ -59,9 +59,9 @@ permalink: /insulation-contractor-arizona/
 }
 
 .city-card:hover {
-    border-color: #00d4ff;
+    border-color: var(--accent-primary);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,212,255,0.2);
+    box-shadow: 0 4px 12px rgba(0, 255, 255, 0.2);
 }
 
 .roi-calculator {
@@ -190,6 +190,63 @@ permalink: /insulation-contractor-arizona/
     white-space: nowrap;
 }
 
+/* Fix Why Choose ICA section styling */
+.why-choose-ica .feature-box {
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.why-choose-ica .feature-box:hover {
+    background: rgba(0, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 255, 255, 0.2);
+}
+
+.why-choose-ica .feature-box h3 {
+    color: var(--accent-primary);
+    margin-bottom: 1rem;
+}
+
+.why-choose-ica .feature-box p {
+    color: var(--gray-200);
+    line-height: 1.6;
+}
+
+/* Table responsive styling */
+.contractor-comparison-table {
+    background: rgba(0, 255, 255, 0.03);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 1rem;
+    backdrop-filter: blur(10px);
+}
+
+.contractor-comparison-table table {
+    background: transparent;
+    border: none;
+}
+
+.contractor-comparison-table th {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, rgba(0, 255, 255, 0.2) 100%);
+    color: var(--accent-primary);
+    border-bottom: 2px solid var(--accent-primary);
+}
+
+.contractor-comparison-table td {
+    color: var(--gray-200);
+    border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+.contractor-comparison-table tr:nth-child(even) {
+    background: rgba(0, 255, 255, 0.02);
+}
+
+.contractor-comparison-table tr:hover {
+    background: rgba(0, 255, 255, 0.05);
+}
+
 @media (max-width: 768px) {
     .timeline-line {
         left: 2rem;
@@ -203,6 +260,15 @@ permalink: /insulation-contractor-arizona/
     .timeline-dot {
         left: -2.5rem !important;
     }
+    
+    .contractor-comparison-table {
+        overflow-x: auto;
+        padding: 0.5rem;
+    }
+    
+    .contractor-comparison-table table {
+        min-width: 600px;
+    }
 }
 </style>
 
@@ -214,7 +280,7 @@ permalink: /insulation-contractor-arizona/
   "name": "Insulation Contractors of Arizona",
   "alternateName": "ICA",
   "description": "Arizona's premier insulation contractor since 2004. BBB A+ rated, Torch Awards finalist. Specializing in spray foam, blown-in, and attic insulation for residential, commercial, and industrial properties.",
-  "url": "https://insulationcontractorsofarizona.com/insulation-contractor-arizona/",
+  "url": "https://insulationcontractorsofarizona.com/service-locations/arizona/",
   "telephone": "623-241-1939",
   "email": "ica.thesprayfoampeople@gmail.com",
   "address": {
@@ -385,7 +451,7 @@ permalink: /insulation-contractor-arizona/
                 Arizona's Premier Insulation Contractor - Serving Phoenix Since 2004
             </h1>
             
-            <p class="text-xl md:text-2xl mb-8 text-cyan-100">
+            <p class="text-xl md:text-2xl mb-8 " style="color: var(--gray-200);">
                 BBB A+ Rated • Licensed ROC# 335896 • 5,000+ Projects Completed
             </p>
             
@@ -427,73 +493,73 @@ permalink: /insulation-contractor-arizona/
                 <a href="/services/residential/" class="city-card block">
                     <h3 class="font-semibold text-lg mb-2">Phoenix</h3>
                     <p class="text-sm text-gray-600">Central Phoenix, North Phoenix, South Phoenix</p>
-                    <p class="text-cyan-600 font-medium mt-2">500+ Projects Completed</p>
+                    <p class="font-medium mt-2" style="color: var(--accent-primary);">500+ Projects Completed</p>
                 </a>
                 
                 <a href="/services/residential/" class="city-card block">
                     <h3 class="font-semibold text-lg mb-2">Scottsdale</h3>
                     <p class="text-sm text-gray-600">Old Town, North Scottsdale, McCormick Ranch</p>
-                    <p class="text-cyan-600 font-medium mt-2">300+ Projects Completed</p>
+                    <p class="font-medium mt-2" style="color: var(--accent-primary);">300+ Projects Completed</p>
                 </a>
                 
                 <a href="/services/residential/" class="city-card block">
                     <h3 class="font-semibold text-lg mb-2">Mesa</h3>
                     <p class="text-sm text-gray-600">East Mesa, West Mesa, Downtown Mesa</p>
-                    <p class="text-cyan-600 font-medium mt-2">400+ Projects Completed</p>
+                    <p class="font-medium mt-2" style="color: var(--accent-primary);">400+ Projects Completed</p>
                 </a>
                 
                 <a href="/services/residential/" class="city-card block">
                     <h3 class="font-semibold text-lg mb-2">Chandler</h3>
                     <p class="text-sm text-gray-600">South Chandler, Ocotillo, Downtown</p>
-                    <p class="text-cyan-600 font-medium mt-2">350+ Projects Completed</p>
+                    <p class="font-medium mt-2" style="color: var(--accent-primary);">350+ Projects Completed</p>
                 </a>
                 
                 <a href="/services/residential/" class="city-card block">
                     <h3 class="font-semibold text-lg mb-2">Gilbert</h3>
                     <p class="text-sm text-gray-600">Power Ranch, Val Vista Lakes, Agritopia</p>
-                    <p class="text-cyan-600 font-medium mt-2">300+ Projects Completed</p>
+                    <p class="font-medium mt-2" style="color: var(--accent-primary);">300+ Projects Completed</p>
                 </a>
                 
                 <a href="/services/residential/" class="city-card block">
                     <h3 class="font-semibold text-lg mb-2">Tempe</h3>
                     <p class="text-sm text-gray-600">ASU Area, Downtown Tempe, South Tempe</p>
-                    <p class="text-cyan-600 font-medium mt-2">250+ Projects Completed</p>
+                    <p class="font-medium mt-2" style="color: var(--accent-primary);">250+ Projects Completed</p>
                 </a>
                 
                 <a href="/services/residential/" class="city-card block">
                     <h3 class="font-semibold text-lg mb-2">Glendale</h3>
                     <p class="text-sm text-gray-600">Historic Glendale, Arrowhead, Westgate</p>
-                    <p class="text-cyan-600 font-medium mt-2">200+ Projects Completed</p>
+                    <p class="font-medium mt-2" style="color: var(--accent-primary);">200+ Projects Completed</p>
                 </a>
                 
                 <a href="/services/residential/" class="city-card block">
                     <h3 class="font-semibold text-lg mb-2">Peoria</h3>
                     <p class="text-sm text-gray-600">Old Town Peoria, Vistancia, North Peoria</p>
-                    <p class="text-cyan-600 font-medium mt-2">200+ Projects Completed</p>
+                    <p class="font-medium mt-2" style="color: var(--accent-primary);">200+ Projects Completed</p>
                 </a>
                 
                 <a href="/services/residential/" class="city-card block">
                     <h3 class="font-semibold text-lg mb-2">Surprise</h3>
                     <p class="text-sm text-gray-600">Sun City Grand, Surprise Farms, Marley Park</p>
-                    <p class="text-cyan-600 font-medium mt-2">150+ Projects Completed</p>
+                    <p class="font-medium mt-2" style="color: var(--accent-primary);">150+ Projects Completed</p>
                 </a>
                 
                 <a href="/services/residential/" class="city-card block">
                     <h3 class="font-semibold text-lg mb-2">Avondale</h3>
                     <p class="text-sm text-gray-600">Garden Lakes, Coldwater Springs</p>
-                    <p class="text-cyan-600 font-medium mt-2">100+ Projects Completed</p>
+                    <p class="font-medium mt-2" style="color: var(--accent-primary);">100+ Projects Completed</p>
                 </a>
                 
                 <a href="/services/residential/" class="city-card block">
                     <h3 class="font-semibold text-lg mb-2">Goodyear</h3>
                     <p class="text-sm text-gray-600">Estrella Mountain Ranch, Palm Valley</p>
-                    <p class="text-cyan-600 font-medium mt-2">150+ Projects Completed</p>
+                    <p class="font-medium mt-2" style="color: var(--accent-primary);">150+ Projects Completed</p>
                 </a>
                 
                 <a href="/services/residential/" class="city-card block">
                     <h3 class="font-semibold text-lg mb-2">Queen Creek</h3>
                     <p class="text-sm text-gray-600">Queen Creek Marketplace, Encanterra</p>
-                    <p class="text-cyan-600 font-medium mt-2">100+ Projects Completed</p>
+                    <p class="font-medium mt-2" style="color: var(--accent-primary);">100+ Projects Completed</p>
                 </a>
             </div>
         </div>
@@ -610,7 +676,7 @@ permalink: /insulation-contractor-arizona/
             </table>
         </div>
         
-        <div class="mt-8 bg-cyan-50 border-l-4 border-cyan-600 p-6 rounded">
+        <div class="mt-8 p-6 rounded" style="background: rgba(0, 255, 255, 0.1); border-left: 4px solid var(--accent-primary);">
             <p class="text-lg">
                 <strong>Why ICA Stands Out:</strong> As a full-service insulation contractor, we offer the complete range of insulation solutions backed by 20+ years of Arizona-specific expertise. Our BBB A+ rating and Torch Awards recognition reflect our commitment to ethical business practices and superior results.
             </p>
@@ -670,7 +736,7 @@ permalink: /insulation-contractor-arizona/
             
             <div class="timeline-item bg-white rounded-lg shadow-lg">
                 <div class="timeline-dot"></div>
-                <h3 class="text-xl font-bold mb-2 text-cyan-600">2025 - Torch Awards Finalist</h3>
+                <h3 class="text-xl font-bold mb-2 " style="color: var(--accent-primary);">2025 - Torch Awards Finalist</h3>
                 <p class="font-semibold">Nominated for BBB Torch Awards for Ethics, recognizing two decades of integrity and excellence.</p>
             </div>
         </div>
@@ -684,90 +750,90 @@ permalink: /insulation-contractor-arizona/
         
         <div class="grid md:grid-cols-3 gap-8 mb-12">
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="text-2xl font-bold mb-4 text-cyan-600">Residential Insulation</h3>
+                <h3 class="text-2xl font-bold mb-4" style="color: var(--accent-primary);">Residential Insulation</h3>
                 <ul class="space-y-3">
                     <li class="flex items-start">
-                        <span class="text-cyan-600 mr-2">✓</span>
-                        <a href="/services/residential/spray-foam/" class="hover:text-cyan-600">Spray Foam Insulation Installation</a>
+                        <span style="color: var(--accent-primary); margin-right: 0.5rem;">✓</span>
+                        <a href="/services/residential/spray-foam/" style="color: var(--gray-200); transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent-primary)'" onmouseout="this.style.color='var(--gray-200)'">Spray Foam Insulation Installation</a>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-cyan-600 mr-2">✓</span>
-                        <a href="/services/residential/attic/" class="hover:text-cyan-600">Complete Attic Insulation Solutions</a>
+                        <span style="color: var(--accent-primary); margin-right: 0.5rem;">✓</span>
+                        <a href="/services/residential/attic/" style="color: var(--gray-200); transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent-primary)'" onmouseout="this.style.color='var(--gray-200)'">Complete Attic Insulation Solutions</a>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-cyan-600 mr-2">✓</span>
-                        <a href="/services/residential/blown-in/" class="hover:text-cyan-600">Blown-In Fiberglass & Cellulose</a>
+                        <span style="color: var(--accent-primary); margin-right: 0.5rem;">✓</span>
+                        <a href="/services/residential/blown-in/" style="color: var(--gray-200); transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent-primary)'" onmouseout="this.style.color='var(--gray-200)'">Blown-In Fiberglass & Cellulose</a>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-cyan-600 mr-2">✓</span>
-                        <a href="/services/residential/wall/" class="hover:text-cyan-600">Wall Insulation Retrofits</a>
+                        <span style="color: var(--accent-primary); margin-right: 0.5rem;">✓</span>
+                        <a href="/services/residential/wall/" style="color: var(--gray-200); transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent-primary)'" onmouseout="this.style.color='var(--gray-200)'">Wall Insulation Retrofits</a>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-cyan-600 mr-2">✓</span>
-                        <a href="/services/residential/crawl-space/" class="hover:text-cyan-600">Crawl Space Encapsulation</a>
+                        <span style="color: var(--accent-primary); margin-right: 0.5rem;">✓</span>
+                        <a href="/services/residential/crawl-space/" style="color: var(--gray-200); transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent-primary)'" onmouseout="this.style.color='var(--gray-200)'">Crawl Space Encapsulation</a>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-cyan-600 mr-2">✓</span>
-                        <a href="/services/residential/removal/" class="hover:text-cyan-600">Old Insulation Removal</a>
+                        <span style="color: var(--accent-primary); margin-right: 0.5rem;">✓</span>
+                        <a href="/services/residential/removal/" style="color: var(--gray-200); transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent-primary)'" onmouseout="this.style.color='var(--gray-200)'">Old Insulation Removal</a>
                     </li>
                 </ul>
             </div>
             
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="text-2xl font-bold mb-4 text-cyan-600">Commercial Insulation</h3>
+                <h3 class="text-2xl font-bold mb-4 " style="color: var(--accent-primary);">Commercial Insulation</h3>
                 <ul class="space-y-3">
                     <li class="flex items-start">
-                        <span class="text-cyan-600 mr-2">✓</span>
-                        <a href="/services/commercial/office/" class="hover:text-cyan-600">Office Building Insulation</a>
+                        <span style="color: var(--accent-primary); margin-right: 0.5rem;">✓</span>
+                        <a href="/services/commercial/office/" style="color: var(--gray-200); transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent-primary)'" onmouseout="this.style.color='var(--gray-200)'">Office Building Insulation</a>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-cyan-600 mr-2">✓</span>
-                        <a href="/services/commercial/retail/" class="hover:text-cyan-600">Retail Space Solutions</a>
+                        <span style="color: var(--accent-primary); margin-right: 0.5rem;">✓</span>
+                        <a href="/services/commercial/retail/" style="color: var(--gray-200); transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent-primary)'" onmouseout="this.style.color='var(--gray-200)'">Retail Space Solutions</a>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-cyan-600 mr-2">✓</span>
-                        <a href="/services/commercial/warehouse/" class="hover:text-cyan-600">Warehouse Insulation Systems</a>
+                        <span style="color: var(--accent-primary); margin-right: 0.5rem;">✓</span>
+                        <a href="/services/commercial/warehouse/" style="color: var(--gray-200); transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent-primary)'" onmouseout="this.style.color='var(--gray-200)'">Warehouse Insulation Systems</a>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-cyan-600 mr-2">✓</span>
-                        <a href="/services/commercial/new-construction/" class="hover:text-cyan-600">New Construction Projects</a>
+                        <span style="color: var(--accent-primary); margin-right: 0.5rem;">✓</span>
+                        <a href="/services/commercial/new-construction/" style="color: var(--gray-200); transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent-primary)'" onmouseout="this.style.color='var(--gray-200)'">New Construction Projects</a>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-cyan-600 mr-2">✓</span>
+                        <span style="color: var(--accent-primary); margin-right: 0.5rem;">✓</span>
                         <span>Metal Building Insulation</span>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-cyan-600 mr-2">✓</span>
+                        <span style="color: var(--accent-primary); margin-right: 0.5rem;">✓</span>
                         <span>Tenant Improvement Projects</span>
                     </li>
                 </ul>
             </div>
             
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="text-2xl font-bold mb-4 text-cyan-600">Industrial & Agricultural</h3>
+                <h3 class="text-2xl font-bold mb-4 " style="color: var(--accent-primary);">Industrial & Agricultural</h3>
                 <ul class="space-y-3">
                     <li class="flex items-start">
-                        <span class="text-cyan-600 mr-2">✓</span>
-                        <a href="/services/industrial/manufacturing/" class="hover:text-cyan-600">Manufacturing Facilities</a>
+                        <span style="color: var(--accent-primary); margin-right: 0.5rem;">✓</span>
+                        <a href="/services/industrial/manufacturing/" style="color: var(--gray-200); transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent-primary)'" onmouseout="this.style.color='var(--gray-200)'">Manufacturing Facilities</a>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-cyan-600 mr-2">✓</span>
-                        <a href="/services/industrial/cold-storage/" class="hover:text-cyan-600">Cold Storage Insulation</a>
+                        <span style="color: var(--accent-primary); margin-right: 0.5rem;">✓</span>
+                        <a href="/services/industrial/cold-storage/" style="color: var(--gray-200); transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent-primary)'" onmouseout="this.style.color='var(--gray-200)'">Cold Storage Insulation</a>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-cyan-600 mr-2">✓</span>
-                        <a href="/services/agricultural/tank/" class="hover:text-cyan-600">Tank & Equipment Coating</a>
+                        <span style="color: var(--accent-primary); margin-right: 0.5rem;">✓</span>
+                        <a href="/services/agricultural/tank/" style="color: var(--gray-200); transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent-primary)'" onmouseout="this.style.color='var(--gray-200)'">Tank & Equipment Coating</a>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-cyan-600 mr-2">✓</span>
-                        <a href="/services/agricultural/barn/" class="hover:text-cyan-600">Barn & Livestock Buildings</a>
+                        <span style="color: var(--accent-primary); margin-right: 0.5rem;">✓</span>
+                        <a href="/services/agricultural/barn/" style="color: var(--gray-200); transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent-primary)'" onmouseout="this.style.color='var(--gray-200)'">Barn & Livestock Buildings</a>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-cyan-600 mr-2">✓</span>
-                        <a href="/services/agricultural/storage/" class="hover:text-cyan-600">Agricultural Storage</a>
+                        <span style="color: var(--accent-primary); margin-right: 0.5rem;">✓</span>
+                        <a href="/services/agricultural/storage/" style="color: var(--gray-200); transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent-primary)'" onmouseout="this.style.color='var(--gray-200)'">Agricultural Storage</a>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-cyan-600 mr-2">✓</span>
+                        <span style="color: var(--accent-primary); margin-right: 0.5rem;">✓</span>
                         <span>Pipeline Insulation</span>
                     </li>
                 </ul>
@@ -777,50 +843,50 @@ permalink: /insulation-contractor-arizona/
 </section>
 
 <!-- Why Choose ICA - Expanded -->
-<section class="py-16 px-6">
+<section class="py-16 px-6 why-choose-ica">
     <div class="container mx-auto max-w-6xl">
         <h2 class="text-3xl font-bold mb-12 text-center">Why Arizona Property Owners Choose ICA</h2>
         
         <div class="grid md:grid-cols-2 gap-8">
             <div class="space-y-6">
-                <div class="bg-gradient-to-r from-cyan-50 to-blue-50 p-6 rounded-lg">
+                <div class="feature-box p-6 rounded-lg">
                     <h3 class="text-xl font-bold mb-3">✅ Licensed & Insured Excellence</h3>
                     <p>ROC# 335896 - Fully licensed, bonded, and insured. We carry comprehensive liability insurance and workers' compensation, protecting your property and investment.</p>
                 </div>
                 
-                <div class="bg-gradient-to-r from-cyan-50 to-blue-50 p-6 rounded-lg">
+                <div class="feature-box p-6 rounded-lg">
                     <h3 class="text-xl font-bold mb-3">🏆 BBB A+ Rating & Ethics Recognition</h3>
                     <p>Our 2025 Torch Awards finalist status demonstrates our unwavering commitment to ethical business practices, transparency, and customer satisfaction.</p>
                 </div>
                 
-                <div class="bg-gradient-to-r from-cyan-50 to-blue-50 p-6 rounded-lg">
+                <div class="feature-box p-6 rounded-lg">
                     <h3 class="text-xl font-bold mb-3">🌡️ Arizona Climate Expertise</h3>
                     <p>20+ years combating extreme desert heat. We understand Arizona's unique challenges and deliver solutions that perform in 120°F+ temperatures.</p>
                 </div>
                 
-                <div class="bg-gradient-to-r from-cyan-50 to-blue-50 p-6 rounded-lg">
+                <div class="feature-box p-6 rounded-lg">
                     <h3 class="text-xl font-bold mb-3">💰 Proven Energy Savings</h3>
                     <p>Our customers report 30-50% reduction in cooling costs. With Arizona's high energy rates, proper insulation pays for itself faster than ever.</p>
                 </div>
             </div>
             
             <div class="space-y-6">
-                <div class="bg-gradient-to-r from-cyan-50 to-blue-50 p-6 rounded-lg">
+                <div class="feature-box p-6 rounded-lg">
                     <h3 class="text-xl font-bold mb-3">🛡️ Comprehensive Warranties</h3>
                     <p>We stand behind our work with industry-leading warranties. Material warranties up to lifetime, plus our exclusive workmanship guarantee.</p>
                 </div>
                 
-                <div class="bg-gradient-to-r from-cyan-50 to-blue-50 p-6 rounded-lg">
+                <div class="feature-box p-6 rounded-lg">
                     <h3 class="text-xl font-bold mb-3">👨‍🔧 Certified Installation Teams</h3>
                     <p>SPFA-certified installers ensure perfect application every time. Our crews undergo continuous training on the latest techniques and safety protocols.</p>
                 </div>
                 
-                <div class="bg-gradient-to-r from-cyan-50 to-blue-50 p-6 rounded-lg">
+                <div class="feature-box p-6 rounded-lg">
                     <h3 class="text-xl font-bold mb-3">📊 Free Energy Assessments</h3>
                     <p>Comprehensive evaluation of your property's insulation needs. We provide detailed reports with thermal imaging and customized recommendations.</p>
                 </div>
                 
-                <div class="bg-gradient-to-r from-cyan-50 to-blue-50 p-6 rounded-lg">
+                <div class="feature-box p-6 rounded-lg">
                     <h3 class="text-xl font-bold mb-3">🤝 Transparent Pricing</h3>
                     <p>No hidden fees or surprise charges. We provide detailed quotes upfront and honor our pricing throughout the project.</p>
                 </div>
