@@ -10,13 +10,30 @@ layout: "post.njk"
 ---
 
 <style>
-/* Professional Minimalist Design System */
+/* Override Site Defaults - Professional Minimalist Design */
 * {
     box-sizing: border-box;
 }
 
+/* Force override any cyan colors from site theme */
+h1, h2, h3, h4, h5, h6 {
+    color: #1a1a1a !important;
+}
+
+/* Hide any auto-generated title from the template */
+.post-title, .article-title, .blog-title, article > h1:first-of-type {
+    display: none !important;
+}
+
+/* Target specific elements that might have cyan */
+.post-content h1, .post-content h2, .post-content h3,
+article h1, article h2, article h3,
+main h1, main h2, main h3 {
+    color: #1a1a1a !important;
+}
+
 .hero-section {
-    background: #ffffff;
+    background: #ffffff !important;
     padding: 100px 40px;
     text-align: center;
     border-bottom: 1px solid #e5e5e5;
@@ -24,35 +41,36 @@ layout: "post.njk"
 }
 
 .hero-section h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 300;
-    margin-bottom: 20px;
-    color: #1a1a1a;
-    letter-spacing: -0.03em;
-    line-height: 1.1;
+    font-size: clamp(2.5rem, 5vw, 4rem) !important;
+    font-weight: 300 !important;
+    margin-bottom: 20px !important;
+    color: #1a1a1a !important;
+    letter-spacing: -0.03em !important;
+    line-height: 1.1 !important;
+    text-transform: none !important;
 }
 
 .hero-section .accent-text {
-    font-size: clamp(1.3rem, 3vw, 1.6rem);
-    color: #757575;
-    font-weight: 400;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    margin-top: 20px;
+    font-size: clamp(1.3rem, 3vw, 1.6rem) !important;
+    color: #757575 !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.02em !important;
+    text-transform: uppercase !important;
+    margin-top: 20px !important;
 }
 
 .award-badge {
-    display: inline-block;
-    background: linear-gradient(145deg, #f5f5f5, #ffffff);
-    border: 2px solid #d4af37;
-    padding: 20px 40px;
-    margin: 30px 0;
-    font-size: 1.1rem;
-    color: #1a1a1a;
-    font-weight: 500;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    position: relative;
+    display: inline-block !important;
+    background: linear-gradient(145deg, #f5f5f5, #ffffff) !important;
+    border: 2px solid #d4af37 !important;
+    padding: 20px 40px !important;
+    margin: 30px 0 !important;
+    font-size: 1.1rem !important;
+    color: #1a1a1a !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+    position: relative !important;
 }
 
 .announcement-section {
